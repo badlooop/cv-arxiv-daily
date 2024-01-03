@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.01.02
+## Updated on 2024.01.03
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2023-12-21**|**DyBluRF: Dynamic Deblurring Neural Radiance Fields for Blurry Monocular Video**|视频视图合成允许从任意视点和时间创建具有视觉吸引力的帧，提供身临其境的观看体验。神经辐射场，特别是最初为静态场景开发的NeRF，刺激了视频视图合成的各种方法的产生。然而，视频视图合成的挑战来自运动模糊，这是物体或相机在曝光过程中移动的结果，阻碍了清晰的时空视图的精确合成。作为回应，我们提出了一种用于模糊单目视频的新的动态去模糊NeRF框架，称为DyBluRF，由Interleave Ray Refinement（IRR）阶段和基于运动分解的去模糊（MDD）阶段组成。我们的DyBluRF是第一个解决和处理模糊单目视频的新型视图合成的公司。IRR阶段联合重建动态3D场景，并细化不准确的相机姿态信息，以对抗从给定模糊帧中提取的不准确姿态信息。MDD阶段是一种新的增量潜在锐射线预测（ILSP）方法，用于模糊单目视频帧，将潜在锐射线分解为全局相机运动和局部对象运动分量。大量的实验结果表明，我们的DyBluRF在质量和数量上都优于最新的最先进的方法。我们的项目页面包括源代码和预训练模型，可在https://kaist-viclab.github.io/dyblurf-site/. et.al.|[2312.13528](http://arxiv.org/abs/2312.13528)|null|
 |**2023-12-20**|**NeRF-VO: Real-Time Sparse Visual Odometry with Neural Radiance Fields**|我们介绍了一种新的单目视觉里程计（VO）系统NeRF VO，该系统集成了用于低延迟相机跟踪的基于学习的稀疏视觉里程计和用于复杂密集重建和新颖视图合成的神经辐射场景表示。我们的系统使用稀疏视觉里程计初始化相机姿态，并从单目深度预测网络中获得与视图相关的密集几何先验。我们协调姿势的尺度和密集的几何体，将它们视为训练神经隐式场景表示的监督线索。NeRF VO通过联合优化关键帧姿势的滑动窗口和底层密集几何体，在场景表示的光度和几何保真度方面表现出非凡的性能，这是通过使用体渲染训练辐射场来实现的。我们在各种合成和真实世界数据集的姿态估计精度、新颖的视图合成保真度和密集的重建质量方面超过了最先进的方法，同时实现了更高的相机跟踪频率和更少的GPU内存消耗。 et.al.|[2312.13471](http://arxiv.org/abs/2312.13471)|null|
 
-<p align=right>(<a href=#updated-on-20240102>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240103>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2023-12-22**|**Enhanced Latent Multi-view Subspace Clustering**|潜在多视图子空间聚类已被证明具有理想的聚类性能。然而，原始的潜在表示方法沿着维度方向将来自多个视图的数据矩阵垂直连接到单个矩阵中，以恢复潜在表示矩阵，这可能导致不完整的信息恢复。为了完全恢复潜在空间表示，我们在本文中提出了一种增强的潜在多视图子空间聚类（ELMSC）方法。ELMSC方法包括构建增强数据矩阵，该矩阵增强多视图数据的表示。具体来说，我们将来自不同视图的数据矩阵堆叠到增广矩阵的块对角位置，以利用互补信息。同时，基于不同视图之间的相似性来组合非块对角条目，以获取一致的信息。此外，我们对增广自表示矩阵的非对角块强制执行稀疏正则化，以避免一致性信息的冗余计算。最后，基于交替方向乘法器（ADMM）的框架，提出了一种新的迭代算法来解决ELMSC的优化问题。在真实世界数据集上的大量实验表明，我们提出的ELMSC能够实现比一些现有技术的多视图聚类方法更高的聚类性能。 et.al.|[2312.14763](http://arxiv.org/abs/2312.14763)|**[link](https://github.com/caolei2000/elmsc-code)**|
 |**2023-12-22**|**BonnBeetClouds3D: A Dataset Towards Point Cloud-based Organ-level Phenotyping of Sugar Beet Plants under Field Conditions**|未来几十年，农业生产面临着气候变化和可持续性需求带来的严峻挑战，从而减少其对环境的影响。通过机器人的非化学除草，结合自动无人机对作物的监测，以及培育新的、更具弹性的作物品种，在田间管理方面取得了进展，这有助于应对这些挑战。植物性状的分析，即表型分析，是植物育种中的一项重要活动，但它需要大量的体力劳动。通过这篇论文，我们解决了精确表型所需的自动细粒度器官级几何分析的问题。由于该领域的真实世界数据相对较少，我们提出了一个新的数据集，该数据集是使用无人机获取的，该无人机捕捉了包含48个植物品种的真实育种试验的高分辨率图像，因此涵盖了巨大的形态和外观多样性。这使得自主表型的方法能够很好地推广到不同的品种。基于多个视角的重叠高分辨率图像，我们计算了摄影测量密集点云，并为植物、叶子和作为尖端和底部的突出点提供了详细准确的逐点标签。此外，我们还包括德国联邦植物品种办公室的专家对真实植物进行的表型性状测量，从而不仅可以评估分割和关键点检测方面的新方法，还可以直接评估下游任务。所提供的标记点云能够进行细粒度的植物分析，并支持自动表型方法开发的进一步进展，但也能够在表面重建、点云完成和点云的语义解释方面进行进一步研究。 et.al.|[2312.14706](http://arxiv.org/abs/2312.14706)|null|
 
-<p align=right>(<a href=#updated-on-20240102>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240103>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2023-12-29**|**Curvature diffusion of planar curves with generalised Neumann boundary conditions inside cones**|我们研究光滑浸入正平面曲线 $\alpha:\left[-1,1\right]\times\left[0，T\right）\到\mathbb｛R｝^｛2｝的族$满足锥内具有广义Neumann边界条件的四阶非线性曲线扩散流。我们证明，如果初始曲线具有足够小的曲率振荡，那么在流动下仍然如此。这些演化曲线族要么在有限的时间内存在，当曲线的一端到达圆锥体的尖端，或者曲率在$L^2$中变得无界时，要么一直存在，并在$C^{infty}$ 拓扑中指数收敛为圆弧，该圆弧与圆锥体边界一起包围与初始曲线和圆锥体边界相同的区域。对于具有适当边界条件的高阶多谐曲线扩散流，同样的结果是可能的；特别是在六阶情况下，曲率振荡的小条件与曲线扩散的小条件完全相同。 et.al.|[2312.17490](http://arxiv.org/abs/2312.17490)|null|
 |**2023-12-29**|**Sampling probabilities, diffusions, ancestral graphs, and duality under strong selection**|Wright-Fisher扩散及其对偶祖先图在等位基因频率变化和谱系结构的研究中起着核心作用，它们为采样概率提供了表达式，在某些特殊情况下是显式的，但通常是隐式的，这是推理中的一个关键量。在有限等位基因突变模型下，可能存在父母依赖性突变，我们考虑一个等位基因的选择性优势增长到无穷大，而其他参数保持不变的渐近状态。在这种情况下，我们证明了Wright Fisher扩散可以通过高斯过程或其分量是具有迁移的独立连续状态分支过程的过程来近似，这与Wright Fisher模型的类似结果一致，但采用了不同的方法。虽然第一个过程在平稳性下退化，但后者没有，并为采样概率的前导项提供了一个简单的解析近似。此外，使用另一种基于递归公式的方法，我们对所有剩余项进行表征，以提供采样概率的完全渐近展开。最后，我们研究了条件祖先选择图的块计数过程的速率的渐近行为，并建立了它与扩散之间的渐近对偶关系。 et.al.|[2312.17406](http://arxiv.org/abs/2312.17406)|null|
 
-<p align=right>(<a href=#updated-on-20240102>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240103>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2023-12-11**|**Representing stimulus motion with waves in adaptive neural fields**|神经活动的行波在皮层网络中自发出现，并对刺激做出反应。波的时空结构可以指示它们编码的信息以及维持它们的生理过程。在这里，我们研究了作为视觉运动处理模型的自适应神经场中出现的行波的刺激响应关系。神经场方程将皮层组织的活动建模为连续的可兴奋介质，自适应过程提供负反馈，产生局部活动模式。在我们的模型中，突触连接由一个积分核来描述，该积分核由于依赖于活动的突触抑制而动态减弱，导致边缘稳定的行进前沿（具有衰减的后部）或固定速度的脉冲。我们的分析量化了弱刺激如何随着时间的推移改变这些波的相对位置，其特征是我们扰动地获得的波响应函数。持续和连续可见的刺激模拟移动的视觉对象。在视觉空间中跳跃的间歇性闪光可以产生流畅的视觉运动体验。我们的理论和数值模拟很好地描述了波对两种运动刺激的夹带，提供了视觉运动感知的机制描述。 et.al.|[2312.06100](http://arxiv.org/abs/2312.06100)|null|
 |**2023-12-11**|**Nuvo: Neural UV Mapping for Unruly 3D Representations**|现有的UV映射算法被设计为在性能良好的网格上操作，而不是由最先进的3D重建和生成技术产生的几何表示。因此，将这些方法应用于由神经辐射场和相关技术（或从这些场三角化的网格）恢复的体积密度会导致纹理图谱过于分散，无法用于视图合成或外观编辑等任务。我们提出了一种UV映射方法，旨在对通过3D重建和生成技术产生的几何体进行操作。我们的方法Nuvo不是计算在网格顶点上定义的映射，而是使用神经场来表示连续的UV映射，并将其优化为仅针对一组可见点（即仅影响场景外观的点）的有效且性能良好的映射。我们展示了我们的模型对不良几何体带来的挑战是稳健的，并且它生成了可以表示详细外观的可编辑UV映射。 et.al.|[2312.05283](http://arxiv.org/abs/2312.05283)|null|
 
-<p align=right>(<a href=#updated-on-20240102>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240103>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
