@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.01.08
+## Updated on 2024.01.09
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2023-12-25**|**Sparse-view CT Reconstruction with 3D Gaussian Volumetric Representation**|稀疏视图CT是减少传统CT扫描辐射剂量的一种很有前途的策略，但从不完整和有噪声的数据中重建高质量图像是一项挑战。最近，3D高斯已被应用于复杂自然场景的建模，与隐式神经表示（INRs）相比，它表现出快速收敛和更好的新颖视图渲染。我们从3D高斯在自然场景建模和新视图合成中的成功应用中获得灵感，研究了它们在稀疏视图CT重建中的潜力。我们利用来自滤波后的反投影重建图像的先验信息来初始化高斯；并且通过比较投影空间中的差异来更新它们的参数。自适应密度控制进一步提高了性能。与INRs相比，3D高斯从先验信息中受益更多，可以明确绕过空白空间中的学习，并有效地分配容量，加速收敛。3D高斯还可以有效地学习高频细节。3D高斯以自我监督的方式进行训练，避免了对大规模配对数据的需要。我们在AAPM-Mayo数据集上的实验表明，与基于INR的方法相比，3D高斯可以提供优越的性能。这项工作正在进行中，代码将公开。 et.al.|[2312.15676](http://arxiv.org/abs/2312.15676)|null|
 |**2023-12-22**|**Deformable 3D Gaussian Splatting for Animatable Human Avatars**|神经辐射场的最新进展使得能够在动态设置中对照片真实感图像进行新颖的视图合成，这可以应用于具有人类动画的场景。然而，通常使用的隐式主干来建立准确的模型，需要许多输入视图和额外的注释，如人体遮罩、UV贴图和深度贴图。在这项工作中，我们提出了ParDy Human（参数化动态人类化身），这是一种完全明确的方法，可以从一个单一的单目序列中构建数字化身。ParDy Human在3D高斯飞溅中引入了参数驱动的动力学，其中通过人体姿势模型使3D高斯变形以使化身动画化。我们的方法由两个部分组成：第一个模块根据SMPL顶点使标准3D高斯变形，第二个模块进一步采用其设计的联合编码并预测每高斯变形，以处理SMPL顶点变形之外的动力学。然后通过光栅化器合成图像。ParDy Human构成了逼真动态人类化身的显式模型，其需要显著更少的训练视图和图像。我们的化身学习不需要额外的注释，如掩码，并且可以在可变背景下进行训练，同时即使在消费硬件上也能高效地推断出全分辨率图像。我们提供的实验证据表明，在ZJU MoCap和THUman4.0数据集上，ParDy-Human在数量和视觉上都优于最先进的方法。 et.al.|[2312.15059](http://arxiv.org/abs/2312.15059)|null|
 
-<p align=right>(<a href=#updated-on-20240108>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240109>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2023-12-24**|**A theory of volumetric representations for opaque solids**|我们开发了一种将不透明固体表示为体积模型的理论。从不透明固体作为随机指示函数的随机表示开始，我们证明了可以使用指数体积输运对这种固体进行建模的条件。我们还导出了体积衰减系数的表达式，作为基本指标函数的概率分布的函数。我们将我们的理论推广到考虑固体不同部分的各向同性和各向异性散射，以及将不透明固体表示为隐式表面。我们从第一性原理推导出体积表示，这确保了它满足物理约束，如互易性和可逆性。我们使用我们的理论来解释、比较和纠正以前的体积表示，并提出有意义的扩展，从而提高3D重建任务的性能。 et.al.|[2312.15406](http://arxiv.org/abs/2312.15406)|null|
 |**2023-12-23**|**WildScenes: A Benchmark for 2D and 3D Semantic Segmentation in Large-scale Natural Environments**|语义场景理解的最新进展主要得益于城市环境中语义注释的双模（相机和激光雷达）数据集的可用性。然而，自然、非结构化环境也需要这样的注释数据集，以实现应用程序的语义感知，包括保护、搜救、环境监测和农业自动化。因此，我们介绍了WildScenes，这是一个双模态基准数据集，由自然环境中的多个大规模遍历组成，包括高分辨率2D图像和密集3D激光雷达点云中的语义注释，以及精确的6-DoF姿态信息。数据（1）以轨迹为中心，具有精确的定位和全局对齐的点云，（2）校准和同步以支持双模态推理，以及（3）在6个月内包含不同的自然环境，以支持领域适应研究。我们的3D语义标签是通过一个高效的自动化过程获得的，该过程将人工注释的2D标签从多个视图转移到3D点云中，从而避免了在3D中进行昂贵且耗时的人工注释的需要。我们介绍了2D和3D语义分割的基准，并评估了最近的各种深度学习技术，以展示自然环境中语义分割的挑战。我们建议为标准基准和领域自适应基准训练val测试分割，并利用自动分割生成技术来确保类标签分布的平衡。数据、评估脚本和预训练模型将在https://csiro-robotics.github.io/WildScenes. et.al.|[2312.15364](http://arxiv.org/abs/2312.15364)|null|
 
-<p align=right>(<a href=#updated-on-20240108>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240109>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-01-05**|**Diffusion Variational Inference: Diffusion Models as Expressive Variational Posteriors**|我们提出了去噪扩散变分推理（DDVI），这是一种潜在变量模型的近似推理算法，它依赖于扩散模型作为表示变分后验。我们的方法用辅助潜伏期增强了变分后验，这产生了一类表达模型，通过反转用户指定的噪声过程在潜在空间中执行扩散。受唤醒-睡眠算法的启发，我们通过优化边际似然的新下界来拟合这些模型。我们的方法易于实现（它适合ELBO的正则化扩展），与黑箱变分推理兼容，并且优于基于归一化流或对抗性网络的替代类近似后验。当应用于深层潜变量模型时，我们的方法产生了去噪扩散VAE（DD-VAE）算法。我们将该算法用于生物学中的一项激励任务——从人类基因组推断潜在祖先——在千基因组数据集上的表现优于强基线。 et.al.|[2401.02739](http://arxiv.org/abs/2401.02739)|null|
 |**2024-01-05**|**Geometric-Facilitated Denoising Diffusion Model for 3D Molecule Generation**|去噪扩散模型在多个研究领域显示出巨大的潜力。现有的基于扩散的从头3D分子生成方法面临两个主要挑战。由于分子中的大多数重原子允许通过单键与多个原子连接，因此仅使用成对距离来模拟分子几何结构是不够的。因此，第一个涉及提出一种有效的神经网络作为去噪内核，它能够捕捉复杂的多体原子间关系并学习高质量的特征。由于图的离散性，主流的基于扩散的分子方法在很大程度上依赖于预定义的规则，并以间接的方式生成边。第二个挑战涉及将分子的产生与扩散相适应，并准确预测键的存在。在我们的研究中，我们认为在扩散过程中更新分子构象的迭代方式与分子动力学是一致的，并引入了一种新的分子生成方法，称为几何促进分子扩散（GFMDiff）。对于第一个挑战，我们引入了双轨变换器网络（DTN），以充分优化全局空间关系并学习高质量的表示，这有助于准确预测特征和几何形状。至于第二个挑战，我们设计了几何促进损失（GFLoss），它在训练期间干预键的形成，而不是直接将边缘嵌入潜在空间。在当前基准上的综合实验证明了GFMDiff的优越性。 et.al.|[2401.02683](http://arxiv.org/abs/2401.02683)|null|
 
-<p align=right>(<a href=#updated-on-20240108>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240109>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2023-12-18**|**LatentEditor: Text Driven Local Editing of 3D Scenes**|虽然神经领域在视图合成和场景重建方面取得了重大进展，但由于其对来自多视图输入的几何和纹理信息的隐式编码，编辑它们带来了巨大的挑战。在本文中，我们介绍了\textsc｛LatentEditor｝，这是一个创新的框架，旨在让用户能够使用文本提示对神经字段进行精确和本地控制的编辑。利用去噪扩散模型，我们成功地将真实世界的场景嵌入到潜在空间中，与传统方法相比，产生了更快、更具适应性的NeRF主干进行编辑。为了提高编辑精度，我们引入了一个delta分数来计算潜在空间中的2D掩模，该分数可以作为局部修改的指南，同时保留不相关的区域。我们新颖的像素级评分方法利用InstructPix2Pix（IP2P）的能力来辨别潜在空间中IP2P条件和无条件噪声预测之间的差异。然后在训练集中迭代地更新以2D掩码为条件的编辑的潜伏时间，以实现3D局部编辑。与现有的3D编辑模型相比，我们的方法实现了更快的编辑速度和卓越的输出质量，弥合了文本指令和潜在空间中高质量3D场景编辑之间的差距。我们在LLFF、IN2N、NeRFStudio和NeRFArt四个基准3D数据集上展示了我们的方法的优势。 et.al.|[2312.09313](http://arxiv.org/abs/2312.09313)|**[link](https://github.com/umarkhalidAI/LatentEditor)**|
 |**2023-12-14**|**ZeroRF: Fast Sparse View 360° Reconstruction with Zero Pretraining**|我们提出了ZeroRF，这是一种新的每场景优化方法，解决了神经场表示中稀疏视图360重建的挑战。目前的突破，如神经辐射场（NeRF）已经证明了高保真度的图像合成，但难以处理稀疏的输入视图。现有的方法，如可泛化的NeRF和每场景优化方法，在数据依赖性、计算成本和跨不同场景的泛化方面面临限制。为了克服这些挑战，我们提出了ZeroRF，其关键思想是将定制的深度图像先验集成到因子分解的NeRF表示中。与传统方法不同，ZeroRF使用神经网络生成器对特征网格进行参数化，从而实现高效的稀疏视图360重建，而无需任何预训练或额外的正则化。大量实验展示了ZeroRF在质量和速度方面的多功能性和优势，在基准数据集上取得了最先进的结果。ZeroRF的意义延伸到3D内容生成和编辑的应用。项目页面：https://sarahweiii.github.io/zerorf/ et.al.|[2312.09249](http://arxiv.org/abs/2312.09249)|null|
 
-<p align=right>(<a href=#updated-on-20240108>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240109>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
