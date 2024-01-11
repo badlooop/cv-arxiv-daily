@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.01.10
+## Updated on 2024.01.11
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2023-12-28**|**Spacetime Gaussian Feature Splatting for Real-Time Dynamic View Synthesis**|动态场景的新颖视图合成一直是一个有趣但具有挑战性的问题。尽管最近取得了进展，但同时实现高分辨率的真实感、实时渲染和紧凑的存储仍然是一项艰巨的任务。为了应对这些挑战，我们提出了时空高斯特征飞溅作为一种新的动态场景表示，由三个关键组件组成。首先，我们通过增强具有时间不透明度和参数运动/旋转的3D高斯，来形成富有表现力的时空高斯。这使得时空高斯能够捕捉场景中的静态、动态以及瞬态内容。其次，我们介绍了飞溅特征渲染，它用神经特征代替了球面谐波。这些功能有助于在保持小尺寸的同时对视图和与时间相关的外观进行建模。第三，我们利用训练误差和粗略深度的指导，在难以与现有管道融合的区域对新的高斯采样。在几个已建立的真实世界数据集上的实验表明，我们的方法在保持紧凑存储的同时，实现了最先进的渲染质量和速度。在8K分辨率下，我们的lite版本模型可以在Nvidia RTX 4090 GPU上以60 FPS的速度渲染。 et.al.|[2312.16812](http://arxiv.org/abs/2312.16812)|null|
 |**2023-12-26**|**fMPI: Fast Novel View Synthesis in the Wild with Layered Scene Representations**|在这项研究中，我们为基于分层场景表示的新视图合成（NVS）方法提出了两种新的输入处理范式，这两种方法在不影响质量的情况下显著提高了它们的运行时间。我们的方法识别并减轻了传统管道最耗时的两个方面：构建和处理所谓的平面扫描体积（PSV），这是输入相机视图的平面重新投影的高维张量。特别是，我们建议在并行组中处理该张量，以提高计算效率，并对相邻输入平面进行超采样，从而生成更密集、更准确的场景表示。所提出的增强提供了显著的灵活性，允许在性能和速度之间取得平衡，从而朝着实时应用迈出了实质性的步伐。此外，它们非常通用，因为任何基于PSV的方法都可以使用它们，包括使用多平面图像、多球体图像和分层深度图像的方法。在一组全面的实验中，我们证明了我们提出的范式能够设计出一种NVS方法，该方法在公共基准上达到最先进的水平，同时比现有的最先进的方法快50倍。它在速度方面也比目前的前辈高出3倍多，同时实现了明显更好的渲染质量。 et.al.|[2312.16109](http://arxiv.org/abs/2312.16109)|null|
 
-<p align=right>(<a href=#updated-on-20240110>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240111>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2023-12-28**|**Geometry-Biased Transformer for Robust Multi-View 3D Human Pose Reconstruction**|我们解决了在遮挡和有限重叠视图下从多个视图估计3D人体姿态的挑战。我们将多视图、单人三维人体姿态重建作为一个回归问题，并提出了一种新的编码器-解码器-转换器架构，用于从多视图二维姿态序列中估计三维姿态。编码器对在不同视图和时间检测到的2D骨骼关节进行细化，通过全局自关注融合多视图和时间信息。我们通过结合有几何偏见的注意力机制来增强编码器，有效地利用视图之间的几何关系。此外，我们使用2D姿势检测器提供的检测分数来基于2D检测的可靠性进一步引导编码器的注意力。解码器随后使用针对每个关节的预定义查询，从这些细化的标记回归3D姿势序列。为了增强我们的方法对看不见的场景的泛化能力，并提高对缺失关节的恢复能力，我们实施了包括场景居中、合成视图和标记丢弃在内的策略。我们在三个基准公共数据集Human3.6M、CMU Panoptic和Occlusion Persons上进行了广泛的实验。我们的结果证明了我们的方法的有效性，特别是在遮挡场景和视图很少的情况下，这对于基于三角测量的方法来说是传统上具有挑战性的场景。 et.al.|[2312.17106](http://arxiv.org/abs/2312.17106)|null|
 |**2023-12-28**|**Learning Spatially Collaged Fourier Bases for Implicit Neural Representation**|现有的隐式神经表示（INR）方法可以通过不同频率的傅立叶基的线性组合解释为全局场景表示。然而，这种通用基函数可能会限制不需要特定组件的局部区域的表示能力，从而导致令人不快的伪影。为此，我们引入了一种可学习的空间掩模，它可以有效地将不同的傅立叶基分派到各个区域中。这转化为拼贴傅立叶补丁，从而实现复杂信号的精确表示。综合实验证明，在各种INR任务中，包括图像拟合、视频表示和3D形状表示，所提出的方法的重建质量优于现有基线。我们的方法优于所有其他基线，将图像拟合PSNR提高了3dB以上，并将3D重建提高到98.81 IoU和0.0011倒角距离。 et.al.|[2312.17018](http://arxiv.org/abs/2312.17018)|null|
 
-<p align=right>(<a href=#updated-on-20240110>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240111>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-01-09**|**MagicVideo-V2: Multi-Stage High-Aesthetic Video Generation**|对通过文本描述生成高保真视频的需求不断增长，推动了该领域的重要研究。在这项工作中，我们介绍了MagicVideo-V2，它将文本到图像模型、视频运动生成器、参考图像嵌入模块和帧插值模块集成到一个端到端的视频生成管道中。得益于这些架构设计，MagicVideo-V2可以生成美观、高分辨率的视频，具有非凡的保真度和流畅度。通过大规模的用户评估，它展示了优于领先的文本到视频系统（如Runway、Pika 1.0、Morph、Moon Valley和稳定视频扩散模型）的卓越性能。 et.al.|[2401.04468](http://arxiv.org/abs/2401.04468)|null|
 |**2024-01-09**|**D3AD: Dynamic Denoising Diffusion Probabilistic Model for Anomaly Detection**|扩散模型通过捕捉标称数据分布和通过重建识别异常，在异常检测中找到了有价值的应用。尽管它们有优点，但它们很难定位不同规模的异常，尤其是像整个缺失组件这样的较大异常。针对这一点，我们提出了一个新的框架，通过扩展之前引入的隐含条件反射方法，增强了扩散模型的能力。（2022）在三个重要方面。首先，我们结合了一个动态步长计算，该计算允许在初始异常预测的指导下，在正向过程中进行可变的噪声步骤。其次，我们证明了仅对缩放输入进行去噪，而不添加任何噪声，优于传统的去噪过程。第三，我们在一个潜在的空间中投影图像，以抽象出干扰大型缺失组件重建的精细细节。此外，我们提出了一种微调机制，有助于模型有效地掌握目标领域的细微差别。我们的方法在两个突出的异常检测数据集VISA和BTAD上进行了严格的评估，产生了最先进的性能。重要的是，我们的框架有效地定位了异常，无论其规模如何，这标志着基于扩散的异常检测取得了关键进展。 et.al.|[2401.04463](http://arxiv.org/abs/2401.04463)|null|
 
-<p align=right>(<a href=#updated-on-20240110>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240111>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2023-12-18**|**LatentEditor: Text Driven Local Editing of 3D Scenes**|虽然神经领域在视图合成和场景重建方面取得了重大进展，但由于其对来自多视图输入的几何和纹理信息的隐式编码，编辑它们带来了巨大的挑战。在本文中，我们介绍了\textsc｛LatentEditor｝，这是一个创新的框架，旨在让用户能够使用文本提示对神经字段进行精确和本地控制的编辑。利用去噪扩散模型，我们成功地将真实世界的场景嵌入到潜在空间中，与传统方法相比，产生了更快、更具适应性的NeRF主干进行编辑。为了提高编辑精度，我们引入了一个delta分数来计算潜在空间中的2D掩模，该分数可以作为局部修改的指南，同时保留不相关的区域。我们新颖的像素级评分方法利用InstructPix2Pix（IP2P）的能力来辨别潜在空间中IP2P条件和无条件噪声预测之间的差异。然后在训练集中迭代地更新以2D掩码为条件的编辑的潜伏时间，以实现3D局部编辑。与现有的3D编辑模型相比，我们的方法实现了更快的编辑速度和卓越的输出质量，弥合了文本指令和潜在空间中高质量3D场景编辑之间的差距。我们在LLFF、IN2N、NeRFStudio和NeRFArt四个基准3D数据集上展示了我们的方法的优势。 et.al.|[2312.09313](http://arxiv.org/abs/2312.09313)|**[link](https://github.com/umarkhalidAI/LatentEditor)**|
 |**2023-12-14**|**ZeroRF: Fast Sparse View 360° Reconstruction with Zero Pretraining**|我们提出了ZeroRF，这是一种新的每场景优化方法，解决了神经场表示中稀疏视图360重建的挑战。目前的突破，如神经辐射场（NeRF）已经证明了高保真度的图像合成，但难以处理稀疏的输入视图。现有的方法，如可泛化的NeRF和每场景优化方法，在数据依赖性、计算成本和跨不同场景的泛化方面面临限制。为了克服这些挑战，我们提出了ZeroRF，其关键思想是将定制的深度图像先验集成到因子分解的NeRF表示中。与传统方法不同，ZeroRF使用神经网络生成器对特征网格进行参数化，从而实现高效的稀疏视图360重建，而无需任何预训练或额外的正则化。大量实验展示了ZeroRF在质量和速度方面的多功能性和优势，在基准数据集上取得了最先进的结果。ZeroRF的意义延伸到3D内容生成和编辑的应用。项目页面：https://sarahweiii.github.io/zerorf/ et.al.|[2312.09249](http://arxiv.org/abs/2312.09249)|null|
 
-<p align=right>(<a href=#updated-on-20240110>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240111>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
