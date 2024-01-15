@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.01.14
+## Updated on 2024.01.15
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,13 +31,13 @@
 |**2024-01-02**|**GD^2-NeRF: Generative Detail Compensation via GAN and Diffusion for One-shot Generalizable Neural Radiance Fields**|在本文中，我们专注于单镜头新颖视图合成（O-NVS）任务，该任务的目标是在每个场景只有一个参考图像的情况下合成照片逼真的新颖视图。先前的一次性可泛化神经辐射场（OG-NeRF）方法以无推理时间微调的方式解决了这一任务，但由于仅编码器的架构高度依赖于有限的参考图像，因此存在模糊问题。另一方面，最近的基于扩散的图像到3d方法通过将预先训练的2D扩散模型提取到3d表示中显示出生动可信的结果，但需要繁琐的逐场景优化。针对这些问题，我们提出了GD $^2$-NeRF，这是一个通过GAN和Diffusion的生成细节补偿框架，既不需要推理时间微调，又具有生动可信的细节。详细地说，遵循从粗到细的策略，GD$^2$-NeRF主要由一级并行流水线（OPP）和3D一致细节增强器（Diff3DE）组成。在粗略阶段，OPP首先将GAN模型有效地插入到现有的OG-NeRF管道中，以主要缓解从训练数据集中捕获的分布内先验的模糊问题，实现清晰度（LPIPS、FID）和保真度（PSNR、SSIM）之间的良好平衡。然后，在精细阶段，Diff3DE进一步利用预先训练的图像扩散模型来补充丰富的分布细节，同时保持良好的3D一致性。在合成数据集和真实世界数据集上进行的大量实验表明，GD$^2$ -NeRF在没有每场景微调的情况下显著改善了细节。 et.al.|[2401.00616](http://arxiv.org/abs/2401.00616)|null|
 |**2023-12-28**|**iFusion: Inverting Diffusion for Pose-Free Reconstruction from Sparse Views**|我们提出了iFusion，这是一种新颖的3D对象重建框架，只需要两个具有未知相机姿态的视图。虽然单视图重建会产生视觉上吸引人的结果，但它可能会与实际对象有很大的偏差，尤其是在看不见的一侧。附加视图提高了重建保真度，但需要已知的摄影机姿势。然而，假设姿态的可用性可能是不现实的，并且现有的姿态估计器在稀疏视图场景中失败。为了解决这一问题，我们利用了一个预先训练的新颖视图合成扩散模型，该模型嵌入了关于不同对象的几何形状和外观的隐含知识。我们的策略分为三个步骤：（1）我们反转用于相机姿态估计的扩散模型，而不是合成新的视图。（2） 使用提供的视图和估计的姿态对扩散模型进行微调，使其成为为目标对象量身定制的新型视图合成器。（3） 利用配准的视图和微调的扩散模型，我们重建了3D对象。实验表明，在姿态估计和新视图合成方面都有很强的性能。此外，iFusion与各种重建方法无缝集成，并对其进行了增强。 et.al.|[2312.17250](http://arxiv.org/abs/2312.17250)|**[link](https://github.com/chinhsuanwu/ifusion)**|
 
-<p align=right>(<a href=#updated-on-20240114>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240115>back to top</a>)</p>
 
 ## 3D Reconstruction
 
 |Publish Date|Title|Abstract|PDF|Code|
 |---|---|---|---|---|
-|**2024-01-11**|**Surgical-DINO: Adapter Learning of Foundation Model for Depth Estimation in Endoscopic Surgery**|目的：机器人手术中的深度估计在三维重建、手术导航和增强现实可视化中至关重要。尽管基础模型在许多视觉任务中表现出出色的性能，包括深度估计（例如，DINOv2），但最近的工作观察到其在医学和外科领域特定应用中的局限性。这项工作提出了一种用于手术深度估计的基础模型的低阶自适应（LoRA）。方法：我们设计了一种基于基础模型的深度估计方法，称为Surgical DINO，这是对DINOv2的低阶自适应，用于内窥镜手术中的深度估计。我们构建了LoRA层，并将其集成到DINO中，以适应手术特定领域的知识，而不是传统的微调。在训练过程中，我们冻结了显示出出色视觉表示能力的DINO图像编码器，并仅优化了LoRA层和深度解码器，以集成来自手术场景的特征。结果：我们的模型在SCARED的MICCAI挑战数据集上得到了广泛验证，该数据集是从达芬奇Xi内窥镜手术中收集的。我们的经验表明，外科DINO在内窥镜深度估计任务中显著优于所有最先进的模型。消融研究的分析表明，我们的LoRA层和适应具有显著效果。结论：外科DINO为基础模型成功适应外科领域进行深度估计提供了一些启示。结果中有明确证据表明，对计算机视觉数据集中预先训练的权重进行零样本预测或简单微调不足以直接在外科领域使用基础模型。代码位于https://github.com/BeileiCui/SurgicalDINO. et.al.|[2401.06013](http://arxiv.org/abs/2401.06013)|**[link](https://github.com/beileicui/surgicaldino)**|
+|**2024-01-12**|**Surgical-DINO: Adapter Learning of Foundation Models for Depth Estimation in Endoscopic Surgery**|目的：机器人手术中的深度估计在三维重建、手术导航和增强现实可视化中至关重要。尽管基础模型在许多视觉任务中表现出出色的性能，包括深度估计（例如，DINOv2），但最近的工作观察到其在医学和外科领域特定应用中的局限性。这项工作提出了一种用于手术深度估计的基础模型的低阶自适应（LoRA）。方法：我们设计了一种基于基础模型的深度估计方法，称为Surgical DINO，这是对DINOv2的低阶自适应，用于内窥镜手术中的深度估计。我们构建了LoRA层，并将其集成到DINO中，以适应手术特定领域的知识，而不是传统的微调。在训练过程中，我们冻结了显示出出色视觉表示能力的DINO图像编码器，并仅优化了LoRA层和深度解码器，以集成来自手术场景的特征。结果：我们的模型在SCARED的MICCAI挑战数据集上得到了广泛验证，该数据集是从达芬奇Xi内窥镜手术中收集的。我们的经验表明，外科DINO在内窥镜深度估计任务中显著优于所有最先进的模型。消融研究的分析表明，我们的LoRA层和适应具有显著效果。结论：外科DINO为基础模型成功适应外科领域进行深度估计提供了一些启示。结果中有明确证据表明，对计算机视觉数据集中预先训练的权重进行零样本预测或简单微调不足以直接在外科领域使用基础模型。代码位于https://github.com/BeileiCui/SurgicalDINO. et.al.|[2401.06013](http://arxiv.org/abs/2401.06013)|**[link](https://github.com/beileicui/surgicaldino)**|
 |**2024-01-10**|**Structure from Duplicates: Neural Inverse Graphics from a Pile of Objects**|我们的世界充满了相同的物体（例如，可乐罐、同一型号的汽车）。当这些重复出现在一起时，为我们有效地推理3D提供了额外而有力的线索。受这一观察结果的启发，我们引入了“重复结构”（SfD），这是一种新颖的逆图形框架，可以从包含多个相同对象的单个图像中重建几何体、材料和照明。SfD首先识别图像中对象的多个实例，然后联合估计所有实例的6DoF姿势。随后使用反向图形管道来联合推理对象的形状、材质和环境光，同时遵守实例之间的共享几何图形和材质约束。我们的主要贡献包括利用对象副本作为单图像逆图形的鲁棒先验，并提出用于联合6-DoF对象姿态估计的平面内旋转鲁棒运动结构（SfM）公式。通过利用来自单个图像的多视图线索，SfD生成了更真实、更详细的3D重建，显著优于具有相似或更多观测值的现有单个图像重建模型和多视图重建方法。 et.al.|[2401.05236](http://arxiv.org/abs/2401.05236)|**[link](https://github.com/tianhang-cheng/sfd)**|
 |**2024-01-07**|**RHOBIN Challenge: Reconstruction of Human Object Interaction**|对人与物体之间的相互作用进行建模是近年来新兴的研究方向。然而，由于严重的遮挡和复杂的动力学，捕捉人与物体的相互作用是一项非常具有挑战性的任务，这不仅需要了解三维人体姿态和物体姿态，还需要了解它们之间的相互作用。长期以来，三维人和物体的重建一直是计算机视觉中两个独立的研究领域。因此，我们提出了RHOBIN的第一个挑战：结合RHOBIN研讨会重建人-物交互。它旨在将人类和物体重建以及交互建模的研究团体聚集在一起，讨论技术和交换思想。我们的挑战包括从单目RGB图像进行3D重建的三个轨道，重点是处理具有挑战性的交互场景。我们的挑战吸引了100多名参与者，提交了300多份材料，表明了研究界的广泛兴趣。本文介绍了我们挑战赛的设置，并更详细地讨论了每条赛道的获胜方法。我们观察到，即使在严重遮挡的情况下，人类重建任务也正在变得成熟，而物体姿态估计和关节重建仍然是具有挑战性的任务。随着人们对交互建模越来越感兴趣，我们希望这份报告能提供有用的见解，并促进未来在这个方向上的研究。我们的研讨会网站位于\ href{https://rhobin-challenge.github.io/}{https://rhobin-challenge.github.io/}. et.al.|[2401.04143](http://arxiv.org/abs/2401.04143)|null|
 |**2024-01-08**|**AGG: Amortized Generative 3D Gaussians for Single Image to 3D**|考虑到对自动3D内容创建管道的日益增长的需求，已经研究了各种3D表示来从单个图像生成3D对象。由于其优越的渲染效率，基于3D高斯飞溅的模型最近在3D重建和生成方面都表现出色。用于图像到3D生成的3D高斯飞溅方法通常是基于优化的，需要许多计算昂贵的分数提取步骤。为了克服这些挑战，我们引入了一种分期生成的3D高斯框架（AGG），该框架可以从单个图像中立即生成3D高斯，无需按实例优化。AGG利用中间混合表示分解3D高斯位置和其他外观属性的生成，用于联合优化。此外，我们提出了一种级联流水线，该流水线首先生成3D数据的粗略表示，然后使用3D高斯超分辨率模块对其进行上采样。我们的方法是根据现有的基于优化的3D高斯框架和利用其他3D表示的基于采样的管道进行评估的，其中AGG在质量和数量上都表现出有竞争力的生成能力，同时速度快几个数量级。项目页面：https://ir1d.github.io/AGG/ et.al.|[2401.04099](http://arxiv.org/abs/2401.04099)|null|
@@ -48,7 +48,7 @@
 |**2023-12-29**|**Informative Rays Selection for Few-Shot Neural Radiance Fields**|神经辐射场（NeRF）最近已成为基于图像的3D重建的一种强大方法，但每个场景的漫长优化限制了其实际应用，尤其是在资源受限的环境中。现有的方法通过减少输入视图的数量并利用复杂的损失或来自其他模态的额外输入来正则化所学习的体积表示来解决这个问题。在本文中，我们提出了KeyNeRF，这是一种简单而有效的方法，通过聚焦关键信息射线，在少镜头场景中训练NeRF。这种射线首先在相机级别通过视图选择算法进行选择，该算法在保证场景覆盖的同时促进基线多样性，然后在像素级别通过基于局部图像熵的概率分布进行采样。我们的方法与最先进的方法相比表现良好，同时需要对现有NeRF代码库进行最小的更改。 et.al.|[2312.17561](http://arxiv.org/abs/2312.17561)|null|
 |**2023-12-28**|**Toward Semantic Scene Understanding for Fine-Grained 3D Modeling of Plants**|由于全球人口增长以及对粮食和劳动力短缺的预期，农业机器人是一个活跃的研究领域。机器人可能有助于完成修剪、收割、表型分析和植物建模等任务。然而，农业自动化受到阻碍，因为难以在该领域创建高分辨率3D语义地图，从而实现安全操作和导航。在本文中，我们致力于解决这一问题，并展示了语义和环境先验的使用如何帮助为高粱的目标应用构建准确的3D地图。具体而言，我们1）使用高粱种子作为语义地标来构建视觉同步定位和映射（SLAM）系统，该系统使我们能够平均映射78%的高粱范围，而ORB-SLAM2的映射率为38%；和2）使用种子作为语义特征来改进由机器人手持相机拍摄的图像对完整高粱穗的3D重建。 et.al.|[2312.17110](http://arxiv.org/abs/2312.17110)|null|
 
-<p align=right>(<a href=#updated-on-20240114>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240115>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-01-11**|**DiffDA: a diffusion model for weather-scale data assimilation**|通过准确的数据同化产生初始条件对于可靠的天气预报和气候建模至关重要。我们提出DiffDA作为一种基于机器学习的数据同化方法，能够使用预测状态和稀疏观测同化大气变量。我们将预训练的GraphCast天气预报模型作为去噪扩散模型。我们的方法应用了两阶段条件反射：在训练和推理期间对预测状态进行条件反射，仅在推理期间对稀疏观测进行条件反射。作为一种副产品，这种策略还可以对未来的预测进行后处理，因为没有可用的观测结果。通过基于再分析数据集的实验，我们验证了我们的方法可以产生与0.25度分辨率的观测结果一致的同化全球大气数据。实验还表明，通过我们的方法生成的初始条件可以用于预测模型，与最先进的数据同化套件的初始条件相比，提前期损失最多为24小时。这使得该方法能够应用于现实世界的应用，例如创建具有自回归数据同化的再分析数据集。 et.al.|[2401.05932](http://arxiv.org/abs/2401.05932)|null|
 |**2024-01-11**|**Efficient Image Deblurring Networks based on Diffusion Models**|本文介绍了一种用于散焦去模糊的滑动窗口模型，该模型以极低的内存使用率实现了迄今为止的最佳性能。该方法名为Swintormer，利用扩散模型生成潜在的先验特征，有助于恢复更详细的图像。它还将滑动窗口策略扩展到专门的Transformer块，以实现高效推理。此外，我们还进一步优化了乘法累加运算（Mac）。与目前性能最好的GRL方法相比，我们的Swintomer模型将计算复杂度从140.35 GMAC大幅降低到8.02 GMACs，同时还将散焦去模糊的信噪比（SNR）从27.04dB提高到27.07dB。这种新方法允许在内存有限的设备上处理更高分辨率的图像，大大扩展了潜在的应用场景。文章最后进行了消融研究，深入分析了每个网络模块对最终性能的影响。源代码和模型将在以下网站上提供：https://github.com/bnm6900030/swintormer. et.al.|[2401.05907](http://arxiv.org/abs/2401.05907)|**[link](https://github.com/bnm6900030/swintormer)**|
 
-<p align=right>(<a href=#updated-on-20240114>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240115>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2023-12-18**|**LatentEditor: Text Driven Local Editing of 3D Scenes**|虽然神经领域在视图合成和场景重建方面取得了重大进展，但由于其对来自多视图输入的几何和纹理信息的隐式编码，编辑它们带来了巨大的挑战。在本文中，我们介绍了\textsc｛LatentEditor｝，这是一个创新的框架，旨在让用户能够使用文本提示对神经字段进行精确和本地控制的编辑。利用去噪扩散模型，我们成功地将真实世界的场景嵌入到潜在空间中，与传统方法相比，产生了更快、更具适应性的NeRF主干进行编辑。为了提高编辑精度，我们引入了一个delta分数来计算潜在空间中的2D掩模，该分数可以作为局部修改的指南，同时保留不相关的区域。我们新颖的像素级评分方法利用InstructPix2Pix（IP2P）的能力来辨别潜在空间中IP2P条件和无条件噪声预测之间的差异。然后在训练集中迭代地更新以2D掩码为条件的编辑的潜伏时间，以实现3D局部编辑。与现有的3D编辑模型相比，我们的方法实现了更快的编辑速度和卓越的输出质量，弥合了文本指令和潜在空间中高质量3D场景编辑之间的差距。我们在LLFF、IN2N、NeRFStudio和NeRFArt四个基准3D数据集上展示了我们的方法的优势。 et.al.|[2312.09313](http://arxiv.org/abs/2312.09313)|**[link](https://github.com/umarkhalidAI/LatentEditor)**|
 |**2023-12-14**|**ZeroRF: Fast Sparse View 360° Reconstruction with Zero Pretraining**|我们提出了ZeroRF，这是一种新的每场景优化方法，解决了神经场表示中稀疏视图360重建的挑战。目前的突破，如神经辐射场（NeRF）已经证明了高保真度的图像合成，但难以处理稀疏的输入视图。现有的方法，如可泛化的NeRF和每场景优化方法，在数据依赖性、计算成本和跨不同场景的泛化方面面临限制。为了克服这些挑战，我们提出了ZeroRF，其关键思想是将定制的深度图像先验集成到因子分解的NeRF表示中。与传统方法不同，ZeroRF使用神经网络生成器对特征网格进行参数化，从而实现高效的稀疏视图360重建，而无需任何预训练或额外的正则化。大量实验展示了ZeroRF在质量和速度方面的多功能性和优势，在基准数据集上取得了最先进的结果。ZeroRF的意义延伸到3D内容生成和编辑的应用。项目页面：https://sarahweiii.github.io/zerorf/ et.al.|[2312.09249](http://arxiv.org/abs/2312.09249)|null|
 
-<p align=right>(<a href=#updated-on-20240114>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240115>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
