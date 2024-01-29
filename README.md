@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.01.28
+## Updated on 2024.01.29
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,14 +31,14 @@
 |**2024-01-16**|**Fast Dynamic 3D Object Generation from a Single-view Video**|由于缺乏4D标记的数据，从单视图视频生成动态三维（3D）对象是具有挑战性的。现有方法通过传输现成的图像生成模型（如分数蒸馏采样）来扩展文本到3D管道，但由于需要通过大型预训练模型反向传播信息有限的监督信号，这些方法的扩展速度慢且成本高（例如，每个对象150分钟）。为了解决这一限制，我们提出了一种高效的视频到4D对象生成框架，称为Efficient4D。它在不同的相机视图下生成高质量的时空一致图像，然后将其用作标记数据，直接训练具有显式点云几何结构的新型4D高斯飞溅模型，实现在连续相机轨迹下的实时渲染。对合成视频和真实视频的广泛实验表明，与现有技术的替代方案相比，Efficient4D的速度显著提高了10倍，同时保持了相同水平的创新视图合成质量。例如，Efficient4D只需14分钟即可对动态对象进行建模。 et.al.|[2401.08742](http://arxiv.org/abs/2401.08742)|null|
 |**2024-01-18**|**ProvNeRF: Modeling per Point Provenance in NeRFs as a Stochastic Process**|神经辐射场（NeRFs）在各种应用中越来越受欢迎。然而，它们在稀疏视图设置中面临挑战，缺乏来自体积渲染的足够约束。在具有多种应用的经典计算机视觉中，从稀疏和无约束的相机重建和理解3D场景是一个长期存在的问题。虽然最近的工作在稀疏、无约束的视图场景中探索了NeRF，但他们的重点主要是增强重建和新颖的视图合成。我们的方法从更广泛的角度出发，提出了一个问题：“从哪里看到了每个点？”——这决定了我们对它的理解和重建程度。换句话说，我们的目标是在稀疏、无约束的视图下确定每个3D点及其相关信息的起源或出处。我们介绍了ProvNeRF，这是一个模型，通过合并每个点的来源，为每个点的可能源位置建模，丰富了传统的NeRF表示。我们通过扩展随机过程的隐式最大似然估计（IMLE）来实现这一点。值得注意的是，我们的方法与任何预先训练的NeRF模型和相关的训练相机姿势兼容。我们证明，与最先进的方法相比，逐点源建模提供了几个优势，包括不确定性估计、基于标准的视图选择和改进的新视图合成。请访问我们的项目页面https://provnerf.github.io et.al.|[2401.08140](http://arxiv.org/abs/2401.08140)|null|
 
-<p align=right>(<a href=#updated-on-20240128>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240129>back to top</a>)</p>
 
 ## 3D Reconstruction
 
 |Publish Date|Title|Abstract|PDF|Code|
 |---|---|---|---|---|
 |**2024-01-25**|**Range-Agnostic Multi-View Depth Estimation With Keyframe Selection**|从姿势帧进行3D重建的方法需要关于场景度量范围的先验知识，通常是为了恢复沿着核线的匹配线索并缩小搜索范围。然而，在真实场景中（例如，从视频序列进行户外3D重建），这种先验可能无法直接获得或估计不准确，因此严重阻碍了性能。在本文中，我们通过提出RAMDepth来专注于多视图深度估计，而不需要关于场景的度量范围的先验知识，RAMDepth是一种高效的纯2D框架，可以颠倒深度估计和匹配步骤的顺序。此外，我们展示了我们的框架提供有关用于预测的视图质量的丰富见解的能力。其他材料可以在我们的项目页面上找到https://andreaconti.github.io/projects/range_agnostic_multi_view_depth. et.al.|[2401.14401](http://arxiv.org/abs/2401.14401)|**[link](https://github.com/andreaconti/ramdepth)**|
-|**2024-01-25**|**pix2gestalt: Amodal Segmentation by Synthesizing Wholes**|我们介绍了pix2gestalt，这是一种用于零样本amodal分割的框架，它可以学习估计在遮挡后仅部分可见的整个对象的形状和外观。通过利用大规模扩散模型并将其表示转移到这项任务中，我们学习了一个条件扩散模型，用于在具有挑战性的零样本情况下重建整个对象，包括打破自然和物理先验的例子，如艺术。作为训练数据，我们使用了一个综合策划的数据集，其中包含与整个对象配对的遮挡对象。实验表明，我们的方法在已建立的基准上优于监督基线。我们的模型还可以用于显著提高现有对象识别和3D重建方法在存在遮挡的情况下的性能。 et.al.|[2401.14398](http://arxiv.org/abs/2401.14398)|**[link](https://github.com/cvlab-columbia/pix2gestalt)**|
+|**2024-01-25**|**pix2gestalt: Amodal Segmentation by Synthesizing Wholes**|我们介绍了pix2gestalt，这是一种用于零样本amodal分割的框架，它可以学习估计在遮挡后仅部分可见的整个对象的形状和外观。通过利用大规模扩散模型并将其表示转移到该任务中，我们学习了一种条件扩散模型，用于在具有挑战性的零样本情况下重建整个对象，包括打破自然和物理先验的例子，如艺术。作为训练数据，我们使用一个综合策划的数据集，其中包含被遮挡的物体及其整个对应物。实验表明，我们的方法在已建立的基准上优于监督基线。我们的模型还可以用于显著提高现有对象识别和3D重建方法在存在遮挡的情况下的性能。 et.al.|[2401.14398](http://arxiv.org/abs/2401.14398)|**[link](https://github.com/cvlab-columbia/pix2gestalt)**|
 |**2024-01-25**|**GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting**|我们在扩展的U-scene数据集上，使用新开发的3D表示方法高斯飞溅，引入了一种新的大规模场景重建基准。U-Scene占地超过1.5平方公里，拥有一个综合的RGB数据集和激光雷达地面实况。在数据采集方面，我们使用了配备高精度Zenmuse L1激光雷达的Matrix 300无人机，实现了精确的屋顶数据采集。该数据集为超过1.5公里的高级空间分析转换提供了城市和学术环境的独特混合。我们对高斯飞溅U-Scene的评估包括对各种新颖视角的详细分析。我们还将这些结果与我们精确的点云数据集得出的结果并置，强调了显著的差异，强调了组合多模态信息的重要性 et.al.|[2401.14032](http://arxiv.org/abs/2401.14032)|null|
 |**2024-01-24**|**EndoGaussians: Single View Dynamic Gaussian Splatting for Deformable Endoscopic Tissues Reconstruction**|在VR手术和医学图像分析等医学应用中，从内窥镜视频中精确重建可变形的软组织是一个关键挑战。现有的方法往往难以准确和模糊产生幻觉的组织部分，限制了它们的实用性。在这项工作中，我们介绍了EndoGaussians，这是一种利用高斯散射进行动态内窥镜三维重建的新方法。该方法标志着首次在这种情况下使用高斯散射，克服了以前基于NeRF的技术的局限性。我们的方法设定了新的最先进的标准，如对各种内窥镜数据集的定量评估所示。这些进步使我们的方法成为医学专业人员的一种很有前途的工具，为医学领域的实际应用提供更可靠、更高效的3D重建。 et.al.|[2401.13352](http://arxiv.org/abs/2401.13352)|null|
 |**2024-01-23**|**IRIS: Inverse Rendering of Indoor Scenes from Low Dynamic Range Images**|尽管许多3D重建和新颖的视图合成方法允许从消费者相机轻松捕捉的多视图图像中真实地渲染场景，但它们在表示中烘焙照明，无法支持高级应用程序，如材质编辑、重新照明和虚拟对象插入。通过反向渲染重建基于物理的材料特性和照明有望实现此类应用。然而，大多数反向渲染技术都需要高动态范围（HDR）图像作为输入，这是大多数用户无法访问的设置。我们提出了一种方法，从多视图、低动态范围（LDR）图像中恢复场景的基于物理的材料特性和空间变化的HDR照明。我们在反向渲染管道中对LDR图像形成过程进行建模，并提出了一种新的材料、照明和相机响应模型的优化策略。与采用LDR或HDR输入的最先进的反向渲染方法相比，我们使用合成场景和真实场景来评估我们的方法。我们的方法优于以LDR图像作为输入的现有方法，并允许高度逼真的重新照明和对象插入。 et.al.|[2401.12977](http://arxiv.org/abs/2401.12977)|null|
@@ -48,7 +48,7 @@
 |**2024-01-21**|**Deformable Endoscopic Tissues Reconstruction with Gaussian Splatting**|外科三维重建是机器人外科的一个关键研究领域，最近的工作采用了动态辐射场的变体，从单视点视频中成功地重建了可变形组织。然而，这些方法往往存在耗时的优化或质量较差的问题，限制了它们在下游任务中的采用。受3D高斯散射（一种最近流行的3D表示）的启发，我们提出了EndoGS，将高斯散射应用于可变形的内窥镜组织重建。具体而言，我们的方法结合了变形场来处理动态场景，深度引导监督来优化具有单个视点的3D目标，以及时空权重掩码来减轻工具遮挡。因此，EndoGS从单个视点视频、估计的深度图和标记的工具遮罩重建并渲染高质量的可变形内窥镜组织。在DaVinci机器人手术视频上的实验表明，EndoGS实现了卓越的渲染质量。代码位于https://github.com/HKU-MedAI/EndoGS. et.al.|[2401.11535](http://arxiv.org/abs/2401.11535)|**[link](https://github.com/hku-medai/endogs)**|
 |**2024-01-19**|**Dense 3D Reconstruction Through Lidar: A Comparative Study on Ex-vivo Porcine Tissue**|新的传感技术和更先进的处理算法正在改变计算机集成手术。尽管研究人员正在积极研究基于视觉的手术辅助的深度传感和3D重建，但仍难以实现微创手术腹腔的实时、准确和稳健的3D表示。因此，这项工作使用对新鲜离体猪组织的定量测试来彻底表征基于3D激光的飞行时间传感器（激光雷达）执行解剖表面重建的质量。使用商用激光扫描仪捕捉地面实况表面形状，并使用严格的统计工具分析由此产生的符号误差场。与来自内窥镜图像的基于现代学习的立体匹配相比，飞行时间传感表现出更高的精度、更低的处理延迟、更高的帧速率以及对传感器距离和较差照明的超强鲁棒性。此外，我们报告了近红外光穿透对不同组织样本的激光雷达测量精度的潜在负面影响，确定了肌肉与脂肪和肝脏相比的显著测量深度偏移。我们的发现突出了激光雷达在术中3D感知方面的潜力，并指出了结合互补飞行时间和光谱成像的新方法。 et.al.|[2401.10709](http://arxiv.org/abs/2401.10709)|null|
 
-<p align=right>(<a href=#updated-on-20240128>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240129>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-01-25**|**Sketch2NeRF: Multi-view Sketch-guided Text-to-3D Generation**|最近，文本到3D方法已经使用文本描述实现了高保真度的3D内容生成。然而，生成的对象是随机的，并且缺乏细粒度的控制。草图提供了一种引入这种细粒度控制的廉价方法。然而，由于这些草图的抽象性和模糊性，从中实现灵活的控制是具有挑战性的。在本文中，我们提出了一个多视图草图引导的文本到三维生成框架（即Sketch2NeRF），以将草图控制添加到三维生成中。具体而言，我们的方法利用预训练的2D扩散模型（例如，稳定扩散和控制网）来监督由神经辐射场（NeRF）表示的3D场景的优化。我们提出了一种新的同步生成和重建方法来有效地优化NeRF。在实验中，我们收集了两种多视图草图数据集来评估所提出的方法。我们证明，我们的方法可以通过细粒度的草图控制合成三维一致的内容，同时对文本提示具有高保真度。大量结果表明，我们的方法在草图相似性和文本对齐方面达到了最先进的性能。 et.al.|[2401.14257](http://arxiv.org/abs/2401.14257)|null|
 |**2024-01-25**|**Harnack inequalities for kinetic integral equations**|我们处理一大类动力学方程， $$\big[\partial_t+v\cdot\nabla_x\big]f=\mathcal{L}_vf.$$以上，扩散项$\mathcal{L}_v$是一个积分-微分算子，其非负核是仅具有可测量系数的分数阶$s\in（0,1）$。在其他结果中，我们能够证明非负弱解$f$确实满足$$\sup_｛Q^-｝f\\leq\c\inf_｛Q ^+｝f，$$，其中$Q^｛\pm｝$ 是合适的倾斜圆柱体。没有像文献中通常那样假设先验有界性，因为我们也能够证明一般的插值不等式，进而给出局部有界性——即使对于没有符号假设的弱亚解也是有效的。据我们所知，这是第一次证明动力学积分微分型方程的强Harnack不等式。给出并证明了一个新的独立结果，即Besicovitch型覆盖非常一般动力学几何的论点。 et.al.|[2401.14182](http://arxiv.org/abs/2401.14182)|null|
 
-<p align=right>(<a href=#updated-on-20240128>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240129>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2023-12-21**|**Geometric Awareness in Neural Fields for 3D Human Registration**|将模板与三维人体点云对齐是一个长期存在的问题，对于动画、重建和启用监督学习管道等任务至关重要。最近的数据驱动方法利用了预测的表面对应关系；然而，它们对不同的姿态或分布并不鲁棒。相比之下，工业解决方案往往依赖于昂贵的手动注释或多视图捕获系统。最近，神经场已经显示出有希望的结果，但它们纯粹的数据驱动性质缺乏几何意识，通常导致模板配准的微小错位。在这项工作中，我们提出了两种解决方案：LoVD，一种新的神经场模型，它预测朝向目标表面上的局部SMPL顶点的方向；和INT，这是第一个专门用于神经领域的自监督任务，在测试时，它利用目标几何结构来细化主干。我们将它们组合到INLoVD中，这是一个在大型MoCap数据集上训练的强大的3D人体注册管道。INLoVD是高效的（不到一分钟），在公共基准上稳定地达到了最先进的水平，并对分布外的数据提供了前所未有的概括。我们将在\url｛url｝中发布代码和检查点。 et.al.|[2312.14024](http://arxiv.org/abs/2312.14024)|null|
 |**2023-12-20**|**Neural feels with neural fields: Visuo-tactile perception for in-hand manipulation**|为了实现人类水平的灵活性，机器人必须从多模式感知推断空间意识，以推理接触互动。在新物体的手操作过程中，这种空间意识包括估计物体的姿势和形状。手内感知的现状主要采用视觉，并局限于跟踪先验已知对象。此外，在操作过程中，手上物体的视觉遮挡迫在眉睫，这阻止了当前系统在没有遮挡的情况下超越任务。我们将多指手的视觉和触摸传感相结合，在手内操作过程中估计物体的姿势和形状。我们的方法NeuralFeels通过在线学习神经场来编码对象几何，并通过优化姿态图问题来联合跟踪它。我们研究了模拟和现实世界中的多模式手部感知，通过本体感觉驱动的策略与不同的物体进行交互。我们的实验显示，使用已知的CAD模型，最终重建F分数为 $81$%，平均姿势漂移为$4.7\，\text｛mm｝$，进一步降低到$2.3\，\text{mm｝$。此外，我们观察到，与仅使用视觉的方法相比，在严重的视觉遮挡下，我们可以实现高达94$ %的跟踪改进。我们的研究结果表明，在手部操作过程中，触摸至少可以改善视觉估计，并在最好的情况下消除视觉估计的歧义。我们发布了70个实验的评估数据集FeelSight，作为在该领域进行基准测试的一步。我们由多模态感知驱动的神经表示可以作为提高机器人灵活性的感知支柱。视频可以在我们的项目网站上找到https://suddhu.github.io/neural-feels/ et.al.|[2312.13469](http://arxiv.org/abs/2312.13469)|null|
 
-<p align=right>(<a href=#updated-on-20240128>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240129>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
