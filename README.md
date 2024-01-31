@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.01.30
+## Updated on 2024.01.31
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-01-17**|**Objects With Lighting: A Real-World Dataset for Evaluating Reconstruction and Rendering for Object Relighting**|从照片中重建对象并将其虚拟地放置在新环境中超出了标准的新颖视图合成任务，因为对象的外观不仅要适应新颖的视点，还要适应新的照明条件，而且反向渲染方法的评估依赖于新颖的视图合成数据或用于定量分析的简单合成数据集。这项工作提供了一个真实世界的数据集，用于测量重新照明对象的重建和渲染。为此，我们捕获了多个环境中相同对象的环境照明和地面实况图像，从而可以从一个环境中拍摄的图像中重建对象，并量化看不见的照明环境的渲染视图的质量。此外，我们介绍了一个由现成方法组成的简单基线，并在重新照明任务中测试了几种最先进的方法，表明新的视图合成不是衡量性能的可靠指标。代码和数据集可在https://github.com/isl-org/objects-with-lighting . et.al.|[2401.09126](http://arxiv.org/abs/2401.09126)|**[link](https://github.com/isl-org/objects-with-lighting)**|
 |**2024-01-17**|**ICON: Incremental CONfidence for Joint Pose and Radiance Field Optimization**|在给定一组2D图像的情况下，神经辐射场（NeRF）在新视图合成（NVS）中表现出显著的性能。然而，NeRF训练需要每个输入视图的精确相机姿势，通常通过运动结构（SfM）管道获得。最近的作品试图放松这种限制，但它们仍然经常依赖于可以改进的体面的初始姿势。在这里，我们旨在消除姿势初始化的要求。我们提出了增量置信（ICON），这是一种从2D视频帧中训练NeRF的优化过程。ICON仅假设相机运动平滑，以估计姿势的初始猜测。此外，ICON引入了“置信度”：一种用于动态重加权梯度的模型质量自适应度量。ICON依赖于高置信度姿势来学习NeRF，并依赖于高置信度3D结构（由NeRF编码）来学习姿势。我们表明，与使用SfM姿势的方法相比，ICON在没有预先初始化姿势的情况下，在CO3D和HO3D中都实现了卓越的性能。 et.al.|[2401.08937](http://arxiv.org/abs/2401.08937)|null|
 
-<p align=right>(<a href=#updated-on-20240130>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240131>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-01-25**|**TIFu: Tri-directional Implicit Function for High-Fidelity 3D Character Reconstruction**|基于隐函数的方法的最新进展在从单个RGB图像进行3D人体重建方面显示出了有希望的结果。但是，这些方法不足以扩展到更一般的情况，通常会生成拖动或断开连接的身体部位，特别是对于动画角色。我们认为，这些限制源于使用现有的点级三维形状表示，该表示缺乏对三维上下文的整体理解。基于体素的重建方法更适合于一次捕获整个3D空间，然而，这些方法由于其过度的内存使用而不适用于高分辨率重建。为了应对这些挑战，我们引入了三向隐函数（TIFu），这是一种矢量级表示，与体素表示相比，它可以提高全局3D一致性，同时显著减少内存使用。我们还介绍了一种新的算法，通过沿三个正交轴聚合向量，在任意分辨率下进行三维重建，解决了向量固定维回归的固有问题。我们的方法在我们的自策划角色数据集和基准3D人体数据集中都实现了最先进的性能。我们提供了定量和定性分析来支持我们的发现。 et.al.|[2401.14565](http://arxiv.org/abs/2401.14565)|null|
 |**2024-01-25**|**Range-Agnostic Multi-View Depth Estimation With Keyframe Selection**|从姿势帧进行3D重建的方法需要关于场景度量范围的先验知识，通常是为了恢复沿着核线的匹配线索并缩小搜索范围。然而，在真实场景中（例如，从视频序列进行户外3D重建），这种先验可能无法直接获得或估计不准确，因此严重阻碍了性能。在本文中，我们通过提出RAMDepth来专注于多视图深度估计，而不需要关于场景的度量范围的先验知识，RAMDepth是一种高效的纯2D框架，可以颠倒深度估计和匹配步骤的顺序。此外，我们展示了我们的框架提供有关用于预测的视图质量的丰富见解的能力。其他材料可以在我们的项目页面上找到https://andreaconti.github.io/projects/range_agnostic_multi_view_depth. et.al.|[2401.14401](http://arxiv.org/abs/2401.14401)|**[link](https://github.com/andreaconti/ramdepth)**|
 
-<p align=right>(<a href=#updated-on-20240130>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240131>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-01-29**|**Anomalous quantum transport in fractal lattices**|分形晶格是一种自相似结构，具有不同尺度上的重复图案。与其他非周期晶格一样，平移对称性的缺失会引起量子局域化效应。与低维无序系统相比，在分形结构中，局域态和扩展态的共存是可能的，并可能导致微妙的传输行为。在这里，我们研究了两个分形格，即Sierpi’nski垫圈和Sierpi‘nski地毯的动力学性质。尽管它们在几何上相似，但传输行为却截然不同：在Sierpi’nski垫圈中，我们发现了亚扩散行为，而Sierpi‘nski地毯表现出亚弹道传输特性。我们证明，不同的动力学行为符合系统光谱性质的定性差异。具体而言，与Sierpi’nski地毯相比，Sierpi‘nski垫圈表现出水平间距分布的逆幂律行为。从技术应用的角度来看，我们证明了Sierpi’nski垫圈中的亚扩散行为可以用作量子存储器。通过在分形晶格和规则晶格之间进行插值，可以在不同的传输机制之间进行灵活的调整。 et.al.|[2401.16077](http://arxiv.org/abs/2401.16077)|null|
 |**2024-01-29**|**Acoustic Screens based on Sonic Crystals with high Diffusion properties**|本文介绍了如何使用先进的工具来设计可以解决特定声学问题的设备，并在经典技术的基础上改进现有的设备。具体来说，我们使用了两种不同配置的称为声波晶体的材料，该材料由声散射体阵列形成，通过优化过程获得具有高扩散特性的声屏。该设计过程是使用多目标进化算法以及使用称为时域有限差分（FDTD）的数值方法开发的声学模拟模型进行的。从声学性能和所实现的设备的鲁棒性两个方面讨论了所获得的结果。 et.al.|[2401.16074](http://arxiv.org/abs/2401.16074)|null|
 
-<p align=right>(<a href=#updated-on-20240130>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240131>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2023-12-22**|**Fluid Simulation on Neural Flow Maps**|我们介绍了神经流图，这是一种新的模拟方法，将新兴的隐式神经表示范式与基于流图理论的流体模拟相结合，以实现最先进的无粘流体现象模拟。我们设计了一种新的混合神经场表示，空间稀疏神经场（SSNF），它将小型神经网络与重叠、多分辨率和空间稀疏网格的金字塔相融合，以高精度紧凑地表示长期时空速度场。有了这个神经速度缓冲器，我们以机械对称的方式计算长期双向流图及其雅可比矩阵，以促进对现有解决方案的大幅精度提高。这些长程双向流图实现了低耗散的高平流精度，进而促进了高保真度的不可压缩流模拟，显示了复杂的旋涡结构。我们展示了我们的神经流体模拟在各种具有挑战性的模拟场景中的有效性，包括跳跃涡流、碰撞涡流、涡流重新连接，以及移动障碍物和密度差异产生的涡流。我们的例子表明，在能量守恒、视觉复杂性、对实验观测的遵守以及详细旋涡结构的保存方面，与现有方法相比，性能有所提高。 et.al.|[2312.14635](http://arxiv.org/abs/2312.14635)|null|
 |**2023-12-21**|**Geometric Awareness in Neural Fields for 3D Human Registration**|将模板与三维人体点云对齐是一个长期存在的问题，对于动画、重建和启用监督学习管道等任务至关重要。最近的数据驱动方法利用了预测的表面对应关系；然而，它们对不同的姿态或分布并不鲁棒。相比之下，工业解决方案往往依赖于昂贵的手动注释或多视图捕获系统。最近，神经场已经显示出有希望的结果，但它们纯粹的数据驱动性质缺乏几何意识，通常导致模板配准的微小错位。在这项工作中，我们提出了两种解决方案：LoVD，一种新的神经场模型，它预测朝向目标表面上的局部SMPL顶点的方向；和INT，这是第一个专门用于神经领域的自监督任务，在测试时，它利用目标几何结构来细化主干。我们将它们组合到INLoVD中，这是一个在大型MoCap数据集上训练的强大的3D人体注册管道。INLoVD是高效的（不到一分钟），在公共基准上稳定地达到了最先进的水平，并对分布外的数据提供了前所未有的概括。我们将在\url｛url｝中发布代码和检查点。 et.al.|[2312.14024](http://arxiv.org/abs/2312.14024)|null|
 
-<p align=right>(<a href=#updated-on-20240130>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240131>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
