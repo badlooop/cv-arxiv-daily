@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.02.01
+## Updated on 2024.02.02
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-01-18**|**GPAvatar: Generalizable and Precise Head Avatar from Image(s)**|头部化身重建对于虚拟现实、在线会议、游戏和电影行业的应用至关重要，在计算机视觉界引起了极大的关注。该领域的基本目标是忠实地再现头部化身，并精确地控制表情和姿势。现有的方法分为基于2D的扭曲、基于网格和神经渲染方法，在保持多视图一致性、结合非面部信息和推广到新身份方面存在挑战。在本文中，我们提出了一个名为GPAvatar的框架，该框架可以在单个前向通道中从一个或多个图像重建3D头部化身。这项工作的关键思想是引入一个由点云驱动的动态基于点的表情场，以精确有效地捕捉表情。此外，我们在三平面规范场中使用多三平面注意力（MTA）融合模块来利用来自多个输入图像的信息。所提出的方法实现了忠实的身份重建、精确的表达控制和多视图一致性，在自由视点渲染和新颖视图合成方面显示了良好的效果。 et.al.|[2401.10215](http://arxiv.org/abs/2401.10215)|**[link](https://github.com/xg-chu/gpavatar)**|
 |**2024-01-17**|**Objects With Lighting: A Real-World Dataset for Evaluating Reconstruction and Rendering for Object Relighting**|从照片中重建对象并将其虚拟地放置在新环境中超出了标准的新颖视图合成任务，因为对象的外观不仅要适应新颖的视点，还要适应新的照明条件，而且反向渲染方法的评估依赖于新颖的视图合成数据或用于定量分析的简单合成数据集。这项工作提供了一个真实世界的数据集，用于测量重新照明对象的重建和渲染。为此，我们捕获了多个环境中相同对象的环境照明和地面实况图像，从而可以从一个环境中拍摄的图像中重建对象，并量化看不见的照明环境的渲染视图的质量。此外，我们介绍了一个由现成方法组成的简单基线，并在重新照明任务中测试了几种最先进的方法，表明新的视图合成不是衡量性能的可靠指标。代码和数据集可在https://github.com/isl-org/objects-with-lighting . et.al.|[2401.09126](http://arxiv.org/abs/2401.09126)|**[link](https://github.com/isl-org/objects-with-lighting)**|
 
-<p align=right>(<a href=#updated-on-20240201>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240202>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-01-28**|**One for all: A novel Dual-space Co-training baseline for Large-scale Multi-View Clustering**|本文提出了一种新的多视图聚类模型，称为双空间协同训练大规模多视图聚类（DSCMC）。我们方法的主要目标是通过在两个不同的空间中利用联合训练来提高集群性能。在原始空间中，我们学习一个投影矩阵，以获得来自不同视图的潜在一致锚图。这个过程包括捕捉每个视图中数据点之间的固有关系和结构。同时，我们使用特征转换矩阵将来自不同视图的样本映射到共享的潜在空间。这种转换有助于从多个视图调整信息，从而能够全面了解底层数据分布。我们共同优化潜在一致锚图的构建和特征变换，以生成判别锚图。该锚图有效地捕捉了多视图数据的基本特征，并作为后续聚类分析的可靠基础。此外，还提出了基于元素的方法，以避免不同视图之间不同信息的影响。我们的算法具有近似线性的计算复杂度，这保证了它在大规模数据集上的成功应用。通过实验验证，我们证明了与现有方法相比，我们的方法显著降低了计算复杂度，同时产生了优越的聚类性能。 et.al.|[2401.15691](http://arxiv.org/abs/2401.15691)|null|
 |**2024-01-28**|**Multi-Person 3D Pose Estimation from Multi-View Uncalibrated Depth Cameras**|我们从有限数量的未校准深度相机中处理多视图、多人3D人体姿态估计的任务。最近，已经提出了许多从多视图RGB相机进行3D人体姿态估计的方法。然而，这些工作（1）假设RGB相机视图的数量足够大以用于3D重建，（2）相机被校准，以及（3）依赖于真实的3D姿态来训练其回归模型。在这项工作中，我们建议利用提供RGBD视频流的稀疏、未校准的深度相机进行3D人体姿态估计。我们提出了一种用于多视图深度人体姿态估计（MVD-HPE）的简单管道，用于在不训练深度3D人体姿态回归模型的情况下联合预测相机姿态和3D人体姿态。与仅使用RGB特征相比，该框架利用来自RGBD图像的3D Re-ID外观特征来制定更准确的对应关系（用于推导相机位置）。我们进一步提出（1）通过利用3D刚性变换作为引导来进行深度引导的相机姿态估计，以及（2）通过利用深度投影的3D点作为优化的替代目标来进行深度约束的3D人体姿态估计。为了评估我们提出的管道，我们收集了从多个稀疏视图深度相机记录的RGBD视频的三个视频集，并手动注释了地面实况3D姿态。实验表明，我们提出的方法在相机姿态估计和三维人体姿态估计方面都优于当前的无三维人体姿态回归管道。 et.al.|[2401.15616](http://arxiv.org/abs/2401.15616)|null|
 
-<p align=right>(<a href=#updated-on-20240201>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240202>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-01-31**|**AEROBLADE: Training-Free Detection of Latent Diffusion Images Using Autoencoder Reconstruction Error**|通过最近的文本到图像模型，任何人都可以生成任意内容的欺骗性逼真图像，这加剧了视觉虚假信息的威胁。以低计算成本生成高分辨率图像的一个关键促成因素是潜在扩散模型（LDMs）的开发。与传统的扩散模型相比，LDM在预训练的自动编码器（AE）的低维潜在空间而不是高维图像空间中执行去噪过程。尽管LDM具有相关性，但其法医学分析仍处于初级阶段。在这项工作中，我们提出了AEROBLADE，这是一种新的检测方法，它利用了LDMs的一个固有组件：用于在图像和潜在空间之间转换图像的AE。我们发现，与真实图像相比，AE可以更准确地重建生成的图像，从而允许基于重建误差的简单检测方法。最重要的是，我们的方法易于实现，不需要任何训练，但几乎与依赖广泛训练的检测器的性能相匹配。我们从经验上证明，AEROBLADE对包括稳定扩散和中程在内的最先进LDM有效。除了检测之外，我们的方法还允许对图像进行定性分析，这可以用于识别修复区域。 et.al.|[2401.17879](http://arxiv.org/abs/2401.17879)|null|
 |**2024-01-31**|**Multiplicity results for mass constrained Allen-Cahn equations on Riemannian manifolds with boundary**|在同时考虑Neumann和Dirichlet条件的情况下，我们给出了具有边界的黎曼流形上质量约束Allen-Cahn方程的多重性结果。这些结果在小质量约束和小扩散参数的假设下成立。根据Dirichlet边界条件下流形的Lusternik-Schnirelmann范畴和Neumann边界条件下它的边界，我们得到了解个数的下界。在解的一般非退化假设下，我们基于Morse不等式得到了更强的结果。我们的方法将拓扑和变分方法与几何测度理论中的工具相结合。 et.al.|[2401.17847](http://arxiv.org/abs/2401.17847)|null|
 
-<p align=right>(<a href=#updated-on-20240201>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240202>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-01-01**|**Deblurring 3D Gaussian Splatting**|最近对辐射场的研究为具有照片级真实感渲染质量的新颖视图合成铺平了坚实的道路。然而，它们通常使用神经网络和体积绘制，这两种方法的训练成本很高，并且由于绘制时间长，阻碍了它们在各种实时应用中的广泛使用。最近，人们提出了一种基于3D高斯散射的方法来对3D场景进行建模，并在实时渲染图像的同时实现了显著的视觉质量。然而，如果训练图像模糊，则渲染质量会严重下降。模糊通常是由于镜头散焦、物体运动和相机抖动而产生的，它不可避免地会干扰干净图像的获取。先前的几项研究试图使用神经场从模糊的输入图像中渲染干净清晰的图像。然而，这些工作中的大多数仅设计用于基于体积渲染的神经辐射场，并不直接适用于基于光栅化的3D高斯散射方法。因此，我们提出了一种新的实时去模糊框架，即去模糊3D高斯散点，使用小型多层感知器（MLP）来操纵每个3D高斯的协方差来对场景模糊度进行建模。虽然去模糊的3D高斯飞溅仍然可以享受实时渲染，但它可以从模糊的图像中重建精细和清晰的细节。在基准上进行了各种实验，结果表明了我们的去模糊方法的有效性。定性结果可在https://benhenryl.github.io/Deblurring-3D-Gaussian-Splatting/ et.al.|[2401.00834](http://arxiv.org/abs/2401.00834)|null|
 |**2023-12-22**|**Fluid Simulation on Neural Flow Maps**|我们介绍了神经流图，这是一种新的模拟方法，将新兴的隐式神经表示范式与基于流图理论的流体模拟相结合，以实现最先进的无粘流体现象模拟。我们设计了一种新的混合神经场表示，空间稀疏神经场（SSNF），它将小型神经网络与重叠、多分辨率和空间稀疏网格的金字塔相融合，以高精度紧凑地表示长期时空速度场。有了这个神经速度缓冲器，我们以机械对称的方式计算长期双向流图及其雅可比矩阵，以促进对现有解决方案的大幅精度提高。这些长程双向流图实现了低耗散的高平流精度，进而促进了高保真度的不可压缩流模拟，显示了复杂的旋涡结构。我们展示了我们的神经流体模拟在各种具有挑战性的模拟场景中的有效性，包括跳跃涡流、碰撞涡流、涡流重新连接，以及移动障碍物和密度差异产生的涡流。我们的例子表明，在能量守恒、视觉复杂性、对实验观测的遵守以及详细旋涡结构的保存方面，与现有方法相比，性能有所提高。 et.al.|[2312.14635](http://arxiv.org/abs/2312.14635)|null|
 
-<p align=right>(<a href=#updated-on-20240201>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240202>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
