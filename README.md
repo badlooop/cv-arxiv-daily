@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.02.05
+## Updated on 2024.02.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-01-23**|**Methods and strategies for improving the novel view synthesis quality of neural radiation field**|神经辐射场（NeRF）技术可以从2D图像中学习场景的3D隐式模型，并合成逼真的新视图图像。该技术得到了业界的广泛关注，具有良好的应用前景。针对NeRF图像渲染质量需要提高的问题，近三年来，许多研究人员提出了各种方法来提高渲染质量。对最新的相关论文进行了分类和综述，分析了质量改进背后的技术原理，并讨论了质量改进方法的未来发展方向。这项研究可以帮助研究人员快速了解该领域技术的现状和发展脉络，有助于激发更高效算法的发展，促进NeRF技术在相关领域的应用。 et.al.|[2401.12451](http://arxiv.org/abs/2401.12451)|null|
 |**2024-01-22**|**HG3-NeRF: Hierarchical Geometric, Semantic, and Photometric Guided Neural Radiance Fields for Sparse View Inputs**|神经辐射场（NeRF）作为一种通过从离散观测中学习场景表示的新型视图合成范式，已经引起了人们的极大关注。然而，当面对稀疏视图输入时，NeRF表现出明显的性能退化，从而限制了其进一步的适用性。在这项工作中，我们介绍了层次几何、语义和光度引导的NeRF（HG3-NeRF），这是一种新的方法，可以解决上述限制，并增强不同视图中几何、语义内容和外观的一致性。我们提出了分层几何制导（HGG），将运动结构的附加（SfM），即稀疏深度先验，纳入场景表示中。与直接深度监督不同，HGG从局部几何区域到全局几何区域对体积点进行采样，减轻了深度先验中固有偏差引起的偏差。此外，我们从不同分辨率的图像中观察到的语义一致性的显著变化中获得了灵感，并提出了层次语义引导（HSG）来学习粗到细的语义内容，该内容对应于粗到细场景表示。实验结果表明，HG3-NeRF可以在不同的标准基准上优于其他最先进的方法，并实现稀疏视图输入的高保真度合成结果。 et.al.|[2401.11711](http://arxiv.org/abs/2401.11711)|null|
 
-<p align=right>(<a href=#updated-on-20240205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240206>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-01-30**|**Self-Supervised Representation Learning for Nerve Fiber Distribution Patterns in 3D-PLI**|要全面了解人脑的组织原理，除其他因素外，还需要对神经纤维结构进行可量化的描述。三维偏振光成像（3D-PLI）是一种显微镜成像技术，能够以高分辨率深入了解有髓神经纤维的细粒度组织。表征在3D-PLI中观察到的纤维结构的描述符将实现下游分析任务，如多模式相关性研究、聚类和映射。然而，在3D-PLI中对光纤结构进行独立于观察者的表征的最佳实践尚不可用。为此，我们提出应用一种完全数据驱动的方法，使用自监督表示学习来表征3D-PLI图像中的神经纤维结构。我们介绍了一种3D上下文对比学习（CL-3D）目标，该目标利用3D重建体积的组织学脑切片中纹理示例的空间邻域来对正配对进行采样以进行对比学习。我们将这种采样策略与专门设计的图像增强相结合，以获得对3D-PLI参数图中典型变化的鲁棒性。该方法已在一只vervet猴子大脑的3D重建枕叶中进行了演示。我们发现，提取的特征对神经纤维的不同配置高度敏感，但对组织学处理引起的连续脑切片之间的变化很强。我们展示了它们在检索同质光纤架构的集群和对光纤架构的特定组件（如U型光纤）的交互式选择模板执行数据挖掘方面的实际适用性。 et.al.|[2401.17207](http://arxiv.org/abs/2401.17207)|null|
 |**2024-01-30**|**Physical Priors Augmented Event-Based 3D Reconstruction**|三维神经隐式表示在许多机器人应用中起着重要的作用。然而，当只有事件流可用时，由于稀疏性和信息缺乏，从真实的事件数据重建神经辐射场（NeRF）仍然是一个挑战。在本文中，我们利用事件数据背后的运动、几何和密度先验来施加强大的物理约束，以增强NeRF训练。所提出的新管道可以直接受益于这些先验，以在没有额外输入的情况下重建3D场景。此外，我们提出了一种新的基于密度引导的基于补丁的采样策略，用于鲁棒和高效的学习，它不仅加速了训练过程，而且有助于局部几何的表达。更重要的是，我们建立了第一个用于基于事件的3D重建的大型数据集，其中包含101个具有各种材料和几何形状的对象，以及所有相机视点的图像和深度图的基本情况，这大大促进了相关领域的其他研究。代码和数据集将在https://github.com/Mercerai/PAEv3d. et.al.|[2401.17121](http://arxiv.org/abs/2401.17121)|**[link](https://github.com/mercerai/paev3d)**|
 
-<p align=right>(<a href=#updated-on-20240205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240206>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-02-02**|**Binomial-tree approximation for time-inconsistent stopping**|对于一维扩散设置中的时间不一致停止，我们研究了如何使用离散时间模型来近似原始问题。特别地，我们考虑由连续时间问题中的所有温和均衡引起的值函数 $V（\cdot）$，以及与时间步长为$h$的二项式树设置中的均衡相关的值$V^h（\cdot）$。我们证明了$\lim_｛h\rightarrow 0+｝V^h\leq V$。我们提供了一个例子，表明精确收敛可能会失败。然后，我们放松平衡集，并考虑二项式树模型中由$\varepsilon$-平衡引起的值$V^h｛\varepsilion｝（\cdot）$。我们证明了$ \lim_｛\varepsilon\rightarrow 0+｝\lim_。 et.al.|[2402.01482](http://arxiv.org/abs/2402.01482)|null|
 |**2024-02-02**|**SVI solutions to stochastic nonlinear diffusion equations on general measure spaces**|我们建立了乘性噪声驱动的随机非线性（可能是多值）扩散方程解的存在性和唯一性的框架，其中漂移算子 $L$是有限测度空间$（E，\mathcal｛B｝，\mu）$上瞬态Dirichlet形式的生成元，并且初始值为$\mathcal{F}_e^*$，它是一个扩展的瞬态狄利克雷空间的对偶空间$L$和$\mathcal{F}_e^*在经典情况下，$分别替换拉普拉斯算子$\Delta$和$H^｛-1｝$。该框架包括随机快速扩散方程、随机分数阶快速扩散方程和张模型，并适用于$E$是流形、分形或图的情况。此外，我们的结果适用于运算符$-f（-L）$，其中$f$是Bernstein函数，例如$f（\lambda）=\lambda^\alpha$或$f（\llambda）=（\lambda+1）^\alpha-1$，$0<\alpha<1$ 。 et.al.|[2402.01479](http://arxiv.org/abs/2402.01479)|null|
 
-<p align=right>(<a href=#updated-on-20240205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240206>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-01-01**|**Deblurring 3D Gaussian Splatting**|最近对辐射场的研究为具有照片级真实感渲染质量的新颖视图合成铺平了坚实的道路。然而，它们通常使用神经网络和体积绘制，这两种方法的训练成本很高，并且由于绘制时间长，阻碍了它们在各种实时应用中的广泛使用。最近，人们提出了一种基于3D高斯散射的方法来对3D场景进行建模，并在实时渲染图像的同时实现了显著的视觉质量。然而，如果训练图像模糊，则渲染质量会严重下降。模糊通常是由于镜头散焦、物体运动和相机抖动而产生的，它不可避免地会干扰干净图像的获取。先前的几项研究试图使用神经场从模糊的输入图像中渲染干净清晰的图像。然而，这些工作中的大多数仅设计用于基于体积渲染的神经辐射场，并不直接适用于基于光栅化的3D高斯散射方法。因此，我们提出了一种新的实时去模糊框架，即去模糊3D高斯散点，使用小型多层感知器（MLP）来操纵每个3D高斯的协方差来对场景模糊度进行建模。虽然去模糊的3D高斯飞溅仍然可以享受实时渲染，但它可以从模糊的图像中重建精细和清晰的细节。在基准上进行了各种实验，结果表明了我们的去模糊方法的有效性。定性结果可在https://benhenryl.github.io/Deblurring-3D-Gaussian-Splatting/ et.al.|[2401.00834](http://arxiv.org/abs/2401.00834)|null|
 |**2023-12-22**|**Fluid Simulation on Neural Flow Maps**|我们介绍了神经流图，这是一种新的模拟方法，将新兴的隐式神经表示范式与基于流图理论的流体模拟相结合，以实现最先进的无粘流体现象模拟。我们设计了一种新的混合神经场表示，空间稀疏神经场（SSNF），它将小型神经网络与重叠、多分辨率和空间稀疏网格的金字塔相融合，以高精度紧凑地表示长期时空速度场。有了这个神经速度缓冲器，我们以机械对称的方式计算长期双向流图及其雅可比矩阵，以促进对现有解决方案的大幅精度提高。这些长程双向流图实现了低耗散的高平流精度，进而促进了高保真度的不可压缩流模拟，显示了复杂的旋涡结构。我们展示了我们的神经流体模拟在各种具有挑战性的模拟场景中的有效性，包括跳跃涡流、碰撞涡流、涡流重新连接，以及移动障碍物和密度差异产生的涡流。我们的例子表明，在能量守恒、视觉复杂性、对实验观测的遵守以及详细旋涡结构的保存方面，与现有方法相比，性能有所提高。 et.al.|[2312.14635](http://arxiv.org/abs/2312.14635)|null|
 
-<p align=right>(<a href=#updated-on-20240205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240206>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
