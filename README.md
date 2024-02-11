@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.02.10
+## Updated on 2024.02.11
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-02-01**|**360-GS: Layout-guided Panoramic Gaussian Splatting For Indoor Roaming**|近年来，三维高斯散射（3D-GS）以其实时性和照片真实性的渲染引起了人们的极大关注。这项技术通常将透视图像作为输入，并通过将一组3D椭圆高斯分布到图像平面上来优化它们，从而产生2D高斯。然而，将3D-GS应用于全景输入在使用2D高斯有效地将投影建模到 ${360^\circ}$图像的球面上方面存在挑战。在实际应用中，输入全景图往往是稀疏的，导致3D高斯图的初始化不可靠，并导致3D-GS质量下降。此外，由于无纹理平面（例如，墙和地板）的几何约束不足，3D-GS难以用椭圆高斯对这些平坦区域进行建模，导致在新视图中出现显著的浮动。为了解决这些问题，我们提出了360-GS，这是一种针对有限的全景输入集的新的$360^{\circ}$ 高斯飞溅。360-GS不是将3D高斯直接泼洒到球面上，而是将其投影到单位球体的切平面上，然后将其映射到球面投影。这种自适应使得能够使用高斯表示投影。我们通过利用全景图中的布局先验来指导360-GS的优化，这些先验易于获得，并包含关于室内场景的强大结构信息。我们的实验结果表明，360-GS允许全景渲染，并在新的视图合成中以更少的伪影优于最先进的方法，从而在室内场景中提供身临其境的漫游。 et.al.|[2402.00763](http://arxiv.org/abs/2402.00763)|null|
 |**2024-02-01**|**StopThePop: Sorted Gaussian Splatting for View-Consistent Real-time Rendering**|高斯散射已经成为从不同领域的图像构建3D表示的一个突出模型。然而，3D高斯飞溅渲染管道的效率依赖于几个简化。值得注意的是，使用单个视图空间深度将高斯飞溅减少到2D会在视图旋转过程中引入爆裂和混合伪影。解决这个问题需要精确的每像素深度计算，但与全局排序操作相比，完整的每像素排序成本过高。在本文中，我们提出了一种新的分层光栅化方法，该方法以最小的处理开销系统地处理和剔除飞溅。我们的软件光栅化器有效地消除了弹出的伪影和视图不一致，通过定量和定性测量都证明了这一点。同时，我们的方法通过弹出来减少欺骗视图相关效果的可能性，确保了更真实的表示。尽管消除了作弊，但我们的方法在测试图像中获得了可比的定量结果，同时提高了运动中新视图合成的一致性。由于其设计，我们的分层方法平均只比原始的高斯飞溅慢4%。值得注意的是，强制执行一致性可以将Gaussian的数量减少大约一半，同时具有几乎相同的质量和视图一致性。因此，渲染性能几乎翻了一番，使我们的方法比原始的高斯Splatting快1.6倍，同时减少了50%的内存需求。 et.al.|[2402.00525](http://arxiv.org/abs/2402.00525)|null|
 
-<p align=right>(<a href=#updated-on-20240210>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240211>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-02-02**|**DeepAAT: Deep Automated Aerial Triangulation for Fast UAV-based Mapping**|自动空中三角测量（AAT）旨在恢复图像姿态和重建稀疏点，在对地观测中发挥着关键作用。AAT在摄影测量领域拥有数十年的丰富研究遗产，已发展成为一个广泛应用于大规模无人机测绘的基础过程。尽管取得了进步，但经典的AAT方法仍然面临着效率低和稳健性有限等挑战。本文介绍了DeepAAT，一个专门为无人机图像AAT设计的深度学习网络。DeepAAT考虑了图像的空间和光谱特征，增强了其解决错误匹配对和准确预测图像姿态的能力。DeepAAT标志着AAT效率的重大飞跃，确保了全面的场景覆盖和精度。其处理速度超过增量AAT方法数百倍，超过全局AAT方法数十倍，同时保持了相当水平的重建精度。此外，DeepAAT的场景聚类和合并策略有助于大规模无人机图像的快速定位和姿态确定，即使在计算资源有限的情况下也是如此。实验结果表明，DeepAAT比传统的AAT方法有了实质性的改进，突出了其在基于无人机的三维重建任务的效率和准确性方面的潜力。为了造福摄影测量学会，DeepAAT的代码将发布在：https://github.com/WHU-USI3DV/DeepAAT. et.al.|[2402.01134](http://arxiv.org/abs/2402.01134)|**[link](https://github.com/whu-usi3dv/deepaat)**|
 |**2024-02-02**|**Learning Which Side to Scan: Multi-View Informed Active Perception with Side Scan Sonar for Autonomous Underwater Vehicles**|自动水下航行器通常执行捕获目标的多个视图的勘测，以便为人类操作员或自动目标识别算法提供更多信息。在这项工作中，我们解决了选择信息量最大的视图的问题，这些视图可以最大限度地减少调查时间，同时最大限度地提高分类器的准确性。我们介绍了一种新的主动感知框架，用于使用侧扫声纳图像进行多视图自适应测量和重新获取。我们的框架通过使用自适应调查任务的图形公式来应对这一挑战。然后，我们使用图神经网络（GNN）对获取的声纳视图进行分类，并根据收集的数据选择下一个最佳视图。我们使用高保真侧扫声纳模拟器中的模拟调查来评估我们的方法。我们的结果表明，我们的方法能够在分类精度和调查效率方面超越最先进的方法。该框架是一种很有前途的方法，可用于更高效的自主任务，包括侧扫声纳，如水下勘探、海洋考古和环境监测。 et.al.|[2402.01106](http://arxiv.org/abs/2402.01106)|null|
 
-<p align=right>(<a href=#updated-on-20240210>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240211>back to top</a>)</p>
 
 ## Diffusion
 
@@ -60,12 +60,12 @@
 |**2024-02-08**|**AvatarMMC: 3D Head Avatar Generation and Editing with Multi-Modal Conditioning**|我们介绍了一种基于3D生成对抗性网络（GAN）和潜在扩散模型（LDM）的具有多模式条件的3D头部化身生成和编辑方法。3D GANs可以在给定单一条件或不给定条件的情况下生成高质量的头部化身。然而，生成符合不同模式的多种条件的样本是具有挑战性的。另一方面，LDM擅长学习复杂的条件分布。为此，我们建议利用LDM的调节能力，实现对预训练的3D GAN的潜在空间的多模态控制。我们的方法可以在给定混合控制信号（如RGB输入、分割掩码和全局属性）的情况下生成和编辑3D头部化身。这提供了对全局和本地合成化身的生成和编辑的更好控制。实验表明，我们提出的方法在生成和编辑任务的质量和数量上都优于单独基于GAN的方法。据我们所知，我们的方法是第一个将多模态条件反射引入3D化身生成和编辑的方法\\href｛avatarmc-sig24.github.io｝｛项目页面｝ et.al.|[2402.05803](http://arxiv.org/abs/2402.05803)|null|
 |**2024-02-08**|**Determining the significance and relative importance of parameters of a simulated quenching algorithm using statistical tools**|在设计搜索方法时，了解哪些参数对算法的行为和性能影响最大是非常重要的。为此，通常通过理论分析或密集实验来校准算法参数。在对每个参数的影响进行详细的统计分析时，设计者应主要关注具有统计意义的参数。本文使用ANOVA（方差分析）方法对基于模拟退火的方法及其所需的不同参数进行了详尽的分析。根据这一想法，使用ANOVA和事后Tukey HSD检验，对四个众所周知的函数优化问题和用于估计对数正态扩散过程中涉及的参数的似然函数，获得了与所获得的结果有关的参数的显著性和相对重要性，以及每种结果的合适值。通过这项统计研究，我们使用参数假设检验验证了参考文献中可用参数值的充分性。 et.al.|[2402.05791](http://arxiv.org/abs/2402.05791)|null|
 |**2024-02-08**|**Hydrogen abstraction from metal surfaces: When electron-hole pair excitations strongly affect hot-atom recombination**|利用分子动力学模拟，我们预测非绝热电子激发的加入会影响通过氢散射从W（110）表面预吸附氢提取的动力学，在低覆盖率和低入射能下，受到电子-空穴对激发介导的能量耗散的显著影响。这个问题很重要，因为这种提取机制被认为在很大程度上有助于金属表面形成分子氢。 et.al.|[2402.05743](http://arxiv.org/abs/2402.05743)|null|
-|**2024-02-08**|**First operation of a multi-channel Q-Pix prototype: measuring transverse electron diffusion in a gas time projection chamber**|我们报道了在实验室规模的时间投影室（TPC）中，利用一种称为Q-Pix的新型像素化信号捕获和数字化技术，对P-10气体（90%Ar，10%CH4）中电子的横向扩散进行的测量。Q-Pix方法结合了一个精密开关积分跨阻放大器，其输出与阈值电压进行比较。达到阈值后，比较器发送“重置”信号，启动积分电容器的放电。连续重置之间的时间差与该时间间隔内像素处的平均电流成反比，重置次数与收集的总电荷成正比。我们开发了一个由商用现成组件制成的16通道Q-Pix原型，并将其耦合到16个同心环形阳极电极，以测量电子群在漂移通过TPC的均匀场后到达阳极的空间范围。该粒子群是在金光电阴极上使用脉冲紫外线产生的。在操作压力范围（200-1500托）内，测得的横向扩散与PyBoltz中的模拟结果一致。这些结果表明，Q-Pix读出可以成功地重建TPC中的电离拓扑。 et.al.|[2402.05734](http://arxiv.org/abs/2402.05734)|null|
+|**2024-02-08**|**First operation of a multi-channel Q-Pix prototype: measuring transverse electron diffusion in a gas time projection chamber**|我们报道了在实验室规模的时间投影室（TPC）中，利用一种称为Q-Pix的新型像素化信号捕获和数字化技术，对P-10气体（90%Ar，10%CH4）中电子的横向扩散进行的测量。Q-Pix方法结合了一个精密开关积分跨阻放大器，其输出与阈值电压进行比较。达到阈值后，比较器发送“重置”信号，启动积分电容器的放电。连续重置之间的时间差与该时间间隔内像素的平均电流成反比，重置次数与收集的总电荷成正比。我们开发了一个由商用现成组件制成的16通道Q-Pix原型，并将其耦合到16个同心环形阳极电极，以测量电子群在漂移通过TPC的均匀场后到达阳极的空间范围。该粒子群是在金光电阴极上使用脉冲紫外线产生的。在操作压力范围（200-1500托）内，测得的横向扩散与PyBoltz中的模拟结果一致。这些结果表明，Q-Pix读出可以成功地重建TPC中的电离拓扑。 et.al.|[2402.05734](http://arxiv.org/abs/2402.05734)|null|
 |**2024-02-08**|**DiffSpeaker: Speech-Driven 3D Facial Animation with Diffusion Transformer**|语音驱动的3D面部动画对于许多多媒体应用来说是重要的。最近的工作已经显示出使用扩散模型或Transformer架构来完成这项任务的前景。然而，它们仅仅是聚合并不能提高性能。我们怀疑这是由于配对音频-4D数据的短缺，这对于Transformer在Diffusion框架内有效地充当去噪器至关重要。为了解决这个问题，我们提出了DiffSpeaker，这是一种基于Transformer的网络，配备了新颖的有偏条件注意模块。这些模块取代了标准变形金刚中传统的自我/交叉注意力，结合了精心设计的偏见，引导注意力机制专注于相关的特定任务和扩散相关的条件。我们还探讨了在扩散范式中准确的嘴唇同步和非语言面部表情之间的权衡。实验表明，我们的模型不仅在现有的基准上实现了最先进的性能，而且由于其能够并行生成面部运动，因此推理速度也很快。 et.al.|[2402.05712](http://arxiv.org/abs/2402.05712)|**[link](https://github.com/theericma/diffspeaker)**|
 |**2024-02-08**|**Discovery and characterisation of a new Galactic Planetary Nebula**|行星状星云是中低质量恒星演化的最后阶段之一。它们有各种各样的形状。由于表面亮度较低，较老和较暗的通常更难识别。本文报道了一个新的微弱星系行星状星云（PN）的偶然发现，在一场识别矮星系的运动中，矮星系是螺旋星系NGC 2403的伙伴。我们的目的是确认在骆驼座发现的一个漫射物体的PN性质。我们用直径从20厘米到6米的业余和专业望远镜获得了该星云及其中心恒星的窄带滤波图像和光谱。我们探测到一个密集的三角形星云，被一个椭圆形区域包围，名为凸轮星云。它们是一个更大、更暗的圆形星云结构TBG-1的一部分，在其中心，我们已经确定了可能的中心恒星，一颗温度约为22000K的白矮星。对光谱的分析使测量星云的物理特征，特别是电子密度和温度成为可能。对图像、星云和中心恒星光谱的分析证实了TBG-1的PN性质，它位于大约1kpc的距离处。这项工作重申了天文学家和业余天文学家在探测和研究新天体方面进行富有成果的合作的潜力。 et.al.|[2402.05658](http://arxiv.org/abs/2402.05658)|null|
 |**2024-02-08**|**Scalable Diffusion Models with State Space Backbone**|本文对一类基于状态空间结构的扩散模型进行了新的探索。我们努力训练图像数据的扩散模型，其中传统的U-Net主干被状态空间主干取代，在原始补丁或潜在空间上发挥作用。鉴于其在适应长程依赖性方面的显著功效，扩散状态空间模型（DiS）通过将包括时间、条件和噪声图像块在内的所有输入视为标记来区分。我们对DiS的评估包括无条件和类条件的图像生成场景，表明DiS表现出与相应大小的基于CNN或基于Transformer的U-Net架构相当（如果不是更好的话）的性能。此外，我们还分析了DiS的可扩展性，通过Gflops中量化的前向通过复杂性来衡量。通过增加深度/宽度或增加输入标记实现的具有更高Gflop的DiS模型始终显示出更低的FID。除了表现出值得称赞的可扩展性特征外，潜在空间中的DiS-H/2模型在256 $\times$256和512$\times$ 512的分辨率下实现了类似于类条件ImageNet基准上的先前扩散模型的性能水平，同时显著减少了计算负担。代码和型号位于：https://github.com/feizc/DiS. et.al.|[2402.05608](http://arxiv.org/abs/2402.05608)|**[link](https://github.com/feizc/dis)**|
 
-<p align=right>(<a href=#updated-on-20240210>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240211>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2023-12-30**|**PlanarNeRF: Online Learning of Planar Primitives with Neural Radiance Fields**|从视觉数据中识别空间完整的平面基元是计算机视觉中的一项关键任务。现有的方法在很大程度上局限于2D片段恢复或简化3D结构，即使具有广泛的平面注释。我们提出了PlanarNeRF，这是一种能够通过在线学习检测密集3D平面的新框架。PlanarNeRF利用神经场表示，带来了三个主要贡献。首先，它利用并行的外观和几何知识增强了三维平面检测。其次，提出了一种轻量级的平面拟合模块来估计平面参数。第三，引入了一种具有更新机制的新的全局内存库结构，确保了跨帧一致性。PlanarNeRF的灵活架构使其能够在二维监督和自监督解决方案中发挥作用，在每种解决方案中，它都可以有效地从稀疏的训练信号中学习，显著提高训练效率。通过广泛的实验，我们证明了PlanarNeRF在各种场景下的有效性，并比现有工作有了显著的改进。 et.al.|[2401.00871](http://arxiv.org/abs/2401.00871)|null|
 |**2024-01-01**|**Deblurring 3D Gaussian Splatting**|最近对辐射场的研究为具有照片级真实感渲染质量的新颖视图合成铺平了坚实的道路。然而，它们通常使用神经网络和体积绘制，这两种方法的训练成本很高，并且由于绘制时间长，阻碍了它们在各种实时应用中的广泛使用。最近，人们提出了一种基于3D高斯散射的方法来对3D场景进行建模，并在实时渲染图像的同时实现了显著的视觉质量。然而，如果训练图像模糊，则渲染质量会严重下降。模糊通常是由于镜头散焦、物体运动和相机抖动而产生的，它不可避免地会干扰干净图像的获取。先前的几项研究试图使用神经场从模糊的输入图像中渲染干净清晰的图像。然而，这些工作中的大多数仅设计用于基于体积渲染的神经辐射场，并不直接适用于基于光栅化的3D高斯散射方法。因此，我们提出了一种新的实时去模糊框架，即去模糊3D高斯散点，使用小型多层感知器（MLP）来操纵每个3D高斯的协方差来对场景模糊度进行建模。虽然去模糊的3D高斯飞溅仍然可以享受实时渲染，但它可以从模糊的图像中重建精细和清晰的细节。在该基准上进行了各种实验，结果显示了我们的去模糊方法的有效性。定性结果可在https://benhenryl.github.io/Deblurring-3D-Gaussian-Splatting/ et.al.|[2401.00834](http://arxiv.org/abs/2401.00834)|null|
 
-<p align=right>(<a href=#updated-on-20240210>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240211>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
