@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.02.21
+## Updated on 2024.02.22
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-02-09**|**NCRF: Neural Contact Radiance Fields for Free-Viewpoint Rendering of Hand-Object Interaction**|在三维计算机视觉中，建模手与物体的交互是一项具有根本挑战性的任务。尽管在该领域已经取得了显著的进展，但现有的方法仍然无法真实地合成手与物体的交互照片，因为手与物体之间的严重相互遮挡导致渲染质量下降，以及手与物体姿态估计不准确。为了应对这些挑战，我们提出了一种新的自由视点渲染框架，即神经接触辐射场（NCRF），以从稀疏的视频集重建手与物体的交互。特别地，所提出的NCRF框架由两个关键组件组成：（a）接触优化字段，该字段从3D查询点预测准确的接触字段，以实现手和物体之间的期望接触。（b） 手对象神经辐射场，用于学习静态规范空间中的隐含手对象表示，与专门设计的手对象运动场相一致，以产生观察到的规范对应关系。我们共同学习这些关键组件，它们在视觉和几何约束下相互帮助和规则化，产生高质量的手对象重建，实现照片逼真的新颖视图合成。在HO3D和DexYCB数据集上进行的大量实验表明，我们的方法在渲染质量和姿态估计精度方面都优于当前最先进的方法。 et.al.|[2402.05532](http://arxiv.org/abs/2402.05532)|null|
 |**2024-02-07**|**SPAD : Spatially Aware Multiview Diffusers**|我们提出了SPAD，这是一种从文本提示或单个图像创建一致多视图图像的新方法。为了实现多视图生成，我们通过扩展具有跨视图交互的自注意层来重新调整预训练的2D扩散模型的用途，并在Ob厌恶的高质量子集上对其进行微调。我们发现，先前工作中提出的自我关注的天真扩展（例如MVDream）会导致视图之间的内容复制。因此，我们明确地限制了基于核极几何的跨视图注意力。为了进一步增强3D一致性，我们利用从相机射线导出的Plucker坐标，并将其作为位置编码注入。这使得SPAD能够对3D井中的空间接近度进行推理。与最近只能在固定方位角和仰角下生成视图的工作不同，SPAD提供了完整的相机控制，并在Ob厌恶和谷歌扫描对象数据集中对看不见的对象进行新的视图合成方面取得了最先进的结果。最后，我们证明了使用SPAD的文本到3D生成可以防止多面Janus问题。更多详细信息，请访问我们的网页：https://yashkant.github.io/spad et.al.|[2402.05235](http://arxiv.org/abs/2402.05235)|null|
 
-<p align=right>(<a href=#updated-on-20240221>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240222>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -43,12 +43,12 @@
 |**2024-02-17**|**Dense Matchers for Dense Tracking**|光流是各种应用的有用输入，包括3D重建、姿态估计、跟踪和运动结构。尽管它很有用，但密集的长期跟踪领域，特别是在宽基线上，尚未得到广泛探索。本文扩展了MFT提出的在对数间隔上组合多个光流的概念。我们展示了MFT与不同光流网络的兼容性，产生的结果超过了它们各自的性能。此外，我们在MFT框架内提出了这些网络的简单而有效的组合。在位置预测精度方面，这种方法被证明与更复杂的非因果方法具有竞争力，突出了MFT在增强长期跟踪应用方面的潜力。 et.al.|[2402.11287](http://arxiv.org/abs/2402.11287)|null|
 |**2024-02-17**|**DiffPoint: Single and Multi-view Point Cloud Reconstruction with ViT Based Diffusion Model**|随着二维到三维重建的任务在各种现实场景中获得了极大的关注，能够生成高质量的点云变得至关重要。尽管最近深度学习模型在生成点云方面取得了成功，但由于图像和点云之间的差异，在生成高保真度结果方面仍然存在挑战。虽然视觉变换器（ViT）和扩散模型在各种视觉任务中显示出了前景，但它们在从图像重建点云方面的好处尚未得到证明。在本文中，我们首先提出了一种称为DiffPoint的简洁而强大的架构，该架构将ViT和扩散模型相结合，用于点云重建任务。在每个扩散步骤，我们将有噪声的点云划分为不规则的斑块。然后，使用将所有输入视为标记（包括时间信息、图像嵌入和噪声补丁）的标准ViT主干，我们训练我们的模型以基于输入图像预测目标点。我们在单视图和多视图重建任务上对DiffPoint进行了评估，并取得了最先进的结果。此外，我们还引入了一个统一灵活的特征融合模块，用于聚合来自单个或多个输入图像的图像特征。此外，我们的工作证明了跨语言和图像应用统一架构以改进3D重建任务的可行性。 et.al.|[2402.11241](http://arxiv.org/abs/2402.11241)|null|
 |**2024-02-15**|**Evaluating NeRFs for 3D Plant Geometry Reconstruction in Field Conditions**|我们评估了不同的神经辐射场（NeRF）技术，用于在从室内环境到室外环境的不同环境中重建（3D）植物。传统技术往往难以捕捉植物的复杂细节，这对植物学和农业理解至关重要。我们评估了三种日益复杂的场景，并将结果与使用激光雷达作为地面实况数据获得的点云进行了比较。在最现实的现场场景中，NeRF模型在GPU上进行30分钟的训练，获得了74.65%的F1成绩，突出了NeRF在具有挑战性的环境中的效率和准确性。这些发现不仅证明了NeRF在详细逼真的3D植物建模中的潜力，而且为提高3D重建过程的速度和效率提供了实用的方法。 et.al.|[2402.10344](http://arxiv.org/abs/2402.10344)|null|
-|**2024-02-15**|**GES: Generalized Exponential Splatting for Efficient Radiance Field Rendering**|3D高斯散射的进步显著加速了3D重建和生成。然而，它可能需要大量的高斯，这会产生大量的内存占用。本文介绍了GES（Generalized Exponential Splatting），这是一种新的表示方法，它使用广义指数函数（GEF）来建模3D场景，需要更少的粒子来表示场景，因此在效率上显著优于高斯Splatting方法，并具有基于高斯的实用程序的即插即用替换能力。GES在原理性1D设置和逼真的3D场景中都得到了理论和实证验证。它被证明可以更准确地表示具有尖锐边缘的信号，由于其固有的低通特性，这对高斯人来说通常是具有挑战性的。我们的实证分析表明，GEF在拟合自然发生的信号（如正方形、三角形和抛物线信号）方面优于高斯，从而减少了对增加高斯飞溅的内存占用的广泛拆分操作的需要。借助调频损耗，GES在新的视图合成基准中实现了有竞争力的性能，同时所需的内存存储量不到高斯飞溅的一半，并将渲染速度提高了39%。代码可在项目网站上获得https://abdullahamdi.com/ges . et.al.|[2402.10128](http://arxiv.org/abs/2402.10128)|null|
+|**2024-02-15**|**GES: Generalized Exponential Splatting for Efficient Radiance Field Rendering**|3D高斯散射的进步显著加速了3D重建和生成。然而，它可能需要大量的高斯，这会产生大量的内存占用。本文介绍了GES（Generalized Exponential Splatting），这是一种利用广义指数函数（GEF）对3D场景进行建模的新表示，需要更少的粒子来表示场景，因此在效率上显著优于高斯飞溅方法，并具有基于高斯的实用程序的即插即用替换能力。GES在原理性1D设置和逼真的3D场景中都得到了理论和实证验证。它被证明可以更准确地表示具有尖锐边缘的信号，由于其固有的低通特性，这对高斯人来说通常是具有挑战性的。我们的实证分析表明，GEF在拟合自然发生的信号（如正方形、三角形和抛物线信号）方面优于高斯，从而减少了对增加高斯飞溅的内存占用的广泛拆分操作的需要。借助调频损耗，GES在新的视图合成基准中实现了有竞争力的性能，同时所需的内存存储量不到高斯飞溅的一半，并将渲染速度提高了39%。代码可在项目网站上获得https://abdullahamdi.com/ges . et.al.|[2402.10128](http://arxiv.org/abs/2402.10128)|null|
 |**2024-02-14**|**PC-NeRF: Parent-Child Neural Radiance Fields Using Sparse LiDAR Frames in Autonomous Driving Environments**|大规模的3D场景重建和新颖的视图合成对于自动驾驶汽车至关重要，尤其是利用时间稀疏的激光雷达帧。然而，传统的显式表示仍然是以无限分辨率表示重建和合成场景的一个重要瓶颈。尽管最近开发的神经辐射场（NeRF）在隐式表示中显示出令人信服的结果，但使用稀疏激光雷达帧进行大规模3D场景重建和新的视图合成的问题仍未得到探索。为了弥补这一差距，我们提出了一种3D场景重建和新的视图合成框架，称为父子神经辐射场（PC NeRF）。该框架基于父NeRF和子NeRF两个模块，实现了分层空间划分和多级场景表示，包括场景、分段和点级别。多级场景表示增强了稀疏激光雷达点云数据的有效利用，并能够快速获取近似体积场景表示。经过大量实验，PC NeRF被证明可以在大规模场景中实现高精度的新型激光雷达视图合成和三维重建。此外，PC NeRF可以有效地处理稀疏激光雷达帧的情况，并在有限的训练时期内表现出较高的部署效率。我们的方法实施和预先培训的模型可在https://github.com/biter0088/pc-nerf. et.al.|[2402.09325](http://arxiv.org/abs/2402.09325)|**[link](https://github.com/biter0088/pc-nerf)**|
 |**2024-02-14**|**DUDF: Differentiable Unsigned Distance Fields with Hyperbolic Scaling**|近年来，人们对训练神经网络来近似无符号距离场（UDF）越来越感兴趣，以在3D重建的背景下表示开放表面。然而，UDF在零水平集上是不可微的，这导致距离和梯度的显著误差，通常导致碎片和不连续的表面。在本文中，我们提出学习无符号距离场的双曲标度，它定义了一个具有不同边界条件的新Eikonal问题。这使得我们的公式能够与最先进的连续可微隐式神经表示网络无缝集成，该网络在文献中广泛应用于表示有符号距离场。我们的方法不仅解决了开放曲面表示的挑战，而且在重建质量和训练性能方面也有显著提高。此外，未锁定字段的可微性允许准确计算基本拓扑属性，如法线方向和曲率，这些属性普遍存在于渲染等下游任务中。通过广泛的实验，我们在各种数据集和竞争基线中验证了我们的方法。结果表明，与以前的方法相比，精度提高，速度提高了一个数量级。 et.al.|[2402.08876](http://arxiv.org/abs/2402.08876)|null|
 |**2024-02-13**|**IM-3D: Iterative Multiview Diffusion and Reconstruction for High-Quality 3D Generation**|大多数文本到3D生成器建立在现成的基于数十亿图像训练的文本到图像模型之上。他们使用分数蒸馏采样（SDS）的变体，这是缓慢的，有点不稳定，并且容易出现伪影。一种缓解措施是将2D生成器微调为多视图感知，这可以帮助提取或与重建网络相结合，直接输出3D对象。在本文中，我们进一步探索了文本到三维模型的设计空间。通过考虑视频而不是图像生成器，我们显著改进了多视图生成。结合3D重建算法，通过使用高斯飞溅，可以优化基于图像的鲁棒损失，我们直接从生成的视图中产生高质量的3D输出。我们的新方法IM-3D将2D生成器网络的评估次数减少了10-100x，从而实现了更高效的管道、更好的质量、更少的几何不一致性和更高的可用3D资产收益率。 et.al.|[2402.08682](http://arxiv.org/abs/2402.08682)|null|
 
-<p align=right>(<a href=#updated-on-20240221>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240222>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-02-20**|**CLIPping the Deception: Adapting Vision-Language Models for Universal Deepfake Detection**|生成对抗性网络（GANs）的最新进展和扩散模型的出现大大简化了高度逼真和可广泛访问的合成内容的生产。因此，迫切需要有效的通用检测机制来减轻deepfakes带来的潜在风险。在本文中，我们探讨了预训练的视觉语言模型（VLM）与最新的通用深度伪造检测自适应方法相结合的有效性。根据之前在该领域的研究，我们仅使用单个数据集（ProGAN）来调整CLIP用于深度伪造检测。然而，与之前的研究不同，以前的研究只依赖CLIP的视觉部分而忽略其文本成分，我们的分析表明，保留文本部分至关重要。因此，我们使用的简单而轻量级的基于提示调整的自适应策略比以前的SOTA方法高出5.01%mAP和6.61%的准确率，同时使用了不到三分之一的训练数据（与720k相比，200k张图像）。为了评估我们提出的模型在现实世界中的适用性，我们对各种场景进行了全面评估。这涉及对来自21个不同数据集的图像进行严格测试，包括基于GAN、基于扩散和商业工具生成的图像。 et.al.|[2402.12927](http://arxiv.org/abs/2402.12927)|null|
 |**2024-02-20**|**RealCompo: Dynamic Equilibrium between Realism and Compositionality Improves Text-to-Image Diffusion Models**|扩散模型在文本到图像生成方面取得了显著的进步。然而，现有的模型在面临多对象合成生成时仍然存在许多困难。在本文中，我们提出了一种新的无训练且传输友好的文本到图像生成框架，即RealCompo，旨在利用文本到图像和布局到图像模型的优势，增强生成图像的真实性和合成性。提出了一种直观新颖的均衡器，在去噪过程中动态平衡两个模型的强度，允许在没有额外训练的情况下即插即用地使用任何模型。大量实验表明，我们的RealCompo在多对象合成生成中始终优于最先进的文本到图像模型和布局到图像模型，同时保持生成图像的令人满意的真实性和合成性。代码位于https://github.com/YangLing0818/RealCompo et.al.|[2402.12908](http://arxiv.org/abs/2402.12908)|**[link](https://github.com/yangling0818/realcompo)**|
 
-<p align=right>(<a href=#updated-on-20240221>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240222>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-01-17**|**Reproducibility via neural fields of visual illusions induced by localized stimuli**|本文研究了Billock和Tsou[PNAS，2007]使用Amari型神经场的可控性对初级视皮层（V1）皮层活动进行建模的实验复制，重点关注中央凹或外周视野中的规则漏斗模式。其目的是理解和模拟在这些实验中观察到的视觉现象，强调其非线性性质。这项研究包括设计模拟Billock和Tsou实验中视觉刺激的感官输入。然后从理论和数值上研究这些输入引起的后图像，以确定它们复制实验观察到的视觉效果的能力。这项研究的一个关键方面是研究神经反应的非线性性质所引起的影响。特别是，通过强调兴奋性和抑制性神经元在某些视觉现象出现中的重要性，这项研究表明，这两种类型的神经元活动的相互作用在视觉过程中发挥着重要作用，挑战了后者主要由兴奋性活动单独驱动的假设。 et.al.|[2401.09108](http://arxiv.org/abs/2401.09108)|null|
 |**2024-01-12**|**Motion2VecSets: 4D Latent Vector Set Diffusion for Non-rigid Shape Reconstruction and Tracking**|我们介绍了Motion2VecSets，这是一种用于从点云序列进行动态曲面重建的4D扩散模型。虽然现有的最先进的方法已经证明在使用神经场表示重建非刚性对象方面取得了成功，但传统的前馈网络遇到了来自噪声、部分或稀疏点云的模糊观测的挑战。为了应对这些挑战，我们引入了一种扩散模型，该模型通过压缩潜在表示的迭代去噪过程来显式学习非刚性对象的形状和运动分布。当处理模糊输入时，基于扩散的先验能够进行更合理和概率的重建。我们用潜在向量集参数化4D动力学，而不是使用全局潜在。这种新颖的4D表示使我们能够学习局部表面形状和变形模式，从而实现更准确的非线性运动捕捉，并显著提高对看不见的运动和身份的可推广性。对于更具时间连贯性的目标跟踪，我们同步地对变形潜集进行去噪，并在多个帧之间交换信息。为了避免计算开销，我们设计了一个交错的空间和时间注意力块，以沿着空间和时间域交替聚集变形潜伏期。与最先进的方法进行了广泛的比较，证明了我们的Motion2VenSets在从各种不完美的观测进行4D重建方面的优势，特别是在从DeformingThings4D Animals数据集上的稀疏点云重建看不见的个体方面，与CaDex相比，交集优于并集（IoU）提高了19%。更多详细信息，请访问https://vveicao.github.io/projects/Motion2VecSets/. et.al.|[2401.06614](http://arxiv.org/abs/2401.06614)|null|
 
-<p align=right>(<a href=#updated-on-20240221>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240222>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
