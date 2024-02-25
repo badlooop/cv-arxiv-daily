@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.02.24
+## Updated on 2024.02.25
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-02-11**|**BioNeRF: Biologically Plausible Neural Radiance Fields for View Synthesis**|本文介绍了BioNeRF，这是一种生物学上合理的架构，它以3D表示对场景进行建模，并通过辐射场合成新的视图。由于NeRF依赖于网络权重来存储场景的三维表示，BioNeRF实现了一种受认知启发的机制，该机制将来自多个来源的输入融合到类似记忆的结构中，提高了存储容量，并提取了更多内在和相关的信息。BioNeRF还模拟了在锥体细胞中观察到的与上下文信息有关的行为，其中记忆作为上下文提供，并与两个后续神经模型的输入相结合，一个负责产生体积密度，另一个负责渲染场景所用的颜色。实验结果表明，BioNeRF在两个数据集（真实世界图像和合成数据）中对人类感知进行编码的质量测量方面优于最先进的结果。 et.al.|[2402.07310](http://arxiv.org/abs/2402.07310)|**[link](https://github.com/leandropassosjr/bionerf)**|
 |**2024-02-11**|**3D Gaussian as a New Vision Era: A Survey**|3D高斯散射（3D-GS）已成为计算机图形学领域的一个重大进步，它提供了明确的场景表示和新颖的视图合成，而不依赖于神经网络，如神经辐射场（NeRF）。这项技术在机器人、城市地图、自主导航和虚拟现实/增强现实等领域有着不同的应用。鉴于三维高斯散射的日益流行和研究的不断扩展，本文对过去一年的相关论文进行了全面的综述。我们根据特征和应用对分类法进行了调查，介绍了3D高斯飞溅的理论基础。我们通过这项调查的目标是让新的研究人员熟悉3D高斯飞溅，为该领域的开创性工作提供宝贵的参考，并启发未来的研究方向，正如我们的结论部分所讨论的那样。 et.al.|[2402.07181](http://arxiv.org/abs/2402.07181)|null|
 
-<p align=right>(<a href=#updated-on-20240224>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240225>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -46,9 +46,9 @@
 |**2024-02-17**|**Dense Matchers for Dense Tracking**|光流是各种应用的有用输入，包括3D重建、姿态估计、跟踪和运动结构。尽管它很有用，但密集的长期跟踪领域，特别是在宽基线上，尚未得到广泛探索。本文扩展了MFT提出的在对数间隔上组合多个光流的概念。我们展示了MFT与不同光流网络的兼容性，产生的结果超过了它们各自的性能。此外，我们在MFT框架内提出了这些网络的简单而有效的组合。在位置预测精度方面，这种方法被证明与更复杂的非因果方法具有竞争力，突出了MFT在增强长期跟踪应用方面的潜力。 et.al.|[2402.11287](http://arxiv.org/abs/2402.11287)|null|
 |**2024-02-17**|**DiffPoint: Single and Multi-view Point Cloud Reconstruction with ViT Based Diffusion Model**|随着二维到三维重建的任务在各种现实场景中获得了极大的关注，能够生成高质量的点云变得至关重要。尽管最近深度学习模型在生成点云方面取得了成功，但由于图像和点云之间的差异，在生成高保真度结果方面仍然存在挑战。虽然视觉变换器（ViT）和扩散模型在各种视觉任务中显示出了前景，但它们在从图像重建点云方面的好处尚未得到证明。在本文中，我们首先提出了一种称为DiffPoint的简洁而强大的架构，该架构将ViT和扩散模型相结合，用于点云重建任务。在每个扩散步骤，我们将有噪声的点云划分为不规则的斑块。然后，使用将所有输入视为标记（包括时间信息、图像嵌入和噪声补丁）的标准ViT主干，我们训练我们的模型以基于输入图像预测目标点。我们在单视图和多视图重建任务上对DiffPoint进行了评估，并取得了最先进的结果。此外，我们还引入了一个统一灵活的特征融合模块，用于聚合来自单个或多个输入图像的图像特征。此外，我们的工作证明了跨语言和图像应用统一架构以改进3D重建任务的可行性。 et.al.|[2402.11241](http://arxiv.org/abs/2402.11241)|null|
 |**2024-02-15**|**Evaluating NeRFs for 3D Plant Geometry Reconstruction in Field Conditions**|我们评估了不同的神经辐射场（NeRF）技术，用于在从室内环境到室外环境的不同环境中重建（3D）植物。传统技术往往难以捕捉植物的复杂细节，这对植物学和农业理解至关重要。我们评估了三种日益复杂的场景，并将结果与使用激光雷达作为地面实况数据获得的点云进行了比较。在最现实的现场场景中，NeRF模型在GPU上进行30分钟的训练，获得了74.65%的F1成绩，突出了NeRF在具有挑战性的环境中的效率和准确性。这些发现不仅证明了NeRF在详细逼真的3D植物建模中的潜力，而且为提高3D重建过程的速度和效率提供了实用的方法。 et.al.|[2402.10344](http://arxiv.org/abs/2402.10344)|null|
-|**2024-02-15**|**GES: Generalized Exponential Splatting for Efficient Radiance Field Rendering**|3D高斯散射的进步显著加速了3D重建和生成。然而，它可能需要大量的高斯，这会产生大量的内存占用。本文介绍了GES（Generalized Exponential Splatting），这是一种利用广义指数函数（GEF）对3D场景进行建模的新表示，需要更少的粒子来表示场景，因此在效率上显著优于高斯飞溅方法，并具有基于高斯的实用程序的即插即用替换能力。GES在原理性1D设置和逼真的3D场景中都得到了理论和实证验证。它被证明可以更准确地表示具有尖锐边缘的信号，由于其固有的低通特性，这对高斯人来说通常是具有挑战性的。我们的实证分析表明，GEF在拟合自然发生的信号（如正方形、三角形和抛物线信号）方面优于高斯，从而减少了对增加高斯飞溅的内存占用的广泛拆分操作的需要。借助调频损耗，GES在新的视图合成基准中实现了有竞争力的性能，同时所需的内存存储量不到高斯飞溅的一半，并将渲染速度提高了39%。代码可在项目网站上获得https://abdullahamdi.com/ges . et.al.|[2402.10128](http://arxiv.org/abs/2402.10128)|**[link](https://github.com/ajhamdi/ges-splatting)**|
+|**2024-02-15**|**GES: Generalized Exponential Splatting for Efficient Radiance Field Rendering**|3D高斯散射的进步显著加速了3D重建和生成。然而，它可能需要大量的高斯，这会产生大量的内存占用。本文介绍了GES（Generalized Exponential Splatting），这是一种新的表示方法，它使用广义指数函数（GEF）来建模3D场景，需要更少的粒子来表示场景，因此在效率上显著优于高斯Splatting方法，并具有基于高斯的实用程序的即插即用替换能力。GES在原理性1D设置和逼真的3D场景中都得到了理论和实证验证。它被证明可以更准确地表示具有尖锐边缘的信号，由于其固有的低通特性，这对高斯人来说通常是具有挑战性的。我们的实证分析表明，GEF在拟合自然发生的信号（如正方形、三角形和抛物线信号）方面优于高斯，从而减少了对增加高斯飞溅的内存占用的广泛拆分操作的需要。借助调频损耗，GES在新的视图合成基准中实现了有竞争力的性能，同时所需的内存存储量不到高斯飞溅的一半，并将渲染速度提高了39%。代码可在项目网站上获得https://abdullahamdi.com/ges . et.al.|[2402.10128](http://arxiv.org/abs/2402.10128)|**[link](https://github.com/ajhamdi/ges-splatting)**|
 
-<p align=right>(<a href=#updated-on-20240224>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240225>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-02-22**|**Debiasing Text-to-Image Diffusion Models**|基于学习的文本到图像（TTI）模型，如稳定扩散，已经彻底改变了在各个领域生成视觉内容的方式。然而，最近的研究表明，在当前最先进的TTI系统中存在不可忽视的社会偏见，这引起了人们的重要关注。在这项工作中，我们的目标是解决TTI扩散模型中的社会偏见。我们首先将问题设置形式化，并使用偏见群体的文本描述来建立指导扩散过程的不安全方向。接下来，我们将该问题简化为一个权重优化问题，并尝试使用一个强化求解器Policy Gradient，它显示出收敛缓慢的次优性能。此外，为了克服局限性，我们提出了一种迭代分布对齐（IDA）方法。尽管IDA很简单，但我们发现它在解决TTI扩散模型中的社会偏见方面表现出高效和快速的收敛性。我们的代码将会发布。 et.al.|[2402.14577](http://arxiv.org/abs/2402.14577)|null|
 |**2024-02-22**|**DynGMA: a robust approach for learning stochastic differential equations from data**|从观测数据中学习未知随机微分方程是一项重要而富有挑战性的任务，在各个领域都有应用。目前的方法通常使用神经网络来表示漂移和扩散函数，并通过近似过渡密度来构建基于似然的损失来训练这些网络。然而，这些方法通常依赖于一步随机数值格式，需要具有足够高的时间分辨率的数据。在本文中，我们引入了参数化SDE跃迁密度的新近似：一种受动力系统随机微扰理论启发的高斯密度近似，及其扩展，动态高斯混合近似（DynGMA）。得益于稳健的密度近似，与基线方法相比，我们的方法在学习完全未知的漂移和扩散函数以及从轨迹数据计算不变分布方面表现出优越的精度。它能够处理低时间分辨率和可变甚至不可控的时间步长的轨迹数据，例如Gillespie随机模拟生成的数据。然后，我们在各种场景中进行了几个实验，以验证所提出方法的优势和稳健性。 et.al.|[2402.14475](http://arxiv.org/abs/2402.14475)|**[link](https://github.com/aiqing-zhu/dyngma)**|
 
-<p align=right>(<a href=#updated-on-20240224>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240225>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-01-24**|**Unified neural field theory of brain dynamics underlying oscillations in Parkinson's disease and generalized epilepsies**|通过皮质丘脑基底神经节（CTBG）系统的神经场模型，联合探讨了帕金森病（PD）和全身性癫痫的病理同步神经振荡的机制。基底神经节（BG）被近似为一个单一的有效群体，并分析了它们在调节振荡皮质丘脑（CT）动力学中的作用，反之亦然。除了正常的脑电图节律外，模型中还存在4 Hz和20 Hz左右的增强活动，这与PD的特征频率一致。这些节律是由BG和CT人群之间回路中的共振引起的，类似于先前CT模型中潜在的癫痫振荡。多巴胺耗竭被认为削弱了对PD中这些共振的抑制，网络连接解释了在4-8Hz和20Hz左右BG、丘脑和皮层活动之间的显著一致性。丘脑网状核（TRN）和BG的传入和传出连接位点之间的相似性预测低多巴胺对应于强直-阵挛（大发作）癫痫发作的可能性降低，这与实验结果一致。此外，该模型预测，与实验结果相匹配的低多巴胺水平会增加缺席（轻微）癫痫发作的可能性。与其他CTBG建模研究一致，当传入和传出BG与CT系统的连接增强时，表现出对缺席发作活动的抑制。BG被证明在强直-阵挛发作状态附近抑制CTBG系统的活性，从而深入了解BG回路中目前治疗的疗效。TRN的睡眠状态也被发现可以抑制病理性PD活动匹配观察。总的来说，这些发现证明了广泛性癫痫和帕金森病的相干振荡之间有很强的相似性，并为可能的合并症提供了见解。 et.al.|[2401.13467](http://arxiv.org/abs/2401.13467)|null|
 |**2024-01-17**|**Reproducibility via neural fields of visual illusions induced by localized stimuli**|本文研究了Billock和Tsou[PNAS，2007]使用Amari型神经场的可控性对初级视皮层（V1）皮层活动进行建模的实验复制，重点关注中央凹或外周视野中的规则漏斗模式。其目的是理解和模拟在这些实验中观察到的视觉现象，强调其非线性性质。这项研究包括设计模拟Billock和Tsou实验中视觉刺激的感官输入。然后从理论和数值上研究这些输入引起的后图像，以确定它们复制实验观察到的视觉效果的能力。这项研究的一个关键方面是研究神经反应的非线性性质所引起的影响。特别是，通过强调兴奋性和抑制性神经元在某些视觉现象出现中的重要性，这项研究表明，这两种类型的神经元活动的相互作用在视觉过程中发挥着重要作用，挑战了后者主要由兴奋性活动单独驱动的假设。 et.al.|[2401.09108](http://arxiv.org/abs/2401.09108)|null|
 
-<p align=right>(<a href=#updated-on-20240224>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240225>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
