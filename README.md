@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.02.27
+## Updated on 2024.02.28
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-02-14**|**PC-NeRF: Parent-Child Neural Radiance Fields Using Sparse LiDAR Frames in Autonomous Driving Environments**|大规模的3D场景重建和新颖的视图合成对于自动驾驶汽车至关重要，尤其是利用时间稀疏的激光雷达帧。然而，传统的显式表示仍然是以无限分辨率表示重建和合成场景的一个重要瓶颈。尽管最近开发的神经辐射场（NeRF）在隐式表示中显示出令人信服的结果，但使用稀疏激光雷达帧进行大规模3D场景重建和新的视图合成的问题仍未得到探索。为了弥补这一差距，我们提出了一种3D场景重建和新的视图合成框架，称为父子神经辐射场（PC NeRF）。该框架基于父NeRF和子NeRF两个模块，实现了分层空间划分和多级场景表示，包括场景、分段和点级别。多级场景表示增强了稀疏激光雷达点云数据的有效利用，并能够快速获取近似体积场景表示。经过大量实验，PC NeRF被证明可以在大规模场景中实现高精度的新型激光雷达视图合成和三维重建。此外，PC NeRF可以有效地处理稀疏激光雷达帧的情况，并在有限的训练时期内表现出较高的部署效率。我们的方法实施和预先培训的模型可在https://github.com/biter0088/pc-nerf. et.al.|[2402.09325](http://arxiv.org/abs/2402.09325)|**[link](https://github.com/biter0088/pc-nerf)**|
 |**2024-02-11**|**BioNeRF: Biologically Plausible Neural Radiance Fields for View Synthesis**|本文介绍了BioNeRF，这是一种生物学上合理的架构，它以3D表示对场景进行建模，并通过辐射场合成新的视图。由于NeRF依赖于网络权重来存储场景的三维表示，BioNeRF实现了一种受认知启发的机制，该机制将来自多个来源的输入融合到类似记忆的结构中，提高了存储容量，并提取了更多内在和相关的信息。BioNeRF还模拟了在锥体细胞中观察到的与上下文信息有关的行为，其中记忆作为上下文提供，并与两个后续神经模型的输入相结合，一个负责产生体积密度，另一个负责渲染场景所用的颜色。实验结果表明，BioNeRF在两个数据集（真实世界图像和合成数据）中对人类感知进行编码的质量测量方面优于最先进的结果。 et.al.|[2402.07310](http://arxiv.org/abs/2402.07310)|**[link](https://github.com/leandropassosjr/bionerf)**|
 
-<p align=right>(<a href=#updated-on-20240227>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240228>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-02-19**|**Real-time 3D Semantic Scene Perception for Egocentric Robots with Binocular Vision**|在室内移动时感知具有多个对象的三维（3D）场景对于基于视觉的移动机器人至关重要，尤其是对于增强其操作任务而言。在这项工作中，我们为具有双目视觉的以自我为中心的机器人提出了一种具有实例分割、特征匹配和点集配准的端到端流水线，并通过所提出的流水线展示了机器人的抓取能力。首先，我们设计了一种用于单视图3D语义场景分割的基于RGB图像的分割方法，利用2D数据集中的常见对象类，通过相应的深度图将3D点封装到对象实例的点云中。接下来，基于来自先前步骤的RGB图像中的感兴趣对象之间的匹配关键点来提取两个连续分割的点云的3D对应关系。此外，为了了解3D特征分布的空间变化，我们还使用核密度估计（KDE）基于估计的分布对每个3D点对进行加权，这随后在解决点云之间的刚性变换的同时，提供了具有较少中心对应性的鲁棒性。最后，我们在安装了Intel RealSense D435i RGB-D相机的7自由度双臂Baxter机器人上测试了我们提出的管道。结果表明，我们的机器人可以分割感兴趣的对象，在移动时配准多个视图，并抓住目标对象。源代码位于https://github.com/mkhangg/semantic_scene_perception. et.al.|[2402.11872](http://arxiv.org/abs/2402.11872)|**[link](https://github.com/mkhangg/semantic_scene_perception)**|
 |**2024-02-25**|**A Robust Error-Resistant View Selection Method for 3D Reconstruction**|为了解决在运动结构（SFM）视图选择中选择具有小相机基线的视图导致三角测量不确定性增加的问题，本文提出了一种稳健的抗误差视图选择方法。该方法利用基于三角测量的计算来获得抗误差模型，然后用于构建抗误差矩阵。抗误差矩阵中每行的排序结果确定每个视图的候选视图集。通过遍历所有视图的候选视图集，并基于容错矩阵完成缺失的视图，确保了三维重建的完整性。根据重建结果中的平均重投影误差和绝对轨迹误差，将该方法与COLMAP程序中精度最高的穷举方法进行了实验比较。所提出的方法在TUM数据集和DTU数据集上的重投影误差精度平均降低了29.40%，绝对轨迹误差平均降低了5.07%。 et.al.|[2402.11431](http://arxiv.org/abs/2402.11431)|null|
 
-<p align=right>(<a href=#updated-on-20240227>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240228>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-02-26**|**Referee Can Play: An Alternative Approach to Conditional Generation via Model Inversion**|作为文本到图像生成任务中的主导力量，扩散概率模型（DPM）在可控性方面面临着关键挑战，难以严格遵守复杂的多方面指令。在这项工作中，我们的目标是解决条件生成任务的这种对齐挑战。首先，我们提供了最先进的DPM的另一种观点，作为反转高级视觉语言模型（VLM）的一种方式。有了这个公式，我们自然提出了一种无需训练的方法，该方法绕过了与DPM相关的传统采样过程。通过在判别VLM的监督下直接优化图像，所提出的方法可以潜在地实现更好的文本图像对齐。作为概念验证，我们用预训练的BLIP-2模型演示了流水线，并确定了改进图像生成的几个关键设计。为了进一步提高图像保真度，引入了稳定扩散的分数蒸馏采样模块。通过在优化过程中仔细平衡这两个组件，我们的方法可以在T2I Compbench上生成性能接近最先进的高质量图像。 et.al.|[2402.16305](http://arxiv.org/abs/2402.16305)|null|
 |**2024-02-26**|**Graph Diffusion Policy Optimization**|最近的研究在优化特定下游目标的扩散模型方面取得了重大进展，这是药物设计图生成等领域的重要追求。然而，将这些模型直接应用于图扩散会带来挑战，导致性能不理想。本文介绍了图扩散策略优化（GDPO），这是一种使用强化学习优化任意（例如，不可微）目标的图扩散模型的新方法。GDPO基于为图扩散模型量身定制的热切的策略梯度，通过细致的分析开发，有望提高性能。实验结果表明，GDPO在各种目标复杂多样的图生成任务中都取得了最先进的性能。代码位于https://github.com/sail-sg/GDPO. et.al.|[2402.16302](http://arxiv.org/abs/2402.16302)|**[link](https://github.com/sail-sg/gdpo)**|
 
-<p align=right>(<a href=#updated-on-20240227>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240228>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-01-24**|**Unified neural field theory of brain dynamics underlying oscillations in Parkinson's disease and generalized epilepsies**|通过皮质丘脑基底神经节（CTBG）系统的神经场模型，联合探讨了帕金森病（PD）和全身性癫痫的病理同步神经振荡的机制。基底神经节（BG）被近似为一个单一的有效群体，并分析了它们在调节振荡皮质丘脑（CT）动力学中的作用，反之亦然。除了正常的脑电图节律外，模型中还存在4 Hz和20 Hz左右的增强活动，这与PD的特征频率一致。这些节律是由BG和CT人群之间回路中的共振引起的，类似于先前CT模型中潜在的癫痫振荡。多巴胺耗竭被认为削弱了对PD中这些共振的抑制，网络连接解释了在4-8Hz和20Hz左右BG、丘脑和皮层活动之间的显著一致性。丘脑网状核（TRN）和BG的传入和传出连接位点之间的相似性预测低多巴胺对应于强直-阵挛（大发作）癫痫发作的可能性降低，这与实验结果一致。此外，该模型预测，与实验结果相匹配的低多巴胺水平会增加缺席（轻微）癫痫发作的可能性。与其他CTBG建模研究一致，当传入和传出BG与CT系统的连接增强时，表现出对缺席发作活动的抑制。BG被证明在强直-阵挛发作状态附近抑制CTBG系统的活性，从而深入了解BG回路中目前治疗的疗效。TRN的睡眠状态也被发现可以抑制病理性PD活动匹配观察。总的来说，这些发现证明了广泛性癫痫和帕金森病的相干振荡之间有很强的相似性，并为可能的合并症提供了见解。 et.al.|[2401.13467](http://arxiv.org/abs/2401.13467)|null|
 |**2024-01-17**|**Reproducibility via neural fields of visual illusions induced by localized stimuli**|本文研究了Billock和Tsou[PNAS，2007]使用Amari型神经场的可控性对初级视皮层（V1）的皮层活动进行建模的实验复制，重点关注中央凹或外周视野中的规则漏斗模式。其目的是理解和模拟在这些实验中观察到的视觉现象，强调其非线性性质。这项研究包括设计模拟Billock和Tsou实验中视觉刺激的感官输入。然后从理论和数值上研究这些输入引起的后图像，以确定它们复制实验观察到的视觉效果的能力。这项研究的一个关键方面是研究神经反应的非线性性质所引起的影响。特别是，通过强调兴奋性和抑制性神经元在某些视觉现象出现中的重要性，这项研究表明，这两种类型的神经元活动的相互作用在视觉过程中发挥着重要作用，挑战了后者主要由兴奋性活动单独驱动的假设。 et.al.|[2401.09108](http://arxiv.org/abs/2401.09108)|null|
 
-<p align=right>(<a href=#updated-on-20240227>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240228>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
