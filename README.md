@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.02.28
+## Updated on 2024.02.29
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-02-19**|**Binary Opacity Grids: Capturing Fine Geometric Detail for Mesh-Based View Synthesis**|虽然基于表面的视图合成算法由于其低计算要求而很有吸引力，但它们往往难以再现薄结构。相比之下，将场景的几何体建模为体积密度场（例如NeRF）的更昂贵的方法擅长于重建精细的几何细节。然而，密度场通常以“模糊”的方式表示几何体，这阻碍了曲面的精确定位。在这项工作中，我们修改了密度场，以鼓励它们向表面会聚，而不影响它们重建薄结构的能力。首先，我们使用离散的不透明度网格表示，而不是连续的密度场，这允许不透明度值在曲面上从零不连续地过渡到一。其次，我们通过每个像素投射多条光线来消除混叠，这允许在不使用半透明体素的情况下对遮挡边界和亚像素结构进行建模。第三，我们最小化不透明度值的二元熵，这通过鼓励不透明度值在训练结束时进行二元化来促进表面几何的提取。最后，我们开发了一种基于融合的网格划分策略，然后进行网格简化和外观模型拟合。与现有的基于网格的方法相比，我们的模型生成的紧凑网格可以在移动设备上实时渲染，并实现显著更高的视图合成质量。 et.al.|[2402.12377](http://arxiv.org/abs/2402.12377)|null|
 |**2024-02-15**|**GES: Generalized Exponential Splatting for Efficient Radiance Field Rendering**|3D高斯散射的进步显著加速了3D重建和生成。然而，它可能需要大量的高斯，这会产生大量的内存占用。本文介绍了GES（Generalized Exponential Splatting），这是一种利用广义指数函数（GEF）对3D场景进行建模的新表示，需要更少的粒子来表示场景，因此在效率上显著优于高斯飞溅方法，并具有基于高斯的实用程序的即插即用替换能力。GES在原理性1D设置和逼真的3D场景中都得到了理论和实证验证。它被证明可以更准确地表示具有尖锐边缘的信号，由于其固有的低通特性，这对高斯人来说通常是具有挑战性的。我们的实证分析表明，GEF在拟合自然发生的信号（如正方形、三角形和抛物线信号）方面优于高斯，从而减少了对增加高斯飞溅的内存占用的广泛拆分操作的需要。借助调频损耗，GES在新的视图合成基准中实现了有竞争力的性能，同时所需的内存存储量不到高斯飞溅的一半，并将渲染速度提高了39%。代码可在项目网站上获得https://abdullahamdi.com/ges . et.al.|[2402.10128](http://arxiv.org/abs/2402.10128)|**[link](https://github.com/ajhamdi/ges-splatting)**|
 
-<p align=right>(<a href=#updated-on-20240228>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240229>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-02-22**|**Workspace Analysis for Laparoscopic Rectal Surgery : A Preliminary Study**|医学成像、计算分析和机器人技术的集成为微创外科手术带来了重大变革，尤其是在腹腔镜直肠手术（LRS）领域。这种专门的外科技术旨在解决直肠癌症，需要深入理解骨盆狭窄空间内的空间动力学。本研究利用磁共振成像（MRI）扫描作为基础数据集，将其纳入计算机辅助设计（CAD）软件，以生成患者解剖结构的精确三维（3D）重建。这项研究的核心是对手术工作空间的分析，这是机器人干预优化的一个关键方面。复杂的计算算法在CAD环境中处理MRI数据，仔细计算骨盆内部区域的尺寸和轮廓。结果是，考虑到曲率、直径变化和潜在障碍等因素，对LRS期间的可行区域和限制区域进行了细致的理解。本文深入研究了机器人LRS工作空间分析的复杂性，说明了医学成像、CAD软件和外科机器人之间的无缝协作。通过这种跨学科的方法，这项研究旨在超越传统的手术方法，为在复杂的骨盆环境中优化机器人干预的范式转变提供新的见解。 et.al.|[2402.14386](http://arxiv.org/abs/2402.14386)|null|
 |**2024-02-22**|**MVD $^2$: Efficient Multiview 3D Reconstruction for Multiview Diffusion**|多视点扩散（MVD）作为一种很有前途的三维生成技术，由于其在可推广性、质量和效率方面的优势而受到广泛关注。通过用3D数据微调预训练的大图像扩散模型，MVD方法首先基于图像或文本提示生成3D对象的多个视图，然后用多视图3D重建来重建3D形状。然而，生成的图像中的稀疏视图和不一致的细节使得3D重建具有挑战性。我们提出了一种有效的多视点扩散（MVD）图像三维重建方法MVD$^2$。MVD$^2$通过投影和卷积将图像特征聚合为3D特征体积，然后将体积特征解码为3D网格。我们使用3D形状集合和由3D形状的渲染视图提示的MVD图像来训练MVD$^2$。为了解决生成的多视点图像和3D形状的真实视图之间的差异，我们设计了一种简单而有效的视图相关训练方案。MVD$^2$提高了MVD的3D生成质量，并且对各种MVD方法快速且稳健。经过训练后，它可以在一秒内有效地从多视点图像中解码3D网格。我们使用Zero-123++和ObjectVerse LVIS 3D数据集训练MVD$^2$ ，并展示了其在使用合成图像和真实图像作为提示，从不同MVD方法生成的多视点图像生成3D模型方面的卓越性能。 et.al.|[2402.14253](http://arxiv.org/abs/2402.14253)|null|
 
-<p align=right>(<a href=#updated-on-20240228>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240229>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-02-27**|**The Unwanted Dissemination of Science: The Usage of Academic Articles as Ammunition in Contested Discursive Arenas on Twitter**|推特是一个常见的攻击性语言网站。先前的文献表明，在讨论政治话题时，推特的情感内容会严重影响其传播。我们将之前的工作扩展到研究链接到学术文章的攻击性推文。使用混合方法，我们发现了三个发现：首先，攻击性语言在引用学术文章的推文中很常见，并且因主题而异。其次，话语分析表明，攻击性推文通常使用学术文章来宣传或攻击政治意识形态。最后，我们发现，与非攻击性推文相比，攻击性推特的受众更少。我们对这些攻击性推文的分析揭示了学术文章是如何在推特上分享的，而不是为了传播新知识，而是作为有争议和好斗话语中的辩论工具。 et.al.|[2402.17495](http://arxiv.org/abs/2402.17495)|null|
 |**2024-02-27**|**EMO: Emote Portrait Alive - Generating Expressive Portrait Videos with Audio2Video Diffusion Model under Weak Conditions**|在这项工作中，我们通过关注音频提示和面部动作之间的动态和微妙关系，来应对增强谈话头部视频生成的真实性和表现力的挑战。我们发现了传统技术的局限性，这些技术往往无法捕捉到人类表情的全方位和个人面部风格的独特性。为了解决这些问题，我们提出了EMO，这是一种利用直接音频到视频合成方法的新框架，绕过了对中间3D模型或面部标志的需求。我们的方法确保了整个视频中无缝的帧转换和一致的身份保护，从而产生高度表现力和逼真的动画。实验结果表明，EMO不仅能够制作出令人信服的演讲视频，而且能够制作出各种风格的歌唱视频，在表现力和真实性方面显著优于现有的最先进的方法。 et.al.|[2402.17485](http://arxiv.org/abs/2402.17485)|null|
 
-<p align=right>(<a href=#updated-on-20240228>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240229>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-01-26**|**Learning Neural Radiance Fields of Forest Structure for Scalable and Fine Monitoring**|这项工作利用神经辐射场和遥感技术用于林业应用。在这里，我们展示了神经辐射场为改进森林监测中现有的遥感方法提供了广泛的可能性。我们提出的实验证明了它们的潜力：（1）表达森林三维结构的精细特征，（2）融合可用的遥感模式，（3）改进三维结构衍生的森林指标。总之，这些特性使神经场成为一种有吸引力的计算工具，具有进一步提高森林监测程序的可扩展性和准确性的巨大潜力。 et.al.|[2401.15029](http://arxiv.org/abs/2401.15029)|null|
 |**2024-01-25**|**Learning Robust Generalizable Radiance Field with Visibility and Feature Augmented Point Representation**|本文介绍了广义神经辐射场（NeRF）的一种新范式。以前的通用NeRF方法将多视点立体技术与基于图像的神经渲染相结合进行泛化，产生了令人印象深刻的结果，同时存在三个问题。首先，遮挡常常导致不一致的特征匹配。然后，由于采样点和粗略特征聚合的单独过程，它们在几何不连续性和局部尖锐形状中传递失真和伪影。第三，当源视图离目标视图不够近时，它们基于图像的表示会发生严重退化。为了应对挑战，我们提出了第一个基于点而不是基于图像的渲染构建可泛化神经场的范式，我们称之为可泛化神经点场（GPF）。我们的方法通过几何先验显式地建模可见性，并用神经特征增强它们。我们提出了一种新的非均匀对数采样策略，以提高渲染速度和重建质量。此外，我们提出了一种可学习的内核，该内核在空间上增加了用于特征聚合的特征，减轻了几何结构急剧变化的地方的失真。此外，我们的表现很容易被操纵。实验表明，在泛化和微调设置中，我们的模型可以在三个数据集上提供比所有对应模型和基准更好的几何结构、视图一致性和渲染质量，初步证明了可泛化NeRF新范式的潜力。 et.al.|[2401.14354](http://arxiv.org/abs/2401.14354)|null|
 
-<p align=right>(<a href=#updated-on-20240228>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240229>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
