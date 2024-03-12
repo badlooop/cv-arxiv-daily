@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.03.11
+## Updated on 2024.03.12
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-03-02**|**Neural Field Classifiers via Target Encoding and Classification Loss**|神经场方法在计算机视觉和计算机图形学中的各种长期任务中取得了巨大进展，包括新颖的视图合成和几何重建。由于现有的神经场方法试图预测一些基于坐标的连续目标值，例如神经辐射场（NeRF）的RGB，所有这些方法都是回归模型，并通过一些回归损失进行优化。然而，对于神经场方法来说，回归模型真的比分类模型更好吗？在这项工作中，我们试图从机器学习的角度来探讨神经领域这个非常基本但被忽视的问题。我们成功地提出了一种新的神经场分类器（NFC）框架，该框架将现有的神经场方法公式化为分类任务，而不是回归任务。所提出的NFC可以通过使用新的目标编码模块和优化分类损失，轻松地将任意神经场回归器（NFR）转换为其分类变体。通过将连续回归目标编码为高维离散编码，我们自然地形成了多标签分类任务。大量的实验证明了NFC在几乎免费的额外计算成本下令人印象深刻的有效性。此外，NFC还显示出对稀疏输入、损坏图像和动态场景的鲁棒性。 et.al.|[2403.01058](http://arxiv.org/abs/2403.01058)|null|
 |**2024-02-29**|**ViewFusion: Towards Multi-View Consistency via Interpolated Denoising**|通过扩散模型进行的新型视图合成在生成多样化和高质量图像方面表现出了显著的潜力。然而，在这些主流方法中，图像生成的独立过程导致了在保持多视图一致性方面的挑战。为了解决这一问题，我们引入了ViewFusion，这是一种新颖的无训练算法，可以无缝集成到现有的预训练扩散模型中。我们的方法采用了一种自回归方法，该方法隐式地利用先前生成的视图作为下一个视图生成的上下文，确保了在新视图生成过程中强大的多视图一致性。通过通过插值去噪融合已知视图信息的扩散过程，我们的框架成功地扩展了单视图条件模型，使其在多视图条件设置下工作，而无需任何额外的微调。大量的实验结果证明了ViewFusion在生成一致且详细的新视图方面的有效性。 et.al.|[2402.18842](http://arxiv.org/abs/2402.18842)|**[link](https://github.com/Wi-sc/ViewFusion)**|
 
-<p align=right>(<a href=#updated-on-20240311>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240312>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-03-03**|**A Novel Dynamic Light-Section 3D Reconstruction Method for Wide-Range Sensing**|现有的基于检流计的激光扫描系统在多尺度3D重建中的应用具有挑战性，因为难以在高重建精度和宽重建范围之间实现平衡。本文提出了一种新的方法，通过使用多电流计切换相机的视场来同步激光扫描。除了先进的硬件设置外，我们还通过建模动态相机、动态激光器及其组合交互，建立了系统的综合数学模型。然后，我们通过构建误差模型并最小化目标函数，提出了一种高精度、灵活的校准方法。最后，我们通过扫描标准组件来评估所提出的系统的性能。评估结果表明，当测量范围扩展到1100 mm $\times$1300 mm$\imes$ 650 mm时，所提出的三维重建系统的精度达到0.3 mm。在相同的重建精度下，重建范围扩展了25倍，表明所提出的方法同时允许在工业应用中进行高精度和宽范围的3D重建。 et.al.|[2403.01374](http://arxiv.org/abs/2403.01374)|null|
 |**2024-03-08**|**G3DR: Generative 3D Reconstruction in ImageNet**|我们介绍了一种新的3D生成方法，即ImageNet中的生成3D重建（G3DR），该方法能够从单个图像中生成各种高质量的3D对象，解决了现有方法的局限性。我们框架的核心是一种新颖的深度正则化技术，它能够生成具有高几何保真度的场景。G3DR还利用预训练的语言视觉模型，如CLIP，实现新视图中的重建，并提高几代人的视觉逼真度。此外，G3DR设计了一种简单但有效的采样程序，以进一步提高世代的质量。G3DR提供基于类或文本条件的多样化且高效的3D资产生成。尽管G3DR很简单，但它能够击败最先进的方法，在感知指标和几何得分方面比它们提高了22%和90%，而只需要一半的训练时间。代码位于https://github.com/preddy5/G3DR et.al.|[2403.00939](http://arxiv.org/abs/2403.00939)|null|
 
-<p align=right>(<a href=#updated-on-20240311>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240312>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-03-08**|**Non-additivity in many-body interactions between membrane-deforming spheres increases disorder**|膜诱导的相互作用已被预测为对膜蛋白的组织很重要。对两个和三个膜变形物体之间相互作用的测量揭示了它们的非相加性质。它们被认为会导致复杂的多体效应，然而，迄今为止缺乏实验证据。我们在这里提出了一种实验方法，使用放置在放气的巨大单层囊泡和平面基质之间的胶体球来测量膜介导的相互作用中的多种身体效应。由此限制的胶体颗粒导致膜的大变形，而不是物理化学地附着在膜上并通过膜相互作用。发现两个颗粒以0.2~pN的最大力吸引。对于三个颗粒，我们观察到形成紧凑的等边三角形比线性排列更优选。我们使用数值能量最小化来确定吸引力源于粒子引起的膜变形能量的减少。在限制多达36个粒子的情况下，我们发现倾向于六边形紧密堆积的团簇。然而，随着颗粒数量的增加，受限颗粒的阶数降低，同时颗粒的扩散率增加。我们的实验首次表明，膜介导的相互作用的非加性影响了相互作用和排列，并最终导致对细胞过程具有潜在重要性的具有类液体顺序的球形聚集体。 et.al.|[2403.05253](http://arxiv.org/abs/2403.05253)|null|
 |**2024-03-08**|**Noise Level Adaptive Diffusion Model for Robust Reconstruction of Accelerated MRI**|通常，基于扩散模型的MRI重建方法逐步去除人工添加的噪声，同时增强数据一致性以重建底层图像。然而，真实世界的MRI采集已经包含由于热波动而产生的固有噪声。当使用超快、高分辨率成像序列进行高级研究，或使用中低收入国家青睐的低场系统时，这种现象尤其显著。这些常见的场景可能导致现有的基于扩散模型的重建技术的次优性能或完全失败。具体而言，随着人工添加的噪声逐渐被去除，固有的MRI噪声变得越来越明显，使得实际噪声水平与预定义的去噪时间表不一致，从而导致图像重建不准确。为了解决这个问题，我们提出了一种具有新的NoIse级自适应数据一致性（Nila DC）操作的后验采样策略。在两个公共数据集和一个内部临床数据集上进行了广泛的实验，场强范围从0.3T到3T，表明我们的方法超过了最先进的MRI重建方法，并且对各种噪声水平具有高度鲁棒性。该代码将在审查后发布。 et.al.|[2403.05245](http://arxiv.org/abs/2403.05245)|null|
 
-<p align=right>(<a href=#updated-on-20240311>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240312>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-02-26**|**GEM3D: GEnerative Medial Abstractions for 3D Shape Synthesis**|我们介绍了GEM3D——一种新的深度、拓扑感知的三维形状生成模型。我们的方法的关键成分是基于神经骨架的表示，对形状拓扑和几何信息进行编码。通过去噪扩散概率模型，我们的方法首先根据中轴变换（MAT）生成基于骨架的表示，然后通过骨架驱动的神经隐式公式生成曲面。神经隐式考虑了存储在生成的骨架表示中的拓扑和几何信息，以产生与以前的神经场公式相比在拓扑和几何上更准确的曲面。我们讨论了我们的方法在形状合成和点云重建任务中的应用，并对我们的方法进行了定性和定量评估。与最先进的技术相比，我们展示了更忠实的表面重建和多样化的形状生成结果，还涉及从Thingi10K和ShapeNet重建和合成结构复杂的高属形表面的挑战性场景。 et.al.|[2402.16994](http://arxiv.org/abs/2402.16994)|null|
 |**2024-02-21**|**Geometry-Informed Neural Networks**|我们引入了几何知情神经网络（GINN）的概念，它包括（i）在几何约束下的学习，（ii）作为适当表示的神经场，以及（iii）为几何任务中经常遇到的不确定系统生成不同的解决方案。值得注意的是，GINN公式不需要训练数据，因此可以被视为纯粹由约束驱动的生成建模。我们添加了一个明确的多样性损失来缓解模式崩溃。我们考虑了几个约束，特别是分量的连通性，我们通过Morse理论将其转化为可微损失。在实验上，我们展示了GINN学习范式在一系列二维和三维场景中的有效性，这些场景的复杂性不断增加。 et.al.|[2402.14009](http://arxiv.org/abs/2402.14009)|null|
 
-<p align=right>(<a href=#updated-on-20240311>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240312>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
