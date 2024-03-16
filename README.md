@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.03.15
+## Updated on 2024.03.16
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-03-13**|**FSViewFusion: Few-Shots View Generation of Novel Objects**|自从NeRF出现以来，新颖的视图合成已经得到了巨大的发展。然而，Nerf模型在单个场景上过拟合，缺乏对分布外对象的泛化能力。最近，扩散模型在视图合成中引入泛化方面表现出了显著的性能。受这些进步的启发，我们探索了预训练的稳定扩散模型在没有显式3D先验的情况下进行视图合成的能力。具体来说，我们的方法基于个性化的文本到图像模型Dreambooth，因为它具有很强的能力，只需几次拍摄就可以适应特定的新颖对象。我们的研究揭示了两个有趣的发现。首先，我们观察到，与涉及对大量多视图数据进行微调扩散的更复杂的策略相比，Dreambooth可以学习视图的高级概念。其次，我们建立了一个观点的概念可以被解开并转移到一个新的对象上，而不考虑从中学习观点的原始对象的身份。受此启发，我们引入了一种学习策略FSViewFusion，该策略仅通过单个场景的一个图像样本继承特定视图，并使用低阶适配器将知识转移到从少数镜头中学习的新对象。通过广泛的实验，我们证明了我们的方法虽然简单，但在为野生图像生成可靠的视图样本方面是有效的。将发布代码和模型。 et.al.|[2403.06394](http://arxiv.org/abs/2403.06394)|null|
 |**2024-03-13**|**S-DyRF: Reference-Based Stylized Radiance Fields for Dynamic Scenes**|目前的3D风格化方法往往假设场景是静态的，这违背了我们现实世界的动态本质。为了解决这一限制，我们提出了S-DyRF，这是一种基于参考的动态神经辐射场时空风格化方法。然而，由于沿时间轴的风格化参考图像的可用性有限，风格化动态3D场景本质上是具有挑战性的。我们的关键见解在于除了提供的参考之外，还引入了额外的时间线索。为此，我们从给定的程式化引用中生成时间伪引用。这些伪参考便于样式信息从参考传播到整个动态3D场景。对于粗略的样式转换，我们强制使用新颖的视图和时间，以在特征级别模拟伪引用中存在的样式细节。为了保留高频细节，我们从时间伪参考创建了一个风格化的时间伪射线集合。这些伪射线作为实现精细风格转换的详细和明确的风格化指导。在合成数据集和真实世界数据集上的实验表明，我们的方法在动态3D场景上产生了合理的时空视图合成风格化结果。 et.al.|[2403.06205](http://arxiv.org/abs/2403.06205)|null|
 
-<p align=right>(<a href=#updated-on-20240315>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240316>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-03-07**|**CN-RMA: Combined Network with Ray Marching Aggregation for 3D Indoors Object Detection from Multi-view Images**|本文介绍了一种从多视角图像中检测三维室内物体的新方法CN-RMA。我们观察到关键挑战是图像和3D对应关系的模糊性，而没有明确的几何结构来提供遮挡信息。为了解决这个问题，CN-RMA利用了3D重建网络和3D对象检测网络的协同作用，其中重建网络提供了粗略的截断有符号距离函数（TSDF），并引导图像特征以端到端的方式正确地投票到3D空间。具体来说，我们通过射线行进将权重与每条射线的采样点相关联，表示图像中像素对相应3D位置的贡献。这样的权重由预测的带符号距离确定，使得图像特征仅投票给重建表面附近的区域。我们的方法在从多视图图像中检测3D对象方面实现了最先进的性能，通过mAP@0.25和mAP@0.5在ScanNet和ARKitScenes数据集上。代码和型号发布于https://github.com/SerCharles/CN-RMA. et.al.|[2403.04198](http://arxiv.org/abs/2403.04198)|**[link](https://github.com/sercharles/cn-rma)**|
 |**2024-03-07**|**Radiative Gaussian Splatting for Efficient X-ray Novel View Synthesis**|X射线由于其比自然光更强的穿透性而被广泛应用于透射成像。在绘制新视图X射线投影时，现有的主要基于NeRF的方法训练时间长，推理速度慢。在本文中，我们提出了一种基于三维高斯散射的框架，即X-Gaussian，用于X射线新视图合成。首先，受X射线成像各向同性的启发，我们重新设计了一个辐射高斯点云模型。我们的模型在学习预测3D点的辐射强度时排除了视角方向的影响。基于该模型，我们开发了一种具有CUDA实现的可微分辐射光栅化（DRR）。其次，我们定制了一种角度姿态长方体均匀初始化（ACUI）策略，该策略直接使用X射线扫描仪的参数来计算相机信息，然后对包围扫描对象的长方体内的点位置进行均匀采样。实验表明，我们的X-Gaussian比最先进的方法高6.5 dB，同时享受不到15%的训练时间和超过73倍的推理速度。在稀疏视图CT重建中的应用也揭示了该方法的实用价值。代码和模型将在https://github.com/caiyuanhao1998/X-Gaussian . 培训过程可视化的视频演示位于https://www.youtube.com/watch?v=gDVf_Ngeghg . et.al.|[2403.04116](http://arxiv.org/abs/2403.04116)|**[link](https://github.com/caiyuanhao1998/x-gaussian)**|
 
-<p align=right>(<a href=#updated-on-20240315>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240316>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-03-14**|**MambaTalk: Efficient Holistic Gesture Synthesis with Selective State Space Models**|手势合成是人机交互的一个重要领域，在电影、机器人和虚拟现实等各个领域都有广泛的应用。最近的进展已经利用扩散模型和注意力机制来改进手势合成。然而，由于这些技术的高计算复杂性，生成具有低延迟的长而多样的序列仍然是一个挑战。我们探索了状态空间模型（SSM）解决这一挑战的潜力，实现了具有离散运动先验的两阶段建模策略，以提高手势的质量。利用基础Mamba区块，我们引入MambaTalk，通过多模式集成增强手势多样性和节奏。大量实验表明，我们的方法与最先进的模型的性能相匹配或超过了这些模型的性能。 et.al.|[2403.09471](http://arxiv.org/abs/2403.09471)|null|
 |**2024-03-14**|**Eta Inversion: Designing an Optimal Eta Function for Diffusion-based Real Image Editing**|扩散模型在文本引导图像生成领域以及最近在文本引导的图像编辑领域取得了显著的成功。编辑真实图像的常用策略包括反转扩散过程以获得原始图像的噪声表示，然后对其进行去噪以实现所需的编辑。然而，当前的扩散反转方法往往难以产生既忠实于指定文本提示又与源图像非常相似的编辑。为了克服这些限制，我们介绍了一种用于真实图像编辑的新颖且适应性强的扩散反演技术，该技术基于对 $\eta$在DDIM采样方程中的作用的理论分析，以增强可编辑性。通过设计一种具有时间和区域相关$\eta$ 函数的通用扩散反演方法，我们能够灵活控制编辑范围。通过一系列全面的定量和定性评估，包括与一系列近期方法的比较，我们展示了我们方法的优越性。我们的方法不仅在该领域树立了新的基准，而且显著优于现有策略。我们的代码可在https://github.com/furiosa-ai/eta-inversion et.al.|[2403.09468](http://arxiv.org/abs/2403.09468)|**[link](https://github.com/furiosa-ai/eta-inversion)**|
 
-<p align=right>(<a href=#updated-on-20240315>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240316>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-03-04**|**Activity estimation via distributed measurements in an orientation sensitive neural fields model of the visual cortex**|本文在可观察性理论的框架下研究了初级视觉皮层（V1）内神经活动的在线估计。我们专注于对超体积活动建模的低维神经场，以描述V1中的活动。我们使用V1上的平均皮层活动作为测量。我们的贡献包括详细说明模型的可观察性奇点，并开发一种混合高增益观测器，该观测器在特定的激励条件下实现实际收敛，同时在生物相关性的情况下保持渐近收敛。该研究强调了模型的非线性性质与其可观测性之间的内在联系。我们还介绍了数值实验，强调了观测者的不同性质。 et.al.|[2403.01906](http://arxiv.org/abs/2403.01906)|null|
 |**2024-03-02**|**Neural Field Classifiers via Target Encoding and Classification Loss**|神经场方法在计算机视觉和计算机图形学中的各种长期任务中取得了巨大进展，包括新颖的视图合成和几何重建。由于现有的神经场方法试图预测一些基于坐标的连续目标值，例如神经辐射场（NeRF）的RGB，所有这些方法都是回归模型，并通过一些回归损失进行优化。然而，对于神经场方法来说，回归模型真的比分类模型更好吗？在这项工作中，我们试图从机器学习的角度来探讨神经领域这个非常基本但被忽视的问题。我们成功地提出了一种新的神经场分类器（NFC）框架，该框架将现有的神经场方法公式化为分类任务，而不是回归任务。所提出的NFC可以通过使用新的目标编码模块和优化分类损失，轻松地将任意神经场回归器（NFR）转换为其分类变体。通过将连续回归目标编码为高维离散编码，我们自然地形成了多标签分类任务。大量的实验证明了NFC在几乎免费的额外计算成本下令人印象深刻的有效性。此外，NFC还显示出对稀疏输入、损坏图像和动态场景的鲁棒性。 et.al.|[2403.01058](http://arxiv.org/abs/2403.01058)|null|
 
-<p align=right>(<a href=#updated-on-20240315>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240316>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
