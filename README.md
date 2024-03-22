@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.03.21
+## Updated on 2024.03.22
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-03-18**|**SV3D: Novel Multi-view Synthesis and 3D Generation from a Single Image using Latent Video Diffusion**|我们提出了稳定视频3D（SV3D）——一种潜在的视频扩散模型，用于3D物体周围轨道视频的高分辨率、图像到多视图生成。最近关于3D生成的工作提出了将2D生成模型用于新颖视图合成（NVS）和3D优化的技术。然而，由于视图有限或NVS不一致，这些方法具有几个缺点，从而影响了3D对象生成的性能。在这项工作中，我们提出了SV3D，它使图像到视频的扩散模型适应新的多视图合成和3D生成，从而利用视频模型的泛化和多视图一致性，同时进一步增加了NVS的显式相机控制。我们还提出了改进的3D优化技术，以使用SV3D及其NVS输出进行图像到3D的生成。在具有2D和3D度量的多个数据集上的大量实验结果以及用户研究表明，与先前的工作相比，SV3D在NVS和3D重建方面具有最先进的性能。 et.al.|[2403.12008](http://arxiv.org/abs/2403.12008)|null|
 |**2024-03-18**|**RoGUENeRF: A Robust Geometry-Consistent Universal Enhancer for NeRF**|神经渲染的最新进展已经实现了高度真实感的3D场景重建和新颖的视图合成。尽管取得了这一进展，但由于辐射场的低频偏移和相机校准不准确等因素，目前最先进的方法难以重建高频细节。缓解这一问题的一种方法是在渲染后增强图像。2D增强器可以预先训练以恢复一些细节，但对场景几何结构不可知，并且不容易推广到图像退化的新分布。相反，现有的3D增强器能够以可推广的方式从附近的训练图像传递细节，但会受到不准确的相机校准的影响，并可能将几何体的误差传播到渲染图像中。我们提出了一种神经渲染增强器RoGUNeRF，它利用了这两种范式中最好的一种。我们的方法经过预训练，可以学习通用增强器，同时还可以通过稳健的3D对齐和几何感知融合利用来自附近训练图像的信息。我们的方法在保持几何一致性的同时恢复高频纹理，并且对不准确的相机校准也很稳健。我们表明，RoGUENeRF显著提高了各种神经渲染基线的渲染质量，例如，在真实世界360v2数据集上，将MipNeRF360的PSNR提高了0.63dB，将Nerfactor提高了1.34dB。 et.al.|[2403.11909](http://arxiv.org/abs/2403.11909)|null|
 
-<p align=right>(<a href=#updated-on-20240321>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240322>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-03-18**|**SceneSense: Diffusion Models for 3D Occupancy Synthesis from Partial Observation**|在探索新的领域时，机器人系统通常只对直接测量的几何形状进行规划和执行控制。当进入以前被遮挡的空间时，例如在走廊转弯或进入新房间时，机器人通常会停下来对新观察到的空间进行规划。为了解决这一问题，我们提出了SceneScene，这是一种实时3D扩散模型，用于从部分观测中合成3D占用信息，有效地预测这些被遮挡或视野外的几何形状，用于未来的规划和控制框架。SceneSense使用运行占用图和单个RGB-D相机在运行时生成平台周围的预测几何体，即使几何体被遮挡或看不见。我们的架构确保SceneSense永远不会覆盖观察到的空闲或占用空间。通过保持观察到的地图的完整性，SceneSense通过生成预测来降低破坏观察到的空间的风险。虽然SceneSense被证明使用单个RGB-D相机运行良好，但该框架足够灵活，可以扩展到其他模态。SceneSense作为任何系统的一部分运行，该系统“开箱即用”生成运行占用图，从框架中删除条件。或者，为了在新模式中获得最大性能，可以更换感知骨干，并对模型进行再培训，以便在新应用中进行推理。与现有的模型不同，现有的模型需要多个视图和离线场景合成，或者专注于填补观测数据中的空白，我们的研究结果表明，SceneSense是在运行时估计未观测到的局部占用信息的有效方法。SceneSense的局部占用预测显示出比运行占用图更好地表示测试勘探轨迹期间的地面实况占用分布。 et.al.|[2403.11985](http://arxiv.org/abs/2403.11985)|null|
 |**2024-03-18**|**GNeRP: Gaussian-guided Neural Reconstruction of Reflective Objects with Noisy Polarization Priors**|从神经辐射场（NeRF）中学习曲面成为多视图立体（MVS）中的一个新兴话题。最近基于符号距离函数（SDF）的方法证明了它们重建朗伯场景的精确3D形状的能力。然而，由于镜面辐射和复杂的几何结构的纠缠，它们在反射场景中的结果并不令人满意。为了解决这些挑战，我们提出了SDF场中法线的基于高斯的表示。在偏振先验的监督下，这种表示指导了镜面反射背后的几何结构的学习，并比现有方法捕捉了更多的细节。此外，我们在优化过程中提出了一种重新加权策略，以缓解极化先验的噪声问题。为了验证我们的设计的有效性，我们在具有各种几何形状的附加反射场景中捕获偏振信息和地面实况网格。我们还在PANDORA数据集上评估了我们的框架。比较证明，在反射场景中，我们的方法在很大程度上优于现有的神经三维重建方法。 et.al.|[2403.11899](http://arxiv.org/abs/2403.11899)|null|
 
-<p align=right>(<a href=#updated-on-20240321>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240322>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-03-20**|**Be-Your-Outpainter: Mastering Video Outpainting through Input-Specific Adaptation**|视频外画是一项具有挑战性的任务，旨在在输入视频的视口外生成视频内容，同时保持帧间和帧内的一致性。现有方法在生成质量或灵活性方面都存在不足。我们介绍了MOTIA Mastering Video Outpainting Through Input Specific Adapting，这是一种基于扩散的管道，利用源视频的固有数据特定模式和图像/视频生成先验进行有效的Outpainting。MOTIA包括两个主要阶段：输入特定的适应和模式感知的描绘。特定于输入的自适应阶段涉及对单镜头源视频进行高效和有效的伪画外学习。这个过程鼓励模型识别和学习源视频中的模式，并弥合标准生成过程和画外画之间的差距。接下来的阶段，模式感知的outpainting，致力于对这些学习到的模式进行泛化，以生成outpaintion结果。提出了包括空间感知插入和噪声传播在内的附加策略，以更好地利用扩散模型的生成先验和从源视频中获取的视频模式。广泛的评估强调了MOTIA的优势，在公认的基准中优于现有的最先进的方法。值得注意的是，这些进步是在不需要广泛的、针对特定任务的调整的情况下实现的。 et.al.|[2403.13745](http://arxiv.org/abs/2403.13745)|null|
 |**2024-03-20**|**Probabilistic Forecasting with Stochastic Interpolants and Föllmer Processes**|我们提出了一个基于生成建模的动态系统概率预测框架。给定系统状态随时间的观测值，我们将预测问题公式化为给定当前状态的未来系统状态的条件分布的采样。为此，我们利用随机插值的框架，这有助于在任意基数分布和目标之间构建生成模型。我们设计了一个虚构的非物理随机动力学，该动力学以当前系统状态为初始条件，并在有限时间内无偏差地从目标条件分布中产生样本作为输出。因此，该过程将以当前状态为中心的点质量映射到预测的概率集合上。我们证明了进入实现这一任务的随机微分方程（SDE）的漂移系数是非奇异的，并且可以通过对时间序列数据的平方损失回归有效地学习它。我们表明，该SDE的漂移和扩散系数可以在训练后进行调整，并且将估计误差的影响降至最低的特定选择会产生一个F“ollmer过程。我们强调了我们的方法在几个复杂的高维预测问题上的实用性，包括随机强迫Navier-Stokes和KTH和CLEVRER数据集上的视频预测。 et.al.|[2403.13724](http://arxiv.org/abs/2403.13724)|null|
 
-<p align=right>(<a href=#updated-on-20240321>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240322>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-03-06**|**ProxNF: Neural Field Proximal Training for High-Resolution 4D Dynamic Image Reconstruction**|精确的时空图像重建方法被广泛的生物医学研究领域所需要，但由于数据的不完整性和计算负担而面临挑战。数据不完整性源于增加帧速率和减少采集时间所需的欠采样，而计算负担则源于具有三维空间和扩展时间范围的高分辨率图像的内存占用。神经场是一类新兴的神经网络，充当时空对象的连续表示，以前已经引入它来通过将图像重建重新定义为估计网络参数的问题来解决这些动态成像问题。神经场可以通过利用这些时空对象中潜在的冗余来解决数据不完整和计算负担这两个挑战。这项工作提出了ProxNF，这是一种用于时空图像重建的新的神经场训练方法，利用近端分裂方法将涉及成像算子的计算与网络参数的更新分开。具体而言，ProxNF评估图像域中数据保真度项的（子采样）梯度，并使用完全监督学习方法来更新神经场参数。通过减少内存占用和评估成像算子的计算成本，所提出的ProxNF方法允许重建大的、高分辨率的时空图像。该方法在两项数值研究中得到了证明，这两项研究涉及解剖逼真的动态数值小鼠模型和肿瘤灌注的两室模型的虚拟动态对比增强光声计算机断层扫描成像。 et.al.|[2403.03860](http://arxiv.org/abs/2403.03860)|null|
 |**2024-03-05**|**NRDF: Neural Riemannian Distance Fields for Learning Articulated Pose Priors**|忠实地为关节空间建模是一项关键任务，它可以恢复和生成逼真的姿势，而且仍然是一项臭名昭著的挑战。为此，我们引入了神经黎曼距离场（NRDF），这是一种数据驱动的先验，用于建模看似合理的关节空间，表示为高维乘积四元数空间中神经场的零级集。为了仅在正示例上训练NRDF，我们引入了一种新的采样算法，确保测地距离遵循所需的分布，从而产生一种原则性的距离场学习范式。然后，我们设计了一种投影算法，通过自适应步长黎曼优化器将任何随机姿态映射到水平集上，始终遵循关节旋转的乘积流形。NRDF可以通过反向传播和数学类比计算黎曼梯度，与最近的生成模型黎曼流匹配有关。我们在各种下游任务中，即姿态生成、基于图像的姿态估计和求解逆运动学，对照其他姿态先验对NRDF进行了全面评估，突出了NRDF的优越性能。除了人类，NRDF的多功能性还延伸到手和动物姿势，因为它可以有效地代表任何关节。 et.al.|[2403.03122](http://arxiv.org/abs/2403.03122)|null|
 
-<p align=right>(<a href=#updated-on-20240321>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240322>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
