@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.03.25
+## Updated on 2024.03.26
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-03-20**|**Gaussian Splatting on the Move: Blur and Rolling Shutter Compensation for Natural Camera Motion**|基于高斯散射（3DGS）的高质量场景重建和新颖的视图合成通常需要稳定、高质量的照片，而手持相机通常无法捕捉到这些照片。我们提出了一种适应相机运动的方法，并允许使用遭受运动模糊和滚动快门失真的手持视频数据进行高质量的场景重建。我们的方法基于物理图像形成过程的详细建模，并利用视觉惯性里程计（VIO）估计的速度。在单个图像帧的曝光时间期间，摄像机姿态被认为是非静态的，并且在重建过程中进一步优化摄像机姿态。我们制定了一个可微分的渲染管道，利用屏幕空间近似将滚动快门和运动模糊效果有效地结合到3DGS框架中。我们对合成和真实数据的结果表明，与现有方法相比，我们在减轻相机运动方面表现出了卓越的性能，从而在自然环境中推进了3DGS。 et.al.|[2403.13327](http://arxiv.org/abs/2403.13327)|**[link](https://github.com/spectacularai/3dgs-deblur)**|
 |**2024-03-19**|**HUGS: Holistic Urban 3D Scene Understanding via Gaussian Splatting**|基于RGB图像对城市场景的整体理解是一个具有挑战性但又很重要的问题。它包括理解几何图形和外观，以实现新颖的视图合成、解析语义标签和跟踪移动对象。尽管取得了相当大的进展，但现有的方法往往侧重于这项任务的特定方面，并需要额外的输入，如激光雷达扫描或手动注释的3D边界框。在本文中，我们介绍了一种新的管道，该管道利用3D高斯散射进行整体城市场景理解。我们的主要想法涉及使用静态和动态3D高斯的组合对几何、外观、语义和运动进行联合优化，其中运动对象姿态通过物理约束进行正则化。我们的方法提供了实时渲染新视点的能力，以高精度生成2D和3D语义信息，并重建动态场景，即使在3D边界框检测具有高噪声的场景中也是如此。在KITTI、KITTI-360和Virtual KITTI 2上的实验结果证明了我们方法的有效性。 et.al.|[2403.12722](http://arxiv.org/abs/2403.12722)|null|
 
-<p align=right>(<a href=#updated-on-20240325>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240326>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-03-19**|**GVGEN: Text-to-3D Generation with Volumetric Representation**|近年来，3D高斯飞溅已成为一种强大的3D重建和生成技术，以其快速和高质量的渲染能力而闻名。为了解决这些缺点，本文介绍了一种新的基于扩散的框架GVGEN，旨在从文本输入中有效地生成3D高斯表示。我们提出了两种创新技术：（1）结构化体积表示。我们首先将无组织的三维高斯点排列为结构化形式的高斯体积。这种变换允许在由固定数量的高斯组成的体积内捕捉复杂的纹理细节。为了更好地优化这些细节的表示，我们提出了一种独特的修剪和加密方法，称为候选池策略，通过选择性优化提高细节保真度。（2） 粗至细发电管道。为了简化GaussianVolume的生成，并使模型能够生成具有详细三维几何结构的实例，我们提出了一种从粗到细的管道。它首先构建一个基本的几何结构，然后预测完整的高斯属性。与现有的3D生成方法相比，我们的框架GVGEN在定性和定量评估方面表现出卓越的性能。同时，它保持了快速的生成速度（ $\sim$ 7秒），有效地在质量和效率之间取得了平衡。 et.al.|[2403.12957](http://arxiv.org/abs/2403.12957)|null|
 |**2024-03-19**|**PostoMETRO: Pose Token Enhanced Mesh Transformer for Robust 3D Human Mesh Recovery**|随着基于单图像的人体网格恢复的最新进展，人们对增强其在某些极端场景（如遮挡）中的性能越来越感兴趣，同时保持整体模型的准确性。尽管在遮挡条件下获得精确注释的3D人体姿势具有挑战性，但仍有大量丰富而精确的2D姿势注释可供利用。然而，现有的工作大多集中在直接利用二维姿态坐标来估计三维姿态和网格。在本文中，我们提出了PostoMETRO（ $\textbf｛Pos｝$e$\textbf｛to｝$ken-edvanced$\textbf｛ME｝$sh$\textbf｛TR｝$ansf$\textbf｛O｝$ rmer），它以令牌方式将遮挡弹性2D姿势表示集成到转换器中。利用专门的姿势标记器，我们有效地将2D姿势数据压缩为姿势标记的紧凑序列，并将它们与图像标记一起馈送到变换器。这一过程不仅确保了对图像纹理的丰富描述，而且促进了姿势和图像信息的强大集成。随后，通过顶点和关节令牌来查询这些组合令牌，以解码网格顶点和人体关节的3D坐标。在强大的姿势标记表示和有效组合的帮助下，即使在遮挡等极端情况下，我们也能够生成更精确的三维坐标。在标准和遮挡特定基准上的实验都证明了PostoMETRO的有效性。定性结果进一步说明了2D姿态如何帮助3D重建的清晰度。将提供代码。 et.al.|[2403.12473](http://arxiv.org/abs/2403.12473)|null|
 
-<p align=right>(<a href=#updated-on-20240325>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240326>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-03-22**|**Broad Instantaneous Bandwidth Microwave Spectrum Analyzer with a Microfabricated Atomic Vapor Cell**|我们报道了在大磁场梯度下，用微制造的蒸气电池中的热原子Rb $进行宽瞬时带宽微波光谱分析。传感器是一个MEMS原子气相电池，充满同位素纯的$^｛87｝\mathrm｛Rb｝$和$\mathrm{N}_2$缓冲气体来定位原子的运动。感兴趣的微波信号通过共面波导耦合到细胞，在原子的光学泵浦基态之间引发自旋翻转跃迁。具有大梯度的静态磁场将输入微波信号的$\textit｛频谱｝$映射到用激光束记录到相机上的细胞吸收图像上的位置相关的$\text｛自旋翻转模式｝$。在我们的原理验证实验中，我们展示了一种微波频谱分析仪，该分析仪具有以13.165 GHz为中心的约1 GHz瞬时带宽、3 MHz频率分辨率、2 kHz刷新率和在1秒测量时间内的-23 dBm单音微波功率检测限值。通过考虑光泵浦、微波相互作用、$^{87}\mathrm{Rb}$ 原子的扩散和激光吸收的过程，建立了一个理论模型来模拟图像信号。我们希望在优化的设置中达到超过25 GHz的瞬时带宽，受外加磁场梯度的限制。我们的演示为基于电子外差检测的传统微波频谱分析仪提供了一种实用的替代方案。 et.al.|[2403.15155](http://arxiv.org/abs/2403.15155)|null|
 |**2024-03-22**|**Oxygenation of CO and NO on Amorphous Solid Water**|\noindent\textit{Context.}以定量的方式研究了分子在无定形固体水上形成、弛豫、扩散和解吸的动力学。\noindent\textit{Aims.}我们的目标是在定量水平上表征原子+双原子复合反应后，CO $_2$和NO$_2$在冷无定形固体水上的形成概率、稳定性、能量弛豫和扩散动力学。\noindent\textit｛方法。｝使用精确的机器学习能量函数和波动电荷模型来研究原子氧与CO和NO在无定形固态水（ASW）上的扩散、相互作用和复合动力学。通过对振动态密度的分析，确定了ASW和水中内部自由度的能量弛豫。通过扩展和非平衡MD模拟研究了表面扩散和解吸的能量学。\noindent\textit｛结果。｝以定量的方式确定了纳秒时间尺度上的反应概率，并证明反应物的表面扩散导致初始分离高达20\AA\/的复合。复合后，CO$_2$和NO$_2$在皮秒时间尺度上通过向水的内部和表面声子模式的能量转移而稳定。平均扩散势垒和解吸能与实验结果一致。复合后，三原子产物容易扩散，这与CO$_2$和NO$_2$ 在多纳秒时间尺度上都是稳定的平衡情况形成了鲜明对比。 et.al.|[2403.15141](http://arxiv.org/abs/2403.15141)|null|
 
-<p align=right>(<a href=#updated-on-20240325>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240326>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-03-15**|**CoNFiLD: Conditional Neural Field Latent Diffusion Model Generating Spatiotemporal Turbulence**|本研究介绍了条件神经场潜在扩散（CoNFiLD）模型，这是一种新的生成学习框架，旨在快速模拟三维不规则域内混沌和湍流系统中复杂的时空动力学。传统的涡解析数值模拟，尽管提供了详细的流量预测，但由于其广泛的计算需求，遇到了很大的局限性，限制了其在更广泛的工程环境中的应用。相比之下，基于深度学习的代理模型有望提供高效、数据驱动的解决方案。然而，它们的有效性往往因依赖确定性框架而受到损害，而确定性框架在准确捕捉湍流的混沌和随机性质方面存在不足。CoNFiLD模型通过将条件神经场编码与潜在扩散过程协同集成来解决这些挑战，从而能够在不同条件下高效且稳健地生成时空湍流。利用贝叶斯条件采样，该模型可以无缝适应各种湍流生成场景，而无需再训练，涵盖从使用稀疏传感器测量的零样本全场流重建到超分辨率生成和时空流数据恢复的应用。已经对各种具有不规则几何形状的非均匀、各向异性湍流进行了全面的数值实验，以评估该模型的多功能性和有效性，展示了其在湍流生成和更广泛的时空动力学建模领域的变革潜力。 et.al.|[2403.05940](http://arxiv.org/abs/2403.05940)|null|
 |**2024-03-09**|**Learned 3D volumetric recovery of clouds and its uncertainty for climate analysis**|气候预测和云物理的重大不确定性与浅层散射云的观测差距有关。应对这些挑战需要对其三维（3D）异质体积散射内容进行遥感。这就需要无源散射计算机断层扫描（CT）。我们设计了一个基于学习的模型（ProbeCT）来实现这种云的CT，基于有噪声的多视图星载图像。ProbeCT首次推断出每个3D位置的异质消光系数的后验概率分布。这产生了任意有价值的统计数据，例如，最可能灭绝的3D场及其不确定性。ProbeCT使用神经场表示，进行本质上实时的推理。ProbeCT通过一个新的基于物理的云体积场及其相应图像的标记多类数据库进行监督训练。为了改进分布外推理，我们通过差分渲染引入了自监督学习。我们在模拟和真实世界的数据中演示了该方法，并指出了3D恢复和不确定性与降水和可再生能源的相关性。 et.al.|[2403.05932](http://arxiv.org/abs/2403.05932)|null|
 
-<p align=right>(<a href=#updated-on-20240325>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240326>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
