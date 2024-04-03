@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.04.02
+## Updated on 2024.04.03
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -27,11 +27,11 @@
 |**2024-03-29**|**Grounding and Enhancing Grid-based Models for Neural Fields**|当代许多研究利用基于网格的模型来表示神经场，但仍然缺乏对基于网格模型的系统分析，阻碍了这些模型的改进。因此，本文介绍了一个基于网格的模型的理论框架。该框架指出，这些模型的逼近和泛化行为是由网格切线核（GTK）决定的，GTK是基于网格的模型的固有性质。所提出的框架有助于对各种基于网格的模型进行一致和系统的分析。此外，引入的框架推动了一种新的基于网格的模型的开发，该模型名为乘法傅立叶自适应网格（MulFAGrid）。数值分析表明，MulFAGrid表现出比其前身更低的泛化界，表明其具有鲁棒的泛化性能。实证研究表明，MulFAGrid在各种任务中都取得了最先进的性能，包括2D图像拟合、3D符号距离场（SDF）重建和新颖的视图合成，表现出了卓越的表示能力。项目网站位于https://sites.google.com/view/cvpr24-2034-submission/home. et.al.|[2403.20002](http://arxiv.org/abs/2403.20002)|null|
 |**2024-03-29**|**Stable Surface Regularization for Fast Few-Shot NeRF**|本文提出了一种在少镜头设置下合成新视图的算法。主要概念是开发一种称为退火符号距离函数（ASDF）的稳定曲面正则化技术，该技术以从粗到细的方式对曲面进行退火，以加快收敛速度。我们观察到，Eikonal损失是一种广为人知的几何正则化，它需要密集的训练信号来塑造SDF的不同级别集，导致在很少的射击训练下产生低保真度结果。相比之下，所提出的表面正则化成功地重建了场景，并通过稳定的训练生成了高保真度的几何体。利用网格表示和单目几何先验进一步加速了我们的方法。最后，所提出的方法比现有的少镜头新视图合成方法快45倍，并且在ScanNet数据集和NeRF Real数据集中产生了可比较的结果。 et.al.|[2403.19985](http://arxiv.org/abs/2403.19985)|null|
 |**2024-03-28**|**Mitigating Motion Blur in Neural Radiance Fields with Events and Frames**|神经辐射场在新视图合成中显示出巨大的潜力。然而，当用于训练的数据受到运动模糊的影响时，它们很难渲染清晰的图像。另一方面，事件相机在动态场景中表现出色，因为它们以微秒的分辨率测量亮度变化，因此只受模糊的轻微影响。最近的方法试图通过融合帧和事件来增强相机运动下的NeRF重建。然而，它们在恢复准确的颜色内容或将NeRF限制在一组预定义的相机姿势方面面临挑战，从而在具有挑战性的条件下损害重建质量。本文提出了一种新的公式，通过利用基于模型和学习的模块来解决这些问题。我们明确地对模糊形成过程进行建模，利用事件二重积分作为额外的基于模型的先验。此外，我们使用端到端可学习的响应函数对事件像素响应进行建模，使我们的方法能够适应真实事件摄像机传感器中的非理想情况。我们在合成数据和真实数据上表明，所提出的方法比仅使用帧的现有去模糊NeRF以及将帧和事件组合的去模糊NeRFs分别高出+6.13dB和+2.48dB。 et.al.|[2403.19780](http://arxiv.org/abs/2403.19780)|**[link](https://github.com/uzh-rpg/evdeblurnerf)**|
-|**2024-03-28**|**GauStudio: A Modular Framework for 3D Gaussian Splatting and Beyond**|我们介绍了GauStudio，这是一种用于建模3D高斯飞溅（3DGS）的新型模块化框架，为用户提供标准化的即插即用组件，以便轻松定制和实现3DGS管道。在我们的框架的支持下，我们提出了一种具有前景和天球背景模型的混合高斯表示。实验证明，这种表示减少了无边界户外场景中的伪影，并改进了新颖的视图合成。最后，我们提出了高斯飞溅表面重建（GauS），这是一种新的先渲染后融合的方法，用于在没有微调的情况下从3DGS输入进行高保真度网格重建。总体而言，我们的GauStudio框架、混合表示和GauS方法增强了3DGS建模和渲染能力，实现了更高质量的新视图合成和曲面重建。 et.al.|[2403.19632](http://arxiv.org/abs/2403.19632)|**[link](https://github.com/gap-lab-cuhk-sz/gaustudio)**|
+|**2024-03-28**|**GauStudio: A Modular Framework for 3D Gaussian Splatting and Beyond**|我们介绍了GauStudio，这是一种用于建模3D高斯飞溅（3DGS）的新型模块化框架，为用户提供标准化的即插即用组件，以便轻松定制和实现3DGS管道。在我们的框架的支持下，我们提出了一种具有前景和天球背景模型的混合高斯表示。实验证明，这种表示减少了无边界户外场景中的伪影，并改进了新颖的视图合成。最后，我们提出了高斯飞溅表面重建（GauS），这是一种新的先渲染后融合的方法，用于从3DGS输入进行高保真网格重建，而无需微调。总体而言，我们的GauStudio框架、混合表示和GauS方法增强了3DGS建模和渲染能力，实现了更高质量的新视图合成和曲面重建。 et.al.|[2403.19632](http://arxiv.org/abs/2403.19632)|**[link](https://github.com/gap-lab-cuhk-sz/gaustudio)**|
 |**2024-03-28**|**SAID-NeRF: Segmentation-AIDed NeRF for Depth Completion of Transparent Objects**|使用现成的RGB-D相机获取透明物体的准确深度信息是计算机视觉和机器人学中的一个众所周知的挑战。深度估计/完成方法通常在具有质量深度标签的数据集上使用和训练，该质量深度标签是从模拟、附加传感器或专门的数据收集设置和已知的三维模型中获取的。然而，大规模获取数据集的可靠深度信息并不简单，这限制了训练的可扩展性和泛化能力。神经辐射场（NeRF）是一种无需学习的方法，在新的视图合成和形状恢复方面取得了广泛的成功。然而，通常需要启发式和受控环境（灯光、背景等）来准确捕捉镜面反射表面。在本文中，我们建议使用视觉基础模型（VFM）以零样本、无标签的方式进行分割，通过同时重建语义字段和扩展来指导这些对象的NeRF重建过程，以提高鲁棒性。我们提出的方法Segmentation AIDed NeRF（SAID NeRF）在透明物体和机器人抓取的深度完成数据集上表现出显著的性能。 et.al.|[2403.19607](http://arxiv.org/abs/2403.19607)|null|
 |**2024-03-28**|**XScale-NVS: Cross-Scale Novel View Synthesis with Hash Featurized Manifold**|我们提出了用于真实世界大规模场景的高保真度跨尺度新颖视图合成的XScale NVS。基于显式曲面的现有表示存在离散化分辨率或UV失真问题，而隐式体积表示由于分散的权重分布和曲面模糊性而缺乏大型场景的可扩展性。鉴于上述挑战，我们引入了哈希特征化流形，这是一种新的基于哈希的特征化与延迟神经渲染框架相结合。这种方法通过将哈希条目显式集中在2D流形上，充分释放了表示的表现力，从而有效地表示了独立于离散化分辨率的高度详细的内容。我们还引入了一个新的数据集，即GigaNVS，用于对现实世界大规模场景的跨尺度、高分辨率新视图合成进行基准测试。我们的方法在各种真实世界场景中显著优于竞争基线，在具有挑战性的GigaNVS基准上产生的平均LPIPS比之前的最先进水平低40%。请参阅我们的项目页面：xscalenvs.github.io。 et.al.|[2403.19517](http://arxiv.org/abs/2403.19517)|null|
 
-<p align=right>(<a href=#updated-on-20240402>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240403>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -42,13 +42,13 @@
 |**2024-03-28**|**CoherentGS: Sparse Novel View Synthesis with Coherent 3D Gaussians**|在过去的几年里，从图像进行3D重建的领域迅速发展，首先是引入了神经辐射场（NeRF），最近又引入了3D高斯散射（3DGS）。后者在训练和推理速度以及重建质量方面提供了优于NeRF的显著优势。尽管3DGS适用于密集的输入图像，但非结构化的点云状表示很快过度适应极稀疏的输入图像（例如，3个图像）的更具挑战性的设置，从而从新颖的视图中创建出看起来像一堆针的表示。为了解决这个问题，我们提出了正则化优化和基于深度的初始化。我们的关键思想是引入一种可以在2D图像空间中控制的结构化高斯表示。然后，我们约束高斯，特别是它们的位置，并防止它们在优化过程中独立移动。具体来说，我们分别通过隐式卷积解码器和总变化损失引入单视角和多视角约束。通过向高斯引入相干性，我们通过基于流量的损失函数进一步约束优化。为了支持我们的正则化优化，我们提出了一种在每个输入视图使用单目深度估计来初始化高斯的方法。我们在各种场景中展示了与最先进的基于稀疏视图NeRF的方法相比的显著改进。 et.al.|[2403.19495](http://arxiv.org/abs/2403.19495)|null|
 |**2024-03-30**|**Total-Decom: Decomposed 3D Scene Reconstruction with Minimal Interaction**|从多视点图像重建场景是计算机视觉和图形学中的一个基本问题。最近的神经隐式表面重建方法已经获得了高质量的结果；然而，由于缺乏自然分解的对象实体和复杂的对象/背景组成，编辑和操纵重建场景的3D几何结构仍然具有挑战性。在本文中，我们提出了Total Decom，这是一种在最小化人类交互的情况下进行分解三维重建的新方法。我们的方法将Segment Anything Model（SAM）与混合隐式-显式神经表面表示和基于网格的区域生长技术无缝集成，用于精确的3D对象分解。Total Decom需要最少的人工注释，同时为用户提供对分解粒度和质量的实时控制。我们在基准数据集上广泛评估了我们的方法，并展示了其在动画和场景编辑等下游应用中的潜力。代码位于https://github.com/CVMI-Lab/Total-Decom.git. et.al.|[2403.19314](http://arxiv.org/abs/2403.19314)|**[link](https://github.com/cvmi-lab/total-decom)**|
 |**2024-03-28**|**Neural Fields for 3D Tracking of Anatomy and Surgical Instruments in Monocular Laparoscopic Video Clips**|腹腔镜视频跟踪主要关注两种目标类型：手术器械和解剖结构。前者可用于技能评估，而后者对于虚拟覆盖的投影是必要的。在仪器和解剖跟踪通常被视为两个独立的问题的情况下，在本文中，我们提出了一种同时对所有结构进行联合跟踪的方法。基于单个2D单眼视频剪辑，我们训练神经场来表示连续的时空场景，用于创建至少一帧中可见的所有表面的3D轨迹。由于仪器尺寸较小，它们通常只覆盖图像的一小部分，导致跟踪精度下降。因此，我们建议增强类权重以改善仪器轨迹。我们评估了对腹腔镜胆囊切除术视频片段的跟踪，发现解剖结构和器械的平均跟踪准确率分别为92.4%和87.4%。此外，我们还评估了从该方法的场景重建中获得的深度图的质量。我们表明，这些伪深度具有与最先进的预训练深度估计器相当的质量。在SCARED数据集中的腹腔镜视频上，该方法预测深度的MAE为2.9 mm，相对误差为9.2%。这些结果表明了使用神经场进行腹腔镜场景的单目3D重建的可行性。 et.al.|[2403.19265](http://arxiv.org/abs/2403.19265)|null|
-|**2024-03-27**|**WALT3D: Generating Realistic Training Data from Time-Lapse Imagery for Reconstructing Dynamic Objects under Occlusion**|当前的2D和3D对象理解方法在繁忙的城市环境中难以解决严重的遮挡问题，部分原因是缺乏用于学习遮挡的大规模标记地面实况注释。在这项工作中，我们介绍了一种新的框架，用于使用免费可用的延时图像自动生成遮挡下动态对象的大型逼真数据集。通过利用现成的2D（边界框、分割、关键点）和3D（姿势、形状）预测作为伪背景，可以自动识别未遮挡的3D对象，并以剪贴画风格将其合成到背景中，确保逼真的外观和物理上准确的遮挡配置。所得到的具有伪背景真相的剪贴画图像能够有效地训练对遮挡鲁棒的对象重建方法。我们的方法在2D和3D重建方面都有显著改进，特别是在城市场景中车辆和人等物体被严重遮挡的场景中。 et.al.|[2403.19022](http://arxiv.org/abs/2403.19022)|null|
+|**2024-04-01**|**WALT3D: Generating Realistic Training Data from Time-Lapse Imagery for Reconstructing Dynamic Objects under Occlusion**|当前的2D和3D对象理解方法在繁忙的城市环境中难以解决严重的遮挡问题，部分原因是缺乏用于学习遮挡的大规模标记地面实况注释。在这项工作中，我们介绍了一种新的框架，用于使用免费可用的延时图像自动生成遮挡下动态对象的大型逼真数据集。通过利用现成的2D（边界框、分割、关键点）和3D（姿势、形状）预测作为伪背景，可以自动识别未遮挡的3D对象，并以剪贴画风格将其合成到背景中，确保逼真的外观和物理上准确的遮挡配置。所得到的具有伪背景真相的剪贴画图像能够有效地训练对遮挡鲁棒的对象重建方法。我们的方法在2D和3D重建方面都有显著改进，特别是在城市场景中车辆和人等物体被严重遮挡的场景中。 et.al.|[2403.19022](http://arxiv.org/abs/2403.19022)|null|
 |**2024-03-29**|**Gamba: Marry Gaussian Splatting with Mamba for single view 3D reconstruction**|随着对自动化3D内容创建管道的需求不断增长，我们解决了从单个图像高效重建3D资产的挑战。以前的方法主要依赖于分数蒸馏采样（SDS）和神经辐射场（NeRF）。尽管这些方法取得了显著的成功，但由于漫长的优化和大量的内存使用，它们遇到了实际的局限性。在本报告中，我们介绍了Gamba，一种基于单视图图像的端到端摊销3D重建模型，强调了两个主要见解：（1）3D表示：利用大量的3D高斯进行高效的3D高斯飞溅过程；（2） 骨干设计：引入基于Mamba的序列网络，该网络有助于上下文相关推理和序列（令牌）长度的线性可伸缩性，可容纳大量高斯。Gamba在数据预处理、正则化设计和训练方法方面取得了重大进展。我们使用真实世界扫描的OmniObject3D数据集，对照现有的基于优化和前馈的3D生成方法对Gamba进行了评估。在这里，Gamba在质量和数量上都展示了具有竞争力的生成能力，同时在单个NVIDIA A100 GPU上实现了约0.6秒的惊人速度。 et.al.|[2403.18795](http://arxiv.org/abs/2403.18795)|null|
 |**2024-03-29**|**SplatFace: Gaussian Splat Face Reconstruction Leveraging an Optimizable Surface**|我们提出了SplatFace，这是一种新的高斯飞溅框架，用于三维人脸重建，而不依赖于精确的预定几何结构。我们的方法旨在同时提供高质量的新颖视图渲染和精确的3D网格重建。我们结合了一个通用的3D变形模型（3DMM）来提供表面几何结构，从而可以用有限的一组输入图像重建人脸。我们引入了一种联合优化策略，该策略通过协同的非刚性对齐过程来细化高斯曲面和可变形曲面。提出了一种新的距离度量，即飞溅到表面，通过考虑高斯位置和协方差来改进对准。表面信息还被用于结合世界空间致密化过程，从而获得卓越的重建质量。我们的实验分析表明，在生成具有高几何精度的三维人脸网格方面，所提出的方法在新的视图合成中与其他高斯飞溅技术和其他三维重建方法都具有竞争力。 et.al.|[2403.18784](http://arxiv.org/abs/2403.18784)|null|
 |**2024-03-27**|**Breaking the Limitations with Sparse Inputs by Variational Frameworks (BLIss) in Terahertz Super-Resolution 3D Reconstruction**|数据采集、图像处理和图像质量是太赫兹（THz）3D重建成像的长期问题。考虑到与获得超分辨率（SR）数据相关的挑战以及传统计算机断层扫描（CT）中缺乏有效的SR 3D重建框架，现有方法主要针对2D场景设计。在这里，我们演示了BLIss，这是一种使用稀疏2D数据输入进行THz-SR 3D重建的新方法。BLIss将传统的CT技术和变分框架与基于Euler Elastica的自适应模型的核心无缝集成。定量的3D图像评估指标，包括高斯的标准差、平均曲率和多尺度结构相似性指数测度（MS-SSIM），验证了与传统的THz-CT模态相比，我们的变分框架方法所实现的优越的平滑度和保真度。除了对推进THz-SR 3D重建的贡献外，BLIss还展示了其在其他成像模式（如X射线和MRI）中的潜在适用性。这表明它对更广泛的成像应用领域产生了广泛的影响。 et.al.|[2403.18776](http://arxiv.org/abs/2403.18776)|**[link](https://github.com/cyiyoo/bliss)**|
 |**2024-03-27**|**SAT-NGP : Unleashing Neural Graphics Primitives for Fast Relightable Transient-Free 3D reconstruction from Satellite Imagery**|当前的立体视觉管道在使用多对或三组卫星图像时产生高精度的3D重建。然而，这些管道对多日期采集可能导致的图像之间的变化很敏感。这种变化主要是由于可变的阴影、反射和瞬态物体（汽车、植被）。为了考虑到这些变化，神经辐射场（NeRF）最近被应用于多日期卫星图像。然而，神经方法是计算密集型的，需要几十个小时才能学习，而标准立体视觉管道需要几分钟。遵循即时神经图形原语的思想，我们建议使用有效的采样策略和多分辨率哈希编码来加速学习。我们的模型，卫星神经图形原件（SAT-NGP）将学习时间减少到15分钟，同时保持3D重建的质量。 et.al.|[2403.18711](http://arxiv.org/abs/2403.18711)|null|
 
-<p align=right>(<a href=#updated-on-20240402>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240403>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-03-29**|**Efficacy of the Sterile Insect Technique in the presence of inaccessible areas: A study using two-patch models**|昆虫不育技术（SIT）是控制病媒的可持续策略之一，包括释放不育的雄性，与野生雌性交配，从而减少并最终局部消灭野生种群。当无法直接释放无菌昆虫的无法进入区域时，SIT在现场的实施可能会出现问题，野生昆虫从这些区域迁移到处理区可能会影响该技术的效果。然而，我们也可以利用不育个体的移动来控制这些无法到达的地方的野生种群。在本文中，我们推导了伊蚊的双斑块模型，其中我们考虑了处理区域和无法进入区域之间的离散扩散。我们研究了两种不同的释放策略（恒定和脉冲周期性释放），通过使用模型的单调性，我们表明，如果释放的不育雄性数量超过某个阈值，该技术将成功地将这两个地区的整个种群推向灭绝。该阈值不仅取决于种群的生物学参数，还取决于两个斑块之间的扩散。 et.al.|[2403.20069](http://arxiv.org/abs/2403.20069)|null|
 |**2024-03-29**|**Optimal s-boxes against alternative operations**|Civino等人已经描述了当使用来自消息空间上同构于翻译组的组的替代操作时，使SPN暴露于差分密码分析的漏洞的扩散层。在这项研究中，我们提出了一种扩散层的分类，该分类在具有4位s盒的密码的并行可选操作中表现出线性，从而实现了同时针对块内所有s盒的可选差分攻击的可能性。此外，正如Leander和Poschmann（2007）所定义的，我们研究了所有类别的最优4位s盒关于替代运算的微分行为。我们的研究表明，某些类包含弱排列w.r.t.替代差分攻击，我们利用这些漏洞执行了一系列实验。 et.al.|[2403.20059](http://arxiv.org/abs/2403.20059)|null|
 
-<p align=right>(<a href=#updated-on-20240402>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240403>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-03-15**|**NECA: Neural Customizable Human Avatar**|人类化身已经成为一种具有各种应用的新型3D资产。理想情况下，人类化身应该是完全可定制的，以适应不同的设置和环境。在这项工作中，我们介绍了NECA，这是一种能够从单目或稀疏视图视频中学习多功能人体表示的方法，能够在姿势、阴影、形状、照明和纹理等方面进行细粒度定制。我们方法的核心是在互补的双空间中表示人类，并预测几何、反照率、阴影以及外部照明的解开神经场，从中我们能够通过体积渲染获得具有高频细节的真实感渲染。大量实验证明了我们的方法在真实感渲染以及各种编辑任务（如新颖的姿势合成和重新照明）方面优于最先进的方法。代码位于https://github.com/iSEE-Laboratory/NECA. et.al.|[2403.10335](http://arxiv.org/abs/2403.10335)|**[link](https://github.com/isee-laboratory/neca)**|
 |**2024-03-13**|**Representing Anatomical Trees by Denoising Diffusion of Implicit Neural Fields**|解剖树在临床诊断和治疗计划中起着核心作用。然而，由于解剖树的拓扑结构和几何形状多变且复杂，因此准确地表示解剖树具有挑战性。使用医学成像捕获的表示树状结构的传统方法虽然对可视化血管和支气管网络非常宝贵，但在分辨率、灵活性和效率方面存在缺陷。最近，隐式神经表示（INRs）已经成为准确有效地表示形状的强大工具。我们提出了一种使用INR表示解剖树的新方法，同时还通过INR空间中的去噪扩散来捕捉一组树的分布。我们以任何所需的分辨率准确捕捉解剖树的复杂几何形状和拓扑结构。通过广泛的定性和定量评估，我们展示了高保真度树重建，具有任意分辨率但紧凑的存储，以及跨解剖部位和树复杂性的多功能性。 et.al.|[2403.08974](http://arxiv.org/abs/2403.08974)|**[link](https://github.com/sinashish/treediffusion)**|
 
-<p align=right>(<a href=#updated-on-20240402>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240403>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
