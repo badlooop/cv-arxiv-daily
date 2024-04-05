@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.04.04
+## Updated on 2024.04.05
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-03-31**|**Knowledge NeRF: Few-shot Novel View Synthesis for Dynamic Articulated Objects**|我们提出了知识NeRF来合成动态场景的新颖视图。从少数稀疏视图重建动态3D场景并从任意角度渲染它们是各个领域应用中的一个具有挑战性的问题。以前的动态NeRF方法从单目视频中学习关节物体的变形。然而，他们重建的场景的质量是有限的。为了清晰地重建动态场景，我们提出了一个新的框架，每次考虑两个帧。我们为铰接对象预训练NeRF模型。当铰接对象移动时，Knowledge NeRF通过将过去的知识结合到预训练的NeRF模型中来学习在新状态下生成新的视图，在当前状态下具有最小的观测值。我们提出了一个投影模块，使NeRF适应动态场景，学习预训练的知识库和当前状态之间的对应关系。实验结果证明了该方法在一种状态下用5幅输入图像重建动态三维场景的有效性。知识NeRF是动态关节对象中新的视图合成的一种新的管道和有前途的解决方案。数据和实施情况可在https://github.com/RussRobin/Knowledge_NeRF. et.al.|[2404.00674](http://arxiv.org/abs/2404.00674)|**[link](https://github.com/russrobin/knowledge_nerf)**|
 |**2024-03-29**|**Multi-Level Neural Scene Graphs for Dynamic Urban Environments**|我们根据不同环境条件下的多个车辆捕获来估计大规模动态区域的辐射场。该领域以前的作品要么局限于静态环境，不扩展到多个短视频，要么难以单独表示动态对象实例。为此，我们提出了一种适用于动态城市环境的新的可分解辐射场方法。我们提出了一种多级神经场景图表示，该表示可扩展到数百个快速移动对象的数十个序列中的数千幅图像。为了能够有效地训练和渲染我们的表示，我们开发了一种快速的复合光线采样和渲染方案。为了在城市驾驶场景中测试我们的方法，我们引入了一个新的、新颖的视图合成基准。我们表明，我们的方法在已建立的和提出的基准上都显著优于现有技术，同时在训练和渲染方面更快。 et.al.|[2404.00168](http://arxiv.org/abs/2404.00168)|null|
 
-<p align=right>(<a href=#updated-on-20240404>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240405>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-04-01**|**Interpretable Multi-View Clustering Based on Anchor Graph Tensor Factorization**|基于锚图的聚类方法因其卓越的聚类性能和处理大规模数据的能力而受到广泛关注。一种常见的方法是学习具有K连通分量的二部图，这有助于避免后处理的需要。然而，这种方法有严格的参数要求，并且可能并不总是得到K连通分量。为了解决这个问题，一种替代方法是通过对锚图执行非负矩阵分解（NMF）来直接获得聚类标签矩阵。然而，现有的基于锚图分解的多视图聚类方法对分解后的矩阵缺乏足够的聚类可解释性，并且经常忽略视图间信息。我们通过使用非负张量分解来分解结合多个视图的锚图的锚图张量来解决这一限制。这种方法使我们能够全面考虑视图间信息。分解后的张量，即样本指标张量和锚指标张量，增强了因子分解的可解释性。大量实验验证了该方法的有效性。 et.al.|[2404.00883](http://arxiv.org/abs/2404.00883)|null|
 |**2024-03-30**|**DiffHuman: Probabilistic Photorealistic 3D Reconstruction of Humans**|我们提出了DiffHuman，这是一种从单个RGB图像进行真实感3D人体重建的概率方法。尽管这个问题具有不适定性，但大多数方法都是确定性的，并输出单一的解决方案，通常导致在看不见或不确定的区域缺乏几何细节和模糊性。相反，DiffHuman预测了以输入2D图像为条件的3D重建的概率分布，这允许我们对与图像一致的多个详细3D化身进行采样。DiffHuman被实现为条件扩散模型，该模型对底层3D形状表示的像素对齐的2D观测值进行去噪。在推断期间，我们可以通过迭代地对预测的3D表示的2D渲染进行去噪来对3D化身进行采样。此外，我们引入了一种生成器神经网络，该网络以显著降低的运行时间（55倍的速度）近似渲染，从而产生了一种新的双分支扩散框架。我们的实验表明，DiffHuman可以对输入图像中看不见或不确定的人的部位进行多样化和详细的重建，同时在重建可见表面时与最先进的技术保持竞争力。 et.al.|[2404.00485](http://arxiv.org/abs/2404.00485)|null|
 
-<p align=right>(<a href=#updated-on-20240404>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240405>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,14 +65,14 @@
 |**2024-04-03**|**InstantStyle: Free Lunch towards Style-Preserving in Text-to-Image Generation**|基于调整自由扩散的模型在图像个性化和定制领域显示出巨大的潜力。然而，尽管取得了显著进展，但当前的模型在生成风格一致的图像方面仍面临着几个复杂的挑战。首先，风格的概念本质上是不确定的，包括颜色、材料、氛围、设计和结构等众多元素。其次，基于反演的方法容易出现风格退化，往往导致细粒度细节的丢失。最后，基于适配器的方法经常需要对每个参考图像进行细致的权重调整，以实现风格强度和文本可控性之间的平衡。在本文中，我们首先考察了几个令人信服但经常被忽视的观察结果。然后，我们继续介绍InstantStyle，这是一个旨在通过实施两个关键策略来解决这些问题的框架：1）一种简单的机制，将风格和内容与特征空间内的参考图像解耦，其前提是假设同一空间内的特征可以相互相加或相减。2） 将参考图像特征专门注入到特定样式的块中，从而防止样式泄漏，并避免了繁琐的权重调整的需要，这通常是参数较多的设计的特点。我们的作品展示了卓越的视觉风格化结果，在风格的强度和文本元素的可控性之间取得了最佳平衡。我们的代码将在https://github.com/InstantStyle/InstantStyle. et.al.|[2404.02733](http://arxiv.org/abs/2404.02733)|**[link](https://github.com/instantstyle/instantstyle)**|
 |**2024-04-03**|**Harnessing the Power of Large Vision Language Models for Synthetic Image Detection**|近年来，能够从文本中生成图像的模型的出现引起了人们的极大兴趣，提供了从文本描述中创建逼真图像的可能性。然而，这些进步也引发了人们对这些图像可能被滥用的担忧，包括制造虚假新闻和宣传等误导性内容。本研究调查了使用高级视觉语言模型（VLM）进行合成图像识别的有效性。具体而言，重点是调整用于合成图像检测的最先进的图像字幕模型。通过利用大型VLM强大的理解能力，目的是将真实图像与基于扩散的模型生成的合成图像区分开来。这项研究通过利用视觉语言模型（如BLIP-2和ViTGPT2）的能力，为合成图像检测的发展做出了贡献。通过定制图像字幕模型，我们解决了在现实世界应用中可能滥用合成图像的挑战。本文中描述的结果突出了VLM在合成图像检测领域的良好作用，优于传统的基于图像的检测技术。代码和型号可在https://github.com/Mamadou-Keita/VLM-DETECT. et.al.|[2404.02726](http://arxiv.org/abs/2404.02726)|null|
 
-<p align=right>(<a href=#updated-on-20240404>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240405>back to top</a>)</p>
 
 ## NeRF
 
 |Publish Date|Title|Abstract|PDF|Code|
 |---|---|---|---|---|
 |**2024-04-03**|**LiDAR4D: Dynamic Neural Fields for Novel Space-time View LiDAR Synthesis**|尽管神经辐射场（NeRFs）在图像新视图合成（NVS）方面取得了成功，但激光雷达NVS在很大程度上仍未被探索。以前的激光雷达NVS方法采用了图像NVS方法的简单转变，同时忽略了激光雷达点云的动态特性和大规模重建问题。有鉴于此，我们提出了LiDAR4D，这是一种用于新的时空LiDAR视图合成的仅限LiDAR的可微分框架。考虑到稀疏性和大规模特征，我们设计了一种结合多平面和网格特征的4D混合表示，以实现从粗到细的有效重建。此外，我们引入了从点云导出的几何约束，以提高时间一致性。对于激光雷达点云的真实合成，我们结合了光线下降概率的全局优化，以保持跨区域模式。在KITTI-360和NuScenes数据集上进行的大量实验证明了我们的方法在实现几何感知和时间一致的动态重建方面的优越性。代码可在https://github.com/ispc-lab/LiDAR4D. et.al.|[2404.02742](http://arxiv.org/abs/2404.02742)|**[link](https://github.com/ispc-lab/lidar4d)**|
-|**2024-04-03**|**Vestibular schwannoma growth_prediction from longitudinal MRI by time conditioned neural fields**|前庭神经鞘瘤（VS）是一种良性肿瘤，通常通过MRI检查进行积极监测来治疗。为了进一步帮助临床决策并避免过度治疗，基于纵向成像的肿瘤生长的准确预测是非常可取的。在本文中，我们介绍了DeepGrowth，这是一种深度学习方法，它结合了神经场和递归神经网络，用于前瞻性肿瘤生长预测。在所提出的方法中，每个肿瘤都表示为以低维潜在码为条件的有符号距离函数（SDF）。与之前直接在图像空间中进行肿瘤形状预测的研究不同，我们预测潜在代码，然后从中重建未来的形状。为了处理不规则的时间间隔，我们引入了一个基于ConvLSTM的时间条件递归模块和一种新的时间编码策略，使所提出的模型能够输出随时间变化的肿瘤形状。在内部纵向VS数据集上的实验表明，所提出的模型显著提高了性能（ $\ge 1.6\%%$Dice评分和$\ge0.20$mm95\%Hausdorff距离），特别是对于生长或缩小最多的前20%肿瘤（$\ge4.6\%%$Dice评分和$\ge 0.73$ mm95\%Hausdoff距离）。我们的代码可在~\bull获得{https://github.com/cyjdswx/DeepGrowth} et.al.|[2404.02614](http://arxiv.org/abs/2404.02614)|**[link](https://github.com/cyjdswx/deepgrowth)**|
+|**2024-04-04**|**Vestibular schwannoma growth prediction from longitudinal MRI by time conditioned neural fields**|前庭神经鞘瘤（VS）是一种良性肿瘤，通常通过MRI检查进行积极监测来治疗。为了进一步帮助临床决策并避免过度治疗，基于纵向成像的肿瘤生长的准确预测是非常可取的。在本文中，我们介绍了DeepGrowth，这是一种深度学习方法，它结合了神经场和递归神经网络，用于前瞻性肿瘤生长预测。在所提出的方法中，每个肿瘤都表示为以低维潜在码为条件的有符号距离函数（SDF）。与之前直接在图像空间中进行肿瘤形状预测的研究不同，我们预测潜在代码，然后从中重建未来的形状。为了处理不规则的时间间隔，我们引入了一个基于ConvLSTM的时间条件递归模块和一种新的时间编码策略，使所提出的模型能够输出随时间变化的肿瘤形状。在内部纵向VS数据集上的实验表明，所提出的模型显著提高了性能（ $\ge 1.6\%%$Dice评分和$\ge0.20$mm95\%Hausdorff距离），特别是对于生长或缩小最多的前20%肿瘤（$\ge4.6\%%$Dice评分和$\ge 0.73$ mm95\%Hausdoff距离）。我们的代码可在~\bull获得{https://github.com/cyjdswx/DeepGrowth} et.al.|[2404.02614](http://arxiv.org/abs/2404.02614)|**[link](https://github.com/cyjdswx/deepgrowth)**|
 |**2024-04-02**|**NeRFCodec: Neural Feature Compression Meets Neural Radiance Fields for Memory-Efficient Scene Representation**|神经辐射场（NeRF）的出现极大地影响了三维场景建模和新颖的视图合成。作为一种用于三维场景表示的视觉媒体，具有高率失真性能的压缩是一个永恒的目标。受神经压缩和神经场表示进步的启发，我们提出了NeRFCodec，这是一种端到端的NeRF压缩框架，它集成了非线性变换、量化和熵编码，用于高效记忆的场景表示。由于直接在大规模的NeRF特征平面上训练非线性变换是不切实际的，我们发现，当添加内容特定参数时，可以使用预先训练的神经2D图像编解码器来压缩特征。具体来说，我们重用神经2D图像编解码器，但修改其编码器和解码器头，同时保持预训练解码器的其他部分冻结。这使我们能够通过监督渲染损失和熵损失来训练整个管道，通过更新特定于内容的参数来实现率失真平衡。在测试时，包含潜在代码、特征解码器头和其他辅助信息的比特流被发送用于通信。实验结果表明，我们的方法优于现有的NeRF压缩方法，能够在0.5MB的内存预算下实现高质量的新视图合成。 et.al.|[2404.02185](http://arxiv.org/abs/2404.02185)|null|
 |**2024-04-01**|**NeRF-MAE : Masked AutoEncoders for Self Supervised 3D representation Learning for Neural Radiance Fields**|神经领域在计算机视觉和机器人领域表现出色，因为它们能够理解3D视觉世界，如推断语义、几何和动力学。考虑到神经场在从2D图像密集表示3D场景方面的能力，我们提出了一个问题：我们是否可以扩展它们的自监督预训练，特别是使用掩蔽的自动编码器，从姿态RGB图像中生成有效的3D表示。由于将转换器扩展到新型数据模式的惊人成功，我们采用了标准的3D视觉转换器来适应NeRF的独特配方。我们利用NeRF的体积网格作为变压器的密集输入，将其与其他3D表示（如点云）进行对比，在点云中，信息密度可能不均匀，并且表示不规则。由于将掩蔽的自动编码器应用于隐式表示（如NeRF）很困难，我们选择提取通过使用相机轨迹进行采样来规范化跨域场景的显式表示。我们的目标是通过从NeRF的辐射和密度网格中屏蔽随机补丁，并使用标准的3D Swin Transformer来重建屏蔽的补丁。通过这样做，模型可以学习完整场景的语义和空间结构。我们在我们提出的精心策划的姿势RGB数据上对这种表示进行了大规模的预训练，总共超过160万张图像。一旦经过预训练，编码器就用于有效的3D迁移学习。我们针对NeRF的新型自监督预训练NeRF-MAE可扩展性非常好，并提高了在各种具有挑战性的3D任务中的性能。在Front3D和ScanNet数据集上，利用未标记的姿态2D数据进行预训练，NeRF MAE显著优于自监督3D预训练和NeRF场景理解基线，在3D对象检测方面的绝对性能提高超过20%AP50和8%AP25。 et.al.|[2404.01300](http://arxiv.org/abs/2404.01300)|null|
 |**2024-03-29**|**Grounding and Enhancing Grid-based Models for Neural Fields**|当代许多研究利用基于网格的模型来表示神经场，但仍然缺乏对基于网格模型的系统分析，阻碍了这些模型的改进。因此，本文介绍了一个基于网格的模型的理论框架。该框架指出，这些模型的逼近和泛化行为是由网格切线核（GTK）决定的，GTK是基于网格的模型的固有性质。所提出的框架有助于对各种基于网格的模型进行一致和系统的分析。此外，引入的框架推动了一种新的基于网格的模型的开发，该模型名为乘法傅立叶自适应网格（MulFAGrid）。数值分析表明，MulFAGrid表现出比其前身更低的泛化界，表明其具有鲁棒的泛化性能。实证研究表明，MulFAGrid在各种任务中都取得了最先进的性能，包括2D图像拟合、3D符号距离场（SDF）重建和新颖的视图合成，表现出了卓越的表示能力。项目网站位于https://sites.google.com/view/cvpr24-2034-submission/home. et.al.|[2403.20002](http://arxiv.org/abs/2403.20002)|null|
@@ -82,7 +82,7 @@
 |**2024-03-22**|**LATTE3D: Large-scale Amortized Text-To-Enhanced3D Synthesis**|最近的文本到3D生成方法产生了令人印象深刻的3D结果，但需要耗时的优化，每次提示可能需要一个小时。ATT3D等摊销方法同时优化多个提示以提高效率，实现快速的文本到三维合成。然而，它们无法捕捉高频几何体和纹理细节，并且难以缩放到大型提示集，因此泛化能力较差。我们引入LATTE3D，解决了这些限制，以在更大的提示集上实现快速、高质量的生成。我们方法的关键是1）构建可扩展的体系结构，2）在优化过程中通过3D感知扩散先验、形状正则化和模型初始化来利用3D数据，以实现对各种复杂训练提示的鲁棒性。LATTE3D对神经场和纹理表面生成进行摊销，以在单个正向过程中生成高度详细的纹理网格。LATTE3D在400ms内生成3D对象，并可通过快速测试时间优化进一步增强。 et.al.|[2403.15385](http://arxiv.org/abs/2403.15385)|null|
 |**2024-03-20**|**Visual Imitation Learning of Task-Oriented Object Grasping and Rearrangement**|面向任务的物体抓取和重排是机器人完成不同现实操作任务的关键技能。然而，由于对物体的部分观察和分类物体的形状变化，它们仍然具有挑战性。在本文中，我们提出了多特征隐式模型（MIMO），这是一种新的对象表示，它在隐式神经场中对点和对象之间的多个空间特征进行编码。在多个特征上训练这样的模型可以确保它在不同方面一致地嵌入物体形状，从而提高其在从局部观察、形状相似性测量和建模物体之间的空间关系的物体形状重建中的性能。基于MIMO，我们提出了一个从单个或多个人类演示视频中学习面向任务的对象抓取和重排的框架。仿真评估表明，我们的方法在多视图和单视图观测方面优于最先进的方法。真实世界的实验证明了我们的方法在操纵任务的单次和少次模仿学习中的有效性。 et.al.|[2403.14000](http://arxiv.org/abs/2403.14000)|null|
 
-<p align=right>(<a href=#updated-on-20240404>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240405>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
