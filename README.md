@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.04.06
+## Updated on 2024.04.07
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-04-01**|**NVINS: Robust Visual Inertial Navigation Fused with NeRF-augmented Camera Pose Regressor and Uncertainty Quantification**|近年来，神经辐射场（NeRF）已成为三维重建和新型视图合成的强大工具。然而，NeRF渲染的计算成本和由于伪影的存在而导致的质量下降，对其在实时和鲁棒机器人任务中的应用，特别是在嵌入式系统中的应用提出了重大挑战。本文介绍了一种新的框架，该框架将NeRF导出的定位信息与视觉惯性里程计（VIO）相结合，为机器人实时导航提供了一个稳健的解决方案。通过使用NeRF渲染的增强图像数据训练绝对姿态回归网络并量化其不确定性，我们的方法有效地对抗了位置漂移并提高了系统可靠性。考虑到贝叶斯框架下的不确定性，我们还为将视觉惯性导航与相机定位神经网络相结合奠定了数学上坚实的基础。在真实感仿真环境中的实验验证表明，与传统的VIO方法相比，精度显著提高。 et.al.|[2404.01400](http://arxiv.org/abs/2404.01400)|null|
 |**2024-04-02**|**SurMo: Surface-based 4D Motion Modeling for Dynamic Human Rendering**|通过将视频序列的动态人体渲染公式化为从静态姿势到人体图像的映射，该渲染已经取得了显著的进展。然而，现有的方法侧重于每一帧的人脸重建，而时间运动关系并没有得到充分的探索。在本文中，我们提出了一种新的4D运动建模范式SurMo，它在一个统一的框架中用三个关键设计联合建模时间动力学和人类外观：1）基于表面的运动编码，它用一个高效的紧凑的基于表面的三平面来建模4D人类运动。它在统计身体模板的稠密表面流形上编码空间和时间运动关系，该模板继承了身体拓扑先验，用于具有稀疏训练观测的可推广新视图合成。2） 物理运动解码，其被设计为通过在训练阶段中对时间步长t处的运动三平面特征进行解码以预测下一时间步长t+1处的空间导数和时间导数来鼓励物理运动学习。3） 4D外观解码，通过高效的体积表面条件渲染器将运动三平面渲染成图像，该渲染器专注于利用运动学习条件渲染身体表面。大量实验验证了我们新范式的最先进性能，并说明了基于表面的运动三板的表现力，可以通过快速运动甚至依赖于运动的阴影来呈现与人类一致的高保真度视图。我们的项目页面位于：https://taohuumd.github.io/projects/SurMo/ et.al.|[2404.01225](http://arxiv.org/abs/2404.01225)|null|
 
-<p align=right>(<a href=#updated-on-20240406>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240407>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-04-03**|**TCLC-GS: Tightly Coupled LiDAR-Camera Gaussian Splatting for Surrounding Autonomous Driving Scenes**|大多数基于3D高斯散射（3D-GS）的城市场景方法直接用3D激光雷达点初始化3D高斯，这不仅没有充分利用激光雷达的数据能力，而且忽略了将激光雷达与相机数据融合的潜在优势。在本文中，我们设计了一种新型的紧密耦合激光雷达相机高斯散射（TCLC-GS），以充分利用激光雷达和相机传感器的综合优势，实现快速、高质量的3D重建和新颖的视图RGB/深度合成。TCLC-GS设计了一种基于激光雷达相机数据的显式（彩色3D网格）和隐式（层次八叉树特征）混合3D表示，以丰富3D高斯的飞溅特性。3D高斯的属性不仅被初始化为与提供更完整的3D形状和颜色信息的3D网格对齐，而且还通过检索到的八叉树隐式特征被赋予更广泛的上下文信息。在高斯飞溅优化过程中，3D网格提供密集的深度信息作为监督，通过学习稳健的几何结构来增强训练过程。对Waymo开放数据集和nuScenes数据集进行的全面评估验证了我们的方法最先进的（SOTA）性能。利用单个NVIDIA RTX 3090 Ti，我们的方法演示了快速训练，并在城市场景中实现了分辨率为1920x1280（Waymo）的90 FPS和分辨率为1600x900（nuScenes）的120 FPS的实时RGB和深度渲染。 et.al.|[2404.02410](http://arxiv.org/abs/2404.02410)|null|
 |**2024-04-03**|**APC2Mesh: Bridging the gap from occluded building façades to full 3D models**|拥有城市建筑的数字双胞胎有很多好处。然而，从机载激光雷达点云创建它们时遇到的一个主要困难是在点密度变化和噪声中准确重建显著遮挡的有效方法。为了弥合噪声/稀疏性/遮挡间隙并生成高保真度的3D建筑模型，我们提出了APC2Mesh，它将点完成集成到3D重建管道中，从而能够学习建筑的密集几何精确表示。具体来说，我们利用由遮挡点生成的完整点作为线性化的基于跳跃注意力的变形网络的输入，用于3D网格重建。在我们在3个不同场景上进行的实验中，我们证明：（1）APC2Mesh提供了相对优越的结果，表明其在处理不同风格和复杂性的遮挡机载构建点的挑战方面具有有效性。（2） 将点完成与典型的基于深度学习的三维点云重建方法相结合，为重建被严重遮挡的机载建筑点提供了直接有效的解决方案。因此，这种神经集成有望以更高的准确性和保真度推进城市建筑数字孪生的创建。 et.al.|[2404.02391](http://arxiv.org/abs/2404.02391)|null|
 
-<p align=right>(<a href=#updated-on-20240406>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240407>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-04-04**|**Impact of the Magnetic Horizon on the Interpretation of the Pierre Auger Observatory Spectrum and Composition Data**|在脚踝能量（5 EeV）以上到达地球的超高能宇宙射线的通量可以被描述为由具有非常硬的光谱和低刚性截止的河外源注入的核的混合物。地球和最近来源之间存在的河外磁场可以通过减少到达地球的低刚性粒子的通量来影响观测到的CR光谱。我们对Pierre Auger天文台测得的最大簇射深度的光谱和分布进行了组合拟合，包括该磁视界在超高频电子对撞机在星系间空间传播中的影响。我们发现，在各种实验和唯象系统学的特定范围内，磁视界效应可以与 $B_｛\rm rms｝\simeq（50-100）\，｛\rm-nG｝\，（20\rm｛Mpc｝/｛d_｛\lm s｝）（100\，\ rm｛kpc｝/L_｛\lm-coh｝）^｛1/2｝$阶局部邻域中的湍流磁场强度相关，其中$d_｛\rm s｝$是典型的源间分离，$L_｛\ rm coh｝$是磁场相干长度。在这种情况下，源谱的推断斜率变得更软，并且可以更接近扩散冲击加速度的预期，即$\proto e^｛-2｝$ 。还需要一个具有更高源密度和更软光谱的额外宇宙射线群体，可能也是河外的，并在EeV能量下主导宇宙射线通量，以再现所有能量低至0.6~EeV的总体光谱和组成结果。 et.al.|[2404.03533](http://arxiv.org/abs/2404.03533)|null|
 |**2024-04-04**|**Significantly Enhanced Vacancy Diffusion in Mn-containing Alloys**|操纵点缺陷以获得量身定制的宏观特性在材料科学中仍然是一个艰巨的挑战。这项研究证明了涉及元素Mn的普遍定律的原理，通过周期表中大多数金属中前所未有的反常弗里德尔振荡现象显著增强了空位扩散。通过第一性原理理论和精心设计的实验，有力地验证了Mn引起的点缺陷动态变化与内在宏观特性之间的相关性。物理起源于Mn异常大的有效元素内三维电子相互作用，超过了空位引起的库仑引力，破坏了电子屏蔽效应。考虑到空位无处不在的性质，以及它们被公认为影响晶体材料几乎所有物理和机械性能的最关键缺陷，这一结果可能会推动广泛领域的进步。 et.al.|[2404.03339](http://arxiv.org/abs/2404.03339)|null|
 
-<p align=right>(<a href=#updated-on-20240406>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240407>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-03-28**|**From Activation to Initialization: Scaling Insights for Optimizing Neural Fields**|在计算机视觉领域，神经场作为一种利用神经网络进行信号表示的现代工具，已经获得了突出地位。尽管在调整这些网络以解决各种问题方面取得了显著进展，但该领域仍然缺乏一个全面的理论框架。本文旨在通过深入研究初始化和激活之间复杂的相互作用来解决这一差距，为神经领域的稳健优化提供基础。我们的理论见解揭示了网络初始化、架构选择和优化过程之间的深层次联系，强调在设计尖端神经场时需要整体方法。 et.al.|[2403.19205](http://arxiv.org/abs/2403.19205)|null|
 |**2024-03-22**|**LATTE3D: Large-scale Amortized Text-To-Enhanced3D Synthesis**|最近的文本到3D生成方法产生了令人印象深刻的3D结果，但需要耗时的优化，每次提示可能需要一个小时。ATT3D等摊销方法同时优化多个提示以提高效率，实现快速的文本到三维合成。然而，它们无法捕捉高频几何体和纹理细节，并且难以缩放到大型提示集，因此泛化能力较差。我们引入LATTE3D，解决了这些限制，以在更大的提示集上实现快速、高质量的生成。我们方法的关键是1）构建可扩展的体系结构，2）在优化过程中通过3D感知扩散先验、形状正则化和模型初始化来利用3D数据，以实现对各种复杂训练提示的鲁棒性。LATTE3D对神经场和纹理表面生成进行摊销，以在单个正向过程中生成高度详细的纹理网格。LATTE3D在400ms内生成3D对象，并可通过快速测试时间优化进一步增强。 et.al.|[2403.15385](http://arxiv.org/abs/2403.15385)|null|
 
-<p align=right>(<a href=#updated-on-20240406>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240407>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
