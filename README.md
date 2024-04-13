@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.04.12
+## Updated on 2024.04.13
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-04-09**|**Incremental Joint Learning of Depth, Pose and Implicit Scene Representation on Monocular Camera in Large-scale Scenes**|用于照片真实感视图合成的密集场景重建具有多种应用，如VR/AR、自动驾驶汽车。然而，由于三个核心挑战，大多数现有方法在大规模场景中都存在困难：\textit｛（a）不准确的深度输入。｝在真实世界的大规模场景中不可能获得准确的深度输出。\textit｛（b）不准确的姿势估计。｝大多数现有方法都依赖于准确的预先估计的相机姿势。\textit｛（c）场景表示能力不足。｝单个全局辐射场缺乏有效扩展到大规模场景的能力。为此，我们提出了一种增量联合学习框架，可以实现精确的深度、姿态估计和大规模场景重建。采用基于视觉变换器的网络作为骨干，以提高尺度信息估计的性能。对于姿态估计，设计了一种特征度量束调整（FBA）方法，用于在大规模场景中精确和稳健的相机跟踪。在隐式场景表示方面，我们提出了一种增量场景表示方法，将整个大规模场景构建为多个局部辐射场，以增强3D场景表示的可扩展性。已经进行了扩展实验来证明我们的方法在深度估计、姿态估计和大规模场景重建中的有效性和准确性。 et.al.|[2404.06050](http://arxiv.org/abs/2404.06050)|null|
 |**2024-04-08**|**Learning Topology Uniformed Face Mesh by Volume Rendering for Multi-view Reconstruction**|一致拓扑中的面网格是许多与面相关的应用程序的基础，例如3DMM约束的面重建和表达式重定目标。传统的方法通常通过两个独立的步骤来获取拓扑均匀的面网格：多视图立体（MVS）来重建形状，然后进行非刚性配准来对齐拓扑，但难以处理噪声和非朗伯曲面。近年来，神经体绘制技术发展迅速，在三维重建或新视图合成方面显示出巨大的优势。我们的目标是利用神经体积渲染的优势，以一致的拓扑结构对人脸网格进行多视图重建。我们提出了一种网格体绘制方法，该方法能够在保持拓扑的同时直接优化网格几何结构，并学习隐式特征来从多视图图像中建模复杂的面部外观。关键创新在于将稀疏网格特征扩展到周围空间，以模拟体绘制所需的辐射场，这有助于从图像到网格几何结构和隐含外观特征的梯度反向传播。我们提出的特征扩展模块具有变形不变性，能够在网格编辑后无缝进行真实感渲染。我们在多视图人脸图像数据集上进行了实验，以评估重建效果，并实现了动画人脸网格的真实感绘制应用程序。 et.al.|[2404.05606](http://arxiv.org/abs/2404.05606)|null|
 
-<p align=right>(<a href=#updated-on-20240412>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240413>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-04-08**|**3D-COCO: extension of MS-COCO dataset for image detection and 3D reconstruction modules**|我们介绍了3D-COCO，这是原始MS-COCO数据集的扩展，提供了3D模型和2D-3D对齐注释。3D-COCO旨在实现计算机视觉任务，如可通过文本、2D图像和3D CAD模型查询进行配置的3D重建或图像检测。我们用在ShapeNet和Objvisive上收集的28K 3D模型完成了现有的MS-COCO数据集。通过使用基于IoU的方法，我们将每个MS-COCO注释与最佳的3D模型进行匹配，以提供2D-3D对齐。3D-COCO的开源性质是首次亮相，应该为3D相关主题的新研究铺平道路。数据集及其源代码可在https://kalisteo.cea.fr/index.php/coco3d-object-detection-and-reconstruction/ et.al.|[2404.05641](http://arxiv.org/abs/2404.05641)|null|
 |**2024-04-08**|**Learning Topology Uniformed Face Mesh by Volume Rendering for Multi-view Reconstruction**|一致拓扑中的面网格是许多与面相关的应用程序的基础，例如3DMM约束的面重建和表达式重定目标。传统的方法通常通过两个独立的步骤来获取拓扑均匀的面网格：多视图立体（MVS）来重建形状，然后进行非刚性配准来对齐拓扑，但难以处理噪声和非朗伯曲面。近年来，神经体绘制技术发展迅速，在三维重建或新视图合成方面显示出巨大的优势。我们的目标是利用神经体积渲染的优势，以一致的拓扑结构对人脸网格进行多视图重建。我们提出了一种网格体绘制方法，该方法能够在保持拓扑的同时直接优化网格几何结构，并学习隐式特征来从多视图图像中建模复杂的面部外观。关键创新在于将稀疏网格特征扩展到周围空间，以模拟体绘制所需的辐射场，这有助于从图像到网格几何结构和隐含外观特征的梯度反向传播。我们提出的特征扩展模块具有变形不变性，能够在网格编辑后无缝进行真实感渲染。我们在多视图人脸图像数据集上进行了实验，以评估重建效果，并实现了动画人脸网格的真实感绘制应用程序。 et.al.|[2404.05606](http://arxiv.org/abs/2404.05606)|null|
 
-<p align=right>(<a href=#updated-on-20240412>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240413>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-04-11**|**An Overview of Diffusion Models: Applications, Guided Generation, Statistical Rates and Optimization**|扩散模型是一种强大而通用的生成人工智能技术，在计算机视觉、音频、强化学习和计算生物学方面取得了巨大成功。在这些应用中，扩散模型提供了灵活的高维数据建模，并充当采样器，用于在针对任务所需属性的积极指导下生成新样本。尽管在经验上取得了重大成功，但扩散模型的理论非常有限，这可能会减缓进一步利用和改进扩散模型的原则性方法创新。在本文中，我们回顾了扩散模型的新兴应用，了解了它们在各种控制下的样本生成。接下来，我们概述了现有的扩散模型理论，包括它们的统计特性和采样能力。我们采用渐进式程序，从无条件扩散模型开始，并连接到有条件的对应模型。此外，我们回顾了通过条件扩散模型进行高维结构优化的一种新途径，其中搜索解被重新表述为条件采样问题，并由扩散模型解决。最后，我们讨论了扩散模型的未来发展方向。本文的目的是为激发扩散模型的前瞻性理论和方法提供全面的理论启示。 et.al.|[2404.07771](http://arxiv.org/abs/2404.07771)|null|
 |**2024-04-11**|**Joint Conditional Diffusion Model for Image Restoration with Mixed Degradations**|在恶劣的天气条件下，图像恢复相当具有挑战性，尤其是在同时发生多重退化的情况下。为了解决这一问题，提出了盲图像分解，但其有效性在很大程度上取决于对每个分量的准确估计。尽管基于扩散的模型在图像恢复任务中表现出很强的生成能力，但当退化的图像被严重破坏时，它们可能会生成不相关的内容。为了解决这些问题，我们利用物理约束来指导整个恢复过程，其中构建了一个基于大气散射模型的混合退化模型。然后，我们通过结合退化图像和退化掩模来制定我们的联合条件扩散模型（JCDM），以提供精确的指导。为了获得更好的颜色和细节恢复结果，我们进一步集成了细化网络来重建恢复的图像，其中使用不确定性估计块（UEB）来增强特征。在多天气和特定天气数据集上进行的大量实验表明，我们的方法优于最先进的竞争方法。 et.al.|[2404.07770](http://arxiv.org/abs/2404.07770)|null|
 
-<p align=right>(<a href=#updated-on-20240412>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240413>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-04-01**|**Efficient 3D Instance Mapping and Localization with Neural Fields**|我们解决了从一系列摆姿势的RGB图像中学习用于3D实例分割的隐式场景表示的问题。为此，我们引入了3DIML，这是一种新的框架，可以有效地学习可以从新的视点渲染的标签字段，以产生视图一致的实例分割掩码。3DIML显著改进了现有的基于隐式场景表示的方法的训练和推理运行时。与现有技术相反，现有技术以自我监督的方式优化神经场，需要复杂的训练过程和损失函数设计，3DIML利用了两阶段过程。第一阶段InstanceMap将前端实例分割模型生成的图像序列的2D分割掩码作为输入，并将图像上的相应掩码与3D标签相关联。然后，在第二阶段InstanceLift中使用这些几乎视图一致的伪标签掩码来监督神经标签字段的训练，该字段对InstanceMap遗漏的区域进行插值并解决歧义。此外，我们介绍了InstanceLoc，它能够在给定训练过的标签字段和现成的图像分割模型的情况下，通过融合两者的输出，实现实例掩码的近实时定位。我们在Replica和ScanNet数据集的序列上评估了3DIML，并证明了在图像序列的温和假设下3DIML的有效性。与现有的质量相当的隐式场景表示方法相比，我们实现了巨大的实际加速，展示了其促进更快、更有效的3D场景理解的潜力。 et.al.|[2403.19797](http://arxiv.org/abs/2403.19797)|null|
 |**2024-03-28**|**Neural Fields for 3D Tracking of Anatomy and Surgical Instruments in Monocular Laparoscopic Video Clips**|腹腔镜视频跟踪主要关注两种目标类型：手术器械和解剖结构。前者可用于技能评估，而后者对于虚拟覆盖的投影是必要的。在仪器和解剖跟踪通常被视为两个独立的问题的情况下，在本文中，我们提出了一种同时对所有结构进行联合跟踪的方法。基于单个2D单眼视频剪辑，我们训练神经场来表示连续的时空场景，用于创建至少一帧中可见的所有表面的3D轨迹。由于仪器尺寸较小，它们通常只覆盖图像的一小部分，导致跟踪精度下降。因此，我们建议增强类权重以改善仪器轨迹。我们评估了对腹腔镜胆囊切除术视频片段的跟踪，发现解剖结构和器械的平均跟踪准确率分别为92.4%和87.4%。此外，我们还评估了从该方法的场景重建中获得的深度图的质量。我们表明，这些伪深度具有与最先进的预训练深度估计器相当的质量。在SCARED数据集中的腹腔镜视频上，该方法预测深度的MAE为2.9 mm，相对误差为9.2%。这些结果表明了使用神经场进行腹腔镜场景的单目3D重建的可行性。 et.al.|[2403.19265](http://arxiv.org/abs/2403.19265)|null|
 
-<p align=right>(<a href=#updated-on-20240412>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240413>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
