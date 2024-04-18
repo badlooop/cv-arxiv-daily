@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.04.17
+## Updated on 2024.04.18
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-04-15**|**DeferredGS: Decoupled and Editable Gaussian Splatting with Deferred Shading**|重建和编辑三维物体和场景在计算机图形学和计算机视觉中都起着至关重要的作用。神经辐射场（NeRFs）可以实现逼真的重建和编辑结果，但渲染效率低下。高斯散射通过光栅化高斯椭球体显著加速了渲染。然而，高斯飞溅使用单个球面谐波（SH）函数来对纹理和照明进行建模，限制了这些组件的独立编辑能力。最近，人们试图将纹理和照明与高斯飞溅表示解耦，但可能无法在反射场景上产生合理的几何结构和分解结果。此外，他们使用的前向着色技术在重新照明期间引入了明显的混合伪影，因为高斯的几何属性在原始照明下是优化的，并且可能不适合新的照明条件。为了解决这些问题，我们引入了DeferredGS，这是一种使用延迟着色来解耦和编辑高斯飞溅表示的方法。为了实现成功的解耦，我们使用可学习的环境图对照明进行建模，并在高斯上定义额外的属性，如纹理参数和法线方向，其中法线是从联合训练的有符号距离函数中提取的。更重要的是，我们应用了延迟着色，与以前的方法相比，可以获得更逼真的重新照明效果。定性和定量实验都证明了DeferredGS在新视图合成和编辑任务中的优越性能。 et.al.|[2404.09412](http://arxiv.org/abs/2404.09412)|null|
 |**2024-04-16**|**LoopGaussian: Creating 3D Cinemagraph with Multi-view Images via Eulerian Motion Field**|Cinemagraph是一种独特的视觉媒体形式，它结合了静态摄影和微妙的运动元素，创造了一种迷人的体验。然而，最近的作品生成的大多数视频缺乏深度信息，并且受限于2D图像空间的约束。在本文中，受3D高斯散射（3D-GS）在新视图合成（NVS）领域取得的重大进展的启发，我们提出了使用3D高斯建模将电影图从2D图像空间提升到3D空间的LoopGaussian。为了实现这一点，我们首先使用3D-GS方法从静态场景的多视图图像中重建3D高斯点云，结合形状正则化项来防止对象变形引起的模糊或伪影。然后，我们采用为3D高斯量身定制的自动编码器将其投影到特征空间中。为了保持场景的局部连续性，我们设计了基于所获取特征的超高斯聚类。通过计算聚类之间的相似性并采用两阶段估计方法，我们导出了一个欧拉运动场来描述整个场景中的速度。然后，3D高斯点在估计的欧拉运动场内移动。通过双向动画技术，我们最终生成一个3D Cinemagraph，展示自然和无缝可循环的动态。实验结果验证了我们方法的有效性，展示了高质量和视觉吸引力的场景生成。该项目位于https://pokerlishao.github.io/LoopGaussian/. et.al.|[2404.08966](http://arxiv.org/abs/2404.08966)|null|
 
-<p align=right>(<a href=#updated-on-20240417>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240418>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,13 +48,13 @@
 |**2024-04-12**|**No Bells, Just Whistles: Sports Field Registration by Leveraging Geometric Properties**|传统上，广播运动场配准被视为单应性估计任务，将可见图像区域映射到平面场模型，主要集中在主摄像机镜头上。针对以前方法的缺点，我们提出了一种新的校准管道，可以使用3D足球场模型进行相机校准，并扩展该过程以评估广播视频的多视图性质。我们的方法从SoccerNet数据集注释派生的关键点生成管道开始，利用法庭的几何特性。随后，我们以极简的方式通过DLT算法执行经典的相机校准，而无需进一步细化。通过在真实世界的足球广播数据集（如SoccerNet Calibration、WorldCup 2014和TS-WorldCup）上进行广泛的实验，我们的方法在多视图和单视图3D相机校准方面都表现出了卓越的性能，同时与最先进的技术相比，在单应性估计方面保持了有竞争力的结果。 et.al.|[2404.08401](http://arxiv.org/abs/2404.08401)|null|
 |**2024-04-11**|**Multi-view Aggregation Network for Dichotomous Image Segmentation**|最近，二分图像分割（DIS）朝着从高分辨率自然图像中进行高精度对象分割的方向发展。在设计有效的DIS模型时，主要的挑战是如何平衡高分辨率目标在小感受野中的语义分散和在大感受野中高精度细节的损失。现有的方法依赖于繁琐的多个编码器-解码器流和阶段来逐步完成全局定位和局部细化。人类视觉系统通过从多个视角观察感兴趣的区域来捕捉这些区域。受其启发，我们将DIS建模为一个多视图对象感知问题，并提供了一个简约的多视图聚合网络（MVANet），该网络通过一个编码器-解码器结构将远景和近景的特征融合统一为一个流。在所提出的多视图互补定位和细化模块的帮助下，我们的方法在多个视图之间建立了长距离、深刻的视觉交互，使详细特写视图的特征能够集中在高度细长的结构上。在流行的DIS-5K数据集上的实验表明，我们的MVANet在准确性和速度方面都显著优于最先进的方法。源代码和数据集将在\href公开{https://github.com/qianyu-dlut/MVANet}｛MVANet｝。 et.al.|[2404.07445](http://arxiv.org/abs/2404.07445)|**[link](https://github.com/qianyu-dlut/mvanet)**|
 
-<p align=right>(<a href=#updated-on-20240417>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240418>back to top</a>)</p>
 
 ## Diffusion
 
 |Publish Date|Title|Abstract|PDF|Code|
 |---|---|---|---|---|
-|**2024-04-16**|**Searching for cold gas traced by MgII quasar absorbers in massive X-ray-selected galaxy clusters**|在本地宇宙中，几乎50%的星系都是与热气体和冷气体共存的星系团或星系团。在本研究中，我们用SDSS/SPIDERS测量的光谱红移观测了X射线选择的大质量星系团的冷气体含量。本文主要研究质量最大的星系团：平均质量为M $_｛500c｝$＝2.7$×10^｛14｝$M$_｝odot｝$的星系团。我们使用SDSS DR16的大量背景类星体光谱来探测团簇内介质中弥漫的T$=10$^4$K气体。我们首先分析了一个具有已知MgII吸收剂的光谱样本，然后在前景星系团的红移处盲目地堆叠了大约16000个档案光谱。我们尝试性地（$3.7\sigma$显著性）在具有0.056$\pm$0.015\r｛A｝的等效宽度EW（MgII$\lambda$2796）的簇中检测MgII，对应于log[N（MgII）/cm$^{-2}$]=112.12$\pm0.1$ 的列密度。我们通过使用Illustris-TNG50宇宙学磁流体动力学模拟中的MgII吸收剂，结合光电离建模和射线追踪，生成22000个模拟SDSS光谱来测试我们的方法。我们还在不同的团簇红移和类星体光谱上进行了自举叠加，在视线中没有干涉团簇，以测量我们检测的重要性。这些结果与最近类似的观察性研究结果一致，但对Illustris TNG模拟的预测提出了质疑。总之，我们的发现表明，在宇宙中质量最大的结构中可能会发现大量的冷气体。 et.al.|[2404.10773](http://arxiv.org/abs/2404.10773)|null|
+|**2024-04-17**|**Searching for cold gas traced by MgII quasar absorbers in massive X-ray-selected galaxy clusters**|在本地宇宙中，几乎50%的星系都是与热气体和冷气体共存的星系团或星系团。在本研究中，我们用SDSS/SPIDERS测量的光谱红移观测了X射线选择的大质量星系团的冷气体含量。本文主要研究质量最大的星系团：平均质量为M $_｛500c｝$＝2.7$×10^｛14｝$M$_｝odot｝$的星系团。我们使用SDSS DR16的大量背景类星体光谱来探测团簇内介质中弥漫的T$=10$^4$K气体。我们首先分析了一个具有已知MgII吸收剂的光谱样本，然后在前景星系团的红移处盲目地堆叠了大约16000个档案光谱。我们尝试性地（$3.7\sigma$显著性）在具有0.056$\pm$0.015\r｛A｝的等效宽度EW（MgII$\lambda$2796）的簇中检测MgII，对应于log[N（MgII）/cm$^{-2}$]=112.12$\pm0.1$ 的列密度。我们通过TNG50宇宙学磁流体动力学模拟，结合光电离建模和射线追踪，用MgII吸收剂生成22000个模拟SDSS光谱，测试了我们的方法。我们还在不同的团簇红移和类星体光谱上进行了自举叠加，在视线中没有干涉团簇，以测量我们检测的重要性。这些结果与最近类似的观察性研究结果一致，但对TNG模拟的预测提出了质疑。总之，我们的发现表明，在宇宙中质量最大的结构中可能会发现大量的冷气体。 et.al.|[2404.10773](http://arxiv.org/abs/2404.10773)|null|
 |**2024-04-16**|**RefFusion: Reference Adapted Diffusion Models for 3D Scene Inpainting**|神经重建方法正在迅速成为3D场景的首选表示方式，但其有限的可编辑性仍然是一个挑战。在这项工作中，我们提出了一种3D场景修复方法——用所需内容连贯地替换重建场景的部分。场景修复是一项固有的不合理任务，因为存在许多可能替代缺失内容的解决方案。因此，一种好的修复方法不仅应该实现高质量的合成，而且还应该实现高度的控制。基于这一观察结果，我们专注于实现对修复内容的明确控制，并利用参考图像作为实现这一目标的有效手段。具体来说，我们介绍了RefFusion，这是一种新的3D修复方法，基于对给定参考视图的图像修复扩散模型的多尺度个性化。个性化有效地使先验分布适应目标场景，导致得分提取目标的方差较低，因此细节明显更清晰。我们的框架在保持高度可控性的同时，实现了最先进的对象移除结果。我们进一步证明了我们的公式在其他下游任务上的通用性，如对象插入、场景绘制和稀疏视图重建。 et.al.|[2404.10765](http://arxiv.org/abs/2404.10765)|null|
 |**2024-04-16**|**LaDiC: Are Diffusion Models Really Inferior to Autoregressive Counterparts for Image-to-Text Generation?**|扩散模型在文本到图像生成方面表现出了非凡的能力。然而，它们在图像到文本生成（特别是图像字幕）方面的性能落后于自回归（AR）模型，这让人们怀疑它们是否适用于此类任务。在这项工作中，我们重新审视了扩散模型，强调了它们的整体上下文建模和并行解码能力。有了这些好处，扩散模型可以缓解AR方法的固有局限性，包括推理速度慢、误差传播和单向约束。此外，我们确定了扩散模型先前的表现不佳，这源于缺乏有效的图像-文本对齐的潜在空间，以及连续扩散过程和离散文本数据之间的差异。作为回应，我们引入了一种新的架构LaDiC，它利用分裂的BERT为字幕创建一个专用的潜在空间，并集成了一个正则化模块来管理不同的文本长度。我们的框架还包括用于语义图像到文本转换的扩散器和用于增强推理过程中的令牌交互的Back&Refine技术。LaDiC在MS COCO数据集上以38.2的成绩实现了基于扩散的方法的最先进性能BLEU@4和126.2 CIDEr，在没有预训练或辅助模块的情况下表现出非凡的性能。这表明AR模型具有强大的竞争力，揭示了扩散模型在图像到文本生成中先前未开发的潜力。 et.al.|[2404.10763](http://arxiv.org/abs/2404.10763)|**[link](https://github.com/wangyuchi369/ladic)**|
 |**2024-04-16**|**A High-Order Conservative Cut Finite Element Method for Problems in Time-Dependent Domains**|提出了一种求解演化域对流扩散方程的质量守恒高阶不适配有限元方法。将[P.Hansbo，M.G.Larson，S.Zahedi，Comput.Methods Appl.Mech.Engr.307（2016）]中提出的时空方法推广到利用雷诺输运定理自然实现质量守恒。此外，通过将含时域划分为宏单元，提出了一种更有效的含时域割有限元方法的稳定过程。数值实验表明，该方法实现了质量守恒，达到了高阶收敛，并且在增加稀疏性的同时控制了系统矩阵的条件数。考虑了体域问题以及耦合体表面问题。 et.al.|[2404.10756](http://arxiv.org/abs/2404.10756)|null|
@@ -65,7 +65,7 @@
 |**2024-04-16**|**Arsenic diffusion in MOVPE-Grown GaAs/Ge epitaxial structures**|锗正在重新成为半导体领域的一种重要材料，特别是用于电子应用、光子学、光伏和热光伏。通过金属有机气相外延（MOVPE）外延生长，它与III-V族化合物半导体的结合是有用的，因此，理解这种外延过程中的顺序阶段非常重要。在p型Ge上沉积GaAs的过程中，当As扩散到Ge中时，就会形成n/p结。研究发现，这种形成始于所谓的AsH3预存在，Ge衬底首先暴露在AsH3中。同样重要的是，自由载流子分布和As分布都表明，在相同的工艺时间内，延长的AsH3预存在时间会导致更深的扩散深度。这种效应伴随着Ge表面形态的退化，其特征是随着AsH3预存在时间的延长，粗糙度更高。与锗中离子注入的As显示出二次相关扩散率相反，我们使用AsH3进行的MOVPE研究表明了线性关系，与Takenaka等人使用TBAs进行的MOVPE研究一致。在模拟的同时分析As剖面，无论是否进行后续GaAs外延，都表明在该过程中会产生Ge空位，有助于更深的As扩散。 et.al.|[2404.10669](http://arxiv.org/abs/2404.10669)|null|
 |**2024-04-16**|**Continual Offline Reinforcement Learning via Diffusion-based Dual Generative Replay**|我们研究了持续的离线强化学习，这是一种实用的范式，有助于向前转移，缓解灾难性遗忘，以处理连续的离线任务。我们提出了一种双生成重放框架，通过并行重放生成的伪数据来保留先前的知识。首先，我们将持续学习政策解耦为基于扩散的生成行为模型和多头行动评估模型，允许政策继承分布表现力，以涵盖一系列渐进的不同行为。其次，我们训练一个任务条件扩散模型来模拟过去任务的状态分布。生成的状态与来自行为生成器的相应响应配对，以表示具有高保真度重放样本的旧任务。最后，通过将新任务的伪样本与真实样本交错，我们不断更新状态和行为生成器，以对逐渐多样化的行为进行建模，并通过行为克隆来规范多头批评者，以减轻遗忘。实验表明，我们的方法在较少遗忘的情况下实现了更好的前向传输，并且由于其对样本空间的高保真再现，与使用先前地面实况数据的结果非常接近。我们的代码位于\ href{https://github.com/NJU-RL/CuGRO}{https://github.com/NJU-RL/CuGRO}. et.al.|[2404.10662](http://arxiv.org/abs/2404.10662)|**[link](https://github.com/nju-rl/cugro)**|
 
-<p align=right>(<a href=#updated-on-20240417>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240418>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-04-06**|**Grounding and Enhancing Grid-based Models for Neural Fields**|当代许多研究利用基于网格的模型来表示神经场，但仍然缺乏对基于网格模型的系统分析，阻碍了这些模型的改进。因此，本文介绍了一个基于网格的模型的理论框架。该框架指出，这些模型的逼近和泛化行为是由网格切线核（GTK）决定的，GTK是基于网格的模型的固有性质。所提出的框架有助于对各种基于网格的模型进行一致和系统的分析。此外，引入的框架推动了一种新的基于网格的模型的开发，该模型名为乘法傅立叶自适应网格（MulFAGrid）。数值分析表明，MulFAGrid表现出比其前身更低的泛化界，表明其具有鲁棒的泛化性能。实证研究表明，MulFAGrid在各种任务中都取得了最先进的性能，包括2D图像拟合、3D符号距离场（SDF）重建和新颖的视图合成，表现出了卓越的表示能力。项目网站位于https://sites.google.com/view/cvpr24-2034-submission/home. et.al.|[2403.20002](http://arxiv.org/abs/2403.20002)|null|
 |**2024-04-01**|**Efficient 3D Instance Mapping and Localization with Neural Fields**|我们解决了从一系列摆姿势的RGB图像中学习用于3D实例分割的隐式场景表示的问题。为此，我们引入了3DIML，这是一种新的框架，可以有效地学习可以从新的视点渲染的标签字段，以产生视图一致的实例分割掩码。3DIML显著改进了现有的基于隐式场景表示的方法的训练和推理运行时。与现有技术相反，现有技术以自我监督的方式优化神经场，需要复杂的训练过程和损失函数设计，3DIML利用了两阶段过程。第一阶段InstanceMap将前端实例分割模型生成的图像序列的2D分割掩码作为输入，并将图像上的相应掩码与3D标签相关联。然后，在第二阶段InstanceLift中使用这些几乎视图一致的伪标签掩码来监督神经标签字段的训练，该字段对InstanceMap遗漏的区域进行插值并解决歧义。此外，我们介绍了InstanceLoc，它能够在给定训练过的标签字段和现成的图像分割模型的情况下，通过融合两者的输出，实现实例掩码的近实时定位。我们在Replica和ScanNet数据集的序列上评估了3DIML，并证明了在图像序列的温和假设下3DIML的有效性。与现有的质量相当的隐式场景表示方法相比，我们实现了巨大的实际加速，展示了其促进更快、更有效的3D场景理解的潜力。 et.al.|[2403.19797](http://arxiv.org/abs/2403.19797)|null|
 
-<p align=right>(<a href=#updated-on-20240417>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240418>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
