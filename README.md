@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.04.19
+## Updated on 2024.04.20
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-04-16**|**SRGS: Super-Resolution 3D Gaussian Splatting**|近年来，三维高斯散射（3DGS）作为一种新型的显式三维表示方式而广受欢迎。这种方法依赖于高斯基元的表示能力来提供高质量的渲染。然而，在低分辨率下优化的基元不可避免地表现出稀疏性和纹理缺陷，这对实现高分辨率新视图合成（HRNVS）提出了挑战。为了解决这个问题，我们提出了超分辨率三维高斯散射（SRGS）来在高分辨率（HR）空间中进行优化。利用多个低分辨率（LR）视图的亚像素交叉视图信息，为HR空间中增加的视点引入了亚像素约束。从更多视点累积的梯度将有助于基元的致密化。此外，预训练的2D超分辨率模型与亚像素约束相结合，使这些密集基元能够学习忠实的纹理特征。通常，我们的方法侧重于致密化和纹理学习，以有效地增强基元的表示能力。在实验上，我们的方法仅在具有LR输入的HRNVS上实现了高渲染质量，在Mip NeRF 360和Tanks&Temples等具有挑战性的数据集上优于最先进的方法。相关规范将在验收后发布。 et.al.|[2404.10318](http://arxiv.org/abs/2404.10318)|null|
 |**2024-04-15**|**eMotion-GAN: A Motion-based GAN for Photorealistic and Facial Expression Preserving Frontal View Synthesis**|许多现有的面部表情识别（FER）系统在面对头部姿势的变化时会遇到显著的性能下降。已经提出了许多临街化方法来提高这些系统在这种条件下的性能。然而，它们往往会引入不希望的变形，使其不太适合精确的面部表情分析。在本文中，我们提出了eMotion GAN，这是一种新的深度学习方法，用于正面视图合成，同时在运动域中保留面部表情。将头部变化引起的运动视为噪声，将面部表情引起的运动作为相关信息，训练我们的模型以过滤掉噪声运动，从而仅保留与面部表情相关的运动。然后将过滤后的运动映射到中性正面，以生成相应的富有表现力的正面。我们使用几个广泛认可的动态FER数据集进行了广泛的评估，这些数据集包括在强度和方向上表现出不同程度的头部姿势变化的序列。我们的结果证明了我们的方法在显著减少正面和非正面之间的FER性能差距方面的有效性。具体而言，对于较小的姿态变化，我们实现了高达+5\%的FER改进，对于较大的姿态变化则实现了高高达+20\%的改进。代码位于\url{https://github.com/o-ikne/eMotion-GAN.git}. et.al.|[2404.09940](http://arxiv.org/abs/2404.09940)|**[link](https://github.com/o-ikne/emotion-gan)**|
 
-<p align=right>(<a href=#updated-on-20240419>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240420>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-04-15**|**Taming Latent Diffusion Model for Neural Radiance Field Inpainting**|神经辐射场（NeRF）是一种用于从多视图图像进行三维重建的表示。尽管最近的一些工作显示，在编辑具有扩散先验的重建NeRF方面取得了初步成功，但他们仍在努力在完全未覆盖的区域合成合理的几何形状。一个主要原因是来自扩散模型的合成内容的高度多样性，这阻碍了辐射场收敛到清晰和确定的几何结构。此外，由于自动编码错误，在真实数据上应用潜在扩散模型通常会产生与图像条件不相干的纹理偏移。像素距离损失的使用进一步强化了这两个问题。为了解决这些问题，我们建议通过每场景定制来调节扩散模型的随机性，并通过掩蔽对抗性训练来减轻纹理偏移。在分析过程中，我们还发现在NeRF修复任务中，常用的像素和感知损失是有害的。通过严格的实验，我们的框架在各种真实世界场景上产生了最先进的NeRF修复结果。项目页面：https://hubert0527.github.io/MALD-NeRF et.al.|[2404.09995](http://arxiv.org/abs/2404.09995)|null|
 |**2024-04-15**|**LetsGo: Large-Scale Garage Modeling and Rendering via LiDAR-Assisted Gaussian Primitives**|大型车库是我们日常生活中无处不在但又错综复杂的场景，其特点是颜色单调、图案重复、反光表面和透明的汽车玻璃。用于相机姿态估计和3D重建的传统运动结构（SfM）方法在这些环境中由于较差的对应结构而失败。为了应对这些挑战，本文介绍了LetsGo，这是一种用于大规模车库建模和渲染的激光雷达辅助高斯散射方法。我们开发了一种手持扫描仪Polar，配备了IMU、激光雷达和鱼眼相机，以便于精确的激光雷达和图像数据扫描。有了这个Polar设备，我们展示了一个GarageWorld数据集，该数据集由五个具有不同几何结构的扩展车库场景组成，并将向社区发布该数据集以供进一步研究。我们证明了Polar设备收集的LiDAR点云增强了一套用于车库场景建模和渲染的3D高斯飞溅算法。我们还提出了一种用于3D高斯喷溅算法训练的新型深度正则化器，有效地消除了渲染图像中的浮动伪影，以及一种用于在基于网络的设备上实时查看的轻量级细节级别（LOD）高斯渲染器。此外，我们还探索了一种混合表示，它将传统网格在描绘简单几何体和颜色（例如，墙壁和地面）方面的优势与捕捉复杂细节和高频纹理的现代3D高斯表示相结合。此策略实现了内存性能和渲染质量之间的最佳平衡。在我们的数据集上的实验结果，以及ScanNet++和KITTI-360，证明了我们的方法在渲染质量和资源效率方面的优势。 et.al.|[2404.09748](http://arxiv.org/abs/2404.09748)|null|
 
-<p align=right>(<a href=#updated-on-20240419>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240420>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-04-18**|**A New Computational Method for Energetic Particle Acceleration and Transport with its Feedback**|我们开发了一种新的计算方法来探索天体物理和太阳物理现象，特别是那些受到非热高能粒子显著影响的现象。这种新方法通过将非热流体压力纳入磁流体动力学（MHD）方程来考虑这些高能粒子的反作用。非热流体的压力是根据帕克输运方程推导的能量粒子分布来评估的，该方程使用随机微分方程求解。我们在HOW-MHD代码（Seo\&Ryu 2023）中实现了这种方法，实现了五阶精度。我们发现，在没有空间扩散的情况下，当包括非热压力时，该方法准确地再现了流体动力冲击管试验中的黎曼解。求解帕克输运方程可以确定绝热指数分别为 $\gamma_｛\rm｛NT｝｝＝4/3$和$\gamma｛\rm{NT｝}＝5/3$ 的相对论性和非相对论性非热流体的压力项。该方法还成功地复制了具有非热压力的磁流体动力学冲击管测试，成功地解决了几个单元内的不连续性。引入非热粒子的空间扩散会导致冲击的边际变化，但会平滑接触的不连续性。重要的是，该方法成功地模拟了通过冲击加速的非热粒子的能谱，其中包括来自非热粒子群的反馈。这些结果表明，当等离子体能量的很大一部分被高能粒子占据时，这种方法对于研究粒子加速度是非常强大的。 et.al.|[2404.12276](http://arxiv.org/abs/2404.12276)|null|
 |**2024-04-18**|**Tree-Based Nonlinear Reduced Modeling**|本文研究了基于树库近似的参数偏微分方程的模型降阶问题。对于希尔伯特空间上的偏微分方程，经典方法是公式化的，并且涉及一个单独的线性空间来近似偏微分方程解的集合。在这里，我们开发了依赖于称为库的线性或非线性近似空间集合的简化模型，该模型也可以在一般度量空间上公式化。为了构建库的空间，我们依赖于涉及不同分裂策略的贪婪算法，这导致了基于层次树的表示。我们通过数值例子说明，就可以成功解决的参数偏微分方程而言，所提出的策略具有更广泛的适用性。虽然经典方法对强矫顽力的椭圆问题非常有效，但我们证明了基于树的库方法可以处理弱矫顽力扩散问题、对流扩散问题以及在一般度量空间（如 $L^2$ -Waserstein空间）上提出的输运主导的偏微分方程。 et.al.|[2404.12262](http://arxiv.org/abs/2404.12262)|null|
 
-<p align=right>(<a href=#updated-on-20240419>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240420>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-04-06**|**Grounding and Enhancing Grid-based Models for Neural Fields**|当代许多研究利用基于网格的模型来表示神经场，但仍然缺乏对基于网格模型的系统分析，阻碍了这些模型的改进。因此，本文介绍了一个基于网格的模型的理论框架。该框架指出，这些模型的逼近和泛化行为是由网格切线核（GTK）决定的，GTK是基于网格的模型的固有性质。所提出的框架有助于对各种基于网格的模型进行一致和系统的分析。此外，引入的框架推动了一种新的基于网格的模型的开发，该模型名为乘法傅立叶自适应网格（MulFAGrid）。数值分析表明，MulFAGrid表现出比其前身更低的泛化界，表明其具有鲁棒的泛化性能。实证研究表明，MulFAGrid在各种任务中都取得了最先进的性能，包括2D图像拟合、3D符号距离场（SDF）重建和新颖的视图合成，表现出了卓越的表示能力。项目网站位于https://sites.google.com/view/cvpr24-2034-submission/home. et.al.|[2403.20002](http://arxiv.org/abs/2403.20002)|null|
 |**2024-04-01**|**Efficient 3D Instance Mapping and Localization with Neural Fields**|我们解决了从一系列摆姿势的RGB图像中学习用于3D实例分割的隐式场景表示的问题。为此，我们引入了3DIML，这是一种新的框架，可以有效地学习可以从新的视点渲染的标签字段，以产生视图一致的实例分割掩码。3DIML显著改进了现有的基于隐式场景表示的方法的训练和推理运行时。与现有技术相反，现有技术以自我监督的方式优化神经场，需要复杂的训练过程和损失函数设计，3DIML利用了两阶段过程。第一阶段InstanceMap将前端实例分割模型生成的图像序列的2D分割掩码作为输入，并将图像上的相应掩码与3D标签相关联。然后，在第二阶段InstanceLift中使用这些几乎视图一致的伪标签掩码来监督神经标签字段的训练，该字段对InstanceMap遗漏的区域进行插值并解决歧义。此外，我们介绍了InstanceLoc，它能够在给定训练过的标签字段和现成的图像分割模型的情况下，通过融合两者的输出，实现实例掩码的近实时定位。我们在Replica和ScanNet数据集的序列上评估了3DIML，并证明了在图像序列的温和假设下3DIML的有效性。与现有的质量相当的隐式场景表示方法相比，我们实现了巨大的实际加速，展示了其促进更快、更有效的3D场景理解的潜力。 et.al.|[2403.19797](http://arxiv.org/abs/2403.19797)|null|
 
-<p align=right>(<a href=#updated-on-20240419>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240420>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
