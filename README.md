@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.04.25
+## Updated on 2024.04.26
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-04-21**|**Generalizable Novel-View Synthesis using a Stereo Camera**|在本文中，我们提出了第一种专门针对多视图立体相机图像的可推广视图合成方法。由于最近的立体匹配已经证明了精确的几何预测，我们将立体匹配引入到新的视图合成中，以实现高质量的几何重建。为此，本文提出了一种新的框架，称为StereoNeRF，它将立体匹配集成到基于NeRF的可推广视图合成方法中。StereoNeRF配备了三个关键组件，以在新的视图合成中有效地利用立体匹配：立体特征提取器、深度引导平面扫描和立体深度损失。此外，我们提出了StereoNVS数据集，这是第一个立体相机图像的多视图数据集，涵盖了各种真实场景和合成场景。我们的实验结果表明，StereoNeRF在可推广视图合成方面超过了以前的方法。 et.al.|[2404.13541](http://arxiv.org/abs/2404.13541)|null|
 |**2024-04-19**|**Contrastive Gaussian Clustering: Weakly Supervised 3D Scene Segmentation**|我们介绍了对比高斯聚类，这是一种新的方法，能够从任何角度提供分割掩模，并实现场景的3D分割。最近在新颖视图合成方面的工作已经展示了如何通过3D高斯云对场景的外观进行建模，以及如何在 $\alpha$混合颜色之前，通过在给定视点上投影高斯来生成准确的图像。在这个例子之后，我们训练一个模型，使其还包括每个高斯的分割特征向量。然后，这些可以用于3D场景分割，通过根据高斯特征向量对高斯进行聚类；以及通过将高斯投影在平面上并在其分割特征上进行$\alpha$混合来生成2D分割掩模。使用对比学习和空间正则化的组合，我们的方法可以在不一致的2D分割掩模上进行训练，并且仍然可以学习生成在所有视图中一致的分割掩模。此外，所得到的模型非常准确，将预测掩码的IoU精度比现有技术提高了$+8\%$ 。代码和训练模型将很快发布。 et.al.|[2404.12784](http://arxiv.org/abs/2404.12784)|null|
 
-<p align=right>(<a href=#updated-on-20240425>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240426>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-04-18**|**Spot-Compose: A Framework for Open-Vocabulary Object Retrieval and Drawer Manipulation in Point Clouds**|近年来，深度学习和大规模数据集的现代技术在3D实例分割、抓取姿态估计和机器人技术方面取得了令人印象深刻的进展。这允许在3D场景中直接进行精确检测，实现物体和环境感知的抓取预测，以及稳健和可重复的机器人操作。这项工作旨在将这些最新的方法集成到一个全面的框架中，用于在以人为中心的环境中进行机器人交互和操作。具体来说，我们利用商品3D扫描仪的3D重建进行开放式词汇实例分割，以及抓取姿势估计，以演示对象的动态拾取和抽屉的打开。我们在两组真实世界的实验中展示了我们模型的性能和稳健性，包括动态对象检索和抽屉打开，分别报告了51%和82%的成功率。我们的框架代码以及视频可在以下网站上获取：https://spot-compose.github.io/. et.al.|[2404.12440](http://arxiv.org/abs/2404.12440)|null|
 |**2024-04-18**|**6Img-to-3D: Few-Image Large-Scale Outdoor Driving Scene Reconstruction**|当前的3D重建技术难以从少数图像中忠实地推断出无边界的场景。具体而言，现有方法具有高计算要求，需要详细的姿态信息，并且不能可靠地重建被遮挡区域。我们介绍了6Img-to-3D，这是一种用于单镜头图像到3D重建的高效、可扩展的基于转换器的编码器渲染器方法。我们的方法仅从六个面向外部的输入图像中输出3D一致的参数化三平面，用于大规模、无边界的户外驾驶场景。我们通过将收缩的自定义交叉和自关注机制结合起来，实现三平面参数化、可微分体积渲染、场景收缩和图像特征投影，朝着解决现有缺陷迈出了一步。我们展示了在没有全局姿态信息的情况下，来自单个时间戳的六幅环绕视图车辆图像足以在推理时间内重建360 $^｛\circ｝$ 场景，耗时395毫秒。例如，我们的方法允许渲染第三人称图像和鸟瞰图。我们的代码可在https://github.com/continental/6Img-to-3D，更多示例可以在我们的网站上找到https://6Img-to-3D.GitHub.io/. et.al.|[2404.12378](http://arxiv.org/abs/2404.12378)|**[link](https://github.com/continental/6img-to-3d)**|
 
-<p align=right>(<a href=#updated-on-20240425>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240426>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-04-23**|**From Parts to Whole: A Unified Reference Framework for Controllable Human Image Generation**|可控人类图像生成的最新进展已经导致使用结构信号（例如，姿势、深度）或面部外观生成零样本。然而，以人类外表的多个部分为条件生成人类图像仍然具有挑战性。针对这一点，我们介绍了Parts2Whole，这是一个新颖的框架，旨在从多个参考图像中生成定制的肖像，包括姿势图像和人类外表的各个方面。为了实现这一点，我们首先开发了一种语义感知外观编码器，以保留不同人体部位的细节，该编码器根据每个图像的文本标签将其处理为一系列多尺度特征图，而不是一个图像标记，从而保持图像维度。其次，我们的框架通过共享的自注意机制支持多图像条件生成，该机制在扩散过程中跨参考和目标特征运行。我们通过结合参考人体图像中的遮罩信息来增强香草注意力机制，从而可以精确选择任何部位。大量的实验证明了我们的方法优于现有的替代方案，为多部分可控的人体图像定制提供了先进的能力。请访问我们的项目页面https://huanngzh.github.io/Parts2Whole/. et.al.|[2404.15267](http://arxiv.org/abs/2404.15267)|null|
 |**2024-04-23**|**Score matching for sub-Riemannian bridge sampling**|条件扩散过程的模拟是随机过程推理、数据插补、生成模型和几何统计的重要工具。虽然在欧几里得空间上模拟扩散桥过程已经很困难，但当考虑黎曼流形上的扩散过程时，几何会带来进一步的复杂性。在更高的一般性中，从黎曼几何向亚黎曼几何的推进引入了亚椭圆性，并且消除了为扩散过程的分数找到适当的显式近似的可能性。我们处理了这些挑战，并通过演示如何修改机器学习的最新进展，以允许在子黎曼流形上训练分数逼近器，构建了一种在子黎曼流形上进行桥接模拟的方法。由于梯度取决于水平分布，我们使用随机泰勒展开将去噪损失的通常概念推广到非完整框架，并在海森堡群上明确地和更广泛地使用自适应坐标来证明所得到的方案。我们进行了数值实验，举例说明了海森堡群上桥接过程的样本以及该过程在短时间内的浓度。 et.al.|[2404.15258](http://arxiv.org/abs/2404.15258)|null|
 
-<p align=right>(<a href=#updated-on-20240425>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240426>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-04-02**|**NeRFCodec: Neural Feature Compression Meets Neural Radiance Fields for Memory-Efficient Scene Representation**|神经辐射场（NeRF）的出现极大地影响了三维场景建模和新颖的视图合成。作为一种用于三维场景表示的视觉媒体，具有高率失真性能的压缩是一个永恒的目标。受神经压缩和神经场表示进步的启发，我们提出了NeRFCodec，这是一种端到端的NeRF压缩框架，它集成了非线性变换、量化和熵编码，用于高效记忆的场景表示。由于直接在大规模的NeRF特征平面上训练非线性变换是不切实际的，我们发现，当添加特定于内容的参数时，可以使用预先训练的神经2D图像编解码器来压缩特征。具体来说，我们重用神经2D图像编解码器，但修改其编码器和解码器头，同时保持预训练解码器的其他部分冻结。这使我们能够通过监督渲染损失和熵损失来训练整个管道，通过更新特定于内容的参数来实现率失真平衡。在测试时，包含潜在代码、特征解码器头和其他辅助信息的比特流被发送用于通信。实验结果表明，我们的方法优于现有的NeRF压缩方法，能够在0.5MB的内存预算下实现高质量的新视图合成。 et.al.|[2404.02185](http://arxiv.org/abs/2404.02185)|null|
 |**2024-04-18**|**NeRF-MAE: Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural Radiance Fields**|神经领域在计算机视觉和机器人领域表现出色，因为它们能够理解3D视觉世界，如推断语义、几何和动力学。考虑到神经场在从2D图像密集表示3D场景方面的能力，我们提出了一个问题：我们是否可以扩展它们的自监督预训练，特别是使用掩蔽的自动编码器，从姿态RGB图像中生成有效的3D表示。由于将转换器扩展到新型数据模式的惊人成功，我们采用了标准的3D视觉转换器来适应NeRF的独特配方。我们利用NeRF的体积网格作为变压器的密集输入，将其与其他3D表示（如点云）进行对比，在点云中，信息密度可能不均匀，并且表示不规则。由于将掩蔽的自动编码器应用于隐式表示（如NeRF）很困难，我们选择提取通过使用相机轨迹进行采样来规范化跨域场景的显式表示。我们的目标是通过从NeRF的辐射和密度网格中屏蔽随机补丁，并使用标准的3D Swin Transformer来重建屏蔽的补丁。通过这样做，模型可以学习完整场景的语义和空间结构。我们在我们提出的精心策划的姿势RGB数据上对这种表示进行了大规模的预训练，总共超过160万张图像。一旦经过预训练，编码器就用于有效的3D迁移学习。我们针对NeRF的新型自监督预训练NeRF-MAE可扩展性非常好，并提高了在各种具有挑战性的3D任务中的性能。在Front3D和ScanNet数据集上，利用未标记的姿态2D数据进行预训练，NeRF MAE显著优于自监督3D预训练和NeRF场景理解基线，在3D对象检测方面的绝对性能提高超过20%AP50和8%AP25。 et.al.|[2404.01300](http://arxiv.org/abs/2404.01300)|null|
 
-<p align=right>(<a href=#updated-on-20240425>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240426>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
