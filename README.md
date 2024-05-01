@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.04.30
+## Updated on 2024.05.01
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-04-23**|**CT-NeRF: Incremental Optimizing Neural Radiance Field and Poses with Complex Trajectory**|神经辐射场（NeRF）在高质量的三维场景重建中取得了令人印象深刻的成果。然而，NeRF在很大程度上依赖于精确的相机姿势。虽然最近像BARF这样的工作已经在NeRF中引入了相机姿态优化，但它们的适用性仅限于简单的轨迹场景。现有的方法在处理涉及大旋转的复杂轨迹时会遇到困难。为了解决这一限制，我们提出了CT NeRF，这是一种仅使用RGB图像而不使用姿态和深度输入的增量重建优化流水线。在这个流水线中，我们首先提出了在连接相邻帧的姿态图下进行局部全局束调整，以加强姿态之间的一致性，从而避免仅由姿态与场景结构的一致性引起的局部最小值。此外，我们将姿态之间的一致性实例化为由输入图像对之间的像素级对应产生的重新投影的几何图像距离约束。通过增量重建，CT NeRF能够恢复相机姿态和场景结构，并能够处理具有复杂轨迹的场景。我们在两个真实世界的数据集NeRFBuster和Free数据集上评估了CT NeRF的性能，这两个数据集具有复杂的轨迹。结果表明，CT NeRF在新的视图合成和姿态估计精度方面优于现有方法。 et.al.|[2404.13896](http://arxiv.org/abs/2404.13896)|null|
 |**2024-04-22**|**PGAHum: Prior-Guided Geometry and Appearance Learning for High-Fidelity Animatable Human Reconstruction**|最近关于隐式几何表示学习和神经渲染的技术已经显示出从稀疏视频输入进行三维人体重建的有希望的结果。然而，重建详细的表面几何结构仍然具有挑战性，甚至更难将逼真的新颖视图与动画人体姿势合成。在这项工作中，我们介绍了PGAHum，一种用于高保真动画人体重建的先验引导几何和外观学习框架。我们在PGAHum的三个关键模块中充分利用了3D人体先验，以实现具有复杂细节的高质量几何重建和对看不见的姿势的真实感视图合成。首先，提出了一种基于先验的三维人体隐式几何表示，该表示包含由三平面网络预测的delta SDF和从先验SMPL模型导出的基本SDF，以解纠缠的方式对表面细节和体型进行建模。其次，我们引入了一种新颖的先验引导采样策略，该策略充分利用人体姿态和身体的先验信息对体表内或体表附近的查询点进行采样。通过避免在空的3D空间中进行不必要的学习，神经渲染可以恢复更多的外观细节。最后，我们提出了一种新的迭代后向变形策略，以逐步找到观测空间中查询点的对应关系。基于SMPL模型提供的先验知识来学习蒙皮权重预测模型，以实现迭代的反向LBS变形。在各种数据集上进行了广泛的定量和定性比较，结果证明了我们框架的优越性。消融研究还验证了每个方案在几何和外观学习方面的有效性。 et.al.|[2404.13862](http://arxiv.org/abs/2404.13862)|null|
 
-<p align=right>(<a href=#updated-on-20240430>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240501>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-04-25**|**OMEGAS: Object Mesh Extraction from Large Scenes Guided by Gaussian Segmentation**|3D重建技术的最新进展为复杂3D场景的高质量实时渲染铺平了道路。尽管取得了这些成就，但一个显著的挑战仍然存在：很难从大型场景中精确重建特定物体。当前的场景重建技术经常导致对象细节纹理的丢失，并且无法重建在视图中被遮挡或看不见的对象部分。为了应对这一挑战，我们深入研究了大型场景中特定对象的精细3D重建，并提出了一个名为OMEGAS的框架：在高斯分割的指导下从大型场景中提取对象网格。OMEGAS采用多步骤方法，以几种优秀的现成方法为基础。具体来说，最初，我们利用分段任意模型（SAM）来指导3D高斯散射（3DGS）的分割，从而创建目标对象的基本3DGS模型。然后，我们利用大规模扩散先验来进一步细化3DGS模型的细节，特别是针对原始场景视图中不可见或被遮挡的对象部分。随后，通过将3DGS模型重新渲染到场景视图上，我们实现了精确的对象分割，并有效地去除了背景。最后，使用这些仅针对目标的图像来进一步改进3DGS模型，并通过SuGaR模型提取最终的3D对象网格。在各种场景中，我们的实验表明OMEGAS显著优于现有的场景重建方法。我们的项目页面位于：https://github.com/CrystalWlz/OMEGAS et.al.|[2404.15891](http://arxiv.org/abs/2404.15891)|**[link](https://github.com/crystalwlz/omegas)**|
 |**2024-04-24**|**3D Freehand Ultrasound using Visual Inertial and Deep Inertial Odometry for Measuring Patellar Tracking**|髌股关节（PFJ）问题影响四分之一的人，尽管接受了治疗，仍有20%的人经历了慢性膝关节疼痛。膝关节置换术后的不良结果和疼痛通常与髌骨追踪不良有关。CT和MRI等传统成像方法面临挑战，包括成本和金属伪影，目前没有理想的方法来观察关节运动而不出现软组织伪影或辐射暴露等问题。一种监测关节运动的新系统可以显著提高对PFJ动力学的理解，有助于更好的患者护理和结果。将2D超声与运动跟踪相结合以使用语义分割和位置配准进行关节的3D重建可能是一种解决方案。然而，需要昂贵的外部基础设施来估计扫描仪的轨迹仍然是临床上通过手持式超声扫描实现3D骨骼重建的主要限制。我们提出了视觉惯性里程计（VIO）和基于深度学习的仅惯性里程计方法，作为跟踪手持超声扫描仪的运动捕捉的替代方法。通过这些方法生成的3D重建已经证明了评估PFJ和通过徒手超声扫描进行进一步测量的潜力。结果表明，VIO方法的性能与运动捕捉方法一样好，平均重建误差分别为1.25mm和1.21mm。VIO方法是第一种无基础设施的方法，用于通过无线手持超声扫描进行骨骼的3D重建，其精度与需要外部基础设施的方式相当。 et.al.|[2404.15847](http://arxiv.org/abs/2404.15847)|null|
 
-<p align=right>(<a href=#updated-on-20240430>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240501>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-04-29**|**Diffuse scattering from dynamically compressed single-crystal zirconium following the pressure-induced $α\toω$ phase transition**|锆中典型的$\alpha\to\omega$相变是我们理解极端负载条件下多态性的理想试验台。经过半个世纪的研究，人们一致认为，这种转变是通过两种不同的驱动机制之一实现的，这取决于压缩路径的性质。然而，最近几年进行的配有原位衍射诊断的动态压缩实验揭示了新的转变机制，这表明我们对潜在原子动力学和转变动力学的理解实际上还远远不够完整。我们使用机器学习类势对沿[0001]轴压缩的单晶锆冲击中的$\alpha\to\omega$相变进行了经典分子动力学模拟。据预测，该转变主要通过两阶段Usikov-Zilberstein机制的修改版本进行，通过该机制，高压$\omega$-相在中间$\beta$-相的晶粒之间的边界处非均匀成核。我们进一步观察到原子无序在$\beta$晶粒之间的连接处加剧，导致$\omega$晶粒之间形成高度缺陷的间隙材料。我们直接将模拟产生的合成x射线衍射图与最近动态压缩实验中使用飞秒衍射获得的衍射图进行了比较，并表明模拟产生了与以前从元素金属中看到的相同的独特、各向异性的漫散射信号。我们的模拟表明，散射信号源于热散射、残余动力学稳定的$\alpha$和$\beta$ 晶粒的纳米粒子状散射以及间隙缺陷结构的散射的组合。 et.al.|[2404.18740](http://arxiv.org/abs/2404.18740)|null|
 |**2024-04-29**|**Diffusion coefficient matrix for multiple conserved charges: a Kubo approach**|相对论重离子碰撞中产生的强相互作用物质具有几个守恒的量子数，如重子数、奇异度和电荷。这些电荷的扩散过程可以用描述各种电荷扩散相互影响的扩散矩阵来表征。我们导出了将扩散系数作为扩散矩阵元素来评估的Kubo关系。我们进一步证明，在弱耦合极限下，通过Kubo关系获得的扩散矩阵元素在适当识别弛豫时间的情况下，可以简化为动力学理论中获得的元素。我们在具有两个守恒电荷的两个相互作用标量场的玩具模型中说明了这一评估。 et.al.|[2404.18718](http://arxiv.org/abs/2404.18718)|null|
 
-<p align=right>(<a href=#updated-on-20240430>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240501>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-04-04**|**Vestibular schwannoma growth prediction from longitudinal MRI by time conditioned neural fields**|前庭神经鞘瘤（VS）是一种良性肿瘤，通常通过MRI检查进行积极监测来治疗。为了进一步帮助临床决策并避免过度治疗，基于纵向成像的肿瘤生长的准确预测是非常可取的。在本文中，我们介绍了DeepGrowth，这是一种深度学习方法，它结合了神经场和递归神经网络，用于前瞻性肿瘤生长预测。在所提出的方法中，每个肿瘤都表示为以低维潜在码为条件的有符号距离函数（SDF）。与之前直接在图像空间中进行肿瘤形状预测的研究不同，我们预测潜在代码，然后从中重建未来的形状。为了处理不规则的时间间隔，我们引入了一个基于ConvLSTM的时间条件递归模块和一种新的时间编码策略，使所提出的模型能够输出随时间变化的肿瘤形状。在内部纵向VS数据集上的实验表明，所提出的模型显著提高了性能（ $\ge 1.6\%%$Dice评分和$\ge0.20$mm95\%Hausdorff距离），特别是对于生长或缩小最多的前20%肿瘤（$\ge4.6\%%$Dice评分和$\ge 0.73$ mm95\%Hausdoff距离）。我们的代码可在~\bull获得{https://github.com/cyjdswx/DeepGrowth} et.al.|[2404.02614](http://arxiv.org/abs/2404.02614)|**[link](https://github.com/cyjdswx/deepgrowth)**|
 |**2024-04-02**|**NeRFCodec: Neural Feature Compression Meets Neural Radiance Fields for Memory-Efficient Scene Representation**|神经辐射场（NeRF）的出现极大地影响了三维场景建模和新颖的视图合成。作为一种用于三维场景表示的视觉媒体，具有高率失真性能的压缩是一个永恒的目标。受神经压缩和神经场表示进步的启发，我们提出了NeRFCodec，这是一种端到端的NeRF压缩框架，它集成了非线性变换、量化和熵编码，用于高效记忆的场景表示。由于直接在大规模的NeRF特征平面上训练非线性变换是不切实际的，我们发现，当添加内容特定参数时，可以使用预先训练的神经2D图像编解码器来压缩特征。具体来说，我们重用神经2D图像编解码器，但修改其编码器和解码器头，同时保持预训练解码器的其他部分冻结。这使我们能够通过监督渲染损失和熵损失来训练整个管道，通过更新特定于内容的参数来实现率失真平衡。在测试时，包含潜在代码、特征解码器头和其他辅助信息的比特流被发送用于通信。实验结果表明，我们的方法优于现有的NeRF压缩方法，能够在0.5MB的内存预算下实现高质量的新视图合成。 et.al.|[2404.02185](http://arxiv.org/abs/2404.02185)|null|
 
-<p align=right>(<a href=#updated-on-20240430>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240501>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
