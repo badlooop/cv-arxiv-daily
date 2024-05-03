@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.05.02
+## Updated on 2024.05.03
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-04-22**|**CrossScore: Towards Multi-View Image Evaluation and Scoring**|我们引入了一种新的交叉参考图像质量评估方法，该方法有效地填补了图像评估领域的空白，补充了一系列已建立的评估方案——从SSIM等全参考指标、NIQE等无参考指标到FID等通用参考指标，以及CLIPScore等多模式参考指标。利用具有交叉注意力机制的神经网络和NVS优化的独特数据收集管道，我们的方法能够在不需要地面实况参考的情况下进行准确的图像质量评估。通过将查询图像与同一场景的多个视图进行比较，我们的方法解决了新视图合成（NVS）和无法获得直接参考图像的类似任务中现有度量的局限性。实验结果表明，我们的方法与全参考度量SSIM密切相关，而不需要地面实况参考。 et.al.|[2404.14409](http://arxiv.org/abs/2404.14409)|null|
 |**2024-04-22**|**Scene Coordinate Reconstruction: Posing of Image Collections via Incremental Learning of a Relocalizer**|我们处理从描绘场景的一组图像中估计相机参数的任务。流行的基于特征的运动结构（SfM）工具通过增量重建来解决这一任务：它们重复稀疏3D点的三角测量和将更多相机视图注册到稀疏点云。我们将来自运动的增量结构重新解释为视觉重定位器的迭代应用和改进，即将新视图注册到重建的当前状态的方法。这种视角使我们能够研究不植根于局部特征匹配的替代视觉重定位器。我们展示了场景坐标回归，一种基于学习的重新定位方法，使我们能够从未融合的图像中构建隐含的神经场景表示。与其他基于学习的重建方法不同，我们不需要姿态先验，也不需要顺序输入，并且我们可以有效地优化数千幅图像。我们的方法ACE0（ACE Zero）估计相机姿态的精度与基于特征的SfM相当，这一点在新的视图合成中得到了证明。项目页面：https://nianticlabs.github.io/acezero/ et.al.|[2404.14351](http://arxiv.org/abs/2404.14351)|null|
 
-<p align=right>(<a href=#updated-on-20240502>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240503>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-04-27**|**Unpaired Multi-view Clustering via Reliable View Guidance**|本文重点研究了不成对的多视图聚类（UMC），这是一个具有挑战性的问题，其中成对的观测样本在多个视图中不可用。目标是使用所有视图中未配对的观测样本执行有效的联合聚类。在不完全多视图聚类中，现有的方法通常依赖于视图之间的样本配对来捕获它们的互补性。然而，这不适用于UMC的情况。因此，我们的目标是提取视图之间一致的聚类结构。在UMC中，出现了两个具有挑战性的问题：由于缺乏标签而导致的聚类结构不确定和由于缺乏配对样本而导致的配对关系不确定。我们假设具有良好聚类结构的视图是可靠的视图，它充当了指导其他视图聚类的监督者。在可靠视图的指导下，在实现可靠视图与其他视图对齐的同时，获得了这些视图的更确定的聚类结构。然后，我们提出了具有一个可靠视图（RG-UMC）和多个可靠视图的UMC的可靠视图引导（RGs-UMC）。具体来说，我们分别设计了具有一个可靠视图和多个可靠视图的对齐模块，以自适应地指导优化过程。此外，我们还利用紧致性模块来增强同一聚类中样本之间的关系。同时，将正交约束应用于潜在表示以获得判别特征。大量实验表明，RG-UMC和RGs-UMC在NMI中的平均值分别为24.14%和29.42%，优于最先进的方法。 et.al.|[2404.17894](http://arxiv.org/abs/2404.17894)|null|
 |**2024-04-29**|**MV-VTON: Multi-View Virtual Try-On with Diffusion Models**|基于图像的虚拟试穿的目标是生成自然穿着给定服装的目标人物的图像。然而，大多数现有的方法只专注于正面尝试使用正面服装。当衣服和人的观点明显不一致时，特别是当人的观点不是正面的时，结果是不令人满意的。为了应对这一挑战，我们引入了多视图虚拟试穿（MV-VTON），旨在使用给定的衣服从多个视图重建一个人的穿着结果。一方面，考虑到单视图衣服为MV-VTON提供的信息不足，我们转而使用两个图像，即衣服的前视图和后视图，以尽可能多地包含完整视图。另一方面，采用了表现出卓越能力的扩散模型来执行我们的MV-VTON。特别地，我们提出了一种视图自适应选择方法，其中硬选择和软选择分别应用于全局和局部服装特征提取。这样可以确保衣服的特征大致适合人的视野。随后，我们建议使用一个联合注意力块来将服装特征与人物特征对齐并融合。此外，我们收集了一个MV-VTON数据集，即多视图服装（MVG），其中每个人都有多张不同视图和姿势的照片。实验表明，该方法不仅在使用MVG数据集的MV-VTON任务上取得了最先进的结果，而且在使用VITON-HD和DressCode数据集的正视虚拟试穿任务上也具有优势。代码和数据集将在https://github.com/hywang2002/MV-VTON . et.al.|[2404.17364](http://arxiv.org/abs/2404.17364)|**[link](https://github.com/hywang2002/mv-vton)**|
 
-<p align=right>(<a href=#updated-on-20240502>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240503>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-05-01**|**Lane Segmentation Refinement with Diffusion Models**|车道图是构建高清晰度（HD）地图的关键组件，对自动驾驶或导航规划等下游任务至关重要。此前，何等人（2022）探索了利用基于分割的方法从航空图像中提取车道级图。然而，分割网络难以实现完美的分割掩码，导致车道图提取不准确。我们探索了其他增强功能，以改进这种基于分割的方法，并使用扩散概率模型（DPM）组件对其进行扩展。这种组合进一步提高了非交叉口区域无向图中的GEO F1和TOPO F1分数，这是车道图质量的关键指标。我们在公开的数据集上进行了实验，证明我们的方法优于以前的方法，特别是在增强这样一个图的连通性方面，如TOPO F1分数所测量的。此外，我们对我们方法的各个组成部分进行消融研究，以了解其贡献并评估其有效性。 et.al.|[2405.00620](http://arxiv.org/abs/2405.00620)|null|
 |**2024-05-01**|**Anomalous diffusion and factor ordering in (1+1)-dimensional Lorentzian quantum gravity**|利用量子热核的扩散性质，作为对 $S^1$ 上经典热核的期望，我们在（1+1）维量子引力模型中探索了量子化空间的非流形性质。通过计算扩散粒子的均方位移，我们发现扩散是反常的，其行为与短距离上多孔基底、网络或分形上的行为相似。粒子在量子化空间中扩散的路径的行走维度被计算为具有4的下确界，上升到任意大的值，这取决于标记我们模型的量子哈密顿量中因子排序的选择的参数，以及用于构造量子热核的波函数的渐近行为。此外，我们导出了扩散粒子返回概率的展开式，其对经典幂级数形式的修改取决于因子排序参数。 et.al.|[2405.00594](http://arxiv.org/abs/2405.00594)|null|
 
-<p align=right>(<a href=#updated-on-20240502>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240503>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-04-03**|**LiDAR4D: Dynamic Neural Fields for Novel Space-time View LiDAR Synthesis**|尽管神经辐射场（NeRFs）在图像新视图合成（NVS）方面取得了成功，但激光雷达NVS在很大程度上仍未被探索。以前的激光雷达NVS方法采用了图像NVS方法的简单转变，同时忽略了激光雷达点云的动态特性和大规模重建问题。有鉴于此，我们提出了LiDAR4D，这是一种用于新的时空LiDAR视图合成的仅限LiDAR的可微分框架。考虑到稀疏性和大规模特征，我们设计了一种结合多平面和网格特征的4D混合表示，以实现从粗到细的有效重建。此外，我们引入了从点云导出的几何约束，以提高时间一致性。对于激光雷达点云的真实合成，我们结合了光线下降概率的全局优化，以保持跨区域模式。在KITTI-360和NuScenes数据集上进行的大量实验证明了我们的方法在实现几何感知和时间一致的动态重建方面的优越性。代码可在https://github.com/ispc-lab/LiDAR4D. et.al.|[2404.02742](http://arxiv.org/abs/2404.02742)|**[link](https://github.com/ispc-lab/lidar4d)**|
 |**2024-04-04**|**Vestibular schwannoma growth prediction from longitudinal MRI by time conditioned neural fields**|前庭神经鞘瘤（VS）是一种良性肿瘤，通常通过MRI检查进行积极监测来治疗。为了进一步帮助临床决策并避免过度治疗，基于纵向成像的肿瘤生长的准确预测是非常可取的。在本文中，我们介绍了DeepGrowth，这是一种深度学习方法，它结合了神经场和递归神经网络，用于前瞻性肿瘤生长预测。在所提出的方法中，每个肿瘤都表示为以低维潜在码为条件的有符号距离函数（SDF）。与之前直接在图像空间中进行肿瘤形状预测的研究不同，我们预测潜在代码，然后从中重建未来的形状。为了处理不规则的时间间隔，我们引入了一个基于ConvLSTM的时间条件递归模块和一种新的时间编码策略，使所提出的模型能够输出随时间变化的肿瘤形状。在内部纵向VS数据集上的实验表明，所提出的模型显著提高了性能（ $\ge 1.6\%%$Dice评分和$\ge0.20$mm95\%Hausdorff距离），特别是对于生长或缩小最多的前20%肿瘤（$\ge4.6\%%$Dice评分和$\ge 0.73$ mm95\%Hausdoff距离）。我们的代码可在~\bull获得{https://github.com/cyjdswx/DeepGrowth} et.al.|[2404.02614](http://arxiv.org/abs/2404.02614)|**[link](https://github.com/cyjdswx/deepgrowth)**|
 
-<p align=right>(<a href=#updated-on-20240502>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240503>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
