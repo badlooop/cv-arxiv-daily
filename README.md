@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.05.03
+## Updated on 2024.05.04
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-04-23**|**FlowMap: High-Quality Camera Poses, Intrinsics, and Depth via Gradient Descent**|本文介绍了FlowMap，这是一种端到端可微的方法，用于解决视频序列的精确相机姿态、相机本质和每帧密集深度。我们的方法对一个简单的最小二乘目标执行每视频梯度下降最小化，该目标将由深度、本质和姿态引起的光流与通过现成的光流和点跟踪获得的对应关系进行比较。除了使用点轨迹来鼓励长期的几何一致性外，我们还引入了适用于一阶优化的深度、本质和姿态的可微重新参数化。我们的经验表明，通过我们的方法恢复的相机参数和密集深度能够使用高斯飞溅在360度轨迹上进行照片逼真的新视图合成。我们的方法不仅远远优于现有的基于梯度下降的束调整方法，而且在360度新视图合成的下游任务上，令人惊讶地与最先进的SfM方法COLMAP不相上下（尽管我们的方法完全基于梯度下降，完全可微，并与传统的SfM完全不同）。 et.al.|[2404.15259](http://arxiv.org/abs/2404.15259)|**[link](https://github.com/dcharatan/flowmap)**|
 |**2024-04-22**|**CrossScore: Towards Multi-View Image Evaluation and Scoring**|我们引入了一种新的交叉参考图像质量评估方法，该方法有效地填补了图像评估领域的空白，补充了一系列已建立的评估方案——从SSIM等全参考指标、NIQE等无参考指标到FID等通用参考指标，以及CLIPScore等多模式参考指标。利用具有交叉注意力机制的神经网络和NVS优化的独特数据收集管道，我们的方法能够在不需要地面实况参考的情况下进行准确的图像质量评估。通过将查询图像与同一场景的多个视图进行比较，我们的方法解决了新视图合成（NVS）和无法获得直接参考图像的类似任务中现有度量的局限性。实验结果表明，我们的方法与全参考度量SSIM密切相关，而不需要地面实况参考。 et.al.|[2404.14409](http://arxiv.org/abs/2404.14409)|null|
 
-<p align=right>(<a href=#updated-on-20240503>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240504>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-04-29**|**Bootstrap 3D Reconstructed Scenes from 3D Gaussian Splatting**|神经渲染技术的最新发展极大地增强了学术和商业领域中照片逼真3D场景的渲染。最新的方法被称为3D高斯飞溅（3D-GS），为渲染质量和速度设定了新的基准。然而，3D-GS的局限性在合成新的视点时变得明显，尤其是对于与训练中看到的视点大相径庭的视点。此外，放大或缩小时还会出现诸如膨胀和混叠之类的问题。这些挑战都可以追溯到一个根本问题：采样不足。在我们的论文中，我们提出了一种显著解决这个问题的自举方法。这种方法使用扩散模型来增强使用经过训练的3D-GS的新视图的渲染，从而简化训练过程。我们的结果表明，自举有效地减少了工件，并明显增强了评估指标。此外，我们证明了我们的方法是通用的，可以很容易地集成，使各种3D重建项目从我们的方法中受益。 et.al.|[2404.18669](http://arxiv.org/abs/2404.18669)|null|
 |**2024-04-29**|**Reconstructing Satellites in 3D from Amateur Telescope Images**|本文提出了一个利用小型业余望远镜拍摄的视频对近地轨道卫星进行三维重建的框架。从这些望远镜获得的视频数据与标准3D重建任务的数据有很大不同，其特征是强烈的运动模糊、大气湍流、普遍的背景光污染、焦距延长和观测视角受限。为了应对这些挑战，我们的方法从全面的预处理工作流程开始，该工作流程包括基于深度学习的图像恢复、特征点提取和相机姿态初始化。我们继续应用改进的3D高斯飞溅算法来重建3D模型。我们的技术支持同时进行3D高斯训练和姿态估计，从而能够从稀疏、嘈杂的数据中稳健地生成复杂的3D点云。编辑后阶段进一步支持了这一过程，该阶段旨在消除与我们先前对卫星几何约束的了解不一致的噪声点。我们使用合成数据集和中国空间站的实际观测结果验证了我们的方法，展示了其在从地面观测重建三维空间物体方面优于现有方法的显著优势。 et.al.|[2404.18394](http://arxiv.org/abs/2404.18394)|null|
 
-<p align=right>(<a href=#updated-on-20240503>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240504>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-05-02**|**On Nanowire Morphological Instability and Pinch-Off by Surface Electromigration**|表面扩散和表面电迁移可能导致固体薄膜和纳米线的形态不稳定。本文对受到轴向电流作用的单晶圆柱形纳米线的形态不稳定性进行了两种非线性分析。这些处理扩展了在没有表面电迁移的情况下进行的传统线性稳定性分析，表明了瑞利平台不稳定性。在略高于瑞利平台（长波）不稳定性阈值的情况下进行了弱非线性分析。它产生了一维Sivashinsky振幅方程，该方程描述了有限时间内表面扰动振幅的爆发。这是圆柱体半径的轴对称尖峰奇异性形成的特征，导致导线夹断并分离成不相交的线段。对振幅尖峰奇异性进行了标度分析，并表征了尖峰的时间和电场相关维数。在长波或短波不稳定性阈值以上的任意距离处进行弱非线性多尺度分析。导出并表征了主要不稳定模式的时间和电场相关傅立叶振幅。 et.al.|[2405.01331](http://arxiv.org/abs/2405.01331)|null|
 |**2024-05-02**|**DiffusionPipe: Training Large Diffusion Models with Efficient Pipelines**|扩散模型已经成为图像生成的主要执行者。为了支持训练大型扩散模型，本文研究了扩散模型的管道并行训练，并提出了一种同步管道训练系统DiffusionPipe，该系统提倡创新的管道气泡填充技术，以适应扩散模型的结构特征。现有技术的扩散模型通常包括可训练（主干）和不可训练（例如，冻结输入编码器）部分。我们首先用动态规划方法将代表性扩散模型中单个和多个主干的最优阶段划分和管道调度统一起来。然后，我们提出通过高效的贪婪算法将不可训练模型部分的计算填充到骨干的流水线训练的空闲期中，从而实现高训练吞吐量。大量实验表明，在流行的扩散模型上，DiffusionPipe可以实现比管道并行方法高达1.41倍的加速和比数据并行训练高达1.28倍的加速。 et.al.|[2405.01248](http://arxiv.org/abs/2405.01248)|null|
 
-<p align=right>(<a href=#updated-on-20240503>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240504>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-04-03**|**LiDAR4D: Dynamic Neural Fields for Novel Space-time View LiDAR Synthesis**|尽管神经辐射场（NeRFs）在图像新视图合成（NVS）方面取得了成功，但激光雷达NVS在很大程度上仍未被探索。以前的激光雷达NVS方法采用了图像NVS方法的简单转变，同时忽略了激光雷达点云的动态特性和大规模重建问题。有鉴于此，我们提出了LiDAR4D，这是一种用于新的时空LiDAR视图合成的仅限LiDAR的可微分框架。考虑到稀疏性和大规模特征，我们设计了一种结合多平面和网格特征的4D混合表示，以实现从粗到细的有效重建。此外，我们引入了从点云导出的几何约束，以提高时间一致性。对于激光雷达点云的真实合成，我们结合了光线下降概率的全局优化，以保持跨区域模式。在KITTI-360和NuScenes数据集上进行的大量实验证明了我们的方法在实现几何感知和时间一致的动态重建方面的优越性。代码可在https://github.com/ispc-lab/LiDAR4D. et.al.|[2404.02742](http://arxiv.org/abs/2404.02742)|**[link](https://github.com/ispc-lab/lidar4d)**|
 |**2024-04-04**|**Vestibular schwannoma growth prediction from longitudinal MRI by time conditioned neural fields**|前庭神经鞘瘤（VS）是一种良性肿瘤，通常通过MRI检查进行积极监测来治疗。为了进一步帮助临床决策并避免过度治疗，基于纵向成像的肿瘤生长的准确预测是非常可取的。在本文中，我们介绍了DeepGrowth，这是一种深度学习方法，它结合了神经场和递归神经网络，用于前瞻性肿瘤生长预测。在所提出的方法中，每个肿瘤都表示为以低维潜在码为条件的有符号距离函数（SDF）。与之前直接在图像空间中进行肿瘤形状预测的研究不同，我们预测潜在代码，然后从中重建未来的形状。为了处理不规则的时间间隔，我们引入了一个基于ConvLSTM的时间条件递归模块和一种新的时间编码策略，使所提出的模型能够输出随时间变化的肿瘤形状。在内部纵向VS数据集上的实验表明，所提出的模型显著提高了性能（ $\ge 1.6\%%$Dice评分和$\ge0.20$mm95\%Hausdorff距离），特别是对于生长或缩小最多的前20%肿瘤（$\ge4.6\%%$Dice评分和$\ge 0.73$ mm95\%Hausdoff距离）。我们的代码可在~\bull获得{https://github.com/cyjdswx/DeepGrowth} et.al.|[2404.02614](http://arxiv.org/abs/2404.02614)|**[link](https://github.com/cyjdswx/deepgrowth)**|
 
-<p align=right>(<a href=#updated-on-20240503>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240504>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
