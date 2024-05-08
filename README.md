@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.05.07
+## Updated on 2024.05.08
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-04-25**|**Depth Supervised Neural Surface Reconstruction from Airborne Imagery**|虽然最初是为新颖的视图合成而开发的，但神经辐射场（NeRF）最近已成为多视图立体（MVS）的替代品。在一系列研究活动的触发下，已经获得了有希望的结果，尤其是在无纹理、透明和反射表面方面，而这些场景对传统的基于MVS的方法仍然具有挑战性。然而，这些调查大多集中在近距离场景上，对空中场景的研究仍然缺失。对于这项任务，NeRF在图像冗余度低和数据证据薄弱的区域面临潜在的困难，如经常在街道峡谷、立面或建筑阴影中发现的那样。此外，训练这样的网络在计算上是昂贵的。因此，我们工作的目的有两个：首先，我们研究NeRFs对代表不同特征的航空图像块的适用性，如仅最低点、倾斜和高分辨率图像。其次，在这些调查过程中，我们证明了从联络点测量中积分深度先验的好处，这些测量是在预先假设的束块调整过程中提供的。我们的工作基于最先进的框架VolSDF，该框架通过符号距离函数（SDF）对3D场景进行建模，因为与普通NeRF中的标准体积表示相比，这更适用于表面重建。为了进行评估，将基于NeRF的重建与航空图像的公开基准数据集的结果进行比较。 et.al.|[2404.16429](http://arxiv.org/abs/2404.16429)|null|
 |**2024-04-25**|**DIG3D: Marrying Gaussian Splatting with Deformable Transformer for Single Image 3D Reconstruction**|在本文中，我们研究了从单视图RGB图像进行三维重建的问题，并提出了一种新的方法，称为DIG3D，用于三维对象重建和新的视图合成。我们的方法利用编码器-解码器框架，该框架在编码器的深度感知图像特征的指导下在解码器中生成3D高斯。特别是，我们介绍了可变形变换器的使用，允许通过3D参考点和多层细化自适应进行高效和有效的解码。通过利用3D高斯的优势，我们的方法为单视图图像的3D重建提供了一个高效而准确的解决方案。我们在ShapeNet SRN数据集上评估了我们的方法，在汽车和椅子数据集中分别获得了24.21和24.98的PSNR。结果优于最近的方法约2.25%，证明了我们的方法在获得优异结果方面的有效性。 et.al.|[2404.16323](http://arxiv.org/abs/2404.16323)|null|
 
-<p align=right>(<a href=#updated-on-20240507>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240508>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-05-01**|**Depth Priors in Removal Neural Radiance Fields**|神经辐射场（NeRF）在三维重建和生成新视图方面显示出令人印象深刻的结果。NeRF的一个关键挑战是重建场景的编辑，如对象移除，这需要在多个视图之间保持一致性，并确保高质量的合成视角。先前的研究结合了深度先验，通常来自激光雷达或COLMAP提供的稀疏深度测量，以提高NeRF中的目标去除性能。然而，这些方法要么昂贵，要么耗时。在本文中，我们提出了一种新的方法，将单目深度估计与基于NeRF的对象去除模型相结合，以显著减少时间消耗，提高场景生成和对象去除的鲁棒性和质量。我们在KITTI数据集上对COLMAP的密集深度重建进行了全面评估，以验证其在深度图生成中的准确性。我们的研究结果表明，COLMAP可以作为地面实况深度图的有效替代方案，在这种情况下，这些信息缺失或获取成本高昂。此外，我们将各种单目深度估计方法集成到去除NeRF模型中，即SpinNeRF，以评估其提高物体去除性能的能力。我们的实验结果突出了单目深度估计在显著改善NeRF应用方面的潜力。 et.al.|[2405.00630](http://arxiv.org/abs/2405.00630)|null|
 |**2024-05-01**|**NC-SDF: Enhancing Indoor Scene Reconstruction Using Neural SDFs with View-Dependent Normal Compensation**|通过将单目几何先验作为额外的监督，最先进的神经隐式表面表示在室内场景重建中取得了令人印象深刻的结果。然而，我们已经观察到，这种先验之间的多视图不一致对高质量重建构成了挑战。作为回应，我们提出了NC-SDF，一种具有视图相关法线补偿（NC）的神经符号距离场（SDF）三维重建框架。具体来说，我们将单目正常先验中的视图相关偏差集成到场景的神经隐式表示中。通过自适应地学习和纠正偏差，我们的NC-SDF有效地减轻了不一致监督的不利影响，增强了重建中的全局一致性和局部细节。为了进一步细化细节，我们引入了一种信息像素采样策略，以更多地关注信息含量更高的复杂几何体。此外，我们设计了一种混合几何建模方法来改进神经隐式表示。在合成和真实世界数据集上的实验表明，NC-SDF在重建质量方面优于现有方法。 et.al.|[2405.00340](http://arxiv.org/abs/2405.00340)|null|
 
-<p align=right>(<a href=#updated-on-20240507>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240508>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-05-06**|**Quasi-Monte Carlo for Bayesian design of experiment problems governed by parametric PDEs**|本文有助于研究偏微分方程（PDE）控制的贝叶斯反问题的最优实验设计。我们推导了贝叶斯最优设计问题中高维参数和数据域上的多元二重积分问题的参数正则性的估计。我们使用两种方法对这些二重积分问题进行了详细分析：参数域和数据域上的拟蒙特卡罗（QMC）体积规则的全张量积和稀疏张量积组合。具体而言，我们表明后一种方法显著提高了收敛速度，表现出与单个高维积分的QMC积分相当的性能。此外，我们在两个空间维度上对具有未知扩散系数的椭圆PDE问题的预测收敛速度进行了数值验证，提供了支持理论结果的经验证据，并突出了实际应用性。 et.al.|[2405.03529](http://arxiv.org/abs/2405.03529)|null|
 |**2024-05-06**|**On anomalous dissipation induced by transport noise**|在本文中，我们证明了适当的传输噪声会导致二维Navier-Stokes方程和扩散方程在所有维度上解的能量异常耗散。关键因素是Meyers对具有传输噪声的SPDE的类型估计，该估计与最近对此类SPDE的缩放限制相结合。前者允许我们第一次对于这种类型的标度极限，在时间上一致地获得正光滑空间中的收敛性。与已知结果相比，主要的新颖之处之一是，即使存在强度任意小的传输噪声，也可能发生异常耗散。此外，我们还讨论了物理解释。 et.al.|[2405.03525](http://arxiv.org/abs/2405.03525)|null|
 
-<p align=right>(<a href=#updated-on-20240507>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240508>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-04-12**|**SpikeNVS: Enhancing Novel View Synthesis from Blurry Images via Spike Camera**|使用神经辐射场（NeRF）和三维高斯散射（3DGS）等神经场方法实现清晰的新视图合成（NVS）的最关键因素之一是训练图像的质量。然而，传统的RGB相机容易受到运动模糊的影响。相比之下，像事件和尖峰相机这样的神经形态相机固有地捕捉更全面的时间信息，这可以作为额外的训练数据提供场景的清晰表示。最近的方法已经探索了集成事件摄像机以提高NVS的质量。事件RGB方法有一些局限性，例如高昂的培训成本和无法在后台有效工作。相反，我们的研究引入了一种新的方法，使用尖峰相机来克服这些限制。通过将尖峰流的纹理重建视为基本事实，我们设计了尖峰纹理（TfS）损失。由于尖峰摄像机依赖于时间积分，而不是事件摄像机使用的时间微分，我们提出的TfS损失保持了可管理的训练成本。它同时处理前景对象和背景。我们还提供了用spike RGB相机系统拍摄的真实世界数据集，以促进未来的研究工作。我们使用合成和真实世界的数据集进行了广泛的实验，以证明我们的设计可以增强NeRF和3DGS的新视图合成。代码和数据集将提供给公众访问。 et.al.|[2404.06710](http://arxiv.org/abs/2404.06710)|null|
 |**2024-04-03**|**LiDAR4D: Dynamic Neural Fields for Novel Space-time View LiDAR Synthesis**|尽管神经辐射场（NeRFs）在图像新视图合成（NVS）方面取得了成功，但激光雷达NVS在很大程度上仍未被探索。以前的激光雷达NVS方法采用了图像NVS方法的简单转变，同时忽略了激光雷达点云的动态特性和大规模重建问题。有鉴于此，我们提出了LiDAR4D，这是一种用于新的时空LiDAR视图合成的仅限LiDAR的可微分框架。考虑到稀疏性和大规模特征，我们设计了一种结合多平面和网格特征的4D混合表示，以实现从粗到细的有效重建。此外，我们引入了从点云导出的几何约束，以提高时间一致性。对于激光雷达点云的真实合成，我们结合了光线下降概率的全局优化，以保持跨区域模式。在KITTI-360和NuScenes数据集上进行的大量实验证明了我们的方法在实现几何感知和时间一致的动态重建方面的优越性。代码可在https://github.com/ispc-lab/LiDAR4D. et.al.|[2404.02742](http://arxiv.org/abs/2404.02742)|**[link](https://github.com/ispc-lab/lidar4d)**|
 
-<p align=right>(<a href=#updated-on-20240507>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240508>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
