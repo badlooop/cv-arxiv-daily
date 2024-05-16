@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.05.15
+## Updated on 2024.05.16
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-05-04**|**LidaRF: Delving into Lidar for Neural Radiance Field on Street Scenes**|逼真度模拟在自动驾驶等应用中发挥着至关重要的作用，神经辐射场（NeRF）的进步可以通过自动创建数字3D资产实现更好的可扩展性。然而，由于在较高速度下相机运动基本共线和采样稀疏，街道场景的重建质量受到影响。另一方面，应用程序通常要求从偏离输入的摄影机视图进行渲染，以准确模拟车道变更等行为。在本文中，我们提出了一些见解，可以更好地利用激光雷达数据来提高街景的NeRF质量。首先，我们的框架从激光雷达中学习几何场景表示，该表示与基于隐式网格的表示融合用于辐射解码，从而提供由显式点云提供的更强的几何信息。其次，我们提出了一种鲁棒的遮挡感知深度监督方案，该方案允许通过累积来利用密集的激光雷达点。第三，我们从激光雷达点生成增强训练视图，以便进一步改进。我们的见解转化为在真实驾驶场景下大大改进的新颖视图合成。 et.al.|[2405.00900](http://arxiv.org/abs/2405.00900)|null|
 |**2024-05-09**|**RTG-SLAM: Real-time 3D Reconstruction at Scale using Gaussian Splatting**|我们提出了实时高斯SLAM（RTG-SLAM），这是一个使用RGBD相机的实时三维重建系统，用于使用高斯飞溅的大规模环境。该系统具有紧凑的高斯表示和高效的动态高斯优化方案。我们强制每个高斯要么不透明，要么几乎透明，不透明的适合表面和主色，透明的适合残余色。通过以不同于彩色渲染的方式渲染深度，我们让单个不透明高斯很好地拟合局部表面区域，而不需要多个重叠的高斯，从而大大降低了内存和计算成本。对于动态高斯优化，我们明确地为每帧三种类型的像素添加高斯：新观察到的、具有大颜色误差的和具有大深度误差的。我们还将所有高斯分为稳定高斯和不稳定高斯，其中稳定高斯有望很好地拟合先前观察到的RGBD图像，否则不稳定。我们只优化不稳定的高斯，只渲染不稳定高斯占用的像素。这样，要优化的高斯数和要渲染的像素都大大减少，并且可以实时进行优化。我们展示了各种大型场景的实时重建。与最先进的基于NeRF的RGBD SLAM相比，我们的系统实现了相当高质量的重建，但速度约为其两倍，内存成本约为其一半，并在新视图合成的真实性和相机跟踪精度方面表现出卓越的性能。 et.al.|[2404.19706](http://arxiv.org/abs/2404.19706)|null|
 
-<p align=right>(<a href=#updated-on-20240515>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240516>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-05-06**|**MVDiff: Scalable and Flexible Multi-View Diffusion for 3D Object Reconstruction from Single-View**|为3D重建任务生成一致的多个视图仍然是对现有图像到3D扩散模型的挑战。通常，将3D表示合并到扩散模型中会降低模型的速度以及可推广性和质量。本文提出了一个通用框架，从单个图像或利用场景表示变换器和视图条件扩散模型生成一致的多视图图像。在模型中，我们引入了极线几何约束和多视图注意力，以增强三维一致性。从一个图像输入中，我们的模型能够生成超过评估指标基线方法的3D网格，包括PSNR、SSIM和LPIPS。 et.al.|[2405.03894](http://arxiv.org/abs/2405.03894)|null|
 |**2024-05-06**|**Gaussian Splatting: 3D Reconstruction and Novel View Synthesis, a Review**|基于图像的3D重建是一项具有挑战性的任务，涉及从一组输入图像推断对象或场景的3D形状。基于学习的方法因其直接估计3D形状的能力而受到关注。这篇综述论文的重点是最先进的3D重建技术，包括生成新颖的、看不见的视图。概述了高斯飞溅方法的最新发展，包括输入类型、模型结构、输出表示和训练策略。还讨论了尚未解决的挑战和未来的方向。鉴于该领域的快速进展以及增强3D重建方法的众多机会，对算法进行全面检查似乎至关重要。因此，本研究对高斯散射的最新进展进行了全面的概述。 et.al.|[2405.03417](http://arxiv.org/abs/2405.03417)|null|
 
-<p align=right>(<a href=#updated-on-20240515>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240516>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-05-14**|**PTPI-DL-ROMs: pre-trained physics-informed deep learning-based reduced order models for nonlinear parametrized PDEs**|适当正交分解（POD）和基于深度学习的ROM（DL-ROM）的耦合已被证明是一种成功的策略，可以为参数非线性时变偏微分方程的实时解构建非侵入性、高精度的代理。由于其有限的复杂性，POD DL ROM的评估成本较低，训练速度也相对较快。然而，POD DL ROM仅通过训练数据来说明控制当前问题的物理定律，这些训练数据通常是通过依赖于基本方程的高保真离散化的全阶模型（FOM）获得的。此外，POD DL ROM的准确性在很大程度上取决于可用数据的量。在本文中，我们考虑了POD DL ROM的一个主要扩展，通过在训练过程中强制执行支配物理定律——也就是说，通过让它们了解物理——来补偿可能稀缺和/或不可用的数据，并提高整体可靠性。要做到这一点，我们首先用主干网架构来补充POD DL ROM，使它们能够在空间域的每个点上计算问题的解决方案，并最终通过强连续公式实现对基于物理的损失的无缝计算。然后，我们引入了一种有效的训练策略，该策略限制了基于物理的训练阶段所带来的臭名昭著的计算负担。特别是，我们利用现有的少量数据，开发了一种低成本的预训练程序；然后，我们对体系结构进行了微调，以进一步提高预测的可靠性。然后，在一组测试用例上评估所得到的预训练的物理信息DL ROM（PTPI DL ROM）的准确性和效率，这些测试用例从非仿射参数化平流-扩散反应方程到非线性问题，如流体流动的Navier-Stokes方程。 et.al.|[2405.08558](http://arxiv.org/abs/2405.08558)|null|
 |**2024-05-14**|**$γ$ rays from in-flight positron annihilation as a probe of new physics**|正电子在飞行中湮灭（IA）产生的$\gamma$射线发射是一种强大的可观察到的现象，可以限制来自外来源的高能正电子产生。通过将INTEGRAL、COMPTEL和EGRET的散射$\gamma$射线观测结果与理论预测进行比较，我们对亲电弱相互作用粒子（FIP）设置了最严格的约束，从而证明IA是新物理学的一个有价值的探针。特别是，我们广泛讨论了MeV级无菌中微子的情况，其中IA设置了最严格的约束，不包括分别与$\mu$和$\tau$中微子混合的无菌中微子的$ |U_。这些限制将现有限制提高了一个数量级以上。我们简要讨论了这些结果在许多奇异正电子源中的应用，如暗光子、类轴子粒子、原始黑洞（PBHs）和亚GeV暗物质（DM）。 et.al.|[2405.08482](http://arxiv.org/abs/2405.08482)|null|
 
-<p align=right>(<a href=#updated-on-20240515>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240516>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-04-15**|**Efficient and accurate neural field reconstruction using resistive memory**|人类通过将稀疏的观测整合到大规模互连的突触和神经元中来构建空间感知，提供了卓越的并行性和效率。在人工智能中复制这一能力在医学成像、AR/VR和嵌入式人工智能中有着广泛的应用，在这些领域，输入数据往往是稀疏的，计算资源有限。然而，传统的数字计算机信号重构方法面临着软硬件两方面的挑战。在软件方面，传统显式信号表示中的存储效率低下会带来困难。硬件障碍包括冯·诺依曼瓶颈，它限制了CPU和存储器之间的数据传输，以及CMOS电路在支持并行处理方面的局限性。我们提出了一种软硬件协同优化的系统方法，用于从稀疏输入重建信号。在软件方面，我们使用神经场通过神经网络隐式地表示信号，并使用低秩分解和结构化修剪对其进行进一步压缩。在硬件方面，我们设计了一个基于电阻存储器的内存计算（CIM）平台，该平台具有高斯编码器（GE）和MLP处理引擎（PE）。GE利用电阻存储器的内在随机性进行有效的输入编码，而PE通过硬件感知量化（HAQ）电路实现精确的权重映射。我们在基于40nm 256Kb电阻存储器的内存内计算宏上展示了该系统的功效，在不影响3D CT稀疏重建、新视图合成和动态场景新视图合成等任务的重建质量的情况下，实现了巨大的能效和并行性改进。这项工作推进了人工智能驱动的信号恢复技术，为未来高效、稳健的医疗人工智能和3D视觉应用铺平了道路。 et.al.|[2404.09613](http://arxiv.org/abs/2404.09613)|null|
 |**2024-04-10**|**Ray-driven Spectral CT Reconstruction Based on Neural Base-Material Fields**|在谱CT重建中，基底材料分解涉及求解大规模非线性积分方程组，这在数学上是高度不适定的。本文提出了一种模型，该模型使用神经场表示来参数化对象的衰减系数，从而避免了线积分离散化过程中像素驱动的投影系数矩阵的复杂计算。介绍了一种基于光线驱动神经场的线积分轻量级离散化方法，提高了离散化过程中积分逼近的精度。将基底材料表示为连续的向量值隐函数，以建立基底材料的神经场参数化模型。然后使用深度学习的自动微分框架来求解神经基底材料场的隐式连续函数。该方法不受重建图像空间分辨率的限制，并且网络具有紧凑和规则的特性。实验验证表明，我们的方法在处理光谱CT重建方面表现得非常好。此外，它还满足了生成高分辨率重建图像的要求。 et.al.|[2404.06991](http://arxiv.org/abs/2404.06991)|null|
 
-<p align=right>(<a href=#updated-on-20240515>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240516>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
