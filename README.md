@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.05.22
+## Updated on 2024.05.23
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-05-10**|**MGS-SLAM: Monocular Sparse Tracking and Gaussian Mapping with Depth Smooth Regularization**|本文介绍了一种基于高斯散射的密集视觉同步定位与映射（VSLAM）的新框架。近年来，基于高斯飞溅的SLAM取得了很好的结果，但它依赖于RGB-D输入，跟踪能力较弱。为了解决这些局限性，我们首次将高级稀疏视觉里程计与密集高斯散射场景表示独特地集成在一起，从而消除了对基于高斯散射的SLAM系统典型的深度图的依赖，并增强了跟踪鲁棒性。在这里，稀疏视觉里程计在RGB流中跟踪相机姿势，而高斯散射处理地图重建。这些组件通过多视图立体（MVS）深度估计网络互连。我们提出了一种深度平滑损失来减少估计深度图的负面影响。此外，稀疏视觉里程计和密集高斯图之间的尺度一致性通过稀疏密集调整环（SDAR）得以保持。我们已经在各种合成和真实世界的数据集上评估了我们的系统。我们的姿态估计精度超过了现有方法，并达到了最先进的性能。此外，在新的视图合成保真度方面，它优于以前的单目方法，与利用RGB-D输入的神经SLAM系统的结果相匹配。 et.al.|[2405.06241](http://arxiv.org/abs/2405.06241)|null|
 |**2024-05-09**|**FastScene: Text-Driven Fast 3D Indoor Scene Generation via Panoramic Gaussian Splatting**|文本驱动的3D室内场景生成具有广泛的应用，从游戏和智能家居到AR/VR应用。快速高保真的场景生成对于确保用户友好的体验至关重要。然而，现有方法的特点是生成过程漫长，或者需要复杂的手动指定运动参数，这给用户带来了不便。此外，这些方法通常依赖于窄场视点迭代生成，从而影响全局一致性和整体场景质量。为了解决这些问题，我们提出了FastScene，这是一个用于快速、更高质量的3D场景生成的框架，同时保持场景一致性。具体来说，在给定文本提示的情况下，我们生成全景图并估计其深度，因为全景图包含了关于整个场景的信息，并表现出明确的几何约束。为了获得高质量的新颖视图，我们引入了粗略视图合成（CVS）和渐进新颖视图修复（PNVI）策略，以确保场景一致性和视图质量。随后，我们利用多视图投影（MVP）形成透视图，并应用3D高斯散射（3DGS）进行场景重建。综合实验表明，FastScene在生成速度和质量上都优于其他方法，具有更好的场景一致性。值得注意的是，FastScene仅在文本提示的引导下，就可以在15分钟内生成3D场景，这比最先进的方法快至少一个小时，使其成为用户友好的场景生成典范。 et.al.|[2405.05768](http://arxiv.org/abs/2405.05768)|null|
 
-<p align=right>(<a href=#updated-on-20240522>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240523>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-05-12**|**CoViews: Adaptive Augmentation Using Cooperative Views for Enhanced Contrastive Learning**|数据扩充在生成有效对比学习所需的高质量正负对方面发挥着关键作用。然而，常见的做法涉及重复使用单个增强策略来生成多个视图，由于视图之间缺乏合作，可能导致训练对效率低下。此外，为了找到最佳的扩充集，许多现有方法需要广泛的监督评估，忽略了模型的演变性质，在整个训练过程中可能需要不同的扩充。其他方法训练可微增广生成器，从而限制了文献中不可微变换函数的使用。在本文中，我们通过提出一个框架来解决这些挑战，该框架用于以最小的计算开销学习用于对比学习的高效自适应数据增强策略。我们的方法在培训期间不断生成新的数据增强策略，并在没有任何监督的情况下产生有效的积极/消极因素。在这个框架内，我们提出了两种方法：\ac｛IndepViews｝，它生成在所有视图中使用的增强策略；\ac{CoViews}，它为每个视图生成依赖的增强策略。这使我们能够学习应用于每个视图的转换之间的依赖关系，并确保应用于不同视图的增强策略相互补充，从而产生更有意义和有区别的表示。通过在多个数据集和对比学习框架上的广泛实验，我们证明了我们的方法始终优于基线解决方案，并且使用依赖于视图的增强策略的训练优于使用跨视图共享的独立策略的训练，展示了其在增强对比学习性能方面的有效性。 et.al.|[2405.07116](http://arxiv.org/abs/2405.07116)|null|
 |**2024-05-11**|**TD-NeRF: Novel Truncated Depth Prior for Joint Camera Pose and Neural Radiance Field Optimization**|对精确相机姿态的依赖是神经辐射场（NeRF）模型在3D重建和SLAM任务中广泛部署的一个重要障碍。现有方法引入单目深度先验来联合优化相机姿态和NeRF，未能充分利用深度先验，并忽略了其固有噪声的影响。在本文中，我们提出了截断深度NeRF（TD NeRF），这是一种新的方法，通过联合优化辐射场和相机姿态的可学习参数，可以从未知的相机姿态中训练NeRF。我们的方法通过三个关键进展明确利用了单目深度先验：1）我们提出了一种新的基于截断正态分布的基于深度的射线采样策略，提高了姿态估计的收敛速度和精度；2） 为了规避局部极小值并细化深度几何，我们引入了一种从粗到细的训练策略，该策略逐步提高了深度精度；3） 我们提出了一种更鲁棒的帧间点约束，该约束增强了训练过程中对深度噪声的鲁棒性。在三个数据集上的实验结果表明，TD NeRF在相机姿态和NeRF的联合优化方面取得了卓越的性能，超过了以往的工作，并生成了更准确的深度几何。我们方法的实现已在发布https://github.com/nubot-nudt/TD-NeRF. et.al.|[2405.07027](http://arxiv.org/abs/2405.07027)|**[link](https://github.com/nubot-nudt/td-nerf)**|
 
-<p align=right>(<a href=#updated-on-20240522>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240523>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-05-21**|**Diffusion-RSCC: Diffusion Probabilistic Model for Change Captioning in Remote Sensing Images**|遥感图像变化字幕（RSICC）旨在生成类人语言来描述双时间遥感图像对之间的语义变化。它为环境动态和土地管理提供了宝贵的见解。与传统的更改字幕任务不同，RSICC不仅涉及在不同模态中检索相关信息并生成流畅的字幕，还涉及减轻像素级差异对地形更改定位的影响。由于时间跨度长，像素问题降低了生成字幕的准确性。受扩散模型显著生成能力的启发，我们提出了一个RSICC的概率扩散模型来解决上述问题。在训练过程中，我们构造了一个以跨模态特征为条件的噪声预测器，以学习马尔可夫链下从真实字幕分布到标准高斯分布的分布。同时，针对反向过程中的噪声预测器，设计了跨模式融合和叠加自注意模块。在测试阶段，训练有素的噪声预测器有助于估计分布的平均值，并逐步生成变化字幕。在LEVIR-CC数据集上进行的大量实验证明了我们的扩散RSCC及其单个组件的有效性。定量结果显示，在传统和新增强的指标中，与现有方法相比，性能优越。代码和材料将在线提供，网址为https://github.com/Fay-Y/Diffusion-RSCC. et.al.|[2405.12875](http://arxiv.org/abs/2405.12875)|**[link](https://github.com/fay-y/diffusion-rscc)**|
 |**2024-05-21**|**High-Field Microscale NMR Spectroscopy with NV Centers in Dipolarly-Coupled Samples**|基于金刚石的量子传感器在快速分子运动平均目标核之间偶极相互作用的情况下，实现了微尺度的高分辨率NMR光谱。然而，在低扩散的样品中，普遍存在的偶极耦合对相关光谱信息的提取提出了挑战。在这项工作中，我们提出了一种协议，该协议能够使用基于氮空位（NV）集成的传感器在高磁场下扫描偶极耦合样品中的核自旋。我们的协议基于射频（RF）和微波（MW）辐射的同步传输，以消除扫描样本中原子核之间的耦合，并从样本的磁化动力学中有效地提取目标能量偏移。此外，该方法被设计为在高磁场下操作，从而导致更大的样品热极化，从而增加NMR信号。我们的方法的精度最终受到样本相干时间的限制，从而能够准确识别固态系统中的相关能量偏移。 et.al.|[2405.12857](http://arxiv.org/abs/2405.12857)|null|
 
-<p align=right>(<a href=#updated-on-20240522>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240523>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-04-26**|**ArtNeRF: A Stylized Neural Field for 3D-Aware Cartoonized Face Synthesis**|生成视觉模型和神经辐射领域的最新进展极大地促进了3D感知图像合成和风格化任务。然而，以前基于NeRF的工作仅限于单场景风格化，训练模型生成具有任意风格的3D感知卡通人脸仍然没有解决。为了解决这个问题，我们提出了ArtNeRF，这是一种从3D感知GAN中派生出来的新颖的人脸风格化框架。在这个框架中，我们利用表达生成器来合成风格化的人脸，并利用三分支鉴别器模块来提高生成人脸的视觉质量和风格一致性。具体而言，利用基于对比学习的风格编码器来提取风格图像的鲁棒低维嵌入，使生成器能够获得各种风格的知识。为了平滑跨领域迁移学习的训练过程，我们提出了一个自适应风格混合模块，该模块有助于注入风格信息，并允许用户自由调整风格化水平。我们进一步引入了一个神经渲染模块，以实现更高分辨率图像的高效实时渲染。大量实验表明，ArtNeRF在生成具有任意风格的高质量3D感知卡通人脸方面是通用的。 et.al.|[2404.13711](http://arxiv.org/abs/2404.13711)|**[link](https://github.com/silence-tang/artnerf)**|
 |**2024-04-19**|**BANF: Band-limited Neural Fields for Levels of Detail Reconstruction**|主要由于其隐含性质，神经场缺乏直接的滤波机制，因为离散信号处理的傅立叶分析不直接适用于这些表示。神经场的有效滤波对于实现下游应用程序中的细节处理水平至关重要，并支持在规则网格上对场进行采样的操作（例如，行进立方体）。试图在频域中分解神经场的现有方法要么采用启发式方法，要么需要对神经场架构进行广泛修改。我们展示了通过一个简单的修改，可以获得低通滤波的神经场，进而展示了如何利用这一点来获得整个信号的频率分解。我们通过研究细节水平重建来证明我们的技术的有效性，并展示了如何有效地计算粗糙的表示。 et.al.|[2404.13024](http://arxiv.org/abs/2404.13024)|null|
 
-<p align=right>(<a href=#updated-on-20240522>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240523>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
