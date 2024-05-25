@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.05.24
+## Updated on 2024.05.25
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-05-20**|**MirrorGaussian: Reflecting 3D Gaussians for Reconstructing Mirror Reflections**|3D Gaussian Splatting展示了照片逼真度和实时新颖视图合成方面的显著进步。然而，它在建模镜面反射方面面临挑战，因为从不同的角度来看，镜面反射表现出显著的外观变化。为了解决这个问题，我们提出了MirrorGaussian，这是第一种基于3D高斯散射的实时渲染镜像场景重建方法。关键见解基于真实世界空间和虚拟镜像空间之间的镜像对称性。我们引入了一种直观的双渲染策略，该策略能够对真实世界的3D高斯和通过在镜像平面上反射前者而获得的镜像对应物进行可微分光栅化。所有3D高斯都是在端到端的框架中与镜像平面联合优化的。MirrorGaussian在有镜像的场景中实现了高质量和实时的渲染，支持场景编辑，如添加新的镜像和对象。在多个数据集上进行的综合实验表明，我们的方法显著优于现有方法，取得了最先进的结果。项目页面：https://mirror-gaussian.github.io/. et.al.|[2405.11921](http://arxiv.org/abs/2405.11921)|null|
 |**2024-05-17**|**Photorealistic 3D Urban Scene Reconstruction and Point Cloud Extraction using Google Earth Imagery and Gaussian Splatting**|三维城市场景重建和建模是遥感的一个重要研究领域，在学术界、商业界、工业界和行政管理界有着广泛的应用。视图合成模型的最新进展促进了仅从2D图像进行真实感3D重建。利用Google Earth图像，我们构建了以滑铁卢大学为中心的滑铁卢地区的3D高斯散射模型，并能够根据我们在基准测试中演示的神经辐射场获得远远超过以往3D视图合成结果的视图合成结果。此外，我们使用从3D高斯散射模式中提取的3D点云检索场景的3D几何结构，我们将其与场景的多视图立体密集重建进行了对比，从而通过3D高斯散射重建大规模城市场景的3D几何形状和照片真实感照明 et.al.|[2405.11021](http://arxiv.org/abs/2405.11021)|null|
 
-<p align=right>(<a href=#updated-on-20240524>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240525>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-05-16**|**Manifold-based Incomplete Multi-view Clustering via Bi-Consistency Guidance**|不完全多视图聚类主要致力于将未标记的数据划分为具有缺失实例的相应类别，由于其在实际应用中的优越性而受到广泛关注。考虑到不完全数据的影响，现有的方法大多试图通过添加额外的项来恢复数据。然而，对于无监督方法，一个简单的恢复策略会导致错误和异常值的积累，这将影响方法的性能。总体而言，以前的方法没有考虑到恢复实例的有效性，或者无法灵活地平衡恢复数据与原始数据之间的差异。为了解决这些问题，我们提出了一种新的方法，称为基于流形的双一致性引导不完全多视图聚类（MIMB），该方法可以灵活地恢复不同视图之间的不完整数据，并试图通过反向正则化实现双一致性引导。特别地，MIMB通过恢复丢失的实例将重建项添加到表示学习中，从而动态地检查潜在的一致性表示。此外，为了保持多个视图之间的一致性信息，MIMB实现了一种具有一致性表示的反向正则化的双一致性引导策略，并提出了一种用于探索恢复数据的隐藏结构的流形嵌入措施。值得注意的是，MIMB旨在平衡不同视图的重要性，并为每个视图引入自适应权重项。最后，设计了一种具有交替迭代优化策略的优化算法用于最终聚类。在6个基准数据集上进行了大量的实验结果，证实了与几个最先进的基线相比，MIMB可以显著获得优越的结果。 et.al.|[2405.10987](http://arxiv.org/abs/2405.10987)|null|
 |**2024-05-16**|**CAT3D: Create Anything in 3D with Multi-View Diffusion Models**|3D重建的进步已经实现了高质量的3D捕捉，但需要用户收集数百到数千张图像来创建3D场景。我们介绍了CAT3D，这是一种通过使用多视图扩散模型模拟真实世界的捕捉过程来在3D中创建任何东西的方法。给定任意数量的输入图像和一组目标新颖视点，我们的模型生成场景的高度一致的新颖视图。这些生成的视图可以用作鲁棒3D重建技术的输入，以产生可以从任何视点实时渲染的3D表示。CAT3D可以在一分钟内创建整个3D场景，并且优于现有的单图像和少视图3D场景创建方法。有关结果和交互式演示，请访问我们的项目页面https://cat3d.github.io . et.al.|[2405.10314](http://arxiv.org/abs/2405.10314)|null|
 
-<p align=right>(<a href=#updated-on-20240524>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240525>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-05-23**|**New limits on neutrino decay from high-energy astrophysical neutrinos**|由于中微子有质量差异，它们可能会相互衰变。但它们的寿命可能很长，即使被新物理缩短了，所以衰变可能只在长途旅行中影响中微子。这使得行进长达数十亿光年的高能天体物理中微子成为敏感的衰变探测器。然而，他们的敏感性必须受到现实的影响。我们从中得出了中微子寿命的彻底界限，解释了关键的天体物理未知因素和中微子探测的细微差别。根据目前的IceCube数据和即将推出的探测器的10倍改进预测，使用扩散中微子通量，我们不赞成寿命 $\tau\lesssim 20$-450 s$（m/{\rm-eV}）$。首次使用来自活动星系NGC 1068的中微子，现存的未知因素排除了今天的寿命界限，但即将推出的探测器可能会破坏$\tau\sim 100$-5000s$（m/{\rmeV}）$ 。 et.al.|[2405.14826](http://arxiv.org/abs/2405.14826)|null|
 |**2024-05-23**|**PaGoDA: Progressive Growing of a One-Step Generator from a Low-Resolution Diffusion Teacher**|为了加速采样，扩散模型（DM）通常被提炼成生成器，在一步中直接将噪声映射到数据。在这种方法中，生成器的分辨率从根本上受到教师DM的分辨率的限制。为了克服这一限制，我们提出了扩散自动编码器的渐进增长（PaGoDA），这是一种将生成器的分辨率逐步增长到原始教师DM之外的技术。我们的关键见解是，可以使用预先训练的低分辨率DM，通过在时间上向前求解PF-ODE（数据到噪声），从适当的下采样图像开始，将高分辨率数据决定性地编码到结构化的潜在空间。在自动编码器框架中使用这种冻结编码器，我们通过逐渐提高解码器的分辨率来训练解码器。从逐渐增长的解码器的性质来看，当我们对学生模型进行上采样时，PaGoDA避免了对教师/学生模型进行重新训练，从而使整个训练管道更加便宜。在实验中，我们使用逐步增长的解码器从预先训练的模型的64x64分辨率上采样，生成512x512个样本，与单步蒸馏的稳定扩散类LCM相比，推理速度快了2倍。PaGoDA还在ImageNet上实现了从64x64到512x512的所有分辨率的最先进的FID。此外，我们还展示了PaGoDA在解决反问题和实现可控发电方面的有效性。 et.al.|[2405.14822](http://arxiv.org/abs/2405.14822)|null|
 
-<p align=right>(<a href=#updated-on-20240524>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240525>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-05-06**|**Neural Graph Mapping for Dense SLAM with Efficient Loop Closure**|现有的基于神经场的SLAM方法通常使用单个单片场作为其场景表示。这阻碍了循环闭合约束的有效结合，并限制了可扩展性。为了解决这些缺点，我们提出了一种神经映射框架，该框架将轻量级神经场锚定到稀疏视觉SLAM系统的姿态图上。我们的方法显示了整合大规模闭环的能力，同时限制了必要的重新融合。此外，我们通过在优化过程中考虑多个环路闭合来验证我们的方法的可扩展性，并证明我们的方法在质量和运行时间方面优于现有的最先进的方法。我们的代码可在https://kth-rpl.github.io/neural_graph_mapping/. et.al.|[2405.03633](http://arxiv.org/abs/2405.03633)|null|
 |**2024-05-03**|**Simulation-based Inference of Developmental EEG Maturation with the Spectral Graph Model**|宏观神经活动的光谱内容在整个发育过程中不断演变，但这种成熟与潜在的大脑网络形成和动力学之间的关系尚不清楚。为了深入了解这一过程的机制，我们通过频谱图模型（SGM）的贝叶斯模型反演来评估发育脑电频谱变化，SGM是一种全脑空间频谱活动的简约模型，源于由结构连接体耦合的线性化神经场模型。基于模拟的推理用于从跨越发育期的脑电图频谱中估计年龄变化的SGM参数后验分布。我们发现，这种模型拟合方法通过关键神经参数的神经生物学一致进展准确地捕捉了脑电图频谱的发育成熟：长程耦合、轴突传导速度和兴奋性：抑制性平衡。这些结果表明，在正常发育过程中观察到的大脑活动的光谱成熟得到了功能适应的支持，特别是局部神经动力学的年龄依赖性调节及其在宏观结构网络中的长期耦合。 et.al.|[2405.02524](http://arxiv.org/abs/2405.02524)|null|
 
-<p align=right>(<a href=#updated-on-20240524>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240525>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
