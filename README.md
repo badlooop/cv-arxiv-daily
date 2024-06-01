@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.05.31
+## Updated on 2024.06.01
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-05-29**|**LP-3DGS: Learning to Prune 3D Gaussian Splatting**|近年来，三维高斯散射（3DGS）以其高质量和快速的渲染速度成为新视图合成（NVS）的主流方法之一。然而，作为一种基于点的场景表示，3DGS可能会生成大量高斯来适应场景，从而导致高内存使用率。已经提出的改进需要经验和预设的修剪比率或重要性得分阈值来修剪点云。这样的超参数需要多轮训练来优化和实现最大修剪率，同时保持每个场景的渲染质量。在这项工作中，我们提出了学习修剪3DGS（LP-3DGS），其中将可训练的二进制掩码应用于重要性得分，可以自动找到最佳修剪率。我们没有使用传统的直通估计器（STE）方法来近似二进制掩模梯度，而是重新设计了掩模函数，以利用Gumbel-Sigmoid方法，使其可微并与现有的3DGS训练过程兼容。大量实验表明，LP-3DGS始终能产生高效且高质量的良好平衡。 et.al.|[2405.18784](http://arxiv.org/abs/2405.18784)|null|
 |**2024-05-29**|**Zero-to-Hero: Enhancing Zero-Shot Novel View Synthesis via Attention Map Filtering**|基于单一源图像从任意视图生成逼真图像仍然是计算机视觉中的一个重大挑战，其应用范围从电子商务到沉浸式虚拟体验。扩散模型的最新进展，特别是Zero-1-to-3模型，已被广泛用于生成看似合理的视图、视频和3D模型。然而，这些模型在新视图生成中仍然存在不一致和不可信的问题，尤其是在具有挑战性的观点变化中。在这项工作中，我们提出了Zero-to-Hero，这是一种新的测试时间方法，通过在Zero-1-3的去噪过程中操纵注意力图来增强视图合成。通过将去噪过程与随机梯度下降（SGD）进行类比，我们实现了一种聚合注意力图的过滤机制，增强了生成的可靠性和真实性。这个过程提高了几何一致性，而不需要重新训练或大量的计算资源。此外，我们修改了自注意机制，以整合来自源代码的信息，减少形状失真。这些过程得到了专门的采样计划的进一步支持。实验结果表明，在一组不同的分布对象上验证了保真度和一致性的显著提高。 et.al.|[2405.18677](http://arxiv.org/abs/2405.18677)|null|
 
-<p align=right>(<a href=#updated-on-20240531>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240601>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-05-29**|**Memorize What Matters: Emergent Scene Decomposition from Multitraverse**|人类自然会保留对永恒元素的记忆，而短暂的时刻往往会从记忆的缝隙中溜走。这种选择性保留对于机器人感知、定位和绘图至关重要。为了赋予机器人这种能力，我们引入了3D高斯映射（3DGM），这是一种基于3D高斯飞溅的自监督、仅限相机的离线映射框架。3DGM将来自同一区域的多遍历RGB视频转换为基于高斯的环境图，同时执行2D短暂对象分割。我们的主要观察结果是，环境在遍历中保持一致，而对象经常发生变化。这使我们能够利用重复遍历的自我监督来实现环境对象分解。更具体地说，3DGM将多遍历环境映射公式化为一个鲁棒的可微渲染问题，将环境和对象的像素分别视为内值和外值。3DGM使用稳健特征提取、特征残差挖掘和稳健优化，在没有人工干预的情况下联合执行2D分割和3D映射。我们建立了Mapverse基准，来源于伊萨卡365和nuPlan数据集，以评估我们在无监督二维分割、三维重建和神经渲染中的方法。大量结果验证了我们的方法在自动驾驶和机器人方面的有效性和潜力。 et.al.|[2405.17187](http://arxiv.org/abs/2405.17187)|**[link](https://github.com/nvlabs/3dgm)**|
 |**2024-05-27**|**SDL-MVS: View Space and Depth Deformable Learning Paradigm for Multi-View Stereo Reconstruction in Remote Sensing**|基于遥感图像的多视角立体研究促进了大规模城市三维重建的发展。然而，遥感多视点图像数据在获取过程中存在遮挡和视点之间亮度不均匀的问题，这导致了深度估计中细节模糊的问题。为了解决上述问题，我们重新审视了多视图立体任务中的可变形学习方法，并提出了一种基于视图空间和深度可变形学习（SDL-MVS）的新范式，旨在学习不同视图空间中特征的可变形交互，并对深度范围和区间进行可变形建模，以实现高精度的深度估计。具体来说，为了解决遮挡和亮度不均匀导致的视图噪声问题，我们提出了一种渐进空间可变形采样（PSS）机制，该机制以渐进的方式对3D截头体空间和2D图像空间中的采样点进行可变形学习，以自适应地将源特征嵌入到参考特征中。为了进一步优化深度，我们引入了深度假设可变形离散化（DHD），它通过自适应调整深度范围假设和对深度区间假设进行可变形离散来实现深度先验的精确定位。最后，我们的SDL-MVS通过视图空间和深度的可变形学习范式，实现了多视图立体中遮挡和亮度不均的显式建模，实现了精确的多视图深度估计。在珞珈MVS和WHU数据集上进行的大量实验表明，我们的SDL-MVS达到了最先进的性能。值得注意的是，在三个视图作为输入的前提下，我们的SDL-MVS在珞珈MVS数据集上实现了0.086的MAE误差，<0.6米的准确率为98.9%，<3区间的准确度为98.9%。 et.al.|[2405.17140](http://arxiv.org/abs/2405.17140)|null|
 
-<p align=right>(<a href=#updated-on-20240531>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240601>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-05-30**|**CV-VAE: A Compatible Video VAE for Latent Generative Video Models**|利用变分自动编码器（VAE）等网络对视频进行时空压缩，在OpenAI的SORA和许多其他视频生成模型中发挥着至关重要的作用。例如，许多类似LLM的视频模型学习从VQVAE框架内的3D VAE导出的离散令牌的分布，而大多数基于扩散的视频模型在没有量化的情况下捕获由2D VAE提取的连续潜在令牌的分布。时间压缩简单地通过均匀的帧采样来实现，这导致连续帧之间的不平滑运动。目前，研究界缺乏用于基于潜在扩散的视频模型的常用连续视频（3D）VAE。此外，由于当前基于扩散的方法通常使用预先训练的文本到图像（T2I）模型来实现，因此在不考虑与现有T2I模型的兼容性的情况下直接训练视频VAE将导致它们之间的潜在空间间隙，这将花费巨大的计算资源来进行训练以弥合间隙，即使将T2I模型作为初始化。为了解决这个问题，我们提出了一种用于训练潜在视频模型的视频VAE的方法，即CV-VAE，其潜在空间与给定图像VAE的潜在空间兼容，例如，稳定扩散（SD）的图像VAE。兼容性是通过所提出的新的潜在空间正则化来实现的，该正则化包括使用图像VAE来公式化正则化损失。得益于潜在空间兼容性，视频模型可以在真正时空压缩的潜在空间中从预先训练的T2I或视频模型无缝地训练，而不是简单地以相等的间隔对视频帧进行采样。使用我们的CV-VAE，现有的视频模型可以在最小的微调下生成四倍多的帧。进行了大量的实验来证明所提出的视频VAE的有效性。 et.al.|[2405.20279](http://arxiv.org/abs/2405.20279)|**[link](https://github.com/ailab-cvc/cv-vae)**|
 |**2024-05-30**|**KerasCV and KerasNLP: Vision and Language Power-Ups**|我们展示了Keras域包KerasCV和KerasNLP，它们是Keras API的扩展，用于计算机视觉和自然语言处理工作流，能够在JAX、TensorFlow或PyTorch上运行。这些领域包旨在实现快速实验，重点关注易用性和性能。我们采用模块化分层设计：在库的最低抽象级别，我们提供用于创建模型和数据预处理管道的构建块，在库的最高抽象级别，为Stable Diffusion、YOLOv8、GPT2、BERT、Mistral、CLIP、Gemma、T5等流行架构提供预训练的“任务”模型。任务模型具有内置的预处理、预训练的权重，可以对原始输入进行微调。为了实现高效训练，我们支持所有模型的XLA编译，并通过使用tf.data API编译的TensorFlow操作图运行所有预处理。这些库是完全开源的（Apache 2.0许可证）。可在GitHub上获得。 et.al.|[2405.20247](http://arxiv.org/abs/2405.20247)|null|
 
-<p align=right>(<a href=#updated-on-20240531>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240601>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-05-21**|**Implicit-ARAP: Efficient Handle-Guided Deformation of High-Resolution Meshes and Neural Fields via Local Patch Meshing**|在这项工作中，我们提出了神经符号距离场的局部补丁网格表示。该技术允许通过仅使用SDF信息及其梯度将平面面片网格投影和变形到标高集曲面上来离散输入SDF的标高集的局部区域。我们的分析表明，这种方法比标准的行进立方体算法更准确地逼近隐式曲面。然后，我们将这种表示应用于手柄引导变形的设置：我们引入了两个不同的管道，它们利用3D神经场来计算在给定约束集下高分辨率网格和神经场的“尽可能刚性”变形。我们对我们的方法和神经场和网格变形的各种基线进行了全面评估，结果表明，这两条管道在结果质量和稳健性方面都取得了令人印象深刻的效率和显著的改进。通过我们的新型流水线，我们引入了一种可扩展的方法来解决高分辨率网格上公认的几何处理问题，并为通过局部面片网格将其他几何任务扩展到隐式曲面领域铺平了道路。 et.al.|[2405.12895](http://arxiv.org/abs/2405.12895)|null|
 |**2024-05-16**|**Single-shot volumetric fluorescence imaging with neural fields**|与需要在多个轴向平面上扫描的传统成像方法相比，单次体积荧光（SVF）成像提供了显著的优势，因为它可以在大视场上以高时间分辨率捕获生物过程。现有的SVF成像方法通常需要大的、复杂的点扩展函数（PSF）来满足压缩传感的多路复用要求，这限制了信噪比、分辨率和/或视场。在本文中，我们介绍了QuadraPol-PSF与神经场相结合，这是一种新的SVF成像方法。该方法在后焦平面利用成本效益高的定制偏振器和偏振相机来检测荧光，在紧凑的PSF内有效地编码3D场景，而没有深度模糊。此外，我们提出了一种基于神经场技术的重建算法，该算法解决了用于校正成像系统像差的相位检索方法的不精确性。该算法将实验PSF的准确性与计算生成的检索PSF的长景深相结合。QuadraPol PSF与神经场相结合，可将传统荧光显微镜的采集时间显著缩短约20倍，并可一次性捕获100 mm $^3$ 立方体积。我们通过对沙子表面细菌菌落的全聚焦成像和植物根系形态的可视化，验证了我们的硬件和算法的有效性。我们的方法为推进生物学研究和生态学研究提供了强有力的工具。 et.al.|[2405.10463](http://arxiv.org/abs/2405.10463)|null|
 
-<p align=right>(<a href=#updated-on-20240531>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240601>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
