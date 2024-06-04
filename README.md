@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.06.03
+## Updated on 2024.06.04
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-05-29**|**Neural Radiance Fields for Novel View Synthesis in Monocular Gastroscopy**|从预先捕获的单目胃镜图像中合成患者胃内任意新颖的视点图像是胃诊断中一个很有前途的课题。实现这一目标的典型方法集成了传统的三维重建技术，包括运动结构（SfM）和泊松曲面重建。这些方法产生显式的3D表示，例如点云和网格，从而能够从新的视点渲染图像。然而，胃内低纹理和非朗伯区域的存在往往会导致点云和网格重建的噪声和不完整，阻碍了高质量图像渲染的实现。本文将新兴的神经辐射场（NeRF）技术应用于单目胃镜数据，以合成新视点的照片逼真图像。为了解决单眼胃镜检查局部区域中由于视图稀疏而导致的性能下降问题，我们将来自预重建点云的几何先验纳入NeRF的训练中，这为预捕获的观察到的视图和生成的未观察到的图像引入了一种新的基于几何的损失。与最近的其他NeRF方法相比，我们的方法在定性和定量上都展示了从胃内新视角进行的高保真图像渲染。 et.al.|[2405.18863](http://arxiv.org/abs/2405.18863)|null|
 |**2024-05-29**|**LP-3DGS: Learning to Prune 3D Gaussian Splatting**|近年来，三维高斯散射（3DGS）以其高质量和快速的渲染速度成为新视图合成（NVS）的主流方法之一。然而，作为一种基于点的场景表示，3DGS可能会生成大量高斯来适应场景，从而导致高内存使用率。已经提出的改进需要经验和预设的修剪比率或重要性得分阈值来修剪点云。这样的超参数需要多轮训练来优化和实现最大修剪率，同时保持每个场景的渲染质量。在这项工作中，我们提出了学习修剪3DGS（LP-3DGS），其中将可训练的二进制掩码应用于重要性得分，可以自动找到最佳修剪率。我们没有使用传统的直通估计器（STE）方法来近似二进制掩模梯度，而是重新设计了掩模函数，以利用Gumbel-Sigmoid方法，使其可微并与现有的3DGS训练过程兼容。大量实验表明，LP-3DGS始终能产生高效且高质量的良好平衡。 et.al.|[2405.18784](http://arxiv.org/abs/2405.18784)|**[link](https://github.com/dexgfsdfdsg/LP-3DGS)**|
 
-<p align=right>(<a href=#updated-on-20240603>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240604>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-05-29**|**Neural Radiance Fields for Novel View Synthesis in Monocular Gastroscopy**|从预先捕获的单目胃镜图像中合成患者胃内任意新颖的视点图像是胃诊断中一个很有前途的课题。实现这一目标的典型方法集成了传统的三维重建技术，包括运动结构（SfM）和泊松曲面重建。这些方法产生显式的3D表示，例如点云和网格，从而能够从新的视点渲染图像。然而，胃内低纹理和非朗伯区域的存在往往会导致点云和网格重建的噪声和不完整，阻碍了高质量图像渲染的实现。本文将新兴的神经辐射场（NeRF）技术应用于单目胃镜数据，以合成新视点的照片逼真图像。为了解决单眼胃镜检查局部区域中由于视图稀疏而导致的性能下降问题，我们将来自预重建点云的几何先验纳入NeRF的训练中，这为预捕获的观察到的视图和生成的未观察到的图像引入了一种新的基于几何的损失。与最近的其他NeRF方法相比，我们的方法在定性和定量上都展示了从胃内新视角进行的高保真图像渲染。 et.al.|[2405.18863](http://arxiv.org/abs/2405.18863)|null|
 |**2024-05-28**|**FreeSplat: Generalizable 3D Gaussian Splatting Towards Free-View Synthesis of Indoor Scenes**|赋予3D高斯飞溅以泛化能力是很有吸引力的。然而，现有的可推广的3D高斯散点方法由于其主干较重，在很大程度上局限于立体图像之间的窄范围插值，因此缺乏准确定位3D高斯并支持宽视野范围内的自由视野合成的能力。在本文中，我们提出了一种新的框架FreeSplat，它能够从长序列输入到自由视图合成重建几何一致的3D场景。具体而言，我们首先介绍了低成本跨视图聚合，该聚合通过在附近视图之间构建自适应成本体积并使用多尺度结构聚合特征来实现。随后，我们提出了逐像素三元组融合，以消除重叠视图区域中3D高斯的冗余，并聚合在多个视图中观察到的特征。此外，我们提出了一种简单但有效的自由视图训练策略，无论视图的数量如何，都能确保在更广泛的视图范围内进行稳健的视图合成。我们的经验结果表明，在不同数量的输入视图中，新视图渲染的颜色图质量和深度图精度都具有最先进的新视图合成性能。我们还表明，FreeSplat可以更有效地执行推理，并可以有效地减少冗余高斯，为无深度先验的前馈大场景重建提供了可能性。 et.al.|[2405.17958](http://arxiv.org/abs/2405.17958)|**[link](https://github.com/wangys16/freesplat)**|
 
-<p align=right>(<a href=#updated-on-20240603>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240604>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-05-31**|**Flow matching achieves minimax optimal convergence**|流匹配作为一种无需仿真的生成模型，已经引起了人们的广泛关注。与基于随机微分方程的扩散模型不同，FM采用了一种更简单的方法，通过求解具有正态分布初始条件的常微分方程，从而简化了样本生成过程。本文用 $p$-Waserstein距离（一种分布差异的度量）讨论了FM的收敛性。我们建立了FM可以实现$1\leqp\leq2$ 的最小-最大最优收敛速度，这提供了第一个理论证据，证明FM可以达到与扩散模型相当的收敛速度。我们的分析通过检查向量场的一类更广泛的均值和方差函数来扩展现有框架，并确定了获得这些最优速率所需的特定条件。 et.al.|[2405.20879](http://arxiv.org/abs/2405.20879)|null|
 |**2024-05-31**|**MegActor: Harness the Power of Raw Video for Vivid Portrait Animation**|尽管原始驾驶视频比肖像动画领域的地标等中间表示包含更丰富的面部表情信息，但它们很少成为研究的主题。这是由于原始视频驱动的人像动画固有的两个挑战：1）显著的身份泄露；2） 不相关的背景和面部细节（如皱纹）会降低性能。为了利用原始视频的力量制作生动的肖像动画，我们提出了一个名为MegActor的开创性条件扩散模型。首先，我们引入了一个合成数据生成框架，用于创建具有一致运动和表情但ID不一致的视频，以缓解ID泄漏的问题。其次，我们对参考图像的前景和背景进行分割，并使用CLIP对背景细节进行编码。然后通过文本嵌入模块将这些编码信息集成到网络中，从而确保背景的稳定性。最后，我们进一步将参考图像的外观风格转移到驾驶视频中，以消除驾驶视频中面部细节的影响。我们的最终模型仅在公共数据集上进行训练，取得了与商业模型相当的结果。我们希望这将有助于开源社区。代码位于https://github.com/megvii-research/MegFaceAnimate. et.al.|[2405.20851](http://arxiv.org/abs/2405.20851)|**[link](https://github.com/megvii-research/megfaceanimate)**|
 
-<p align=right>(<a href=#updated-on-20240603>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240604>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-05-21**|**Unsupervised Searches for Cosmological Parity Violation: Improving Detection Power with the Neural Field Scattering Transform**|最近使用四点相关性的研究表明，星系分布中存在宇称破坏，尽管这些探测的重要性对用于模拟星系分布噪声特性的模拟的选择很敏感。在最近的一篇论文中，我们介绍了一种无监督学习方法，该方法提供了一种替代方法，通过直接从观测数据中学习奇偶性违反，避免了对模拟目录的依赖。然而，我们以前的无监督方法所使用的卷积神经网络（CNN）模型很难扩展到数据有限的更现实的场景。我们提出了一种新的方法，即神经场散射变换（NFST），它通过添加可训练滤波器来增强小波散射变换（WST）技术，该滤波器被参数化为神经场。我们首先调整NFST模型，以在简化的数据集中检测奇偶校验违规，然后在不同的训练集大小下，将其性能与WST和CNN基准进行比较。我们发现，NFST可以检测奇偶校验违规，数据比CNN少4倍，比WST少32倍。此外，在数据有限的情况下，NFST可以检测到高达 $6\sigma$ 置信度的奇偶校验违规，其中WST和CNN无法进行任何检测。我们发现，与基准模型相比，NFST增加的灵活性，特别是学习不对称滤波器的能力，以及NFST架构中内置的特定对称性，有助于提高其性能。我们进一步证明了NFST是易于解释的，这对于物理应用（如奇偶校验违反的检测）是有价值的。 et.al.|[2405.13083](http://arxiv.org/abs/2405.13083)|null|
 |**2024-05-21**|**Implicit-ARAP: Efficient Handle-Guided Deformation of High-Resolution Meshes and Neural Fields via Local Patch Meshing**|在这项工作中，我们提出了神经符号距离场的局部补丁网格表示。该技术允许通过仅使用SDF信息及其梯度将平面面片网格投影和变形到标高集曲面上来离散输入SDF的标高集的局部区域。我们的分析表明，这种方法比标准的行进立方体算法更准确地逼近隐式曲面。然后，我们将这种表示应用于手柄引导变形的设置：我们引入了两个不同的管道，它们利用3D神经场来计算在给定约束集下高分辨率网格和神经场的“尽可能刚性”变形。我们对我们的方法和神经场和网格变形的各种基线进行了全面评估，结果表明，这两条管道在结果质量和稳健性方面都取得了令人印象深刻的效率和显著的改进。通过我们的新型流水线，我们引入了一种可扩展的方法来解决高分辨率网格上公认的几何处理问题，并为通过局部面片网格将其他几何任务扩展到隐式曲面领域铺平了道路。 et.al.|[2405.12895](http://arxiv.org/abs/2405.12895)|null|
 
-<p align=right>(<a href=#updated-on-20240603>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240604>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
