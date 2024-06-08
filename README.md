@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.06.07
+## Updated on 2024.06.08
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-06-04**|**Learning Temporally Consistent Video Depth from Video Diffusion Priors**|这项工作解决了视频深度估计的挑战，它不仅期望每帧的准确性，而且更重要的是，期望跨帧的一致性。我们没有直接从头开始开发深度估计器，而是将预测任务重新表述为条件生成问题。这使我们能够利用嵌入现有视频生成模型中的先验知识，从而降低学习难度并增强可推广性。具体来说，我们研究了如何驯服公共的稳定视频扩散（SVD），以使用图像深度和视频深度数据集的混合从输入视频中预测可靠的深度。我们从经验上证实，程序训练策略——首先优化SVD的空间层，然后优化时间层，同时保持空间层冻结——在空间准确性和时间一致性方面产生了最佳结果。我们进一步研究了在任意长视频上进行推理的滑动窗口策略。我们的观察结果表明，效率和性能之间存在权衡，一帧重叠已经产生了有利的结果。大量的实验结果表明，与现有的替代方案相比，我们的方法（称为ChronoDepth）具有优势，特别是在估计深度的时间一致性方面。此外，我们强调了在两个实际应用中更一致的视频深度的好处：深度条件视频生成和新颖的视图合成。我们的项目页面位于https://jhaoshao.github.io/ChronoDepth/. et.al.|[2406.01493](http://arxiv.org/abs/2406.01493)|null|
 |**2024-06-03**|**RaDe-GS: Rasterizing Depth in Gaussian Splatting**|高斯散射（GS）已被证明在新的视图合成中非常有效，可以实现高质量和实时的渲染。然而，它在重建详细的3D形状方面的潜力尚未得到充分探索。由于高斯飞溅的离散和非结构化性质，现有方法的形状精度往往有限，这使形状提取变得复杂。虽然最近的技术（如2D GS）试图改进形状重建，但它们经常以降低渲染质量和计算效率的方式重新表述高斯基元。为了解决这些问题，我们的工作引入了一种光栅化方法来渲染一般3D高斯飞溅的深度图和表面法线图。我们的方法不仅显著提高了形状重建的精度，而且保持了高斯散射固有的计算效率。我们的方法在DTU数据集上实现了与NeuraLangelo相当的切角距离误差，并且在Tanks&Temples数据集上获得了与传统高斯飞溅相似的训练和渲染时间。我们的方法是高斯飞溅的一个重大进步，可以直接集成到现有的基于高斯飞溅的方法中。 et.al.|[2406.01467](http://arxiv.org/abs/2406.01467)|null|
 
-<p align=right>(<a href=#updated-on-20240607>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240608>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-06-03**|**Reconstructing and Simulating Dynamic 3D Objects with Mesh-adsorbed Gaussian Splatting**|3D重建和模拟虽然相互关联，但有着不同的目标：重建需要灵活的3D表示，以适应不同的场景，而模拟则需要结构化的表示来有效地建模运动原理。本文介绍了网格吸附高斯散射（MaGS）方法来解决这一难题。MaGS将3D高斯约束为悬停在网格表面上，从而创建相互吸附的网格高斯3D表示，该表示将3D高斯的渲染灵活性与网格的空间连贯性相结合。利用这种表示，我们引入了一个可学习的相对变形场（RDF）来对网格和3D高斯之间的相对位移进行建模，扩展了仅依赖ARAP先验的传统网格驱动变形范式，从而更准确地捕捉每个3D高斯的运动。通过联合优化网格、3D高斯和RDF，MaGS实现了高渲染精度和逼真变形。在D-NeRF和NeRF DS数据集上的大量实验表明，MaGS可以在重建和模拟中产生有竞争力的结果。 et.al.|[2406.01593](http://arxiv.org/abs/2406.01593)|null|
 |**2024-06-03**|**Improved Three-Dimensional Reconstructions in Electron Ptychography through Defocus Series Measurements**|对厚标本三维相位重建的ptychography进行了详细分析。我们引入了多焦点ptychography，它结合了4D-STEM散焦系列，以通过更高的过分辨率提高沿光束方向的3D重建质量。将该方法与已建立的多切片ptychography技术进行比较，如常规ptychographic、正则ptychograph和多模式ptychology。此外，我们将多焦点ptychography与另一种方法进行了对比，该方法通过重建的散射矩阵（ $\mathcal{S}$ 矩阵）使用虚拟光学切片，与传统ptychographic相比，该方法提供了更精确的3D结构信息。我们基于模拟和实验数据进行的多次3D重建的结果表明，多焦点ptychography优于其他技术，尤其是在准确重建厚标本的表面和界面区域方面。 et.al.|[2406.01141](http://arxiv.org/abs/2406.01141)|null|
 
-<p align=right>(<a href=#updated-on-20240607>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240608>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-06-06**|**Step-aware Preference Optimization: Aligning Preference with Denoising Performance at Each Step**|最近，直接偏好优化（DPO）已经将其成功从对齐大型语言模型（LLM）扩展到将文本到图像的扩散模型与人类偏好对齐。与大多数现有的假设所有扩散步骤与最终生成的图像共享一致的偏好顺序的DPO方法不同，我们认为这种假设忽略了特定步骤的去噪性能，并且应该根据每个步骤的贡献来定制偏好标签。为了解决这一限制，我们提出了步进感知偏好优化（SPO），这是一种新的后训练方法，使用步进感知的偏好模型和步进重采样器来独立评估和调整每一步的去噪性能，以确保准确的步进感知监督。具体来说，在每个去噪步骤中，我们对图像池进行采样，找到合适的输赢对，最重要的是，从池中随机选择一幅图像来初始化下一个去噪步骤。这种分步重采样过程确保下一个输赢图像对来自同一图像，使输赢比较独立于前一步。为了评估每一步的偏好，我们训练一个单独的步骤感知偏好模型，该模型可以应用于噪声图像和干净图像。我们使用Stable Diffusion v1.5和SDXL进行的实验表明，SPO在将生成的图像与复杂、详细的提示对齐和增强美观性方面显著优于最新的Diffusion DPO，同时训练效率提高了20倍以上。代码和型号：https://rockeycoss.github.io/spo.github.io/ et.al.|[2406.04314](http://arxiv.org/abs/2406.04314)|null|
 |**2024-06-06**|**ReNO: Enhancing One-step Text-to-Image Models through Reward-based Noise Optimization**|近年来，文本到图像（T2I）模型取得了重大进展，但它们仍难以准确捕捉复杂合成提示中指定的复杂细节。虽然用奖励目标微调T2I模型已经显示出了希望，但它受到了“奖励黑客攻击”的影响，可能无法很好地推广到看不见的提示分布。在这项工作中，我们提出了基于奖励的噪声优化（ReNO），这是一种新的方法，通过基于来自一个或多个人类偏好奖励模型的信号优化初始噪声来增强推理时的T2I模型。值得注意的是，在T2I CompBench和GenEval这两个竞争基准的四个不同的一步模型上，通过50次迭代的梯度上升来解决这个优化问题，产生了令人印象深刻的结果。在20-50秒的计算预算内，ReNO增强的一步模型始终超过当前所有开源文本到图像模型的性能。广泛的用户研究表明，与流行的SDXL模型相比，我们的模型的首选频率几乎是SDXL模型的两倍，并且与具有8B参数的专有Stable Diffusion 3不相上下。此外，在相同的计算资源下，ReNO优化的一步模型优于广泛使用的开源模型，如SDXL和PixArt- $\alpha$ ，突出了ReNO在增强T2I模型推理时性能方面的效率和有效性。代码位于https://github.com/ExplainableML/ReNO. et.al.|[2406.04312](http://arxiv.org/abs/2406.04312)|null|
 
-<p align=right>(<a href=#updated-on-20240607>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240608>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-02**|**Representing Animatable Avatar via Factorized Neural Fields**|对于从单眼视频中重建高保真度的人体3D模型，保持一致的大规模体型以及精细匹配的细微皱纹至关重要。本文探讨了以下观察结果，即每帧渲染结果可以分解为与姿势无关的分量和相应的与姿势相关的等价物，以促进帧一致性。通过限制这两个分量的频带，可以进一步改进姿态自适应纹理。详细地说，与姿势无关的输出预计是低频的，而高频信息与姿势相关因素有关。我们通过具有不同频率分量的双分支网络实现了整个输入视频的粗体轮廓和时变的细粒度纹理特征的连贯保存。第一分支以规范空间中的坐标作为输入，而第二分支另外考虑由第一分支输出的特征和每个帧的姿态信息。我们的网络整合了两个分支预测的信息，并利用体积渲染生成照片逼真的3D人体图像。通过实验，我们证明了我们的网络在保留高频细节和确保身体轮廓一致方面超越了基于神经辐射场（NeRF）的最先进方法。 et.al.|[2406.00637](http://arxiv.org/abs/2406.00637)|null|
 |**2024-05-31**|**Neural Gaussian Scale-Space Fields**|高斯尺度空间是信号表示和处理的基石，在滤波、多尺度分析、抗混叠等方面都有应用。然而，获得这样的尺度空间是昂贵和繁琐的，特别是对于诸如神经场的连续表示。我们提出了一种有效且轻量级的方法来学习任意信号的全连续、各向异性高斯尺度空间。基于傅立叶特征调制和Lipschitz边界，我们的方法是自监督训练的，即训练不需要任何手动滤波。我们的神经高斯尺度空间场忠实地捕捉各种模态的多尺度表示，并支持多种应用。其中包括图像、几何、光台数据、纹理抗锯齿和多尺度优化。 et.al.|[2405.20980](http://arxiv.org/abs/2405.20980)|null|
 
-<p align=right>(<a href=#updated-on-20240607>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240608>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
