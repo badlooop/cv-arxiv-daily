@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.06.12
+## Updated on 2024.06.13
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-06-06**|**Coarse-To-Fine Tensor Trains for Compact Visual Representations**|学习视觉数据的紧凑、高质量和易于优化的表示的能力对于许多应用程序（如新颖的视图合成和3D重建）至关重要。最近的工作表明，在使用张量网络来设计这种紧凑和高质量的表示方面取得了实质性的成功。然而，优化基于张量的表示，特别是高度紧凑的张量列表示的能力仍然缺乏。这阻碍了从业者为视觉数据部署张量网络的全部潜力。为此，我们提出了“延长上采样张量序列（PuTT）”，这是一种以从粗到细的方式学习张量序列表示的新方法。我们的方法涉及延长或“上采样”已学习的张量序列表示，创建一个增量细化的“从粗到细”张量序列。我们沿着三个轴来评估我们的表示：（1）。压缩，（2）。去噪能力，以及（3）。图像完成能力。为了评估这些轴，我们考虑了图像拟合、3D拟合和新视图合成的任务，其中与最先进的基于张量的方法相比，我们的方法显示出改进的性能。有关完整结果，请参阅我们的项目网页：https://sebulo.github.io/PuTT_website/ et.al.|[2406.04332](http://arxiv.org/abs/2406.04332)|**[link](https://github.com/sebulo/PuTT)**|
 |**2024-06-06**|**Conv-INR: Convolutional Implicit Neural Representation for Multimodal Visual Signals**|内隐神经表征（INR）最近成为一种很有前途的信号表征范式。通常，INR由多人感知器（MLP）参数化，该感知器将坐标作为输入并生成信号的相应属性。然而，基于MLP的INR面临两个关键问题：i）单独考虑每个坐标，而忽略连接；ii）遭受频谱偏移，从而不能学习高频分量。虽然目标视觉信号通常表现出强烈的局部结构和邻域依赖性，并且高频分量在这些信号中很重要，但这些问题损害了INRs的代表能力。本文提出了第一个完全基于卷积的INR模型Conv-INR。由于卷积的固有属性，Conv-INR可以同时考虑相邻坐标并有效地学习高频分量。与现有的基于MLP的INR相比，Conv INR在不需要主要功能扩展的情况下具有更好的代表能力和可训练性。我们在四项任务上进行了广泛的实验，包括图像拟合、CT/MRI重建和新的视图合成，Conv INR都显著超过了现有的基于MLP的INR，验证了其有效性。最后，我们提出了三种重新参数化方法，它们可以在不引入任何额外推理成本的情况下进一步提高vanilla Conv INR的性能。 et.al.|[2406.04249](http://arxiv.org/abs/2406.04249)|null|
 
-<p align=right>(<a href=#updated-on-20240612>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240613>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-06-07**|**3DRealCar: An In-the-wild RGB-D Car Dataset with 360-degree Views**|3D汽车通常用于自动驾驶系统、虚拟/增强现实和游戏。然而，现有的3D汽车数据集要么是合成的，要么是低质量的，这与高质量的真实世界3D汽车数据集中存在显著差距，并限制了它们在实际场景中的应用。在本文中，我们提出了第一个大规模的3D真实汽车数据集，称为3DRealCar，提供了三个独特的特征。（1） \textbf｛High Volume｝：2500辆汽车被3D扫描仪仔细扫描，获得具有真实世界维度的汽车图像和点云；（2） \textbf｛高质量｝：每辆车平均在200个密集、高分辨率的360度RGB-D视图中拍摄，实现高保真3D重建；（3） \textbf｛High Diversity｝：该数据集包含来自100多个品牌的各种汽车，在三种不同的照明条件下收集，包括反射、标准和黑暗。此外，我们为每个实例提供详细的汽车解析地图，以促进汽车解析任务的研究。此外，我们去除了背景点云，并将汽车方向标准化为一个统一的轴，仅在没有背景和可控渲染的汽车上进行重建。我们在3DRealCar中的每个照明条件下使用最先进的方法对3D重建结果进行基准测试。大量实验表明，3DRealCar的标准照明条件部分可以用于生产大量高质量的3D汽车，改善与汽车相关的各种2D和3D任务。值得注意的是，我们的数据集揭示了一个事实，即最近的3D重建方法在反射和黑暗照明条件下重建高质量的3D汽车时面临挑战。\textcolor｛red｝｛\href{https://xiaobiaodu.github.io/3drealcar/}｛我们的数据集在这里可用。｝｝ et.al.|[2406.04875](http://arxiv.org/abs/2406.04875)|null|
 |**2024-06-07**|**Normal-guided Detail-Preserving Neural Implicit Functions for High-Fidelity 3D Surface Reconstruction**|神经隐式表示已经成为3D重建的强大范例。然而，尽管它们取得了成功，但现有的方法无法捕捉精细的几何细节和薄结构，尤其是在只有感兴趣对象的稀疏RGB视图可用的情况下。我们假设，当前从RGB或RGBD图像中学习神经隐式表示的方法会产生具有缺失部分和细节的3D表面，因为它们只依赖于0阶微分特性，即3D表面点及其投影，作为监督信号。然而，这样的特性不会捕捉点周围的局部3D几何体，也会忽略点之间的相互作用。本文证明，即使在只有两个RGB（正面和背面）图像可用的情况下，训练具有一阶微分特性的神经表示，即表面法线，也能实现高精度的3D表面重建。给定感兴趣对象的多视图RGB图像，我们首先使用现成的单目深度估计器（如depth Anything模型）生成的深度图的梯度来计算图像空间中的近似表面法线。然后，使用损失函数来训练隐式曲面回归器，该函数强制回归曲面的一阶微分特性与从Depth Anything估计的特性相匹配。我们在广泛的真实和合成数据集上进行的大量实验表明，即使使用两个RGB视图，所提出的方法也能达到前所未有的重建精度。详细的消融研究还表明，基于法线的监督在性能的显著提高中发挥着关键作用，使复杂的几何细节和薄结构的3D重建成为可能，而这些细节和结构以前很难捕捉。 et.al.|[2406.04861](http://arxiv.org/abs/2406.04861)|null|
 
-<p align=right>(<a href=#updated-on-20240612>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240613>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-06-11**|**Flow Map Matching**|基于动态测量传输的生成模型，如扩散模型、流量匹配模型和随机插值，学习一个常微分方程或随机微分方程，其轨迹将初始条件从已知的基本分布推到目标上。虽然训练很便宜，但样本是通过模拟生成的，这比GANs等一步模型更昂贵。为了缩小这一差距，我们引入了流图匹配——一种学习基础常微分方程的两次流图的算法。该方法产生了一个有效的少步生成模型，其步数可以事后选择，以平滑地权衡计算费用的准确性。利用随机插值框架，我们引入了流图的直接训练和预训练（或其他已知）速度场的蒸馏的损失。从理论上讲，我们证明了我们的方法统一了许多现有的少步生成模型，包括一致性模型、一致性轨迹模型、渐进蒸馏和神经算子方法，这些方法可以作为我们形式主义的特殊情况获得。通过在CIFAR-10和ImageNet 32x32上的实验，我们表明，与扩散或随机插值方法相比，流图匹配可以产生高质量的样本，并显著降低采样成本。 et.al.|[2406.07507](http://arxiv.org/abs/2406.07507)|null|
 |**2024-06-11**|**Understanding Visual Concepts Across Models**|大型多模式模型，如稳定扩散，可以在微调单个单词嵌入后生成、检测和分类新的视觉概念。模型是否为相同的概念学习相似的单词（即<orange-cat>=orange+cat）？我们对文本到图像生成、开放集对象检测和零样本分类中的三个最先进的模型进行了大规模分析，发现新的单词嵌入是特定于模型的且不可转移的。在四个标准数据集上为40个不同的视觉概念训练的4800个新嵌入中，我们发现 $\epsilon$ -球内的扰动与生成、检测和分类任意概念的任何先前嵌入有关。当这些新的嵌入被拼接到新的模型中时，针对原始模型的微调就会丢失。我们展示了流行的软提示调整方法，当应用于视觉概念学习任务时，会发现这些扰动解决方案，并且视觉概念的嵌入是不可转移的。复制我们作品的代码可在：https://visual-words.github.io. et.al.|[2406.07506](http://arxiv.org/abs/2406.07506)|**[link](https://github.com/visual-words/visual-words)**|
 
-<p align=right>(<a href=#updated-on-20240612>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240613>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-05**|**AROMA: Preserving Spatial Structure for Latent PDE Modeling with Local Neural Fields**|我们提出了AROMA（带注意力的注意力降阶模型），这是一个旨在使用局部神经场增强偏微分方程（PDE）建模的框架。我们灵活的编码器-解码器架构可以从各种数据类型中获得空间物理场的平滑潜在表示，包括不规则网格输入和点云。这种多功能性消除了打补丁的需要，并允许高效处理各种几何形状。我们的潜在表示的顺序性质可以在空间上进行解释，并允许使用条件转换器来建模偏微分方程的时间动力学。通过采用基于扩散的公式，与传统的MSE训练相比，我们实现了更大的稳定性，并实现了更长的推广时间。AROMA在模拟1D和2D方程方面的卓越性能突显了我们的方法在捕捉复杂动力学行为方面的有效性。 et.al.|[2406.02176](http://arxiv.org/abs/2406.02176)|null|
 |**2024-06-04**|**Activity patterns in ring networks of quadratic integrate-and-fire neurons with synaptic and gap junction coupling**|我们考虑具有非局部突触和间隙连接耦合的二次积分和激发神经元的环形网络。相应的神经场模型支持驻波和行波以及倾斜波等解决方案。我们证明了这些解中的许多都满足自洽方程，当参数变化时，自洽方程可以用来跟随它们。我们对神经场模型进行了数值分叉分析，重点研究了不同间隙结耦合强度的影响。我们的方法通常适用于各种各样的二次积分和激发神经元网络。 et.al.|[2406.01881](http://arxiv.org/abs/2406.01881)|null|
 
-<p align=right>(<a href=#updated-on-20240612>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240613>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
