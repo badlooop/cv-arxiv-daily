@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.06.13
+## Updated on 2024.06.14
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-06-07**|**Multi-style Neural Radiance Field with AdaIN**|在这项工作中，我们提出了一种结合AdaIN和NeRF的新管道，用于风格化的小说视图合成任务。与以前的工作相比，我们做出了以下贡献：1）我们简化了管道。2） 我们扩展了模型的功能来处理多样式任务。3） 我们修改了模型架构，使其在具有强烈笔触的样式上表现良好。4） 我们在多样式模型上实现了样式插值，使我们能够控制任意两个样式之间的样式以及样式化输出和原始场景之间的样式强度，从而更好地控制样式化强度。 et.al.|[2406.04960](http://arxiv.org/abs/2406.04960)|**[link](https://github.com/paoyw/Stylized-NeRF-with-AdaIN)**|
 |**2024-06-06**|**Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image**|在本文中，我们提出了Flash3D，这是一种从单个图像进行场景重建和新颖视图合成的方法，它既非常通用又高效。为了通用性，我们从单目深度估计的“基础”模型开始，并将其扩展到全3D形状和外观重建器。为了提高效率，我们将这种扩展建立在前馈高斯散射的基础上。具体来说，我们在预测的深度预测第一层3D高斯，然后添加在空间上偏移的附加高斯层，使模型能够完成遮挡和截断后的重建。Flash3D非常高效，可以在一天内在单个GPU上进行训练，因此大多数研究人员都可以访问。在RealEstate10k上进行训练和测试时，它取得了最先进的成绩。当转移到像纽约大学这样看不见的数据集时，它的表现大大优于竞争对手。更令人印象深刻的是，当转移到KITTI时，Flash3D实现了比专门在该数据集上训练的方法更好的PSNR。在某些情况下，它甚至优于最近使用多个视图作为输入的方法。代码、模型、演示和更多结果可在https://www.robots.ox.ac.uk/~vgg/research/flash3d/。 et.al.|[2406.04343](http://arxiv.org/abs/2406.04343)|null|
 
-<p align=right>(<a href=#updated-on-20240613>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240614>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-06-10**|**PatchRefiner: Leveraging Synthetic Data for Real-Domain High-Resolution Monocular Metric Depth Estimation**|本文介绍了PatchRefiner，这是一种针对高分辨率实域输入的度量单图像深度估计的高级框架。虽然深度估计对于自动驾驶、3D生成建模和3D重建等应用至关重要，但由于现有架构的限制和详细的真实世界深度数据的稀缺，在真实世界场景中实现准确的高分辨率深度具有挑战性。PatchRefiner采用了一种基于瓦片的方法，将高分辨率深度估计重新定义为一种细化过程，从而显著提高了性能。PatchRefiner利用利用合成数据的伪标记策略，结合了细节和尺度解纠缠（DSD）损失，以增强细节捕获，同时保持尺度准确性，从而促进知识从合成数据到真实世界数据的有效传输。我们的广泛评估表明，PatchRefiner具有卓越的性能，在均方根误差（RMSE）方面显著优于Unreal4KStereo数据集上的现有基准测试18.1%，并在CityScape、ScanNet++和ETH3D等不同真实世界数据集上显示出细节准确性和一致规模估计的显著提高。 et.al.|[2406.06679](http://arxiv.org/abs/2406.06679)|null|
 |**2024-06-09**|**MAP-ADAPT: Real-Time Quality-Adaptive Semantic 3D Maps**|创建环境的3D语义重建是许多应用程序的基础，尤其是与自主代理操作（例如，面向目标的导航或对象交互和操作）相关的应用程序。通常，3D语义重建系统以相同的细节级别捕获整个场景。然而，某些任务（例如，对象交互）需要细粒度和高分辨率的地图，特别是当要交互的对象是小尺寸或复杂的几何体时。在最近的实践中，这导致整个地图具有相同的高质量分辨率，这导致计算和存储成本增加。为了应对这一挑战，我们提出了MAP-ADAPT，这是一种使用RGBD帧进行质量自适应语义3D重建的实时方法。MAP-ADAPT是第一种自适应语义3D映射算法，与之前的工作不同，它基于场景的语义信息和几何复杂性直接生成具有不同质量区域的单个地图。利用语义SLAM管道进行姿态和语义估计，我们在合成和真实世界的数据上实现了与最先进的方法相当或优越的结果，同时显著降低了存储和计算需求。 et.al.|[2406.05849](http://arxiv.org/abs/2406.05849)|null|
 
-<p align=right>(<a href=#updated-on-20240613>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240614>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-06-12**|**Diff-A-Riff: Musical Accompaniment Co-creation via Latent Diffusion Models**|深度生成模型的最新进展为音乐制作提供了新的机会，但也带来了挑战，如高计算需求和有限的音频质量。此外，当前的系统通常仅依赖于文本输入，并且通常专注于制作完整的音乐作品，这与音乐制作中的现有工作流程不兼容。为了解决这些问题，我们引入了“Diff-A-Riff”，这是一种潜在的扩散模型，旨在生成适用于任何音乐背景的高质量乐器伴奏。该模型通过音频参考、文本提示或两者提供控制，并产生48kHz的伪立体声音频，同时显著减少推理时间和内存使用。我们通过客观指标和主观听力测试展示了该模型的能力，相关网站上提供了大量示例：sonycslparis.github.io/diffariff-companion/ et.al.|[2406.08384](http://arxiv.org/abs/2406.08384)|null|
 |**2024-06-12**|**2.5D Multi-view Averaging Diffusion Model for 3D Medical Image Translation: Application to Low-count PET Reconstruction with CT-less Attenuation Correction**|正电子发射断层扫描（PET）是一种重要的临床成像工具，但不可避免地会给患者和医疗保健提供者带来辐射危害。减少示踪剂注射剂量和消除用于衰减校正的CT采集可以减少总辐射剂量，但通常会导致PET具有高噪声和偏差。因此，希望开发3D方法来将非衰减校正的低剂量PET（NAC-LDPET）转换为衰减校正的标准剂量PET（AC-SDPET）。最近，扩散模型已经成为一种新的最先进的图像到图像翻译的深度学习方法，优于传统的基于CNN的方法。然而，由于高计算成本和存储器负担，它在很大程度上局限于2D应用。为了应对这些挑战，我们开发了一种新的2.5D多视图平均扩散模型（MADM），用于3D图像到图像的翻译，并应用于NAC-LDPET到AC-SDPET的翻译。具体而言，MADM对轴向、冠状和矢状视图使用单独的扩散模型，在每个采样步骤中对其输出进行平均，以确保多个视图的3D生成质量。为了加快3D采样过程，我们还提出了一种策略，使用基于CNN的3D生成作为扩散模型的先验。我们对人类患者研究的实验结果表明，MADM可以生成高质量的3D翻译图像，优于以前基于CNN和基于扩散的基线方法。 et.al.|[2406.08374](http://arxiv.org/abs/2406.08374)|null|
 
-<p align=right>(<a href=#updated-on-20240613>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240614>back to top</a>)</p>
 
 ## NeRF
 
@@ -80,9 +80,9 @@
 |**2024-06-06**|**ReFiNe: Recursive Field Networks for Cross-modal Multi-scene Representation**|最先进的多形状表示方法（单个模型“打包”多个对象）的常见权衡包括将建模精度与内存和存储进行权衡。我们展示了如何以比以前更高的精度和低内存使用率对表示为连续神经场的多个形状进行编码。我们方法的关键是利用对象自相似性的递归层次公式，从而产生高度压缩和高效的形状潜在空间。由于递归公式，我们的方法支持空间和全局到局部的潜在特征融合，而无需初始化和维护辅助数据结构，同时仍允许连续的字段查询，以实现光线跟踪等应用。在一组不同数据集上的实验中，我们提供了令人信服的定性结果，并展示了每个数据集使用单个网络的最先进的多场景重建和压缩结果。 et.al.|[2406.04309](http://arxiv.org/abs/2406.04309)|null|
 |**2024-06-06**|**Vectorized Conditional Neural Fields: A Framework for Solving Time-dependent Parametric Partial Differential Equations**|变压器模型越来越多地用于求解偏微分方程（PDE）。已经提出了几种自适应方法，所有这些方法都存在变压器的典型问题，如二次记忆和时间复杂性。此外，用于PDE求解的所有流行体系结构都缺乏理想代理模型的几个期望性质中的至少一个，例如（i）对训练期间未看到的PDE参数的泛化，（ii）空间和时间零样本超分辨率，（iii）连续时间外推，（iv）对1D、2D和3D PDE的支持，以及（v）对更长时间展开的有效推断。为了解决这些局限性，我们提出了矢量化条件神经场（VCNeFs），它将时间相关偏微分方程的解表示为神经场。然而，与先前的方法相反，对于一组多个时空查询点，VCNeF并行计算它们的解决方案，并通过注意力机制对它们的依赖性进行建模。此外，VCNeF可以根据偏微分方程的初始条件和参数来调节神经场。一组广泛的实验表明，VCNeF与现有的基于ML的代理模型具有竞争力，并且往往优于现有的代理模型。 et.al.|[2406.03919](http://arxiv.org/abs/2406.03919)|**[link](https://github.com/jhagnberger/vcnef)**|
 |**2024-06-05**|**Dynamic 3D Gaussian Fields for Urban Areas**|我们提出了一种用于大规模动态城市区域的新型视图合成（NVS）的高效神经3D场景表示。现有作品由于其有限的视觉质量和非交互式渲染速度，不太适合混合现实或闭环模拟等应用。最近，基于光栅化的方法已经以令人印象深刻的速度实现了高质量的NVS。然而，这些方法仅限于小规模、同质的数据，即它们不能处理由于天气、季节和照明而引起的严重外观和几何变化，也不能扩展到具有数千张图像的更大的动态区域。我们提出了4DGF，这是一种神经场景表示，可扩展到大规模动态城市区域，处理异构输入数据，并显著提高渲染速度。我们使用3D高斯作为有效的几何支架，同时依赖神经场作为紧凑灵活的外观模型。我们在全局范围内通过场景图集成场景动力学，同时通过变形在局部范围内建模关节运动。这种分解方法实现了适用于真实世界应用程序的灵活场景合成。在实验中，我们的PSNR超过了最先进的3 dB，渲染速度超过了200倍。 et.al.|[2406.03175](http://arxiv.org/abs/2406.03175)|null|
-|**2024-06-04**|**A fast neural emulator for interstellar chemistry**|天体化学模型是解释不同环境中分子和原子物种观测结果的重要工具。然而，这些模型非常耗时，妨碍了对参数空间的彻底探索，导致了不确定性和偏差结果。使用神经网络来模拟天体化学模型的行为是规避这一问题的一种方法，它可以基于真实的天体化学模型提供快速计算。在本文中，我们提出了一个基于条件神经场的天文化学代码Nautilus的快速神经模拟器。由此产生的模型在1到10 $^7$年之间的任意时间内产生了192种物种的丰度。所有物种的不确定性都远低于0.2 dex，而计算时间比Nautilus小10$^4$ 。这将为执行更复杂的正向模型以更好地了解星际介质的物理性质开辟可能性。作为这些模型威力的一个例子，我们对Nautilus预测的电子丰度进行了特征重要性分析。我们发现，在低密度气体中，电子密度与初始硫丰度有关。将初始硫丰度从耗尽的情况增加到宇宙丰度会导致电子密度增加一个数量级。这种增强可能会对恒星形成地点的气体动力学产生潜在影响。 et.al.|[2406.02387](http://arxiv.org/abs/2406.02387)|null|
+|**2024-06-04**|**A fast neural emulator for interstellar chemistry**|天体化学模型是解释不同环境中分子和原子物种观测结果的重要工具。然而，这些模型非常耗时，妨碍了对参数空间的彻底探索，导致了不确定性和偏差结果。使用神经网络来模拟天体化学模型的行为是规避这一问题的一种方法，它可以基于真实的天体化学模型提供快速计算。在本文中，我们提出了一个基于条件神经场的天文化学代码Nautilus的快速神经模拟器。由此产生的模型在1到10 $^7$年之间的任意时间内产生了192种物种的丰度。所有物种的不确定性都远低于0.2 dex，而计算时间比Nautilus小10$^4$ 。这将为执行更复杂的正向模型以更好地了解星际介质的物理性质开辟可能性。作为这些模型威力的一个例子，我们对Nautilus预测的电子丰度进行了特征重要性分析。我们发现，在低密度气体中，电子密度与初始硫丰度有关。将初始硫丰度从贫化情景增加到宇宙丰度会导致电子密度增加一个数量级。这种增强可能会对恒星形成地点的气体动力学产生潜在影响。 et.al.|[2406.02387](http://arxiv.org/abs/2406.02387)|null|
 
-<p align=right>(<a href=#updated-on-20240613>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240614>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
