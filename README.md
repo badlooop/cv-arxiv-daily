@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.06.15
+## Updated on 2024.06.16
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-06-09**|**RefGaussian: Disentangling Reflections from 3D Gaussian Splatting for Realistic Rendering**|三维高斯散射（3D-GS）在神经渲染、三维场景重建和新型视图合成等领域取得了显著的进展。然而，3D-GS在准确表示物理反射方面遇到了主要挑战，尤其是在真实世界场景中常见的全反射和半反射的情况下。这种限制导致反射被错误地视为具有物理存在的独立元素，从而导致不精确的重建。在此，为了应对这一挑战，我们建议RefGaussian将反射从3D-GS中分离出来，以便对反射进行逼真建模。具体来说，我们建议将场景划分为透射分量和反射分量，并使用两个球面谐波（SH）来表示这些分量。考虑到这种分解尚未完全确定，我们使用局部正则化技术来确保透射分量和反射分量的局部平滑，从而实现比3D-GS更合理的分解结果。实验结果表明，我们的方法实现了优越的新视图合成和准确的深度估计结果。此外，它能够利用场景编辑应用程序，确保高质量的结果和物理一致性。 et.al.|[2406.05852](http://arxiv.org/abs/2406.05852)|null|
 |**2024-06-09**|**VCR-GauS: View Consistent Depth-Normal Regularizer for Gaussian Surface Reconstruction**|尽管3D高斯散射由于其逼真和高效的新颖视图合成而得到了广泛的研究，但从基于点的表示中提取高质量的曲面仍然是一项挑战。先前的工作通过结合现成法线估计器的几何先验来改进曲面。然而，存在两个主要限制：1）监督从3D高斯渲染的法线仅更新旋转参数，而忽略其他几何参数；2） 跨多个视图的预测法线图的不一致性可能导致严重的重建伪影。在本文中，我们提出了一种深度正则化子，它直接将法线与其他几何参数耦合，从而从法线正则化中得到几何参数的完全更新。我们进一步提出了一个置信项，以减轻多个视图中正常预测的不一致性。此外，我们还引入了一种致密化和分裂策略，以正则化3D高斯的大小和分布，从而实现更精确的表面建模。与基于高斯的基线相比，实验表明，我们的方法在更快的训练速度和100+FPS的渲染下获得了更好的重建质量，并保持了有竞争力的外观质量。我们的代码将在论文接受后开源。 et.al.|[2406.05774](http://arxiv.org/abs/2406.05774)|null|
 
-<p align=right>(<a href=#updated-on-20240615>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240616>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-06-12**|**FaithFill: Faithful Inpainting for Object Completion Using a Single Reference Image**|我们提出了FaithFill，一种基于扩散的修复对象完成方法，用于真实生成丢失的对象部分。通常，需要多个参考图像来实现这种逼真的生成，否则生成将不能忠实地保持形状、纹理、颜色和背景。在这项工作中，我们提出了一种仅使用单个输入参考图像的管道，该图像具有不同的照明、背景、对象姿态和/或视点。奇异参考图像用于生成待修复对象的多个视图。我们证明了FaithFill可以从单个参考图像中忠实地生成对象的缺失部分，并保留背景/场景。这可以通过标准相似性度量、人类判断和GPT评估来证明。我们的结果是在DreamBooth数据集和一个新提出的数据集上给出的。 et.al.|[2406.07865](http://arxiv.org/abs/2406.07865)|null|
 |**2024-06-11**|**M-LRM: Multi-view Large Reconstruction Model**|尽管大型重建模型（LRM）的最新进展显示了令人印象深刻的结果，但当将其输入从单个图像扩展到多个图像时，它表现出效率低下、几何和纹理质量较差以及收敛速度低于预期。其原因是，LRM将3D重建公式化为一个天真的图像到3D的翻译问题，忽略了输入图像之间的强3D相干性。在本文中，我们提出了一种多视图大型重建模型（M-LRM），该模型旨在以3D感知的方式从多视图有效地重建高质量的3D形状。具体来说，我们引入了一种多视图一致交叉关注方案，使M-LRM能够准确地从输入图像中查询信息。此外，我们使用输入多视图图像的3D先验来初始化三平面标记。与LRM相比，所提出的M-LRM可以产生分辨率为128美元乘以128美元的三平面NeRF，并生成高保真度的3D形状。实验研究表明，我们的模型比LRM实现了显著的性能增益和更快的训练收敛。项目页面：https://murphylmf.github.io/M-LRM/ et.al.|[2406.07648](http://arxiv.org/abs/2406.07648)|null|
 
-<p align=right>(<a href=#updated-on-20240615>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240616>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-06-13**|**WonderWorld: Interactive 3D Scene Generation from a Single Image**|我们介绍了WonderWorld，这是一种新颖的3D场景外推框架，使用户能够基于单个输入图像和用户指定的文本来探索和塑造虚拟环境。虽然场景生成的视觉质量已经得到了显著改善，但现有方法是离线运行的，生成场景需要数十分钟到数小时。通过利用快速高斯曲面和基于引导扩散的深度估计方法，WonderWorld生成几何一致的外推，同时显著减少计算时间。我们的框架在一个A6000 GPU上用不到10秒的时间生成连接和多样化的3D场景，实现实时用户交互和探索。我们展示了WonderWorld在虚拟现实、游戏和创意设计中的应用潜力，用户可以从一张图像中快速生成和导航沉浸式的、潜在的无限虚拟世界。我们的方法代表了交互式3D场景生成的重大进步，为虚拟环境中用户驱动的内容创建和探索开辟了新的可能性。我们将发布完整的代码和软件以实现再现性。项目网站：https://WonderWorld-2024.github.io/ et.al.|[2406.09394](http://arxiv.org/abs/2406.09394)|null|
 |**2024-06-13**|**Sagiri: Low Dynamic Range Image Enhancement with Generative Diffusion Prior**|使用8位相机拍摄高动态范围（HDR）场景通常会出现曝光过度/曝光不足、由于低位深度压缩而丢失精细细节、颜色分布偏斜以及黑暗区域中的强噪声等问题。传统的LDR图像增强方法主要集中在颜色映射上，通过扩展图像的颜色范围和调整亮度来增强视觉表现。然而，这些方法无法有效地恢复动态范围极值中的内容，动态范围极值是像素值接近0或255的区域。为了解决HDR成像的全部挑战并超越当前模型的局限性，我们提出了一种新的两阶段方法。第一阶段在保持现有细节的同时将颜色和亮度映射到适当的范围，第二阶段在生成捕捉过程中丢失的动态范围极值中的内容之前利用扩散。该生成细化模块也可以用作即插即用模块来增强和补充现有的LDR增强模型。所提出的方法显著提高了LDR图像的质量和细节，通过严格的实验验证证明了其优越的性能。项目页面位于https://sagiri0208.github.io et.al.|[2406.09389](http://arxiv.org/abs/2406.09389)|null|
 
-<p align=right>(<a href=#updated-on-20240615>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240616>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-06**|**ReFiNe: Recursive Field Networks for Cross-modal Multi-scene Representation**|最先进的多形状表示方法（单个模型“打包”多个对象）的常见权衡包括将建模精度与内存和存储进行权衡。我们展示了如何以比以前更高的精度和低内存使用率对表示为连续神经场的多个形状进行编码。我们方法的关键是利用对象自相似性的递归层次公式，从而产生高度压缩和高效的形状潜在空间。由于递归公式，我们的方法支持空间和全局到局部的潜在特征融合，而无需初始化和维护辅助数据结构，同时仍允许连续的字段查询，以实现光线跟踪等应用。在一组不同数据集上的实验中，我们提供了令人信服的定性结果，并展示了每个数据集使用单个网络的最先进的多场景重建和压缩结果。 et.al.|[2406.04309](http://arxiv.org/abs/2406.04309)|null|
 |**2024-06-06**|**Vectorized Conditional Neural Fields: A Framework for Solving Time-dependent Parametric Partial Differential Equations**|变压器模型越来越多地用于求解偏微分方程（PDE）。已经提出了几种自适应方法，所有这些方法都存在变压器的典型问题，如二次记忆和时间复杂性。此外，用于PDE求解的所有流行体系结构都缺乏理想代理模型的几个期望性质中的至少一个，例如（i）对训练期间未看到的PDE参数的泛化，（ii）空间和时间零样本超分辨率，（iii）连续时间外推，（iv）对1D、2D和3D PDE的支持，以及（v）对更长时间展开的有效推断。为了解决这些局限性，我们提出了矢量化条件神经场（VCNeFs），它将时间相关偏微分方程的解表示为神经场。然而，与先前的方法相反，对于一组多个时空查询点，VCNeF并行计算它们的解决方案，并通过注意力机制对它们的依赖性进行建模。此外，VCNeF可以根据偏微分方程的初始条件和参数来调节神经场。一组广泛的实验表明，VCNeF与现有的基于ML的代理模型具有竞争力，并且往往优于现有的代理模型。 et.al.|[2406.03919](http://arxiv.org/abs/2406.03919)|**[link](https://github.com/jhagnberger/vcnef)**|
 
-<p align=right>(<a href=#updated-on-20240615>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240616>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
