@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.06.25
+## Updated on 2024.06.26
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-06-19**|**Splatter a Video: Video Gaussian Representation for Versatile Processing**|视频表示是一个长期存在的问题，对各种下游任务至关重要，如跟踪、深度预测、分割、视图合成和编辑。然而，由于缺乏3D结构，当前的方法要么难以对复杂的运动进行建模，要么依赖于不适合操纵任务的隐式3D表示。为了应对这些挑战，我们引入了一种新的显式3D表示视频高斯表示——将视频嵌入到3D高斯中。我们提出的表示使用显式高斯作为代理对3D规范空间中的视频外观进行建模，并将每个高斯与视频运动的3D运动相关联。这种方法提供了比分层图集或体积像素矩阵更内在和更明确的表示。为了获得这样的表示，我们从基础模型中提取二维先验，如光流和深度，以在这种不适定的环境中正则化学习。广泛的应用证明了我们新视频表示的多功能性。它已被证明在许多视频处理任务中有效，包括跟踪、一致的视频深度和特征细化、运动和外观编辑以及立体视频生成。项目页面：https://sunyangtian.github.io/spatter_a_video_web/ et.al.|[2406.13870](http://arxiv.org/abs/2406.13870)|null|
 |**2024-06-18**|**HumanSplat: Generalizable Single-Image Human Gaussian Splatting with Structure Priors**|尽管高保真度人体重建技术最近取得了进展，但对密集捕获图像或耗时的每次优化的要求大大阻碍了它们在更广泛场景中的应用。为了解决这些问题，我们提出了HumanSplat，它以可推广的方式从单个输入图像中预测任何人的3D高斯飞溅特性。特别是，HumanSplat包括一个2D多视图扩散模型和一个具有人体结构先验的潜在重建转换器，这些先验能够在一个统一的框架内熟练地集成几何先验和语义特征。进一步设计了一种包含人体语义信息的层次损失，以实现高保真纹理建模，并更好地约束估计的多个视图。在标准基准和野外图像上的综合实验表明，HumanSplat在实现真实感新颖视图合成方面超越了现有的最先进方法。 et.al.|[2406.12459](http://arxiv.org/abs/2406.12459)|**[link](https://github.com/humansplat/humansplat.github.io)**|
 
-<p align=right>(<a href=#updated-on-20240625>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240626>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-06-18**|**Semantic Graph Consistency: Going Beyond Patches for Regularizing Self-Supervised Vision Transformers**|具有视觉转换器（ViTs）的自监督学习（SSL）已被证明对表示学习有效，在各种下游任务上的出色表现证明了这一点。尽管取得了这些成功，但现有的基于ViT的SSL架构并没有完全利用ViT主干，尤其是ViT的补丁令牌。在本文中，我们引入了一个新的语义图一致性（SGC）模块来规范基于ViT的SSL方法，并有效地利用补丁令牌。我们将图像重新定义为图，将图像补丁作为节点，并通过使用图神经网络将显式消息传递到SSL框架中来注入关系归纳偏差。我们的SGC损失充当了一个正则化因子，利用未充分开发的ViTs补丁令牌来构建图，并在图像的多个视图中增强图特征之间的一致性。在包括ImageNet、RESISC和Food-101在内的各种数据集上进行的广泛实验表明，我们的方法显著提高了学习表示的质量，当有限的标记数据用于线性评估时，性能提高了5-10%。这些实验与一系列全面的消融相结合，证明了我们的方法在各种环境中的前景。 et.al.|[2406.12944](http://arxiv.org/abs/2406.12944)|null|
 |**2024-06-18**|**HumanSplat: Generalizable Single-Image Human Gaussian Splatting with Structure Priors**|尽管高保真度人体重建技术最近取得了进展，但对密集捕获图像或耗时的每次优化的要求大大阻碍了它们在更广泛场景中的应用。为了解决这些问题，我们提出了HumanSplat，它以可推广的方式从单个输入图像中预测任何人的3D高斯飞溅特性。特别是，HumanSplat包括一个2D多视图扩散模型和一个具有人体结构先验的潜在重建转换器，这些先验能够在一个统一的框架内熟练地集成几何先验和语义特征。进一步设计了一种包含人体语义信息的层次损失，以实现高保真纹理建模，并更好地约束估计的多个视图。在标准基准和野外图像上的综合实验表明，HumanSplat在实现真实感新颖视图合成方面超越了现有的最先进方法。 et.al.|[2406.12459](http://arxiv.org/abs/2406.12459)|**[link](https://github.com/humansplat/humansplat.github.io)**|
 
-<p align=right>(<a href=#updated-on-20240625>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240626>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-06-24**|**Geometry-Aware Score Distillation via 3D Consistent Noising and Gradient Consistency Modeling**|分数蒸馏采样（SDS）是一种将预训练的2D扩散模型的分数蒸馏为3D表示的方法，最近在文本到3D的生成任务中取得了重大进展。然而，这种方法仍然面临着关键的几何不一致性问题，如Janus问题。从这样一个假设开始，即这种不一致性问题可能是由从不同角度预测的2D分数之间的多视角不一致引起的，我们引入了GSD，这是一个简单通用的即插即用框架，用于将3D一致性和几何意识纳入SDS过程。我们的方法由三个部分组成：3D一致性噪声处理，旨在产生完全遵循标准高斯分布的3D一致性噪音图，基于几何的梯度扭曲，用于识别不同视点的预测梯度之间的对应关系，以及新的梯度一致性损失，用于优化场景几何结构，以产生更一致的梯度。我们证明，我们的方法显著提高了性能，以最小的计算成本成功地解决了文本到三维生成任务中的几何不一致问题，并与现有的基于分数蒸馏的模型兼容。我们的项目页面位于https://ku-cvlab.github.io/GSD/. et.al.|[2406.16695](http://arxiv.org/abs/2406.16695)|null|
 |**2024-06-24**|**Repulsive Score Distillation for Diverse Sampling of Diffusion Models**|分数蒸馏采样是将扩散模型集成到复杂视觉生成中的关键。尽管取得了令人印象深刻的成果，但它仍存在模式崩溃和缺乏多样性的问题。为了应对这一挑战，我们利用分数蒸馏的梯度流解释提出了排斥分数蒸馏（RSD）。特别是，我们提出了一个基于粒子系综排斥的变分框架，以促进多样性。使用包含粒子之间耦合的变分近似，排斥表现为一种简单的正则化，允许粒子基于它们的相对成对相似性进行相互作用，例如通过径向基核进行测量。我们为无约束和有约束的采样场景设计了RSD。对于约束采样，我们关注潜在空间中的逆问题，该问题导致增广变分公式，在计算、质量和多样性之间取得了良好的平衡。我们在文本到图像生成和反问题方面的大量实验表明，与最先进的替代方案相比，RSD在多样性和质量之间实现了卓越的权衡。 et.al.|[2406.16683](http://arxiv.org/abs/2406.16683)|null|
 
-<p align=right>(<a href=#updated-on-20240625>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240626>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-11**|**LOP-Field: Brain-inspired Layout-Object-Position Fields for Robotic Scene Understanding**|空间认知使动物具有非常高效的导航能力，这在很大程度上取决于对空间环境的场景级理解。最近，人们发现，大鼠大脑嗅后皮层的神经群体比场景中的物体更能强烈地适应空间布局。受局部场景中空间布局表示的启发，我们提出了实现布局对象位置（LOP）关联的LOP域，以对机器人场景理解的层次表示进行建模。在基础模型和隐式场景表示的支持下，神经场被实现为机器人的场景存储器，存储具有位置、对象和布局信息的场景的可查询表示。为了验证所建立的LOP关联，对该模型进行了测试，以使用定量指标从3D位置推断区域信息，实现了超过88%的平均准确度。还表明，与最先进的定位方法相比，所提出的使用区域信息的方法可以在文本和RGB输入的情况下实现改进的对象和视图定位结果。 et.al.|[2406.05985](http://arxiv.org/abs/2406.05985)|null|
 |**2024-06-17**|**Grounding Continuous Representations in Geometry: Equivariant Neural Fields**|最近，神经场已经成为表示连续信号的强大建模范式。在条件神经领域中，一个领域由一个潜在变量表示，该变量对NeF进行了调节，否则其参数化将在整个数据集上共享。我们提出了基于交叉注意力变换器的等变神经场，其中NeFs以几何条件变量，即潜在点云为条件，从而实现从潜在到场的等变解码。我们的等变方法引入了一个可操纵性性质，通过该性质，场和势能都以几何为基础，并服从变换定律。如果场变换，势能相应地表示变换，反之亦然。至关重要的是，等变关系确保潜在的能够（1）真实地表示几何模式，允许在潜在空间中进行几何推理，（2）在空间相似的模式上进行权重共享，允许有效地学习场的数据集。与其他非等变NeF方法相比，使用分类实验和拟合整个数据集的能力验证了这些主要特性。我们通过展示独特的局部场编辑特性，进一步验证了ENF的潜力。 et.al.|[2406.05753](http://arxiv.org/abs/2406.05753)|null|
 
-<p align=right>(<a href=#updated-on-20240625>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240626>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
