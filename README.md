@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.06.28
+## Updated on 2024.06.29
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-06-24**|**Articulate your NeRF: Unsupervised articulated object modeling via conditional view synthesis**|我们提出了一种新的无监督方法来学习具有刚性零件的关节对象的姿态和零件分割。给定一个物体在不同关节状态下的两个观察结果，我们的方法通过使用第一个观察结果的隐式模型来学习物体零件的几何形状和外观，从第二个观察结果中提取零件分割和关节，同时呈现后一个观察结果。此外，为了解决零件分割和连接联合优化的复杂性，我们提出了一种基于体素网格的初始化策略和解耦优化程序。与先前的无监督工作相比，我们的模型获得了显著更好的性能，并推广到具有多个部分的对象，同时它可以有效地从少数视图进行后期观察。 et.al.|[2406.16623](http://arxiv.org/abs/2406.16623)|null|
 |**2024-06-24**|**Crowd-Sourced NeRF: Collecting Data from Production Vehicles for 3D Street View Reconstruction**|最近，神经辐射场（NeRF）在新的视图合成中取得了令人印象深刻的结果。Block NeRF展示了利用NeRF构建大城市规模模型的能力。对于大规模建模，需要大量的图像数据。从专门设计的数据采集车上采集图像无法支持大规模应用。如何获取大量高质量的数据仍然是一个悬而未决的问题。注意到汽车行业拥有大量的图像数据，众包是大规模数据收集的便捷方式。在本文中，我们提出了一个众包框架，该框架利用生产车辆捕获的大量数据来使用NeRF模型重建场景。这种方法解决了大规模重建的关键问题，即数据来自哪里以及如何使用它们。首先，对众包海量数据进行过滤，以消除冗余，并在时间和空间上保持平衡分布。然后执行来自运动模块的结构来细化相机姿态。最后，使用图像以及姿势来训练某个块中的NeRF模型。我们强调，我们提出了一个综合框架，集成了多个模块，包括数据选择、稀疏3D重建、序列外观嵌入、地表深度监测和遮挡完成。完整的系统能够从众包数据中有效地处理和重建高质量的3D场景。进行了大量的定量和定性实验来验证我们的系统的性能。此外，我们提出了一个名为“第一视角导航”的应用程序，该应用程序利用NeRF模型生成3D街景，并用合成视频引导驾驶员。 et.al.|[2406.16289](http://arxiv.org/abs/2406.16289)|null|
 
-<p align=right>(<a href=#updated-on-20240628>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240629>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-06-23**|**MLPHand: Real Time Multi-View 3D Hand Mesh Reconstruction via MLP Modeling**|多视图手部网格重建是虚拟现实和人机交互应用中的一项关键任务，但它仍然是一项艰巨的挑战。尽管现有的多视角手部重建方法实现了显著的准确性，但它们通常会带来巨大的计算负担，阻碍实时推理。为此，我们提出了MLPHand，这是一种用于实时多视图单手重建的新方法。MLP-Hand由两个主要模块组成：（1）一个基于MLP的轻量级Skeleton2Mesh模型，可有效地从手部骨骼中恢复手部网格；（2）一个多视图几何特征融合预测模块，可利用来自多个视图的详细几何信息增强Skeleton4Mesh模型。在三个广泛使用的数据集上的实验表明，MLPHand可以将计算复杂度降低90%，同时实现与现有最先进基线相当的重建精度。 et.al.|[2406.16137](http://arxiv.org/abs/2406.16137)|null|
 |**2024-06-23**|**Learning with Noisy Ground Truth: From 2D Classification to 3D Reconstruction**|深度神经网络在数据密集型计算机视觉应用中取得了巨大成功，而这种成功在很大程度上依赖于大量干净的数据。在现实世界中，有时很难获得干净的数据。例如，在图像分类和分割任务中，数百万个样本的精确注释通常非常昂贵和耗时。在3D静态场景重建任务中，大多数与NeRF相关的方法都需要对静态场景进行基本假设（例如，一致的照明条件和持久的物体位置），这在现实世界的场景中经常被违反。为了解决这些问题，带噪声地面实况学习（LNGT）已成为一种有效的学习方法，并显示出巨大的潜力。在这项简短的调查中，我们提出了一个正式的定义，将LNGT-LNGT的分析统一到不同机器学习任务（分类和回归）的背景下。基于这一定义，我们提出了一种新的分类法，根据机器学习的基本定义，根据误差分解对现有工作进行分类。此外，我们对记忆效应进行了深入分析，并对未来从2D分类到3D重建的潜在研究机会进行了深入讨论，希望为后续研究提供指导。 et.al.|[2406.15982](http://arxiv.org/abs/2406.15982)|null|
 
-<p align=right>(<a href=#updated-on-20240628>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240629>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-06-27**|**Numerical Analysis of the Complete Active-Space Extended Koopmans's Theorem**|我们研究了扩展库普曼斯定理（EKT）在再现原子和分子系统的全组态相互作用（FCI）和全活性空间组态相互作用的电离能（IE）（计算为N和（N-1）电子态能量之差）方面的数值精度。特别地，我们研究了随着基集和活动空间大小的变化，EKT IE收敛到其精确值的问题。我们发现，随着基集大小的增加，第一个FCI EKT IE接近它们的确切对应物。然而，增加基集或活动空间大小并不总是导致更准确的CAS-CI EKT IE。我们的研究支持了Davidson等人的观察[E.R.Davison等人，J.Chem.Phys.155051102（2021）]，即通过用适当对称的扩散函数补充基集，可以系统地以任意的数值精度改进FCI EKT IE，该扩散函数允许分离的电子远离参考系。通过改变扩散函数的指数和中心，我们的结果描绘了LiH的CAS-CI EKT IE的复杂模式，这对于小分子的光谱研究可能很重要。 et.al.|[2406.19211](http://arxiv.org/abs/2406.19211)|null|
 |**2024-06-27**|**The case for Centaurus A as the main source of ultrahigh-energy cosmic rays**|我们讨论了脚踝上方宇宙射线的主要部分是由附近的单一来源引起的可能性，特别是考虑到半人马座a射电星系。在较低能量下非常温和的衰减效应意味着来自该源的次级核只提供了很小的贡献。考虑到观测到的中等各向异性，银河系外和银河系磁场的偏转应该在决定宇宙射线到达方向分布方面发挥关键作用。河外场的扩散以及有限的源寿命也会显著影响观测光谱的形状。数十EeV的宇宙射线通量由CNO分量主导，我们表明，它实际上更好地由C核和O核的混合物再现，而不是由有效描述该质量组的N分量的通常假设再现。在存在强光谱抑制的能量范围内，Si和Fe族成分在70EeV以上变得占主导地位。如果半人马座A方向周围出现在40EeV以上的局部通量过剩归因于CNO成分，则来自能量范围为10-20EeV的源的He核可能导致类似的各向异性，除非其贡献被抑制。在几个EeV的宇宙射线通量应该主要是由与河外源群体相关的更各向同性的光分量引起的。包含来自银河系成分的重核的亚优势贡献有助于再现1 EeV附近的观测结果。 et.al.|[2406.19199](http://arxiv.org/abs/2406.19199)|null|
 
-<p align=right>(<a href=#updated-on-20240628>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240629>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-11**|**Image Neural Field Diffusion Models**|扩散模型在对复杂数据分布建模方面表现出了令人印象深刻的能力，与GANs相比具有几个关键优势，例如稳定的训练、更好地覆盖训练分布的模式，以及在没有额外训练的情况下解决反问题的能力。然而，大多数扩散模型学习固定分辨率图像的分布。我们建议通过在图像神经场上训练扩散模型来学习连续图像的分布，该模型可以以任何分辨率渲染，并显示出其相对于固定分辨率模型的优势。为了实现这一点，一个关键的挑战是获得一个代表真实感图像神经场的潜在空间。受最近几项技术的启发，我们提出了一种简单有效的方法，但有一些关键的变化，使图像神经场具有真实感。我们的方法可以用于将现有的潜在扩散自动编码器转换为图像神经场自动编码器。我们证明，图像神经场扩散模型可以使用混合分辨率图像数据集进行训练，优于固定分辨率扩散模型和超分辨率模型，并且可以有效地解决不同尺度条件下的逆问题。 et.al.|[2406.07480](http://arxiv.org/abs/2406.07480)|null|
 |**2024-06-10**|**Space-Time Continuous PDE Forecasting using Equivariant Neural Fields**|最近，条件神经场（NeF）通过将解学习为条件NeF的潜在空间中的流，已成为偏微分方程的强大建模范式。尽管受益于NeFs的有利特性，如网格不可知性和时空连续动力学建模，但这种方法限制了将PDE的已知约束强加给解决方案的能力，例如对称性或边界条件，有利于建模的灵活性。相反，我们提出了一种基于时空连续NeF的求解框架，该框架通过在潜在空间中保留几何信息，尊重PDE的已知对称性。我们表明，将解建模为感兴趣组 $G$ 上的点云流，可以提高泛化和数据效率。我们验证了我们的框架很容易推广到看不见的空间和时间位置，以及初始条件的几何变换——在其他基于NeF的PDE预测方法失败的地方——并在一些具有挑战性的几何结构中超过基线进行改进。 et.al.|[2406.06660](http://arxiv.org/abs/2406.06660)|null|
 
-<p align=right>(<a href=#updated-on-20240628>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240629>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
