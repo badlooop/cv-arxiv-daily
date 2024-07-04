@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.03
+## Updated on 2024.07.04
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-06-27**|**XLD: A Cross-Lane Dataset for Benchmarking Novel Driving View Synthesis**|彻底测试自动驾驶系统对于追求安全的自动驾驶汽车至关重要。这就需要创建超出现实世界数据安全收集范围的安全关键场景，因为其中许多场景在公共道路上很少发生。然而，大多数现有NVS方法的评估依赖于对来自训练数据的图像帧的零星采样，使用度量将渲染图像与真实图像进行比较。遗憾的是，该评估协议不能满足闭环仿真的实际要求。具体而言，真正的应用程序需要渲染超出原始轨迹的新颖视图（如跨车道视图）的能力，而这些视图在现实世界中很难捕捉。为了解决这一问题，本文提出了一种专门为自动驾驶模拟设计的新型驾驶视图合成数据集和基准。该数据集是独特的，因为它包括通过偏离训练轨迹1-4米而捕获的测试图像。它包括六个序列，包括不同的时间和天气条件。每个序列包含450个训练图像、150个测试图像以及它们对应的相机姿态和固有参数。利用这一新颖的数据集，我们建立了第一个现实的基准，用于在仅前置和多摄像头设置下评估现有的NVS方法。实验结果强调了当前方法中存在的显著差距，揭示了它们不足以满足跨车道或闭环模拟的苛刻先决条件。我们的数据集在项目页面上公开发布：https://3d-aigc.github.io/XLD/. et.al.|[2406.18360](http://arxiv.org/abs/2406.18360)|null|
 |**2024-06-26**|**VDG: Vision-Only Dynamic Gaussian for Driving Simulation**|动态高斯飞溅已经在新颖的视图中带来了令人印象深刻的场景重建和图像合成进展。然而，现有的方法在很大程度上依赖于预先计算的姿态和通过运动结构（SfM）算法或昂贵的传感器进行的高斯初始化。本文首次通过将自监督VO集成到我们的无姿态动态高斯方法（VDG）中来解决这个问题，以促进姿态和深度初始化以及静态动态分解。此外，与无姿态动态视图合成方法相比，VDG可以仅使用RGB图像输入，以更快的速度和更大的场景构建动态场景。我们通过大量的定量和定性实验证明了我们的方法的稳健性。与最先进的动态视图合成方法相比，我们的结果显示出良好的性能。其他视频和源代码将发布在我们的项目页面上https://3d-aigc.github.io/VDG. et.al.|[2406.18198](http://arxiv.org/abs/2406.18198)|null|
 
-<p align=right>(<a href=#updated-on-20240703>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240704>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-06-28**|**LiverUSRecon: Automatic 3D Reconstruction and Volumetry of the Liver with a Few Partial Ultrasound Scans**|肝脏体积测量的三维重建对于定性分析和疾病诊断非常重要。使用超声（US）扫描的肝脏容量测定虽然由于采集时间和安全性较短而具有优势，但由于超声扫描固有的噪声、边界模糊和部分肝脏可见性，因此具有挑战性。我们通过使用肝脏的一些不完全矢状面US扫描的分割掩模，以及使用一组肝脏CT扫描建立的统计形状模型（SSM）来解决这些挑战。我们通过参数回归网络计算扭曲该标准SSM以拟合US扫描所需的形状参数。由此产生的3D肝脏重建是准确的，并导致自动肝脏体积计算。我们使用RMSE评估估计的肝脏体积相对于CT分割体积的准确性。我们的体积计算在统计学上更接近于使用CT扫描估计的体积，而不是放射科医生使用Childs方法计算的体积：p值0.094（>0.05）表明，与Childs方法相比，CT分割体积与我们的体积之间没有显著差异。我们通过对US图像分辨率、用于SSM的CT扫描次数、主成分数量和输入US扫描次数的调查（消融研究）验证了我们的方法。据我们所知，这是第一个使用一些不完整的US扫描的自动肝脏容量测定系统，给出了一组SSM的肝脏CT扫描。 et.al.|[2406.19336](http://arxiv.org/abs/2406.19336)|null|
 |**2024-06-26**|**On Scaling Up 3D Gaussian Splatting Training**|三维高斯散射（3DGS）以其优越的视觉质量和渲染速度在三维重建中越来越受欢迎。然而，3DGS训练目前发生在单个GPU上，由于内存限制，限制了其处理高分辨率和大规模3D重建任务的能力。我们介绍了Grendel，这是一个分布式系统，旨在划分3DGS参数并在多个GPU之间并行计算。由于每个高斯影响渲染像素的一个小的动态子集，Grendel采用稀疏的全对全通信将必要的高斯传输到像素分区，并执行动态负载平衡。与一次使用一个相机视图图像进行训练的现有3DGS系统不同，Grendel支持使用多个视图进行批量训练。我们探索了各种优化超参数缩放策略，发现一个简单的sqrt（批量大小）缩放规则是非常有效的。使用大规模、高分辨率场景的评估表明，Grendel通过在多个GPU上放大3DGS参数来提高渲染质量。在Rubble数据集上，我们通过在16个GPU上分布4040万高斯实现了27.28的测试PSNR，而在单个GPU上使用1120万高斯实现的PSNR为26.28。Grendel是一个开源项目，位于：https://github.com/nyu-systems/Grendel-GS et.al.|[2406.18533](http://arxiv.org/abs/2406.18533)|**[link](https://github.com/nyu-systems/grendel-gs)**|
 
-<p align=right>(<a href=#updated-on-20240703>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240704>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-07-02**|**Solution of parameter-dependent diffusion equation in layered media**|本文研究了由局部镜像对称层组成的二维域中的参数相关扩散方程。假设扩散系数在每一层中是一个常数。目标是找到具有少量项的近似参数到解决方案映射。结果表明，在两层的情况下，可以找到一个由三项组成的解公式，这三项与扩散系数有显式依赖关系。该公式基于将解分解为与层和层之间的界面相关的正交部分。然后将该公式扩展为多层情况下的近似公式。我们给出了正方形层的解析公式，并对更一般的层使用有限元公式。数值算例说明了这一结果，并通过分析Kolmogorov n宽度对简化基方法具有应用价值。 et.al.|[2407.02257](http://arxiv.org/abs/2407.02257)|null|
 |**2024-07-02**|**GlyphDraw2: Automatic Generation of Complex Glyph Posters with Diffusion Models and Large Language Models**|海报在营销和广告中发挥着至关重要的作用，通过增强视觉传达和品牌知名度，对工业设计做出了重大贡献。随着可控文本到图像扩散模型的最新进展，更简洁的研究现在集中在合成图像中的文本渲染上。尽管文本渲染精度有所提高，但端到端海报生成领域的开发仍然不足。这项复杂的任务涉及在文本渲染精度和自动布局之间取得平衡，以生成具有可变纵横比的高分辨率图像。为了应对这一挑战，我们提出了一种端到端的文本渲染框架，该框架采用了植根于对齐学习的三重交叉注意力机制，旨在在详细的上下文背景中创建精确的海报文本。此外，我们还介绍了一个图像分辨率超过1024像素的高分辨率数据集。我们的方法利用了SDXL体系结构。大量实验验证了我们的方法生成具有复杂和丰富背景的海报图像的能力。代码将在https://github.com/OPPO-Mente-Lab/GlyphDraw2. et.al.|[2407.02252](http://arxiv.org/abs/2407.02252)|**[link](https://github.com/oppo-mente-lab/glyphdraw2)**|
 
-<p align=right>(<a href=#updated-on-20240703>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240704>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-12**|**OpenObj: Open-Vocabulary Object-Level Neural Radiance Fields with Fine-Grained Understanding**|近年来，人们对由视觉语言模型（VLM）促进的开放词汇三维场景重建产生了浓厚的兴趣，VLM在开放集检索中展示了非凡的能力。然而，现有的方法面临一些局限性：它们要么专注于学习逐点特征，导致语义理解模糊，要么只处理对象级重建，从而忽略对象内部的复杂细节。为了应对这些挑战，我们引入了OpenObj，这是一种创新的方法，用于构建具有细粒度理解的开放词汇表对象级神经辐射场（NeRF）。从本质上讲，OpenObj建立了一个健壮的框架，用于在对象级别进行高效和严密的场景建模和理解。此外，我们将零件级特征融入神经领域，从而实现物体内部的细致入微的表示。这种方法捕获对象级实例，同时保持细粒度的理解。在多个数据集上的结果表明，OpenObj在零样本语义分割和检索任务中取得了优异的性能。此外，OpenObj支持多尺度的真实世界机器人任务，包括全局移动和局部操纵。 et.al.|[2406.08009](http://arxiv.org/abs/2406.08009)|**[link](https://github.com/BIT-DYN/OpenObj)**|
 |**2024-06-11**|**Image Neural Field Diffusion Models**|扩散模型在对复杂数据分布建模方面表现出了令人印象深刻的能力，与GANs相比具有几个关键优势，例如稳定的训练、更好地覆盖训练分布的模式，以及在没有额外训练的情况下解决反问题的能力。然而，大多数扩散模型学习固定分辨率图像的分布。我们建议通过在图像神经场上训练扩散模型来学习连续图像的分布，该模型可以以任何分辨率渲染，并显示出其相对于固定分辨率模型的优势。为了实现这一点，一个关键的挑战是获得一个代表真实感图像神经场的潜在空间。受最近几项技术的启发，我们提出了一种简单有效的方法，但有一些关键的变化，使图像神经场具有真实感。我们的方法可以用于将现有的潜在扩散自动编码器转换为图像神经场自动编码器。我们证明，图像神经场扩散模型可以使用混合分辨率图像数据集进行训练，优于固定分辨率扩散模型和超分辨率模型，并且可以有效地解决不同尺度条件下的逆问题。 et.al.|[2406.07480](http://arxiv.org/abs/2406.07480)|null|
 
-<p align=right>(<a href=#updated-on-20240703>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240704>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
