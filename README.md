@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.05
+## Updated on 2024.07.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-06-28**|**ASSR-NeRF: Arbitrary-Scale Super-Resolution on Voxel Grid for High-Quality Radiance Fields Reconstruction**|基于NeRF的方法通过构建具有隐式或显式表示的辐射场来重建3D场景。虽然基于NeRF的方法可以在任意尺度上执行新视图合成（NVS），但在具有低分辨率（LR）优化的高分辨率新视图综合（HRNVS）中的性能往往导致过度平滑。另一方面，单图像超分辨率（SR）旨在将LR图像增强到HR图像，但缺乏多视点一致性。为了应对这些挑战，我们提出了任意尺度超分辨率NeRF（ASSR-NeRF），这是一种用于超分辨率新视图合成（SRNVS）的新框架。我们提出了一种基于注意力的VoxelGridSR模型来直接对优化的体积执行3D超分辨率（SR）。我们的模型在不同的场景中进行了训练，以确保可推广性。对于用LR视图训练的看不见的场景，我们可以直接应用我们的VoxelGridSR来进一步细化体积并实现多视图一致SR。我们从数量和质量上证明了所提出的方法在SRNVS中取得了显著的性能。 et.al.|[2406.20066](http://arxiv.org/abs/2406.20066)|null|
 |**2024-06-27**|**360 in the Wild: Dataset for Depth Prediction and View Synthesis**|大量的透视相机数据集促进了用于各种任务的新的基于学习的策略的出现，如相机定位、单图像深度估计或视图合成。然而，全景或全向图像数据集，包括姿势和深度等基本信息，大多是用合成场景制作的。在这项工作中，我们介绍了一个大规模的野外360 $^｛\circ｝$ 视频数据集。这个数据集是从互联网上仔细收集的，并从世界各地捕获。因此，该数据集展示了非常多样化的环境（例如，室内和室外）和上下文（例如，有和没有移动物体）。构成我们数据集的25K幅图像中的每一幅都提供了其各自相机的姿势和深度图。我们说明了我们的数据集与两个主要任务的相关性，即单图像深度估计和视图合成。 et.al.|[2406.18898](http://arxiv.org/abs/2406.18898)|null|
 
-<p align=right>(<a href=#updated-on-20240705>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240706>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-06-28**|**SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting**|三维高斯散射（3DGS）是一种很有前途的三维重建技术，它提供了高效的训练和渲染速度，适用于实时应用。然而，当前的方法需要高度受控的环境（没有移动的人或风吹的元素，以及一致的照明）来满足3DGS的视图间一致性假设。这使得真实世界捕捉的重建成为问题。我们提出了SpotlessSplats，这是一种利用预先训练的通用功能与稳健优化相结合的方法，可以有效地忽略瞬态干扰因素。我们的方法在随意捕捉的情况下，在视觉和数量上都达到了最先进的重建质量。 et.al.|[2406.20055](http://arxiv.org/abs/2406.20055)|null|
 |**2024-06-28**|**Deep Learning-based Depth Estimation Methods from Monocular Image and Videos: A Comprehensive Survey**|由于其在自动驾驶、3D重建、数字娱乐和机器人等许多领域的应用，从单个RGB图像和视频中估计深度引起了广泛的兴趣。在过去的10年里，已经发表了500多篇基于深度学习的论文，这表明人们对这项任务的兴趣越来越大。本文对现有的基于深度学习的方法、它们所面临的挑战以及它们在架构和监督方法方面的发展进行了全面的调查。它提供了一种分类法，用于根据输入和输出模式、网络架构和学习方法对当前工作进行分类。它还讨论了单目深度估计历史上的主要里程碑，以及现有方法中使用的不同管道、数据集和评估指标。 et.al.|[2406.19675](http://arxiv.org/abs/2406.19675)|null|
 
-<p align=right>(<a href=#updated-on-20240705>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240706>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-07-03**|**SlerpFace: Face Template Protection via Spherical Linear Interpolation**|现代人脸识别系统使用从人脸图像中提取的特征模板来识别人。为了增强隐私，人脸模板保护技术被广泛用于隐藏存储在模板中的敏感身份和外观信息。本文确定了一种新出现的利用扩散模型的隐私攻击形式，该形式可能会使先前的保护无效，称为反向攻击。该攻击可以从模板中合成高质量的、保留身份的人脸图像，揭示人物的外貌。在研究扩散模型生成能力的基础上，本文提出了一种通过将模板旋转到类噪声分布来恶化攻击的防御方法。这可以通过在其定位的超球面上进行球面和线性插值模板（slerp）来有效地实现。本文进一步提出了分组明智地划分和剔除模板的特征维度，以增强旋转模板的不可逆性。小组的划分和每个小组中的辍学者都是以一种有利于识别的方式学习的。将所提出的技术具体化为一种新的人脸模板保护技术SlerpFace。大量实验表明，SlerpFace提供了令人满意的识别精度和全面的隐私保护，以抵御反转和其他攻击形式，优于现有技术。 et.al.|[2407.03043](http://arxiv.org/abs/2407.03043)|null|
 |**2024-07-03**|**NLP Sampling: Combining MCMC and NLP Methods for Diverse Constrained Sampling**|在硬约束下生成不同的样本是许多领域的核心挑战。通过这项工作，我们旨在提供一个综合的观点和框架，将MCMC、约束优化和机器人领域的方法相结合，并从经验评估中深入了解其优势。我们提出了NLP采样作为一种通用问题公式，提出了一系列重启两阶段方法作为跨领域集成方法的框架，并在分析和机器人操作规划问题上对其进行了评估。作为补充，我们提供了几个概念讨论，例如拉格朗日参数的作用、全局采样以及扩散NLP和相应的基于模型的去噪采样器的想法。 et.al.|[2407.03035](http://arxiv.org/abs/2407.03035)|null|
 
-<p align=right>(<a href=#updated-on-20240705>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240706>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-12**|**OpenObj: Open-Vocabulary Object-Level Neural Radiance Fields with Fine-Grained Understanding**|近年来，人们对由视觉语言模型（VLM）促进的开放词汇三维场景重建产生了浓厚的兴趣，VLM在开放集检索中展示了非凡的能力。然而，现有的方法面临一些局限性：它们要么专注于学习逐点特征，导致语义理解模糊，要么只处理对象级重建，从而忽略对象内部的复杂细节。为了应对这些挑战，我们引入了OpenObj，这是一种创新的方法，用于构建具有细粒度理解的开放词汇表对象级神经辐射场（NeRF）。从本质上讲，OpenObj建立了一个健壮的框架，用于在对象级别进行高效和严密的场景建模和理解。此外，我们将零件级特征融入神经领域，从而实现物体内部的细致入微的表示。这种方法捕获对象级实例，同时保持细粒度的理解。在多个数据集上的结果表明，OpenObj在零样本语义分割和检索任务中取得了优异的性能。此外，OpenObj支持多尺度的真实世界机器人任务，包括全局移动和局部操纵。 et.al.|[2406.08009](http://arxiv.org/abs/2406.08009)|**[link](https://github.com/BIT-DYN/OpenObj)**|
 |**2024-06-11**|**Image Neural Field Diffusion Models**|扩散模型在对复杂数据分布建模方面表现出了令人印象深刻的能力，与GANs相比具有几个关键优势，例如稳定的训练、更好地覆盖训练分布的模式，以及在没有额外训练的情况下解决反问题的能力。然而，大多数扩散模型学习固定分辨率图像的分布。我们建议通过在图像神经场上训练扩散模型来学习连续图像的分布，该模型可以以任何分辨率渲染，并显示出其相对于固定分辨率模型的优势。为了实现这一点，一个关键的挑战是获得一个代表真实感图像神经场的潜在空间。受最近几项技术的启发，我们提出了一种简单有效的方法，但有一些关键的变化，使图像神经场具有真实感。我们的方法可以用于将现有的潜在扩散自动编码器转换为图像神经场自动编码器。我们证明，图像神经场扩散模型可以使用混合分辨率图像数据集进行训练，优于固定分辨率扩散模型和超分辨率模型，并且可以有效地解决不同尺度条件下的逆问题。 et.al.|[2406.07480](http://arxiv.org/abs/2406.07480)|null|
 
-<p align=right>(<a href=#updated-on-20240705>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240706>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
