@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.08
+## Updated on 2024.07.09
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-06-29**|**Intrinsic PAPR for Point-level 3D Scene Albedo and Shading Editing**|神经渲染的最新进展在从多视图RGB图像合成新视图方面表现出色。然而，它们通常缺乏在详细的点级别编辑场景的着色或颜色的能力，同时确保不同视点之间的一致性。在这项工作中，我们解决了点级3D场景反照率和多视图RGB图像的着色编辑的挑战，重点是点级而不是局部或全局级的详细编辑。虽然之前基于体积表示的工作（如NeRF）难以在点级别实现3D一致性编辑，但基于点的神经渲染的最新进展显示出克服这一挑战的前景。我们介绍了“内在PAPR”，这是一种基于最近的基于点的神经绘制技术——接近注意力点绘制（PAPR）的新方法。与其他对场景的内在分解建模的基于点的方法不同，我们的方法不依赖于复杂的着色模型或可能不普遍适用的简单先验。相反，我们直接将场景分解建模为反照率和阴影分量，从而获得更好的估计精度。与最新的基于点的反向渲染方法的比较评估表明，Intrinsic PAPR实现了更高质量的新颖视图渲染和卓越的点级反照率和着色编辑。 et.al.|[2407.00500](http://arxiv.org/abs/2407.00500)|null|
 |**2024-06-28**|**ASSR-NeRF: Arbitrary-Scale Super-Resolution on Voxel Grid for High-Quality Radiance Fields Reconstruction**|基于NeRF的方法通过构建具有隐式或显式表示的辐射场来重建3D场景。虽然基于NeRF的方法可以在任意尺度上执行新视图合成（NVS），但在具有低分辨率（LR）优化的高分辨率新视图综合（HRNVS）中的性能往往导致过度平滑。另一方面，单图像超分辨率（SR）旨在将LR图像增强到HR图像，但缺乏多视点一致性。为了应对这些挑战，我们提出了任意尺度超分辨率NeRF（ASSR-NeRF），这是一种用于超分辨率新视图合成（SRNVS）的新框架。我们提出了一种基于注意力的VoxelGridSR模型来直接对优化的体积执行3D超分辨率（SR）。我们的模型在不同的场景中进行了训练，以确保可推广性。对于用LR视图训练的看不见的场景，我们可以直接应用我们的VoxelGridSR来进一步细化体积并实现多视图一致SR。我们从数量和质量上证明了所提出的方法在SRNVS中取得了显著的性能。 et.al.|[2406.20066](http://arxiv.org/abs/2406.20066)|null|
 
-<p align=right>(<a href=#updated-on-20240708>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240709>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-07-02**|**Indoor 3D Reconstruction with an Unknown Camera-Projector Pair**|基于结构光的摄像机-投影对（CPP）方法在室内三维重建中起着至关重要的作用，尤其是对于纹理较弱的场景。以前的方法通常假设已知的本质，这些本质是从已知物体中预先校准的，或者是从多视图观测中自我校准的。在没有任何已知对象的情况下，仅从两个视图可靠地恢复CPP内部函数仍然具有挑战性。在本文中，我们提供了一个简单而可靠的解决方案。我们首次证明，可以从未知的长方体角（C2），例如房间的角，导出对CPP本质的足够约束，这是室内场景中的常见结构。此外，在只有已知相机主点的情况下，所有CPP本质的复杂多变量估计可以简化为一个简单的单变量优化问题，从而实现可靠的校准，从而在未知CPP的情况下直接进行3D重建。大量结果表明，与传统方法和基于学习的方法相比，所提出的方法具有优越性。此外，所提出的方法还展示了在没有主动照明的情况下解决类似任务的巨大潜力，例如来自运动的稀疏视图结构。 et.al.|[2407.01945](http://arxiv.org/abs/2407.01945)|null|
 |**2024-07-02**|**PO-MSCKF: An Efficient Visual-Inertial Odometry by Reconstructing the Multi-State Constrained Kalman Filter with the Pose-only Theory**|有效的视觉惯性里程计（VIO）对于有效载荷受限的机器人至关重要。尽管现代基于优化的算法已经实现了优越的精度，但基于MSCKF的VIO算法仍然因其高效和一致的性能而被广泛要求。由于MSCKF建立在传统的多视图几何结构上，因此测量的残差不仅与状态误差有关，而且与特征位置误差有关。为了应用EKF融合，需要投影过程来消除观测模型中的特征位置误差，这可能导致模型和精度下降。为了获得有效的视觉惯性融合模型，同时保持模型的一致性，我们提出用新的仅姿态（PO）多视图几何描述来重建MSCKF-VIO。在新构建的滤波器中，我们对PO重投影残差进行了建模，这些残差仅与运动状态相关，从而克服了空间投影的要求。此外，新滤波器不需要任何特征位置信息，这消除了由3D重建过程带来的计算成本和线性化误差。我们在多个数据集上进行了全面的实验，其中所提出的方法在具有挑战性的序列中显示出准确性的提高和一致的性能。 et.al.|[2407.01888](http://arxiv.org/abs/2407.01888)|null|
 
-<p align=right>(<a href=#updated-on-20240708>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240709>back to top</a>)</p>
 
 ## Diffusion
 
@@ -63,9 +63,9 @@
 |**2024-07-05**|**Unified continuous-time q-learning for mean-field game and mean-field control problems**|本文从代表agent的角度研究了平均场跳跃扩散模型中的连续时间q学习。为了克服种群分布可能无法直接观测的挑战，我们引入了解耦形式的积分q函数（解耦Iq函数），并将其与值函数一起建立了鞅刻画，为平均场对策（MFG）和平均场控制（MFC）问题提供了统一的策略评估规则。此外，根据解决MFG或MFC问题的任务，我们可以通过不同的方法使用解耦的Iq函数来分别学习平均场平衡策略或平均场最优策略。因此，我们利用源于平均场相互作用的所有测试策略，为MFG和MFC问题设计了一个统一的q-学习算法。对于跳跃扩散设置中的几个例子，在LQ框架内外，我们可以获得解耦的Iq函数和值函数的精确参数化，并从代表代理的角度说明我们的算法，具有令人满意的性能。 et.al.|[2407.04521](http://arxiv.org/abs/2407.04521)|null|
 |**2024-07-05**|**G-Adaptive mesh refinement -- leveraging graph neural networks and differentiable finite element solvers**|我们提出了一种新的、有效的方法来解决有限元方法中长期存在的网格自适应问题。有限元求解器是求解偏微分方程（PDE）的强大工具，但其成本和精度严重取决于网格点的选择。为了保持较低的计算成本，网格重定位（r-adaptivity）寻求优化固定数量的网格点的位置，以获得最佳的有限元解精度。解决这个问题的经典方法需要解决单独的非线性“网格”PDE来找到网格点的位置。这在重新网格化时产生了显著的成本，并且依赖于某些先验假设和指导启发式方法来获得最佳网格点位置。最近的r自适应机器学习方法主要集中在为这些经典方法构建快速代理。我们的新方法将图神经网络（GNN）驱动的架构与基于相对于网格点位置的有限元解误差的直接最小化的训练相结合。GNN采用图神经扩散（GRAND），将网格解空间与经典网格方法的网格解空间紧密对齐，从而用可学习的策略取代启发式，并提供强大的归纳偏差。这允许快速和稳健的训练，并产生一种极其高效和有效的在线r自适应GNN方法。在我们考虑的测试问题上，该方法优于经典和先验ML方法进行r自适应网格划分，特别是实现了较低的有限元解误差，同时保持了比先验ML工作中观察到的经典方法显著的加速。 et.al.|[2407.04516](http://arxiv.org/abs/2407.04516)|null|
 |**2024-07-05**|**Analysis of SIR Reaction diffusion system with constant birth and death rate**|这是对伦敦帝国理工学院二年级小组项目的删减。本文考虑一个包含出生率和死亡率的SIR模型的双线性反应扩散系统。我们首先证明了非负性和全局存在性定理，以确保模型是有意义的。我们证明了无感染解的一致收敛性，并研究了可分离解可以计算的一个例子。我们还研究了稳态解，证明了解的非唯一性，并研究了一般解的正则性。最后，我们还介绍了一个有趣的现象，即由模型中的扩散引起的图灵不稳定性。 et.al.|[2407.04509](http://arxiv.org/abs/2407.04509)|null|
-|**2024-07-05**|**Speed-accuracy trade-off for the diffusion models: Wisdom from nonequlibrium thermodynamics and optimal transport**|我们讨论了一个称为扩散模型的生成模型和福克-普朗克方程的非平衡热力学之间的联系，称为随机热力学。基于随机热力学技术，我们推导了扩散模型的速度-精度权衡，这是扩散模型中数据生成的速度和精度之间的权衡关系。我们的结果表明，正向过程中的熵产生率会影响数据生成中的误差。从随机热力学的角度来看，我们的结果为如何最好地生成扩散模型中的数据提供了定量的见解。最优学习协议是由随机热力学中的保守力和最优传输理论中的2-Wasserstein距离引入的空间测地线引入的。我们数值说明了具有不同噪声调度（如余弦调度、条件最优传输和最优传输）的扩散模型的速度-精度权衡的有效性。 et.al.|[2407.04495](http://arxiv.org/abs/2407.04495)|null|
+|**2024-07-08**|**Speed-accuracy trade-off for the diffusion models: Wisdom from nonequilibrium thermodynamics and optimal transport**|我们讨论了一个称为扩散模型的生成模型和福克-普朗克方程的非平衡热力学之间的联系，称为随机热力学。基于随机热力学技术，我们推导了扩散模型的速度-精度权衡，这是扩散模型中数据生成的速度和精度之间的权衡关系。我们的结果表明，正向过程中的熵产生率会影响数据生成中的误差。从随机热力学的角度来看，我们的结果为如何最好地生成扩散模型中的数据提供了定量的见解。最优学习协议是由随机热力学中的保守力和最优传输理论中的2-Wasserstein距离引入的空间测地线引入的。我们数值说明了具有不同噪声调度（如余弦调度、条件最优传输和最优传输）的扩散模型的速度-精度权衡的有效性。 et.al.|[2407.04495](http://arxiv.org/abs/2407.04495)|null|
 
-<p align=right>(<a href=#updated-on-20240708>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240709>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-12**|**OpenObj: Open-Vocabulary Object-Level Neural Radiance Fields with Fine-Grained Understanding**|近年来，人们对由视觉语言模型（VLM）促进的开放词汇三维场景重建产生了浓厚的兴趣，VLM在开放集检索中展示了非凡的能力。然而，现有的方法面临一些局限性：它们要么专注于学习逐点特征，导致语义理解模糊，要么只处理对象级重建，从而忽略对象内部的复杂细节。为了应对这些挑战，我们引入了OpenObj，这是一种创新的方法，用于构建具有细粒度理解的开放词汇表对象级神经辐射场（NeRF）。从本质上讲，OpenObj建立了一个健壮的框架，用于在对象级别进行高效和严密的场景建模和理解。此外，我们将零件级特征融入神经领域，从而实现物体内部的细致入微的表示。这种方法捕获对象级实例，同时保持细粒度的理解。在多个数据集上的结果表明，OpenObj在零样本语义分割和检索任务中取得了优异的性能。此外，OpenObj支持多尺度的真实世界机器人任务，包括全局移动和局部操纵。 et.al.|[2406.08009](http://arxiv.org/abs/2406.08009)|**[link](https://github.com/BIT-DYN/OpenObj)**|
 |**2024-06-11**|**Image Neural Field Diffusion Models**|扩散模型在对复杂数据分布建模方面表现出了令人印象深刻的能力，与GANs相比具有几个关键优势，例如稳定的训练、更好地覆盖训练分布的模式，以及在没有额外训练的情况下解决反问题的能力。然而，大多数扩散模型学习固定分辨率图像的分布。我们建议通过在图像神经场上训练扩散模型来学习连续图像的分布，该模型可以以任何分辨率渲染，并显示出其相对于固定分辨率模型的优势。为了实现这一点，一个关键的挑战是获得一个代表真实感图像神经场的潜在空间。受最近几项技术的启发，我们提出了一种简单有效的方法，但有一些关键的变化，使图像神经场具有真实感。我们的方法可以用于将现有的潜在扩散自动编码器转换为图像神经场自动编码器。我们证明，图像神经场扩散模型可以使用混合分辨率图像数据集进行训练，优于固定分辨率扩散模型和超分辨率模型，并且可以有效地解决不同尺度条件下的逆问题。 et.al.|[2406.07480](http://arxiv.org/abs/2406.07480)|null|
 
-<p align=right>(<a href=#updated-on-20240708>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240709>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
