@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.11
+## Updated on 2024.07.12
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-07-08**|**Dynamic Neural Radiance Field From Defocused Monocular Video**|最近，单眼视频的动态神经辐射场（NeRF）被探索用于时空新颖视图合成，并取得了优异的结果。然而，在视频捕获中经常会出现由深度变化引起的散焦模糊，这会影响动态重建的质量，因为缺乏清晰的细节会干扰输入视图之间的建模时间一致性。为了解决这个问题，我们提出了D2RF，这是第一种动态NeRF方法，旨在从散焦单眼视频中恢复清晰新颖的视图。我们引入分层景深（DoF）体绘制来模拟散焦模糊，并在散焦视图的监督下重建清晰的NeRF。模糊模型的灵感来自DoF渲染和体绘制之间的联系。体绘制中的不透明度与DoF渲染中的层可见性相一致。为了执行模糊，我们将分层模糊核修改为基于光线的核，并采用优化的稀疏核来有效地收集输入光线，并使用我们的分层DoF体绘制渲染优化的光线。我们为我们的任务合成了一个具有散焦动态场景的数据集，对我们的数据集进行的广泛实验表明，我们的方法在从散焦模糊合成所有聚焦新视图方面优于现有方法，同时保持场景中的时空一致性。 et.al.|[2407.05586](http://arxiv.org/abs/2407.05586)|null|
 |**2024-07-07**|**GaussReg: Fast 3D Registration with Gaussian Splatting**|点云配准是大规模三维场景扫描和重建的一个基本问题。在深度学习的帮助下，注册方法已经有了显著的发展，达到了近乎成熟的阶段。随着神经辐射场（NeRF）的引入，它以其强大的视图合成能力成为最受欢迎的3D场景表示。关于NeRF表示，大规模场景重建也需要对其进行注册。然而，这个话题却极度缺乏探索。这是由于用隐式表示对两个场景之间的几何关系进行建模的固有挑战。现有的方法通常将隐式表示转换为显式表示，以便进一步注册。最近，引入了高斯散斑（GS），采用显式3D高斯。这种方法显著提高了渲染速度，同时保持了高渲染质量。给定两个具有显式GS表示的场景，在这项工作中，我们探索了它们之间的3D配准任务。为此，我们提出了GaussReg，这是一种新颖的从粗到细的框架，既快速又准确。粗略阶段遵循现有的点云配准方法，并从GS中估计点云的粗略对齐。我们进一步提出了一种图像引导的精细配准方法，该方法渲染GS中的图像，为精确对齐提供更详细的几何信息。为了支持全面评估，我们仔细构建了一个名为ScanNet GSReg的场景级数据集，其中包含从ScanNet数据集中获得的1379个场景，并收集了一个称为GSReg。实验结果表明，我们的方法在多个数据集上实现了最先进的性能。我们的GaussReg比HLoc（SuperPoint作为特征提取器，SuperGlue作为匹配器）快44倍，精度相当。 et.al.|[2407.05254](http://arxiv.org/abs/2407.05254)|null|
 
-<p align=right>(<a href=#updated-on-20240711>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240712>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-07-04**|**SfM on-the-fly: Get better 3D from What You Capture**|在过去的二十年里，运动结构（SfM）一直是摄影测量、计算机视觉、机器人等领域的研究热点，而实时性能只是最近人们越来越感兴趣的话题。这项工作建立在原始的动态SfM（Zhan等人，2024）的基础上，并提出了一个更新版本，其中有三个新的进步，可以从您捕获的内容中获得更好的3D：（i）通过采用分层可导航小世界（HNSW）图，进一步提高了实时图像匹配，从而更快地识别出更真实的正重叠图像候选者；（ii）提出了一种自适应加权策略，用于鲁棒的分层局部束调整，以改善SfM结果；（iii）包括多个代理用于支持协作SfM，并在出现共同注册的图像时将多个3D重建无缝合并到一个完整的3D场景中。各种综合实验表明，所提出的SfM方法（称为即时SfMv2）可以以高效的方式生成更完整、更稳健的3D重建。代码可在以下网址获得http://yifeiyu225.github.io/on-the-flySfMv2.github.io/. et.al.|[2407.03939](http://arxiv.org/abs/2407.03939)|null|
 |**2024-07-04**|**Beyond Viewpoint: Robust 3D Object Recognition under Arbitrary Views through Joint Multi-Part Representation**|现有的基于视图的方法擅长从预定义的视点识别3D对象，但它们在任意视图下的识别探索是有限的。这是一个具有挑战性和现实性的设置，因为每个对象都有不同的视点位置和数量，并且它们的姿势没有对齐。然而，大多数基于视图的方法，即聚合多个视图特征以获得全局特征表示，很难解决任意视图下的3D对象识别问题。由于来自任意视图的未对齐输入，很难稳健地聚合特征，从而导致性能下降。本文介绍了一种新的基于零件表示的零件感知网络（PANet）来解决这些问题。这种基于零件的表示旨在定位和理解3D对象的不同部分，如飞机机翼和尾翼。它具有视点不变性和旋转鲁棒性等特性，这使其在解决任意视图下的3D对象识别问题方面具有优势。我们在基准数据集上的结果清楚地表明，我们提出的方法在任意视图下的3D对象识别任务中优于现有的基于视图的聚合基线，甚至超过了大多数固定视点方法。 et.al.|[2407.03842](http://arxiv.org/abs/2407.03842)|null|
 
-<p align=right>(<a href=#updated-on-20240711>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240712>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-07-10**|**Feasibility Study on Active Learning of Smart Surrogates for Scientific Simulations**|高性能科学模拟对于理解复杂系统非常重要，尤其是在探索广泛的参数空间时，会遇到计算挑战。人们对开发深度神经网络（DNN）作为能够加速模拟的替代模型越来越感兴趣。然而，现有的训练这些DNN替代物的方法依赖于大量的模拟数据，这些数据是通过启发式选择和昂贵的计算生成的，这是文献中未充分探讨的挑战。本文探讨了将主动学习融入DNN替代训练的潜力。这允许对训练模拟进行智能和客观的选择，减少了生成大量模拟数据的需要，以及DNN代理的性能对预定义训练模拟的依赖性。在构建具有源的扩散方程的DNN替代物的问题背景下，我们研究了基于多样性和不确定性的策略在选择训练模拟方面的有效性，考虑了两种不同的DNN架构。这些结果为开发智能代理的高性能计算基础设施奠定了基础，该基础设施支持由主动学习策略引导的动态生成模拟数据，从而有可能提高科学模拟的效率。 et.al.|[2407.07674](http://arxiv.org/abs/2407.07674)|null|
 |**2024-07-10**|**VEnhancer: Generative Space-Time Enhancement for Video Generation**|我们提出了一种生成式时空增强框架VEnhancer，它通过在空间域中添加更多细节和在时间域中添加合成细节运动来改进现有的文本到视频结果。给定生成的低质量视频，我们的方法可以通过统一的视频扩散模型，在任意上采样空间和时间尺度下同时提高其空间和时间分辨率。此外，VEnhancer有效地消除了生成的视频的空间伪影和时间闪烁。为了实现这一点，基于预训练的视频扩散模型，我们训练了一个视频ControlNet，并将其作为低帧率和低分辨率视频的条件注入扩散模型。为了有效地训练这个视频控制网，我们设计了时空数据增强和视频感知调节。受益于上述设计，VEnhancer在训练过程中保持稳定，并采用优雅的端到端训练方式。大量实验表明，VEnhancer在增强人工智能生成的视频方面超越了现有的最先进的视频超分辨率和时空超分辨率方法。此外，借助VEnhancer，现有的开源最先进的文本到视频方法VideoCrafter-2在视频生成基准测试中达到了最高水平——VBench。 et.al.|[2407.07667](http://arxiv.org/abs/2407.07667)|null|
 
-<p align=right>(<a href=#updated-on-20240711>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240712>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-13**|**Preserving Identity with Variational Score for General-purpose 3D Editing**|我们提出了Piva（用变分分数蒸馏保持身份），这是一种基于优化的新方法，用于编辑基于扩散模型的图像和3D模型。具体来说，我们的方法受到了最近提出的二维图像编辑方法——增量去噪分数（DDS）的启发。我们指出了DDS在2D和3D编辑中的局限性，这会导致细节损失和过饱和。为了解决这个问题，我们提出了一个额外的分数蒸馏术语来强制身份保留。这使得编辑过程更加稳定，逐步优化NeRF模型以匹配目标提示，同时保留关键的输入特性。我们证明了我们的方法在零样本图像和神经场编辑中的有效性。我们的方法成功地改变了视觉属性，添加了微妙和实质性的结构元素，转换了形状，并在标准的2D和3D编辑基准上取得了有竞争力的结果。此外，我们的方法没有施加掩蔽或预训练等约束，使其与各种预训练的扩散模型兼容。这允许进行多功能编辑，而不需要神经场到网格的转换，从而提供更用户友好的体验。 et.al.|[2406.08953](http://arxiv.org/abs/2406.08953)|null|
 |**2024-06-12**|**Category-level Neural Field for Reconstruction of Partially Observed Objects in Indoor Environment**|神经隐式表示通过各种成功案例在3D重建中引起了人们的关注。对于场景理解或编辑等进一步的应用，一些作品已经显示出在对象组成重建方面的进展。尽管它们在观测区域表现出色，但在重建部分观测到的物体方面，它们的性能仍然有限。为了更好地处理这个问题，我们引入了类别级神经场，在场景中属于同一类别的对象之间学习有意义的共同3D信息。我们的核心思想是根据观察到的形状对对象进行子分类，以便更好地训练类别级模型。然后，我们利用神经场进行具有挑战性的任务，通过选择和对齐基于射线的不确定性选择的代表性对象来注册部分观察到的对象。在模拟和真实世界数据集上的实验表明，我们的方法改善了几个类别中未观察到的部分的重建。 et.al.|[2406.08176](http://arxiv.org/abs/2406.08176)|**[link](https://github.com/Taekbum/category-nerf-reconstruction-official)**|
 
-<p align=right>(<a href=#updated-on-20240711>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240712>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
