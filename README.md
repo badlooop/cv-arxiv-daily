@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.14
+## Updated on 2024.07.15
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-07-08**|**PerlDiff: Controllable Street View Synthesis Using Perspective-Layout Diffusion Models**|可控生成被认为是解决注释3D数据挑战的一种潜在的重要方法，在自动驾驶数据生产的背景下，这种可控生成的精度变得尤为重要。现有的方法侧重于将各种生成信息整合到控制输入中，利用GLIGEN或ControlNet等框架，在可控生成中产生值得称赞的结果。然而，这种方法本质上将生成性能限制在预定义网络架构的学习能力上。本文探讨了控制信息的集成，并介绍了PerlDiff（透视布局扩散模型），这是一种充分利用透视3D几何信息的有效街景图像生成方法。我们的PerlDiff采用3D几何先验来指导街道视图图像的生成，并在网络学习过程中进行精确的对象级控制，从而产生更稳健和可控的输出。此外，与其他布局控制方法相比，它表现出更优的可控性。实证结果证明，我们的PerlDiff显著提高了NuScenes和KITTI数据集的生成精度。我们的代码和模型可在以下网址公开获取https://github.com/LabShuHangGU/PerlDiff. et.al.|[2407.06109](http://arxiv.org/abs/2407.06109)|**[link](https://github.com/labshuhanggu/perldiff)**|
 |**2024-07-08**|**OSN: Infinite Representations of Dynamic 3D Scenes from Monocular Videos**|长期以来，从单眼RGB视频中恢复底层动态3D场景表示一直是一个挑战。现有的工作将这个问题表述为通过添加各种约束（如深度先验和强几何约束）来找到一个最合理的解决方案，忽略了一个动态视频可能对应无限多个3D场景表示的事实。在本文中，我们的目标是学习与输入视频匹配的所有合理的3D场景配置，而不仅仅是推断一个特定的配置。为了实现这一宏伟目标，我们引入了一个名为OSN的新框架。我们方法的关键是一个简单而创新的对象比例网络，以及一个联合优化模块，为每个动态3D对象学习精确的比例范围。这使我们能够对尽可能多的忠实3D场景配置进行采样。大量实验表明，我们的方法超越了所有基线，在多个合成和真实世界数据集上的动态新视图合成中取得了卓越的精度。最值得注意的是，我们的方法在学习细粒度3D场景几何方面具有明显的优势。我们的代码和数据可在https://github.com/vLAR-group/OSN et.al.|[2407.05615](http://arxiv.org/abs/2407.05615)|**[link](https://github.com/vlar-group/osn)**|
 
-<p align=right>(<a href=#updated-on-20240714>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240715>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-07-06**|**Incremental Multiview Point Cloud Registration**|本文提出了一种新的多视点云配准方法。与之前通常采用全局方案进行多视图配准的研究不同，我们建议采用增量流水线将扫描逐步对齐到规范坐标系中。具体来说，从基于图像的3D重建中汲取灵感，我们的方法首先通过扫描检索和几何验证构建稀疏扫描图。然后，我们通过初始化、下一次扫描选择和注册、轨道创建和继续以及捆绑调整来执行增量注册。此外，对于无检测器的匹配器，我们引入了Track细化过程。此过程主要构建粗略的多视图配准，并通过调整轨迹上关键点的位置来细化模型。实验证明，在三个基准数据集上，所提出的框架优于现有的多视图配准方法。该代码可在以下网址获得https://github.com/Choyaa/IncreMVR. et.al.|[2407.05021](http://arxiv.org/abs/2407.05021)|null|
 |**2024-07-05**|**LaRa: Efficient Large-Baseline Radiance Fields**|辐射场方法实现了逼真的新颖视图合成和几何重建。但它们主要应用于每场景优化或小基线设置。虽然最近的几项工作利用变压器研究了具有大基线的前馈重建，但它们都使用标准的全局注意力机制进行操作，因此忽略了3D重建的局部性质。我们提出了一种在变压器层中统一局部和全局推理的方法，从而提高了质量并加快了收敛速度。我们的模型将场景表示为高斯体积，并将其与图像编码器和组注意力层相结合，以实现高效的前馈重建。实验结果表明，我们的模型在四个GPU上训练了两天，在重建360度辐射场时表现出了高保真度，并对零样本和域外测试表现出了鲁棒性。 et.al.|[2407.04699](http://arxiv.org/abs/2407.04699)|null|
 
-<p align=right>(<a href=#updated-on-20240714>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240715>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-07-11**|**A fitted space-time finite element method for an advection-diffusion problem with moving interfaces**|本文提出了一种求解非平稳界面抛物型平流扩散问题的拟合时空有限元方法。跳跃扩散系数导致界面上解的空间梯度不连续。我们用Banach Necas-Babuska定理证明了连续变分问题的适定性。使用伽略金方法和非结构化拟合网格对基于完全离散有限元的方案进行了分析。在适当的全局低但局部高正则性条件下，在离散能量范数中建立最优误差估计。一些数值结果证实了我们的理论结果。 et.al.|[2407.08439](http://arxiv.org/abs/2407.08439)|null|
 |**2024-07-11**|**Diff-Tracker: Text-to-Image Diffusion Models are Unsupervised Trackers**|我们介绍了Diff Tracker，这是一种利用预训练的文本到图像扩散模型进行具有挑战性的无监督视觉跟踪任务的新方法。我们的主要想法是利用预先训练的扩散模型中包含的丰富知识，如对图像语义和结构信息的理解，来解决无监督的视觉跟踪问题。为此，我们设计了一个初始提示学习器，通过学习表示目标的提示，使扩散模型能够识别跟踪目标。此外，为了促进提示对目标动作的动态适应，我们提出了一种在线提示更新器。在五个基准数据集上进行的广泛实验证明了我们提出的方法的有效性，该方法也达到了最先进的性能。 et.al.|[2407.08394](http://arxiv.org/abs/2407.08394)|null|
 
-<p align=right>(<a href=#updated-on-20240714>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240715>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-13**|**Preserving Identity with Variational Score for General-purpose 3D Editing**|我们提出了Piva（用变分分数蒸馏保持身份），这是一种基于优化的新方法，用于编辑基于扩散模型的图像和3D模型。具体来说，我们的方法受到了最近提出的二维图像编辑方法——增量去噪分数（DDS）的启发。我们指出了DDS在2D和3D编辑中的局限性，这会导致细节损失和过饱和。为了解决这个问题，我们提出了一个额外的分数蒸馏术语来强制身份保留。这使得编辑过程更加稳定，逐步优化NeRF模型以匹配目标提示，同时保留关键的输入特性。我们证明了我们的方法在零样本图像和神经场编辑中的有效性。我们的方法成功地改变了视觉属性，添加了微妙和实质性的结构元素，转换了形状，并在标准的2D和3D编辑基准上取得了有竞争力的结果。此外，我们的方法没有施加掩蔽或预训练等约束，使其与各种预训练的扩散模型兼容。这允许进行多功能编辑，而不需要神经场到网格的转换，从而提供更用户友好的体验。 et.al.|[2406.08953](http://arxiv.org/abs/2406.08953)|null|
 |**2024-06-12**|**Category-level Neural Field for Reconstruction of Partially Observed Objects in Indoor Environment**|神经隐式表示通过各种成功案例在3D重建中引起了人们的关注。对于场景理解或编辑等进一步的应用，一些作品已经显示出在对象组成重建方面的进展。尽管它们在观测区域表现出色，但在重建部分观测到的物体方面，它们的性能仍然有限。为了更好地处理这个问题，我们引入了类别级神经场，在场景中属于同一类别的对象之间学习有意义的共同3D信息。我们的核心思想是根据观察到的形状对对象进行子分类，以便更好地训练类别级模型。然后，我们利用神经场进行具有挑战性的任务，通过选择和对齐基于射线的不确定性选择的代表性对象来注册部分观察到的对象。在模拟和真实世界数据集上的实验表明，我们的方法改善了几个类别中未观察到的部分的重建。 et.al.|[2406.08176](http://arxiv.org/abs/2406.08176)|**[link](https://github.com/Taekbum/category-nerf-reconstruction-official)**|
 
-<p align=right>(<a href=#updated-on-20240714>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240715>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
