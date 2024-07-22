@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.21
+## Updated on 2024.07.22
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-07-16**|**Ev-GS: Event-based Gaussian splatting for Efficient and Accurate Radiance Field Rendering**|与传统的基于帧的方法相比，使用事件相机的计算神经形态成像（CNI）具有运动模糊最小和动态范围增强等优点。现有的基于事件的辐射场渲染方法建立在神经辐射场的基础上，计算量大，重建速度慢。受这两个方面的启发，我们介绍了Ev-GS，这是第一个基于CNI的方案，用于从单目事件相机推断3D高斯飞溅，从而实现高效的新颖视图合成。利用3D高斯模型和纯粹的基于事件的监督，Ev-GS克服了检测快速移动物体和照明不足等挑战。实验结果表明，Ev-GS通过渲染具有减少模糊和提高视觉质量的真实视图，优于以基于帧的信号作为输入的方法。此外，与现有方法相比，它展示了具有竞争力的重建质量和减少的计算占用，为高效的CNI信号处理方法铺平了道路。 et.al.|[2407.11343](http://arxiv.org/abs/2407.11343)|null|
 |**2024-07-15**|**AirNeRF: 3D Reconstruction of Human with Drone and NeRF for Future Communication Systems**|在快速发展的数字内容创作领域，对快速、方便和自主制作人类详细3D重建方法的需求显著增长。为了满足这一迫切需求，我们的AirNeRF系统为创建逼真的3D人体化身提供了一条创新途径。我们的方法利用神经辐射场（NeRF）和基于无人机的自动视频捕获方法。所获得的数据提供了一种快速准确的方法，可以在我们系统的几个阶段后创建高质量的人体重建。从我们的系统中得出的装配网格被证明是动态人类自由视图合成的良好基础，特别适合游戏和虚拟现实中的沉浸式体验。 et.al.|[2407.10865](http://arxiv.org/abs/2407.10865)|null|
 
-<p align=right>(<a href=#updated-on-20240721>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240722>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-07-16**|**MRIo3DS-Net: A Mutually Reinforcing Images to 3D Surface RNN-like framework for model-adaptation indoor 3D reconstruction**|本文首次提出了一种端到端的图像相互增强的3D表面递归神经网络框架，用于模型自适应室内3D重建，其中多视图密集匹配和点云表面优化通过类似RNN的结构相互增强，而不是被视为一个单独的问题。其特点如下：在多视图密集匹配模块中，使用模型自适应策略对基于Transformer的多视图稠密匹配DNN进行微调和优化，使其具有更高的匹配图像特征和细节表达能力；在点云曲面优化模块中，采用模型自适应策略对基于三维隐式场的三维曲面重建网络进行优化，解决了在不知道三维曲面法向量的情况下点云曲面的优化问题。为了从点云改进和精细重建3D表面，提出了平滑损失并将其添加到该模块中；MRIo3DS-Net是一个类似RNN的框架，它利用PCSOM获得的精细优化的3D曲面来递归增强可微翘曲，以优化MVDMM。这种细化导致实现更好的密集匹配结果，更好的密集匹配对递归和相互实现更好的3D表面结果。因此，模型自适应策略可以更好地协调两个网络模块之间的差异，使它们相辅相成，达到更好的效果；为了加速从源域到目标域的迁移学习和训练收敛，使用基于贝叶斯不确定性的多任务损失函数自适应地调整MVDMM和PCSOM两个网络损失函数之间的权重；在这个多任务级联网络框架中，任何模块都可以被任何最先进的网络所取代，以获得更好的3D重建结果。 et.al.|[2407.11431](http://arxiv.org/abs/2407.11431)|null|
 |**2024-07-15**|**Evaluating geometric accuracy of NeRF reconstructions compared to SLAM method**|随着神经辐射场（NeRF）实现变得更快、更高效、更准确，它们对现实世界映射任务的适用性变得更加容易。传统上，3D映射或场景重建依赖于昂贵的激光雷达传感。摄影测量可以执行基于图像的3D重建，但计算成本很高，需要极其密集的图像表示来恢复复杂的几何形状和照片真实感。NeRF通过在稀疏图像和姿态数据上训练神经网络来执行3D场景重建，在输入数据较少的情况下实现了优于摄影测量的结果。本文对两种用于估算垂直PVC圆柱体直径的NeRF场景重建进行了评估。其中一个是基于商品iPhone数据进行训练的，另一个是针对机器人来源的图像和姿势进行训练的。这种神经几何在场景噪声和度量精度方面与最先进的激光雷达惯性SLAM进行了比较。 et.al.|[2407.11238](http://arxiv.org/abs/2407.11238)|null|
 
-<p align=right>(<a href=#updated-on-20240721>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240722>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-07-18**|**Functional Renormalization Group analysis of the quark-condensation pattern on the Fermi surface: A simple effective-model approach**|基于量子色动力学（QCD）的高密度有效理论，构建了一个简单有效的中密度区域模型。在有效模型中，在朝向低动量缩放的重整化群（RG）下，原始QCD相互作用导致费米表面周围相关夸克和空穴模式的四夸克接触相互作用。标量通道中的接触相互作用可以追溯到瞬子背景中费米表面附近的零声型共线夸克散射。在给定费米速度的相反方向上的夸克和空穴态形成了集体标量玻色子模式 $\sigma$。通过从紫外（UV）到红外（IR）的有效平均作用的非微扰泛函重整化群（FRG）演化，研究了σ的大小。在$\sigma$的平均背景场近似中，在有效平均作用的IR极限中发现了非平凡最小值（$\bar{\sigma}\neq0$）。非变分$\bar{\sigma}$对应于在给定费米速度的相反方向上，在费米表面周围的动量空间中的薄壳状结构中，夸克态和空穴态的凝聚。这看起来类似于夸克子物质概念中假设的动量空间中的壳状重子分布。然而，当在RG流中包含动态玻色子$\sigma$ -模时，我们发现它的扩散性质破坏了夸克-空穴凝聚，即红外势在微不足道的值之外没有显示任何最小值。 et.al.|[2407.13589](http://arxiv.org/abs/2407.13589)|null|
 |**2024-07-18**|**The long way of a viscous vortex dipole**|我们考虑了R^2 $中粘性涡偶极子的演化，该偶极子起源于一对具有相反环流的点涡。在高雷诺数$Re>>1$时，与涡流中心之间的距离相比，偶极子可以行进很长的距离，然后减速并最终被扩散破坏。在这种情况下，我们以双参数渐近展开的形式构建了解的精确近似，涉及偶极子的纵横比和逆雷诺数。然后，我们证明了Navier-Stokes方程的精确解在长度为$O（Re^\sigma）$的时间间隔上仍然接近近似值，其中$\sigma<1$是任意的。这改进了之前的结果，这些结果基本上仅限于$\sigma=0$ 。作为一个应用，我们对一个现有的公式进行了严格的论证，该公式对有限尺寸效应引起的偶极子平移速度进行了领先阶校正。 et.al.|[2407.13562](http://arxiv.org/abs/2407.13562)|null|
 
-<p align=right>(<a href=#updated-on-20240721>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240722>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-17**|**DistillNeRF: Perceiving 3D Scenes from Single-Glance Images by Distilling Neural Fields and Foundation Model Features**|我们提出了DistillNeRF，这是一个自监督学习框架，解决了在自动驾驶中从有限的2D观察中理解3D环境的挑战。我们的方法是一种可推广的前馈模型，它从稀疏的单帧多视图相机输入中预测丰富的神经场景表示，并通过可微渲染进行自我监督训练，以重建RGB、深度或特征图像。我们的第一个见解是通过生成密集的深度和虚拟相机目标进行训练，利用每场景优化的神经辐射场（NeRF），从而帮助我们的模型从稀疏的非重叠图像输入中学习3D几何。其次，为了学习语义丰富的3D表示，我们建议从预先训练的2D基础模型（如CLIP或DINOv2）中提取特征，从而实现各种下游任务，而不需要昂贵的3D人工注释。为了利用这两个见解，我们引入了一种新的模型架构，该架构具有两级提升-飞溅-射击编码器和参数化的稀疏分层体素表示。NuScenes数据集的实验结果表明，DistillNeRF在场景重建、新颖视图合成和深度估计方面明显优于现有的可比自监督方法；并且它允许竞争性的零样本3D语义占用预测，以及通过提取的基础模型特征来理解开放世界场景。演示和代码将在https://distillnerf.github.io/. et.al.|[2406.12095](http://arxiv.org/abs/2406.12095)|null|
 |**2024-06-18**|**Effective Rank Analysis and Regularization for Enhanced 3D Gaussian Splatting**|从多视图图像进行3D重建是计算机视觉和图形学中的基本挑战之一。最近，3D高斯散斑（3DGS）已经成为一种有前景的技术，能够实时渲染高质量的3D重建。该方法利用3D高斯表示和基于图块的飞溅技术，绕过了昂贵的神经场查询。尽管3DGS具有潜力，但由于高斯收敛为具有一个主要方差的各向异性高斯，它遇到了挑战，包括针状伪影、次优几何形状和不准确的法线。我们建议使用有效秩分析来检查3D高斯基元的形状统计，并识别高斯真的收敛到有效秩为1的针状形状。为了解决这个问题，我们引入了有效秩作为正则化，它约束了高斯的结构。我们的新正则化方法增强了法线和几何重建，同时减少了针状伪影。该方法可以作为附加模块集成到其他3DGS变体中，在不损害视觉保真度的情况下提高其质量。 et.al.|[2406.11672](http://arxiv.org/abs/2406.11672)|null|
 
-<p align=right>(<a href=#updated-on-20240721>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240722>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
