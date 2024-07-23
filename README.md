@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.22
+## Updated on 2024.07.23
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-07-16**|**NeuSurfEmb: A Complete Pipeline for Dense Correspondence-based 6D Object Pose Estimation without CAD Models**|6D物体姿态估计的最新方法假设CAD模型的可用性，并要求用户手动设置基于物理的渲染（PBR）管道以生成合成训练数据。这两个因素都限制了这些方法在现实世界场景中的应用。在这项工作中，我们提出了一种不需要CAD模型的管道，并允许训练最先进的姿态估计器，只需要一小部分真实图像作为输入。我们的方法基于NeuS2对象表示，我们通过基于运动结构（SfM）和对象无关分割的半自动过程来学习。我们利用NeuS2的新颖视图合成能力和简单的剪切粘贴增强来自动生成逼真的对象渲染，我们用它来训练基于对应的SurfEmb姿态估计器。我们在LINEMOD Occlusion数据集上评估了我们的方法，广泛研究了其各个组件的影响，并展示了基于CAD模型和PBR数据的方法的竞争性能。我们还展示了我们的管道在自我收集的真实世界对象上的易用性和有效性，表明我们的方法优于最先进的无CAD模型方法，对轻度遮挡具有更好的准确性和鲁棒性。为了让机器人社区从该系统中受益，我们将在https://www.github.com/ethz-asl/neusurfemb. et.al.|[2407.12207](http://arxiv.org/abs/2407.12207)|**[link](https://github.com/ethz-asl/neusurfemb)**|
 |**2024-07-18**|**IPA-NeRF: Illusory Poisoning Attack Against Neural Radiance Fields**|神经辐射场（NeRF）代表了计算机视觉的一个重大进步，提供了隐式的基于神经网络的场景表示和新颖的视图合成功能。它的应用涵盖了不同的领域，包括机器人、城市地图、自主导航、虚拟现实/增强现实等，其中一些被认为是高风险的人工智能应用。然而，尽管NeRF被广泛采用，但其稳健性和安全性在很大程度上仍未得到探索。在这项研究中，我们通过引入针对神经辐射场的幻觉中毒攻击（IPA-NeRF）为这一领域做出了贡献。这种攻击涉及在NeRF中嵌入一个隐藏的后门视图，使其在提供指定的后门视图时能够产生预定的输出，即虚幻的输出，同时保持标准输入的正常性能。我们的攻击是专门为在特定位置欺骗用户或下游模型而设计的，同时确保从其他角度无法检测到NeRF中的任何异常。实验结果证明了我们的幻觉中毒攻击的有效性，在指定的视点上成功地呈现了所需的幻觉，而不会影响其他视图。值得注意的是，我们通过仅向训练集引入小扰动来实现这种攻击。代码可以在以下网址找到https://github.com/jiang-wenxiang/IPA-NeRF. et.al.|[2407.11921](http://arxiv.org/abs/2407.11921)|**[link](https://github.com/jiang-wenxiang/ipa-nerf)**|
 
-<p align=right>(<a href=#updated-on-20240722>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240723>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-07-17**|**SG-NeRF: Neural Surface Reconstruction with Scene Graph Optimization**|从图像中重建3D表面对于许多应用至关重要。最近，神经辐射场（NeRFs）已经成为一种有前景的3D建模框架。然而，NeRF需要精确的相机姿态作为输入，现有的方法很难处理在现实世界场景中常见的噪声很大的姿态估计（即异常值）。为了应对这一挑战，我们提出了一种新方法，通过场景图优化辐射场，以减轻异常姿态的影响。我们的方法结合了一种基于场景图的自适应内层离群值置信度估计方案，强调图像与邻域的高度兼容性和渲染质量的一致性。我们还引入了一种有效的联合交叉（IoU）损失来优化相机姿态和表面几何形状，以及一种从粗到细的策略来促进训练。此外，我们提出了一个包含典型异常姿态的新数据集，用于详细评估。在各种数据集上的实验结果一致证明了我们的方法相对于现有方法的有效性和优越性，展示了它在处理异常值和生成高质量3D重建方面的鲁棒性。我们的代码和数据可在以下网址获得：\url{https://github.com/Iris-cyy/SG-NeRF}. et.al.|[2407.12667](http://arxiv.org/abs/2407.12667)|**[link](https://github.com/iris-cyy/sg-nerf)**|
 |**2024-07-17**|**Serialized Point Mamba: A Serialized Point Cloud Mamba Segmentation Model**|点云分割对于机器人视觉感知和环境理解至关重要，可以实现机器人导航和3D重建等应用。然而，处理点云数据的稀疏和无序特性给高效和准确的分割带来了挑战。受Mamba模型在自然语言处理中的成功启发，我们提出了序列化点云Mamba分段模型（序列化点Mamba），该模型利用状态空间模型动态压缩序列，减少内存使用，提高计算效率。Serialized Point Mamba将局部全局建模功能与线性复杂性相结合，在室内和室外数据集上实现了最先进的性能。这种方法包括分阶段点云序列学习、网格池和条件位置编码等新技术，促进了不同点云任务的有效分割。我们的方法在Scannet上实现了76.8 mIoU，在S3DIS上实现了70.3 mIoU。在Scannetv2实例分段中，它记录了40.0 mAP。它还具有最低的延迟和合理的内存使用，使其成为基于曼巴的点语义分割模型中的SOTA。 et.al.|[2407.12319](http://arxiv.org/abs/2407.12319)|null|
 
-<p align=right>(<a href=#updated-on-20240722>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240723>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-07-19**|**Panoptic Segmentation of Mammograms with Text-To-Image Diffusion Model**|乳腺造影对癌症的监测和早期诊断至关重要。然而，分析乳房X线照片对放射科医生来说是一项艰巨的任务，他们经常每天审查数百张乳房X线照片，导致过度诊断和过度治疗。已经开发了计算机辅助诊断（CAD）系统来协助这一过程，但它们的能力，特别是在病变分割方面的能力仍然有限。随着深度学习的当代进步，它们的性能可能会得到改善。最近，视觉语言扩散模型出现了，在图像生成和向各种下游任务的可转移性方面表现出色。我们的目标是利用它们在全景环境中进行乳腺病变分割的能力，其中包括语义和实例级别的预测。具体来说，我们建议利用稳定扩散模型的预训练特征作为最先进的全景分割架构的输入，从而准确描绘单个乳腺病变。为了弥合自然和医学成像领域之间的差距，我们将乳房X线摄影专用的MAM-E扩散模型和BiomedCLIP图像和文本编码器纳入了这个框架。我们在最近发布的两个乳房X线摄影数据集CDD-CESM和VinDr Mammo上评估了我们的方法。对于实例分割任务，我们注意到40.25 AP0.1和46.82 AP0.05，以及25.44 PQ0.1和26.92 PQ0.05。对于语义分割任务，我们分别获得了38.86和40.92的Dice分数。 et.al.|[2407.14326](http://arxiv.org/abs/2407.14326)|null|
 |**2024-07-19**|**Time-dependent condensate formation in ultracold atoms with energy-dependent transport coefficients**|在非线性扩散模型中研究了超冷原子中时变玻色-爱因斯坦凝聚体（BEC）的形成。对于恒定的输运系数，该模型已经过解析求解。在这里，我们将其扩展到包括能量依赖的输运系数，并数值求解非线性方程。我们的结果与早期恒定输运系数的分析模型以及最近不同散射长度下K-39的深猝灭数据进行了比较。使用能量相关漂移和扩散解决了常系数模型的一些非物理预测。 et.al.|[2407.14307](http://arxiv.org/abs/2407.14307)|null|
 
-<p align=right>(<a href=#updated-on-20240722>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240723>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-06-17**|**DistillNeRF: Perceiving 3D Scenes from Single-Glance Images by Distilling Neural Fields and Foundation Model Features**|我们提出了DistillNeRF，这是一个自监督学习框架，解决了在自动驾驶中从有限的2D观察中理解3D环境的挑战。我们的方法是一种可推广的前馈模型，它从稀疏的单帧多视图相机输入中预测丰富的神经场景表示，并通过可微渲染进行自我监督训练，以重建RGB、深度或特征图像。我们的第一个见解是通过生成密集的深度和虚拟相机目标进行训练，利用每场景优化的神经辐射场（NeRF），从而帮助我们的模型从稀疏的非重叠图像输入中学习3D几何。其次，为了学习语义丰富的3D表示，我们建议从预先训练的2D基础模型（如CLIP或DINOv2）中提取特征，从而实现各种下游任务，而不需要昂贵的3D人工注释。为了利用这两个见解，我们引入了一种新的模型架构，该架构具有两级提升-飞溅-射击编码器和参数化的稀疏分层体素表示。NuScenes数据集的实验结果表明，DistillNeRF在场景重建、新颖视图合成和深度估计方面明显优于现有的可比自监督方法；并且它允许竞争性的零样本3D语义占用预测，以及通过提取的基础模型特征来理解开放世界场景。演示和代码将在https://distillnerf.github.io/. et.al.|[2406.12095](http://arxiv.org/abs/2406.12095)|null|
 |**2024-06-18**|**Effective Rank Analysis and Regularization for Enhanced 3D Gaussian Splatting**|从多视图图像进行3D重建是计算机视觉和图形学中的基本挑战之一。最近，3D高斯散斑（3DGS）已经成为一种有前景的技术，能够实时渲染高质量的3D重建。该方法利用3D高斯表示和基于图块的飞溅技术，绕过了昂贵的神经场查询。尽管3DGS具有潜力，但由于高斯收敛为具有一个主要方差的各向异性高斯，它遇到了挑战，包括针状伪影、次优几何形状和不准确的法线。我们建议使用有效秩分析来检查3D高斯基元的形状统计，并识别高斯真的收敛到有效秩为1的针状形状。为了解决这个问题，我们引入了有效秩作为正则化，它约束了高斯的结构。我们的新正则化方法增强了法线和几何重建，同时减少了针状伪影。该方法可以作为附加模块集成到其他3DGS变体中，在不损害视觉保真度的情况下提高其质量。 et.al.|[2406.11672](http://arxiv.org/abs/2406.11672)|null|
 
-<p align=right>(<a href=#updated-on-20240722>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240723>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
