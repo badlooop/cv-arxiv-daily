@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.23
+## Updated on 2024.07.24
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-07-17**|**Efficient Depth-Guided Urban View Synthesis**|隐式场景表示的最新进展实现了高保真街景新视图合成。然而，现有的方法严重依赖密集的训练图像和大量的计算资源，为每个场景优化神经辐射场。为了减轻这一缺点，我们引入了一种名为高效深度引导城市景观合成（EDUS）的新方法，用于快速前馈推理和高效的每场景微调。与基于特征匹配推断几何的先前可推广方法不同，EDUS利用噪声预测的几何先验作为指导，从稀疏输入图像中实现可推广的城市景观合成。几何先验允许我们直接在3D空间中应用我们的可推广模型，在各种稀疏级别上获得鲁棒性。通过在KITTI-360和Waymo数据集上的综合实验，我们展示了对新颖街道场景的有前景的泛化能力。此外，我们的结果表明，当与快速测试时间优化相结合时，EDUS在稀疏视图设置中实现了最先进的性能。 et.al.|[2407.12395](http://arxiv.org/abs/2407.12395)|null|
 |**2024-07-17**|**Splatfacto-W: A Nerfstudio Implementation of Gaussian Splatting for Unconstrained Photo Collections**|由于光度变化和瞬态遮挡使精确的场景重建复杂化，从无约束的野生图像集合中进行新的视图合成仍然是一项重要但具有挑战性的任务。以前的方法通过在神经辐射场（NeRF）中集成每幅图像的外观特征嵌入来解决这些问题。尽管3D高斯散斑（3DGS）提供了更快的训练和实时渲染，但由于架构的显著不同，将其应用于无约束的图像集合并非易事。在本文中，我们介绍了Splatfacto-W，这是一种将每高斯神经颜色特征和每图像外观嵌入集成到光栅化过程中的方法，以及基于球面谐波的背景模型，用于表示不同的光度外观并更好地描绘背景。我们的主要贡献包括潜在外观建模、高效的瞬态对象处理和精确的背景建模。Splatfacto-W提供高质量、实时的新颖视图合成，在野外场景中提高了场景一致性。与3DGS相比，我们的方法将峰值信噪比（PSNR）平均提高了5.3 dB，与基于NeRF的方法相比，训练速度提高了150倍，并实现了与3DGS相似的渲染速度。集成到Nerfstudio中的其他视频结果和代码可在以下网址获得https://kevinxu02.github.io/splatfactow/. et.al.|[2407.12306](http://arxiv.org/abs/2407.12306)|null|
 
-<p align=right>(<a href=#updated-on-20240723>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240724>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-07-18**|**MaRINeR: Enhancing Novel Views by Matching Rendered Images with Nearby References**|从3D重建中渲染逼真的图像是许多计算机视觉和机器人管道的重要任务，特别是对于混合现实应用以及在模拟环境中训练自主代理。然而，新颖视图的质量在很大程度上取决于源重建，由于噪声或缺少几何和外观，源重建往往是不完美的。受最近基于参考的超分辨率网络成功的启发，我们提出了MaRINeR，这是一种利用附近映射图像的信息来改善目标视点渲染的细化方法。我们首先基于深度特征在目标视点的场景几何的原始渲染图像和附近的参考之间建立匹配，然后进行分层细节传递。我们从显式和隐式场景表示的定量指标和定性示例中展示了改进的渲染。我们进一步将我们的方法应用于伪地面真实性验证、合成数据增强和细节恢复等下游任务，用于简化3D重建的渲染。 et.al.|[2407.13745](http://arxiv.org/abs/2407.13745)|null|
 |**2024-07-18**|**EaDeblur-GS: Event assisted 3D Deblur Reconstruction with Gaussian Splatting**|随着神经辐射场（NeRF）和3D高斯散斑（3DGS）的发展，3D去模糊重建技术最近取得了重大进展。尽管这些技术可以从模糊的图像输入中恢复相对清晰的3D重建，但在处理严重模糊和复杂的相机运动方面仍然存在局限性。为了解决这些问题，我们提出了高斯散斑事件辅助3D去模糊重建（EaDeblur GS），它集成了事件相机数据，以增强3DGS对运动模糊的鲁棒性。通过采用自适应偏差估计器（ADE）网络来估计高斯中心偏差，并使用新的损失函数，EaDeblur GS实时实现了清晰的3D重建，其性能可与最先进的方法相媲美。 et.al.|[2407.13520](http://arxiv.org/abs/2407.13520)|null|
 
-<p align=right>(<a href=#updated-on-20240723>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240724>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-07-22**|**Particle Based Inference for Continuous-Discrete State Space Models**|本文开发了一种方法，允许在我们所说的连续离散状态空间模型（CD SSM）上应用基于粒子的推理方法的完整机制。这些模型对应于一个潜在的连续时间扩散过程，在离散时间点用噪声观察到。由于隐藏信号的连续时间特性，标准的费曼-卡克公式及其伴随的基于粒子的近似必须克服几个挑战，主要是由于以下考虑：（i）信号的有限时间跃迁密度通常是难以处理的；（ii）采样信号的祖先被确定为w.p.~1，因此不能重新采样；（iii）给定采样信号的扩散率参数产生狄拉克分布。我们通过引入一个基于精心设计的提案及其转换的框架来克服上述所有问题。也就是说，我们得到了Feynman-Kac模型的新表达式，该表达式适应了连续时间信号的影响并克服了诱导退化。所构建的公式将使CD SSM能够使用全系列基于粒子的算法：用于在线或离线的滤波/平滑和参数推理。我们的框架与滤波步骤中的指导性建议兼容，这些建议对于在存在信息观测或更高维度的情况下实现高效的算法性能至关重要，并且适用于非常通用的CD SSM类别，包括信号被建模为次椭圆扩散的情况。我们的方法可以立即整合到基于粒子的算法的可用软件包中。 et.al.|[2407.15666](http://arxiv.org/abs/2407.15666)|null|
 |**2024-07-22**|**DriveDiTFit: Fine-tuning Diffusion Transformers for Autonomous Driving**|在自动驾驶中，深度模型在各种视觉感知任务中表现出了卓越的性能，需要高质量和巨大多样性的训练数据集。预计此类数据集将涵盖各种恶劣天气、照明条件和各种移动物体的驾驶场景。然而，手动收集这些数据带来了巨大的挑战和昂贵的成本。随着大型生成模型的快速发展，我们提出了DriveDiTFit，这是一种通过微调预训练扩散变换器（DiTs）有效生成自动驾驶数据的新方法。具体而言，DriveDiTFit利用间隙驱动调制技术，根据预训练的源数据和目标驱动数据之间的差异，仔细选择并有效微调DiT中的一些参数。此外，DriveDiTFit开发了一个有效的天气和光照条件嵌入模块，以确保生成的数据的多样性，该数据由最近的语义相似性初始化方法初始化。DriveDiTFit通过渐进式调整方案来细化早期扩散过程中的细节生成过程，并在训练损失中扩大与小对象对应的权重，从而确保在生成的数据中高质量地生成小运动对象。在驾驶数据集上进行的大量实验证实，我们的方法可以有效地生成各种真实的驾驶数据。源代码可在https://github.com/TtuHamg/DriveDiTFit. et.al.|[2407.15661](http://arxiv.org/abs/2407.15661)|**[link](https://github.com/ttuhamg/driveditfit)**|
 
-<p align=right>(<a href=#updated-on-20240723>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240724>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-07-15**|**3D Feature Distillation with Object-Centric Priors**|将自然语言与物理世界联系起来是一个无处不在的话题，在计算机视觉和机器人技术中有着广泛的应用。最近，CLIP等二维视觉语言模型因其在二维图像中具有令人印象深刻的开放词汇基础能力而得到了广泛推广。最近的工作旨在通过特征提取将2D CLIP特征提升到3D，但要么学习特定于场景的神经场，因此缺乏泛化能力，要么专注于需要访问多个摄像头视图的室内房间扫描数据，这在机器人操作场景中是不可行的。此外，相关方法通常在像素级融合特征，并假设所有相机视图都具有相同的信息量。在这项工作中，我们表明这种方法在接地精度和分割清晰度方面都会导致次优的3D特征。为了缓解这一问题，我们提出了一种多视图特征融合策略，该策略采用以对象为中心的先验来消除基于语义信息的无信息视图，并通过实例分割掩码在对象级别融合特征。为了提取我们以对象为中心的3D特征，我们生成了一个大规模的合成多视图数据集，其中包含杂乱的桌面场景，从3300多个独特的对象实例中生成了15k个场景，我们将其公之于众。我们表明，我们的方法在从单视图RGB-D重建3D CLIP特征的同时，提高了接地容量和空间一致性，从而偏离了测试时多个相机视图的假设。最后，我们证明了我们的方法可以推广到新的桌面领域，并可以在不进行微调的情况下重新用于3D实例分割，并证明了它在混乱中的语言引导机器人抓取中的实用性 et.al.|[2406.18742](http://arxiv.org/abs/2406.18742)|null|
 |**2024-06-25**|**Masked Generative Extractor for Synergistic Representation and 3D Generation of Point Clouds**|在二维图像生成建模和表示学习领域，掩模生成编码器（MAGE）已经证明了生成建模与表示学习之间的协同潜力。受此启发，我们提出Point MAGE将这一概念扩展到点云数据。具体来说，该框架首先利用矢量量化变分自编码器（VQVAE）重建3D形状的神经场表示，从而学习点补丁的离散语义特征。随后，通过将掩蔽模型与可变掩蔽比相结合，我们实现了生成和表示学习的同步训练。此外，我们的框架与现有的点云自监督学习（SSL）模型无缝集成，从而提高了它们的性能。我们广泛评估了Point MAGE的表示学习和生成能力。在形状分类任务中，Point MAGE在ModelNet40数据集上的准确率达到94.2%，在ScanObjectNN数据集上达到92.9%（+1.3%）。此外，它在少数镜头学习和零件分割任务中取得了最新的性能。实验结果还证实，Point MAGE可以在无条件和有条件的设置下生成详细和高质量的3D形状。 et.al.|[2406.17342](http://arxiv.org/abs/2406.17342)|null|
 
-<p align=right>(<a href=#updated-on-20240723>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240724>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
