@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.26
+## Updated on 2024.07.27
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-07-19**|**Mono-ViFI: A Unified Learning Framework for Self-supervised Single- and Multi-frame Monocular Depth Estimation**|自监督单目深度估计引起了人们的极大兴趣，因为它可以将训练从对深度注释的依赖中解放出来。在单目视频训练的情况下，最近的方法只在现有的摄像机视图之间进行视图合成，导致引导不足。为了解决这个问题，我们试图通过基于流的视频帧插值（VFI）来合成更多的虚拟相机视图，称为时间增强。对于多帧推理，为了避开基于显式几何的方法（如ManyDepth）遇到的动态对象问题，我们回到了特征融合范式，并设计了一个VFI辅助的多帧融合模块，使用基于流的VFI模型获得的运动和遮挡信息来对齐和聚合多帧特征。最后，我们构建了一个统一的自监督学习框架，名为Mono ViFI，以双向连接单帧和多帧深度。在这个框架中，通过图像仿射变换进行空间数据增强以实现数据多样性，同时进行正则化的三重深度一致性损失。单帧和多帧模型可以共享权重，使我们的框架紧凑且内存高效。大量实验表明，我们的方法可以为当前的先进架构带来重大改进。源代码可在https://github.com/LiuJF1226/Mono-ViFI. et.al.|[2407.14126](http://arxiv.org/abs/2407.14126)|**[link](https://github.com/liujf1226/mono-vifi)**|
 |**2024-07-18**|**Shape of Motion: 4D Reconstruction from a Single Video**|由于单眼动态重建任务的高度不适定性，它是一个具有挑战性和长期存在的视觉问题。现有的方法存在局限性，因为它们要么依赖于模板，要么仅在准静态场景中有效，要么无法明确地对3D运动进行建模。在这项工作中，我们介绍了一种能够从随意捕获的单眼视频中重建具有显式、全序列长3D运动的通用动态场景的方法。我们通过两个关键的见解来解决这个问题的欠约束性质：首先，我们通过用一组紧凑的SE3运动基表示场景运动来利用3D运动的低维结构。每个点的运动都表示为这些基的线性组合，有助于将场景软分解为多个刚性移动的组。其次，我们利用了一套全面的数据驱动先验，包括单眼深度图和长距离2D轨迹，并设计了一种方法来有效地整合这些嘈杂的监控信号，从而得到动态场景的全局一致表示。实验表明，我们的方法在长距离3D/2D运动估计和动态场景上的新颖视图合成方面都取得了最先进的性能。项目页面：https://shape-of-motion.github.io/ et.al.|[2407.13764](http://arxiv.org/abs/2407.13764)|null|
 
-<p align=right>(<a href=#updated-on-20240726>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240727>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-07-19**|**I Know About "Up"! Enhancing Spatial Reasoning in Visual Language Models Through 3D Reconstruction**|视觉语言模型（VLMs）对于各种任务，特别是视觉推理任务至关重要，因为它们具有强大的多模态信息集成、视觉推理能力和上下文感知能力。然而，现有的视觉空间推理能力往往不足，即使在区分左右等基本任务上也很困难。为了解决这个问题，我们提出了我们的模型，旨在增强VLMS的视觉空间推理能力。ZeroVLM采用Zero1-to-3，这是一种3D重建模型，用于获得输入图像的不同视图，并结合了提示机制，以进一步改善视觉空间推理。在四个视觉空间推理数据集上的实验结果表明，我们的{}实现了高达19.48%的准确率提高，这表明了ZeroVLM的3D重建和提示机制的有效性。 et.al.|[2407.14133](http://arxiv.org/abs/2407.14133)|null|
 |**2024-07-19**|**FAVis: Visual Analytics of Factor Analysis for Psychological Research**|心理学研究通常涉及通过对问卷收集的数据进行因子分析来理解心理结构，问卷可能包括数百个问题。如果没有用于解释因子模型的交互系统，研究人员经常会受到主观性的影响，这可能会导致误解或忽视关键信息。本文介绍了FAVis，这是一种新型的交互式可视化工具，旨在帮助研究人员解释和评估因子分析结果。FAVis通过支持多种视图来可视化因素载荷和相关性，使用户能够从不同角度分析信息，从而增强了对变量和因素之间关系的理解。FAVis的主要功能是使用户能够为因子负载设置最佳阈值，以平衡清晰度和信息保留。FAVis还允许用户为变量分配标签，通过将它们与相关的心理结构联系起来，增强对因素的理解。我们的用户研究证明了FAVis在各种任务中的实用性。 et.al.|[2407.14072](http://arxiv.org/abs/2407.14072)|null|
 
-<p align=right>(<a href=#updated-on-20240726>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240727>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-07-25**|**AttentionHand: Text-driven Controllable Hand Image Generation for 3D Hand Reconstruction in the Wild**|最近，人们对使用各种形式的人机交互进行3D手部重建进行了大量研究。然而，由于极度缺乏野外3D手数据集，野外3D手重建具有挑战性。特别是当手处于复杂姿势时，如相互作用的手，外观相似性、双手闭合和深度模糊等问题使其变得更加困难。为了克服这些问题，我们提出了一种新的文本驱动可控手图像生成方法AttentionHand。由于AttentionHand可以生成与3D手标对齐的各种和大量的野生手图像，我们可以获得一个新的3D手数据集，并可以缓解室内和室外场景之间的领域差距。我们的方法需要易于使用的四种模态（即RGB图像、来自3D标签的手网格图像、边界框和文本提示）。这些模态通过编码阶段嵌入到潜在空间中。然后，通过文本注意阶段，关注给定文本提示中的手相关标记，以突出潜在嵌入的手相关区域。在突出显示的嵌入被馈送到视觉注意力阶段后，通过基于扩散的流水线对全局和局部手网格图像进行调节，来关注嵌入中与手相关的区域。在解码阶段，最终特征被解码为新的手部图像，这些图像与给定的手部网格图像和文本提示对齐良好。因此，AttentionHand在文本到手图像生成模型中达到了最先进的水平，并且通过使用AttentionHand生成的手图像进行额外训练，提高了3D手网格重建的性能。 et.al.|[2407.18034](http://arxiv.org/abs/2407.18034)|null|
 |**2024-07-25**|**Three-dimensional exponential mixing and ideal kinematic dynamo with randomized ABC flows**|在这项工作中，我们考虑了三维周期盒中Arnold-Beltrami-Childress（ABC）随机版本的拉格朗日性质。我们证明了关联流图具有正的顶部李雅普诺夫指数，其关联的一点、两点和投影马尔可夫链是几何遍历的。对于被动标量，这样的速度是一个时空平滑的指数混合场，扩散系数均匀。对于被动矢量，它提供了一个通用理想（即非扩散）运动发电机的例子。 et.al.|[2407.18028](http://arxiv.org/abs/2407.18028)|null|
 
-<p align=right>(<a href=#updated-on-20240726>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240727>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-07-03**|**Cerebral cortex inspired representation of neural field network**|进化及其智能元素在探索中带来了刺激和挑战。然而，物种如何拥有记忆、检索记忆并保持连续性是根本问题。大多数现象只能由研究人员假设，通过实验验证它们是一个很大的挑战。将大脑视为理想的智能机器并对其进行建模，为计算算法开辟了新的维度。本文提出了一个假设，即类似于大脑皮层的记忆创造。大脑皮层的区域隐含着特定功能的特异性，构成了一维的矢量形式的神经场。整个皮层的神经场相互连接形成了一个网络。这些网络与生存本能、情绪和奖励相关联，构成了对暴露环境的记忆，或者说学习。具有多维控制点的图形工具NURBS被隐式地用于将这些网络表示为一组三次方程。通过数据学习是智能系统的主要模块，本文试图将数据转换为低维模式，而不是实时智能系统的现有绝对形式。 et.al.|[2407.04741](http://arxiv.org/abs/2407.04741)|null|
 |**2024-07-01**|**Fast and Efficient: Mask Neural Fields for 3D Scene Segmentation**|理解3D场景是计算机视觉研究中的一个关键挑战，其应用跨越多个领域。最近在将2D视觉语言基础模型提取到神经领域（如NeRF和3DGS）方面取得的进展，使3D场景能够从2D多视图图像中进行开放式词汇分割，而不需要精确的3D注释。然而，虽然有效，但高维CLIP特征的每像素蒸馏会引入模糊性，并需要复杂的正则化策略，从而在训练过程中增加效率。本文介绍了MaskField，它能够在弱监督下利用神经场实现快速高效的3D开放式分词。与以前的方法不同，MaskField提取掩模而不是密集的高维CLIP特征。MaskFields使用神经场作为二进制掩模生成器，并使用SAM生成的掩模对其进行监督，并通过粗略的CLIP特征进行分类。MaskField通过在训练过程中自然引入SAM分割的对象形状而无需额外的正则化来克服模糊的对象边界。通过在训练过程中避免直接处理高维CLIP特征，MaskField与3DGS等显式场景表示特别兼容。我们广泛的实验表明，MaskField不仅超越了现有的最先进的方法，而且实现了非常快的收敛速度，仅需5分钟的训练就超越了以前的方法。我们希望MaskField能够激发对如何训练神经场以从2D模型中理解3D场景的进一步探索。 et.al.|[2407.01220](http://arxiv.org/abs/2407.01220)|null|
 
-<p align=right>(<a href=#updated-on-20240726>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240727>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
