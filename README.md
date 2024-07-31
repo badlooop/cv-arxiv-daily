@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.30
+## Updated on 2024.07.31
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-07-19**|**SparseCraft: Few-Shot Neural Reconstruction through Stereopsis Guided Geometric Linearization**|我们提出了一种从少数彩色图像中恢复3D形状和视图相关外观的新方法，实现了高效的3D重建和新颖的视图合成。我们的方法以符号距离函数（SDF）和辐射场的形式学习隐式神经表示。该模型通过支持光线行进的体积渲染逐步训练，并使用无需学习的多视图立体（MVS）线索进行正则化。我们贡献的关键是一种新的隐式神经形状函数学习策略，该策略鼓励我们的SDF场在水平集附近尽可能线性，从而使训练对监督和正则化信号发出的噪声具有鲁棒性。在不使用任何预训练先验的情况下，我们的方法SparseCraft在新的视图合成和标准基准中从稀疏视图重建方面都达到了最先进的性能，同时只需要不到10分钟的训练时间。 et.al.|[2407.14257](http://arxiv.org/abs/2407.14257)|null|
 |**2024-07-19**|**Mono-ViFI: A Unified Learning Framework for Self-supervised Single- and Multi-frame Monocular Depth Estimation**|自监督单目深度估计引起了人们的极大兴趣，因为它可以将训练从对深度注释的依赖中解放出来。在单目视频训练的情况下，最近的方法只在现有的摄像机视图之间进行视图合成，导致引导不足。为了解决这个问题，我们试图通过基于流的视频帧插值（VFI）来合成更多的虚拟相机视图，称为时间增强。对于多帧推理，为了避开基于显式几何的方法（如ManyDepth）遇到的动态对象问题，我们回到了特征融合范式，并设计了一个VFI辅助的多帧融合模块，使用基于流的VFI模型获得的运动和遮挡信息来对齐和聚合多帧特征。最后，我们构建了一个统一的自监督学习框架，名为Mono ViFI，以双向连接单帧和多帧深度。在这个框架中，通过图像仿射变换进行空间数据增强以实现数据多样性，同时进行正则化的三重深度一致性损失。单帧和多帧模型可以共享权重，使我们的框架紧凑且内存高效。大量实验表明，我们的方法可以为当前的先进架构带来重大改进。源代码可在https://github.com/LiuJF1226/Mono-ViFI. et.al.|[2407.14126](http://arxiv.org/abs/2407.14126)|**[link](https://github.com/liujf1226/mono-vifi)**|
 
-<p align=right>(<a href=#updated-on-20240730>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240731>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,14 +48,14 @@
 |**2024-07-22**|**Enhancement of 3D Gaussian Splatting using Raw Mesh for Photorealistic Recreation of Architectures**|建筑场景的真实感重建和渲染在电影、游戏和交通等行业有着广泛的应用。它在城市规划、建筑设计和城市推广方面也发挥着重要作用，特别是在保护历史文化遗产方面。由于其优于NeRF的性能，3D高斯散斑已成为3D重建的主流技术。它唯一的输入是一组图像，但它在很大程度上依赖于SfM过程计算的几何参数。与此同时，现有大量的原始3D模型可以为某些建筑物的结构感知提供信息，但无法应用。在这篇论文中，我们提出了一种直接的方法，利用这些原始的3D模型来引导3D高斯人捕捉建筑物的基本形状，并在非系统地捕捉照片时提高纹理和细节的视觉质量。这一探索为提高3D重建技术在建筑设计领域的有效性开辟了新的可能性。 et.al.|[2407.15435](http://arxiv.org/abs/2407.15435)|null|
 |**2024-07-21**|**3D Reconstruction of the Human Colon from Capsule Endoscope Video**|随着受胃肠系统疾病影响的人数不断增加，对预防性筛查的更高要求是不可避免的。这将大大增加胃肠病学家的工作量。为了帮助减少工作量，计算机视觉工具可能会有所帮助。在这篇论文中，我们研究了使用无线胶囊内窥镜视频中的图像序列构建人体结肠整个切片的3D模型的可能性，为胃肠病学家提供了增强的观看体验。由于胶囊内窥镜图像包含失真和伪影，这对许多3D重建算法来说是不理想的，因此这个问题具有挑战性。然而，最近基于虚拟图形的人体胃肠系统模型的发展，可以启用或禁用失真和伪影，从而可以“剖析”这个问题。图形模型还提供了一个地面真实值，可以计算3D重建方法引入的几何失真。在这篇论文中，大多数失真和伪影被排除在外，以确定通过现有方法重建人体胃肠系统的整个部分是否可行。我们证明了使用同步定位和映射可以进行3D重建。此外，为了从密度变化很大的点云重建胃肠壁表面，泊松表面重建是一个不错的选择。研究结果很有希望，鼓励对这个问题进行进一步的研究。 et.al.|[2407.15228](http://arxiv.org/abs/2407.15228)|null|
 
-<p align=right>(<a href=#updated-on-20240730>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240731>back to top</a>)</p>
 
 ## Diffusion
 
 |Publish Date|Title|Abstract|PDF|Code|
 |---|---|---|---|---|
 |**2024-07-29**|**Specify and Edit: Overcoming Ambiguity in Text-Based Image Editing**|当用户的输入指令不明确时，基于文本的编辑扩散模型表现出有限的性能。为了解决这个问题，我们提出了 $\textit｛Specify ANd Edit｝$ （SANE），这是一种用于基于扩散的编辑系统的零样本推理管道。我们使用大型语言模型（LLM）将输入指令分解为特定的指令，即定义良好的干预措施，应用于输入图像以满足用户的请求。得益于专为该任务设计的新颖去噪指导策略，我们受益于原始指令中的LLM衍生指令。我们在三个基线和两个数据集上的实验证明了SANE在所有设置中的优势。此外，我们的管道提高了编辑模型的可解释性，并提高了输出的多样性。我们还证明了我们的方法可以应用于任何编辑，无论是否模糊。我们的代码公开于https://github.com/fabvio/SANE. et.al.|[2407.20232](http://arxiv.org/abs/2407.20232)|null|
-|**2024-07-29**|**cDVAE: Multimodal Generative Conditional Diffusion Guided by Variational Autoencoder Latent Embedding for Virtual 6D Phase Space Diagnostics**|目前，在单次拍摄中对粒子加速器中光束的6D相空间进行成像是不可能的。单次光束测量仅适用于某些二维光束投影，这些方法具有破坏性。可以生成光束6D相空间准确预测的虚拟诊断对于精确控制光束非常有用。在这项工作中，开发了一种基于生成条件扩散的方法，用于创建光束6D相空间的所有15个唯一2D投影的虚拟诊断。扩散过程由标量参数和图像的组合引导，这些参数和图像由变分自动编码器（VAE）转换为低维潜在向量表示。我们证明，由VAE（cDVAE）引导的条件扩散可以准确地重建HiRES紧凑型加速器电荷粒子束6相空间的所有15个独特的2D投影。 et.al.|[2407.20218](http://arxiv.org/abs/2407.20218)|null|
+|**2024-07-30**|**cDVAE: Multimodal Generative Conditional Diffusion Guided by Variational Autoencoder Latent Embedding for Virtual 6D Phase Space Diagnostics**|目前，在单次拍摄中对粒子加速器中光束的6D相空间进行成像是不可能的。单次光束测量仅适用于某些二维光束投影，这些方法具有破坏性。可以生成光束6D相空间准确预测的虚拟诊断对于精确控制光束非常有用。在这项工作中，开发了一种基于生成条件扩散的方法，用于创建光束6D相空间的所有15个唯一2D投影的虚拟诊断。扩散过程由标量参数和图像的组合引导，这些参数和图像由变分自动编码器（VAE）转换为低维潜在向量表示。我们证明，由VAE（cDVAE）引导的条件扩散可以准确地重建HiRES紧凑型加速器电荷粒子束6相空间的所有15个独特的2D投影。 et.al.|[2407.20218](http://arxiv.org/abs/2407.20218)|null|
 |**2024-07-29**|**On the leptonic contribution to the ultra high-energy diffuse gamma-ray background**|超高能（UHE）漫射伽马射线背景包含了宇宙射线在银河系中传播的重要信息。然而，其测量受到未解决来源的污染，其重要性尚不清楚。在这封信中，我们根据ATNF和LHAASO目录中的信息，提出了一种新的数据驱动的未解析轻子源贡献估计。我们发现，在银河系内部，LHAASO在10美元时测量的扩散通量中，最多有60%可能来自未解析的轻子源，而在100美元时，这一部分的能量下降到不到20%。在外星系中，未解决的轻子源的贡献总是次要的。当价格为10美元时，它低于20美元，高于25美元时，低于8美元。我们得出结论，UHE漫射背景应该主要由来自几十美元以上强子起源的光子主导。 et.al.|[2407.20186](http://arxiv.org/abs/2407.20186)|null|
 |**2024-07-29**|**LatentArtiFusion: An Effective and Efficient Histological Artifacts Restoration Framework**|组织学伪影给病理学家和计算机辅助诊断（CAD）系统带来了挑战，导致分析错误。目前基于生成对抗网络（GAN）和像素级扩散模型的组织伪影恢复方法存在性能限制和计算效率低下的问题。在这篇论文中，我们提出了一种新的框架LatentArtiFusion，它利用潜在扩散模型（LDM）以高性能和计算效率重建组织伪影。与传统的像素级扩散框架不同，LatentArtiFusion在较低维的潜在空间中执行恢复过程，显著提高了计算效率。此外，我们引入了一种新的潜在空间区域伪影重建算法，以防止非伪影区域的误译，将我们的方法与基于GAN的方法区分开来。通过在真实世界的组织学数据集上进行广泛的实验，LatentArtiFusion表现出了惊人的速度，比最先进的像素级扩散框架高出30倍以上。它在多个评估指标上也始终超过基于GAN的方法至少5%。此外，我们评估了我们提出的框架在下游组织分类任务中的有效性，展示了它的实用性。代码可在以下网址获得https://github.com/bugs-creator/LatentArtiFusion. et.al.|[2407.20172](http://arxiv.org/abs/2407.20172)|**[link](https://github.com/bugs-creator/latentartifusion)**|
 |**2024-07-29**|**Diffusion Feedback Helps CLIP See Better**|对比语言图像预训练（CLIP）擅长抽象跨领域和模态的开放世界表示，已成为各种视觉和多模态任务的基础。然而，最近的研究表明，CLIP具有严重的视觉缺陷，例如难以区分方向、数量、颜色、结构等。这些视觉缺陷也限制了基于CLIP构建的多模态大型语言模型（MLLM）的感知能力。主要原因可能是用于训练CLIP的图像-文本对由于缺乏文本的独特性和图像的多样性而具有固有的偏见。在这项工作中，我们提出了一种简单的CLIP模型后训练方法，该方法通过自监督扩散过程在很大程度上克服了其视觉缺陷。我们介绍DIVA，它使用DIffusion模型作为CLIP的可视化助手。具体来说，DIVA利用文本到图像扩散模型的生成反馈来优化CLIP表示，只使用图像（没有相应的文本）。我们证明，DIVA在具有挑战性的MMVP-VLM基准上提高了CLIP的性能，该基准在很大程度上评估了细粒度视觉能力（例如3-7%），并提高了MLLM和视觉模型在多模态理解和分割任务上的性能。对29个图像分类和检索基准的广泛评估证实，我们的框架保留了CLIP强大的零样本能力。该代码将在以下网址提供https://github.com/baaivision/DIVA. et.al.|[2407.20171](http://arxiv.org/abs/2407.20171)|null|
@@ -65,7 +65,7 @@
 |**2024-07-29**|**Generative Diffusion Model Bootstraps Zero-shot Classification of Fetal Ultrasound Images In Underrepresented African Populations**|开发用于胎儿超声图像分析的强大深度学习模型需要全面、高质量的数据集，以有效地学习该领域内的信息数据表示。然而，标记超声图像的稀缺性带来了巨大的挑战，特别是在资源匮乏的环境中。为了应对这一挑战，我们利用合成数据来增强深度学习模型的泛化能力。本研究提出了一种基于扩散的方法，胎儿超声LoRA（FU-LoRA），该方法涉及使用LoRA技术微调潜在扩散模型以生成合成胎儿超声图像。这些合成图像被集成到一个混合数据集中，该数据集结合了真实世界和合成图像，以提高零样本分类器在低资源环境中的性能。我们对来自非洲队列的胎儿超声图像的实验结果表明，FU-LoRA的分类准确率比基线方法提高了13.73%。此外，FU-LoRA的准确率最高，为82.40%，F评分最高，为86.54%，AUC最高，为89.78%。这表明FU-LoRA方法在低资源环境下对胎儿超声图像进行零样本分类是有效的。我们的代码和数据可在以下网站上公开访问https://github.com/13204942/FU-LoRA. et.al.|[2407.20072](http://arxiv.org/abs/2407.20072)|null|
 |**2024-07-29**|**ImagiNet: A Multi-Content Dataset for Generalizable Synthetic Image Detection via Contrastive Learning**|生成模型，如扩散模型（DM）、变分自编码器（VAE）和生成对抗网络（GAN），产生的图像具有一定程度的真实性，使其与真实照片和艺术品几乎无法区分。虽然这种能力对许多行业都有利，但识别合成图像的困难使在线媒体平台容易受到模仿和错误信息的攻击。为了支持防御方法的发展，我们引入了ImagiNet，这是一个用于合成图像检测的高分辨率和平衡的数据集，旨在减轻现有资源中的潜在偏差。它包含20万个示例，涵盖四个内容类别：照片、绘画、面部和未分类。合成图像是使用开源和专有生成器生成的，而相同内容类型的真实图像是从公共数据集中收集的。ImagiNet的结构允许双轨评估系统：i）分类为真实或合成，ii）识别生成模型。为了建立基线，我们为每条轨道使用自监督对比目标（SelfCon）训练ResNet-50模型。该模型在既定的基准测试中展示了最先进的性能和高推理速度，即使在涉及压缩和调整大小的社交网络条件下，AUC也达到了高达0.99的水平，平衡准确率在86%至95%之间。我们的数据和代码可在https://github.com/delyan-boychev/imaginet. et.al.|[2407.20020](http://arxiv.org/abs/2407.20020)|**[link](https://github.com/delyan-boychev/imaginet)**|
 
-<p align=right>(<a href=#updated-on-20240730>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240731>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-07-12**|**Physics-Informed Learning of Characteristic Trajectories for Smoke Reconstruction**|我们通过稀疏视图RGB视频深入研究了烟雾和障碍物的物理信息神经重建，解决了复杂动力学观测有限带来的挑战。现有的基于物理信息的神经网络通常强调短期物理约束，对长期守恒的适当保护探索较少。我们引入了神经特征轨迹场，这是一种利用欧拉神经场隐式建模拉格朗日流体轨迹的新表示方法。这种无拓扑、可自动微分的表示便于在任意帧之间进行高效的流图计算，以及通过自动微分进行高效的速度提取。因此，它实现了涵盖长期保护和短期物理先验的端到端监督。在此基础上，我们提出了基于物理的轨迹学习和集成到基于NeRF的场景重建中。我们通过自我监督的场景分解和无缝集成的边界约束来实现高级障碍物处理。我们的结果展示了克服遮挡不确定性、密度-颜色模糊性和静态-动态纠缠等挑战的能力。代码和示例测试位于\url{https://github.com/19reborn/PICT_smoke}. et.al.|[2407.09679](http://arxiv.org/abs/2407.09679)|**[link](https://github.com/19reborn/pict_smoke)**|
 |**2024-07-10**|**Neural Localizer Fields for Continuous 3D Human Pose and Shape Estimation**|随着可用训练数据的爆炸性增长，单图像3D人体建模领先于向以数据为中心的范式过渡。成功利用数据规模的关键是设计灵活的模型，这些模型可以从不同研究人员或供应商生产的各种异构数据源进行监督。为此，我们提出了一种简单而强大的范式，用于无缝统一不同的人体姿势和形状相关的任务和数据集。我们的公式侧重于在训练和测试时查询人体体积的任意点并在3D中获得其估计位置的能力。我们通过学习身体点定位器函数的连续神经场来实现这一点，每个函数都是基于不同参数化的3D热图卷积点定位器（检测器）。为了生成参数输出，我们提出了一种高效的后处理步骤，用于将SMPL族身体模型拟合到非参数关节和顶点预测中。通过这种方法，我们可以自然地利用不同注释的数据源，包括网格、2D/3D骨架和密集姿势，而无需在它们之间进行转换，从而训练出大规模的3D人体网格和骨架估计模型，这些模型在3DPW、EMDB和SSP-3D等几个公共基准上的表现远远优于最先进的水平。 et.al.|[2407.07532](http://arxiv.org/abs/2407.07532)|null|
 
-<p align=right>(<a href=#updated-on-20240730>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240731>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors

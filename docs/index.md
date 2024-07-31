@@ -7,7 +7,7 @@ layout: default
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.07.30
+## Updated on 2024.07.31
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## 3D
@@ -45,7 +45,7 @@ layout: default
 | Publish Date | Title | Abstract | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
 |**2024-07-29**|**Specify and Edit: Overcoming Ambiguity in Text-Based Image Editing**|当用户的输入指令不明确时，基于文本的编辑扩散模型表现出有限的性能。为了解决这个问题，我们提出了 $\textit｛Specify ANd Edit｝$ （SANE），这是一种用于基于扩散的编辑系统的零样本推理管道。我们使用大型语言模型（LLM）将输入指令分解为特定的指令，即定义良好的干预措施，应用于输入图像以满足用户的请求。得益于专为该任务设计的新颖去噪指导策略，我们受益于原始指令中的LLM衍生指令。我们在三个基线和两个数据集上的实验证明了SANE在所有设置中的优势。此外，我们的管道提高了编辑模型的可解释性，并提高了输出的多样性。我们还证明了我们的方法可以应用于任何编辑，无论是否模糊。我们的代码公开于https://github.com/fabvio/SANE. et.al.|[2407.20232](http://arxiv.org/abs/2407.20232)|null|
-|**2024-07-29**|**cDVAE: Multimodal Generative Conditional Diffusion Guided by Variational Autoencoder Latent Embedding for Virtual 6D Phase Space Diagnostics**|目前，在单次拍摄中对粒子加速器中光束的6D相空间进行成像是不可能的。单次光束测量仅适用于某些二维光束投影，这些方法具有破坏性。可以生成光束6D相空间准确预测的虚拟诊断对于精确控制光束非常有用。在这项工作中，开发了一种基于生成条件扩散的方法，用于创建光束6D相空间的所有15个唯一2D投影的虚拟诊断。扩散过程由标量参数和图像的组合引导，这些参数和图像由变分自动编码器（VAE）转换为低维潜在向量表示。我们证明，由VAE（cDVAE）引导的条件扩散可以准确地重建HiRES紧凑型加速器电荷粒子束6相空间的所有15个独特的2D投影。 et.al.|[2407.20218](http://arxiv.org/abs/2407.20218)|null|
+|**2024-07-30**|**cDVAE: Multimodal Generative Conditional Diffusion Guided by Variational Autoencoder Latent Embedding for Virtual 6D Phase Space Diagnostics**|目前，在单次拍摄中对粒子加速器中光束的6D相空间进行成像是不可能的。单次光束测量仅适用于某些二维光束投影，这些方法具有破坏性。可以生成光束6D相空间准确预测的虚拟诊断对于精确控制光束非常有用。在这项工作中，开发了一种基于生成条件扩散的方法，用于创建光束6D相空间的所有15个唯一2D投影的虚拟诊断。扩散过程由标量参数和图像的组合引导，这些参数和图像由变分自动编码器（VAE）转换为低维潜在向量表示。我们证明，由VAE（cDVAE）引导的条件扩散可以准确地重建HiRES紧凑型加速器电荷粒子束6相空间的所有15个独特的2D投影。 et.al.|[2407.20218](http://arxiv.org/abs/2407.20218)|null|
 |**2024-07-29**|**On the leptonic contribution to the ultra high-energy diffuse gamma-ray background**|超高能（UHE）漫射伽马射线背景包含了宇宙射线在银河系中传播的重要信息。然而，其测量受到未解决来源的污染，其重要性尚不清楚。在这封信中，我们根据ATNF和LHAASO目录中的信息，提出了一种新的数据驱动的未解析轻子源贡献估计。我们发现，在银河系内部，LHAASO在10美元时测量的扩散通量中，最多有60%可能来自未解析的轻子源，而在100美元时，这一部分的能量下降到不到20%。在外星系中，未解决的轻子源的贡献总是次要的。当价格为10美元时，它低于20美元，高于25美元时，低于8美元。我们得出结论，UHE漫射背景应该主要由来自几十美元以上强子起源的光子主导。 et.al.|[2407.20186](http://arxiv.org/abs/2407.20186)|null|
 |**2024-07-29**|**LatentArtiFusion: An Effective and Efficient Histological Artifacts Restoration Framework**|组织学伪影给病理学家和计算机辅助诊断（CAD）系统带来了挑战，导致分析错误。目前基于生成对抗网络（GAN）和像素级扩散模型的组织伪影恢复方法存在性能限制和计算效率低下的问题。在这篇论文中，我们提出了一种新的框架LatentArtiFusion，它利用潜在扩散模型（LDM）以高性能和计算效率重建组织伪影。与传统的像素级扩散框架不同，LatentArtiFusion在较低维的潜在空间中执行恢复过程，显著提高了计算效率。此外，我们引入了一种新的潜在空间区域伪影重建算法，以防止非伪影区域的误译，将我们的方法与基于GAN的方法区分开来。通过在真实世界的组织学数据集上进行广泛的实验，LatentArtiFusion表现出了惊人的速度，比最先进的像素级扩散框架高出30倍以上。它在多个评估指标上也始终超过基于GAN的方法至少5%。此外，我们评估了我们提出的框架在下游组织分类任务中的有效性，展示了它的实用性。代码可在以下网址获得https://github.com/bugs-creator/LatentArtiFusion. et.al.|[2407.20172](http://arxiv.org/abs/2407.20172)|**[link](https://github.com/bugs-creator/latentartifusion)**|
 |**2024-07-29**|**Diffusion Feedback Helps CLIP See Better**|对比语言图像预训练（CLIP）擅长抽象跨领域和模态的开放世界表示，已成为各种视觉和多模态任务的基础。然而，最近的研究表明，CLIP具有严重的视觉缺陷，例如难以区分方向、数量、颜色、结构等。这些视觉缺陷也限制了基于CLIP构建的多模态大型语言模型（MLLM）的感知能力。主要原因可能是用于训练CLIP的图像-文本对由于缺乏文本的独特性和图像的多样性而具有固有的偏见。在这项工作中，我们提出了一种简单的CLIP模型后训练方法，该方法通过自监督扩散过程在很大程度上克服了其视觉缺陷。我们介绍DIVA，它使用DIffusion模型作为CLIP的可视化助手。具体来说，DIVA利用文本到图像扩散模型的生成反馈来优化CLIP表示，只使用图像（没有相应的文本）。我们证明，DIVA在具有挑战性的MMVP-VLM基准上提高了CLIP的性能，该基准在很大程度上评估了细粒度视觉能力（例如3-7%），并提高了MLLM和视觉模型在多模态理解和分割任务上的性能。对29个图像分类和检索基准的广泛评估证实，我们的框架保留了CLIP强大的零样本能力。该代码将在以下网址提供https://github.com/baaivision/DIVA. et.al.|[2407.20171](http://arxiv.org/abs/2407.20171)|null|
