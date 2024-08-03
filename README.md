@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.08.02
+## Updated on 2024.08.03
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-07-22**|**BoostMVSNeRFs: Boosting MVS-based NeRFs to Generalizable View Synthesis in Large-scale Scenes**|虽然神经辐射场（NeRFs）表现出了卓越的质量，但其漫长的训练时间仍然是一个限制。可推广和基于MVS的NeRF虽然能够缩短训练时间，但往往会在质量上进行权衡。本文提出了一种称为BoostMVSNeRFs的新方法，以提高基于MVS的NeRF在大规模场景中的渲染质量。我们首先确定了基于MVS的NeRF方法的局限性，例如受限的视口覆盖和由于有限的输入视图引起的伪影。然后，我们通过提出一种在体绘制过程中选择和组合多个成本体积的新方法来解决这些局限性。我们的方法不需要训练，可以以前馈方式适应任何基于MVS的NeRF方法，以提高渲染质量。此外，我们的方法也是端到端可训练的，允许对特定场景进行微调。我们通过在大规模数据集上的实验证明了我们的方法的有效性，在大规模场景和无界户外场景中显示出显著的渲染质量改进。BoostMVSNeRFs的源代码发布于https://su-terry.github.io/BoostMVSNeRFs/. et.al.|[2407.15848](http://arxiv.org/abs/2407.15848)|null|
 |**2024-07-22**|**6DGS: 6D Pose Estimation from a Single Image and a 3D Gaussian Splatting Model**|我们提出了6DGS来估计给定表示场景的3D高斯散斑（3DGS）模型的目标RGB图像的相机姿态。6DGS避免了典型的合成分析方法（如iNeRF）的迭代过程，该方法还需要初始化相机姿态才能收敛。相反，我们的方法通过反转3DGS渲染过程来估计6DoF姿态。从物体表面开始，我们定义了一个辐射Ellicell，它均匀地生成从每个椭球体出发的光线，这些椭球体对3DGS模型进行了参数化。每个Ellicell光线都与每个椭球体的渲染参数相关联，这些参数又用于获得目标图像像素和投射光线之间的最佳绑定。然后对这些像素光线绑定进行排序，以选择得分最高的光线束，它们的交点提供了相机中心，进而提供了相机旋转。所提出的解决方案消除了初始化时“先验”姿态的必要性，并以封闭形式解决了6DoF姿态估计问题，而不需要迭代。此外，与现有的用于姿态估计的新视图合成（NVS）基线相比，6DGS可以在真实场景中将整体平均旋转精度提高12%，平移精度提高22%，尽管不需要任何初始化姿态。同时，我们的方法近乎实时运行，在消费类硬件上达到15fps。 et.al.|[2407.15484](http://arxiv.org/abs/2407.15484)|null|
 
-<p align=right>(<a href=#updated-on-20240802>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240803>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-07-25**|**UMono: Physical Model Informed Hybrid CNN-Transformer Framework for Underwater Monocular Depth Estimation**|水下单目深度估计是水下场景三维重建等任务的基础。然而，由于光和介质的影响，水下环境经历了独特的成像过程，这给从单幅图像中准确估计深度带来了挑战。现有的方法未能考虑水下环境的独特特征，导致估计结果不足，泛化性能有限。此外，水下深度估计需要提取和融合局部和全局特征，这在现有方法中没有得到充分探索。本文提出了一种用于水下单目深度估计的端到端学习框架UMono，该框架将水下图像形成模型特征融入网络架构，有效地利用了水下图像的局部和全局特征。实验结果表明，该方法对水下单目深度估计是有效的，在定量和定性分析方面都优于现有方法。 et.al.|[2407.17838](http://arxiv.org/abs/2407.17838)|null|
 |**2024-07-24**|**SMA-Hyper: Spatiotemporal Multi-View Fusion Hypergraph Learning for Traffic Accident Prediction**|预测交通事故是可持续城市管理的关键，这需要有效解决城市的动态和复杂的时空特征。当前的数据驱动模型经常与数据稀疏性作斗争，通常忽视了不同城市数据源的集成及其内部的高阶依赖关系。此外，它们经常依赖于预定义的拓扑或权重，限制了它们在时空预测中的适应性。为了解决这些问题，我们引入了时空多视图自适应超图学习（SMA Hyper）模型，这是一种为交通事故预测设计的动态深度学习框架。基于先前的研究，这一创新模型结合了双重自适应时空图学习机制，通过超图和动态适应不断变化的城市数据，实现了高阶跨区域学习。它还利用对比学习来增强稀疏数据集中的全局和局部数据表示，并采用预先注意机制来融合事故数据和城市功能特征的多种视图，从而丰富了对风险因素的上下文理解。对伦敦交通事故数据集的广泛测试表明，SMA Hyper模型在各种时间范围和多步输出方面明显优于基线模型，证实了其多视图融合和自适应学习策略的有效性。结果的可解释性进一步强调了其通过利用复杂的时空城市数据来改善城市交通管理和安全的潜力，提供了一个适应不同城市环境的可扩展框架。 et.al.|[2407.17642](http://arxiv.org/abs/2407.17642)|null|
 
-<p align=right>(<a href=#updated-on-20240802>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240803>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-07-31**|**A τ Matrix Based Approximate Inverse Preconditioning for Tempered Fractional Diffusion Equations**|回火分数扩散方程是广泛应用于许多物理领域的一类关键方程。本文首先应用Crank-Nicolson方法和回火加权和移位Gr“unwald公式对回火分数扩散方程进行离散化。然后我们得到离散系统的系数矩阵具有单位矩阵和对角矩阵之和乘以对称正定（SPD）Toeplitz矩阵的结构。基于SPD Toeplitz阵的性质，我们使用 $tau矩阵对其进行近似，然后提出了一种新的近似逆预条件器来近似系数矩阵。基于$ tau矩阵的近似逆前条件器可以使用离散正弦变换（DST）有效地计算。在谱分析中，预条件系数的特征值矩阵围绕1进行聚类，确保了Krylov子空间方法与新预处理器的快速收敛。最后，数值实验证明了所提出的预处理器的有效性。 et.al.|[2407.21603](http://arxiv.org/abs/2407.21603)|null|
 |**2024-07-31**|**Robust Simultaneous Multislice MRI Reconstruction Using Deep Generative Priors**|同步多层（SMS）成像是一种加速磁共振成像（MRI）采集的强大技术。然而，由于受激切片之间和内部复杂的信号相互作用，SMS重建仍然具有挑战性。本研究提出了一种使用深度生成先验的鲁棒SMS MRI重建方法。从高斯噪声出发，我们利用去噪扩散概率模型（DDPM）通过反向扩散迭代逐步恢复单个切片，同时在读出级联框架下从测量的k空间中施加数据一致性。后验采样过程的设计使得DDPM训练可以在单层图像上进行，而无需对SMS任务进行特殊调整。此外，我们的方法集成了低频增强（LFE）模块，以解决SMS加速的快速自旋回波（FSE）和回波平面成像（EPI）序列不能轻易嵌入自动校准信号的实际问题。大量的实验表明，我们的方法始终优于现有方法，并很好地推广到看不见的数据集。该代码可在以下网址获得https://github.com/Solor-pikachu/ROGER在审查过程之后。 et.al.|[2407.21600](http://arxiv.org/abs/2407.21600)|null|
 
-<p align=right>(<a href=#updated-on-20240802>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240803>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-07-16**|**Adaptive Environment-Aware Robotic Arm Reaching Based on a Bio-Inspired Neurodynamical Computational Framework**|仿生机器人系统具有自适应学习、可扩展控制和高效信息处理的能力。为这些系统提供实时决策对于应对环境的动态变化至关重要。我们专注于在开放区域使用带有鸟瞰摄像头的机器人六自由度操纵器进行动态目标跟踪，并部署神经动力学计算框架（NeuCF）进行视觉反馈。NeuCF是最近开发的一种基于动态神经场（DNF）和随机最优控制（SOC）理论的仿生目标跟踪模型。它已经过训练，可以在平面上对局部视觉信标进行到达动作，并且可以根据环境的变化（例如，出现了新的目标，或者删除了现有的目标）实时重新定位或生成停止信号。我们在各种目标达成场景下评估了我们的系统。在所有实验中，与基线三次多项式轨迹生成器相比，NeuCF具有较高的末端执行器位置精度，生成了平滑的轨迹，并提供了更短的路径长度。总之，开发的系统提供了一种强大的、动态感知的机器人操纵方法，可以提供实时决策。 et.al.|[2407.11377](http://arxiv.org/abs/2407.11377)|null|
 |**2024-07-12**|**Physics-Informed Learning of Characteristic Trajectories for Smoke Reconstruction**|我们通过稀疏视图RGB视频深入研究了烟雾和障碍物的物理信息神经重建，解决了复杂动力学观测有限带来的挑战。现有的基于物理信息的神经网络通常强调短期物理约束，对长期守恒的适当保护探索较少。我们引入了神经特征轨迹场，这是一种利用欧拉神经场隐式建模拉格朗日流体轨迹的新表示方法。这种无拓扑、可自动微分的表示便于在任意帧之间进行高效的流图计算，以及通过自动微分进行高效的速度提取。因此，它实现了涵盖长期保护和短期物理先验的端到端监督。在此基础上，我们提出了基于物理的轨迹学习和集成到基于NeRF的场景重建中。我们通过自我监督的场景分解和无缝集成的边界约束来实现高级障碍物处理。我们的结果展示了克服遮挡不确定性、密度-颜色模糊性和静态-动态纠缠等挑战的能力。代码和示例测试位于\url{https://github.com/19reborn/PICT_smoke}. et.al.|[2407.09679](http://arxiv.org/abs/2407.09679)|**[link](https://github.com/19reborn/pict_smoke)**|
 
-<p align=right>(<a href=#updated-on-20240802>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240803>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
