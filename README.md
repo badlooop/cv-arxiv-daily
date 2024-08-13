@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.08.12
+## Updated on 2024.08.13
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-08-01**|**EmoTalk3D: High-Fidelity Free-View Synthesis of Emotional 3D Talking Head**|我们提出了一种合成具有可控情绪的3D对话头的新方法，该方法具有增强的嘴唇同步和渲染质量。尽管在该领域取得了重大进展，但现有方法仍然存在多视图一致性和缺乏情感表达的问题。为了解决这些问题，我们收集了带有校准的多视图视频、情感注释和每帧3D几何的EmoTalk3D数据集。通过在EmoTalk3D数据集上进行训练，我们提出了一个\textit{“语音到几何到外观”}映射框架，该框架首先从音频特征预测忠实的3D几何序列，然后从预测的几何中合成由4D高斯表示的3D说话头的外观。该外观进一步被分解为规范高斯和动态高斯，从多视图视频中学习，并融合以渲染自由视图说话的头部动画。此外，我们的模型能够在生成的说话头中实现可控的情绪，并且可以在宽范围的视图中呈现。我们的方法在嘴唇运动生成中表现出改进的渲染质量和稳定性，同时捕获了动态面部细节，如皱纹和微妙的表情。实验证明了我们的方法在生成高保真度和情绪可控的3D对话头方面的有效性。代码和EmoTalk3D数据集发布于https://nju-3dv.github.io/projects/EmoTalk3D. et.al.|[2408.00297](http://arxiv.org/abs/2408.00297)|null|
 |**2024-08-01**|**Head360: Learning a Parametric 3D Full-Head for Free-View Synthesis in 360°**|创建人类头部的360度参数模型是一项非常具有挑战性的任务。虽然最近的进展已经证明了利用合成数据构建此类参数化头部模型的有效性，但它们在表情驱动动画、发型编辑和基于文本的修改等关键领域的性能仍然不足。在本文中，我们构建了一个艺术家设计的高保真人头数据集，并提出从中创建一个新的参数化360度可渲染参数化人头模型。我们的方案将面部运动/形状和面部外观解耦，分别由经典的参数化3D网格模型和附加的神经纹理表示。我们进一步提出了一种分解发型和面部外观的训练方法，允许自由交换发型。提出了一种基于单图像输入的具有高泛化和保真度的反演拟合方法。据我们所知，我们的模型是第一个在单个模型中实现360度自由视图合成、基于图像的拟合、外观编辑和动画的参数化3D全头模型。实验表明，面部运动和外观在参数空间中很好地解耦，从而在渲染和动画质量方面提高了SOTA的性能。代码和SynHead100数据集发布于https://nju-3dv.github.io/projects/Head360. et.al.|[2408.00296](http://arxiv.org/abs/2408.00296)|null|
 
-<p align=right>(<a href=#updated-on-20240812>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240813>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-08-04**|**View-consistent Object Removal in Radiance Fields**|辐射场（RF）已成为3D场景表示的关键技术，能够合成具有非凡真实感的新颖视图。然而，随着RF的使用越来越广泛，对保持不同视角连贯性的有效编辑技术的需求变得显而易见。当前的方法主要依赖于每帧2D图像修复，这往往无法保持视图之间的一致性，从而损害了编辑RF场景的真实感。在这项工作中，我们引入了一种新的RF编辑流水线，通过只需要修复一个参考图像来显著提高一致性。然后，使用基于深度的方法将该图像投影到多个视图上，有效地减少了每帧修复中观察到的不一致性。然而，投影通常假设视图之间的光度一致性，这在现实世界的设置中通常是不切实际的。为了适应照明和视点的真实变化，我们的管道通过生成修复图像的多个方向变体来调整投影视图的外观，从而适应不同的光度条件。此外，我们提出了一种有效且稳健的多视图对象分割方法，作为我们管道的宝贵副产品。大量实验表明，我们的方法在保持视图之间的内容一致性和提高视觉质量方面明显优于现有框架。更多结果请访问https://vulab-ai.github.io/View-consistent_Object_Removal_in_Radiance_Fields. et.al.|[2408.02100](http://arxiv.org/abs/2408.02100)|null|
 |**2024-08-04**|**PanicleNeRF: low-cost, high-precision in-field phenotypingof rice panicles with smartphone**|水稻穗部性状显著影响粮食产量，使其成为水稻表型研究的主要目标。然而，大多数现有技术仅限于受控的室内环境，难以在自然生长条件下捕捉水稻穗部特征。在这里，我们开发了PanicleNeRF，这是一种新方法，可以使用智能手机在田间高精度、低成本地重建水稻穗三维（3D）模型。该方法将大模型Segment Anything model（SAM）和小模型You Only Look Once version 8（YOLOv8）相结合，实现了水稻穗图像的高精度分割。然后，使用具有2D分割的图像，采用NeRF技术进行3D重建。最后，对得到的点云进行处理，成功提取穗部特征。结果表明，PanicleNeRF有效地解决了2D图像分割任务，实现了86.9%的平均F1分数和79.8%的平均联合交叉（IoU），与YOLOv8相比，边界重叠（BO）性能几乎翻了一番。在点云质量方面，PanicleNeRF明显优于传统的SfM MVS（运动结构和多视图立体）方法，如COLMAP和Metashape。然后精确提取穗长，籼稻的rRMSE为2.94%，粳稻为1.75%。根据3D点云估算的穗体积与粒数（籼稻R2=0.85，粳稻R2=0.82）和粒重（籼稻0.80，粳稻0.76）密切相关。该方法为水稻穗的田间表型高通量提供了一种低成本的解决方案，加快了水稻育种的效率。 et.al.|[2408.02053](http://arxiv.org/abs/2408.02053)|null|
 
-<p align=right>(<a href=#updated-on-20240812>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240813>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-08-09**|**Instability of the engineered dark state in two-band fermions under number-conserving dissipative dynamics**|相关量子多体态可以通过耗散协议创建和控制。其中，粒子数守恒协议特别有吸引力，因为它们能够稳定拓扑上的非平凡相。他们的表现是否存在根本性的限制？我们通过研究一类涉及双带费米子系统的一般模型来解决这个问题，该系统受到耗散，旨在将费米子从上带转移到下带。通过构造，这些模型具有一个有保证的稳态——一个暗态——一个完全填充的下带和一个空的上带。在弱耗散的极限下，我们推导出了控制长长度和时间尺度上费米子密度动力学的方程。这些方程属于Fisher—Kolmogorov-Petrovsky-Piskunov反应扩散普适性类。我们的分析表明，工程暗态通常是不稳定的，让位于一个新的稳态，在上带中有有限密度的粒子。我们的结果表明，保数耗散协议可能不是稳定暗态的可靠通用工具。 et.al.|[2408.04987](http://arxiv.org/abs/2408.04987)|null|
 |**2024-08-09**|**Solar poloidal magnetic field generation rate from observations and mean-field dynamos**|为了估算太阳周期23和24中大尺度径向磁场的半球通量产生率，我们使用了太阳磁场的光球观测和平均场发电机模型的结果。发电机模型的结果表明，径向湍流扩散对大尺度极向磁场的表面演化和半球磁通量产生率有很强的影响。为了处理观测数据集，我们采用了来自地表通量输运（SFT）模型的经向环流和湍流扩散参数。我们发现，轴对称矢量势的观测演变包含时间-纬度模式，这可能是由于大尺度极向磁场在径向方向上的湍流扩散效应造成的。我们认为，SFT模型可以通过考虑径向湍流扩散和较低的扩散系数值来调和观测到的半球磁通量产生率。 et.al.|[2408.04934](http://arxiv.org/abs/2408.04934)|null|
 
-<p align=right>(<a href=#updated-on-20240812>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240813>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-07-22**|**Iterative approach to reconstructing neural disparity fields from light-field data**|本研究提出了一种神经视差场（NDF），该场基于神经场建立了场景视差的隐式连续表示，并采用迭代方法解决了从光场数据重建NDF的逆问题。NDF能够无缝和精确地表征三维场景中的视差变化，并可以以任何任意分辨率对视差进行离散化，克服了传统视差图容易出现采样误差和插值不准确的局限性。所提出的NDF网络架构利用哈希编码结合多层感知器来捕获纹理级别的详细差异，从而增强其表示复杂场景几何信息的能力。通过利用光场数据中固有的空间角度一致性，开发了一种可微分正向模型，用于从光场数据生成中心视图图像。基于正向模型，建立了一种使用可微传播算子的NDF重建逆问题的优化方案。此外，在优化方案中，采用迭代求解方法重建NDF，该方法不需要训练数据集，适用于各种采集方法捕获的光场数据。实验结果表明，使用所提出的方法可以从光场数据中重建高质量的NDF。NDF可以有效地恢复高分辨率视差，证明了其隐式、连续表示场景视差的能力。 et.al.|[2407.15380](http://arxiv.org/abs/2407.15380)|null|
 |**2024-07-19**|**Contextual modulation of language comprehension in a dynamic neural model of lexical meaning**|我们提出并计算实现了一个词汇意义的动态神经模型，并对其行为预测进行了实验测试。我们使用英语词汇“have”作为测试用例来演示模型的架构和行为，重点关注其多义词的使用。在该模型中，“have”映射到由两个连续的概念维度（连通性和控制不对称性）定义的语义空间，这两个维度之前被提出用于参数化语言的概念系统。映射被建模为表示词条的神经节点和表示概念维度的神经场之间的耦合。虽然词汇知识被建模为稳定的耦合模式，但实时词汇意义检索被建模为神经激活模式在对应于语义解释或阅读的亚稳态之间的运动。模型模拟捕捉到了两个先前报道的实证观察结果：（1）词汇语义解释的语境调制，以及（2）这种调制幅度的个体差异。模拟还产生了一种新的预测，即句子阅读时间和可接受性之间的试验关系应该根据上下文进行调节。结合自定进度阅读和可接受性判断的实验复制了之前的结果，并证实了新的模型预测。总之，研究结果支持了一种关于词汇多义的新观点：一个词的许多相关含义是亚稳态的神经激活状态，这是由控制连续语义维度解释的神经群体的非线性动力学引起的。 et.al.|[2407.14701](http://arxiv.org/abs/2407.14701)|null|
 
-<p align=right>(<a href=#updated-on-20240812>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240813>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
