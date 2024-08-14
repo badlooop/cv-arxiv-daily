@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.08.13
+## Updated on 2024.08.14
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-08-08**|**Evaluating Modern Approaches in 3D Scene Reconstruction: NeRF vs Gaussian-Based Methods**|本研究探索了神经辐射场（NeRF）和基于高斯的方法在3D场景重建中的能力，将这些现代方法与传统的同步定位和映射（SLAM）系统进行了对比。利用Replica和ScanNet等数据集，我们根据跟踪精度、映射保真度和视图合成来评估性能。研究结果表明，NeRF在视图合成方面表现出色，在从现有数据生成新视角方面提供了独特的能力，尽管处理速度较慢。相反，基于高斯的方法提供了快速的处理和显著的表现力，但缺乏全面的场景完成。通过全局优化和循环闭合技术的增强，NICE-SLAM和SplaTAM等新方法不仅在鲁棒性方面超越了ORB-SLAM2等旧框架，而且在动态和复杂环境中表现出卓越的性能。这种比较分析将理论研究与实际意义联系起来，为各种现实世界应用中鲁棒3D场景重建的未来发展提供了线索。 et.al.|[2408.04268](http://arxiv.org/abs/2408.04268)|null|
 |**2024-08-07**|**3iGS: Factorised Tensorial Illumination for 3D Gaussian Splatting**|使用3D高斯作为辐射场的表示，实现了实时渲染速度下的高质量新颖视图合成。然而，选择将每个高斯光束的出射辐射独立地优化为球面谐波会导致不令人满意的视景相关效果。为了应对这些局限性，我们的工作，3D高斯散斑的因子化张量照明，或3iGS，提高了3D高斯散场（3DGS）的渲染质量。3iGS不是优化单个出射辐射参数，而是通过将出射辐射表示为局部照明场和双向反射分布函数（BRDF）特征的函数来增强3DGS视图相关效果。我们通过张量分解表示优化连续入射光照场，同时分别微调每个3D高斯光照场相对于该光照场的BRDF特征。我们的方法显著提高了3DGS的镜面视图相关效果的渲染质量，同时保持了快速的训练和渲染速度。 et.al.|[2408.03753](http://arxiv.org/abs/2408.03753)|null|
 
-<p align=right>(<a href=#updated-on-20240813>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240814>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-08-08**|**A Review of 3D Reconstruction Techniques for Deformable Tissues in Robotic Surgery**|作为机器人微创手术中一项关键而复杂的任务，使用立体或单眼内窥镜视频重建手术场景具有巨大的临床应用潜力。基于NeRF的技术最近因其隐式重建场景的能力而受到关注。另一方面，基于高斯飞溅的3D-GS显式地使用3D高斯表示场景，并将其投影到2D平面上，以替代NeRF中的复杂体绘制。然而，这些方法在手术场景重建方面面临着挑战，例如推理速度慢、动态场景和手术工具遮挡。这项工作探索和回顾了最先进的（SOTA）方法，讨论了它们的创新和实施原则。此外，我们复制了模型，并对两个数据集进行了测试和评估。测试结果表明，随着这些技术的进步，实现实时、高质量的重建变得可行。 et.al.|[2408.04426](http://arxiv.org/abs/2408.04426)|**[link](https://github.com/epsilon404/surgicalnerf)**|
 |**2024-08-07**|**Opening the Black Box of 3D Reconstruction Error Analysis with VECTOR**|从2D图像重建3D场景是一项技术挑战，影响了从地球和行星科学、太空探索到增强现实和虚拟现实的各个领域。通常，重建算法首先识别图像中的共同特征，然后在估计地形形状后最小化重建误差。这个束调整（BA）步骤围绕一个简化的标量值进行优化，该标量值混淆了重建误差的许多可能原因（例如，相机位置和方向的初始估计、照明条件、地形中特征检测的难易程度）。重建误差可能导致不准确的科学推断，或危及探索偏远环境的航天器。为了应对这一挑战，我们提出了VECTOR，这是一种视觉分析工具，可以改善立体重建BA的误差检查。VECTOR为分析人员提供了以前无法获得的特征位置、相机姿态和计算出的3D点的可见性。VECTOR是与美国国家航空航天局喷气推进实验室的Perseverance火星漫游者和Ingenuity火星直升机地形重建团队合作开发的。我们报告了如何使用该工具调试和改进火星2020任务的地形重建。 et.al.|[2408.03503](http://arxiv.org/abs/2408.03503)|**[link](https://github.com/NASA-AMMOS/VECTOR)**|
 
-<p align=right>(<a href=#updated-on-20240813>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240814>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-08-12**|**Gradient flow for a class of diffusion equations with Dirichlet boundary data**|本文给出了一类在有界域上具有恒定非负Dirichlet边界条件的非线性演化方程的变分特征，作为非负测度空间中的梯度流。相关几何形状由Figalli和Gigli引入的修正Wasserstein距离给出，该距离允许通过让边界充当储层来改变质量。我们根据Benamou Brenier的精神，将该距离作为满足连续性方程的非负测度曲线的动作最小化问题给出了一个动态公式。然后，我们将具有Dirichlet边界条件的非线性扩散方程的解表征为最大斜率曲线意义上的内能泛函的度量梯度流。 et.al.|[2408.05987](http://arxiv.org/abs/2408.05987)|null|
 |**2024-08-12**|**Diffuse-UDA: Addressing Unsupervised Domain Adaptation in Medical Image Segmentation with Appearance and Structure Aligned Diffusion Models**|3D医学成像中体素级注释的稀缺性和复杂性带来了重大挑战，特别是由于资源丰富的中心的标记数据集和资源较少的中心的未标记数据集之间的领域差距。这种差异影响了医疗保健中人工智能算法的公平性。我们介绍了Diffuse UDA，这是一种利用扩散模型来解决医学图像分割中的无监督域自适应（UDA）问题的新方法。漫反射UDA生成具有目标域特征和各种结构的高质量图像掩模对，从而增强UDA任务。最初，生成目标域样本的伪标签。随后，在两个域的图像标签或图像伪标签对上训练一个包含可变形增强的专门定制的扩散模型。最后，源域标签引导扩散模型为目标域生成图像标签对。对几个基准的综合评估表明，Diffuse UDA的表现优于领先的UDA和半监督策略，其性能接近甚至超过了直接在目标域数据上训练的模型的理论上限。Diffuse UDA为推进医学成像中人工智能系统的开发和部署提供了一条途径，解决了医疗环境之间的差异。这种方法可以探索创新的人工智能驱动的诊断工具，改善结果，节省时间，减少人为错误。 et.al.|[2408.05985](http://arxiv.org/abs/2408.05985)|null|
 
-<p align=right>(<a href=#updated-on-20240813>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240814>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-07-23**|**Fluorescence Diffraction Tomography using Explicit Neural Fields**|从荧光图像中求解3D折射率（RI）可以提供有关生物样本的荧光和相位信息。然而，在大体积、高分辨率和反射模式下准确检索部分相干光的相位以重建无标签相位物体的未知RI仍然具有挑战性。为了应对这一挑战，我们开发了具有显式神经场的荧光衍射断层扫描（FDT），可以从散焦荧光散斑图像重建3D RI。使用FDT成功重建3D RI依赖于四个关键组件：粗到细建模、自校准、差分多层渲染模型和部分相干掩模。具体而言，显式表示与粗到细建模有效地集成在一起，以实现高速、高分辨率的重建。此外，我们将多层方程推进到微分多层渲染模型，这使得系统的外部和内部参数能够进行自校准。自校准有助于高精度的正向图像预测和RI重建。部分相干掩模是数字掩模，用于准确有效地解决相干光模型和部分相干光数据之间的差异。FDT成功地从荧光图像中重建了24个z $层上1024$×1024像素的530$×530$×300$μm^3$ 体积的3D培养无标记3D MuSCs管的RI，证明了在体外对体积庞大和异质的生物样本进行高保真3D RI重建。 et.al.|[2407.16657](http://arxiv.org/abs/2407.16657)|null|
 |**2024-07-22**|**Iterative approach to reconstructing neural disparity fields from light-field data**|本研究提出了一种神经视差场（NDF），该场基于神经场建立了场景视差的隐式连续表示，并采用迭代方法解决了从光场数据重建NDF的逆问题。NDF能够无缝和精确地表征三维场景中的视差变化，并可以以任何任意分辨率对视差进行离散化，克服了传统视差图容易出现采样误差和插值不准确的局限性。所提出的NDF网络架构利用哈希编码结合多层感知器来捕获纹理级别的详细差异，从而增强其表示复杂场景几何信息的能力。通过利用光场数据中固有的空间角度一致性，开发了一种可微分正向模型，用于从光场数据生成中心视图图像。基于正向模型，建立了一种使用可微传播算子的NDF重建逆问题的优化方案。此外，在优化方案中，采用迭代求解方法重建NDF，该方法不需要训练数据集，适用于各种采集方法捕获的光场数据。实验结果表明，使用所提出的方法可以从光场数据中重建高质量的NDF。NDF可以有效地恢复高分辨率视差，证明了其隐式、连续表示场景视差的能力。 et.al.|[2407.15380](http://arxiv.org/abs/2407.15380)|null|
 
-<p align=right>(<a href=#updated-on-20240813>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240814>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
