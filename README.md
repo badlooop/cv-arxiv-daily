@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.09.01
+## Updated on 2024.09.02
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-08-23**|**BiGS: Bidirectional Gaussian Primitives for Relightable 3D Gaussian Splatting**|我们提出了双向高斯基元，这是一种基于图像的新型视图合成技术，旨在在动态照明下用表面和体积材料表示和渲染3D对象。我们的方法将光固有分解集成到高斯散射框架中，实现了3D对象的实时重新照明。为了在内聚外观模型中统一表面和体积材料，我们采用了一种通过双向球面谐波进行光和视图相关散射表示的方法。我们的模型不使用特定的表面法线相关反射函数，使其与高斯飞溅等体积表示更兼容，其中法线未定义。我们通过重建和渲染具有复杂材质的对象来演示我们的方法。使用One-Light-At-a-Time（OLAT）数据作为输入，我们可以在新的光照条件下实时再现逼真的外观。 et.al.|[2408.13370](http://arxiv.org/abs/2408.13370)|null|
 |**2024-08-23**|**LayerPano3D: Layered 3D Panorama for Hyper-Immersive Scene Generation**|3D沉浸式场景生成是计算机视觉和图形学中一项具有挑战性但至关重要的任务。所需的虚拟3D场景应该1）表现出全向视图一致性，2）允许在复杂的场景层次中自由探索。现有的方法要么依赖于通过修复进行连续的场景扩展，要么采用全景表示来表示大视场场景环境。然而，生成的场景在扩展过程中会出现语义漂移，无法处理场景层次之间的遮挡。为了应对这些挑战，我们引入了LayerPano3D，这是一个从单个文本提示生成全视图、可探索全景3D场景的新颖框架。我们的关键见解是将参考2D全景分解为不同深度级别的多层，其中每一层都通过扩散先验从参考视图中揭示了看不见的空间。LayerPano3D包括多个专用设计：1）我们引入了一种新颖的文本引导锚点视图合成管道，用于高质量、一致的全景生成。2） 我们率先将分层3D全景作为底层表示来管理复杂的场景层次结构，并将其提升为3D高斯分布，以无约束的观看路径呈现详细的360度全向场景。大量实验表明，我们的框架在全视图一致性和沉浸式探索体验方面都能生成最先进的3D全景场景。我们相信，LayerPano3D有望通过众多应用程序推进3D全景场景创建。 et.al.|[2408.13252](http://arxiv.org/abs/2408.13252)|null|
 
-<p align=right>(<a href=#updated-on-20240901>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240902>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-08-25**|**TranSplat: Generalizable 3D Gaussian Splatting from Sparse Multi-View Images with Transformers**|与Nerf等先前的3D重建方法相比，最近的可泛化3D高斯散斑（G-3DGS）方法即使在稀疏视图设置中也表现出了令人印象深刻的效率。然而，现有G-3DGS方法的良好重建性能在很大程度上依赖于精确的多视图特征匹配，这是一个相当具有挑战性的问题。特别是对于各种视图之间存在许多非重叠区域并且包含许多相似区域的场景，现有方法的匹配性能较差，重建精度有限。为了解决这个问题，我们开发了一种策略，利用预测的深度置信图来指导精确的局部特征匹配。此外，我们建议利用现有单目深度估计模型的知识来提高视图之间非重叠区域的深度估计精度。结合所提出的策略，我们提出了一种名为TranSplat的新型G-3DGS方法，该方法在RealEstate10K和ACID基准测试中都获得了最佳性能，同时保持了竞争速度并展现出强大的跨数据集泛化能力。我们的代码和演示将在以下网址提供：https://xingyoujun.github.io/transplat. et.al.|[2408.13770](http://arxiv.org/abs/2408.13770)|null|
 |**2024-08-25**|**SeeBelow: Sub-dermal 3D Reconstruction of Tumors with Surgical Robotic Palpation and Tactile Exploration**|机器人辅助微创手术（RMIS）中的手术场景理解高度依赖于视觉线索，缺乏触觉感知。具有触觉反馈的力调制手术触诊对于定位、几何形状/深度估计和灵巧地探索地下组织层中异常坚硬的夹杂物是必要的。之前的工作通过300多次触诊来探索表面水平的组织异常或单层组织肿瘤包埋，以进行密集的二维刚度标测。我们的方法侧重于使用视觉引导的新型触觉导航策略对多层组织（皮肤脂肪肌肉）中的皮下肿瘤表面轮廓进行3D重建。利用具有三轴力传感的机器人触诊探头对体模进行触觉探索。该策略从深度相机初始化的手术区域的表面网格中，通过贝叶斯优化采样的触诊来探索外科医生感兴趣的区域。每次触诊都包括使用接触安全阻抗控制器追踪皮下肿瘤几何形状的轮廓跟踪，直到到达潜在的肿瘤组织边界。这些轮廓沿着触诊轨迹的投影允许在不到100次触诊中3D重建真皮下肿瘤表面轮廓。我们的方法生成了具有各向同性弹性的组织层中刚性肿瘤嵌入的高保真3D表面重建，尽管软肿瘤几何形状尚未得到探索。 et.al.|[2408.13699](http://arxiv.org/abs/2408.13699)|null|
 
-<p align=right>(<a href=#updated-on-20240901>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240902>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-08-29**|**One-Shot Learning Meets Depth Diffusion in Multi-Object Videos**|创建可编辑的视频，以各种艺术风格描绘多个对象之间的复杂交互，长期以来一直是电影制作中一项具有挑战性的任务。由于缺乏包含成对文本描述和展示这些交互的相应视频的数据集，进展往往受到阻碍。本文介绍了一种新的深度调节方法，该方法通过使用预训练的深度感知文本到图像（T2I）模型从单个文本视频对生成连贯和多样化的视频，显著推进了这一领域。我们的方法通过采用定制设计的空间和时间注意力机制，对预训练模型进行微调，以捕捉连续运动。在推理过程中，我们使用DDIM反演为视频生成提供结构指导。这种创新技术允许在视频中持续控制深度，促进多对象交互的生成，同时保持原始T2I模型在各种艺术风格（如照片现实主义、动画和印象主义）中的概念生成和构图优势。 et.al.|[2408.16704](http://arxiv.org/abs/2408.16704)|null|
 |**2024-08-29**|**DriveGenVLM: Real-world Video Generation for Vision Language Model based Autonomous Driving**|自动驾驶技术的进步需要越来越复杂的方法来理解和预测现实世界的场景。视觉语言模型（VLM）正在成为革命性的工具，具有影响自动驾驶的巨大潜力。本文提出了DriveGenVLM框架来生成驾驶视频，并使用VLM来理解它们。为了实现这一目标，我们采用了一种基于去噪扩散概率模型（DDPM）的视频生成框架，旨在预测真实世界的视频序列。然后，我们通过使用一种称为“自我中心视频高效情境学习”（EILEV）的预训练模型，探索我们生成的视频在VLM中使用的充分性。使用Waymo开放数据集训练扩散模型，并使用Fr’echet视频距离（FVD）评分进行评估，以确保生成视频的质量和真实性。EILEV为这些生成的视频提供了相应的叙述，这在自动驾驶领域可能是有益的。这些叙述可以增强对交通场景的理解，有助于导航，提高规划能力。DriveGenVLM框架中视频生成与VLM的集成代表了利用先进的人工智能模型解决自动驾驶复杂挑战的重要一步。 et.al.|[2408.16647](http://arxiv.org/abs/2408.16647)|null|
 
-<p align=right>(<a href=#updated-on-20240901>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240902>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-07-29**|**Aero-Nef: Neural Fields for Rapid Aircraft Aerodynamics Simulations**|本文提出了一种基于隐式神经表示（INR）在网格域上学习稳态流体动力学模拟替代模型的方法。所提出的模型可以直接应用于不同流动条件下的非结构化域，处理非参数3D几何变化，并推广到测试时看不见的形状。基于坐标的公式自然会导致离散化的鲁棒性，从而在计算成本（内存占用和训练时间）和精度之间实现了极好的权衡。该方法在两个工业相关应用中得到了验证：跨音速翼型上二维可压缩流的RANS数据集和三维机翼上表面压力分布的数据集，包括形状、流入条件和控制表面偏转变化。在所考虑的测试用例中，与最先进的图神经网络架构相比，我们的方法实现了三倍多的测试误差，并显著改善了看不见的几何形状的泛化误差。值得注意的是，该方法在RANS跨音速翼型数据集上的推理速度比高保真求解器快五个数量级。代码可在以下网址获得https://gitlab.isae-supaero.fr/gi.catalani/aero-nepf et.al.|[2407.19916](http://arxiv.org/abs/2407.19916)|**[link](https://gitlab.isae-supaero.fr/gi.catalani/aero-nepf)**|
 |**2024-07-26**|**ObjectCarver: Semi-automatic segmentation, reconstruction and separation of 3D objects**|隐式神经场在从多幅图像重建3D表面方面取得了显著进展；然而，在分离场景中的单个对象时，他们遇到了挑战。之前的工作试图通过引入一个框架来解决这个问题，该框架为N个对象中的每一个同时训练单独的带符号距离场（SDF），并使用正则化项来防止对象重叠。然而，所有这些方法都需要提供分割掩模，这并不总是容易获得的。我们介绍了我们的方法ObjectCarver，来解决在单个视图中从点击输入中分离对象的问题。给定摆出的多视图图像和一组用户输入点击来提示分割单个对象，我们的方法将场景分解为单独的对象，并为每个对象重建高质量的3D表面。我们引入了一个损失函数，可以防止漂浮物，避免因遮挡而造成不适当的雕刻。此外，我们引入了一种新的场景初始化方法，与之前的方法相比，该方法在保留几何细节的同时显著加快了过程。尽管不需要地面真实掩模或单眼线索，但我们的方法在定性和定量上都优于基线。此外，我们引入了一个新的基准数据集进行评估。 et.al.|[2407.19108](http://arxiv.org/abs/2407.19108)|null|
 
-<p align=right>(<a href=#updated-on-20240901>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240902>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
