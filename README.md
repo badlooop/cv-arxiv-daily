@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.09.17
+## Updated on 2024.09.18
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-09-10**|**GigaGS: Scaling up Planar-Based 3D Gaussians for Large Scene Surface Reconstruction**|3D高斯散斑（3DGS）在新颖的视图合成中显示出有前景的性能。以前的方法使其适用于获取单个3D对象或有限场景内的表面。本文首次尝试解决大规模场景表面重建的挑战性任务。由于GPU内存消耗高、几何表示的细节层次不同以及外观明显不一致，这项任务尤其困难。为此，我们提出了GigaGS，这是使用3DGS对大规模场景进行高质量表面重建的第一项工作。GigaGS首先应用了一种基于空间区域相互可见性的分区策略，该策略有效地将相机分组以进行并行处理。为了提高曲面的质量，我们还提出了基于细节级别表示的新的多视图光度和几何一致性约束。通过这样做，我们的方法可以重建详细的表面结构。在各种数据集上进行了综合实验。持续的改进证明了GigaGS的优越性。 et.al.|[2409.06685](http://arxiv.org/abs/2409.06685)|null|
 |**2024-09-09**|**G-NeLF: Memory- and Data-Efficient Hybrid Neural Light Field for Novel View Synthesis**|随着人们对隐式神经表示的兴趣日益浓厚，神经光场（NeLF）被引入直接预测光线的颜色。与神经辐射场（NeRF）不同，NeLF不会通过预测空间中每个点的颜色和体积密度来创建逐点表示。然而，当前的NeLF方法面临着挑战，因为它们需要首先训练NeRF模型，然后合成超过10K个视图来训练NeLF以提高性能。此外，与NeRF方法相比，NeLF方法的渲染质量较低。在本文中，我们提出了G-NeLF，这是一种基于网格的多功能NeLF方法，它利用空间感知特征来释放神经网络推理能力的潜力，从而克服了NeLF训练的困难。具体来说，我们使用从精心制作的网格中导出的空间感知特征序列作为光线的表示。基于我们对多分辨率哈希表适应性的实证研究，我们引入了一种新的基于网格的NeLF射线表示方法，该方法可以用非常有限的参数表示整个空间。为了更好地利用序列特征，我们设计了一个轻量级的光线颜色解码器，模拟光线传播过程，从而能够更有效地推断光线的颜色。G-NeLF可以在不需要大量存储开销的情况下进行训练，其模型大小仅为0.95 MB，超过了以前最先进的NeLF。此外，与基于网格的NeRF方法（如Instant NGP）相比，我们只利用了其参数的十分之一来实现更高的性能。我们的代码将在验收后发布。 et.al.|[2409.05617](http://arxiv.org/abs/2409.05617)|null|
 
-<p align=right>(<a href=#updated-on-20240917>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240918>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-09-11**|**Single-View 3D Reconstruction via SO(2)-Equivariant Gaussian Sculpting Networks**|本文介绍了SO（2）-等变高斯雕刻网络（GSN）作为从单视图图像观测中重建SO（2，Equivariant 3D对象的一种方法。GSN将单个观测值作为输入，生成描述观测对象几何和纹理的高斯斑点表示。通过在解码高斯颜色、协方差、位置和不透明度之前使用共享特征提取器，GSN实现了极高的吞吐量（>150FPS）。实验证明，GSN可以使用多视图渲染损失进行有效训练，并且在质量上与昂贵的基于扩散的重建算法具有竞争力。GSN模型在多个基准实验中得到了验证。此外，我们展示了GSN在机器人操纵管道中用于以对象为中心的抓取的潜力。 et.al.|[2409.07245](http://arxiv.org/abs/2409.07245)|null|
 |**2024-09-10**|**Sources of Uncertainty in 3D Scene Reconstruction**|3D场景重建过程可能会受到现实场景中众多不确定性源的影响。虽然神经辐射场（NeRF）和3D高斯散点（GS）实现了高保真渲染，但它们缺乏直接解决或量化噪声、遮挡、混淆异常值和不精确相机姿态输入引起的不确定性的内置机制。在本文中，我们介绍了一种分类法，对这些方法中固有的不同不确定性来源进行了分类。此外，我们使用不确定性估计技术扩展了基于NeRF和GS的方法，包括学习不确定性输出和集成，并进行了实证研究，以评估它们捕获重建灵敏度的能力。我们的研究强调了在设计基于NeRF/GS的不确定性感知3D重建方法时，需要解决各种不确定性方面的问题。 et.al.|[2409.06407](http://arxiv.org/abs/2409.06407)|**[link](https://github.com/aaltoml/uncertainty-nerf-gs)**|
 
-<p align=right>(<a href=#updated-on-20240917>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240918>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-09-16**|**ReflectDiffu: Reflect between Emotion-intent Contagion and Mimicry for Empathetic Response Generation via a RL-Diffusion Framework**|产生同理心反应需要整合情感和意图动态，以促进有意义的互动。现有的研究要么忽视了情感和意图之间复杂的相互作用，导致同理心的可控性欠佳，要么诉诸于大型语言模型（LLM），这会带来巨大的计算开销。本文介绍了ReflectDiffu，这是一个轻量级的、全面的移情反应生成框架。该框架结合了情绪传染来增强情绪表现力，并采用情绪推理面具来精确定位关键的情绪元素。此外，它还将意图模仿整合到强化学习中，以便在扩散过程中进行细化。通过利用意图两次反映探索采样校正的机制，ReflectDiffu熟练地将情绪决策转化为精确的意图行为，从而解决了由情绪认知错误引起的移情反应失调问题。通过反思，该框架将情绪状态映射到意图，显著增强了反应同理心和灵活性。综合实验表明，ReflectDiffu在相关性、可控性和信息性方面优于现有模型，在自动和人工评估方面都取得了最先进的结果。 et.al.|[2409.10289](http://arxiv.org/abs/2409.10289)|null|
 |**2024-09-16**|**DreamHead: Learning Spatial-Temporal Correspondence via Hierarchical Diffusion for Audio-driven Talking Head Synthesis**|音频驱动的说话头合成努力从提供的音频中生成逼真的视频肖像。扩散模型因其卓越的质量和鲁棒的泛化能力而受到认可，已被探索用于这项任务。然而，利用扩散模型在时间音频线索和相应的空间面部表情之间建立鲁棒的对应关系仍然是说话头部生成的一个重大挑战。为了弥合这一差距，我们提出了DreamHead，这是一个分层扩散框架，可以在不损害模型内在质量和适应性的情况下学习说话头合成中的时空对应关系~DreamHead学习从音频中预测密集的面部标志作为中间信号，以模拟空间和时间的对应关系~具体而言，首先设计音频到地标扩散的第一层次，以在给定音频序列信号的情况下预测时间平滑和准确的地标序列。然后，进一步提出了第二层次的地标到图像扩散，通过建模密集的面部地标和外观之间的空间对应关系，产生空间一致的面部肖像视频。大量实验表明，所提出的DreamHead可以通过设计的分层扩散有效地学习时空一致性，并为多个身份生成高保真音频驱动的说话头视频。 et.al.|[2409.10281](http://arxiv.org/abs/2409.10281)|null|
 
-<p align=right>(<a href=#updated-on-20240917>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240918>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-08-07**|**Compact 3D Gaussian Splatting for Static and Dynamic Radiance Fields**|3D高斯飞溅（3DGS）最近成为一种替代表示，它利用基于3D高斯的表示并引入了近似的体积渲染，实现了非常快的渲染速度和有前景的图像质量。此外，后续的研究已成功地将3DGS扩展到动态3D场景，展示了其广泛的应用。然而，由于3DGS及其后续方法需要大量的高斯分布来保持渲染图像的高保真度，这需要大量的内存和存储，因此出现了一个重大的缺点。为了解决这个关键问题，我们特别强调两个关键目标：在不牺牲性能的情况下减少高斯点的数量，以及压缩高斯属性，如视图相关的颜色和协方差。为此，我们提出了一种可学习的掩码策略，该策略在保持高性能的同时显著减少了高斯数。此外，我们提出了一种紧凑但有效的视图相关颜色表示方法，即采用基于网格的神经场，而不是依赖球谐函数。最后，我们学习码本，通过残差矢量量化来紧凑地表示几何和时间属性。通过量化和熵编码等模型压缩技术，我们始终表明，与静态场景的3DGS相比，存储空间减少了25倍以上，渲染速度提高了25倍，同时保持了场景表示的质量。对于动态场景，与现有的最先进方法相比，我们的方法实现了超过12倍的存储效率，并保留了高质量的重建。我们的工作为3D场景表示提供了一个全面的框架，实现了高性能、快速训练、紧凑性和实时渲染。我们的项目页面可在https://maincold2.github.io/c3dgs/. et.al.|[2408.03822](http://arxiv.org/abs/2408.03822)|null|
 |**2024-08-07**|**PRTGS: Precomputed Radiance Transfer of Gaussian Splats for Real-Time High-Quality Relighting**|我们提出了高斯斑点的预计算辐射转移（PRTGS），这是一种在低频照明环境中用于高斯斑点的实时高质量重新照明方法，通过预计算3D高斯斑点的辐射转移来捕获柔和的阴影和相互反射。现有的研究表明，在动态照明场景中，3D高斯溅射（3DGS）的效率优于神经场。然而，目前基于3DGS的重新照明方法仍然难以实时计算动态光的高质量阴影和间接照明，导致渲染结果不切实际。我们通过预先计算复杂传递函数（如阴影）所需的昂贵传输模拟来解决这个问题，得到的传递函数表示为每个高斯斑点的密集向量集或矩阵集。我们介绍了针对训练和渲染阶段量身定制的不同预计算方法，以及针对3D高斯斑点的独特光线追踪和间接照明预计算技术，以加快训练速度并计算与环境光相关的准确间接照明。实验分析表明，我们的方法在保持有竞争力的训练时间的同时实现了最先进的视觉质量，并允许以1080p分辨率对动态光和相对复杂的场景进行高质量的实时（30+fps）重新照明。 et.al.|[2408.03538](http://arxiv.org/abs/2408.03538)|null|
 
-<p align=right>(<a href=#updated-on-20240917>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240918>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
