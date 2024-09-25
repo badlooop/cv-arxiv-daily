@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.09.24
+## Updated on 2024.09.25
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-09-11**|**Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models**|尽管在图像到3D的生成方面取得了巨大的进步，但现有的方法仍然难以生成具有高分辨率纹理的多视图一致图像，特别是在缺乏3D感知的2D扩散范式中。在这项工作中，我们提出了高分辨率图像到3D模型（Hi3D），这是一种新的基于视频扩散的范式，将单个图像重新定义为多视图图像，作为3D感知的顺序图像生成（即轨道视频生成）。该方法深入研究了视频扩散模型中潜在的时间一致性知识，该模型在3D生成中很好地推广了多个视图之间的几何一致性。从技术上讲，Hi3D首先为预训练的视频扩散模型赋予3D感知先验（相机姿态条件），从而产生具有低分辨率纹理细节的多视图图像。学习3D感知视频到视频细化器，以进一步放大具有高分辨率纹理细节的多视图图像。这种高分辨率的多视图图像通过3D高斯散点进一步增强了新的视图，最终通过3D重建获得高保真网格。对新颖视图合成和单视图重建的广泛实验表明，我们的Hi3D能够产生具有高度详细纹理的卓越多视图一致性图像。源代码和数据可在\url上获得{https://github.com/yanghb22-fdu/Hi3D-Official}. et.al.|[2409.07452](http://arxiv.org/abs/2409.07452)|**[link](https://github.com/yanghb22-fdu/hi3d-official)**|
 |**2024-09-11**|**MVLLaVA: An Intelligent Agent for Unified and Flexible Novel View Synthesis**|本文介绍了MVLLaVA，一种专为新型视图合成任务设计的智能代理。MVLLaVA将多个多视图扩散模型与大型多模态模型LLaVA集成在一起，使其能够高效地处理各种任务。MVLLaVA代表了一个通用和统一的平台，可适应不同的输入类型，包括单个图像、描述性字幕或观看方位角的特定变化，由视点生成的语言指令指导。我们精心制作特定任务的指令模板，随后用于微调LLaVA。因此，MVLLaVA能够根据用户指令生成新颖的视图图像，展示了其在各种任务中的灵活性。通过实验验证了MVLLaVA的有效性，证明了其在应对各种新颖视图合成挑战方面的鲁棒性能和多功能性。 et.al.|[2409.07129](http://arxiv.org/abs/2409.07129)|null|
 
-<p align=right>(<a href=#updated-on-20240924>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240925>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-09-11**|**Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models**|尽管在图像到3D的生成方面取得了巨大的进步，但现有的方法仍然难以生成具有高分辨率纹理的多视图一致图像，特别是在缺乏3D感知的2D扩散范式中。在这项工作中，我们提出了高分辨率图像到3D模型（Hi3D），这是一种新的基于视频扩散的范式，将单个图像重新定义为多视图图像，作为3D感知的顺序图像生成（即轨道视频生成）。该方法深入研究了视频扩散模型中潜在的时间一致性知识，该模型在3D生成中很好地推广了多个视图之间的几何一致性。从技术上讲，Hi3D首先为预训练的视频扩散模型赋予3D感知先验（相机姿态条件），从而产生具有低分辨率纹理细节的多视图图像。学习3D感知视频到视频细化器，以进一步放大具有高分辨率纹理细节的多视图图像。这种高分辨率的多视图图像通过3D高斯散点进一步增强了新的视图，最终通过3D重建获得高保真网格。对新颖视图合成和单视图重建的广泛实验表明，我们的Hi3D能够产生具有高度详细纹理的卓越多视图一致性图像。源代码和数据可在\url上获得{https://github.com/yanghb22-fdu/Hi3D-Official}. et.al.|[2409.07452](http://arxiv.org/abs/2409.07452)|**[link](https://github.com/yanghb22-fdu/hi3d-official)**|
 |**2024-09-11**|**Three-Dimensional, Multimodal Synchrotron Data for Machine Learning Applications**|机器学习技术正越来越多地应用于医学和物理科学中的各种成像方式；然而，开发这些工具时的一个重要问题是高质量培训数据的可用性。在这里，我们展示了一个独特的多峰同步加速器数据集，其中包含一个定制的掺锌沸石13X样品，可用于开发先进的深度学习和数据融合管道。在进行空间分辨X射线衍射计算机断层扫描以表征钠和锌相的均匀分布之前，对掺锌沸石13X碎片进行了多分辨率微X射线计算机断层扫描，以表征其孔隙和特征。控制锌的吸收，以产生一种简单的、空间隔离的两相材料。原始数据和处理后的数据都可以作为一系列Zenodo条目获得。总之，我们提出了一个空间分辨、三维、多模态、多分辨率的数据集，可用于开发机器学习技术。这些技术包括超分辨率、多模态数据融合和3D重建算法的开发。 et.al.|[2409.07322](http://arxiv.org/abs/2409.07322)|null|
 
-<p align=right>(<a href=#updated-on-20240924>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240925>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-09-18**|**LEMON: Localized Editing with Mesh Optimization and Neural Shaders**|在实际使用案例中，多边形网格编辑可能比生成新网格更快，但对用户来说仍然具有挑战性和耗时性。该问题的现有解决方案往往侧重于单一任务，无论是几何还是新颖的视图合成，这通常会导致网格和视图之间的结果脱节。在这项工作中，我们提出了LEMON，这是一种将神经延迟着色与局部网格优化相结合的网格编辑管道。我们的方法首先识别网格中最重要的顶点进行编辑，利用分割模型专注于这些关键区域。给定对象的多视图图像，我们优化神经着色器和多边形网格，同时从每个视图中提取法线贴图和渲染图像。通过使用这些输出作为条件数据，我们使用文本到图像扩散模型编辑输入图像，并在变形网格的同时迭代更新我们的数据集。该过程产生一个多边形网格，根据给定的文本指令进行编辑，保留初始网格的几何特征，同时关注最重要的区域。我们使用DTU数据集评估我们的管道，证明它比当前最先进的方法更快地生成精细编辑的网格。我们在补充材料中包含了我们的代码和其他结果。 et.al.|[2409.12024](http://arxiv.org/abs/2409.12024)|null|
 |**2024-09-19**|**On some singularly perturbed elliptic systems modeling partial segregation: uniform Hölder estimates and basic properties of the limits**|我们在一类奇异摄动竞争扩散椭圆系统中证明了统一的H”旧估计，其特殊特征是组分之间的相互作用发生三乘三（三元相互作用）。这些系统与Gross-Pitaevski能量的最小化有关，用于模拟超冷气体和其他多组分液体和气体的三元混合物。 et.al.|[2409.11976](http://arxiv.org/abs/2409.11976)|null|
 
-<p align=right>(<a href=#updated-on-20240924>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240925>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-08-19**|**Neural Representation of Shape-Dependent Laplacian Eigenfunctions**|拉普拉斯算子的特征函数在数学物理、工程和几何处理中至关重要。通常，这些是通过对域进行离散化并执行特征分解来计算的，将结果与特定的网格联系起来。然而，这种方法不适合连续参数化的形状。我们提出了一种连续参数化形状空间中本征函数的新表示，其中本征函数是连续依赖于形状参数的空间场，由最小狄利克雷能量、单位范数和相互正交性定义。我们用训练为神经场的多层感知器来实现这一点，将形状参数和域位置映射到特征函数值。一个独特的挑战是强制因果关系的相互正交性，其中因果顺序在形状空间中是不同的。因此，我们的训练方法需要三个相互交织的概念：（1）通过在单位范数约束下最小化狄利克雷能量来同时学习n$本征函数；（2） 在反向传播过程中过滤梯度以强制因果正交性，防止早期特征函数受到后期特征函数的影响；（3） 基于特征值对因果排序进行动态排序，以跟踪特征值曲线交叉。我们在形状族分析、不完整形状的特征函数预测、交互式形状操作和计算高维特征函数等问题上展示了我们的方法，这些问题都是传统方法所不能达到的。 et.al.|[2408.10099](http://arxiv.org/abs/2408.10099)|null|
 |**2024-08-20**|**Scene123: One Prompt to 3D Scene Generation via Video-Assisted and Consistency-Enhanced MAE**|随着人工智能生成内容（AIGC）的进步，已经开发了各种方法来从单模式或多模式输入生成文本、图像、视频和3D对象，从而有助于模拟类人认知内容的创建。然而，由于确保模型生成的外推视图之间的一致性所涉及的复杂性，从单个输入生成逼真的大规模场景是一个挑战。受益于最新的视频生成模型和隐式神经表示，我们提出了Scene123，这是一种3D场景生成模型，它不仅通过视频生成框架确保了真实性和多样性，还使用隐式神经场与掩模自编码器（MAE）相结合，有效地确保了视图中看不见区域的一致性。具体来说，我们最初会扭曲输入图像（或从文本生成的图像）以模拟相邻的视图，用MAE模型填充不可见的区域。然而，这些填充图像通常无法保持视图一致性，因此我们利用产生的视图来优化神经辐射场，增强几何一致性。此外，为了进一步增强生成视图的细节和纹理保真度，我们对通过视频生成模型从输入图像中导出的图像采用了基于GAN的Loss。大量实验表明，我们的方法可以从单个提示中生成逼真一致的场景。定性和定量结果都表明，我们的方法超越了现有的最先进的方法。我们展示鼓励视频示例https://yiyingyang12.github.io/Scene123.github.io/. et.al.|[2408.05477](http://arxiv.org/abs/2408.05477)|null|
 
-<p align=right>(<a href=#updated-on-20240924>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240925>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
