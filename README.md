@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.09.28
+## Updated on 2024.09.29
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-09-23**|**AIM 2024 Sparse Neural Rendering Challenge: Dataset and Benchmark**|可微分和神经渲染的最新发展在各种2D和3D任务中取得了令人印象深刻的突破，例如新颖的视图合成、3D重建。通常，可微分渲染依赖于场景的密集视点覆盖，这样几何体就可以单独从外观观察中消除歧义。当只有少数输入视图可用时，会出现一些挑战，通常称为稀疏或少镜头神经渲染。由于这是一个约束不足的问题，大多数现有方法都引入了正则化的使用，以及各种学习和手工制作的先验。稀疏渲染文献中反复出现的一个问题是缺乏同质、最新的数据集和评估协议。虽然高分辨率数据集是密集重建文献中的标准，但稀疏渲染方法通常使用低分辨率图像进行评估。此外，不同手稿之间的数据分割不一致，测试地面真实图像通常是公开的，这可能会导致过度拟合。在这项工作中，我们提出了稀疏渲染（SpaRe）数据集和基准测试。我们引入了一个遵循DTU MVS数据集设置的新数据集。该数据集由97个基于合成高质量资产的新场景组成。每个场景最多有64个相机视图和7个照明配置，以1600x1200分辨率渲染。我们发布了82个场景的训练分割，以培养可推广的方法，并为验证和测试集提供了一个在线评估平台，其真实图像保持隐藏。我们提出了两种不同的稀疏配置（分别为3幅和9幅输入图像）。这为可重复评估提供了一个强大而方便的工具，并使研究人员能够轻松访问具有最先进绩效评分的公共排行榜。可用网址：https://sparebenchmark.github.io/ et.al.|[2409.15041](http://arxiv.org/abs/2409.15041)|null|
 |**2024-09-22**|**MVPGS: Excavating Multi-view Priors for Gaussian Splatting from Sparse Input Views**|最近，神经辐射场（NeRF）的进步促进了少镜头新视图合成（NVS），这是3D视觉应用中的一个重大挑战。尽管多次尝试降低NeRF中的密集输入要求，但它仍然受到耗时的训练和渲染过程的困扰。最近，3D高斯散斑（3DGS）通过显式的基于点的表示实现了实时高质量的渲染。然而，与NeRF类似，由于缺乏约束，它往往会过度拟合训练视图。在本文中，我们提出了\textbf{MVPGS}，这是一种基于3D高斯散斑挖掘多视图先验的少镜头NVS方法。我们利用最近基于学习的多视图立体（MVS）来提高3DGS的几何初始化质量。为了减轻过拟合，我们提出了一种基于计算几何的前向扭曲方法，用于符合场景的额外外观约束。此外，我们为高斯参数引入了视图一致的几何约束，以促进适当的优化收敛，并利用单目深度正则化作为补偿。实验表明，该方法在实时渲染速度方面达到了最先进的性能。项目页面：https://zezeaaa.github.io/projects/MVPGS/ et.al.|[2409.14316](http://arxiv.org/abs/2409.14316)|null|
 
-<p align=right>(<a href=#updated-on-20240928>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240929>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-09-24**|**AIR-Embodied: An Efficient Active 3DGS-based Interaction and Reconstruction Framework with Embodied Large Language Model**|3D重建和神经渲染的最新进展增强了高质量数字资产的创建，但现有的方法很难在不同的对象形状、纹理和遮挡之间进行推广。虽然次优视图（NBV）规划和基于学习的方法提供了解决方案，但它们往往受到预定义标准的限制，无法用人类的常识来管理遮挡。为了解决这些问题，我们提出了AIR Embodied，这是一种新的框架，将嵌入的AI代理与大规模预训练的多模态语言模型集成在一起，以改进主动3DGS重建。AIR Embodied采用了一个三阶段过程：通过多模态提示了解当前的重建状态，通过视点选择和交互动作规划任务，并采用闭环推理来确保准确执行。代理根据计划结果和实际结果之间的差异动态改进其操作。在虚拟和现实世界环境中的实验评估表明，AIR Embodied显著提高了重建效率和质量，为主动3D重建中的挑战提供了一个稳健的解决方案。 et.al.|[2409.16019](http://arxiv.org/abs/2409.16019)|null|
 |**2024-09-23**|**Matérn Kernels for Tunable Implicit Surface Reconstruction**|我们建议使用Mat'ern核家族进行可调隐式曲面重建，以最近成功的定向点云三维重建核方法为基础。正如我们所展示的，从理论和实践的角度来看，Mat'ern核都有一些吸引人的特性，使其特别适合曲面重建——优于基于弧余弦核的最先进方法，同时更容易实现、计算更快、可扩展。由于是平稳的，我们证明了Mat'ern核'光谱可以以与傅里叶特征映射相同的方式进行调整，以帮助基于坐标的MLP克服光谱偏差。此外，我们从理论上分析了Mat'ern核与SIREN网络的连接，以及它与以前使用的弧余弦核的关系。最后，基于最近引入的神经核域，我们提出了数据依赖的Mat'ern核，并得出结论，特别是拉普拉斯核（作为Mat'ern家族的一部分）具有极强的竞争力，在无噪声的情况下，其性能几乎与最先进的方法相当，同时训练时间缩短了五倍以上。 et.al.|[2409.15466](http://arxiv.org/abs/2409.15466)|**[link](https://github.com/mweiherer/matern-surface-reconstruction)**|
 
-<p align=right>(<a href=#updated-on-20240928>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240929>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-09-26**|**Radio-FIR correlation- A probe into cosmic ray propagation in the nearby galaxy IC 342**|对不同频率星系的无线电和远红外（FIR）发射之间相关性的深入研究可以揭示恒星形成与相对论星际介质（ISM）之间的相互作用。得益于LOFAR LoTSS观测结果与VLA、赫歇尔和WISE数据的结合，我们研究了宇宙射线和磁场在附近星系IC342中~＞200pc尺度的无线电FIR相关性中的作用。在恒星形成区，22微米发射所追踪的热发射分别占0.14、1.4、4.8 GHz观测到的无线电发射的6%、13%和30%，在其他地区则较少。非热光谱指数在低于1.4 GHz的频率（a=-0.51+-0.09，S（nu）~nu^（a））比平均1.4至4.8 GHz（a=-1.06+-0.19）更平坦，这种平坦化不仅发生在恒星形成区，也发生在弥漫的ISM中。无线电FIR相关性在所有无线电频率上都成立；然而，在较高的无线电频率下，它更紧密。多尺度分析表明，由于宇宙射线电子（CRE）的扩散，这种相关性在小尺度上无法保持。与1.4 GHz（200个百分点）相比，0.14 GHz的相关性在更大范围内（320个百分点）中断，表明在较低频率下追踪的CRE在ISM中扩散了更长的路径。我们发现，CRE的能量指数在恒星形成区变得更平坦，这与之前的研究一致。只有在补偿了恒星形成活动的影响后，磁场对CRE的冷却才在全球范围内明显，恒星形成活动既加速了CRE，又放大了磁场。与附近的其他星系相比，研究表明，无线电FIR相关性的最小尺度与有序磁场对其有重要影响的CRE传播长度成正比。 et.al.|[2409.17999](http://arxiv.org/abs/2409.17999)|null|
 |**2024-09-26**|**Distributed Invariant Unscented Kalman Filter based on Inverse Covariance Intersection with Intermittent Measurements**|本文研究了矩阵李群上传感器网络的分布式状态估计（DSE）问题，这对于系统状态在李群而不是向量空间上演化的应用至关重要。我们提出了一种基于扩散的分布式不变无迹卡尔曼滤波器，该滤波器使用逆协方差交集（DIUKF-ICI）方法来解决3D环境中的目标跟踪问题。与局限于向量空间的现有分布式UKF不同，我们的方法将分布式UKF框架扩展到李群，使局部估计能够与李群上相邻主体的中间信息融合。为了处理局部估计之间的未知相关性，我们首次将ICI融合策略扩展到矩阵李群，并将其整合到扩散算法中。我们证明了所提出方法的估计误差是有界的。此外，该算法是完全分布式的，对间歇测量具有鲁棒性，并适用于时变通信拓扑。通过大量的蒙特卡洛模拟验证了所提出方法的有效性。 et.al.|[2409.17997](http://arxiv.org/abs/2409.17997)|null|
 
-<p align=right>(<a href=#updated-on-20240928>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240929>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-09-03**|**GraspSplats: Efficient Manipulation with 3D Feature Splatting**|机器人对物体部件进行高效和零样本抓取的能力对于实际应用至关重要，并且随着视觉语言模型（VLM）的最新进展而变得普遍。为了弥合二维到三维表示的差距以支持这种能力，现有的方法依赖于神经场（NeRF），通过可微渲染或基于点的投影方法。然而，我们证明了NeRF由于其隐含性而不适合场景变化，并且基于点的方法对于没有基于渲染的优化的零件定位是不准确的。为了修正这些问题，我们提出了“把握辉煌”。使用深度监督和一种新的参考特征计算方法，GraspSplats在60秒内生成高质量的场景表示。我们进一步验证了基于高斯表示法的优势，表明GraspSplats中的显式和优化几何足以原生支持（1）实时抓取采样和（2）使用点跟踪器进行动态和铰接对象操作。通过在Franka机器人上进行的广泛实验，我们证明了在不同的任务设置下，GraspSplats的表现明显优于现有的方法。特别是，GraspSplats的性能优于基于NeRF的方法，如F3RM和LERF-TOGO，以及2D检测方法。 et.al.|[2409.02084](http://arxiv.org/abs/2409.02084)|null|
 |**2024-08-23**|**S4D: Streaming 4D Real-World Reconstruction with Gaussians and 3D Control Points**|最近，使用高斯分布的动态场景重建引起了越来越多的兴趣。主流方法通常采用全局变形场来扭曲规范空间中的3D场景。然而，隐式神经场固有的低频特性往往导致复杂运动的无效表示。此外，它们的结构刚性会阻碍对不同分辨率和持续时间的场景的适应。为了克服这些挑战，我们引入了一种利用离散3D控制点的新方法。该方法对局部射线进行物理建模，并建立一个运动解耦坐标系，该坐标系有效地将传统图形与可学习的流水线相结合，以实现鲁棒且高效的局部6自由度（6-DoF）运动表示。此外，我们还开发了一个广义框架，将我们的控制点与高斯算子结合起来。从初始3D重建开始，我们的工作流程将流式4D真实世界重建分解为四个独立的子模块：3D分割、3D控制点生成、对象运动操纵和残差补偿。我们的实验表明，该方法在Neu3DV和CMU全景数据集上的表现优于现有的最先进的4D高斯散斑技术。我们的方法还显著加速了训练，在单个NVIDIA 4070 GPU上，每帧只需2秒即可优化我们的3D控制点。 et.al.|[2408.13036](http://arxiv.org/abs/2408.13036)|**[link](https://github.com/hebing-sjtu/S4D)**|
 
-<p align=right>(<a href=#updated-on-20240928>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20240929>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
