@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.10.05
+## Updated on 2024.10.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-02**|**AniSDF: Fused-Granularity Neural Surfaces with Anisotropic Encoding for High-Fidelity 3D Reconstruction**|神经辐射场最近彻底改变了新颖的视图合成，并实现了高保真渲染。然而，这些方法为了渲染质量而牺牲了几何体，限制了它们的进一步应用，包括重新照明和变形。如何在重建精确几何的同时合成照片级真实感渲染仍然是一个未解决的问题。在这项工作中，我们提出了AniSDF，这是一种新的方法，通过基于物理的编码来学习融合粒度的神经表面，以实现高保真度的3D重建。与之前的神经曲面不同，我们的融合粒度几何结构平衡了整体结构和精细的几何细节，产生了精确的几何重建。为了将几何体与反射外观区分开来，我们引入了混合辐射场，按照各向异性球面高斯编码（一种基于物理的渲染管道）对漫反射和镜面反射进行建模。通过这些设计，AniSDF可以重建具有复杂结构的对象，并生成高质量的渲染图。此外，我们的方法是一个统一的模型，不需要对特定对象进行复杂的超参数调整。大量实验表明，我们的方法在几何重建和新颖的视图合成方面都大大提高了基于SDF的方法的质量。 et.al.|[2410.01202](http://arxiv.org/abs/2410.01202)|null|
 |**2024-10-01**|**GMT: Enhancing Generalizable Neural Rendering via Geometry-Driven Multi-Reference Texture Transfer**|新视图合成（NVS）旨在使用多视图图像在任意视点生成图像，神经辐射场（NeRF）的最新见解为显著改进做出了贡献。最近，对可推广NeRF（G-NeRF）的研究解决了NeRF中每场景优化的挑战。G-NeRF中动态构建辐射场简化了NVS过程，使其非常适合实际应用。同时，由于缺乏每个场景的优化，即使使用纹理丰富的多视图源输入，G-NeRF仍然难以表示特定场景的精细细节。作为补救措施，我们提出了一种几何驱动的多参考纹理传输网络（GMT），作为专为G-NeRF设计的即插即用模块。具体来说，我们提出了光线施加的可变形卷积（RayDCN），它对齐反映场景几何的输入和参考特征。此外，所提出的纹理保持变换器（TP Former）在保留纹理信息的同时聚合了多视图源特征。因此，我们的模块能够在图像增强过程中实现相邻像素之间的直接交互，这在每个像素具有独立渲染过程的G-NeRF模型中是不足的。这解决了阻碍捕获高频细节的限制。实验表明，我们的即插即用模块在各种基准数据集上持续改进了G-NeRF模型。 et.al.|[2410.00672](http://arxiv.org/abs/2410.00672)|**[link](https://github.com/yh-yoon/gmt)**|
 
-<p align=right>(<a href=#updated-on-20241005>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241006>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-01**|**3DGR-CAR: Coronary artery reconstruction from ultra-sparse 2D X-ray views with a 3D Gaussians representation**|重建三维冠状动脉对于冠状动脉疾病的诊断、治疗计划和手术导航非常重要。传统的重建技术通常需要多次投影，而从稀疏视图X射线投影进行重建是减少辐射剂量的一种潜在方法。然而，冠状动脉在3D体积中的极端稀疏性和超有限数量的投影对高效准确的3D重建构成了重大挑战。为此，我们提出了3DGR-CAR，这是一种用于从超稀疏X射线投影重建冠状动脉的3D高斯表示。我们利用3D高斯表示来避免冠状动脉数据极度稀疏造成的效率低下，并提出了一种高斯中心预测器来克服超稀疏视图投影中的噪声高斯初始化。所提出的方案仅需2个视图即可实现快速准确的3D冠状动脉重建。在两个数据集上的实验结果表明，所提出的方法在体素精度和冠状动脉视觉质量方面明显优于其他方法。该代码将在https://github.com/windrise/3DGR-CAR. et.al.|[2410.00404](http://arxiv.org/abs/2410.00404)|**[link](https://github.com/windrise/3dgr-car)**|
 |**2024-10-01**|**Seamless Augmented Reality Integration in Arthroscopy: A Pipeline for Articular Reconstruction and Guidance**|关节镜是一种用于诊断和治疗关节问题的微创手术。关节镜的临床工作流程通常涉及通过小切口将关节镜插入关节，在此过程中，外科医生主要依靠关节镜的视觉评估进行导航和操作。然而，关节镜有限的视野和缺乏深度感知给在手术过程中导航复杂的关节结构和实现手术精度带来了挑战。为了提高术中意识，我们提出了一种强大的管道，该管道结合了同时定位和映射、深度估计和3D高斯飞溅，仅基于单眼关节镜视频即可真实地重建关节内结构。将3D重建扩展到增强现实（AR）应用，我们的解决方案以人体在环方式为关节切迹测量和注释锚定提供AR辅助。与传统的基于运动和神经辐射场的结构方法相比，我们的流水线平均在7分钟内实现了密集的3D重建和具有竞争力的渲染保真度，并具有显式的3D表示。当在四个体模数据集上进行评估时，我们的方法平均实现了RMSE=2.21mm的重建误差、PSNR=32.86和SSIM=0.89。由于我们的管道能够直接从单眼关节镜进行AR重建和引导，而无需任何额外的数据和/或硬件，因此我们的解决方案可能有助于提高关节镜手术中的意识和手术精度。我们的AR测量工具的精度在1.59+/-1.81mm以内，AR注释工具的mIoU为0.721。 et.al.|[2410.00386](http://arxiv.org/abs/2410.00386)|null|
 
-<p align=right>(<a href=#updated-on-20241005>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241006>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-10-03**|**Efficient calibration of the shifted square-root diffusion model to credit default swap spreads using asymptotic approximations**|我们使用渐近系数展开技术近似非线性偏微分方程的解，推导了二维移位平方根扩散（SSRD）模型中信用违约掉期（CDS）利差的闭合形式近似。具体来说，我们确定了与CDS价差公式中缺乏解析解的两个项相关的柯西问题，并推导出了这些项的渐近近似值。我们的近似值不需要假设不相关的利率和违约强度过程，这是SSRD模型中校准的典型要求。通过使用CDS价差的市场数据进行的几项校准研究，我们证明了我们提出的公式的准确性和效率。 et.al.|[2410.02645](http://arxiv.org/abs/2410.02645)|null|
 |**2024-10-03**|**Diffusion-based Extreme Image Compression with Compressed Feature Initialization**|基于扩散的极端图像压缩方法在极低比特率下取得了令人印象深刻的性能。然而，由于受到从纯噪声开始的迭代去噪过程的限制，这些方法在保真度和效率方面都受到限制。为了解决这两个问题，我们提出了中继残差扩散极端图像压缩（RDEIC），它利用了压缩特征初始化和残差扩散。具体来说，我们首先使用添加了噪声的图像的压缩潜在特征，而不是纯噪声，作为消除去噪过程中不必要的初始阶段的起点。其次，我们设计了一种新的中继残差扩散方法，通过迭代去除添加的噪声和压缩特征与目标潜在特征之间的残差来重建原始图像。值得注意的是，我们的中继残差扩散网络无缝集成了预训练的稳定扩散，以利用其强大的生成能力进行高质量的重建。第三，我们提出了一种固定步长的微调策略，以消除训练和推理阶段之间的差异，进一步提高重建质量。大量实验表明，所提出的RDEIC实现了最先进的视觉质量，在保真度和效率方面都优于现有的基于扩散的极端图像压缩方法。源代码将在https://github.com/huai-chang/RDEIC. et.al.|[2410.02640](http://arxiv.org/abs/2410.02640)|**[link](https://github.com/huai-chang/rdeic)**|
 
-<p align=right>(<a href=#updated-on-20241005>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241006>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-09-04**|**MDNF: Multi-Diffusion-Nets for Neural Fields on Meshes**|我们提出了一种在三角形网格上表示神经场的新框架，该框架在空间和频率域上都是多分辨率的。受神经傅里叶滤波器组（NFFB）的启发，我们的架构通过将更精细的空间分辨率级别与更高的频带相关联来分解空间和频率域，而将更粗糙的分辨率映射到较低的频率。为了实现几何感知的空间分解，我们利用了多个扩散网络组件，每个组件都与不同的空间分辨率级别相关联。随后，我们应用傅里叶特征映射来鼓励更精细的分辨率水平与更高的频率相关联。最终信号是使用正弦激活的MLP以小波激励的方式组成的，将高频信号聚集在低频信号之上。我们的架构在学习复杂神经场方面具有很高的精度，并且对目标场的不连续性、指数尺度变化和网格修改具有鲁棒性。我们通过将我们的方法应用于不同的神经领域，如合成RGB函数、UV纹理坐标和顶点法线，展示了其有效性，并说明了不同的挑战。为了验证我们的方法，我们将其性能与两种替代方案进行了比较，展示了我们的多分辨率架构的优势。 et.al.|[2409.03034](http://arxiv.org/abs/2409.03034)|null|
 |**2024-09-03**|**GraspSplats: Efficient Manipulation with 3D Feature Splatting**|机器人对物体部件进行高效和零样本抓取的能力对于实际应用至关重要，并且随着视觉语言模型（VLM）的最新进展而变得普遍。为了弥合二维到三维表示的差距以支持这种能力，现有的方法依赖于神经场（NeRF），通过可微渲染或基于点的投影方法。然而，我们证明了NeRF由于其隐含性而不适合场景变化，并且基于点的方法对于没有基于渲染的优化的零件定位是不准确的。为了修正这些问题，我们提出了“把握辉煌”。使用深度监督和一种新的参考特征计算方法，GraspSplats在60秒内生成高质量的场景表示。我们进一步验证了基于高斯表示法的优势，表明GraspSplats中的显式和优化几何足以原生支持（1）实时抓取采样和（2）使用点跟踪器进行动态和铰接对象操作。通过在Franka机器人上进行的广泛实验，我们证明了在不同的任务设置下，GraspSplats的表现明显优于现有的方法。特别是，GraspSplats的性能优于基于NeRF的方法，如F3RM和LERF-TOGO，以及2D检测方法。 et.al.|[2409.02084](http://arxiv.org/abs/2409.02084)|null|
 
-<p align=right>(<a href=#updated-on-20241005>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241006>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
