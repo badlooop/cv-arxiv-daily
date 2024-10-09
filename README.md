@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.10.08
+## Updated on 2024.10.09
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-03**|**SuperGS: Super-Resolution 3D Gaussian Splatting via Latent Feature Field and Gradient-guided Splitting**|最近，3D高斯散斑（3DGS）以其实时渲染能力和卓越的质量在新颖的视图合成中脱颖而出。然而，由于从低分辨率输入视图导出的基元的粗糙性质，它面临着高分辨率新视图合成（HRNVS）的挑战。为了解决这个问题，我们提出了超分辨率3DGS（SuperGS），它是3DGS的扩展，采用两阶段粗到细的训练框架设计，利用预训练的低分辨率场景表示作为超分辨率优化的初始化。此外，我们引入了多分辨率特征高斯散斑（MFGS），以结合潜在特征场进行灵活的特征采样，并引入梯度引导的选择性分裂（GSS）进行有效的高斯上采样。通过将这些策略整合到从粗到细的框架中，可以确保高保真度和内存效率。大量实验表明，SuperGS在仅使用低分辨率输入挑战现实世界数据集方面超越了最先进的HRNVS方法。 et.al.|[2410.02571](http://arxiv.org/abs/2410.02571)|null|
 |**2024-10-02**|**MVGS: Multi-view-regulated Gaussian Splatting for Novel View Synthesis**|最近在体绘制方面的工作，例如NeRF和3D高斯散点（3DGS），在学习到的隐式神经辐射场或3D高斯分布的帮助下，显著提高了渲染质量和效率。在显式表示的基础上进行渲染，vanilla 3DGS及其变体通过在训练过程中每次迭代都进行单视图监督来优化参数模型，从而提供实时效率。因此，某些视图被过度拟合，导致新颖的视图合成和不精确的3D几何中的外观不令人满意。为了解决上述问题，我们提出了一种新的3DGS优化方法，该方法体现了四个关键的新贡献：1）我们将传统的单视图训练范式转变为多视图训练策略。通过我们提出的多视图调节，3D高斯属性得到了进一步优化，而不会过拟合某些训练视图。作为通用解决方案，我们提高了各种场景和不同高斯变体的整体精度。2） 受其他观点带来的好处的启发，我们进一步提出了一种跨内在指导方案，从而针对不同分辨率进行了从粗到细的训练过程。3） 基于我们的多视图调节训练，我们进一步提出了一种交叉射线致密化策略，从一系列视图中在射线交叉区域致密化更多的高斯核。4） 通过进一步研究致密化策略，我们发现当某些观点明显不同时，致密化的效果应该得到增强。作为一种解决方案，我们提出了一种新的多视图增强致密化策略，其中鼓励3D高斯模型相应地被致密化到足够的数量，从而提高了重建精度。 et.al.|[2410.02103](http://arxiv.org/abs/2410.02103)|null|
 
-<p align=right>(<a href=#updated-on-20241008>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241009>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-02**|**Learning from the Giants: A Practical Approach to Underwater Depth and Surface Normals Estimation**|单目深度和表面法线估计（MDSNE）对于3D重建、自主导航和水下勘探等任务至关重要。当前的方法要么依赖于与透明或反射表面斗争的判别模型，要么依赖于生成模型，尽管生成模型准确，但计算成本很高。本文提出了一种新的MDSNE深度学习模型，该模型专门针对水下环境量身定制，使用了一种混合架构，将卷积神经网络（CNN）与Transformers集成在一起，利用了这两种方法的优势。训练有效的MDSNE模型往往受到现实世界数据集噪声和合成数据集泛化能力有限的阻碍。为了解决这个问题，我们使用多个预训练的MDSNE模型生成伪标记的真实数据。为了确保这些数据的质量，我们提出了深度法线评估和选择算法（DNESA），该算法使用领域特定的度量来评估和选择最可靠的伪标记样本。然后，在这个精心策划的数据集上训练一个轻量级的学生模型。我们的模型将参数减少了90%，训练成本减少了80%，允许在资源受限的设备上进行实时3D感知。主要贡献包括：一种新颖高效的MDSNE模型、DNESA算法、特定领域的数据管道，以及对实时性能和可扩展性的关注。我们的模型专为现实世界的水下应用而设计，便于在水下机器人和自动驾驶车辆中进行低成本部署，弥合了研究与实际实施之间的差距。 et.al.|[2410.02072](http://arxiv.org/abs/2410.02072)|null|
 |**2024-10-02**|**Enhancing Screen Time Identification in Children with a Multi-View Vision Language Model and Screen Time Tracker**|能够准确监测幼儿的屏幕暴露对于研究与屏幕使用相关的现象（如儿童肥胖、体育活动和社会互动）非常重要。大多数现有的研究都依赖于笨重的可穿戴传感器的自我报告或手动测量，因此在捕获定量屏幕曝光数据方面缺乏效率和准确性。在这项工作中，我们开发了一种新的传感器信息学框架，该框架利用了来自可穿戴传感器（称为屏幕时间跟踪器（STT））的以自我为中心的图像和视觉语言模型（VLM）。特别是，我们设计了一种多视图VLM，它从以自我为中心的图像序列中获取多个视图，并动态解释屏幕曝光。我们通过使用儿童自由生活活动的数据集验证了我们的方法，证明了其在普通视觉语言模型和对象检测模型方面比现有方法的显著改进。结果支持了这种监测方法的前景，它可以优化儿童自然环境中屏幕暴露的行为研究。 et.al.|[2410.01966](http://arxiv.org/abs/2410.01966)|null|
 
-<p align=right>(<a href=#updated-on-20241008>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241009>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-10-07**|**Editing Music with Melody and Text: Using ControlNet for Diffusion Transformer**|尽管在可控音乐生成和编辑方面取得了重大进展，但由于使用了梅尔谱图表示和基于UNet的模型结构，生成音乐的质量和长度仍然存在挑战。为了解决这些局限性，我们提出了一种使用扩散变换器（DiT）的新方法，并使用ControlNet添加了一个额外的控制分支。这允许通过文本和旋律提示控制长格式和可变长度的音乐生成和编辑。为了更精确和细粒度的旋律控制，我们引入了一种新的top- $k$ constant-Q Transform表示作为旋律提示，与之前的表示（例如色度）相比，减少了歧义，特别是对于具有多个曲目或宽范围音高值的音乐。为了有效地平衡来自文本和旋律提示的控制信号，我们采用了一种逐步掩盖旋律提示的课程学习策略，从而实现了更稳定的训练过程。使用开源乐器录音数据对文本到音乐生成和音乐风格转换任务进行了实验。结果表明，通过扩展预训练的文本控制DiT模型StableAudio，我们的方法能够实现卓越的旋律控制编辑，同时保持良好的文本到音乐生成性能。这些结果在基于文本的生成和用于编辑的旋律保存方面都优于强大的MusicGen基线。音频示例可以在以下网址找到https://stable-audio-control.github.io/web/. et.al.|[2410.05151](http://arxiv.org/abs/2410.05151)|null|
 |**2024-10-07**|**Leveraging Multimodal Diffusion Models to Accelerate Imaging with Side Information**|扩散模型作为解决逆问题的表达先验取得了惊人的成功，但它们从自然图像扩展到更结构化的科学领域仍然有限。受材料科学应用的启发，我们的目标是通过利用更便宜的辅助模态的辅助信息，减少昂贵的成像模态所需的测量次数。为了处理正向模型的不可微性和黑箱性质，我们提出了一种在联合模态上训练多模态扩散模型的框架，将具有黑箱正向模型的逆问题转化为简单的线性修复问题。从数值上讲，我们证明了在材料图像数据上训练扩散模型的可行性，并表明我们的方法通过利用可用的辅助信息实现了卓越的图像重建，而从昂贵的显微镜模态中需要的数据量要少得多。 et.al.|[2410.05143](http://arxiv.org/abs/2410.05143)|null|
 
-<p align=right>(<a href=#updated-on-20241008>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241009>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-09-09**|**Lagrangian Hashing for Compressed Neural Field Representations**|我们提出了拉格朗日散列，这是一种神经场的表示，结合了依赖于欧拉网格（即~InstantNGP）的快速训练NeRF方法的特征，以及使用配备有特征的点作为表示信息的方法（例如3D高斯散点或PointNeRF）。我们通过将基于点的表示合并到InstantNGP表示的分层哈希表的高分辨率层中来实现这一点。由于我们的点具有影响域，我们的表示可以被解释为哈希表中存储的高斯混合。我们提出的损失鼓励我们的高斯人向需要更多代表预算才能充分代表的地区移动。我们的主要发现是，我们的表示允许使用更紧凑的表示来重建信号，而不会影响质量。 et.al.|[2409.05334](http://arxiv.org/abs/2409.05334)|null|
 |**2024-09-08**|**Exploring spectropolarimetric inversions using neural fields. Solar chromospheric magnetic field under the weak-field approximation**|全斯托克斯偏振数据集来源于狭缝光谱仪或窄带滤光片图，如今已被常规采集。随着二维光谱偏振仪和允许长时间高质量观测序列的观测技术的出现，数据速率正在增加。在光谱偏振反演中，显然需要通过利用推断物理量的时空相干性来超越传统的逐像素策略。我们探索了神经网络作为时间和空间（也称为神经场）上物理量的连续表示的潜力，用于光谱极化反演。我们已经实现并测试了一个神经场，以在弱场近似（WFA）下执行磁场矢量的推理（也称为物理知情神经网络的方法）。通过使用神经场来描述磁场矢量，我们可以通过假设物理量是坐标的连续函数来在空间和时间域中正则化解。我们研究了Ca II 8542 A谱线的合成和真实观测结果。我们还探讨了其他显式正则化的影响，例如使用外推磁场的信息或色球原纤维的取向。与传统的逐像素反演相比，神经场方法提高了磁场矢量重建的保真度，特别是横向分量。这种隐式正则化是一种提高观测值有效信噪比的方法。虽然它比逐像素WFA估计慢，但这种方法通过减少自由参数的数量并在解决方案中引入时空约束，显示出深度分层反演的巨大潜力。 et.al.|[2409.05156](http://arxiv.org/abs/2409.05156)|**[link](https://github.com/cdiazbas/neural_wfa)**|
 
-<p align=right>(<a href=#updated-on-20241008>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241009>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
