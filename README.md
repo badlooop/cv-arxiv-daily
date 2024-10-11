@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.10.10
+## Updated on 2024.10.11
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -25,13 +25,13 @@
 |**2024-10-08**|**Comparative Analysis of Novel View Synthesis and Photogrammetry for 3D Forest Stand Reconstruction and extraction of individual tree parameters**|准确高效的树木三维重建对于森林资源评估和管理至关重要。近景摄影测量（CRP）通常用于重建森林场景，但面临着效率低、质量差等挑战。最近，包括神经辐射场（NeRF）和3D高斯散斑（3DGS）在内的新型视图合成（NVS）技术已显示出在有限图像下进行3D植物重建的前景。然而，现有的研究主要集中在果园或单株树木中的小型植物上，这给它们在更大、更复杂的林分中的应用带来了不确定性。在这项研究中，我们收集了具有不同复杂性的森林地块的连续图像，并使用NeRF和3DGS进行了密集重建。将得到的点云与摄影测量和激光扫描的点云进行了比较。结果表明，NVS方法显著提高了重建效率。摄影测量难以处理复杂的林分，导致点云的树冠噪声过大，树木重建不正确，如树干重复。NeRF虽然对树冠区域更好，但在视野有限的地面区域可能会产生误差。3DGS方法生成更稀疏的点云，特别是在主干区域，影响胸径（DBH）精度。这三种方法都可以提取树高信息，其中NeRF的精度最高；然而，摄影测量在DBH精度方面仍然具有优势。这些发现表明，NVS方法在林分三维重建方面具有巨大潜力，为复杂的森林资源清查和可视化任务提供了宝贵支持。 et.al.|[2410.05772](http://arxiv.org/abs/2410.05772)|null|
 |**2024-10-07**|**PH-Dropout: Prctical Epistemic Uncertainty Quantification for View Synthesis**|使用神经辐射场（NeRF）和高斯散斑（GS）的视图合成在渲染现实世界场景时表现出了令人印象深刻的保真度。然而，在视图综合中缺乏准确有效的认知不确定性量化（UQ）的实用方法。现有的NeRF方法要么引入了大量的计算开销（例如，“训练时间增加10倍”或“重复训练10倍”），要么仅限于特定的不确定性条件或模型。值得注意的是，GS模型缺乏全面认知UQ的系统方法。这种能力对于提高神经视图合成的鲁棒性和可扩展性至关重要，可以实现主动模型更新、误差估计和基于不确定性的可扩展集成建模。本文从函数近似的角度重新审视了基于NeRF和GS的方法，确定了3D表示学习中的关键差异和联系。基于这些见解，我们介绍了PH Dropout（事后Dropout），这是第一种直接在预训练的NeRF和GS模型上进行认知不确定性估计的实时准确方法。广泛的评估验证了我们的理论发现，并证明了PH Dropout的有效性。 et.al.|[2410.05468](http://arxiv.org/abs/2410.05468)|null|
 |**2024-10-07**|**DreamSat: Towards a General 3D Model for Novel View Synthesis of Space Objects**|新颖的视图合成（NVS）能够生成场景的新图像或将一组2D图像转换为全面的3D模型。在空间领域意识的背景下，由于空间变得越来越拥挤，NVS可以准确地绘制空间物体和碎片的地图，提高空间操作的安全性和效率。同样，在会合和近距离作战任务中，3D模型可以提供目标物体的形状、大小和方向的详细信息，从而更好地规划和预测目标的行为。在这项工作中，我们探索了这些重建技术的泛化能力，旨在通过在190个高质量航天器模型的高质量数据集上微调最先进的单视图重建模型Zero123 XL，并将其集成到DreamGaussian框架中，提出一种从单视图图像重建3D航天器的新方法DreamSat，从而避免对每个新场景进行再训练的必要性。我们展示了在多个指标上重建质量的一致改进，包括对比语言图像预训练（CLIP）得分（+0.33%）、峰值信噪比（PSNR）（+2.53%）、结构相似性指数（SSIM）（+2.38%）和学习感知图像补丁相似性（LPIPS）（+0.16%）。%）在30张以前从未见过的航天器图像的测试集上。我们的方法通过利用最先进的扩散模型和3D高斯溅射技术，解决了航天工业中缺乏特定领域的3D重建工具的问题。这种方法保持了DreamGaussian框架的效率，同时提高了航天器重建的准确性和细节。这项工作的代码可以在GitHub上访问(https://github.com/ARCLab-MIT/space-nvs). et.al.|[2410.05097](http://arxiv.org/abs/2410.05097)|**[link](https://github.com/arclab-mit/space-nvs)**|
-|**2024-10-07**|**6DGS: Enhanced Direction-Aware Gaussian Splatting for Volumetric Rendering**|随着神经辐射场（NeRF）和3D高斯散射（3DGS）的发展，新型视图合成技术取得了显著进步。然而，在不影响实时渲染的情况下实现高质量仍然具有挑战性，特别是对于具有视图相关效果的基于物理的光线跟踪。最近，N维高斯（N-DG）引入了6D空间角度表示，以更好地结合视图相关的效果，但高斯表示和控制方案都是次优的。在本文中，我们重新审视了6D高斯分布，并引入了6D高斯散斑（6DGS），它增强了颜色和不透明度表示，并利用6D空间中的额外方向信息来优化高斯控制。我们的方法与3DGS框架完全兼容，并通过更好地建模视图相关效果和精细细节，显著提高了实时辐射场渲染。实验证明，6DGS明显优于3DGS和N-DG，与3DGS相比，PSNR提高了15.73dB，高斯点减少了66.5%。 et.al.|[2410.04974](http://arxiv.org/abs/2410.04974)|null|
+|**2024-10-10**|**6DGS: Enhanced Direction-Aware Gaussian Splatting for Volumetric Rendering**|随着神经辐射场（NeRF）和3D高斯散射（3DGS）的发展，新型视图合成技术取得了显著进步。然而，在不影响实时渲染的情况下实现高质量仍然具有挑战性，特别是对于具有视图相关效果的基于物理的光线跟踪。最近，N维高斯（N-DG）引入了6D空间角度表示，以更好地结合视图相关的效果，但高斯表示和控制方案都是次优的。在本文中，我们重新审视了6D高斯分布，并引入了6D高斯散斑（6DGS），它增强了颜色和不透明度表示，并利用6D空间中的额外方向信息来优化高斯控制。我们的方法与3DGS框架完全兼容，并通过更好地建模视图相关效果和精细细节，显著提高了实时辐射场渲染。实验证明，6DGS明显优于3DGS和N-DG，与3DGS相比，PSNR提高了15.73dB，高斯点减少了66.5%。项目页面为：https://gaozhongpai.github.io/6dgs/ et.al.|[2410.04974](http://arxiv.org/abs/2410.04974)|null|
 |**2024-10-07**|**TeX-NeRF: Neural Radiance Fields from Pseudo-TeX Vision**|神经辐射场（NeRF）因其卓越的视觉效果而受到广泛关注。然而，大多数现有的NeRF方法都是从可见光相机捕获的RGB图像中重建3D场景。在黑暗、低光照或恶劣天气等实际情况下，可见光摄像头会变得无效。因此，我们提出了TeX-NeRF，这是一种仅使用红外图像的3D重建方法，它先验地引入了物体材料的发射率，使用伪TeX视觉对红外图像进行预处理，并将场景的温度（T）、发射率（e）和纹理（X）分别映射到HSV颜色空间的饱和度（S）、色调（H）和值（V）通道中。使用处理后的图像的新颖视图合成产生了优异的结果。此外，我们介绍了3D TeX数据集，这是第一个包含红外图像及其相应的伪TeX视觉图像的数据集。实验证明，我们的方法不仅与高质量RGB图像实现的场景重建质量相匹配，而且为场景中的对象提供了准确的温度估计。 et.al.|[2410.04873](http://arxiv.org/abs/2410.04873)|null|
 |**2024-10-06**|**Deformable NeRF using Recursively Subdivided Tetrahedra**|虽然神经辐射场（NeRF）在新颖的视图合成中显示出希望，但它们的隐式表示限制了对对象操纵的显式控制。现有的研究提出了整合显式几何代理来实现变形。然而，这些方法面临着两个主要挑战：第一，耗时且计算量大的四面体化过程；其次，处理复杂或薄的结构通常会导致四面体网格过多、存储密集或质量差，从而损害变形能力。为了应对这些挑战，我们提出了DeformRF，这是一种将四面体网格的可操作性与特征网格表示的高质量渲染能力无缝集成的方法。为了避免每个对象的四面体形状不好和四面体化，我们提出了一种两阶段训练策略。从几乎规则的四面体网格开始，我们的模型最初保留了对象周围的关键四面体，随后在第二阶段使用更细粒度的网格细化对象细节。我们还提出了递归细分四面体的概念，以隐式创建更高分辨率的网格。这实现了多分辨率编码，同时只需要存储在第一训练阶段生成的粗略四面体网格。我们在合成和真实捕获的数据集上对DeformRF进行了全面评估。定量和定性结果都证明了我们的方法在新的视图合成和变形任务中的有效性。项目页面：https://ustc3dv.github.io/DeformRF/ et.al.|[2410.04402](http://arxiv.org/abs/2410.04402)|null|
 |**2024-10-06**|**StreetSurfGS: Scalable Urban Street Surface Reconstruction with Planar-based Gaussian Splatting**|重建城市街道场景至关重要，因为它在自动驾驶和城市规划等应用中起着至关重要的作用。这些场景的特点是长而窄的相机轨迹、遮挡、复杂的对象关系和跨多个尺度的数据稀疏性。尽管最近取得了进展，但主要针对以对象为中心的场景设计的现有表面重建方法很难有效地适应街道场景的独特特征。为了应对这一挑战，我们引入了StreetSurfGS，这是第一种采用高斯散斑法的方法，专门为可扩展的城市街道场景表面重建而定制。StreetSurfGS利用基于平面的八叉树表示和分段训练来降低内存成本，适应独特的相机特性，并确保可扩展性。此外，为了减轻对象重叠引起的深度不准确，我们提出了一种正则化中的引导平滑策略，以消除不准确的边界点和异常值。此外，为了解决稀疏视图和多尺度挑战，我们使用了一种利用相邻和长期信息的双步匹配策略。大量实验验证了StreetSurfGS在新颖视图合成和曲面重建方面的有效性。 et.al.|[2410.04354](http://arxiv.org/abs/2410.04354)|null|
 |**2024-10-05**|**Test-Time Adaptation for Keypoint-Based Spacecraft Pose Estimation Based on Predicted-View Synthesis**|由于在训练过程中难以复制真实条件，当在合成数据上训练并应用于实际操作数据时，航天器姿态估计的监督算法的性能会下降。为了解决这个问题，我们提出了一种测试时间自适应方法，该方法利用了近距离操作期间获取的图像之间的时间冗余。我们的方法包括从连续的航天器图像中提取特征，估计它们的姿态，然后使用这些信息合成重建的视图。我们通过将综合视图与实际视图进行比较，建立了一个自我监督学习目标。在训练过程中，我们监督姿态估计和图像合成，而在测试时，我们优化自我监督目标。此外，我们引入了正则化损失，以防止与航天器关键点结构不一致的解决方案。我们的代码可在以下网址获得：https://github.com/JotaBravo/spacecraft-tta. et.al.|[2410.04298](http://arxiv.org/abs/2410.04298)|**[link](https://github.com/jotabravo/spacecraft-tta)**|
 
-<p align=right>(<a href=#updated-on-20241010>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241011>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-06**|**Multimodal 3D Fusion and In-Situ Learning for Spatially Aware AI**|增强现实中虚拟世界和物理世界的无缝集成得益于系统对物理环境的语义“理解”。AR研究长期以来一直专注于上下文感知的潜力，展示了利用3D环境中的语义进行各种对象级交互的新功能。与此同时，计算机视觉界在神经视觉语言理解方面取得了长足的进步，以增强自主任务的环境感知。在这项工作中，我们引入了一种多模态3D对象表示，该表示将语义和语言知识与几何表示相结合，实现了涉及物理对象的用户引导机器学习。我们首先提出了一种快速的多模态3D重建流水线，通过将CLIP视觉语言特征融合到环境和对象模型中，为AR带来语言理解。然后，我们提出了“原位”机器学习，它与多模态表示相结合，使用户能够以空间和语言上有意义的方式与物理空间和对象进行交互。我们通过Magic Leap 2上的两个现实AR应用程序展示了所提出系统的有用性：a）使用自然语言在物理环境中进行空间搜索；b）跟踪对象随时间变化的智能库存系统。我们还提供完整的实施和演示数据，网址为(https://github.com/cy-xu/spatially_aware_AI)鼓励对空间感知人工智能的进一步探索和研究。 et.al.|[2410.04652](http://arxiv.org/abs/2410.04652)|**[link](https://github.com/cy-xu/spatially_aware_ai)**|
 |**2024-10-05**|**IceCloudNet: 3D reconstruction of cloud ice from Meteosat SEVIRI**|IceCloudNet是一种基于机器学习的新方法，能够预测高质量的垂直分辨云冰水含量（IWC）和冰晶数浓度（N $_\textrm{ice}$）。这些预测基于地球静止卫星观测（SEVIRI）的时空覆盖和分辨率以及主动卫星反演（DARDAR）的垂直分辨率。IceCloudNet由基于ConvNeXt的U-Net和3D PatchGAN鉴别器模型组成，并通过从共置的SEVIRI图像中预测DAR轮廓进行训练。尽管由于其狭窄的立交桥，DARDAR数据的可用性很低，但IceCloudNet能够高精度地预测云的出现、空间结构和微物理特性。该模型已应用于十年的SEVIRI数据，生成了一个垂直分辨率的IWC数据集和N$\textrm{ice}$ 的含冰云数据集，其分辨率为3 kmx3 kmx240 mx15分钟，空间域为西经30度至东经30度，南纬30度至北纬30度。所生成的数据集将DARDAR可用期间的垂直云剖面的可用性提高了六个数量级以上，此外，IceCloudNet能够生成DARDARDAR基础上最近结束的卫星任务寿命之外的垂直云轮廓。 et.al.|[2410.04135](http://arxiv.org/abs/2410.04135)|**[link](https://github.com/tabularaza27/ice_cloud_net)**|
 
-<p align=right>(<a href=#updated-on-20241010>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241011>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-10-09**|**Active fluids form system-spanning filamentary networks**|活性液晶液-液相分离的最新实验实现为软物质和生物中普遍存在的相分离与混沌活性流之间的相互作用提供了见解。在这封信中，我们使用连续体理论来研究有源液晶和无源流体的相分离，并报告了两个新的结果。首先，我们对共存区相边界的活性诱导抑制进行了分析推导，这是模拟和实验中首次报道的结果。我们表明，临界点的移动是自搅拌主动流和相分离扩散通量之间平衡的结果。其次，我们表明，这种平衡是导致相分离状态形态发生巨大变化的原因，从而产生了一种新的混合活性相，该混合活性相由一个动态的丝状活性网络组成，该网络侵入整个系统区域，捕获被动材料的液滴。即使活性材料的体积分数非常低，这种结构也存在。我们的工作为理解如何将活动用作雕刻界面的新手柄这一目标迈出了重要的一步。 et.al.|[2410.07058](http://arxiv.org/abs/2410.07058)|null|
 |**2024-10-09**|**Transients by Black Hole Formation from Red Supergiants: Impact of Dense Circumstellar Matter**|失败的超新星（SNe）可能是形成恒星质量黑洞的主要通道，预计伴随着比典型的核心坍缩SNe弱得多的质量喷射。我们进行了一系列一维辐射流体动力学模拟，以探索红超巨星祖先失败的SNe的发射，利用最近对这些恒星周围的弱爆炸和致密星周物质（CSM）的理解。我们从这些模拟和半解析建模中发现，CSM中的扩散延长了由冲击爆发/冷却驱动的早期发射。早期发射在光学和紫外波段的峰值亮度为10^7 $-10^8~L_odot$ ，持续时间为几天至几周。密集CSM的存在有助于通过鲁宾天文台、ULTRASAT和UVEX等近期广域调查来检测这些事件的早期亮峰。 et.al.|[2410.07055](http://arxiv.org/abs/2410.07055)|null|
 
-<p align=right>(<a href=#updated-on-20241010>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241011>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-09-09**|**Lagrangian Hashing for Compressed Neural Field Representations**|我们提出了拉格朗日散列，这是一种神经场的表示，结合了依赖于欧拉网格（即~InstantNGP）的快速训练NeRF方法的特征，以及使用配备有特征的点作为表示信息的方法（例如3D高斯散点或PointNeRF）。我们通过将基于点的表示合并到InstantNGP表示的分层哈希表的高分辨率层中来实现这一点。由于我们的点具有影响域，我们的表示可以被解释为哈希表中存储的高斯混合。我们提出的损失鼓励我们的高斯人向需要更多代表预算才能充分代表的地区移动。我们的主要发现是，我们的表示允许使用更紧凑的表示来重建信号，而不会影响质量。 et.al.|[2409.05334](http://arxiv.org/abs/2409.05334)|null|
 |**2024-09-08**|**Exploring spectropolarimetric inversions using neural fields. Solar chromospheric magnetic field under the weak-field approximation**|全斯托克斯偏振数据集来源于狭缝光谱仪或窄带滤光片图，如今已被常规采集。随着二维光谱偏振仪和允许长时间高质量观测序列的观测技术的出现，数据速率正在增加。在光谱偏振反演中，显然需要通过利用推断物理量的时空相干性来超越传统的逐像素策略。我们探索了神经网络作为时间和空间（也称为神经场）上物理量的连续表示的潜力，用于光谱极化反演。我们已经实现并测试了一个神经场，以在弱场近似（WFA）下执行磁场矢量的推理（也称为物理知情神经网络的方法）。通过使用神经场来描述磁场矢量，我们可以通过假设物理量是坐标的连续函数来在空间和时间域中正则化解。我们研究了Ca II 8542 A谱线的合成和真实观测结果。我们还探讨了其他显式正则化的影响，例如使用外推磁场的信息或色球原纤维的取向。与传统的逐像素反演相比，神经场方法提高了磁场矢量重建的保真度，特别是横向分量。这种隐式正则化是一种提高观测值有效信噪比的方法。虽然它比逐像素WFA估计慢，但这种方法通过减少自由参数的数量并在解决方案中引入时空约束，显示出深度分层反演的巨大潜力。 et.al.|[2409.05156](http://arxiv.org/abs/2409.05156)|**[link](https://github.com/cdiazbas/neural_wfa)**|
 
-<p align=right>(<a href=#updated-on-20241010>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241011>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
