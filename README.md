@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.10.11
+## Updated on 2024.10.12
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-10**|**6DGS: Enhanced Direction-Aware Gaussian Splatting for Volumetric Rendering**|随着神经辐射场（NeRF）和3D高斯散射（3DGS）的发展，新型视图合成技术取得了显著进步。然而，在不影响实时渲染的情况下实现高质量仍然具有挑战性，特别是对于具有视图相关效果的基于物理的光线跟踪。最近，N维高斯（N-DG）引入了6D空间角度表示，以更好地结合视图相关的效果，但高斯表示和控制方案都是次优的。在本文中，我们重新审视了6D高斯分布，并引入了6D高斯散斑（6DGS），它增强了颜色和不透明度表示，并利用6D空间中的额外方向信息来优化高斯控制。我们的方法与3DGS框架完全兼容，并通过更好地建模视图相关效果和精细细节，显著提高了实时辐射场渲染。实验证明，6DGS明显优于3DGS和N-DG，与3DGS相比，PSNR提高了15.73dB，高斯点减少了66.5%。项目页面为：https://gaozhongpai.github.io/6dgs/ et.al.|[2410.04974](http://arxiv.org/abs/2410.04974)|null|
 |**2024-10-07**|**TeX-NeRF: Neural Radiance Fields from Pseudo-TeX Vision**|神经辐射场（NeRF）因其卓越的视觉效果而受到广泛关注。然而，大多数现有的NeRF方法都是从可见光相机捕获的RGB图像中重建3D场景。在黑暗、低光照或恶劣天气等实际情况下，可见光摄像头会变得无效。因此，我们提出了TeX-NeRF，这是一种仅使用红外图像的3D重建方法，它先验地引入了物体材料的发射率，使用伪TeX视觉对红外图像进行预处理，并将场景的温度（T）、发射率（e）和纹理（X）分别映射到HSV颜色空间的饱和度（S）、色调（H）和值（V）通道中。使用处理后的图像的新颖视图合成产生了优异的结果。此外，我们介绍了3D TeX数据集，这是第一个包含红外图像及其相应的伪TeX视觉图像的数据集。实验证明，我们的方法不仅与高质量RGB图像实现的场景重建质量相匹配，而且为场景中的对象提供了准确的温度估计。 et.al.|[2410.04873](http://arxiv.org/abs/2410.04873)|null|
 
-<p align=right>(<a href=#updated-on-20241011>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241012>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-08**|**Single picture single photon single pixel 3D imaging through unknown thick scattering medium**|通过厚散射介质成像带来了重大挑战，特别是对于三维（3D）应用。这份手稿展示了一种通过这种介质实现单图像3D成像的新方案，将散射介质视为透镜。这种方法可以捕获包含隐藏在不同深度的物体信息的综合图像。通过利用离焦深度和散射介质厚度的减小进行单像素成像，所提出的方法确保了强大的3D成像能力。我们开发了传统的基于度量和基于深度学习的方法来提取每个像素的深度信息，使我们能够探索正面和负面物体的位置，无论是浅层还是深层。值得注意的是，该方案能够同时对隐藏在散射介质中的目标进行3D重建。具体来说，我们成功地重建了埋在5毫米和30毫米深处的目标，总介质厚度为60毫米。此外，我们可以有效地区分三个不同深度的目标。值得注意的是，该方案不需要散射介质的先验知识，也不需要侵入性程序、参考测量或校准。 et.al.|[2410.05607](http://arxiv.org/abs/2410.05607)|null|
 |**2024-10-07**|**SharpSLAM: 3D Object-Oriented Visual SLAM with Deblurring for Agile Drones**|本文重点研究了通过提高RGB图像质量来提高DSP-SLAM中3D重建和分割质量的算法。我们开发的SharpSLAM算法旨在通过图像去模糊来减少高动态运动对视觉面向对象SLAM的影响，改进面向对象SLPM的各个方面，包括定位、映射和对象重建。实验结果表明，由于特征和相应地图点的数量增加，目标检测质量显著提高，F评分从82.9%提高到86.2%。有符号距离函数的RMSE也从17.2厘米降低到15.4厘米。此外，我们的解决方案增强了对象定位，IoU从74.5%增加到75.7%。SharpSLAM算法有可能大大提高DSP-SLAM中3D重建和分割的质量，并影响广泛的领域，包括机器人、自动驾驶汽车和增强现实。 et.al.|[2410.05405](http://arxiv.org/abs/2410.05405)|null|
 
-<p align=right>(<a href=#updated-on-20241011>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241012>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-10-10**|**Steering Masked Discrete Diffusion Models via Discrete Denoising Posterior Prediction**|离散数据的生成建模是重要应用的基础，从基于文本的代理（如ChatGPT）到蛋白质序列中生命构建块的设计。然而，应用程序域需要通过引导生成过程（通常是通过RLHF）来控制生成的数据，以满足指定的属性、奖励或亲和力度量。在本文中，我们研究了操纵掩蔽扩散模型（MDMs）的问题，这是一类最近的离散扩散模型，为传统的自回归模型提供了一种令人信服的替代方案。我们引入了离散去噪后验预测（DDPP），这是一种新的框架，通过学习从目标贝叶斯后验中采样，将指导预训练的MDM的任务转化为概率推理问题。我们的DDPP框架产生了一个由三个新目标组成的家族，这些目标都是无模拟的，因此在应用于一般不可微的奖励函数时是可扩展的。根据经验，我们通过引导MDMs执行类条件像素级图像建模、使用基于文本的奖励对MDMs进行基于RLHF的比对，以及微调蛋白质语言模型以生成更多样化的二级结构和更短的蛋白质来实例化DDPP。我们通过湿实验室验证来证实我们的设计，在那里我们观察到奖励优化蛋白序列的瞬时表达。 et.al.|[2410.08134](http://arxiv.org/abs/2410.08134)|null|
 |**2024-10-10**|**CrackSegDiff: Diffusion Probability Model-based Multi-modal Crack Segmentation**|在道路检查机器人中集成灰度和深度数据可以提高道路状况评估的准确性、可靠性和全面性，从而改善维护策略和更安全的基础设施。然而，这些数据源经常受到路面显著背景噪声的影响。扩散概率模型（DPM）的最新进展在图像分割任务中取得了显著成功，展示了强大的去噪能力，如SegDiff\cite{amit2021segdiff}等研究所证明的那样。尽管取得了这些进步，但目前基于DPM的分割器并没有充分利用原始图像数据的潜力。本文提出了一种新的基于DPM的裂纹分割方法，称为CrackSegDiff，它独特地融合了灰度和距离/深度图像。该方法通过增强DPM局部特征提取和全局特征提取之间的相互作用来增强反向扩散过程。与利用变换器进行全局特征的传统方法不同，我们的方法采用Vm unet \cite{ruan2024vm}来有效地捕获原始数据的远程信息。通过两个创新模块进一步完善了特征的集成：信道融合模块（CFM）和浅层特征补偿模块（SFCM）。我们对FIND数据集中三类裂纹图像分割任务的实验评估表明，CrackSegDiff优于最先进的方法，特别是在检测浅裂纹方面。代码可在以下网址获得https://github.com/sky-visionX/CrackSegDiff. et.al.|[2410.08100](http://arxiv.org/abs/2410.08100)|**[link](https://github.com/sky-visionx/cracksegdiff)**|
 
-<p align=right>(<a href=#updated-on-20241011>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241012>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-09-09**|**Lagrangian Hashing for Compressed Neural Field Representations**|我们提出了拉格朗日散列，这是一种神经场的表示，结合了依赖于欧拉网格（即~InstantNGP）的快速训练NeRF方法的特征，以及使用配备有特征的点作为表示信息的方法（例如3D高斯散点或PointNeRF）。我们通过将基于点的表示合并到InstantNGP表示的分层哈希表的高分辨率层中来实现这一点。由于我们的点具有影响域，我们的表示可以被解释为哈希表中存储的高斯混合。我们提出的损失鼓励我们的高斯人向需要更多代表预算才能充分代表的地区移动。我们的主要发现是，我们的表示允许使用更紧凑的表示来重建信号，而不会影响质量。 et.al.|[2409.05334](http://arxiv.org/abs/2409.05334)|null|
 |**2024-09-08**|**Exploring spectropolarimetric inversions using neural fields. Solar chromospheric magnetic field under the weak-field approximation**|全斯托克斯偏振数据集来源于狭缝光谱仪或窄带滤光片图，如今已被常规采集。随着二维光谱偏振仪和允许长时间高质量观测序列的观测技术的出现，数据速率正在增加。在光谱偏振反演中，显然需要通过利用推断物理量的时空相干性来超越传统的逐像素策略。我们探索了神经网络作为时间和空间（也称为神经场）上物理量的连续表示的潜力，用于光谱极化反演。我们已经实现并测试了一个神经场，以在弱场近似（WFA）下执行磁场矢量的推理（也称为物理知情神经网络的方法）。通过使用神经场来描述磁场矢量，我们可以通过假设物理量是坐标的连续函数来在空间和时间域中正则化解。我们研究了Ca II 8542 A谱线的合成和真实观测结果。我们还探讨了其他显式正则化的影响，例如使用外推磁场的信息或色球原纤维的取向。与传统的逐像素反演相比，神经场方法提高了磁场矢量重建的保真度，特别是横向分量。这种隐式正则化是一种提高观测值有效信噪比的方法。虽然它比逐像素WFA估计慢，但这种方法通过减少自由参数的数量并在解决方案中引入时空约束，显示出深度分层反演的巨大潜力。 et.al.|[2409.05156](http://arxiv.org/abs/2409.05156)|**[link](https://github.com/cdiazbas/neural_wfa)**|
 
-<p align=right>(<a href=#updated-on-20241011>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241012>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
