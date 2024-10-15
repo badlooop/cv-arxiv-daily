@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.10.14
+## Updated on 2024.10.15
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -27,11 +27,11 @@
 |**2024-10-08**|**BEVLoc: Cross-View Localization and Matching via Birds-Eye-View Synthesis**|地对空匹配是户外机器人技术中一项至关重要且具有挑战性的任务，特别是在GPS缺失或不可靠的情况下。建筑物或大型茂密森林等结构会产生干扰，需要GNSS替代全球定位估计。真正的困难在于调和地面和空中图像之间的视角差异，以实现可接受的定位。从自动驾驶社区获得灵感，我们提出了一种新的框架，用于合成鸟瞰图（BEV）场景表示，以在越野环境中与航空地图进行匹配和定位。我们利用对比学习和特定领域的硬负挖掘来训练网络，以学习合成BEV和航空地图之间的相似表示。在推理过程中，BEVLoc通过从粗到细的匹配策略引导识别航空地图中最可能的位置。我们的研究结果表明，在语义多样性有限的极其困难的森林环境中，初步结果很有希望。我们分析了模型的粗匹配和细匹配性能，评估了模型的原始匹配能力及其作为GNSS替代品的性能。我们的工作深入研究了越野地图本地化，同时为本地化的未来发展建立了基础基线。我们的代码可在以下网址获得：https://github.com/rpl-cmu/bevloc et.al.|[2410.06410](http://arxiv.org/abs/2410.06410)|null|
 |**2024-10-08**|**HiSplat: Hierarchical 3D Gaussian Splatting for Generalizable Sparse-View Reconstruction**|从多个视点重建3D场景是立体视觉中的一项基本任务。最近，可推广的3D高斯散斑技术的进步通过前馈预测每像素高斯参数而无需额外优化，实现了从稀疏输入视图中为看不见的场景进行高质量的新颖视图合成。然而，现有的方法通常生成单尺度3D高斯分布，缺乏对大规模结构和纹理细节的表示，导致定位错误和伪影。本文提出了一种新的框架HiSplat，该框架在可推广的3D高斯散点中引入了一种分层方式，通过从粗到细的策略构建分层的3D高斯分布。具体来说，HiSplat生成大的粗粒度高斯分布来捕捉大规模结构，然后生成细粒度高斯分布来增强精细的纹理细节。为了促进尺度间的相互作用，我们提出了一个用于高斯补偿的误差感知模块和一个用于Gaussian修复的调制融合模块。我们的方法实现了分层表示的联合优化，允许仅使用两个视图参考图像进行新颖的视图合成。对各种数据集的综合实验表明，与之前的单尺度方法相比，HiSplat显著提高了重建质量和跨数据集泛化能力。对不同尺度三维高斯分布的相应消融研究和分析揭示了有效性背后的机制。项目网站：https://open3dvlab.github.io/HiSplat/ et.al.|[2410.06245](http://arxiv.org/abs/2410.06245)|null|
 |**2024-10-08**|**Comparative Analysis of Novel View Synthesis and Photogrammetry for 3D Forest Stand Reconstruction and extraction of individual tree parameters**|准确高效的树木三维重建对于森林资源评估和管理至关重要。近景摄影测量（CRP）通常用于重建森林场景，但面临着效率低、质量差等挑战。最近，包括神经辐射场（NeRF）和3D高斯散斑（3DGS）在内的新型视图合成（NVS）技术已显示出在有限图像下进行3D植物重建的前景。然而，现有的研究主要集中在果园或单株树木中的小型植物上，这给它们在更大、更复杂的林分中的应用带来了不确定性。在这项研究中，我们收集了具有不同复杂性的森林地块的连续图像，并使用NeRF和3DGS进行了密集重建。将得到的点云与摄影测量和激光扫描的点云进行了比较。结果表明，NVS方法显著提高了重建效率。摄影测量难以处理复杂的林分，导致点云的树冠噪声过大，树木重建不正确，如树干重复。NeRF虽然对树冠区域更好，但在视野有限的地面区域可能会产生误差。3DGS方法生成更稀疏的点云，特别是在主干区域，影响胸径（DBH）精度。这三种方法都可以提取树高信息，其中NeRF的精度最高；然而，摄影测量在DBH精度方面仍然具有优势。这些发现表明，NVS方法在林分三维重建方面具有巨大潜力，为复杂的森林资源清查和可视化任务提供了宝贵支持。 et.al.|[2410.05772](http://arxiv.org/abs/2410.05772)|null|
-|**2024-10-07**|**PH-Dropout: Prctical Epistemic Uncertainty Quantification for View Synthesis**|使用神经辐射场（NeRF）和高斯散斑（GS）的视图合成在渲染现实世界场景时表现出了令人印象深刻的保真度。然而，在视图综合中缺乏准确有效的认知不确定性量化（UQ）的实用方法。现有的NeRF方法要么引入了大量的计算开销（例如，“训练时间增加10倍”或“重复训练10倍”），要么仅限于特定的不确定性条件或模型。值得注意的是，GS模型缺乏全面认知UQ的系统方法。这种能力对于提高神经视图合成的鲁棒性和可扩展性至关重要，可以实现主动模型更新、误差估计和基于不确定性的可扩展集成建模。本文从函数近似的角度重新审视了基于NeRF和GS的方法，确定了3D表示学习中的关键差异和联系。基于这些见解，我们介绍了PH Dropout（事后Dropout），这是第一种直接在预训练的NeRF和GS模型上进行认知不确定性估计的实时准确方法。广泛的评估验证了我们的理论发现，并证明了PH Dropout的有效性。 et.al.|[2410.05468](http://arxiv.org/abs/2410.05468)|**[link](https://github.com/thanostriantafyllou3/ph-dropout)**|
+|**2024-10-11**|**PH-Dropout: Practical Epistemic Uncertainty Quantification for View Synthesis**|使用神经辐射场（NeRF）和高斯散斑（GS）的视图合成在渲染现实世界场景时表现出了令人印象深刻的保真度。然而，在视图综合中缺乏准确有效的认知不确定性量化（UQ）的实用方法。现有的NeRF方法要么引入了大量的计算开销（例如，“训练时间增加10倍”或“重复训练10倍”），要么仅限于特定的不确定性条件或模型。值得注意的是，GS模型缺乏全面认知UQ的系统方法。这种能力对于提高神经视图合成的鲁棒性和可扩展性至关重要，可以实现主动模型更新、误差估计和基于不确定性的可扩展集成建模。本文从函数近似的角度重新审视了基于NeRF和GS的方法，确定了3D表示学习中的关键差异和联系。基于这些见解，我们介绍了PH Dropout（事后Dropout），这是第一种直接在预训练的NeRF和GS模型上进行认知不确定性估计的实时准确方法。广泛的评估验证了我们的理论发现，并证明了PH Dropout的有效性。 et.al.|[2410.05468](http://arxiv.org/abs/2410.05468)|**[link](https://github.com/thanostriantafyllou3/ph-dropout)**|
 |**2024-10-07**|**DreamSat: Towards a General 3D Model for Novel View Synthesis of Space Objects**|新颖的视图合成（NVS）能够生成场景的新图像或将一组2D图像转换为全面的3D模型。在空间领域意识的背景下，由于空间变得越来越拥挤，NVS可以准确地绘制空间物体和碎片的地图，提高空间操作的安全性和效率。同样，在会合和近距离作战任务中，3D模型可以提供目标物体的形状、大小和方向的详细信息，从而更好地规划和预测目标的行为。在这项工作中，我们探索了这些重建技术的泛化能力，旨在通过在190个高质量航天器模型的高质量数据集上微调最先进的单视图重建模型Zero123 XL，并将其集成到DreamGaussian框架中，提出一种从单视图图像重建3D航天器的新方法DreamSat，从而避免对每个新场景进行再训练的必要性。我们展示了在多个指标上重建质量的一致改进，包括对比语言图像预训练（CLIP）得分（+0.33%）、峰值信噪比（PSNR）（+2.53%）、结构相似性指数（SSIM）（+2.38%）和学习感知图像补丁相似性（LPIPS）（+0.16%）。%）在30张以前从未见过的航天器图像的测试集上。我们的方法通过利用最先进的扩散模型和3D高斯溅射技术，解决了航天工业中缺乏特定领域的3D重建工具的问题。这种方法保持了DreamGaussian框架的效率，同时提高了航天器重建的准确性和细节。这项工作的代码可以在GitHub上访问(https://github.com/ARCLab-MIT/space-nvs). et.al.|[2410.05097](http://arxiv.org/abs/2410.05097)|**[link](https://github.com/arclab-mit/space-nvs)**|
 |**2024-10-10**|**6DGS: Enhanced Direction-Aware Gaussian Splatting for Volumetric Rendering**|随着神经辐射场（NeRF）和3D高斯散射（3DGS）的发展，新型视图合成技术取得了显著进步。然而，在不影响实时渲染的情况下实现高质量仍然具有挑战性，特别是对于具有视图相关效果的基于物理的光线跟踪。最近，N维高斯（N-DG）引入了6D空间角度表示，以更好地结合视图相关的效果，但高斯表示和控制方案都是次优的。在本文中，我们重新审视了6D高斯分布，并引入了6D高斯散斑（6DGS），它增强了颜色和不透明度表示，并利用6D空间中的额外方向信息来优化高斯控制。我们的方法与3DGS框架完全兼容，并通过更好地建模视图相关效果和精细细节，显著提高了实时辐射场渲染。实验证明，6DGS明显优于3DGS和N-DG，与3DGS相比，PSNR提高了15.73dB，高斯点减少了66.5%。项目页面为：https://gaozhongpai.github.io/6dgs/ et.al.|[2410.04974](http://arxiv.org/abs/2410.04974)|null|
 
-<p align=right>(<a href=#updated-on-20241014>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241015>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-09**|**ES-Gaussian: Gaussian Splatting Mapping via Error Space-Based Gaussian Completion**|准确且经济实惠的室内3D重建对于有效的机器人导航和交互至关重要。传统的基于激光雷达的测绘提供了高精度，但成本高、重量重、功耗大，新颖的视图渲染能力有限。基于视觉的测绘虽然经济高效，能够捕获视觉数据，但由于点云稀疏，往往难以进行高质量的3D重建。我们提出了ES Gaussian，这是一种端到端系统，使用低空相机和单线LiDAR进行高质量的3D室内重建。我们的系统具有视觉误差构造（VEC）功能，通过识别和校正二维误差图中几何细节不足的区域来增强稀疏点云。此外，我们介绍了一种由单线LiDAR引导的新型3DGS初始化方法，克服了传统多视图设置的局限性，并在资源受限的环境中实现了有效的重建。我们新的Dreame SR数据集和公开数据集的大量实验结果表明，ES Gaussian优于现有方法，特别是在具有挑战性的场景中。项目页面可在https://chenlu-china.github.io/ES-Gaussian/. et.al.|[2410.06613](http://arxiv.org/abs/2410.06613)|null|
 |**2024-10-08**|**Comparative Analysis of Novel View Synthesis and Photogrammetry for 3D Forest Stand Reconstruction and extraction of individual tree parameters**|准确高效的树木三维重建对于森林资源评估和管理至关重要。近景摄影测量（CRP）通常用于重建森林场景，但面临着效率低、质量差等挑战。最近，包括神经辐射场（NeRF）和3D高斯散斑（3DGS）在内的新型视图合成（NVS）技术已显示出在有限图像下进行3D植物重建的前景。然而，现有的研究主要集中在果园或单株树木中的小型植物上，这给它们在更大、更复杂的林分中的应用带来了不确定性。在这项研究中，我们收集了具有不同复杂性的森林地块的连续图像，并使用NeRF和3DGS进行了密集重建。将得到的点云与摄影测量和激光扫描的点云进行了比较。结果表明，NVS方法显著提高了重建效率。摄影测量难以处理复杂的林分，导致点云的树冠噪声过大，树木重建不正确，如树干重复。NeRF虽然对树冠区域更好，但在视野有限的地面区域可能会产生误差。3DGS方法生成更稀疏的点云，特别是在主干区域，影响胸径（DBH）精度。这三种方法都可以提取树高信息，其中NeRF的精度最高；然而，摄影测量在DBH精度方面仍然具有优势。这些发现表明，NVS方法在林分三维重建方面具有巨大潜力，为复杂的森林资源清查和可视化任务提供了宝贵支持。 et.al.|[2410.05772](http://arxiv.org/abs/2410.05772)|null|
 
-<p align=right>(<a href=#updated-on-20241014>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241015>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-10-11**|**Conditional Generative Models for Contrast-Enhanced Synthesis of T1w and T1 Maps in Brain MRI**|钆基造影剂（GBCA）的对比增强是神经放射学中肿瘤诊断的重要工具。基于钆给药前后胶质母细胞瘤的脑MRI扫描，我们提出了神经网络增强预测的两个新贡献。首先，我们研究了生成模型的潜力，更精确地说是条件扩散和流匹配，用于虚拟增强中的不确定性量化。其次，我们检查了定量MRI与T1加权扫描的T1扫描性能。与T1加权扫描相比，这些扫描的优点是具有物理意义，从而具有可比的体素范围。为了比较这两种模式在灰度不兼容的情况下的网络预测性能，我们建议使用Dice和Jaccard评分来评估对比增强感兴趣区域的分割。在所有模型中，我们观察到T1扫描比T1加权扫描具有更好的分割效果。 et.al.|[2410.08894](http://arxiv.org/abs/2410.08894)|null|
 |**2024-10-11**|**Simulating anisotropic diffusion processes with smoothed particle hydrodynamics**|具有各向异性特征的扩散问题出现在科学和工程领域的各个领域。作为一种拉格朗日无网格方法，SPH在解决扩散问题方面具有特殊优势，因为它有利于处理平流项。但它在求解各向异性扩散中的应用仍然有限，因为需要一个稳健和通用的SPH公式来获得二阶导数的精确近似值。本文中，我们基于SPH公式修改了一个二阶导数模型，以获得由拉普拉斯算子元素组成的Hessian矩阵的完整版本。为了验证所提出的SPH方案，首先，通过使用各向异性分辨率耦合各向异性核，在薄结构内执行遵循预函数分布的标量的扩散。在各种各向异性比下，与理论解达到了很好的一致性。然后，模拟了污染物在流体中的各向异性扩散。仿真结果与相应的解析解非常一致，表明该算法可以获得光滑的解，而不会出现具有不连续性的污染物传输问题的寄生振荡，并达到二阶精度。随后，我们利用这种新开发的SPH公式来解决通过薄多孔膜的流体扩散和左心室内跨膜电位的各向异性传输问题，展示了所提出的SPH框架在解决复杂各向异性问题方面的能力。 et.al.|[2410.08888](http://arxiv.org/abs/2410.08888)|null|
 
-<p align=right>(<a href=#updated-on-20241014>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241015>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-09-09**|**Lagrangian Hashing for Compressed Neural Field Representations**|我们提出了拉格朗日散列，这是一种神经场的表示，结合了依赖于欧拉网格（即~InstantNGP）的快速训练NeRF方法的特征，以及使用配备有特征的点作为表示信息的方法（例如3D高斯散点或PointNeRF）。我们通过将基于点的表示合并到InstantNGP表示的分层哈希表的高分辨率层中来实现这一点。由于我们的点具有影响域，我们的表示可以被解释为哈希表中存储的高斯混合。我们提出的损失鼓励我们的高斯人向需要更多代表预算才能充分代表的地区移动。我们的主要发现是，我们的表示允许使用更紧凑的表示来重建信号，而不会影响质量。 et.al.|[2409.05334](http://arxiv.org/abs/2409.05334)|null|
 |**2024-09-08**|**Exploring spectropolarimetric inversions using neural fields. Solar chromospheric magnetic field under the weak-field approximation**|全斯托克斯偏振数据集来源于狭缝光谱仪或窄带滤光片图，如今已被常规采集。随着二维光谱偏振仪和允许长时间高质量观测序列的观测技术的出现，数据速率正在增加。在光谱偏振反演中，显然需要通过利用推断物理量的时空相干性来超越传统的逐像素策略。我们探索了神经网络作为时间和空间（也称为神经场）上物理量的连续表示的潜力，用于光谱极化反演。我们已经实现并测试了一个神经场，以在弱场近似（WFA）下执行磁场矢量的推理（也称为物理知情神经网络的方法）。通过使用神经场来描述磁场矢量，我们可以通过假设物理量是坐标的连续函数来在空间和时间域中正则化解。我们研究了Ca II 8542 A谱线的合成和真实观测结果。我们还探讨了其他显式正则化的影响，例如使用外推磁场的信息或色球原纤维的取向。与传统的逐像素反演相比，神经场方法提高了磁场矢量重建的保真度，特别是横向分量。这种隐式正则化是一种提高观测值有效信噪比的方法。虽然它比逐像素WFA估计慢，但这种方法通过减少自由参数的数量并在解决方案中引入时空约束，显示出深度分层反演的巨大潜力。 et.al.|[2409.05156](http://arxiv.org/abs/2409.05156)|**[link](https://github.com/cdiazbas/neural_wfa)**|
 
-<p align=right>(<a href=#updated-on-20241014>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241015>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
