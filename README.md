@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.10.17
+## Updated on 2024.10.18
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-14**|**Few-shot Novel View Synthesis using Depth Aware 3D Gaussian Splatting**|3D高斯溅射在新颖的视图合成中已经超越了神经辐射场方法，实现了更低的计算成本和实时高质量的渲染。虽然它可以在大量输入视图的情况下产生高质量的绘制，但当只有少数视图可用时，其性能会显著下降。在这项工作中，我们通过提出一种用于少镜头新颖视图合成的深度感知高斯飞溅方法来解决这个问题。我们使用单目深度预测作为先验，并结合尺度不变的深度损失，在少数输入视图下约束3D形状。我们还使用低阶球谐函数对颜色进行建模，以避免过拟合。此外，我们观察到，像在原始作品中那样，定期删除不透明度较低的斑点会导致点云非常稀疏，从而降低渲染质量。为了减轻这种情况，我们保留了所有斑点，从而在一些视图设置中实现了更好的重建。实验结果表明，我们的方法在峰值信噪比、结构相似性指数和感知相似性方面分别提高了10.5%、6%和14.1%，优于传统的3D高斯飞溅方法，从而验证了我们方法的有效性。该代码将在以下网址提供：https://github.com/raja-kumar/depth-aware-3DGS et.al.|[2410.11080](http://arxiv.org/abs/2410.11080)|**[link](https://github.com/raja-kumar/depth-aware-3dgs)**|
 |**2024-10-14**|**FlexGen: Flexible Multi-View Generation from Text and Image Inputs**|在这项工作中，我们介绍了FlexGen，这是一个灵活的框架，旨在生成可控和一致的多视图图像，以单个视图图像或文本提示为条件，或两者兼而有之。FlexGen通过对3D感知文本注释进行额外调节，解决了可控多视图合成的挑战。我们利用GPT-4V的强大推理能力来生成3D感知文本注释。通过分析作为平铺多视图图像排列的对象的四个正交视图，GPT-4V可以生成包含具有空间关系的3D感知信息的文本注释。通过将控制信号与所提出的自适应双控制模块集成，我们的模型可以生成与指定文本相对应的多视图图像。FlexGen支持多种可控功能，允许用户修改文本提示以生成合理且相应的看不见的部分。此外，用户可以影响外观和材料属性等属性，包括金属和粗糙度。大量实验表明，我们的方法提供了增强的多重可控性，标志着比现有多视图扩散模型的重大进步。这项工作对需要快速灵活的3D内容创建的领域具有重大意义，包括游戏开发、动画和虚拟现实。项目页面：https://xxu068.github.io/flexgen.github.io/. et.al.|[2410.10745](http://arxiv.org/abs/2410.10745)|null|
 
-<p align=right>(<a href=#updated-on-20241017>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241018>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-13**|**Magnituder Layers for Implicit Neural Representations in 3D**|提高3D中隐式神经表示的效率和性能，特别是神经辐射场（NeRF）和有符号距离场（SDF），对于在实时应用中使用它们至关重要。这些模型虽然能够生成逼真的新颖视图和详细的3D重建，但往往存在计算成本高和推理速度慢的问题。为了解决这个问题，我们引入了一种名为“magnituder”的新型神经网络层，旨在减少这些模型中的训练参数数量，同时不牺牲其表达能力。通过将放大器集成到标准前馈层堆栈中，我们提高了推理速度和适应性。此外，我们的方法通过无反向传播的分层知识转移，能够提高训练的隐式神经表示模型的零样本性能，从而在动态环境中实现更高效的场景重建。 et.al.|[2410.09771](http://arxiv.org/abs/2410.09771)|null|
 |**2024-10-13**|**EchoPrime: A Multi-Video View-Informed Vision-Language Model for Comprehensive Echocardiography Interpretation**|超声心动图是使用最广泛的心脏成像技术，通过捕获超声视频数据来评估心脏的结构和功能。超声心动图中的人工智能（AI）有可能简化手动任务，提高再现性和准确性。然而，大多数超声心动图人工智能模型都是单视图、单任务系统，不能从全面检查期间捕获的多个视图中合成互补信息，从而导致性能和应用范围有限。为了解决这个问题，我们引入了EchoPrime，这是一个多视图、视图知情、基于视频的视觉语言基础模型，在1200多万个视频报告对上进行了训练。EchoPrime使用对比学习为全面的超声心动图研究中的所有标准视图训练一个统一的嵌入模型，同时表示罕见和常见的疾病和诊断。然后，EchoPrime利用视图分类和视图通知的解剖注意力模型来加权视频特定的解释，这些解释准确地映射了超声心动图视图和解剖结构之间的关系。通过检索增强解释，EchoPrime将所有超声心动图视频中的信息整合到一项综合研究中，并进行全面的临床超声心动图解释。在来自两个独立医疗保健系统的数据集中，EchoPrime在23个不同的心脏形态和功能基准上实现了最先进的性能，超过了特定任务方法和先前基础模型的性能。经过严格的临床评估，EchoPrime可以帮助医生对综合超声心动图进行自动化的初步评估。 et.al.|[2410.09704](http://arxiv.org/abs/2410.09704)|**[link](https://github.com/echonet/echoprime)**|
 
-<p align=right>(<a href=#updated-on-20241017>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241018>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-10-16**|**Hamiltonian bridge: A physics-driven generative framework for targeted pattern control**|模式在跨越科学的一系列系统中自发出现，他们的研究通常侧重于理解它们在时空中进化的机制。越来越多的人转向在各种功能设置中控制这些模式，这对工程有影响。在这里，我们结合了我们对非平衡系统中模式形成的一类动力学定律的了解，以及随机最优控制方法的力量，提出了一个框架，使我们能够在多个尺度上控制模式，我们称之为“哈密顿桥”。我们使用随机多体拉格朗日物理学和确定性欧拉模式形成偏微分方程之间的映射，利用我们最近的方法，利用基于Feynman-Kac的伴随路径积分公式来控制相互作用粒子，并将其推广到模式场的主动控制。我们通过数值实验证明了我们的计算框架在有和没有守恒序参数的相分离控制、液滴自组装、耦合反应扩散方程以及时空组织分化的唯象模型方面的适用性。我们根据对底层物理如何塑造模式流形几何形状的理论理解来解释我们的数值实验，改变模式的传输路径和模式插值的性质。最后，我们通过展示如何利用最优控制，通过对可转换为梯度流的模式形成偏微分方程的迭代控制协议来生成复杂的模式，从而得出结论。总之，我们的研究表明，我们如何系统地将物理先验构建成一个生成框架，用于跨多个长度和时间尺度的非平衡系统中的模式控制。 et.al.|[2410.12665](http://arxiv.org/abs/2410.12665)|null|
 |**2024-10-16**|**Constrained Posterior Sampling: Time Series Generation with Hard Constraints**|生成真实的时间序列样本对于压力测试模型和使用合成数据保护用户隐私至关重要。在工程和安全关键应用中，这些样本必须满足特定领域或物理或自然强加的某些硬约束。例如，考虑在峰值需求时间受到限制的情况下产生电力需求模式。这可用于在恶劣天气条件下对电网的功能进行压力测试。现有的生成约束时间序列的方法要么不可扩展，要么会降低样本质量。为了应对这些挑战，我们引入了约束后验采样（CPS），这是一种基于扩散的采样算法，旨在在每次去噪更新后将后验均值估计投影到约束集中。值得注意的是，CPS可以扩展到大量约束（~100），而不需要额外的培训。我们提供了理论依据，强调了我们的预测步骤对采样的影响。根据经验，在真实世界的股票、交通和空气质量数据集上，CPS在样本质量和与实时序列的相似性方面分别比最先进的方法高出约10%和42%。 et.al.|[2410.12652](http://arxiv.org/abs/2410.12652)|null|
 
-<p align=right>(<a href=#updated-on-20241017>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241018>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-10-02**|**Neural Fields for Adaptive Photoacoustic Computed Tomography**|光声计算机断层扫描（PACT）是一种具有广泛医学应用的非侵入性成像技术。传统的PACT图像重建算法受到组织中声速不均匀（SOS）引起的波前失真的影响，导致图像质量下降。考虑到这些影响可以提高图像质量，但测量SOS分布的实验成本很高。另一种方法是仅使用PA信号对初始压力图像和SOS进行联合重建。现有的关节重建方法存在局限性：计算成本高，无法直接恢复SOS，以及依赖于不准确的简化假设。隐式神经表示或神经场是计算机视觉中的一种新兴技术，用于通过基于坐标的神经网络学习物理场的有效和连续表示。在这项工作中，我们介绍了NF-APACT，这是一种高效的自监督框架，利用神经场来估计SOS，以实现准确和鲁棒的多通道解卷积。我们的方法比现有方法更快、更准确地消除了SOS像差。我们在一个新的数值体模以及实验收集的体模和体内数据上证明了我们的方法的成功。我们的代码和数字幻影可在https://github.com/Lukeli0425/NF-APACT. et.al.|[2409.10876](http://arxiv.org/abs/2409.10876)|null|
 |**2024-09-09**|**Lagrangian Hashing for Compressed Neural Field Representations**|我们提出了拉格朗日散列，这是一种神经场的表示，结合了依赖于欧拉网格（即~InstantNGP）的快速训练NeRF方法的特征，以及使用配备有特征的点作为表示信息的方法（例如3D高斯散点或PointNeRF）。我们通过将基于点的表示合并到InstantNGP表示的分层哈希表的高分辨率层中来实现这一点。由于我们的点具有影响域，我们的表示可以被解释为哈希表中存储的高斯混合。我们提出的损失鼓励我们的高斯人向需要更多代表预算才能充分代表的地区移动。我们的主要发现是，我们的表示允许使用更紧凑的表示来重建信号，而不会影响质量。 et.al.|[2409.05334](http://arxiv.org/abs/2409.05334)|null|
 
-<p align=right>(<a href=#updated-on-20241017>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241018>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
