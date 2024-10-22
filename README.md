@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.10.21
+## Updated on 2024.10.22
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-15**|**SplatPose+: Real-time Image-Based Pose-Agnostic 3D Anomaly Detection**|基于图像的姿态不可知三维异常检测是工业质量控制中出现的一项重要任务。该任务旨在在给定一组无异常对象的参考图像的情况下，从测试对象的查询图像中查找异常。挑战在于查询视图（也称为姿势）是未知的，可能与参考视图不同。目前，已经出现了OmniposeAD和SplatPose等新方法，通过在查询视图中合成伪参考图像进行像素间比较来弥合这一差距。然而，这些方法都不能实时推断，这在大规模生产的工业质量控制中至关重要。因此，我们提出了SplatPose+，它采用了一种混合表示，由用于定位的运动结构（SfM）模型和用于新视图合成的3D高斯散点（3DGS）模型组成。尽管我们提出的管道需要计算额外的SfM模型，但与SplatPose相比，它提供了实时推理速度和更快的训练。在质量方面，我们利用多姿态异常检测（MAD-SIM）数据集在姿态无关异常检测基准上实现了新的SOTA。 et.al.|[2410.12080](http://arxiv.org/abs/2410.12080)|null|
 |**2024-10-15**|**LoGS: Visual Localization via Gaussian Splatting with Fewer Training Images**|视觉定位涉及估计查询图像的6-DoF（自由度）相机姿态，这是各种计算机视觉和机器人任务中的基本组成部分。本文介绍了LoGS，这是一种基于视觉的定位流水线，利用3D高斯散点（GS）技术作为场景表示。这种新颖的表示允许高质量的新颖视图合成。在映射阶段，首先应用运动结构（SfM），然后生成GS图。在定位过程中，通过图像检索、局部特征匹配和PnP求解器获得初始位置，然后在GS地图上通过综合分析的方式实现高精度姿态。在四个大规模数据集上的实验结果证明了所提出的方法在估计相机姿态方面的SoTA准确性和在具有挑战性的少镜头条件下的鲁棒性。 et.al.|[2410.11505](http://arxiv.org/abs/2410.11505)|null|
 
-<p align=right>(<a href=#updated-on-20241021>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241022>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-16**|**Depth Estimation From Monocular Images With Enhanced Encoder-Decoder Architecture**|由于需要通常提供深度信息的立体或多视图数据，因此从单个2D图像估计深度是一项具有挑战性的任务。本文通过引入一种使用编码器-解码器架构的基于深度学习的新方法来应对这一挑战，其中Inception-ResNet-v2模型被用作编码器。根据现有文献，这是首次使用Inception-ResNet-v2作为单目深度估计的编码器，表明其性能优于之前的模型。Inception-ResNet-v2的使用使我们的模型能够有效地捕获通常难以预测的复杂对象和细粒度细节。此外，我们的模型结合了多尺度特征提取，以提高不同类型对象大小和距离的深度预测精度。我们提出了一种由深度损失、梯度边缘损失和SSIM损失组成的复合损失函数，其中对权重进行微调以优化加权和，确保深度估计不同方面的更好平衡。纽约大学深度V2数据集的实验结果表明，我们的模型达到了最先进的性能，ARE为0.064，RMSE为0.228，准确率（ $\delta$<1.25$ ）为89.3%。这些指标表明，即使在具有挑战性的情况下，我们的模型也能有效地预测深度，为机器人、3D重建和增强现实等现实世界的应用提供可扩展的解决方案。 et.al.|[2410.11610](http://arxiv.org/abs/2410.11610)|null|
 |**2024-10-15**|**Multiview Scene Graph**|适当的场景表示是追求空间智能的核心，智能体可以稳健地重建并有效地理解3D场景。场景表示可以是度量，如3D重建中的地标图、对象检测中的3D边界框或占用预测中的体素网格，也可以是拓扑，如SLAM中具有循环闭包的姿态图或SfM中的可见性图。在这项工作中，我们建议从未涂胶的图像构建多视图场景图（MSG），用互连的位置和对象节点在拓扑上表示场景。构建MSG的任务对现有的表示学习方法来说是具有挑战性的，因为它需要联合解决视觉位置识别、对象检测和来自视野有限和潜在大视点变化的图像的对象关联问题。为了评估任何解决这一任务的方法，我们开发了一个基于公共3D数据集的MSG数据集和注释。我们还提出了一种基于MSG边联合得分交集的评估度量。此外，我们开发了一种基于主流预训练视觉模型的新基线方法，将视觉位置识别和对象关联结合到一个Transformer解码器架构中。实验证明，与现有的相关基线相比，我们的方法具有更优的性能。 et.al.|[2410.11187](http://arxiv.org/abs/2410.11187)|null|
 
-<p align=right>(<a href=#updated-on-20241021>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241022>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-10-18**|**DRL Optimization Trajectory Generation via Wireless Network Intent-Guided Diffusion Models for Optimizing Resource Allocation**|随着包括低空经济、6G和Wi-Fi在内的无线通信领域的快速发展，无线网络的规模不断扩大，同时对服务质量的要求也在不断提高。传统的基于深度强化学习（DRL）的优化模型可以通过智能地解决非凸优化问题来提高网络性能。然而，他们严重依赖在线部署，通常需要大量的初始培训。在线DRL优化模型通常根据当前的信道状态分布做出准确的决策。当这些分布发生变化时，它们的泛化能力会降低，这阻碍了实时和高可靠性无线通信网络所必需的响应能力。此外，不同的用户在不同的场景中有不同的服务质量（QoS）要求，传统的在线DRL方法难以适应这种变化。因此，探索灵活和定制的人工智能策略至关重要。我们提出了一种基于生成扩散模型（GDM）的无线网络意图（WNI）引导轨迹生成模型。该模型可以实时生成和微调，以实现目标并满足目标意图网络的约束，从而显著减少无线通信过程中的状态信息暴露。此外，WNI引导的优化轨迹生成可以定制，以满足差异化的QoS要求，提高未来智能网络的整体通信质量。大量的仿真结果表明，我们的方法在频谱效率变化方面具有更高的稳定性，并且在动态通信系统中优于传统的DRL优化模型。 et.al.|[2410.14481](http://arxiv.org/abs/2410.14481)|null|
 |**2024-10-18**|**LUDVIG: Learning-free Uplifting of 2D Visual features to Gaussian Splatting scenes**|我们解决了将视觉特征或语义掩模从2D视觉模型提升到高斯散斑表示的3D场景的任务。尽管常见的方法依赖于基于迭代优化的过程，但我们表明，一种简单而有效的聚合技术可以产生出色的结果。将我们的方法应用于Segment Anything（SAM）的语义掩码，其分割质量可与最新技术相媲美。然后，我们将这种方法扩展到通用的DINOv2特征，通过图扩散整合3D场景几何，并在DINOv2没有像SAM那样在数百万个带注释的掩码上进行训练的情况下获得有竞争力的分割结果。 et.al.|[2410.14462](http://arxiv.org/abs/2410.14462)|null|
 
-<p align=right>(<a href=#updated-on-20241021>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241022>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-10-02**|**Neural Fields for Adaptive Photoacoustic Computed Tomography**|光声计算机断层扫描（PACT）是一种具有广泛医学应用的非侵入性成像技术。传统的PACT图像重建算法受到组织中声速不均匀（SOS）引起的波前失真的影响，导致图像质量下降。考虑到这些影响可以提高图像质量，但测量SOS分布的实验成本很高。另一种方法是仅使用PA信号对初始压力图像和SOS进行联合重建。现有的关节重建方法存在局限性：计算成本高，无法直接恢复SOS，以及依赖于不准确的简化假设。隐式神经表示或神经场是计算机视觉中的一种新兴技术，用于通过基于坐标的神经网络学习物理场的有效和连续表示。在这项工作中，我们介绍了NF-APACT，这是一种高效的自监督框架，利用神经场来估计SOS，以实现准确和鲁棒的多通道解卷积。我们的方法比现有方法更快、更准确地消除了SOS像差。我们在一个新的数值体模以及实验收集的体模和体内数据上证明了我们的方法的成功。我们的代码和数字幻影可在https://github.com/Lukeli0425/NF-APACT. et.al.|[2409.10876](http://arxiv.org/abs/2409.10876)|null|
 |**2024-09-09**|**Lagrangian Hashing for Compressed Neural Field Representations**|我们提出了拉格朗日散列，这是一种神经场的表示，结合了依赖于欧拉网格（即~InstantNGP）的快速训练NeRF方法的特征，以及使用配备有特征的点作为表示信息的方法（例如3D高斯散点或PointNeRF）。我们通过将基于点的表示合并到InstantNGP表示的分层哈希表的高分辨率层中来实现这一点。由于我们的点具有影响域，我们的表示可以被解释为哈希表中存储的高斯混合。我们提出的损失鼓励我们的高斯人向需要更多代表预算才能充分代表的地区移动。我们的主要发现是，我们的表示允许使用更紧凑的表示来重建信号，而不会影响质量。 et.al.|[2409.05334](http://arxiv.org/abs/2409.05334)|null|
 
-<p align=right>(<a href=#updated-on-20241021>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241022>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
