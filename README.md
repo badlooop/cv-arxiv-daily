@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.10.23
+## Updated on 2024.10.24
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-17**|**DepthSplat: Connecting Gaussian Splatting and Depth**|高斯散射和单/多视图深度估计通常是单独研究的。本文中，我们提出了DepthSplat来连接高斯溅射和深度估计，并研究了它们之间的相互作用。更具体地说，我们首先通过利用预先训练的单眼深度特征来贡献一个稳健的多视图深度模型，从而得到高质量的前馈3D高斯飞溅重建。我们还表明，高斯飞溅可以作为一种无监督的预训练目标，用于从大规模未标记的数据集中学习强大的深度模型。我们通过广泛的消融和跨任务转移实验验证了高斯溅射和深度估计之间的协同作用。我们的DepthSplat在ScanNet、RealEstate10K和DL3DV数据集上实现了深度估计和新颖视图合成方面的最先进性能，展示了连接这两个任务的互惠互利。我们的代码、模型和视频结果可在https://haofeixu.github.io/depthsplat/. et.al.|[2410.13862](http://arxiv.org/abs/2410.13862)|**[link](https://github.com/cvg/depthsplat)**|
 |**2024-10-17**|**Hybrid bundle-adjusting 3D Gaussians for view consistent rendering with pose optimization**|新型视图合成在3D计算机视觉领域取得了重大进展。然而，从不完美的相机姿态渲染视图一致的新颖视图仍然具有挑战性。本文介绍了一种混合束调整3D高斯模型，该模型能够实现具有姿态优化的视图一致性渲染。该模型联合提取基于图像和神经的3D表示，以在面向前方的场景中同时生成视图一致的图像和相机姿态。我们的模型的有效性通过在真实和合成数据集上进行的广泛实验得到了证明。这些实验清楚地表明，我们的模型可以有效地优化神经场景表示，同时解决明显的相机姿态失准问题。源代码可在https://github.com/Bistu3DV/hybridBA. et.al.|[2410.13280](http://arxiv.org/abs/2410.13280)|**[link](https://github.com/bistu3dv/hybridba)**|
 
-<p align=right>(<a href=#updated-on-20241023>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241024>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-16**|**Configurable Embodied Data Generation for Class-Agnostic RGB-D Video Segmentation**|本文提出了一种生成大规模数据集的方法，以改善不同形状因子的机器人之间的类无关视频分割。具体来说，我们考虑的问题是，如果在数据生成过程中考虑了机器人的实施方式，那么在通用分割数据上训练的视频分割模型是否对特定的机器人平台更有效。为了回答这个问题，制定了一个管道，用于使用3D重建（例如来自HM3DSem）生成分段视频，这些视频可以根据机器人的实施例（例如传感器类型、传感器放置和照明源）进行配置。由此产生的大量RGB-D视频全景分割数据集（MVPd）被引入，用于与基础和视频分割模型进行广泛的基准测试，并支持视频分割中以实施例为重点的研究。我们的实验结果表明，在将基础模型转移到某些机器人实施例（如特定的相机放置）时，使用MVPd进行微调可以提高性能。这些实验还表明，使用3D模态（深度图像和相机姿态）可以提高视频分割的准确性和一致性。项目网页可在https://topipari.com/projects/MVPd et.al.|[2410.12995](http://arxiv.org/abs/2410.12995)|null|
 |**2024-10-16**|**Cascade learning in multi-task encoder-decoder networks for concurrent bone segmentation and glenohumeral joint assessment in shoulder CT scans**|骨关节炎是一种影响骨骼和软骨的退行性疾病，通常导致骨赘形成、骨密度降低和关节间隙狭窄。恢复正常关节功能的治疗方案因病情的严重程度而异。这项工作引入了一种处理肩部CT扫描的创新深度学习框架。它具有肱骨近端和肩胛骨的语义分割、骨表面的3D重建、肩关节（GH）关节区域的识别以及三种常见骨关节炎相关病理的分期：骨赘形成（OS）、GH间隙缩小（JS）和肱骨肩胛骨对齐（HSA）。该流水线包括两个级联的CNN架构：用于分割的3D CEL-UNet和用于三重分类的3D Arthro-Net。使用571次CT扫描的回顾性数据集，对患有不同程度GH骨关节炎相关疾病的患者进行训练、验证和测试。肱骨三维重建的均方根误差和豪斯多夫距离中值分别为0.22mm和1.48mm，肩胛骨为0.24mm和1.48mm。其性能优于最先进的架构，可能适用于基于PSI的肩关节置换术前计划。OS、JS和HSA在所有三个类别中的分类准确率始终达到90%左右。推理管道的计算时间不到15秒，展示了该框架的效率和与骨科放射学实践的兼容性。这些结果代表了人工智能工具在医学翻译方面的一个有前景的进步。这一进展旨在简化术前计划流程，提供高质量的骨表面，并支持外科医生根据独特的患者关节状况选择最合适的手术方法。 et.al.|[2410.12641](http://arxiv.org/abs/2410.12641)|null|
 
-<p align=right>(<a href=#updated-on-20241023>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241024>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-10-22**|**Inverse first-passage problems of a diffusion with resetting**|我们从初始位置 $\mathcal X（0）=\eta开始，解决了具有随机重置的一维扩散过程$\mathal X（t）$的第一个通过位置和第一个通过时间的逆问题这种类型的扩散$\mathcal X（t）$的特征是，根据速率$R>0的齐次泊松过程，可以重置到位置$X_R$。关于逆第一通道位置问题，对于随机$\eta\in（0，b），\b<+\infty$（以及固定的$R$和$X_R\in（O，b））$，让$\tau_{0，b}$是$\mathal X（t 0，b}）=0）$从$（0，b）左端退出的概率；$给定概率$q\in（0,1），$逆第一通道位置问题在于找到$\eta，$的密度$g$（如果存在），使得$\pi_0=q$关于逆第一通道时间问题，对于随机$\eta\in（0，+\infty）$（固定$r$和$x_r>0）$，设$\tau$为$\mathcal x（t）$通过零的第一通道时间；对于正实轴上的给定分布函数$F（t）$，逆首次通过时间问题在于找到$\eta，$的密度$g$（如果存在），使得$P（\tau \le t）=F（t，\t＞0。$除了随机初始位置$\eta$的情况外，$我们还研究了初始位置$\eta$和重置率$r$固定，而重置位置$x_r$ 是随机的情况。对于所考虑的所有类型的逆问题，报告了几个显式的解的例子。 et.al.|[2410.16889](http://arxiv.org/abs/2410.16889)|null|
 |**2024-10-22**|**Accelerated Quantum Circuit Monte-Carlo Simulation for Heavy Quark Thermalization**|夸克胶子等离子体（QGP）中的重夸克热化是理解强相互作用最有前景的现象之一，其中它们在低动量下的能量损失和动量加宽可以用具有阻力和扩散项的随机过程很好地描述。我们提出了一种加速量子电路蒙特卡罗（aQCMC）框架，该框架利用量子振幅估计（QAE）算法以较少的二次资源模拟重夸克热化。具体来说，我们使用理想的量子模拟器模拟了重夸克在1D和2D以及各向同性和各向异性介质中的热化，并将其与分析热预期进行了比较。 et.al.|[2410.16863](http://arxiv.org/abs/2410.16863)|null|
 
-<p align=right>(<a href=#updated-on-20241023>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241024>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-09-17**|**SplatFields: Neural Gaussian Splats for Sparse 3D and 4D Reconstruction**|从多视图图像中数字化3D静态场景和4D动态事件长期以来一直是计算机视觉和图形学领域的一个挑战。最近，3D高斯散斑（3DGS）已经成为一种实用且可扩展的重建方法，由于其令人印象深刻的重建质量、实时渲染能力以及与广泛使用的可视化工具的兼容性而越来越受欢迎。然而，该方法需要大量的输入视图来实现高质量的场景重建，这引入了一个重大的实际瓶颈。在捕捉动态场景时，这一挑战尤为严峻，因为部署广泛的相机阵列的成本可能高得令人望而却步。在这项工作中，我们发现斑点特征缺乏空间自相关性是导致3DGS技术在稀疏重建环境中性能不佳的因素之一。为了解决这个问题，我们提出了一种优化策略，通过将splat特征建模为相应隐式神经场的输出，有效地正则化splat特征。这导致在各种场景中重建质量的一致提高。我们的方法有效地处理了静态和动态情况，这在不同设置和场景复杂性的广泛测试中得到了证明。 et.al.|[2409.11211](http://arxiv.org/abs/2409.11211)|null|
 |**2024-10-02**|**Neural Fields for Adaptive Photoacoustic Computed Tomography**|光声计算机断层扫描（PACT）是一种具有广泛医学应用的非侵入性成像技术。传统的PACT图像重建算法受到组织中声速不均匀（SOS）引起的波前失真的影响，导致图像质量下降。考虑到这些影响可以提高图像质量，但测量SOS分布的实验成本很高。另一种方法是仅使用PA信号对初始压力图像和SOS进行联合重建。现有的关节重建方法存在局限性：计算成本高，无法直接恢复SOS，以及依赖于不准确的简化假设。隐式神经表示或神经场是计算机视觉中的一种新兴技术，用于通过基于坐标的神经网络学习物理场的有效和连续表示。在这项工作中，我们介绍了NF-APACT，这是一种高效的自监督框架，利用神经场来估计SOS，以实现准确和鲁棒的多通道解卷积。我们的方法比现有方法更快、更准确地消除了SOS像差。我们在一个新的数值体模以及实验收集的体模和体内数据上证明了我们的方法的成功。我们的代码和数字幻影可在https://github.com/Lukeli0425/NF-APACT. et.al.|[2409.10876](http://arxiv.org/abs/2409.10876)|null|
 
-<p align=right>(<a href=#updated-on-20241023>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241024>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
