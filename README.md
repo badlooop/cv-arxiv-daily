@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.10.25
+## Updated on 2024.10.26
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-21**|**FrugalNeRF: Fast Convergence for Few-shot Novel View Synthesis without Learned Priors**|神经辐射场（NeRF）在少数拍摄场景中面临着重大挑战，主要是由于高保真渲染的过拟合和长训练时间。现有的方法，如FreeNeRF和SparseNeRF，使用频率正则化或预训练先验，但难以应对复杂的调度和偏差。我们介绍了FrugalNeRF，这是一种新颖的少镜头NeRF框架，它利用跨多个尺度的权重共享体素来有效地表示场景细节。我们的主要贡献是一种跨尺度几何自适应方案，该方案基于跨尺度的重投影误差来选择伪地面真值深度。这可以指导培训，而不依赖于外部学习的先验知识，从而充分利用培训数据。它还可以整合预先训练的先验，在不减缓收敛的情况下提高质量。在LLFF、DTU和RealEstate-10K上的实验表明，FrugalNeRF优于其他少镜头NeRF方法，同时显著减少了训练时间，使其成为高效准确的3D场景重建的实用解决方案。 et.al.|[2410.16271](http://arxiv.org/abs/2410.16271)|null|
 |**2024-10-21**|**3DGS-Enhancer: Enhancing Unbounded 3D Gaussian Splatting with View-consistent 2D Diffusion Priors**|新颖的视图合成旨在从多个输入图像或视频中生成场景的新颖视图，最近的进步，如3D高斯飞溅（3DGS），在使用高效管道生成逼真的渲染方面取得了显著成功。然而，由于采样不足区域的信息不足，在稀疏输入视图等具有挑战性的设置下生成高质量的新颖视图仍然很困难，这通常会导致明显的伪影。本文介绍了一种用于提高3DGS表示质量的新型流水线3DGS增强器。我们利用2D视频扩散先验来解决具有挑战性的3D视图一致性问题，将其重新表述为在视频生成过程中实现时间一致性。3DGS增强器恢复渲染的新颖视图的视图一致性潜在特征，并通过时空解码器将其与输入视图集成。然后，增强的视图用于微调初始3DGS模型，显著提高其渲染性能。在无界场景的大规模数据集上进行的广泛实验表明，与最先进的方法相比，3DGS Enhancer具有更优的重建性能和高保真渲染结果。项目网页为https://xiliu8006.github.io/3DGS-Enhancer-project . et.al.|[2410.16266](http://arxiv.org/abs/2410.16266)|null|
 
-<p align=right>(<a href=#updated-on-20241025>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241026>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-18**|**Context-Enhanced Multi-View Trajectory Representation Learning: Bridging the Gap through Self-Supervised Models**|使用通用密集表示对轨迹数据进行建模已成为各种下游应用的流行范式，如轨迹分类、行程时间估计和相似性计算。然而，现有的方法通常依赖于单一空间视图的轨迹，限制了它们捕获丰富上下文信息的能力，而丰富上下文信息对于深入了解不同地理空间背景下的运动模式至关重要。为此，我们提出了MVTraj，这是一种用于轨迹表示学习的新型多视图建模方法。MVTraj整合了从GPS到道路网络和兴趣点的各种背景知识，以更全面地了解轨迹数据。为了在多个视图之间对齐学习过程，我们利用GPS轨迹作为桥梁，并采用自我监督的借口任务来捕捉和区分不同空间视图之间的运动模式。在此之后，我们将来自不同视角的轨迹视为不同的模态，并应用分层跨模态交互模块来融合表示，从而丰富了从多个来源获得的知识。对真实世界数据集的广泛实验表明，MVTraj在与各种空间视图相关的任务中明显优于现有基线，验证了其在时空建模中的有效性和实用性。 et.al.|[2410.13196](http://arxiv.org/abs/2410.13196)|null|
 |**2024-10-18**|**UniG: Modelling Unitary 3D Gaussians for View-consistent 3D Reconstruction**|在这项工作中，我们提出了UniG，这是一种视图一致的3D重建和新颖的视图合成模型，可以从稀疏图像中生成3D高斯的高保真表示。现有的基于3D高斯的方法通常对每个视图的每个像素进行高斯回归，分别为每个视图创建3D高斯，并通过点连接将其合并。这种与视图无关的重建方法通常会导致视图不一致问题，其中来自不同视图的同一3D点的预测位置可能存在差异。为了解决这个问题，我们开发了一个类似DETR（DEtect TRansformer）的框架，该框架将3D高斯视为解码器查询，并通过在多个输入图像上执行多视图交叉注意（MVDFA）来逐层更新其参数。通过这种方式，多个视图自然有助于对3D高斯的统一表示进行建模，从而使3D重建更加视图一致。此外，由于用作解码器查询的3D高斯数与输入视图的数量无关，因此允许任意数量的输入图像，而不会导致内存爆炸。大量的实验验证了我们的方法的优势，在定量和定性上展示了优于现有方法的性能（在Objaverse上训练并在GSO基准上测试时，PSNR提高了4.2 dB）。该代码将于https://github.com/jwubz123/UNIG. et.al.|[2410.13195](http://arxiv.org/abs/2410.13195)|**[link](https://github.com/jwubz123/UNIG)**|
 
-<p align=right>(<a href=#updated-on-20241025>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241026>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-10-24**|**The Cat and Mouse Game: The Ongoing Arms Race Between Diffusion Models and Detection Methods**|传播模式的出现改变了合成媒体的生成，提供了无与伦比的现实主义和对内容创作的控制。这些进步推动了艺术、设计和科学可视化等领域的创新。然而，它们也带来了重大的伦理和社会挑战，特别是通过创建超现实的图像，这些图像可能会助长深度伪造、错误信息和未经授权复制受版权保护的材料。作为回应，对有效检测机制的需求变得越来越迫切。本文探讨了扩散模型发展与检测方法进步之间不断演变的对抗关系。我们对当代检测策略进行了深入分析，包括频域和空域技术、基于深度学习的方法以及结合多种方法的混合模型。我们还强调了不同数据集和标准化评估指标在提高检测准确性和普遍性方面的重要性。我们的讨论探讨了这些检测系统在版权保护、错误信息预防和法医分析中的实际应用，同时也探讨了合成媒体的伦理影响。最后，我们确定了关键的研究差距，并提出了未来的方向，以提高检测方法的鲁棒性和适应性，以适应扩散模型的快速发展。本综述强调，在日益数字化的世界中，有必要采取全面的方法来降低与人工智能生成内容相关的风险。 et.al.|[2410.18866](http://arxiv.org/abs/2410.18866)|null|
 |**2024-10-24**|**A diffusion MRI model for random walks confined on cylindrical surfaces: Towards non-invasive quantification of myelin sheath radius**|在体内量化有髓轴突的髓鞘半径对于理解、诊断和监测各种神经系统疾病非常重要。尽管扩散MRI（dMRI）微观结构技术取得了进步，但专门用于估算髓鞘半径的模型仍然不可用。在这项概念验证理论研究中，我们提出了两种新的dMRI模型，用于表征限制在圆柱形表面的水扩散信号，近似髓鞘水扩散。我们推导出了它们的球面平均信号，这方便地消除了光纤取向和色散效应。这些模型被进一步扩展，以考虑多个同心圆柱体，模仿髓磷脂的分层结构。此外，我们介绍了一种将文献中轴突内径的组织学分布转换为髓鞘半径分布的方法，并推导出分析表达式来估计这些分布预期的有效髓鞘半径。在圆柱形和螺旋形几何结构中进行的蒙特卡罗（MC）模拟验证了模型，证明了与各种扩散状态下的分析预测的一致性，以及根据组织学分布估计的有效半径与通过将所得dMRI信号拟合到单个圆柱模型而获得的有效半径之间的显著相关性。这些模型可以集成到现有的多室dMRI技术中，为配备强扩散梯度的MRI扫描仪中髓鞘半径的非侵入性体内评估打开了大门，从而能够在短回声时间内进行测量。需要进一步的工作来用真实的dMRI数据验证该技术。 et.al.|[2410.18842](http://arxiv.org/abs/2410.18842)|null|
 
-<p align=right>(<a href=#updated-on-20241025>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241026>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-09-21**|**MOSE: Monocular Semantic Reconstruction Using NeRF-Lifted Noisy Priors**|由于缺乏几何指导和不完美的视图相关2D先验，从单眼图像中精确重建密集和语义注释的3D网格仍然是一项具有挑战性的任务。尽管我们已经见证了隐式神经场景表示的最新进展，能够简单地从多视图图像中进行精确的2D渲染，但很少有研究仅使用单眼先验来解决3D场景理解问题。在本文中，我们提出了MOSE，这是一种神经场语义重建方法，可以将推断的图像级噪声先验提升到3D，在3D和2D空间中产生精确的语义和几何。我们方法的关键动机是利用通用类不可知的分段掩码作为指导，在训练过程中促进渲染语义的局部一致性。在语义的帮助下，我们进一步将平滑正则化应用于无纹理区域，以获得更好的几何质量，从而实现几何和语义的互惠互利。在ScanNet数据集上的实验表明，我们的MOSE在3D语义分割、2D语义分割和3D表面重建任务的所有指标上都优于相关基线。 et.al.|[2409.14019](http://arxiv.org/abs/2409.14019)|null|
 |**2024-09-17**|**SplatFields: Neural Gaussian Splats for Sparse 3D and 4D Reconstruction**|从多视图图像中数字化3D静态场景和4D动态事件长期以来一直是计算机视觉和图形学领域的一个挑战。最近，3D高斯散斑（3DGS）已经成为一种实用且可扩展的重建方法，由于其令人印象深刻的重建质量、实时渲染能力以及与广泛使用的可视化工具的兼容性而越来越受欢迎。然而，该方法需要大量的输入视图来实现高质量的场景重建，这引入了一个重大的实际瓶颈。在捕捉动态场景时，这一挑战尤为严峻，因为部署广泛的相机阵列的成本可能高得令人望而却步。在这项工作中，我们发现斑点特征缺乏空间自相关性是导致3DGS技术在稀疏重建环境中性能不佳的因素之一。为了解决这个问题，我们提出了一种优化策略，通过将splat特征建模为相应隐式神经场的输出，有效地正则化splat特征。这导致在各种场景中重建质量的一致提高。我们的方法有效地处理了静态和动态情况，这在不同设置和场景复杂性的广泛测试中得到了证明。 et.al.|[2409.11211](http://arxiv.org/abs/2409.11211)|null|
 
-<p align=right>(<a href=#updated-on-20241025>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241026>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
