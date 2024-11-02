@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.11.01
+## Updated on 2024.11.02
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-27**|**GUMBEL-NERF: Representing Unseen Objects as Part-Compositional Neural Radiance Fields**|我们提出了Gumbel-NeRF，这是一种混合了专家（MoE）神经辐射场（NeRF）模型和事后专家选择机制的模型，用于合成看不见物体的新视图。先前的研究表明，MoE结构提供了由许多对象组成的给定大规模场景的高质量表示。然而，我们观察到，当应用于从一个/几个镜头输入对看不见的物体进行新颖的视图合成的任务时，这种MoE-NeRF模型通常会在专家边界附近产生低质量的表示。我们发现，这种恶化主要是由预见专家选择机制引起的，这可能会在专家边界附近的物体形状中留下不自然的不连续性。Gumbel-NeRF采用事后专家选择机制，即使在专家边界附近，也能保证密度场的连续性。使用SRN汽车数据集的实验证明了Gumbel-NeRF在各种图像质量指标方面优于基线。 et.al.|[2410.20306](http://arxiv.org/abs/2410.20306)|null|
 |**2024-10-25**|**Evaluation of strategies for efficient rate-distortion NeRF streaming**|神经辐射场（NeRF）通过从稀疏的图像集实现高度逼真和详细的场景重建，彻底改变了3D视觉表示领域。NeRF使用体积函数表示法，将3D点映射到其相应的颜色和不透明度，从而允许从任意视点进行逼真的视图合成。尽管取得了进步，但由于涉及大量数据，NeRF内容的高效流式传输仍然是一个重大挑战。本文研究了两种NeRF流媒体策略的率失真性能：基于像素的流媒体和基于神经网络（NN）参数的流媒体。在前者中，图像被编码并随后在整个网络中传输，而在后者中，相应的NeRF模型参数被编码并传输。这项工作还强调了复杂性和性能之间的权衡，表明基于NN参数的策略通常具有更高的效率，使其适用于一对多的流媒体场景。 et.al.|[2410.19459](http://arxiv.org/abs/2410.19459)|null|
 
-<p align=right>(<a href=#updated-on-20241101>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241102>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-28**|**IndraEye: Infrared Electro-Optical UAV-based Perception Dataset for Robust Downstream Tasks**|深度神经网络（DNN）在电光（EO）相机捕获的光线充足的图像上训练时表现出了卓越的性能，这些图像提供了丰富的纹理细节。然而，在航空感知等关键应用中，DNN必须在所有条件下保持一致的可靠性，包括低光照场景，在这些场景中，光电摄像机往往难以捕捉到足够的细节。此外，由于不同高度和倾斜角度的尺度变化，基于无人机的空中目标检测面临着重大挑战，增加了另一层复杂性。现有的方法通常只解决域偏移时的照明变化或样式变化，但在空间感知中，相关性偏移也会影响DNN性能。本文介绍了IndraEye数据集，这是一个为各种任务设计的多传感器（EO-IR）数据集。它包括5612张图像，145666个实例，涵盖了印度次大陆的多个视角、高度、七种背景和一天中的不同时间。该数据集开辟了几个研究机会，如多模态学习、对象检测和分割的领域自适应，以及探索传感器特定的优缺点。IndraEye旨在通过支持开发更强大、更准确的空中感知系统来推进该领域的发展，特别是在具有挑战性的条件下。IndraEye数据集以对象检测和语义分割任务为基准。数据集和源代码可在https://bit.ly/indraeye. et.al.|[2410.20953](http://arxiv.org/abs/2410.20953)|**[link](https://github.com/Manjuphoenix/IndraEye)**|
 |**2024-10-28**|**ODGS: 3D Scene Reconstruction from Omnidirectional Images with 3D Gaussian Splattings**|全向（或360度）图像越来越多地用于3D应用，因为它们允许用单个图像渲染整个场景。基于神经辐射场的现有作品在以自我为中心的视频上展示了成功的3D重建质量，但它们的训练和渲染时间很长。最近，3D高斯散斑因其快速优化和实时渲染而受到关注。然而，由于两个图像域之间的光学特性不同，直接使用透视光栅化器对全向图像进行处理会导致严重失真。在这项工作中，我们提出了ODGS，这是一种用于全向图像的新型光栅化流水线，具有几何解释功能。对于每个高斯分布，我们定义一个与单位球体接触的切平面，该切平面垂直于朝向高斯中心的光线。然后，我们利用透视相机光栅化器将高斯投影到相应的切平面上。投影的高斯图像被转换并组合成全向图像，从而完成全向光栅化过程。这种解释揭示了所提出的管道中的隐含假设，我们通过数学证明进行了验证。整个光栅化过程使用CUDA并行化，实现了比基于NeRF的方法快100倍的优化和渲染速度。我们的综合实验通过在各种数据集上提供最佳的重建和感知质量，突显了ODGS的优越性。此外，漫游数据集的结果表明，即使在重建大型3D场景时，ODGS也能有效地恢复精细细节。源代码可以在我们的项目页面上找到(https://github.com/esw0116/ODGS). et.al.|[2410.20686](http://arxiv.org/abs/2410.20686)|null|
 
-<p align=right>(<a href=#updated-on-20241101>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241102>back to top</a>)</p>
 
 ## Diffusion
 
@@ -63,9 +63,9 @@
 |**2024-10-31**|**Modeling Brownian Motion as a Timelapse of the Physical, Persistent, Trajectory**|虽然通过假设轨迹的无记忆性和扩散步长将扩散建模为随机游走是很常见的，但这些假设可能会导致重大误差。本文描述了布朗粒子的物理轨迹在多大程度上可以通过随机飞行来描述。对物理轨迹的简单时间推移的分析（使用速度自相关函数在碰撞时间尺度上计算，该函数捕获了溶剂引起的流体动力学和声学效应）给了我们两个观察结果：（i）只有当时间步长比弛豫时间大约200倍时，子采样轨迹才会真正无记忆，（ii）步长分布的方差仍然明显小于2Dt（通常为约2倍）。最后一个事实是由于两种效应的结合：扩散MSD在短时间尺度上具有数学上的超弹道性，子采样轨迹是基础物理轨迹的移动平均值。换句话说，长时间间隔的物理轨迹的MSD渐近地接近2Dt，但子采样步骤的MSD不会，即使相关时间间隔比弛豫时间大几百倍。我讨论了如何在计算方法中最好地解释这种效应。 et.al.|[2410.24137](http://arxiv.org/abs/2410.24137)|null|
 |**2024-10-31**|**3D-ViTac: Learning Fine-Grained Manipulation with Visuo-Tactile Sensing**|触觉和视觉感知对于人类与环境进行精细交互都至关重要。为机器人开发类似的多模态传感能力可以显著提高和扩展他们的操作技能。本文介绍了\textbf{3DViTac}，这是一个为灵巧双手操作而设计的多模态传感和学习系统。我们的系统具有配备密集传感单元的触觉传感器，每个传感器的面积为3平方毫米。这些传感器成本低廉且灵活，可提供详细而广泛的物理接触覆盖，有效地补充了视觉信息。为了整合触觉和视觉数据，我们将它们融合到一个统一的3D表示空间中，以保留它们的3D结构和空间关系。然后，多模态表示可以与扩散策略相结合，用于模仿学习。通过具体的硬件实验，我们证明即使是低成本的机器人也可以执行精确的操作，并且显著优于仅凭视觉的策略，特别是在与易碎物品的安全交互和执行涉及手部操作的长期任务方面。我们的项目页面位于\url{https://binghao-huang.github.io/3D-ViTac/}. et.al.|[2410.24091](http://arxiv.org/abs/2410.24091)|null|
 |**2024-10-31**|**Deep Chandra Observations of NGC 5728. III: Probing the High-Resolution X-ray Morphology and Multiphase ISM Interactions in the Circumnuclear Region**|我们对附近Seyfert 2星系NGC 5728的260 ks亚弧秒分辨率钱德拉高级CCD成像光谱仪（ACIS-S）观测结果进行了详细的成像分析。我们的研究重点是星系内部约1kpc内明亮而漫射的软X射线发射。通过比较不同能带的X射线发射，我们确定了吸收柱和发射过程中的局部变化。我们观察到在垂直于双锥的方向上有更多的X射线吸收，双锥与星系中内部扭曲的co盘位于同一位置。最内层区域显示出最强的硬X射线发射过量，与哈勃太空望远镜V-H彩色图中观测到的ALMA和尘埃螺旋的CO（2-1）发射在空间上重合。我们检测到与约1kpc的环核恒星形成环相关的软扩展发射，表明kT=0.44keV的热气体。我们推导出了热气质量的测量值，M=7.9x10^5太阳质量，压力，p=2.0x10^-10达因/平方厘米，冷却时间，t=193.2百万。在恒星形成环附近，我们检测到两个具有软X射线光谱和0.3-7keV亮度L~8x10^38erg/s的X射线点源。这些特性表明存在X射线双星。 et.al.|[2410.24061](http://arxiv.org/abs/2410.24061)|null|
-|**2024-10-31**|**Understanding Generalizability of Diffusion Models Requires Rethinking the Hidden Gaussian Structure**|在这项工作中，我们通过研究学习到的分数函数的隐藏特性来研究扩散模型的可推广性，这些分数函数本质上是在各种噪声水平上训练的一系列深度去噪器。我们观察到，随着扩散模型从记忆过渡到泛化，它们相应的非线性扩散去噪器表现出越来越强的线性。这一发现使我们研究了非线性扩散模型的线性对应物，它们是一系列经过训练的线性模型，用于匹配非线性扩散去噪器的函数映射。令人惊讶的是，对于以训练数据集的经验均值和协方差为特征的多元高斯分布，这些线性去噪器大约是最佳去噪器。这一发现意味着扩散模型在捕获和利用训练数据集的高斯结构（协方差信息）进行数据生成方面存在归纳偏差。我们实证证明，这种归纳偏差是扩散模型在泛化状态下的一个独特特性，当模型的容量与训练数据集的大小相比相对较小时，这种特性变得越来越明显。在模型被高度高估的情况下，这种归纳偏差会在模型完全记忆其训练数据之前的初始训练阶段出现。我们的研究为理解最近在现实世界扩散模型中观察到的显著强泛化现象提供了至关重要的见解。 et.al.|[2410.24060](http://arxiv.org/abs/2410.24060)|null|
+|**2024-10-31**|**Understanding Generalizability of Diffusion Models Requires Rethinking the Hidden Gaussian Structure**|在这项工作中，我们通过研究学习到的分数函数的隐藏特性来研究扩散模型的可推广性，这些分数函数本质上是在各种噪声水平上训练的一系列深度去噪器。我们观察到，随着扩散模型从记忆过渡到泛化，它们相应的非线性扩散去噪器表现出越来越强的线性。这一发现使我们研究了非线性扩散模型的线性对应物，它们是一系列经过训练的线性模型，用于匹配非线性扩散去噪器的函数映射。令人惊讶的是，对于以训练数据集的经验均值和协方差为特征的多元高斯分布，这些线性去噪器大约是最佳去噪器。这一发现意味着扩散模型在捕获和利用训练数据集的高斯结构（协方差信息）进行数据生成方面存在归纳偏差。我们实证证明，这种归纳偏差是扩散模型在泛化状态下的一个独特特性，当模型的容量与训练数据集的大小相比相对较小时，这种特性变得越来越明显。在模型被高度高估的情况下，这种归纳偏差会在模型完全记忆其训练数据之前的初始训练阶段出现。我们的研究为理解最近在现实世界扩散模型中观察到的显著强泛化现象提供了至关重要的见解。 et.al.|[2410.24060](http://arxiv.org/abs/2410.24060)|**[link](https://github.com/Morefre/Understanding-Generalizability-of-Diffusion-Models-Requires-Rethinking-the-Hidden-Gaussian-Structure)**|
 
-<p align=right>(<a href=#updated-on-20241101>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241102>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-09-24**|**Generative 3D Cardiac Shape Modelling for In-Silico Trials**|我们提出了一种深度学习方法，基于将形状表示为神经有符号距离场的零级集，对合成主动脉形状进行建模和生成，该方法受一系列可训练的嵌入向量的约束，并对每个形状的几何特征进行编码。通过使神经场在采样表面点上消失并强制其空间梯度具有单位范数，在从CT图像重建的主动脉根部网格数据集上训练网络。实证结果表明，我们的模型可以高保真地表示主动脉形状。此外，通过从学习到的嵌入向量中采样，我们可以生成类似于真实患者解剖结构的新形状，可用于计算机模拟试验。 et.al.|[2409.16058](http://arxiv.org/abs/2409.16058)|null|
 |**2024-09-21**|**MOSE: Monocular Semantic Reconstruction Using NeRF-Lifted Noisy Priors**|由于缺乏几何指导和不完美的视图相关2D先验，从单眼图像中精确重建密集和语义注释的3D网格仍然是一项具有挑战性的任务。尽管我们已经见证了隐式神经场景表示的最新进展，能够简单地从多视图图像中进行精确的2D渲染，但很少有研究仅使用单眼先验来解决3D场景理解问题。在本文中，我们提出了MOSE，这是一种神经场语义重建方法，可以将推断的图像级噪声先验提升到3D，在3D和2D空间中产生精确的语义和几何。我们方法的关键动机是利用通用类不可知的分段掩码作为指导，在训练过程中促进渲染语义的局部一致性。在语义的帮助下，我们进一步将平滑正则化应用于无纹理区域，以获得更好的几何质量，从而实现几何和语义的互惠互利。在ScanNet数据集上的实验表明，我们的MOSE在3D语义分割、2D语义分割和3D表面重建任务的所有指标上都优于相关基线。 et.al.|[2409.14019](http://arxiv.org/abs/2409.14019)|null|
 
-<p align=right>(<a href=#updated-on-20241101>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241102>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
