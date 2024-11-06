@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.11.05
+## Updated on 2024.11.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-31**|**Epipolar-Free 3D Gaussian Splatting for Generalizable Novel View Synthesis**|广义3D高斯分裂（3DGS）可以以前馈推理的方式从稀疏视图观测中重建新的场景，消除了传统3DGS中对场景特定再训练的需要。然而，现有的方法严重依赖于极线先验，这在复杂的现实世界场景中可能不可靠，特别是在非重叠和遮挡的区域。在本文中，我们提出了eFreeSplat，这是一种基于3DGS的高效前馈模型，用于独立于极线约束的可推广新型视图合成。为了增强具有3D感知的多视图特征提取，我们在大规模数据集上采用了具有跨视图完成预训练的自监督视觉变换器（ViT）。此外，我们引入了一种迭代交叉视图高斯对齐方法，以确保不同视图之间的深度尺度一致。我们的eFreeSplat代表了一种可推广的新颖视图合成的创新方法。与现有的纯无几何方法不同，eFreeSplat更侧重于通过跨视图预训练提供3D先验来实现无极线特征匹配和编码。我们使用RealEstate10K和ACID数据集在宽基线新视图合成任务上评估eFreeSplat。大量实验表明，eFreeSplat超越了依赖极线先验的最先进基线，实现了卓越的几何重建和新颖的视图合成质量。项目页面：https://tatakai1.github.io/efreesplat/. et.al.|[2410.22817](http://arxiv.org/abs/2410.22817)|null|
 |**2024-10-29**|**PF3plat: Pose-Free Feed-Forward 3D Gaussian Splatting**|我们考虑了在单个前馈中从非聚焦图像合成新视图的问题。我们的框架利用了3DGS的快速、可扩展性和高质量的3D重建和视图合成功能，我们进一步扩展了它，提供了一种实用的解决方案，放宽了常见的假设，如密集的图像视图、精确的相机姿态和大量的图像重叠。我们通过识别和解决使用像素对齐的3DGS所带来的独特挑战来实现这一目标：不同视图中未对齐的3D高斯分布会导致噪声或稀疏梯度，从而破坏训练的稳定性并阻碍收敛，尤其是在不满足上述假设的情况下。为了减轻这种情况，我们采用预训练的单目深度估计和视觉对应模型来实现3D高斯的粗略对齐。然后，我们引入了轻量级、可学习的模块，从粗对准中细化深度和姿态估计，提高了3D重建的质量和新颖的视图合成。此外，利用精细估计来估计几何置信度得分，该得分评估3D高斯中心的可靠性，并相应地调节高斯参数的预测。对大规模真实世界数据集的广泛评估表明，PF3plat在所有基准测试中都达到了新的最先进水平，并得到了验证我们设计选择的全面消融研究的支持。 et.al.|[2410.22128](http://arxiv.org/abs/2410.22128)|**[link](https://github.com/cvlab-kaist/PF3plat)**|
 
-<p align=right>(<a href=#updated-on-20241105>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241106>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-29**|**PF3plat: Pose-Free Feed-Forward 3D Gaussian Splatting**|我们考虑了在单个前馈中从非聚焦图像合成新视图的问题。我们的框架利用了3DGS的快速、可扩展性和高质量的3D重建和视图合成功能，我们进一步扩展了它，提供了一种实用的解决方案，放宽了常见的假设，如密集的图像视图、精确的相机姿态和大量的图像重叠。我们通过识别和解决使用像素对齐的3DGS所带来的独特挑战来实现这一目标：不同视图中未对齐的3D高斯分布会导致噪声或稀疏梯度，从而破坏训练的稳定性并阻碍收敛，尤其是在不满足上述假设的情况下。为了减轻这种情况，我们采用预训练的单目深度估计和视觉对应模型来实现3D高斯的粗略对齐。然后，我们引入了轻量级、可学习的模块，从粗对准中细化深度和姿态估计，提高了3D重建的质量和新颖的视图合成。此外，利用精细估计来估计几何置信度得分，该得分评估3D高斯中心的可靠性，并相应地调节高斯参数的预测。对大规模真实世界数据集的广泛评估表明，PF3plat在所有基准测试中都达到了新的最先进水平，并得到了验证我们设计选择的全面消融研究的支持。 et.al.|[2410.22128](http://arxiv.org/abs/2410.22128)|**[link](https://github.com/cvlab-kaist/PF3plat)**|
 |**2024-11-02**|**PrefPaint: Aligning Image Inpainting Diffusion Model with Human Preference**|本文首次尝试通过强化学习框架将图像修复的扩散模型与人类美学标准对齐，显著提高了修复图像的质量和视觉吸引力。具体来说，我们没有直接用成对的图像来测量差异，而是用我们构建的数据集训练了一个奖励模型，该数据集由近51000张标注了人类偏好的图像组成。然后，我们采用强化学习过程来微调预训练的图像修复扩散模型的分布，以获得更高的回报。此外，我们从理论上推导了奖励模型误差的上限，这说明了在整个强化对齐过程中奖励估计的潜在置信度，从而促进了精确的正则化。对修复比较和下游任务（如图像扩展和3D重建）的广泛实验证明了我们方法的有效性，与最先进的方法相比，修复图像与人类偏好的对齐有了显著改善。这项研究不仅推进了图像修复领域的发展，还为基于建模奖励准确性将人类偏好纳入生成模型的迭代细化提供了一个框架，对视觉驱动的人工智能应用程序的设计具有广泛的意义。我们的代码和数据集可在以下网址公开获取https://prefpaint.github.io. et.al.|[2410.21966](http://arxiv.org/abs/2410.21966)|null|
 
-<p align=right>(<a href=#updated-on-20241105>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241106>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-11-04**|**Convolutional neural networks applied to differential dynamic microscopy reduces noise when quantifying heterogeneous dynamics**|微分动态显微镜（DDM）通常依赖于包含数百或数千帧的电影来准确量化软物质系统中的运动。使用持续时间短得多的电影会产生更嘈杂、更不准确的结果。这限制了DDM在动态在较长时间内保持稳定的情况下的适用性。在这里，我们研究了一种对DDM过程进行去噪的方法，特别适用于有限数量的成像帧可用或动态随时间快速变化的情况。我们使用卷积神经网络编解码器（CNN-ED）模型来降低通过DDM计算的中间散射函数中的噪声。我们在含有扩散微米级胶体颗粒的样品上演示了这种将机器学习和DDM相结合的方法。我们量化了当颗粒悬浮在凝胶中的流体中时，颗粒的扩散率如何随时间变化。我们还量化了在含有粘度梯度的样品中，颗粒的扩散率如何随位置变化。这些测试案例展示了非平衡动力学和高通量筛选的研究如何从DDM输出的去噪方法中受益。 et.al.|[2411.02314](http://arxiv.org/abs/2411.02314)|null|
 |**2024-11-04**|**Grouped Discrete Representation for Object-Centric Learning**|以对象为中心的学习（OCL）可以通过简单地重建输入来发现图像或视频中的对象。为了更好地发现对象，代表性的OCL方法将输入重建为其变分自编码器（VAE）中间表示，通过用模板特征离散连续超像素来抑制像素噪声并提高对象可分离性。然而，将特征视为单元忽略了它们的组成属性，从而阻碍了模型的泛化；用标量数索引特征会失去属性级的相似性和差异性，从而阻碍模型收敛。我们建议OCL使用\textit{Grouped Discrete Representation}（GDR）。我们通过有组织的通道分组将特征分解为组合属性，并通过元组索引将这些属性组合成离散表示。实验表明，我们的GDR在各种数据集上一致地改进了基于Transformer和Diffusion的OCL方法。可视化显示，我们的GDR捕捉到了更好的对象可分离性。 et.al.|[2411.02299](http://arxiv.org/abs/2411.02299)|null|
 
-<p align=right>(<a href=#updated-on-20241105>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241106>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-10-08**|**DressRecon: Freeform 4D Human Reconstruction from Monocular Video**|我们提出了一种从单目视频中重建时间一致的人体模型的方法，重点是极其宽松的衣服或手持物体的交互。之前在人体重建方面的工作要么局限于没有物体交互的紧身衣服，要么需要校准的多视图捕捉或个性化的模板扫描，而大规模收集这些数据成本很高。我们对高质量但灵活的重建的关键见解是，将关于关节体形状的通用人类先验（从大规模训练数据中学习）与视频特定的关节“骨骼袋”变形（通过测试时间优化适合单个视频）仔细结合。我们通过学习一个神经隐式模型来实现这一点，该模型将身体和衣服的变形作为单独的运动模型层来解开。为了捕捉服装的微妙几何形状，我们在优化过程中利用了基于图像的先验，如人体姿势、表面法线和光流。由此产生的神经场可以提取到时间一致的网格中，或进一步优化为显式3D高斯分布，以实现高保真交互式渲染。在具有高度挑战性的服装变形和物体交互的数据集上，DressReston可以产生比现有技术更高保真的3D重建。项目页面：https://jefftan969.github.io/dressrecon/ et.al.|[2409.20563](http://arxiv.org/abs/2409.20563)|null|
 |**2024-09-25**|**TalkinNeRF: Animatable Neural Fields for Full-Body Talking Humans**|我们介绍了一种新的框架，该框架从单眼视频中学习全身说话的人的动态神经辐射场（NeRF）。之前的工作只代表身体姿势或面部。然而，人类通过全身进行交流，结合身体姿势、手势和面部表情。在这项工作中，我们提出了TalkinNeRF，这是一个基于NeRF的统一网络，代表了整体4D人体运动。给定一个受试者的单眼视频，我们学习身体、面部和手的相应模块，这些模块结合在一起生成最终结果。为了捕捉复杂的手指关节，我们学习了手的额外变形场。我们的多身份表示能够同时训练多个科目，以及在完全看不见的姿势下进行强大的动画。只要输入一段短视频，它也可以推广到新的身份。我们展示了最先进的性能，用于为全身说话的人类制作动画，具有精细的手部发音和面部表情。 et.al.|[2409.16666](http://arxiv.org/abs/2409.16666)|null|
 
-<p align=right>(<a href=#updated-on-20241105>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241106>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
