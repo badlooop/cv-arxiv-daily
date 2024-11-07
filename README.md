@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.11.06
+## Updated on 2024.11.07
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -20,7 +20,7 @@
 
 |Publish Date|Title|Abstract|PDF|Code|
 |---|---|---|---|---|
-|**2024-11-04**|**FewViewGS: Gaussian Splatting with Few View Matching and Multi-stage Training**|随着神经辐射场（NeRF）的引入，以及最近3D高斯散斑的引入，从图像合成新视图的领域得到了快速发展。高斯散斑因其高效性和准确渲染新视图的能力而被广泛采用。虽然高斯散斑在有足够数量的训练图像可用时表现良好，但其非结构化显式表示在输入图像稀疏的情况下往往会过拟合，导致渲染性能不佳。为了解决这个问题，我们提出了一种基于3D高斯的新颖视图合成方法，该方法使用稀疏输入图像，可以从训练图像未覆盖的视点准确地渲染场景。我们提出了一种多阶段训练方案，该方案对新视图施加了基于匹配的一致性约束，而不依赖于预训练的深度估计或扩散模型。这是通过使用可用训练图像的匹配来监督在具有颜色、几何和语义损失的训练帧之间采样的新视图的生成来实现的。此外，我们为3D高斯模型引入了一种局部保持正则化方法，通过保留场景的局部颜色结构来消除渲染伪影。对合成数据集和真实世界数据集的评估表明，与现有的最先进方法相比，我们的方法在少镜头新视图合成方面具有竞争力或优越的性能。 et.al.|[2411.02229](http://arxiv.org/abs/2411.02229)|null|
+|**2024-11-05**|**FewViewGS: Gaussian Splatting with Few View Matching and Multi-stage Training**|随着神经辐射场（NeRF）的引入，以及最近3D高斯散斑的引入，从图像合成新视图的领域得到了快速发展。高斯散斑因其高效性和准确渲染新视图的能力而被广泛采用。虽然高斯散斑在有足够数量的训练图像可用时表现良好，但其非结构化显式表示在输入图像稀疏的情况下往往会过拟合，导致渲染性能不佳。为了解决这个问题，我们提出了一种基于3D高斯的新颖视图合成方法，该方法使用稀疏输入图像，可以从训练图像未覆盖的视点准确地渲染场景。我们提出了一种多阶段训练方案，该方案对新视图施加了基于匹配的一致性约束，而不依赖于预训练的深度估计或扩散模型。这是通过使用可用训练图像的匹配来监督在具有颜色、几何和语义损失的训练帧之间采样的新视图的生成来实现的。此外，我们为3D高斯模型引入了一种局部保持正则化方法，通过保留场景的局部颜色结构来消除渲染伪影。对合成数据集和真实世界数据集的评估表明，与现有的最先进方法相比，我们的方法在少镜头新视图合成方面具有竞争力或优越的性能。 et.al.|[2411.02229](http://arxiv.org/abs/2411.02229)|null|
 |**2024-11-03**|**InstantGeoAvatar: Effective Geometry and Appearance Modeling of Animatable Avatars from Monocular Video**|我们提出了InstantGeoAvatar，这是一种从单眼视频中高效学习可设置动画的隐式人类化身的详细3D几何和外观的方法。我们的关键观察是，优化哈希网格编码来表示人类受试者的有符号距离函数（SDF）充满了不稳定性和糟糕的局部最小值。因此，我们提出了一种有原则的几何感知SDF正则化方案，该方案无缝融入体绘制管道，并增加了可忽略的计算开销。我们的正则化方案明显优于之前在哈希网格上训练SDF的方法。我们在短短五分钟的训练时间内，在几何重建和新颖的视图合成方面取得了有竞争力的结果，与之前工作所需的几个小时相比，这是一个显著的减少。InstantGeoAvatar代表了实现虚拟化身交互式重建的重大飞跃。 et.al.|[2411.01512](http://arxiv.org/abs/2411.01512)|**[link](https://github.com/alvaro-budria/InstantGeoAvatar)**|
 |**2024-11-02**|**AquaFuse: Waterbody Fusion for Physics Guided View Synthesis of Underwater Scenes**|我们介绍了AquaFuse的概念，这是一种基于物理的方法，用于合成水下图像中的水体特性。我们为水体融合制定了一个封闭的解决方案，有助于实现逼真的数据增强和几何一致的水下场景渲染。AquaFuse利用水下光传播的物理特性，将水体从一个场景合成到另一个场景的对象内容。与数据驱动的样式转换不同，AquaFuse保留了输入场景中的深度一致性和对象几何体。我们通过在各种水下场景上的综合实验验证了这一独特功能。我们发现AquaFused图像保留了输入场景94%以上的深度一致性和90-95%的结构相似性。我们还证明，它通过在适应固有水体融合过程的同时保留对象几何形状来生成精确的3D视图合成。AquaFuse为水下成像和机器人视觉应用开辟了一个新的研究方向，即通过几何保持风格转换进行数据增强。 et.al.|[2411.01119](http://arxiv.org/abs/2411.01119)|null|
 |**2024-11-01**|**CityGaussianV2: Efficient and Geometrically Accurate Reconstruction for Large-Scale Scenes**|最近，3D高斯散斑（3DGS）彻底改变了辐射场重建，展现了高效高保真的新型视图合成。然而，由于3DGS的非结构化特性，准确表示曲面，特别是在大型和复杂的场景中，仍然是一个重大挑战。在本文中，我们提出了CityGaussianV2，这是一种用于大规模场景重建的新方法，可以解决与几何精度和效率相关的关键挑战。基于二维高斯散斑（2DGS）良好的泛化能力，我们解决了它的收敛性和可扩展性问题。具体而言，我们实现了一种基于分解梯度的致密化和深度回归技术，以消除模糊伪影并加速收敛。为了扩大规模，我们引入了一种伸长滤波器，可以减轻2DGS退化引起的高斯计数爆炸。此外，我们针对并行训练优化了CityGaussian管道，实现了高达10 $times$ 的压缩，至少节省了25%的训练时间，内存使用量减少了50%。我们还建立了大规模场景下的标准几何基准。实验结果表明，我们的方法在视觉质量、几何精度以及存储和训练成本之间取得了良好的平衡。项目页面可在https://dekuliutesla.github.io/CityGaussianV2/. et.al.|[2411.00771](http://arxiv.org/abs/2411.00771)|null|
@@ -31,7 +31,7 @@
 |**2024-10-31**|**Epipolar-Free 3D Gaussian Splatting for Generalizable Novel View Synthesis**|广义3D高斯分裂（3DGS）可以以前馈推理的方式从稀疏视图观测中重建新的场景，消除了传统3DGS中对场景特定再训练的需要。然而，现有的方法严重依赖于极线先验，这在复杂的现实世界场景中可能不可靠，特别是在非重叠和遮挡的区域。在本文中，我们提出了eFreeSplat，这是一种基于3DGS的高效前馈模型，用于独立于极线约束的可推广新型视图合成。为了增强具有3D感知的多视图特征提取，我们在大规模数据集上采用了具有跨视图完成预训练的自监督视觉变换器（ViT）。此外，我们引入了一种迭代交叉视图高斯对齐方法，以确保不同视图之间的深度尺度一致。我们的eFreeSplat代表了一种可推广的新颖视图合成的创新方法。与现有的纯无几何方法不同，eFreeSplat更侧重于通过跨视图预训练提供3D先验来实现无极线特征匹配和编码。我们使用RealEstate10K和ACID数据集在宽基线新视图合成任务上评估eFreeSplat。大量实验表明，eFreeSplat超越了依赖极线先验的最先进基线，实现了卓越的几何重建和新颖的视图合成质量。项目页面：https://tatakai1.github.io/efreesplat/. et.al.|[2410.22817](http://arxiv.org/abs/2410.22817)|null|
 |**2024-10-29**|**PF3plat: Pose-Free Feed-Forward 3D Gaussian Splatting**|我们考虑了在单个前馈中从非聚焦图像合成新视图的问题。我们的框架利用了3DGS的快速、可扩展性和高质量的3D重建和视图合成功能，我们进一步扩展了它，提供了一种实用的解决方案，放宽了常见的假设，如密集的图像视图、精确的相机姿态和大量的图像重叠。我们通过识别和解决使用像素对齐的3DGS所带来的独特挑战来实现这一目标：不同视图中未对齐的3D高斯分布会导致噪声或稀疏梯度，从而破坏训练的稳定性并阻碍收敛，尤其是在不满足上述假设的情况下。为了减轻这种情况，我们采用预训练的单目深度估计和视觉对应模型来实现3D高斯的粗略对齐。然后，我们引入了轻量级、可学习的模块，从粗对准中细化深度和姿态估计，提高了3D重建的质量和新颖的视图合成。此外，利用精细估计来估计几何置信度得分，该得分评估3D高斯中心的可靠性，并相应地调节高斯参数的预测。对大规模真实世界数据集的广泛评估表明，PF3plat在所有基准测试中都达到了新的最先进水平，并得到了验证我们设计选择的全面消融研究的支持。 et.al.|[2410.22128](http://arxiv.org/abs/2410.22128)|**[link](https://github.com/cvlab-kaist/PF3plat)**|
 
-<p align=right>(<a href=#updated-on-20241106>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241107>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-30**|**Geometry Cloak: Preventing TGS-based 3D Reconstruction from Copyrighted Images**|单视图3D重建方法，如三平面高斯散斑（TGS），能够在几秒钟内从单个图像输入生成高质量的3D模型。然而，这种功能引发了人们对潜在滥用的担忧，恶意用户可以利用TGS从受版权保护的图像中创建未经授权的3D模型。为了防止这种侵权行为，我们提出了一种新的图像保护方法，在将图像提供给TGS之前，将不可见的几何扰动（称为“几何斗篷”）嵌入图像中。这些精心制作的扰动编码了一个定制的信息，当TGS尝试对隐形图像进行3D重建时，该信息就会显现出来。与简单地降低输出质量的传统对抗性攻击不同，我们的方法通过生成可识别的定制模式作为水印，迫使TGS以特定的方式失败3D重建。该水印允许版权所有者对从其受保护图像中进行的任何尝试的3D重建主张所有权。大量的实验已经验证了我们的几何斗篷的有效性。我们的项目可在https://qsong2001.github.io/geometry_cloak. et.al.|[2410.22705](http://arxiv.org/abs/2410.22705)|null|
 |**2024-10-29**|**Guide3D: A Bi-planar X-ray Dataset for 3D Shape Reconstruction**|血管内手术工具重建是推进血管内工具导航的重要因素，是血管内手术的重要步骤。然而，缺乏公开可用的数据集严重限制了新型机器学习方法的开发和验证。此外，由于需要双平面扫描仪等专用设备，之前的大多数研究都采用了单平面荧光镜技术，因此只能从单一视角捕获数据，大大限制了重建精度。为了弥合这一差距，我们引入了Guide3D，这是一个用于3D重建的双平面X射线数据集。该数据集代表了在现实环境中捕获的高分辨率双平面手动注释荧光镜透视视频的集合。在反映临床环境的模拟环境中验证我们的数据集，证实了它对现实世界应用的适用性。此外，我们提出了一个新的导石形状预测基准，作为未来工作的有力基准。Guide3D不仅通过提供一个推进分割和3D重建技术的平台来满足基本需求，而且有助于开发更准确、更有效的血管内手术干预措施。我们的项目可在https://airvlab.github.io/guide3d/. et.al.|[2410.22224](http://arxiv.org/abs/2410.22224)|null|
 
-<p align=right>(<a href=#updated-on-20241106>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241107>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-11-05**|**Coupling Methods and Applications on the Exponential Contractivity for Path Dependent McKean-Vlasov SDEs**|通过使用条件概率测度变化的耦合，建立了具有分布依赖扩散系数的路径依赖McKean-Vrasov SDE的log-Harnack不等式，该不等式与同步耦合在 $L^2$-Wasserstein距离内的指数收缩性一起，在均匀耗散条件下产生了相对熵的指数收缩。当系数仅部分耗散时，借助渐近反射耦合，还推导出了L^1$ -Wasserstein距离中的指数收缩性，这在分布无关的情况下也是新的。 et.al.|[2411.03104](http://arxiv.org/abs/2411.03104)|null|
 |**2024-11-05**|**Gradient-Guided Conditional Diffusion Models for Private Image Reconstruction: Analyzing Adversarial Impacts of Differential Privacy and Denoising**|我们研究了用于重建私人图像的梯度引导条件扩散模型的构建，重点研究了差分隐私噪声与扩散模型去噪能力之间的对抗性相互作用。尽管当前基于梯度的重建方法由于计算复杂性和先验知识要求而难以处理高分辨率图像，但我们提出了两种新方法，它们需要对扩散模型的生成过程进行最小的修改，并消除了对先验知识的需求。我们的方法利用扩散模型强大的图像生成能力，从随机生成的噪声开始重建私人图像，即使在梯度中添加了少量的差异私人噪声。我们还对差分隐私噪声对重建图像质量的影响进行了全面的理论分析，揭示了噪声幅度、受攻击模型的架构和攻击者重建能力之间的关系。此外，广泛的实验验证了我们提出的方法的有效性和理论发现的准确性，为使用条件扩散模型进行隐私风险审计提供了新的方向。 et.al.|[2411.03053](http://arxiv.org/abs/2411.03053)|null|
 
-<p align=right>(<a href=#updated-on-20241106>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241107>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-10-08**|**DressRecon: Freeform 4D Human Reconstruction from Monocular Video**|我们提出了一种从单目视频中重建时间一致的人体模型的方法，重点是极其宽松的衣服或手持物体的交互。之前在人体重建方面的工作要么局限于没有物体交互的紧身衣服，要么需要校准的多视图捕捉或个性化的模板扫描，而大规模收集这些数据成本很高。我们对高质量但灵活的重建的关键见解是，将关于关节体形状的通用人类先验（从大规模训练数据中学习）与视频特定的关节“骨骼袋”变形（通过测试时间优化适合单个视频）仔细结合。我们通过学习一个神经隐式模型来实现这一点，该模型将身体和衣服的变形作为单独的运动模型层来解开。为了捕捉服装的微妙几何形状，我们在优化过程中利用了基于图像的先验，如人体姿势、表面法线和光流。由此产生的神经场可以提取到时间一致的网格中，或进一步优化为显式3D高斯分布，以实现高保真交互式渲染。在具有高度挑战性的服装变形和物体交互的数据集上，DressReston可以产生比现有技术更高保真的3D重建。项目页面：https://jefftan969.github.io/dressrecon/ et.al.|[2409.20563](http://arxiv.org/abs/2409.20563)|null|
 |**2024-09-25**|**TalkinNeRF: Animatable Neural Fields for Full-Body Talking Humans**|我们介绍了一种新的框架，该框架从单眼视频中学习全身说话的人的动态神经辐射场（NeRF）。之前的工作只代表身体姿势或面部。然而，人类通过全身进行交流，结合身体姿势、手势和面部表情。在这项工作中，我们提出了TalkinNeRF，这是一个基于NeRF的统一网络，代表了整体4D人体运动。给定一个受试者的单眼视频，我们学习身体、面部和手的相应模块，这些模块结合在一起生成最终结果。为了捕捉复杂的手指关节，我们学习了手的额外变形场。我们的多身份表示能够同时训练多个科目，以及在完全看不见的姿势下进行强大的动画。只要输入一段短视频，它也可以推广到新的身份。我们展示了最先进的性能，用于为全身说话的人类制作动画，具有精细的手部发音和面部表情。 et.al.|[2409.16666](http://arxiv.org/abs/2409.16666)|null|
 
-<p align=right>(<a href=#updated-on-20241106>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241107>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
