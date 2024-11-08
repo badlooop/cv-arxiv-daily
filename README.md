@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.11.07
+## Updated on 2024.11.08
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-31**|**GaussianMarker: Uncertainty-Aware Copyright Protection of 3D Gaussian Splatting**|3D高斯散斑（3DGS）已成为获取3D资产的关键方法。为了保护这些资产的版权，可以应用数字水印技术将所有权信息谨慎地嵌入3DGS模型中。然而，现有的网格、点云和隐式辐射场的水印方法不能直接应用于3DGS模型，因为3DGS模型使用具有不同结构的显式3D高斯分布，不依赖于神经网络。在预训练的3DGS上直接嵌入水印会导致渲染图像明显失真。在我们的工作中，我们提出了一种基于不确定性的方法，该方法限制了模型参数的扰动，以实现3DGS的不可见水印。在消息解码阶段，即使在各种形式的3D和2D失真下，也可以从3D高斯和2D渲染图像中可靠地提取版权消息。我们在Blender、LLFF和MipNeRF-360数据集上进行了广泛的实验，以验证我们提出的方法的有效性，并在消息解码精度和视图合成质量方面展示了最先进的性能。 et.al.|[2410.23718](http://arxiv.org/abs/2410.23718)|null|
 |**2024-10-31**|**Epipolar-Free 3D Gaussian Splatting for Generalizable Novel View Synthesis**|广义3D高斯分裂（3DGS）可以以前馈推理的方式从稀疏视图观测中重建新的场景，消除了传统3DGS中对场景特定再训练的需要。然而，现有的方法严重依赖于极线先验，这在复杂的现实世界场景中可能不可靠，特别是在非重叠和遮挡的区域。在本文中，我们提出了eFreeSplat，这是一种基于3DGS的高效前馈模型，用于独立于极线约束的可推广新型视图合成。为了增强具有3D感知的多视图特征提取，我们在大规模数据集上采用了具有跨视图完成预训练的自监督视觉变换器（ViT）。此外，我们引入了一种迭代交叉视图高斯对齐方法，以确保不同视图之间的深度尺度一致。我们的eFreeSplat代表了一种可推广的新颖视图合成的创新方法。与现有的纯无几何方法不同，eFreeSplat更侧重于通过跨视图预训练提供3D先验来实现无极线特征匹配和编码。我们使用RealEstate10K和ACID数据集在宽基线新视图合成任务上评估eFreeSplat。大量实验表明，eFreeSplat超越了依赖极线先验的最先进基线，实现了卓越的几何重建和新颖的视图合成质量。项目页面：https://tatakai1.github.io/efreesplat/. et.al.|[2410.22817](http://arxiv.org/abs/2410.22817)|null|
 
-<p align=right>(<a href=#updated-on-20241107>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241108>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-10-30**|**PointRecon: Online Point-based 3D Reconstruction via Ray-based 2D-3D Matching**|我们提出了一种新的基于点的在线单目RGB视频三维重建方法。我们的模型保持了场景的全局点云表示，随着新图像的观察，不断更新点的特征和3D位置。它用新检测到的点扩展点云，同时仔细删除冗余。新点的点云更新和深度预测是通过一种新的基于射线的2D-3D特征匹配技术实现的，该技术对先前点位置预测中的误差具有鲁棒性。与离线方法相比，我们的方法处理无限长的序列并提供实时更新。此外，点云没有预定义的分辨率或场景大小限制，其统一的全局表示确保了不同视角的视图一致性。在ScanNet数据集上的实验表明，我们的方法在在线MVS方法中达到了最先进的质量。项目页面：https://arthurhero.github.io/projects/pointrecon et.al.|[2410.23245](http://arxiv.org/abs/2410.23245)|null|
 |**2024-10-30**|**Geometry Cloak: Preventing TGS-based 3D Reconstruction from Copyrighted Images**|单视图3D重建方法，如三平面高斯散斑（TGS），能够在几秒钟内从单个图像输入生成高质量的3D模型。然而，这种功能引发了人们对潜在滥用的担忧，恶意用户可以利用TGS从受版权保护的图像中创建未经授权的3D模型。为了防止这种侵权行为，我们提出了一种新的图像保护方法，在将图像提供给TGS之前，将不可见的几何扰动（称为“几何斗篷”）嵌入图像中。这些精心制作的扰动编码了一个定制的信息，当TGS尝试对隐形图像进行3D重建时，该信息就会显现出来。与简单地降低输出质量的传统对抗性攻击不同，我们的方法通过生成可识别的定制模式作为水印，迫使TGS以特定的方式失败3D重建。该水印允许版权所有者对从其受保护图像中进行的任何尝试的3D重建主张所有权。大量的实验已经验证了我们的几何斗篷的有效性。我们的项目可在https://qsong2001.github.io/geometry_cloak. et.al.|[2410.22705](http://arxiv.org/abs/2410.22705)|null|
 
-<p align=right>(<a href=#updated-on-20241107>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241108>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-11-06**|**Synomaly Noise and Multi-Stage Diffusion: A Novel Approach for Unsupervised Anomaly Detection in Ultrasound Imaging**|超声（US）成像因其无辐射、经济高效和便携的优点而广泛应用于常规临床实践。然而，美国图像的低再现性和质量，再加上专家级注释的稀缺，使得全监督分割模型的训练具有挑战性。为了解决这些问题，我们提出了一种基于扩散模型的无监督异常检测框架，该模型结合了合成异常（Synomaly）噪声函数和多阶段扩散过程。Synomaly噪声在训练过程中将合成异常引入健康图像，使模型能够有效地学习异常去除。引入多阶段扩散过程来逐步对图像进行去噪，在提高无异常重建质量的同时保留精细细节。生成的高保真反事实健康图像可以进一步增强分割模型的可解释性，并为评估异常程度和支持临床决策提供可靠的基线。值得注意的是，无监督异常检测模型完全在健康图像上训练，消除了对异常训练样本和像素级注释的需要。我们在颈动脉超声、脑MRI和肝脏CT数据集上验证了所提出的方法。实验结果表明，所提出的框架优于现有的最先进的无监督异常检测方法，在美国数据集中实现了与全监督分割模型相当的性能。此外，消融研究强调了超参数选择对Synomaly噪声的重要性，以及多阶段扩散过程在提高模型性能方面的有效性。 et.al.|[2411.04004](http://arxiv.org/abs/2411.04004)|null|
 |**2024-11-06**|**ET-SEED: Efficient Trajectory-Level SE(3) Equivariant Diffusion Policy**|模仿学习，例如扩散策略，已被证明在各种机器人操纵任务中是有效的。然而，政策的稳健性和普遍性需要广泛的论证。为了减少对演示的依赖，我们利用空间对称性提出了ET-SEED，这是一种高效的轨迹级SE（3）等变扩散模型，用于在复杂的机器人操纵任务中生成动作序列。此外，之前的等变扩散模型要求马尔可夫过程中的每一步等变，这使得在如此强的约束下学习策略变得困难。我们从理论上扩展了等变马尔可夫核，简化了等变扩散过程的条件，从而以端到端的方式显著提高了轨迹级SE（3）等变扩散策略的训练效率。我们评估了ET-SEED在代表性机器人操纵任务上的表现，包括刚体、关节和可变形物体。实验证明，我们提出的方法具有卓越的数据效率和操作能力，并且仅需几次演示即可推广到看不见的配置。网站：https://et-seed.github.io/ et.al.|[2411.03990](http://arxiv.org/abs/2411.03990)|null|
 
-<p align=right>(<a href=#updated-on-20241107>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241108>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-10-08**|**DressRecon: Freeform 4D Human Reconstruction from Monocular Video**|我们提出了一种从单目视频中重建时间一致的人体模型的方法，重点是极其宽松的衣服或手持物体的交互。之前在人体重建方面的工作要么局限于没有物体交互的紧身衣服，要么需要校准的多视图捕捉或个性化的模板扫描，而大规模收集这些数据成本很高。我们对高质量但灵活的重建的关键见解是，将关于关节体形状的通用人类先验（从大规模训练数据中学习）与视频特定的关节“骨骼袋”变形（通过测试时间优化适合单个视频）仔细结合。我们通过学习一个神经隐式模型来实现这一点，该模型将身体和衣服的变形作为单独的运动模型层来解开。为了捕捉服装的微妙几何形状，我们在优化过程中利用了基于图像的先验，如人体姿势、表面法线和光流。由此产生的神经场可以提取到时间一致的网格中，或进一步优化为显式3D高斯分布，以实现高保真交互式渲染。在具有高度挑战性的服装变形和物体交互的数据集上，DressReston可以产生比现有技术更高保真的3D重建。项目页面：https://jefftan969.github.io/dressrecon/ et.al.|[2409.20563](http://arxiv.org/abs/2409.20563)|null|
 |**2024-09-25**|**TalkinNeRF: Animatable Neural Fields for Full-Body Talking Humans**|我们介绍了一种新的框架，该框架从单眼视频中学习全身说话的人的动态神经辐射场（NeRF）。之前的工作只代表身体姿势或面部。然而，人类通过全身进行交流，结合身体姿势、手势和面部表情。在这项工作中，我们提出了TalkinNeRF，这是一个基于NeRF的统一网络，代表了整体4D人体运动。给定一个受试者的单眼视频，我们学习身体、面部和手的相应模块，这些模块结合在一起生成最终结果。为了捕捉复杂的手指关节，我们学习了手的额外变形场。我们的多身份表示能够同时训练多个科目，以及在完全看不见的姿势下进行强大的动画。只要输入一段短视频，它也可以推广到新的身份。我们展示了最先进的性能，用于为全身说话的人类制作动画，具有精细的手部发音和面部表情。 et.al.|[2409.16666](http://arxiv.org/abs/2409.16666)|null|
 
-<p align=right>(<a href=#updated-on-20241107>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241108>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
