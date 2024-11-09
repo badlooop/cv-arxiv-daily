@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.11.08
+## Updated on 2024.11.09
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-10-31**|**No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images**|我们介绍了NoPoSplat，这是一种前馈模型，能够从\textit{unfosed}稀疏多视图图像中重建由3D高斯参数化的3D场景。我们的模型仅使用光度损失进行训练，在推理过程中实现了实时3D高斯重建。为了在重建过程中消除对精确姿态输入的需求，我们将一个输入视图的局部相机坐标锚定为规范空间，并训练网络预测该空间内所有视图的高斯基元。这种方法避免了将高斯基元从局部坐标转换到全局坐标系的需要，从而避免了与每帧高斯和姿态估计相关的误差。为了解决尺度模糊问题，我们设计并比较了各种内在嵌入方法，最终选择将相机内在转换为令牌嵌入，并将其与图像令牌连接作为模型的输入，从而实现准确的场景尺度预测。我们利用重建的3D高斯分布进行新的视图合成和姿态估计任务，并提出了一种两阶段粗到细的流水线来进行精确的姿态估计。实验结果表明，与需要姿态的方法相比，我们的无姿态方法可以实现更优的新颖视图合成质量，特别是在输入图像重叠有限的情况下。对于姿态估计，我们的方法在没有地面真实深度或显式匹配损失的情况下进行训练，显著优于最先进的方法，并有了实质性的改进。这项工作在无姿态通用3D重建方面取得了重大进展，并证明了其适用于现实世界场景。代码和训练模型可在以下网址获得https://noposplat.github.io/. et.al.|[2410.24207](http://arxiv.org/abs/2410.24207)|**[link](https://github.com/cvg/NoPoSplat)**|
 |**2024-11-01**|**GeoSplatting: Towards Geometry Guided Gaussian Splatting for Physically-based Inverse Rendering**|我们考虑了使用3D高斯散斑（3DGS）表示的基于物理的逆渲染问题。虽然最近的3DGS方法在新视图合成（NVS）方面取得了显著成果，但准确捕捉高保真几何体、物理可解释的材质和照明仍然具有挑战性，因为它需要精确的几何建模来提供精确的表面法线，以及基于物理的渲染（PBR）技术来确保正确的材质和光照解纠缠。以前的3DGS方法诉诸于近似曲面法线，但经常难以处理有噪声的局部几何，导致法线估计不准确和材质光照分解次优。本文介绍了GeoSplatting，这是一种新的混合表示，它通过显式几何引导和可微PBR方程来增强3DGS。具体来说，我们将等值面和3DGS连接在一起，首先从标量场中提取等值面网格，然后将其转换为3DGS点，并以完全可微的方式为它们制定PBR方程。在GeoSplatting中，3DGS基于网格几何，实现了精确的表面法线建模，这有助于使用PBR框架进行材料分解。这种方法进一步保持了3DGS的NVS的效率和质量，同时确保了等值面的精确几何形状。对不同数据集的综合评估表明了GeoSplatting的优越性，在定量和定性方面都始终优于现有方法。 et.al.|[2410.24204](http://arxiv.org/abs/2410.24204)|null|
 
-<p align=right>(<a href=#updated-on-20241108>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241109>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-11-04**|**Next Best View For Point-Cloud Model Acquisition: Bayesian Approximation and Uncertainty Analysis**|Next Best View问题是机器人学中广泛研究的计算机视觉问题。为了解决这个问题，多年来已经提出了几种方法。最近，一些人提出使用深度学习模型。借助深度学习模型获得的预测自然会有一些不确定性。尽管如此，标准模型不允许对其进行量化。然而，贝叶斯估计理论有助于证明丢弃层允许估计神经网络中的预测不确定性。这项工作将基于点网的神经网络应用于下一最佳视图（PC-NBV）。它将丢弃层整合到模型的架构中，从而允许计算与其预测相关的不确定性估计。这项工作的目的是提高网络正确预测下一个最佳视点的准确性，提出一种使3D重建过程更高效的方法。获得了两个能够分别反映预测误差和准确性的不确定度测量值。通过识别和忽略具有高不确定性的预测，这些方法可以减少模型的误差，并将其准确性从30%提高到80%。还提出了另一种直接使用这些不确定性度量来改进最终预测的方法。然而，它显示出非常残余的改善。 et.al.|[2411.01734](http://arxiv.org/abs/2411.01734)|null|
 |**2024-10-31**|**Spherical bias on the 3D reconstruction of the ICM density profile in galaxy clusters**|星系团的X射线观测通常用于推导ICM热力学特性（如密度和温度）的径向分布。然而，观测只允许我们访问投影在天球上的量，因此有必要对ICM的3D分布进行假设。通常，假设为球形几何。本文的目的是确定在簇子结构未被掩盖的情况下，这种近似对簇样本ICM密度径向分布的重建和密度分布的内在散射的偏差。我们使用了98个模拟集群，我们知道这些集群的三维ICM分布来自“三百”项目。对于每个星团，我们通过沿40条不同的视线投影星团来模拟40次不同的观测。我们假设ICM呈球形分布，从每次观测中提取ICM密度分布。然后，对于每条视线，我们考虑了样品上的平均密度分布，并将其与模拟给出的3D密度分布进行了比较。通过考虑观测量和输入量之间的比率，推导出密度分布上的球面偏差。我们还研究了执行相同程序时密度分布的固有散射的偏差。我们发现，对于 $R\lesssim R_{500}$，密度分布$b_n$的偏差小于$10\%$，而对于较大的半径，偏差增加到$\sim 50\%$。对于$R\approxic R_{500}$，内在散射分布的偏差$b_s$达到了$\approxist 100\%$的值。对这两个分析量的偏差在很大程度上取决于对象的形态：对于没有显示大规模子结构的簇，$b_n$和$b_s$都减少了2倍，相反，对于显示大规模子结构化的系统，$b_n$和$b_s$ 都显著增加。[删节] et.al.|[2411.00092](http://arxiv.org/abs/2411.00092)|null|
 
-<p align=right>(<a href=#updated-on-20241108>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241109>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-11-07**|**Stem-OB: Generalizable Visual Imitation Learning with Stem-Like Convergent Observation through Diffusion Inversion**|视觉模仿学习方法表现出很强的性能，但在面对视觉输入扰动时，它们缺乏泛化能力，包括光照和纹理的变化，阻碍了它们在现实世界的应用。我们提出了Stem-OB，它利用预训练的图像扩散模型来抑制低级视觉差异，同时保持高级场景结构。这种图像反演过程类似于将观察结果转换为共享表示，从中提取其他观察结果，并去除无关的细节。Stem OB与数据增强方法形成对比，因为它对各种未指定的外观变化具有鲁棒性，而不需要额外的训练。我们的方法是一种简单但高效的即插即用解决方案。实证结果证实了我们的方法在模拟任务中的有效性，并显示出在现实世界应用中的显著改进，与最佳基线相比，成功率平均提高了22.2%。请参阅https://hukz18.github.io/Stem-Ob/了解更多信息。 et.al.|[2411.04919](http://arxiv.org/abs/2411.04919)|null|
 |**2024-11-07**|**Sharp extinction rates for positive solutions of fast diffusion equations**|设 $s\in（0,1]$和$N>2s$。已知（分数）快速扩散方程$\partial_t u+（-\Delta）^s（u^\frac{N-2s}{N+2s}）=0$在$（0，\infty）\times\mathb R^N$上的正解在具有足够规则的初始数据的有限时间$t_*>0$后消失。更确切地说，对于某个灭绝轮廓$u_{t_*，z，\lambda}$，统一在$\mathbb R^N$上，有$\frac{u（t，\cdot）}{u_{t*，z，\lambda}-1=o（1）$作为$t\to t_*^-$。在本文中，我们证明了自然加权能量范数中的定量界$\frac{u（t，\cdot）}{u_{t_*，z，\lambda}（t，\cdot）}-1=\mathal O（（t_*-t）^\frac{N+2s}{N-2s+2}）$。这里的要点是指数$\frac{N+2s}{N-2s+2}$是尖锐的。这与Bonforte和Figalli（CPAM，2021）最近的一项结果类似，该结果适用于$s=1$和有界域$\Omega\sette\mathbb R^N$。在本地情况$s=1$中，我们的结果也是新的。我们克服的主要障碍是相关线性化算子的退化，这在有界域设置中通常不会发生。对于光滑有界域$\Omega\secute\mathbb R^N$，我们证明了在平稳解的非简并假设下，当$s（0,1）$和$m（\frac{N-2s}{N+2s}，1）$具有Dirichlet边界条件时，$\partial_t u+（-\Delta）^s（u^m）=0$在$（0，\infty）\times\Omega$ 上的正解的类似结果。这里的一个重要步骤是证明相对误差的收敛性，这在这种情况下是新的。 et.al.|[2411.04783](http://arxiv.org/abs/2411.04783)|null|
 
-<p align=right>(<a href=#updated-on-20241108>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241109>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-10-04**|**End-to-End Reaction Field Energy Modeling via Deep Learning based Voxel-to-voxel Transform**|在计算生物化学和生物物理学中，理解静电相互作用的作用对于阐明生物分子的结构、动力学和功能至关重要。泊松-玻尔兹曼（PB）方程是通过描述带电分子内部和周围的静电势来模拟这些相互作用的基础工具。然而，由于生物分子表面的复杂性和需要考虑可移动离子，求解PB方程带来了重大的计算挑战。虽然求解PB方程的传统数值方法是准确的，但它们的计算成本很高，并且随着系统规模的增加而扩展性较差。为了应对这些挑战，我们引入了PBNeF，这是一种新的机器学习方法，灵感来自基于神经网络的偏微分方程求解器的最新进展。我们的方法将PB方程的输入和边界静电条件转化为可学习的体素表示，使神经场变换器能够预测PB解，进而预测反应场势能。大量实验表明，与传统的PB求解器相比，PBNeF的速度提高了100倍以上，同时保持了与广义玻恩（GB）模型相当的精度。 et.al.|[2410.03927](http://arxiv.org/abs/2410.03927)|null|
 |**2024-10-08**|**DressRecon: Freeform 4D Human Reconstruction from Monocular Video**|我们提出了一种从单目视频中重建时间一致的人体模型的方法，重点是极其宽松的衣服或手持物体的交互。之前在人体重建方面的工作要么局限于没有物体交互的紧身衣服，要么需要校准的多视图捕捉或个性化的模板扫描，而大规模收集这些数据成本很高。我们对高质量但灵活的重建的关键见解是，将关于关节体形状的通用人类先验（从大规模训练数据中学习）与视频特定的关节“骨骼袋”变形（通过测试时间优化适合单个视频）仔细结合。我们通过学习一个神经隐式模型来实现这一点，该模型将身体和衣服的变形作为单独的运动模型层来解开。为了捕捉服装的微妙几何形状，我们在优化过程中利用了基于图像的先验，如人体姿势、表面法线和光流。由此产生的神经场可以提取到时间一致的网格中，或进一步优化为显式3D高斯分布，以实现高保真交互式渲染。在具有高度挑战性的服装变形和物体交互的数据集上，DressReston可以产生比现有技术更高保真的3D重建。项目页面：https://jefftan969.github.io/dressrecon/ et.al.|[2409.20563](http://arxiv.org/abs/2409.20563)|null|
 
-<p align=right>(<a href=#updated-on-20241108>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241109>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
