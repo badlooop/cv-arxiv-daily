@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.11.17
+## Updated on 2024.11.18
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-11-10**|**Adaptive and Temporally Consistent Gaussian Surfels for Multi-view Dynamic Reconstruction**|3D高斯散点最近在动态场景的新颖视图合成和静态场景的几何重建方面取得了显著成功。在这些进步的基础上，通过全局优化整个序列，开发了用于动态表面重建的早期方法。然而，重建具有显著拓扑变化、出现或消失的物体以及快速运动的动态场景仍然是一个巨大的挑战，特别是对于长序列。为了解决这些问题，我们提出了AT-GS，这是一种通过每帧增量优化从多视图视频中重建高质量动态曲面的新方法。为了避免跨帧的局部最小值，我们引入了一种统一的自适应梯度感知致密化策略，该策略整合了传统克隆和分裂技术的优势。此外，我们通过确保连续帧中曲率图的一致性来减少动态曲面中的时间抖动。我们的方法在动态表面重建中实现了卓越的精度和时间相干性，即使在复杂和具有挑战性的场景中也能提供高保真的时空新颖视图合成。对不同多视图视频数据集的广泛实验证明了我们的方法的有效性，显示出比基线方法明显的优势。项目页面：\url{https://fraunhoferhhi.github.io/AT-GS} et.al.|[2411.06602](http://arxiv.org/abs/2411.06602)|null|
 |**2024-11-12**|**SplatFormer: Point Transformer for Robust 3D Gaussian Splatting**|3D高斯散斑（3DGS）最近改变了真实感重建，实现了高视觉保真度和实时性能。然而，当测试视图偏离训练期间使用的相机角度时，渲染质量会显著下降，这对沉浸式自由视点渲染和导航的应用程序构成了重大挑战。在这项工作中，我们对3DGS和相关的新型视图合成方法在非分布（OOD）测试相机场景下进行了全面评估。通过使用合成和真实世界的数据集创建不同的测试用例，我们证明了大多数现有的方法，包括那些结合了各种正则化技术和数据驱动先验的方法，都难以有效地推广到面向对象的视图。为了解决这一局限性，我们引入了SplatFormer，这是第一个专门设计用于操作高斯斑点的点变换器模型。SplatFormer将在有限训练视图下优化的初始3DGS集作为输入，并在一次前向传递中对其进行细化，有效地消除了OOD测试视图中的潜在伪影。据我们所知，这是点变换器直接在3DGS集上的首次成功应用，超越了以前多场景训练方法的局限性，这些方法在推理过程中只能处理有限数量的输入视图。我们的模型显著提高了极端新颖视图下的渲染质量，在这些具有挑战性的场景中实现了最先进的性能，并优于各种3DGS正则化技术、为稀疏视图合成量身定制的多场景模型和基于扩散的框架。 et.al.|[2411.06390](http://arxiv.org/abs/2411.06390)|**[link](https://github.com/ChenYutongTHU/SplatFormer)**|
 
-<p align=right>(<a href=#updated-on-20241117>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241118>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-11-08**|**Benchmarking 3D multi-coil NC-PDNet MRI reconstruction**|深度学习在从欠采样数据中重建MRI方面显示出巨大的前景，但目前还缺乏对其在非笛卡尔欠采样的3D并行成像采集中的性能进行验证的研究。此外，伪影和由此产生的图像质量取决于欠采样模式。为了解决这一未知领域的问题，我们将非笛卡尔原始双网络（NC PDNet）扩展到3D多线圈设置，这是一种最先进的展开神经网络。我们评估了通道特定训练配置与通道无关训练配置的影响，并检查了线圈压缩的效果。最后，我们使用公开的卡尔加里坎皮纳斯数据集，对四种不同的非笛卡尔欠采样模式进行基准测试，加速因子为6。我们的结果表明，在具有不同输入通道数的压缩数据上训练的NC PDNet在1mm各向同性32通道全脑3D重建中实现了42.98 dB的平均PSNR。推理时间为4.95秒，GPU内存使用率为5.49 GB，我们的方法在临床研究应用中具有巨大的潜力。 et.al.|[2411.05883](http://arxiv.org/abs/2411.05883)|null|
 |**2024-11-07**|**MVSplat360: Feed-Forward 360 Scene Synthesis from Sparse Views**|我们介绍MVSplat360，这是一种前馈方法，用于仅使用稀疏观测对不同现实世界场景进行360度新颖视图合成（NVS）。由于输入视图之间的最小重叠和提供的视觉信息不足，这种设置本身就不合适，这使得传统方法难以实现高质量的结果。我们的MVSplat360通过有效地将几何感知3D重建与时间一致的视频生成相结合来解决这个问题。具体来说，它重构了一个前馈的3D高斯散斑（3DGS）模型，将特征直接渲染到预训练的稳定视频扩散（SVD）模型的潜在空间中，然后这些特征作为姿态和视觉线索来指导去噪过程，并产生逼真的3D一致视图。我们的模型是端到端可训练的，支持用少至5个稀疏输入视图渲染任意视图。为了评估MVSplat360的性能，我们使用具有挑战性的DL3DV-10K数据集引入了一个新的基准，与最先进的方法相比，MVSplat36在宽扫甚至360度NVS任务中实现了卓越的视觉质量。在现有基准RealEstate10K上的实验也证实了我们模型的有效性。视频结果可在我们的项目页面上查看：https://donydchen.github.io/mvsplat360. et.al.|[2411.04924](http://arxiv.org/abs/2411.04924)|**[link](https://github.com/donydchen/mvsplat360)**|
 
-<p align=right>(<a href=#updated-on-20241117>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241118>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-11-14**|**Enhanced HLLEM and HLL-CPS schemes for all Mach number flows based using anti-diffusion coefficients**|本文比较了欧拉方程的HLLEM和HLL-CPS方案，并对所有马赫数流提出了改进。HLLEM方案的增强包括在面法线方向上添加反扩散项，并修改冲击附近线性简并波的反扩散系数。通过调整面法线方向和线性简并波的反扩散系数，改进了HLL-CPS方案。矩阵稳定性、线性摄动和渐近分析证明了所提出方案的鲁棒性及其捕捉低马赫流特征的能力。数值试验证实，该方案在高速下没有冲击不稳定性，并准确地解决了低马赫数的流动特征。 et.al.|[2411.09509](http://arxiv.org/abs/2411.09509)|null|
 |**2024-11-14**|**Golden Noise for Diffusion Models: A Learning Framework**|文本到图像扩散模型是一种流行的范式，它通过提供文本提示和随机高斯噪声来合成个性化图像。虽然人们观察到一些噪声是“黄金噪声”，可以比其他噪声实现更好的文本图像对齐和更高的人类偏好，但我们仍然缺乏一个机器学习框架来获得这些黄金噪声。为了学习扩散采样的金噪声，本文主要做了三个贡献。首先，我们确定了一个名为\textit{noise prompt}的新概念，其目的是通过添加从文本提示中导出的小扰动，将随机高斯噪声转化为黄金噪声。根据这一概念，我们首先制定了\textit{噪声提示学习}框架，该框架系统地学习与扩散模型的文本提示相关的“提示”黄金噪声。其次，我们设计了一个噪声提示数据收集管道，并收集了一个大规模的\textit{噪声提示数据集}~（NPD），其中包含10万对随机噪声和金色噪声以及相关的文本提示。以准备好的NPD作为训练数据集，我们训练了一个小的\textit{noise prompt network}~（NPNet），它可以直接学习将随机噪声转换为黄金噪声。学习到的黄金噪声扰动可以被视为一种噪声提示，因为它富含语义信息，并且是针对给定的文本提示量身定制的。第三，我们广泛的实验证明了NPNet在提高各种扩散模型（包括SDXL、DreamShaper-xl-v2-turbo和浑源DiT）的合成图像质量方面令人印象深刻的有效性和通用性。此外，NPNet是一个小型高效的控制器，它作为一个即插即用模块，具有非常有限的额外推理和计算成本，因为它只提供金色噪声而不是随机噪声，而无需访问原始管道。 et.al.|[2411.09502](http://arxiv.org/abs/2411.09502)|null|
 
-<p align=right>(<a href=#updated-on-20241117>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241118>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-10-15**|**Deep vectorised operators for pulsatile hemodynamics estimation in coronary arteries from a steady-state prior**|心血管血流动力学场为冠状动脉疾病提供了有价值的医学决策标志。计算流体动力学（CFD）是体内准确、无创评估这些量的金标准。在这项工作中，我们提出了一种基于机器学习的时间高效替代模型，用于基于稳态先验估计脉动血流动力学。我们引入了深度矢量化算子，这是一种用于在无限维函数空间上进行离散化独立学习的建模框架。基础神经结构是一个以血流动力学边界条件为条件的神经场。重要的是，我们展示了如何将逐点动作的要求放宽到置换等变，从而产生一系列可以通过消息传递和自我关注层进行参数化的模型。我们在从冠状动脉计算机断层扫描血管造影（CCTA）中提取的74条狭窄冠状动脉的数据集上评估了我们的方法，并将患者特异性脉动CFD模拟作为基本事实。我们证明，我们的模型能够准确估计脉动速度和压力，同时不受源域重新采样的影响（离散化独立性）。这表明，深度矢量化算子是冠状动脉及其他动脉心血管血流动力学估计的强大建模工具。 et.al.|[2410.11920](http://arxiv.org/abs/2410.11920)|null|
 |**2024-10-07**|**Fast Training of Sinusoidal Neural Fields via Scaling Initialization**|神经场是一种新兴的范式，它将数据表示为由神经网络参数化的连续函数。尽管有许多优点，但神经场通常具有较高的训练成本，这阻碍了更广泛的采用。在本文中，我们关注一个流行的神经场家族，称为正弦神经场（SNF），并研究如何初始化它以最大限度地提高训练速度。我们发现，基于信号传播原理设计的SNF标准初始化方案是次优的。特别是，我们证明，通过简单地将每个权重（最后一层除外）乘以一个常数，我们可以将SNF训练加速10 $\times$。这种方法被称为$\textit{weight scaling}$ ，在各种数据域上持续提供显著的加速，使SNF的训练速度比最近提出的架构更快。为了理解为什么权重缩放效果良好，我们进行了广泛的理论和实证分析，结果表明，权重缩放不仅有效地解决了频谱偏差，而且具有良好的优化轨迹。 et.al.|[2410.04779](http://arxiv.org/abs/2410.04779)|null|
 
-<p align=right>(<a href=#updated-on-20241117>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241118>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
