@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.11.21
+## Updated on 2024.11.22
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-11-17**|**Direct and Explicit 3D Generation from a Single Image**|当前的图像到3D方法存在计算成本高和缺乏高分辨率输出的可扩展性的问题。相比之下，我们引入了一种新的框架，使用多视图2D深度和RGB图像以及使用重新调整用途的稳定扩散模型的3D高斯特征直接生成显式的表面几何和纹理。我们在U-Net中引入了一个深度分支，用于高效和高质量的多视图、跨域生成，并将极线注意力纳入潜在的像素级多视图一致性解码器中。通过将生成的深度像素反向投影到3D空间中，我们创建了一个结构化的3D表示，该表示可以通过高斯散点渲染或提取到高质量网格中，从而利用额外的新颖视图合成损失来进一步提高我们的性能。大量实验表明，我们的方法在几何和纹理质量方面超越了现有的基线，同时实现了显著更快的生成时间。 et.al.|[2411.10947](http://arxiv.org/abs/2411.10947)|null|
 |**2024-11-16**|**DGS-SLAM: Gaussian Splatting SLAM in Dynamic Environment**|我们介绍了动态高斯散斑SLAM（DGS-SLAM），这是第一个建立在高斯散斑基础上的动态SLAM框架。虽然密集SLAM的最新进展利用高斯散斑来增强场景表示，但大多数方法都假设是静态环境，这使得它们容易受到动态对象引起的光度和几何不一致的影响。为了应对这些挑战，我们将高斯散斑SLAM与稳健的滤波过程相结合，以处理整个管道中的动态对象，包括高斯插入和关键帧选择。在此框架内，为了进一步提高动态对象去除的准确性，我们引入了一种鲁棒的掩模生成方法，该方法在关键帧之间强制实现光度一致性，减少了不准确分割和阴影等伪影的噪声。此外，我们提出了循环感知窗口选择机制，该机制利用3D高斯的唯一关键帧ID来检测当前帧和过去帧之间的循环，从而促进当前相机姿态和高斯图的联合优化。DGS-SLAM在各种动态SLAM基准上实现了最先进的相机跟踪和新颖的视图合成性能，证明了其在处理现实世界动态场景方面的有效性。 et.al.|[2411.10722](http://arxiv.org/abs/2411.10722)|null|
 
-<p align=right>(<a href=#updated-on-20241121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241122>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-11-16**|**ARM: Appearance Reconstruction Model for Relightable 3D Generation**|最近的图像到3D重建模型极大地改进了几何生成，但它们仍然难以忠实地生成逼真的外观。为了解决这个问题，我们引入了ARM，这是一种从稀疏视图图像重建高质量3D网格和逼真外观的新方法。ARM的核心在于将几何与外观解耦，在UV纹理空间内处理外观。与以前的方法不同，ARM通过明确地将测量值反向投影到纹理贴图上，并在具有全局感受野的UV空间模块中对其进行处理，从而提高了纹理质量。为了解决输入图像中材质和光照之间的歧义，ARM引入了一种材质先验，对语义外观信息进行编码，增强了外观分解的鲁棒性。仅在8个H100 GPU上训练，ARM在数量和质量上都优于现有方法。 et.al.|[2411.10825](http://arxiv.org/abs/2411.10825)|null|
 |**2024-11-16**|**Poster: Reliable 3D Reconstruction for Ad-hoc Edge Implementations**|支持实时复杂视频处理应用程序（如多视图3D重建）的自组织边缘部署通常会受到时空系统中断的影响，这会极大地影响重建质量。在这篇海报论文中，我们提出了一种受投资组合理论启发的边缘资源管理策略，通过考虑可能的系统中断来确保可靠的多视图3D重建。 et.al.|[2411.10705](http://arxiv.org/abs/2411.10705)|null|
 
-<p align=right>(<a href=#updated-on-20241121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241122>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-11-20**|**Adversarial Diffusion Compression for Real-World Image Super-Resolution**|真实世界图像超分辨率（Real ISR）旨在从因复杂未知过程而退化的低分辨率输入中重建高分辨率图像。虽然许多基于稳定扩散（SD）的Real ISR方法取得了显著的成功，但它们缓慢的多步推理阻碍了实际部署。最近基于SD的一步网络，如OSEDiff和S3Diff，缓解了这个问题，但由于它们依赖于大型预训练SD模型，仍然会产生高昂的计算成本。本文提出了一种新的Real ISR方法AdcSR，该方法在我们的对抗扩散压缩（ADC）框架下将一步扩散网络OSEDiff提取为流线型扩散GAN模型。我们仔细检查了OSEDiff的模块，将其分为两类：（1）可移除的（VAE编码器、提示提取器、文本编码器等）和（2）可修剪的（去噪UNet和VAE解码器）。由于直接删除和修剪会降低模型的生成能力，我们对修剪后的VAE解码器进行预训练，以恢复其解码图像的能力，并采用对抗性蒸馏来补偿性能损失。这种基于ADC的扩散GAN混合设计有效地将推理时间、计算时间和参数的复杂性降低了73%、78%和74%，同时保留了模型的生成能力。实验表明，我们提出的AdcSR在合成和真实数据集上都实现了具有竞争力的恢复质量，与之前的基于一步扩散的方法相比，速度提高了9.3美元。将提供代码和模型。 et.al.|[2411.13383](http://arxiv.org/abs/2411.13383)|null|
 |**2024-11-20**|**New Insights on the High Reconnection Rate and the Diminishment of Ion Outflow**|最近发现的纯电子重联由于缺乏离子外流和高重联率等异常特征而引起了人们的极大兴趣。通过粒子模拟，我们研究了它们的物理机制。当用离子参数（ $R_i$）归一化时，重联速率可能会异常高，而用电子参数（$R_ e$）归一化的重联速率仍保持在~0.1。我们提出，高$R_i$的本质是电子扩散区外的场线弯曲不足，表明离子扩散区的发展不完整。这可能是由于薄电流片或小系统尺寸中的突发重连造成的。当陀螺半径（$\rho_i$）超过系统尺寸时，离子流出在高$\beta_i$时减少。低速离子仍然受到霍尔场的显著加速。然而，局部分布包括许多高速离子，这些离子在$\rho_i$ 上受到不同电场的随机加速，导致体积速度接近零。我们的研究有助于理解重联结构和不同制度之间转变的潜在物理学。 et.al.|[2411.13352](http://arxiv.org/abs/2411.13352)|null|
 
-<p align=right>(<a href=#updated-on-20241121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241122>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-10-24**|**3D-Adapter: Geometry-Consistent Multi-View Diffusion for High-Quality 3D Generation**|多视图图像扩散模型显著推进了开放域3D对象生成。然而，大多数现有模型依赖于缺乏固有3D偏差的2D网络架构，导致几何一致性受损。为了应对这一挑战，我们引入了3D Adapter，这是一个插件模块，旨在将3D几何感知注入预训练的图像扩散模型中。我们方法的核心是3D反馈增强的思想：对于采样循环中的每个去噪步骤，3D Adapter将中间的多视图特征解码为连贯的3D表示，然后对渲染的RGBD视图进行重新编码，通过特征添加来增强预训练的基础模型。我们研究了3D Adapter的两种变体：一种是基于高斯飞溅的快速前馈版本，另一种是利用神经场和网格的通用无训练版本。我们广泛的实验表明，3D Adapter不仅大大提高了文本到多视图模型（如Instant3D和Zero123++）的几何质量，而且还使用纯文本到图像的稳定扩散实现了高质量的3D生成。此外，我们通过在文本到3D、图像到3D、文本到纹理和文本到化身任务中呈现高质量的结果，展示了3D适配器的广泛应用潜力。 et.al.|[2410.18974](http://arxiv.org/abs/2410.18974)|**[link](https://github.com/Lakonik/MVEdit)**|
 |**2024-10-22**|**Cortical Dynamics of Neural-Connectivity Fields**|皮质组织的宏观研究揭示了振荡活动的普遍性，这反映了神经相互作用的微调。本研究通过将广义振荡动力学纳入先前关于保守或半保守神经场动力学的工作中，扩展了神经场理论。先前的研究在很大程度上假设了神经单元之间的各向同性连接；然而，这项研究表明，广泛的各向异性和波动连接仍然可以维持振荡。使用拉格朗日场方法，我们研究了不同类型的连接、它们的动力学以及与神经场的潜在相互作用。基于这一理论基础，我们推导出了一个框架，该框架通过连接场的概念将Hebbian和非Hebbian学习（即可塑性）纳入神经场的研究中。 et.al.|[2410.16852](http://arxiv.org/abs/2410.16852)|null|
 
-<p align=right>(<a href=#updated-on-20241121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241122>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
