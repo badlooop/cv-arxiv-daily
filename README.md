@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.11.29
+## Updated on 2024.11.30
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-11-25**|**U2NeRF: Unsupervised Underwater Image Restoration and Neural Radiance Fields**|由于光吸收、折射、散射和恢复，水下图像会出现颜色偏移、对比度低和模糊等问题，因此这些图像值得关注。在这项工作中，我们提出了无监督水下神经辐射场U2NeRF，这是一种基于变换器的架构，可以学习同时渲染和恢复基于多视图几何的新视图。由于缺乏监督，我们试图将恢复能力隐式地烘焙到NeRF管道上，并将预测的颜色分解为几个分量——场景辐射、直接传输图、反向散射传输图和全局背景光，当组合在一起时，以自我监督的方式重建水下图像。此外，我们发布了一个由12个水下场景组成的水下视图合成UVS数据集，其中包含合成生成的数据和真实世界的数据。我们的实验表明，当在单个场景上进行优化时，U2NeRF的表现优于多个基线，LPIPS为11%，UIQM为5%，UCIQE为4%（平均），并展示了改进的渲染和恢复能力。代码将在验收后提供。 et.al.|[2411.16172](http://arxiv.org/abs/2411.16172)|null|
 |**2024-11-26**|**MVGenMaster: Scaling Multi-View Generation from Any Image via 3D Priors Enhanced Diffusion Model**|我们介绍了MVGenMaster，这是一种用3D先验增强的多视图扩散模型，用于解决多功能的新视图合成（NVS）任务。MVGenMaster利用使用度量深度和相机姿态扭曲的3D先验，显著增强了NVS中的泛化能力和3D一致性。我们的模型具有一个简单而有效的管道，可以通过一个正向过程生成多达100个基于可变参考视图和相机姿态的新视图。此外，我们还开发了一个名为MvD-1M的全面的大规模多视图图像数据集，包含多达160万个场景，配备了对齐良好的度量深度来训练MVGenMaster。此外，我们提出了一些训练和模型修改，以用放大的数据集来加强模型。对域内和域外基准的广泛评估证明了我们提出的方法和数据公式的有效性。型号和代码将于https://github.com/ewrfcas/MVGenMaster/. et.al.|[2411.16157](http://arxiv.org/abs/2411.16157)|**[link](https://github.com/ewrfcas/mvgenmaster)**|
 
-<p align=right>(<a href=#updated-on-20241129>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241130>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-11-26**|**Functionality understanding and segmentation in 3D scenes**|理解3D场景中的功能涉及解释自然语言描述，以在3D环境中定位功能交互对象，如手柄和按钮。功能理解极具挑战性，因为它既需要世界知识来解释语言，也需要空间感知来识别细粒度对象。例如，给定一个像“打开顶灯”这样的任务，一个嵌入式AI代理必须推断出它需要定位电灯开关，即使任务描述中没有明确提到开关。迄今为止，还没有针对这个问题开发出专门的方法。本文介绍了Fun3DU，这是第一种为3D场景中的功能理解而设计的方法。Fun3DU使用语言模型通过思维链推理解析任务描述，以识别感兴趣的对象。通过使用视觉和语言模型，在捕获场景的多个视图中分割识别的对象。来自每个视图的分割结果在3D中被提升，并使用几何信息聚合到点云中。Fun3DU是免费训练的，完全依赖于预先训练的模型。我们在SceneFun3D上评估了Fun3DU，这是最新也是唯一一个对这项任务进行基准测试的数据集，它包括230个场景的3000多个任务描述。我们的方法明显优于最先进的开放词汇3D分割方法。项目页面：https://jcorsetti.github.io/fun3du et.al.|[2411.16310](http://arxiv.org/abs/2411.16310)|null|
 |**2024-11-25**|**Event-boosted Deformable 3D Gaussians for Fast Dynamic Scene Reconstruction**|3D高斯散斑（3D-GS）可以实现实时渲染，但由于RGB相机的低时间分辨率，在快速运动方面遇到了困难。为了解决这个问题，我们介绍了第一种将捕获高时间分辨率连续运动数据的事件相机与可变形3D-GS相结合的方法，用于快速动态场景重建。我们观察到，事件的阈值建模在实现高质量重建方面起着至关重要的作用。因此，我们提出了一种GS阈值联合建模（GTJM）策略，创建了一个相辅相成的过程，大大改善了3D重建和阈值建模。此外，我们引入了一种动态静态分解（DSD）策略，该策略首先通过利用静态高斯模型无法表示运动来识别动态区域，然后应用基于缓冲区的软分解来分离动态和静态区域。此策略通过避免静态区域中不必要的变形来加速渲染，并侧重于动态区域以提高保真度。我们的方法在RTX 3090 GPU上实现了156 FPS的高保真动态重建，分辨率为400美元×400美元。 et.al.|[2411.16180](http://arxiv.org/abs/2411.16180)|null|
 
-<p align=right>(<a href=#updated-on-20241129>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241130>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-11-27**|**Chemical pressure tuning of competing orders in $\textrm{Ba}_{1-x}\textrm{Ca}_{x}\textrm{Ni}_{2}\textrm{As}_{2}$**|$\mathrm{Ba}\mathrm{Ni}_{2} \数学{As}_{2} $，与铁基母体化合物$\mathrm{Ba}\mathrm结构相似{Fe}_{2} \数学{As}_{2} $，提供了一个独特的平台来研究超导性、电荷密度波和可能的电子向列性之间的相互作用。在这里，我们报告了$\mathrm的增长和特征{Ba}_{1-x}\mathrm{Ca}_{x} \数学{Ni}_{2} \数学{As}_{2} $单晶，$0\leq x\leq 0.1$，使用x射线衍射、扩散x射线散射、热容和电子输运测量的组合。我们的结果表明，钙替代会影响$\mathrm{Ba}\mathrm的结构、电子和热力学性质{Ni}_{2} \数学{As}_{2} 尽管存在明显差异，但这种方式让人强烈联想到适度的静水压力。特别是，钙替代有效地抑制了三斜晶系结构转变和相关的相称电荷密度波的形成，同时提高了超导转变温度。我们发现，晶体保持均匀的替代范围是有限的，因为对于浓度$x\geq 0.04$ ，强烈的扩散x射线散射表明了堆垛层错的形成，尽管NiAs层保持了完整性，但在化学压力完全抑制结构不稳定性的浓度下，这阻碍了研究。 et.al.|[2411.18536](http://arxiv.org/abs/2411.18536)|null|
 |**2024-11-27**|**Spin liquid properties of the kagome material Cu $_3$(HOTP)$_2$**|金属有机框架（MOF）化合物Cu$_3$（HOTP）$_2$，也称为Cu$_3加元（HHTP）$_2$$，是一种小间隙半导体，含有反铁磁耦合的kagome晶格$S$=1/2 Cu$^\mathrm{II}$自旋，层内最近邻交换耦合$J\sim$2K。从DFT+U计算中获得的层内$J$值与合理的U值的实验值相匹配。μon自旋弛豫证实，在低至50mK的范围内没有磁序，并且看到自旋波动在2D晶格上扩散，这与量子自旋液体（QSL）基态存在于高度解耦了kagome层。从顺磁性区域到低温QSL区域冷却时自旋扩散速率的降低反映了量子纠缠。还发现，在低温QSL区域，这些层变得更加强烈地解耦。对QSL区域的自旋扩散、磁化率和比热结果的比较表明，该区域非常接近量子临界点，并且低能量无自旋电子激发密度很大。发现用于QSL自旋激发的Z$_2$ -线性狄拉克模型与实验最匹配。 et.al.|[2411.18518](http://arxiv.org/abs/2411.18518)|null|
 
-<p align=right>(<a href=#updated-on-20241129>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241130>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-11-07**|**LoFi: Scalable Local Image Reconstruction with Implicit Neural Representation**|神经场或隐式神经表示（INR）因其对图像和3D体积的有效连续表示而在机器学习和信号处理中引起了广泛关注。在这项工作中，我们以INR为基础，引入了一种基于坐标的局部处理框架来解决成像逆问题，称为LoFi（局部场）。与传统的图像重建方法不同，LoFi通过多层感知器（MLP）分别处理每个坐标处的局部信息，在该特定坐标处恢复对象。与INR类似，LoFi可以在任何连续坐标下恢复图像，从而实现多分辨率的图像重建。LoFi在图像重建方面的性能与标准CNN相当或更好，几乎与图像分辨率无关，对分布外数据和内存使用具有出色的泛化能力。值得注意的是，对1024美元×1024美元的图像进行训练只需要3GB的内存，比标准CNN通常需要的内存少20多倍。此外，LoFi的局部设计使其能够在小于10个样本的极小数据集上进行训练，而不会过拟合或需要正则化或提前停止。最后，我们使用LoFi作为即插即用框架中的去噪先验，用于解决一般的逆问题，以受益于其连续的图像表示和强大的泛化能力。尽管在低分辨率图像上进行了训练，但LoFi可以用作低维先验，以解决任何分辨率的逆问题。我们通过各种成像方式验证了我们的框架，从低剂量计算机断层扫描到无线电干涉成像。 et.al.|[2411.04995](http://arxiv.org/abs/2411.04995)|null|
 |**2024-11-04**|**Physically Based Neural Bidirectional Reflectance Distribution Function**|我们介绍了基于物理的神经双向反射分布函数（PBNBRDF），这是一种基于神经场的材料外观的新颖连续表示。我们的模型准确地重建了真实世界的材料，同时独特地增强了现实BRDF的物理特性，特别是通过重新参数化的亥姆霍兹互易性和通过高效分析积分的能量无源性。我们进行了系统分析，证明了遵守这些物理定律对重建材料的视觉质量的好处。此外，我们通过引入色度强制监督RGB通道的规范来提高神经BRDF的颜色精度。通过在多个测量的真实BRDF数据库上进行定性和定量实验，我们表明，遵守这些物理约束可以使神经场更忠实、更稳定地表示原始数据，并实现更高的渲染质量。 et.al.|[2411.02347](http://arxiv.org/abs/2411.02347)|null|
 
-<p align=right>(<a href=#updated-on-20241129>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241130>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
