@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.12.05
+## Updated on 2024.12.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-12-04**|**RoDyGS: Robust Dynamic Gaussian Splatting for Casual Videos**|动态视图合成（DVS）近年来取得了显著进展，在降低计算成本的同时实现了高保真渲染。尽管取得了进展，但从休闲视频中优化动态神经场仍然具有挑战性，因为这些视频不提供直接的3D信息，如相机轨迹或底层场景几何形状。在这项工作中，我们介绍了RoDyGS，这是一个用于从休闲视频中动态高斯散布的优化管道。它通过分离动态和静态图元有效地学习场景的运动和底层几何，并通过结合运动和几何正则化项确保学习到的运动和几何在物理上是合理的。我们还介绍了一个全面的基准测试Kubric MRig，它提供了广泛的相机和物体运动以及同时的多视图捕捉，这是以前基准测试中没有的功能。实验结果表明，与现有的无姿态静态神经场相比，所提出的方法明显优于之前的无姿态动态神经场，并实现了具有竞争力的渲染质量。代码和数据可在以下网址公开获取https://rodygs.github.io/. et.al.|[2412.03077](http://arxiv.org/abs/2412.03077)|null|
 |**2024-12-04**|**Human Multi-View Synthesis from a Single-View Model:Transferred Body and Face Representations**|从单个视图生成多视图人体图像是一项复杂而重大的挑战。尽管最近在多视图对象生成方面的进展在扩散模型方面取得了令人印象深刻的结果，但人类的新视图合成仍然受到3D人体数据集可用性有限的限制。因此，许多现有的模型难以产生逼真的人体形状或准确捕捉精细的面部细节。为了解决这些问题，我们提出了一种创新的框架，利用转移的身体和面部表示进行多视图人体合成。具体来说，我们使用在大规模人体数据集上预训练的单视图模型来开发多视图身体表示，旨在将单视图模型的二维知识扩展到多视图扩散模型。此外，为了增强模型的细节恢复能力，我们将转移的多模态面部特征集成到我们训练的人类扩散模型中。对基准数据集的实验评估表明，我们的方法优于当前最先进的方法，在多视图人体合成方面取得了卓越的性能。 et.al.|[2412.03011](http://arxiv.org/abs/2412.03011)|null|
 
-<p align=right>(<a href=#updated-on-20241205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241206>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-12-03**|**Multi-robot autonomous 3D reconstruction using Gaussian splatting with Semantic guidance**|隐式神经表示和3D高斯飞溅（3DGS）在场景重建方面显示出巨大的潜力。最近的研究通过任务分配方法扩大了它们在自主重建中的应用。然而，这些方法主要局限于单个机器人，大规模场景的快速重建仍然具有挑战性。此外，基于表面不确定性的任务驱动规划容易陷入局部最优。为此，我们提出了第一个基于3DGS的集中式多机器人自主3D重建框架。为了进一步降低任务生成的时间成本并提高重建质量，我们将在线开放词汇语义分割与3DGS的表面不确定性相结合，将视图采样集中在实例不确定性较高的区域。最后，我们开发了一种多机器人协作策略，通过模式和任务分配来提高重建质量，同时确保规划效率。与现有的多机器人方法相比，我们的方法在所有规划方法中具有最高的重建质量和更高的规划效率。我们在多个机器人上部署了我们的方法，结果表明，它可以有效地规划视图路径，并高质量地重建场景。 et.al.|[2412.02249](http://arxiv.org/abs/2412.02249)|null|
 |**2024-12-03**|**How to Use Diffusion Priors under Sparse Views?**|稀疏视图下的新颖视图合成一直是3D重建中的一个长期重要挑战。现有的工作主要依靠引入外部语义或深度先验来监督3D表示的优化。然而，扩散模型作为一种可以直接提供视觉监督的外部先验，由于稀疏视图与文本相比信息熵较低，在使用分数蒸馏采样（SDS）进行稀疏视图3D重建时一直表现不佳，导致模式偏差带来的优化挑战。为此，我们从模式寻求的角度对SDS进行了深入分析，并提出了内联先验引导得分匹配（IPSM），该匹配利用视点之间的姿势关系提供的视觉内联先验来校正渲染图像分布，并分解SDS的原始优化目标，从而在不进行任何微调或预训练的情况下提供有效的扩散视觉引导。此外，我们提出了IPSM高斯流水线，该流水线采用3D高斯散斑作为骨干，并补充了基于IPSM的深度和几何一致性正则化，以进一步改善内联先验和校正分布。在不同公共数据集上的实验结果表明，我们的方法达到了最先进的重建质量。代码发布于https://github.com/iCVTEAM/IPSM. et.al.|[2412.02225](http://arxiv.org/abs/2412.02225)|**[link](https://github.com/icvteam/ipsm)**|
 
-<p align=right>(<a href=#updated-on-20241205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241206>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-12-04**|**Flow Matching with General Discrete Paths: A Kinetic-Optimal Perspective**|离散空间扩散或流动生成模型的设计空间相较于其连续空间模型，其理解程度明显较低，许多研究仅聚焦于简单的掩模构造。在这项工作中，我们的目标是采用整体方法构建基于连续时间马尔可夫链的离散生成模型，并首次允许使用任意离散概率路径，或者通俗地说，腐败过程。通过优化对称动能的视角，我们提出了可以应用于任何给定概率路径的速度公式，将概率和速度完全解耦，并允许用户根据特定于数据域的专家知识自由指定任何所需的概率路径。此外，我们发现混合概率路径的特殊构造优化了离散情况下的对称动能。我们实证验证了这种新设计空间在多种模式下的有用性：文本生成、无机材料生成和图像生成。我们发现，即使在具有动力学最优混合路径的文本中，我们也可以优于掩模结构，同时我们可以利用视觉域上概率路径的域特定结构。 et.al.|[2412.03487](http://arxiv.org/abs/2412.03487)|null|
 |**2024-12-04**|**Universal Constants and Energy Integral in Self-Organized Criticality Systems**|发现天体物理观测中观测到的通量（F）和通量或能量（E）的出现频率分布与分形扩散自组织临界性（FD-SOC）模型的预测一致，该模型预测了幂律斜率，通量的普适常数为 $\alpha_F=（9/5）=1.80$，通量的$\alpha_E=（5/3）约为1.67$。对于这些幂律斜率$\alpha_E<2$ ，发现幂律类（尺寸分布）能量范围内的能量积分是有限的，这驳斥了早先在太阳能和恒星纳米耀斑场景的能量预算中提出的发散能量积分的说法。理论FD-SOC模型用经典扩散的宏观标度律很好地近似了微观元胞自动机模型。通用标度定律预测了许多天体物理现象的大小分布，如太阳耀斑、恒星耀斑、日冕物质抛射（CME）、极光、blazars、银河系快速射电爆发（FRB）、活动星系核（AGN）、伽马射线爆发（GRB）、软伽马射线中继器（SGB）和黑洞系统（BH），而相干太阳射电爆发、随机射电爆发、太阳高能粒子（SEP）、宇宙射线和脉冲星故障需要非标准SOC模型。 et.al.|[2412.03481](http://arxiv.org/abs/2412.03481)|null|
 
-<p align=right>(<a href=#updated-on-20241205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241206>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-11-21**|**CoNFiLD-inlet: Synthetic Turbulence Inflow Using Generative Latent Diffusion Models with Neural Fields**|涡流解析湍流模拟需要随机流入条件，以准确复制复杂的多尺度湍流结构。传统的基于再循环的方法依赖于计算昂贵的前体模拟，而现有的合成流入发生器往往无法再现真实的湍流相干结构。深度学习（DL）的最新进展为流入湍流生成开辟了新的可能性，但许多基于DL的方法依赖于确定性、自回归框架，容易产生误差累积，导致长期预测的鲁棒性较差。在这项工作中，我们提出了CoNFiLD入口，这是一种基于DL的新型流入湍流发生器，它将扩散模型与条件神经场（CNF）编码的潜在空间相结合，以产生逼真的随机流入湍流。通过使用雷诺数对流入条件进行参数化，CoNFiLD入口在很宽的雷诺数范围内（ $Re_tau$在$10^3$和$10^4$ 之间）有效地推广，而不需要重新训练或参数调整。通过直接数值模拟（DNS）和壁模型大涡模拟（WMLES）中的先验和后验测试进行的全面验证证明了其高保真度、鲁棒性和可扩展性，使其成为流入湍流合成的高效和通用解决方案。 et.al.|[2411.14378](http://arxiv.org/abs/2411.14378)|null|
 |**2024-11-20**|**FAST-Splat: Fast, Ambiguity-Free Semantics Transfer in Gaussian Splatting**|我们提出了FAST Splat，用于快速、无歧义的语义高斯Splatting，旨在解决现有语义高斯Splatting方法的主要局限性，即：训练和渲染速度慢；内存使用率高；语义对象定位模糊。在推导FAST Splat时，我们将开放词汇语义高斯Splatting表述为将闭集语义蒸馏扩展到开放集（开放词汇）设置的问题，使FAST Splat能够提供精确的语义对象定位结果，即使在用户提供的模糊自然语言查询提示时也是如此。此外，通过最大限度地利用高斯散斑场景表示的显式形式，FAST Splat保留了高斯散斑的显著训练和渲染速度。具体来说，虽然现有的语义高斯散斑方法将语义提取到一个单独的神经场中或利用神经模型进行降维，但FAST Splat直接用特定的语义代码增强每个高斯分布，保留了高斯散斑相对于神经场方法的训练、渲染和内存使用优势。与先前的方法不同，这些高斯特定的语义代码以及哈希表使语义相似性能够通过开放词汇表用户提示进行测量，并进一步使FAST Splat能够用明确的语义对象标签和3D掩码进行响应。在实验中，我们证明，与最好的竞争语义高斯Splatting方法相比，FAST Splat的训练速度快4倍至6倍，数据预处理步骤快13倍，渲染速度快18倍至75倍，所需GPU内存大约小3倍。此外，与现有方法相比，FAST Splat实现了相对相似或更好的语义分割性能。审查期结束后，我们将提供项目网站和代码库的链接。 et.al.|[2411.13753](http://arxiv.org/abs/2411.13753)|null|
 
-<p align=right>(<a href=#updated-on-20241205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241206>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
