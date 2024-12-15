@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.12.14
+## Updated on 2024.12.15
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-12-10**|**ResGS: Residual Densification of 3D Gaussian for Efficient Detail Recovery**|最近，3D高斯散斑（3D-GS）在新颖的视图合成中占主导地位，实现了高保真度和效率。然而，它往往难以捕捉到丰富的细节和完整的几何形状。我们的分析强调了3D-GS的一个关键局限性，这是由致密化中的固定阈值引起的，该阈值在阈值变化时平衡了几何覆盖与细节恢复。为了解决这个问题，我们引入了一种新的致密化方法，残差分割，该方法添加了一个降尺度高斯作为残差。我们的方法能够自适应地检索细节并补充缺失的几何体，同时实现渐进式细化。为了进一步支持这种方法，我们提出了一个名为ResGS的管道。具体来说，我们整合了一个高斯图像金字塔进行渐进式监督，并实施了一个选择方案，该方案优先考虑粗高斯图像随时间的致密化。大量实验表明，我们的方法达到了SOTA渲染质量。通过将我们的残差分割应用于各种3D-GS变体，可以实现一致的性能改进，强调其在基于3D GS的应用中的多功能性和更广泛的应用潜力。 et.al.|[2412.07494](http://arxiv.org/abs/2412.07494)|null|
 |**2024-12-10**|**EventSplat: 3D Gaussian Splatting from Moving Event Cameras for Real-time Rendering**|我们介绍了一种通过高斯散斑在新的视图合成中使用事件相机数据的方法。事件摄像机提供卓越的时间分辨率和高动态范围。利用这些功能，我们可以在快速相机运动的情况下有效地应对新的视图合成挑战。为了初始化优化过程，我们的方法使用事件到视频模型中编码的先验知识。我们还使用样条插值来获得沿事件相机轨迹的高质量姿态。这提高了快速移动相机的重建质量，同时克服了传统上与基于事件的神经辐射场（NeRF）方法相关的计算限制。我们的实验评估表明，我们的结果比现有的基于事件的NeRF方法实现了更高的视觉保真度和更好的性能，同时渲染速度快了一个数量级。 et.al.|[2412.07293](http://arxiv.org/abs/2412.07293)|null|
 
-<p align=right>(<a href=#updated-on-20241214>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241215>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-12-12**|**Synchrotron X-Ray Multi-Projection Imaging for Multiphase Flow**|多相流以分散在流体中的颗粒、气泡或液滴为特征，在自然和工业过程中无处不在。在不引入扰动的情况下，在非常小的尺度上研究4D（3D+时间）中密集分散的流动是具有挑战性的，但对于理解它们的宏观行为至关重要。X射线的穿透力和同步辐射设施等先进X射线源提供的通量为满足这一需求提供了机会。然而，这些设施目前的X射线方法需要旋转样品以获得4D信息，从而干扰了流动。在这里，我们展示了使用X射线多投影成像（XMPI）的潜力，这是一种在4D中暂时解析任何密集颗粒悬浮流的新技术，同时消除了样品旋转的需要。通过同时从多个观察方向获取微粒种子流的图像，我们可以确定它们在简单液体和高密度不透明的复杂流体（如血液）中流动时的瞬时三维位置。随着人工智能支持的稀疏投影4D重建的最新进展，这种方法为高速无旋转4D显微断层摄影创造了新的机会，开辟了一个新的时空前沿。借助XMPI，现在可以跟踪稠密悬浮液中单个微粒的运动，甚至可以扩展到湍流的混沌领域。 et.al.|[2412.09368](http://arxiv.org/abs/2412.09368)|null|
 |**2024-12-12**|**Hyperbolic-constraint Point Cloud Reconstruction from Single RGB-D Images**|重建所需的对象和场景一直是3D计算机视觉的主要目标。单视点云重建因其成本低、结果准确而成为一种流行的技术。然而，单视图重建方法通常依赖于昂贵的CAD模型和复杂的几何先验。有效利用关于数据的先验知识仍然是一个挑战。本文将双曲空间引入三维点云重建，使模型能够以低失真表示和理解点云中的复杂层次结构。我们在先前方法的基础上，提出了双曲切弗距离和正则化三重态损失，以增强部分和完整点云之间的关系。此外，我们设计了自适应边界条件，以提高模型对3D结构的理解和重建。我们的模型优于大多数现有模型，消融研究证明了我们的模型及其组件的重要性。实验结果表明，我们的方法显著提高了特征提取能力。我们的模型在3D重建任务中表现出色。 et.al.|[2412.09055](http://arxiv.org/abs/2412.09055)|null|
 
-<p align=right>(<a href=#updated-on-20241214>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241215>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-12-12**|**Probing a diffuse flux of axion-like particles from galactic supernovae with neutrino water Cherenkov detectors**|在这篇文章中，我们声称，在核心坍缩超新星（SNe）中，可以以半相对论速度产生具有MeV质量的轴子状粒子（ALP），从而产生弥漫的星系通量。我们证明，这些ALP可以通过 $a\，p\rightarrow p\，\gamma$相互作用在中微子-水切伦科夫探测器中检测到。使用超级神冈数据，我们推导出了ALP参数空间的新约束，不包括ALP质量在1-80美元MeV范围内和ALP质子耦合在6美元×10美元之间的冷却边界以上的ALP质子偶联中跨越一个数量级以上的区域^{-6}-2\×10^{-4}$。我们证明，未来的超级神冈探测器将能够探测小至2美元×10^{-6}$ 的耦合，完全关闭SN 1987A冷却边界以上的允许区域。 et.al.|[2412.09595](http://arxiv.org/abs/2412.09595)|null|
 |**2024-12-12**|**Neural LightRig: Unlocking Accurate Object Normal and Material Estimation with Multi-Light Diffusion**|由于其欠约束的性质，从单个图像中恢复对象的几何形状和材质具有挑战性。在本文中，我们提出了神经LightRig，这是一种新的框架，通过利用2D扩散先验的辅助多光照条件来增强内在估计。具体来说，1）我们首先利用大规模扩散模型中的照明先验，在具有专用设计的合成再照明数据集上构建我们的多光扩散模型。该扩散模型生成多个一致的图像，每个图像由不同方向的点光源照射。2） 通过使用这些不同的光照图像来降低估计的不确定性，我们训练了一个具有U-Net骨干的大型G缓冲区模型，以准确预测表面法线和材料。大量实验证实，我们的方法明显优于最先进的方法，能够实现精确的表面法线和PBR材料估计，并具有生动的重新照明效果。代码和数据集可在我们的项目页面上找到，网址为https://projects.zxhezexin.com/neural-lightrig. et.al.|[2412.09593](http://arxiv.org/abs/2412.09593)|null|
 
-<p align=right>(<a href=#updated-on-20241214>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241215>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-04**|**Sparse-view Pose Estimation and Reconstruction via Analysis by Generative Synthesis**|推断一组多视图图像背后的3D结构通常需要解决两个相互依赖的任务——精确的3D重建需要精确的相机姿态，预测相机姿态依赖于（隐式或显式）对底层3D进行建模。经典的综合分析框架将这一推断视为一种联合优化，旨在解释观察到的像素，最近的实例通过基于梯度下降的初始姿态估计的姿态细化来学习表达性的3D表示（例如神经场）。然而，给定一组稀疏的观测视图，观测可能无法提供足够的直接证据来获得完整准确的3D。此外，姿势估计中的大误差可能不容易纠正，并可能进一步降低推断的3D。为了在这种具有挑战性的设置中实现稳健的3D重建和姿态估计，我们提出了SparseAGS，这是一种通过以下方式调整这种综合分析方法的方法：a）将基于新视图合成的生成先验与光度目标结合起来，以提高推断的3D的质量，b）明确地推理异常值，并使用基于连续优化策略的离散搜索来纠正它们。我们结合几个现成的姿态估计系统，在真实世界和合成数据集中验证我们的框架作为初始化。我们发现，它显著提高了基础系统的姿态精度，同时产生了高质量的3D重建，其效果优于当前多视图重建基线的结果。 et.al.|[2412.03570](http://arxiv.org/abs/2412.03570)|null|
 |**2024-12-04**|**RoDyGS: Robust Dynamic Gaussian Splatting for Casual Videos**|动态视图合成（DVS）近年来取得了显著进展，在降低计算成本的同时实现了高保真渲染。尽管取得了进展，但从休闲视频中优化动态神经场仍然具有挑战性，因为这些视频不提供直接的3D信息，如相机轨迹或底层场景几何形状。在这项工作中，我们介绍了RoDyGS，这是一个用于从休闲视频中动态高斯散布的优化管道。它通过分离动态和静态图元有效地学习场景的运动和底层几何，并通过结合运动和几何正则化项确保学习到的运动和几何在物理上是合理的。我们还介绍了一个全面的基准测试Kubric MRig，它提供了广泛的相机和物体运动以及同时的多视图捕捉，这是以前基准测试中没有的功能。实验结果表明，与现有的无姿态静态神经场相比，所提出的方法明显优于之前的无姿态动态神经场，并实现了具有竞争力的渲染质量。代码和数据可在以下网址公开获取https://rodygs.github.io/. et.al.|[2412.03077](http://arxiv.org/abs/2412.03077)|null|
 
-<p align=right>(<a href=#updated-on-20241214>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241215>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
