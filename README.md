@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.12.20
+## Updated on 2024.12.21
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-12-17**|**CATSplat: Context-Aware Transformer with Spatial Guidance for Generalizable 3D Gaussian Splatting from A Single-View Image**|最近，基于3D高斯散斑的可推广前馈方法因其使用有限资源重建3D场景的潜力而受到广泛关注。这些方法仅从单次前向通过中的少数图像创建由每像素3D高斯基元参数化的3D辐射场。然而，与受益于跨视图对应的多视图方法不同，使用单视图图像进行3D场景重建仍然是一个探索不足的领域。在这项工作中，我们介绍了CATSplat，这是一种新的基于可推广变换器的框架，旨在突破单眼设置中的固有约束。首先，我们建议利用视觉语言模型的文本指导来补充单个图像中不足的信息。通过交叉注意力结合文本嵌入中的特定场景上下文细节，我们为超越仅依赖视觉线索的上下文感知3D场景重建铺平了道路。此外，我们提倡在单视图设置下利用从3D点特征到全面几何理解的空间引导。使用3D先验，图像特征可以捕获丰富的结构见解，用于在没有多视图技术的情况下预测3D高斯分布。大规模数据集上的大量实验证明了CATSplat在单视图3D场景重建中的最先进性能，以及高质量的新颖视图合成。 et.al.|[2412.12906](http://arxiv.org/abs/2412.12906)|null|
 |**2024-12-17**|**HyperGS: Hyperspectral 3D Gaussian Splatting**|我们介绍了HyperGS，这是一种基于新的潜在3D高斯散斑（3DGS）技术的高光谱新视图合成（HNVS）的新框架。我们的方法通过对多视图3D高光谱数据集中的材料属性进行编码，实现了同时进行空间和光谱渲染。HyperGS以更高的精度和速度从任意角度重建高保真视图，优于当前现有的方法。为了应对高维数据的挑战，我们在学习的潜在空间中进行视图合成，结合了逐像素自适应密度函数和修剪技术，以提高训练的稳定性和效率。此外，我们介绍了第一个HNVS基准，基于最新的SOTA RGB-NVS技术实现了许多新的基线，以及之前关于HNVS的少量工作。我们通过对真实和模拟的高光谱场景进行广泛评估，证明了HyperGS的鲁棒性，与之前发布的模型相比，其精度提高了14db。 et.al.|[2412.12849](http://arxiv.org/abs/2412.12849)|null|
 
-<p align=right>(<a href=#updated-on-20241220>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241221>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-12-18**|**Prompting Depth Anything for 4K Resolution Accurate Metric Depth Estimation**|提示在为特定任务释放语言和视觉基础模型的力量方面发挥着至关重要的作用。我们首次将提示引入深度基础模型，创建了一个新的度量深度估计范式，称为提示深度任意。具体来说，我们使用低成本的激光雷达作为提示，引导Depth Anything模型进行精确的度量深度输出，实现高达4K的分辨率。我们的方法以简洁的快速融合设计为中心，该设计在深度解码器内集成了多个尺度的激光雷达。为了应对包含LiDAR深度和精确GT深度的有限数据集带来的训练挑战，我们提出了一种可扩展的数据管道，包括合成数据LiDAR模拟和真实数据伪GT深度生成。我们的方法为ARKitScenes和ScanNet++数据集设定了新的技术水平，并有利于下游应用，包括3D重建和通用机器人抓取。 et.al.|[2412.14015](http://arxiv.org/abs/2412.14015)|null|
 |**2024-12-18**|**MobiFuse: A High-Precision On-device Depth Perception System with Multi-Data Fusion**|我们介绍MobiFuse，这是一种移动设备上的高精度深度感知系统，结合了双RGB和飞行时间（ToF）摄像头。为了实现这一目标，我们利用各种环境因素的物理原理提出了深度误差指示（DEI）模态，表征了ToF和立体匹配的深度误差。此外，我们采用渐进式融合策略，将ToF和立体深度图中的几何特征与DEI模态中的深度误差特征合并，以创建精确的深度图。此外，我们创建了一个新的ToF立体深度数据集RealToF，用于训练和验证我们的模型。我们的实验表明，MobiFuse在深度测量误差方面显著降低了77.7%，优于基线。它还展示了对不同数据集的强大泛化能力，并证明了在两个下游任务中的有效性：3D重建和3D分割。MobiFuse在现实场景中的演示视频可在去标识的YouTube链接上获得(https://youtu.be/jy-Sp7T1LVs). et.al.|[2412.13848](http://arxiv.org/abs/2412.13848)|null|
 
-<p align=right>(<a href=#updated-on-20241220>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241221>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-12-19**|**Option Pricing with a Compound CARMA(p,q)-Hawkes**|最近引入了一种具有连续时间自回归滑动平均强度过程的自激点过程，称为CARMA（p，q）-Hokees模型。该模型通过用CARMA（p，q）模型替换Ornstein-Uhlenbeck强度来推广霍克斯过程，其中相关的状态过程由计数过程本身驱动。所提出的模型保留了与霍克斯过程相同的可处理性，但它可以再现在几个市场数据中观察到的更复杂的时变结构。本文基于CARMA（p，q）Hawkes模型提出了一种新的资产价格动态模型。它是使用具有随机跳跃大小的复合版本构建的，该跳跃大小独立于计数和强度过程，可以用作纯跳跃和（随机波动性）跳跃扩散过程的主要块。欧洲期权定价的数值结果表明，新模型可以复制金融市场中观察到的波动微笑。通过实证分析，我们强调了高阶自回归和移动平均参数在期权定价中的作用。 et.al.|[2412.15172](http://arxiv.org/abs/2412.15172)|null|
 |**2024-12-19**|**OnlineVPO: Align Video Diffusion Model with Online Video-Centric Preference Optimization**|近年来，文本到视频（T2V）生成领域取得了重大进展。尽管取得了这一进展，但理论进步和实际应用之间仍存在差距，图像质量下降和闪烁伪影等问题加剧了这一差距。通过反馈学习增强视频扩散模型（VDM）的最新进展显示出有希望的结果。然而，这些方法仍然存在明显的局限性，例如反馈不一致和可扩展性较差。为了解决这些问题，我们引入了OnlineVPO，这是一种专为视频扩散模型量身定制的更有效的偏好学习方法。我们的方法有两个新颖的设计，首先，我们没有直接使用基于图像的奖励反馈，而是利用在合成数据上训练的视频质量评估（VQA）模型作为奖励模型，在视频扩散模型上提供分布和模态对齐的反馈。此外，我们引入了一种在线DPO算法，以解决现有视频偏好学习框架中的非策略优化和可扩展性问题。通过采用视频奖励模型实时提供简洁的视频反馈，OnlineVPO提供了有效和高效的偏好指导。对开源视频扩散模型的广泛实验表明，OnlineVPO是一种简单有效、更重要的是可扩展的视频扩散模型偏好学习算法，为该领域的未来发展提供了有价值的见解。 et.al.|[2412.15159](http://arxiv.org/abs/2412.15159)|null|
 
-<p align=right>(<a href=#updated-on-20241220>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241221>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-06**|**Physics-informed reduced order model with conditional neural fields**|本研究提出了用于降阶建模（CNF-ROM）框架的条件神经场，以近似参数化偏微分方程（PDE）的解。该方法将用于随时间建模潜在动力学的参数神经ODE（PNODE）与从相应潜在状态重建PDE解的解码器相结合。我们为CNF-ROM引入了一个物理知情学习目标，其中包括两个关键组成部分。首先，该框架使用基于坐标的神经网络通过自动微分计算空间导数并应用时间导数的链式规则来计算和最小化PDE残差。其次，使用近似距离函数（ADF）施加精确的初始和边界条件（IC/BC）[Sukumar和Srivastava，CMAME，2022]。然而，当ADFs的二阶或高阶导数在边界的连接点处变得不稳定时，ADFs引入了一种权衡。为了解决这个问题，我们引入了一个受[Gladstone等人，NeurIPS ML4PS研讨会，2022年]启发的辅助网络。我们的方法通过参数外推和插值、时间外推以及与解析解的比较得到了验证。 et.al.|[2412.05233](http://arxiv.org/abs/2412.05233)|null|
 |**2024-12-06**|**Spatially-Adaptive Hash Encodings For Neural Surface Reconstruction**|位置编码是神经场景重建方法的一个常见组成部分，它提供了一种将神经场的学习偏向于更粗糙或更精细表示的方法。当前的神经表面重建方法使用“一刀切”的编码方法，在所有场景中选择一组固定的编码函数，从而产生偏差。当前最先进的表面重建方法利用基于网格的多分辨率哈希编码来恢复高细节几何。我们提出了一种学习方法，通过掩盖以单独网格分辨率存储的特征的贡献，允许网络根据空间选择其编码基础。由此产生的空间自适应方法允许网络在不引入噪声的情况下适应更宽的频率范围。我们在标准基准曲面重建数据集上测试了我们的方法，并在两个基准数据集上实现了最先进的性能。 et.al.|[2412.05179](http://arxiv.org/abs/2412.05179)|null|
 
-<p align=right>(<a href=#updated-on-20241220>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241221>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
