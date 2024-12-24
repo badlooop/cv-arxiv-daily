@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.12.23
+## Updated on 2024.12.24
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-12-18**|**Turbo-GS: Accelerating 3D Gaussian Fitting for High-Quality Radiance Fields**|新颖的视图合成是计算机视觉中的一个重要问题，在3D重建、混合现实和机器人技术中都有应用。最近的方法，如3D高斯散斑（3DGS），已成为这项任务的首选方法，实时提供高质量的新颖视图。然而，3DGS模型的训练时间很慢，对于200个视图的场景，通常需要30分钟。相比之下，我们的目标是通过训练更少的步骤来减少优化时间，同时保持高渲染质量。具体来说，我们结合了位置误差和外观误差的指导，以实现更有效的致密化。为了平衡添加新高斯和拟合旧高斯之间的速度，我们开发了一种收敛感知的预算控制机制。此外，为了使致密化过程更加可靠，我们选择性地添加了来自主要访问区域的新高斯分布。通过这些设计，我们将高斯优化步骤减少到之前方法的三分之一，同时实现了相当甚至更好的新颖视图渲染质量。为了进一步促进4K分辨率图像的快速拟合，我们引入了一种基于膨胀的渲染技术。我们的方法Turbo GS可以加速典型场景的优化，并在标准数据集上很好地扩展到高分辨率（4K）场景。通过广泛的实验，我们表明我们的方法在保持质量的同时，在优化方面明显快于其他方法。项目页面：https://ivl.cs.brown.edu/research/turbo-gs. et.al.|[2412.13547](http://arxiv.org/abs/2412.13547)|null|
 |**2024-12-17**|**StreetCrafter: Street View Synthesis with Controllable Video Diffusion Models**|本文旨在解决从车辆传感器数据中合成逼真视图的问题。神经场景表示的最新进展在渲染高质量的自动驾驶场景方面取得了显著成功，但随着视点偏离训练轨迹，性能会显著下降。为了缓解这个问题，我们引入了StreetCrafter，这是一种新颖的可控视频扩散模型，它利用LiDAR点云渲染作为像素级条件，充分利用生成先验进行新颖的视图合成，同时保持精确的相机控制。此外，像素级激光雷达条件的利用使我们能够对目标场景进行精确的像素级编辑。此外，StreetCrafter的生成先验可以有效地整合到动态场景表示中，以实现实时渲染。在Waymo Open Dataset和PandaSet上的实验表明，我们的模型能够灵活控制视点变化，扩大视图合成区域以满足渲染需求，优于现有方法。 et.al.|[2412.13188](http://arxiv.org/abs/2412.13188)|null|
 
-<p align=right>(<a href=#updated-on-20241223>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241224>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-12-18**|**Prompting Depth Anything for 4K Resolution Accurate Metric Depth Estimation**|提示在为特定任务释放语言和视觉基础模型的力量方面发挥着至关重要的作用。我们首次将提示引入深度基础模型，创建了一个新的度量深度估计范式，称为提示深度任意。具体来说，我们使用低成本的激光雷达作为提示，引导Depth Anything模型进行精确的度量深度输出，实现高达4K的分辨率。我们的方法以简洁的快速融合设计为中心，该设计在深度解码器内集成了多个尺度的激光雷达。为了应对包含LiDAR深度和精确GT深度的有限数据集带来的训练挑战，我们提出了一种可扩展的数据管道，包括合成数据LiDAR模拟和真实数据伪GT深度生成。我们的方法为ARKitScenes和ScanNet++数据集设定了新的技术水平，并有利于下游应用，包括3D重建和通用机器人抓取。 et.al.|[2412.14015](http://arxiv.org/abs/2412.14015)|null|
 |**2024-12-18**|**MobiFuse: A High-Precision On-device Depth Perception System with Multi-Data Fusion**|我们介绍MobiFuse，这是一种移动设备上的高精度深度感知系统，结合了双RGB和飞行时间（ToF）摄像头。为了实现这一目标，我们利用各种环境因素的物理原理提出了深度误差指示（DEI）模态，表征了ToF和立体匹配的深度误差。此外，我们采用渐进式融合策略，将ToF和立体深度图中的几何特征与DEI模态中的深度误差特征合并，以创建精确的深度图。此外，我们创建了一个新的ToF立体深度数据集RealToF，用于训练和验证我们的模型。我们的实验表明，MobiFuse在深度测量误差方面显著降低了77.7%，优于基线。它还展示了对不同数据集的强大泛化能力，并证明了在两个下游任务中的有效性：3D重建和3D分割。MobiFuse在现实场景中的演示视频可在去标识的YouTube链接上获得(https://youtu.be/jy-Sp7T1LVs). et.al.|[2412.13848](http://arxiv.org/abs/2412.13848)|null|
 
-<p align=right>(<a href=#updated-on-20241223>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241224>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-12-20**|**Probing lactate exchange and compartmentation in Gray Matter via time-dependent diffusion-weighted MRS**|乳酸在大脑中至关重要，因为它参与神经元活动和记忆形成。这被认为与星形胶质细胞-神经元乳酸穿梭假说（ANLS）有关，该假说已经争论了30年，尤其是因为很难在体内测量乳酸的分隔和交换。特别是，虽然ANLS需要通过细胞外空间转移乳酸，但细胞内/细胞外交换率仍然未知。在这项工作中，我们建议使用时间依赖性扩散MRS来评估体内小鼠脑灰质中的乳酸交换和乳酸分区。首先，通过比较乳酸时间依赖性扩散率和峰度与水和纯细胞内代谢物（分别表现出“快速”和“无”交换特征）的扩散率和峭度，我们估计乳酸交换缓慢（即数百毫秒左右）。然后，使用忽略交换的生物物理模型，我们估计了与ANLS假说相容的细胞外、神经元和星形胶质细胞乳酸分数。 et.al.|[2412.16014](http://arxiv.org/abs/2412.16014)|null|
 |**2024-12-20**|**Convergence of nonhomogeneous Hawkes processes and Feller random measures**|我们考虑了一系列霍克斯过程，其激发措施可能取决于生成，并研究了其在接近不稳定极限状态下的标度极限。通过非线性卷积方程表征的极限随机测度形成了一个族，该族由一对参数化，该对由局部有限测度和正实线上的几何无穷可分概率分布组成。这些度量可以被解释为Feller扩散和分数Feller（CIR）过程的推广，但也允许与最多 $1$的一般L'evy型算子相关的“驱动噪声”，包括任何阶$\alpha>0$ 的分数导数（形式上对应于可能为负的Hurst参数）。 et.al.|[2412.15999](http://arxiv.org/abs/2412.15999)|null|
 
-<p align=right>(<a href=#updated-on-20241223>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241224>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-11**|**Combining Neural Fields and Deformation Models for Non-Rigid 3D Motion Reconstruction from Partial Data**|我们介绍了一种新的数据驱动方法，用于从非刚性变形形状的非结构化和潜在的部分观测中重建时间相干的3D运动。我们的目标是为经历近等距变形的形状（如穿着宽松衣服的人）实现高保真运动重建。我们工作的关键新颖之处在于它能够将隐式形状表示与显式基于网格的变形模型相结合，从而在不依赖于参数化形状模型或解耦形状和运动的情况下实现详细和时间连贯的运动重建。每一帧都表示为从特征空间解码的神经场，在特征空间中，随着时间的推移，观测值被融合在一起，从而保留了输入数据中存在的几何细节。时间连贯性是通过应用于神经场中基础表面的相邻帧之间的近等距变形约束来实现的。我们的方法优于最先进的方法，正如它在从单眼深度视频重建的人类和动物运动序列中的应用所证明的那样。 et.al.|[2412.08511](http://arxiv.org/abs/2412.08511)|null|
 |**2024-12-08**|**Unsupervised Multi-Parameter Inverse Solving for Reducing Ring Artifacts in 3D X-Ray CBCT**|由于X射线探测器的非理想响应，环形伪影在3D锥束计算机断层扫描（CBCT）中很普遍，严重降低了成像质量和可靠性。当前最先进的（SOTA）环伪影减少（RAR）算法依赖于广泛的成对CT样本进行监督学习。虽然有效，但这些方法并不能完全捕捉到环形伪影的物理特征，导致应用于域外数据时性能明显下降。此外，它们在3D CBCT中的应用受到高内存需求的限制。在这项工作中，我们介绍了\textbf{Riner}，这是一种将3D CBCT RAR表述为多参数逆问题的无监督方法。我们的核心创新是将X射线探测器响应参数化为微分物理模型中的可解变量。通过联合优化神经场以表示无伪影的CT图像，并直接从原始测量值估计响应参数，Riner消除了对外部训练数据的需求。此外，它还可适应不同的CT几何形状，提高了实用性。在模拟和真实数据集上的实证结果表明，Riner在性能上优于现有的SOTA RAR方法。 et.al.|[2412.05853](http://arxiv.org/abs/2412.05853)|null|
 
-<p align=right>(<a href=#updated-on-20241223>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241224>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
