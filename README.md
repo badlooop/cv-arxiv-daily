@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.12.29
+## Updated on 2024.12.30
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -26,12 +26,12 @@
 |**2024-12-23**|**Editing Implicit and Explicit Representations of Radiance Fields: A Survey**|近年来，神经辐射场（NeRF）通过提供一种新的体积表示法彻底改变了新颖的视图合成，这种表示法结构紧凑，可提供高质量的图像渲染。然而，编辑这些辐射场的方法比NeRF其他方面的许多改进发展得慢。随着受NeRF启发的基于辐射场的替代表示的最新发展，以及文本到图像模型在全球范围内的普及，出现了许多新的机会和策略来提供辐射场编辑。在本文中，我们对文献中NeRF和其他类似辐射场表示的不同编辑方法进行了全面的调查。我们提出了一种新的分类法，用于根据编辑方法对现有作品进行分类，回顾了开创性的模型，反思了辐射场编辑的当前和潜在的新应用，并在编辑选项和性能方面比较了最先进的方法。 et.al.|[2412.17628](http://arxiv.org/abs/2412.17628)|null|
 |**2024-12-23**|**Exploring Dynamic Novel View Synthesis Technologies for Cinematography**|新视角合成（NVS）在电影制作中的应用显示出巨大的前景，特别是通过利用神经辐射场（NeRF）和高斯散斑（GS）。这些方法对真实的3D场景进行建模，能够创建由于设置拓扑或昂贵的设备要求而在现实世界中难以捕捉的新镜头。这项创新还提供了电影拍摄的优势，如平滑的相机运动、虚拟重新拍摄、慢动作效果等。本文探讨了动态NVS，旨在促进模型选择过程。我们通过使用各种NVS模型拍摄的短蒙太奇展示了它的潜力。 et.al.|[2412.17532](http://arxiv.org/abs/2412.17532)|null|
 |**2024-12-22**|**GeoTexDensifier: Geometry-Texture-Aware Densification for High-Quality Photorealistic 3D Gaussian Splatting**|3D高斯散点（3DGS）因其逼真和高效的渲染性能，最近在3D导航、虚拟现实（VR）和3D模拟等各个领域引起了广泛关注。3DGS的高质量重建依赖于足够的斑点和这些斑点的合理分布，以适应真实的几何表面和纹理细节，这是一个具有挑战性的问题。我们提出了GeoTexDensifier，这是一种新的几何纹理感知致密化策略，用于重建高质量的高斯斑点，更好地符合场景的几何结构和纹理丰富性。具体来说，我们的GeoTexDensifier框架执行了一种辅助的纹理感知致密化方法，在完全纹理化的区域产生更密集的斑点分布，同时在低纹理区域保持稀疏性，以保持高斯点云的质量。同时，在深度比变化验证检查下，几何感知分割策略采用深度和法线先验来指导分割采样，并滤除初始位置远离其目标拟合的实际几何表面的噪声斑点。在相对单目深度先验的帮助下，这种几何感知验证可以有效地减少散射高斯对最终渲染质量的影响，特别是在纹理较弱或没有足够训练视图的区域。纹理感知致密化和几何感知分裂策略完全结合在一起，以获得一组高质量的高斯斑点。我们在各种数据集上实验了我们的GeoTexDensifier框架，并将我们的新视图合成结果与其他最先进的3DGS方法进行了比较，并进行了详细的定量和定性评估，以证明我们的方法在生成更逼真的3DGS模型方面的有效性。 et.al.|[2412.16809](http://arxiv.org/abs/2412.16809)|null|
-|**2024-12-21**|**Topology-Aware 3D Gaussian Splatting: Leveraging Persistent Homology for Optimized Structural Integrity**|高斯散斑（GS）已成为表示离散体积辐射场的关键技术。它利用独特的参数化来减轻场景优化中的计算需求。这项工作引入了拓扑感知3D高斯散布（Topology GS），它解决了当前方法中的两个关键局限性：由于初始几何覆盖不完整而损害的像素级结构完整性，以及由于优化过程中拓扑约束不足而导致的特征级完整性不足。为了克服这些局限性，拓扑GS引入了一种新的插值策略，即局部持久沃罗诺伊插值（LPVI），以及一个基于持久条形码的拓扑聚焦正则化项，称为PersLoss。LPVI利用持久同源性来指导自适应插值，在保持拓扑结构的同时增强低曲率区域的点覆盖。PersLoss通过约束渲染图像拓扑特征之间的距离，将渲染图像的视觉感知相似性与地面真实性对齐。对三种新型视图合成基准的综合实验表明，拓扑GS在PSNR、SSIM和LPIPS指标方面优于现有方法，同时保持了高效的内存使用。本研究开创了拓扑与3D-GS的集成，为该领域的未来研究奠定了基础。 et.al.|[2412.16619](http://arxiv.org/abs/2412.16619)|**[link](https://github.com/amadeusstq/topology-gs)**|
+|**2024-12-25**|**Topology-Aware 3D Gaussian Splatting: Leveraging Persistent Homology for Optimized Structural Integrity**|高斯散斑（GS）已成为表示离散体积辐射场的关键技术。它利用独特的参数化来减轻场景优化中的计算需求。这项工作引入了拓扑感知3D高斯散布（Topology GS），它解决了当前方法中的两个关键局限性：由于初始几何覆盖不完整而损害的像素级结构完整性，以及由于优化过程中拓扑约束不足而导致的特征级完整性不足。为了克服这些局限性，拓扑GS引入了一种新的插值策略，即局部持久沃罗诺伊插值（LPVI），以及一个基于持久条形码的拓扑聚焦正则化项，称为PersLoss。LPVI利用持久同源性来指导自适应插值，在保持拓扑结构的同时增强低曲率区域的点覆盖。PersLoss通过约束渲染图像拓扑特征之间的距离，将渲染图像的视觉感知相似性与地面真实性对齐。对三种新型视图合成基准的综合实验表明，拓扑GS在PSNR、SSIM和LPIPS指标方面优于现有方法，同时保持了高效的内存使用。本研究开创了拓扑与3D-GS的集成，为该领域的未来研究奠定了基础。 et.al.|[2412.16619](http://arxiv.org/abs/2412.16619)|**[link](https://github.com/amadeusstq/topology-gs)**|
 |**2024-12-20**|**EGSRAL: An Enhanced 3D Gaussian Splatting based Renderer with Automated Labeling for Large-Scale Driving Scene**|3D高斯散点（3D GS）因其更快的渲染速度和高质量的新颖视图合成而广受欢迎。一些研究人员探索了使用3D GS重建驾驶场景。然而，这些方法通常依赖于各种数据类型，如深度图、3D框和运动物体的轨迹。此外，合成图像缺乏注释限制了它们在下游任务中的直接应用。为了解决这些问题，我们提出了EGSRAL，这是一种基于3D GS的方法，仅依赖于训练图像而不需要额外的注释。EGSRAL增强了3D GS对动态对象和静态背景建模的能力，并引入了一种用于自动标记的新型适配器，基于现有注释生成相应的注释。我们还为vanilla 3D GS提出了一种分组策略，以解决渲染大规模复杂场景时的透视问题。我们的方法在多个数据集上实现了最先进的性能，而无需任何额外的注释。例如，在nuScenes数据集上，PSNR度量达到29.04。此外，我们的自动标签可以显著提高2D/3D检测任务的性能。代码可在以下网址获得https://github.com/jiangxb98/EGSRAL. et.al.|[2412.15550](http://arxiv.org/abs/2412.15550)|**[link](https://github.com/jiangxb98/egsral)**|
 |**2024-12-19**|**SolidGS: Consolidating Gaussian Surfel Splatting for Sparse-View Surface Reconstruction**|高斯飞溅在新颖的视图合成和多视图图像的表面重建方面都取得了令人印象深刻的改进。然而，目前的方法仍然难以使用高斯飞溅从稀疏的视图输入图像中重建高质量的表面。在本文中，我们提出了一种名为SolidGS的新方法来解决这个问题。我们观察到，由于几何渲染中高斯函数的特性，重建的几何在多个视图之间可能会严重不一致。这促使我们通过采用更坚实的核函数来整合所有高斯函数，从而有效地提高了曲面重建质量。在几何正则化和单目法线估计的额外帮助下，我们的方法在稀疏视图曲面重建方面取得了比广泛使用的DTU、Tanks和Temples以及LLFF数据集上的所有高斯溅射方法和神经场方法更优越的性能。 et.al.|[2412.15400](http://arxiv.org/abs/2412.15400)|null|
 |**2024-12-19**|**EnvGS: Modeling View-Dependent Appearance with Environment Gaussian**|从2D图像重建现实世界场景中的复杂反射对于实现逼真的新颖视图合成至关重要。利用环境贴图对远距离照明的反射进行建模的现有方法往往难以处理高频反射细节，并且无法考虑近场反射。在这项工作中，我们介绍了EnvGS，这是一种新的方法，它采用一组高斯基元作为显式的3D表示来捕获环境的反射。这些环境高斯基元与基础高斯基元相结合，以对整个场景的外观进行建模。为了高效地渲染这些环境高斯基元，我们开发了一种基于光线跟踪的渲染器，该渲染器利用GPU的RT内核进行快速渲染。这使我们能够共同优化模型，以实现高质量的重建，同时保持实时渲染速度。来自多个真实世界和合成数据集的结果表明，我们的方法产生了更详细的反射，在实时新颖视图合成中实现了最佳的渲染质量。 et.al.|[2412.15215](http://arxiv.org/abs/2412.15215)|null|
 
-<p align=right>(<a href=#updated-on-20241229>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241230>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-12-19**|**Generative Multiview Relighting for 3D Reconstruction under Extreme Illumination Variation**|从不同环境中拍摄的照片中重建物体的几何形状和外观是困难的，因为照明和物体外观在捕获的图像中会有所不同。对于外观强烈依赖于观察方向的镜面反射物体来说，这尤其具有挑战性。一些先前的方法使用每图像嵌入向量来模拟图像之间的外观变化，而另一些方法则使用基于物理的渲染来恢复材质和每图像照明。考虑到输入光照的显著变化，这种方法无法忠实地恢复与视图相关的外观，并且往往会产生大部分漫反射结果。我们提出了一种从不同照明下拍摄的图像重建对象的方法，该方法首先使用多视图重新照明扩散模型在单个参考照明下重新照明图像，然后使用对重新照明图像之间剩余的小不一致性具有鲁棒性的辐射场架构重建对象的几何形状和外观。我们在合成和真实数据集上验证了我们提出的方法，并证明它在从极端光照变化下拍摄的图像重建高保真外观方面大大优于现有技术。此外，我们的方法在恢复视图相关的“闪亮”外观方面特别有效，这些外观无法通过现有方法重建。 et.al.|[2412.15211](http://arxiv.org/abs/2412.15211)|null|
 |**2024-12-20**|**GURecon: Learning Detailed 3D Geometric Uncertainties for Neural Surface Reconstruction**|神经表面表示在新颖的视图合成和3D重建领域取得了显著的成功。然而，在没有地面真实网格的情况下评估3D重建的几何质量仍然是一个重大挑战，因为其基于渲染的优化过程以及外观和几何体与光度损失的纠缠学习。本文提出了一种新的框架，即GURecon，它基于几何一致性为神经曲面建立了一个几何不确定性场。与依赖于基于渲染的测量的现有方法不同，GURecon为重建表面建模了一个连续的3D不确定性场，并通过在线蒸馏方法学习，而无需引入真实的几何信息进行监督。此外，为了减轻光照对几何一致性的干扰，学习并利用解耦场来微调不确定性场。在各种数据集上的实验证明了GURecon在建模3D几何不确定性方面的优越性，以及它对各种神经表面表示的即插即用扩展和对增量重建等下游任务的改进。代码和补充材料可在项目网站上获得：https://zju3dv.github.io/GURecon/. et.al.|[2412.14939](http://arxiv.org/abs/2412.14939)|null|
 
-<p align=right>(<a href=#updated-on-20241229>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241230>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-12-24**|**3DEnhancer: Consistent Multi-View Diffusion for 3D Enhancement**|尽管神经渲染取得了进展，但由于缺乏高质量的3D数据集和多视图扩散模型的固有局限性，视图合成和3D模型生成仅限于低分辨率和次优的多视图一致性。在这项研究中，我们提出了一种新的3D增强管道，称为3DEnhancer，它采用多视图潜在扩散模型来增强粗略的3D输入，同时保持多视图的一致性。我们的方法包括一个姿态感知编码器和一个基于扩散的去噪器，用于细化低质量的多视图图像，以及数据增强和一个具有极线聚合的多视图注意力模块，以保持视图之间一致的高质量3D输出。与现有的基于视频的方法不同，我们的模型支持无缝的多视图增强，提高了不同视角的连贯性。广泛的评估表明，3DEnhancer的性能明显优于现有的方法，可以增强多视图增强和每个实例的3D优化任务。 et.al.|[2412.18565](http://arxiv.org/abs/2412.18565)|null|
 |**2024-12-24**|**On the fractional approach to quadratic nonlinear parabolic systems**|我们介绍了一个由拉普拉斯算子的分数幂定义的具有二次非线性项和扩散项的抛物方程的一般耦合系统。我们开发了一种方法，在Sobolev空间的强拓扑中建立分数扩散情况到经典扩散情况的严格收敛性，其显式收敛率揭示了一些意想不到的现象。这些结果适用于一般系统中包含的几个相关的现实世界模型，如Navier-Stokes方程、磁流体动力学方程、Boussinesq系统和Keller-Segel系统。对于这些特定的模型，这种分数方法是由之前的数值和实验研究进一步推动的。 et.al.|[2412.18473](http://arxiv.org/abs/2412.18473)|null|
 
-<p align=right>(<a href=#updated-on-20241229>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241230>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-12**|**PBR-NeRF: Inverse Rendering with Physics-Based Neural Fields**|我们使用基于物理的渲染（PBR）理论的神经辐射场（NeRF）方法来解决3D重建中的不适定逆渲染问题，称为PBR-NeRF。我们的方法解决了大多数NeRF和3D高斯散斑方法的一个关键局限性：它们在不建模场景材质和照明的情况下估计与视图相关的外观。为了解决这一局限性，我们提出了一种能够联合估计场景几何形状、材质和照明的逆渲染（IR）模型。我们的模型建立在最近基于NeRF的IR方法的基础上，但关键是引入了两种新的基于物理的先验，更好地约束了IR估计。我们的先验被严格地表述为直观的损失项，在不影响新颖视图合成质量的情况下实现了最先进的材料估计。我们的方法很容易适应其他需要材料估计的逆渲染和3D重建框架。我们展示了将当前的神经渲染方法扩展到完全建模场景属性的重要性，而不仅仅是几何和视图相关的外观。代码可在以下网址公开获取https://github.com/s3anwu/pbrnerf et.al.|[2412.09680](http://arxiv.org/abs/2412.09680)|**[link](https://github.com/s3anwu/pbrnerf)**|
 |**2024-12-12**|**Mixture of neural fields for heterogeneous reconstruction in cryo-EM**|低温电子显微镜（Cryo-EM）是一种用于蛋白质结构测定的实验技术，可以在接近生理环境的情况下对大分子的集合进行成像。虽然最近的进展能够重建单个生物分子复合物的动态构象，但目前的方法并不能充分模拟具有混合构象和成分异质性的样品。特别是，包含多种蛋白质混合物的数据集需要联合推断结构、姿势、组成类别和构象状态以进行3D重建。在这里，我们提出了Hydra，这是一种通过参数化K个神经场之一产生的结构来完全从头计算模拟构象和组成异质性的方法。我们采用了一种新的基于似然的损失函数，并证明了我们的方法在由具有高度构象变异的蛋白质混合物组成的合成数据集上的有效性。我们还在含有不同蛋白质复合物混合物的细胞裂解物的实验数据集上演示了Hydra。Hydra扩展了非均匀重建方法的表现力，从而将冷冻EM的范围扩大到越来越复杂的样本。 et.al.|[2412.09420](http://arxiv.org/abs/2412.09420)|null|
 
-<p align=right>(<a href=#updated-on-20241229>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241230>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
