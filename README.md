@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.01.02
+## Updated on 2025.01.03
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-12-26**|**Reflective Gaussian Splatting**|由于基于NeRF和3DGS的方法越来越强大，新型视图合成技术取得了重大进展。然而，反射对象重建仍然具有挑战性，缺乏一种适当的解决方案来实现实时、高质量的渲染，同时适应相互反射。为了填补这一空白，我们引入了一个反射高斯飞溅（\textbf{Ref-Gausian}）框架，该框架由两个部分组成：（I）基于物理的延迟渲染}，通过公式化分裂和近似，为渲染方程赋予像素级材质属性；（II） {\em高斯接地互反射}首次在高斯溅射范式内实现了所需的互反射功能。为了增强几何建模，我们进一步引入了材料感知的法线传播和初始的每高斯着色阶段，以及2D高斯基元。在标准数据集上进行的大量实验表明，Ref-Gassian在定量指标、视觉质量和计算效率方面优于现有方法。此外，我们表明，我们的方法可以作为反射和非反射场景的统一解决方案，超越了之前只关注反射场景的替代方案。此外，我们还说明了Ref-Gassian支持更多的应用程序，如重新照明和编辑。 et.al.|[2412.19282](http://arxiv.org/abs/2412.19282)|null|
 |**2024-12-25**|**GSAVS: Gaussian Splatting-based Autonomous Vehicle Simulator**|现代自动驾驶汽车模拟器具有不断增长的资产库，包括车辆、建筑物、道路、行人等。虽然这种程度的定制在创建虚拟城市环境时被证明是有益的，但当打算在数字孪生或真实场景的复制品中训练时，这个过程会变得很麻烦。高斯飞溅技术是一种强大的场景重建和新颖的视图合成技术，具有高保真度和渲染速度。本文介绍了GSAVS，一种支持自动驾驶汽车模型创建和开发的自动驾驶汽车模拟器。模拟器中的每个资产都是一个3D高斯平面图，包括车辆和环境。然而，模拟器在经典的3D引擎中运行，实时渲染3D高斯斑点。这使得模拟器能够利用3D高斯飞溅所拥有的真实感，同时提供经典3D引擎的定制和易用性。 et.al.|[2412.18816](http://arxiv.org/abs/2412.18816)|null|
 
-<p align=right>(<a href=#updated-on-20250102>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250103>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-12-21**|**EasyVis2: A Real Time Multi-view 3D Visualization for Laparoscopic Surgery Training Enhanced by a Deep Neural Network YOLOv8-Pose**|EasyVis2是一个专为腹腔镜手术中的免提实时3D可视化而设计的系统。它包含一个配备有一组微型摄像头的手术套管针，这些摄像头插入体腔以提供扩大的视野和手术过程的3D透视图。YOLOv8-Pose是一种复杂的深度神经网络算法，专门用于估计每个单独相机视图中手术器械的位置和方向。随后，使用跨多个视图的相关2D关键点进行3D手术工具姿态估计。这使得能够渲染覆盖在观察到的背景场景上的手术工具的3D表面模型，以实现实时可视化。在这项研究中，我们解释了为新的手术工具开发训练数据集的过程，以定制YoLOv8姿势，同时最大限度地减少标记工作。进行了广泛的实验，将EasyVis2与原始EasyVis进行了比较，结果表明，在相同数量的相机下，新系统提高了3D重建精度并缩短了计算时间。此外，在真实动物组织上进行的3D渲染实验通过显示虚拟侧视图直观地展示了手术工具和组织之间的距离，表明了未来在真实手术中的潜在应用。 et.al.|[2412.16742](http://arxiv.org/abs/2412.16742)|null|
 |**2024-12-21**|**LUCES-MV: A Multi-View Dataset for Near-Field Point Light Source Photometric Stereo**|最近，光度立体（PS）领域最大的改进来自于采用可微分体绘制技术，如NeRF或神经SDF，在DiLiGenT MV基准上实现了0.2mm的令人印象深刻的重建误差。然而，虽然有相当大的环境照明对象数据集，如数字孪生目录（DTS），但只有几个小的光度立体数据集，它们往往缺乏具有挑战性的对象（简单、平滑、无纹理）和实用的小形状因子（近场）光设置。为了解决这个问题，我们提出了LUCES-MV，这是第一个为近场点光源光度立体设计的真实世界多视图数据集。我们的数据集包括15个具有不同材料的物体，每个物体都是在不同的光照条件下从距离相机中心30到40厘米的15个LED阵列中成像的。为了促进透明的端到端评估，我们的数据集不仅提供地面真实法线和地面真实对象网格和姿态，还提供灯光和相机校准图像。我们评估了最先进的近场光度立体算法，强调了它们在不同材料和形状复杂性方面的优势和局限性。LUCES-MV数据集为开发更稳健、准确和可扩展的基于光度立体的真实世界3D重建方法提供了重要的基准。 et.al.|[2412.16737](http://arxiv.org/abs/2412.16737)|null|
 
-<p align=right>(<a href=#updated-on-20250102>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250103>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2024-12-30**|**Quantum Diffusion Model for Quark and Gluon Jet Generation**|扩散模型在图像生成方面取得了显著的成功，但它们的计算量很大，训练也很耗时。在本文中，我们介绍了一种新的扩散模型，该模型受益于量子计算技术，以减轻计算挑战并提高高能物理数据中的生成性能。全量子扩散模型在正向过程中用随机酉矩阵代替高斯噪声，并在去噪架构的U-Net中引入变分量子电路。我们对大型强子对撞机的结构复杂的夸克和胶子射流数据集进行了评估。结果表明，全量子和混合模型在射流生成方面与类似的经典模型具有竞争力，突显了使用量子技术解决机器学习问题的潜力。 et.al.|[2412.21082](http://arxiv.org/abs/2412.21082)|**[link](https://github.com/mashathepotato/GSoC-Quantum-Diffusion-Model)**|
 |**2024-12-30**|**Edicho: Consistent Image Editing in the Wild**|作为一种经过验证的需求，在野外图像中进行一致的编辑仍然是一项技术挑战，这是由各种无法管理的因素引起的，如物体姿态、照明条件和摄影环境。Edicho提出了一种基于扩散模型的无训练解决方案，其基本设计原则是使用显式图像对应进行直接编辑。具体来说，关键组件包括一个注意力操纵模块和一个精心改进的无分类器引导（CFG）去噪策略，两者都考虑了预先估计的对应关系。这种推理时间算法具有即插即用的特性，与大多数基于扩散的编辑方法兼容，如ControlNet和BrushNet。广泛的结果证明了Edicho在不同环境下进行一致交叉图像编辑的有效性。我们将发布该代码，以方便未来的研究。 et.al.|[2412.21079](http://arxiv.org/abs/2412.21079)|**[link](https://github.com/ezioby/edicho)**|
 
-<p align=right>(<a href=#updated-on-20250102>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250103>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-18**|**Level-Set Parameters: Novel Representation for 3D Shape Analysis**|3D形状分析主要集中在点云和网格的传统3D表示上，但这些数据的离散性使得分析容易受到输入分辨率变化的影响。神经场的最新发展从带符号距离函数中引入了水平集参数，作为3D形状的新颖、连续和数值表示，其中形状表面被定义为这些函数的零水平集。这促使我们将形状分析从传统的3D数据扩展到这些新的参数数据。由于水平集参数不是类似欧几里德的点云，我们通过将它们表示为伪正态分布来建立不同形状之间的相关性，并从相应的数据集中预先学习分布。为了进一步探索具有形状变换的水平集参数，我们建议将这些参数的子集设置在旋转和平移上，并使用超网络生成它们。与使用传统数据相比，这简化了与姿势相关的形状分析。我们通过在形状分类（任意姿态）、检索和6D对象姿态估计中的应用，展示了新表示法的前景。本研究中的代码和数据见https://github.com/EnyaHermite/LevelSetParamData. et.al.|[2412.13502](http://arxiv.org/abs/2412.13502)|null|
 |**2024-12-13**|**Neural Vector Tomography for Reconstructing a Magnetization Vector Field**|矢量断层重建的离散化技术容易在重建中产生伪影。随着噪声量的增加，这些重建的质量可能会进一步恶化。在这项工作中，我们使用平滑神经场对底层向量场进行建模。由于神经网络中的激活函数可以被选择为平滑的，并且域不再像素化，因此即使在存在噪声的情况下，该模型也能得到高质量的重建。在我们具有潜在的全局连续对称性的情况下，我们发现神经网络比现有技术大大提高了重建的准确性。 et.al.|[2412.09927](http://arxiv.org/abs/2412.09927)|null|
 
-<p align=right>(<a href=#updated-on-20250102>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250103>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
