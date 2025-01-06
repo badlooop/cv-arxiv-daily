@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.01.05
+## Updated on 2025.01.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-12-27**|**Learning Radiance Fields from a Single Snapshot Compressive Image**|本文探讨了快照压缩成像（SCI）技术从单个时间压缩图像中恢复底层3D场景结构的潜力。SCI是一种经济高效的方法，它能够使用低成本的2D成像传感器将高维数据（如高光谱或时间信息）记录到单个图像中。为了实现这一点，通常会采用一系列专门设计的2D掩模，降低存储和传输要求，并提供潜在的隐私保护。受此启发，我们进一步利用神经辐射场（NeRF）强大的3D场景表示能力来恢复编码的3D场景信息。具体来说，我们提出了SCINeRF，其中我们将SCI的物理成像过程作为NeRF训练的一部分，使我们能够利用其在捕捉复杂场景结构方面的出色性能。此外，我们进一步整合了流行的3D高斯散点（3DGS）框架，并提出了SCISplat，通过将点云明确优化为3D高斯表示来提高3D场景重建质量和训练/渲染速度。为了评估我们方法的有效性，我们使用SCI系统捕获的合成数据和真实数据进行了广泛的评估。实验结果表明，我们提出的方法在图像重建和新颖的视图合成方面超越了最先进的方法。此外，我们的方法还通过利用SCI和3DGS的渲染能力，实时渲染高帧率多视图一致图像。代码可在以下网址获得：https://github.com/WU-CVGL/SICSPLAT。 et.al.|[2412.19483](http://arxiv.org/abs/2412.19483)|null|
 |**2024-12-30**|**DriveEditor: A Unified 3D Information-Guided Framework for Controllable Object Editing in Driving Scenes**|以视觉为中心的自动驾驶系统需要多样化的数据进行稳健的训练和评估，可以通过操纵现有场景捕获中的对象位置和外观来增强。虽然扩散模型的最新进展在视频编辑方面显示出了希望，但由于位置控制不精确和难以保持高保真对象外观，它们在驾驶场景中的对象操纵应用仍然具有挑战性。为了解决位置和外观控制方面的这些挑战，我们引入了DriveEditor，这是一个基于扩散的框架，用于驾驶视频中的对象编辑。DriveEditor为全面的对象编辑操作提供了一个统一的框架，包括重新定位、替换、删除和插入。这些不同的操作都是通过一组共享的不同输入来实现的，这些输入由相同的位置控制和外观维护模块处理。位置控制模块在保留深度信息的同时投影给定的3D边界框，并将其分层注入扩散过程中，从而能够精确控制对象的位置和方向。外观维护模块通过采用三层方法来保持与单个参考图像的一致属性：低级细节保留、高级语义维护和来自新颖视图合成模型的3D先验的集成。对nuScenes数据集的广泛定性和定量评估表明，DriveEditor在生成各种驾驶场景编辑方面具有出色的保真度和可控性，并且具有促进下游任务的显著能力。项目页面：https://yvanliang.github.io/DriveEditor. et.al.|[2412.19458](http://arxiv.org/abs/2412.19458)|**[link](https://github.com/yvanliang/DriveEditor)**|
 
-<p align=right>(<a href=#updated-on-20250105>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250106>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2024-12-24**|**Sharper Error Bounds in Late Fusion Multi-view Clustering Using Eigenvalue Proportion**|多视图聚类（MVC）旨在整合来自多个视图的互补信息，以提高聚类性能。后期融合多视图聚类（LFMVC）通过将不同的聚类结果合成为统一的共识，展现出了巨大的潜力。然而，当前的LFMVC方法在噪声和冗余分区方面很困难，并且经常无法捕获视图之间的高阶相关性。为了解决这些局限性，我们提出了一种新的理论框架，利用局部Rademacher复杂性和主特征值比例来分析多核 $k$-means的泛化误差界。我们的分析建立了$\mathcal{O}（1/n）$的收敛率，在$\mathal{O}。基于这一认识，我们提出了一种在多重线性$k$ -means框架内的低通图滤波策略，以减轻噪声和冗余，进一步细化主特征值比例并提高聚类精度。在基准数据集上的实验结果证实，我们的方法在聚类性能和鲁棒性方面优于最先进的方法。相关代码可在以下网址获得https://github.com/csliangdu/GMLKM . et.al.|[2412.18207](http://arxiv.org/abs/2412.18207)|null|
 |**2024-12-24**|**A Review of 3D Particle Tracking and Flow Diagnostics Using Digital Holography**|先进的三维（3D）跟踪方法对于研究各种复杂系统中的粒子动力学至关重要，包括多相流、环境和大气科学、胶体科学、生物和医学研究以及工业制造过程。本综述全面总结了使用数字全息术（DH）的3D粒子跟踪和流动诊断。我们首先介绍了DH的原理，并详细讨论了数值重建。然后，该综述探讨了DH中使用的各种硬件设置，包括内联、离轴和双视图或多视图配置，概述了它们的优点和局限性。我们还深入研究了不同的全息图处理方法，分为传统的多步、逆向和基于机器学习的方法，深入了解了它们在多个研究中用于3D粒子跟踪和流动诊断的应用。该综述最后讨论了未来前景，强调了机器学习在实现制造、环境监测和生物科学等不同领域的基于DH的精确粒子跟踪和流动诊断技术方面的重要作用。 et.al.|[2412.18094](http://arxiv.org/abs/2412.18094)|null|
 
-<p align=right>(<a href=#updated-on-20250105>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250106>back to top</a>)</p>
 
 ## Diffusion
 
@@ -62,10 +62,10 @@
 |**2025-01-02**|**SeedVR: Seeding Infinity in Diffusion Transformer Towards Generic Video Restoration**|视频恢复在保持保真度的同时，从野外未知的退化中恢复时间一致的细节，带来了不小的挑战。尽管最近在基于扩散的恢复方面取得了进展，但这些方法在生成能力和采样效率方面往往存在局限性。在这项工作中，我们介绍了SeedVR，这是一种扩散变换器，旨在处理任意长度和分辨率的真实视频恢复。SeedVR的核心设计在于转移窗口注意力，这有助于对长视频序列进行有效恢复。SeedVR进一步支持在空间和时间维度边界附近的可变大小窗口，克服了传统窗口注意力的分辨率限制。SeedVR配备了当代实践，包括因果视频自动编码器、混合图像和视频训练以及渐进式训练，在合成和现实世界的基准测试以及人工智能生成的视频上都取得了极具竞争力的性能。大量实验证明了SeedVR在通用视频恢复方面优于现有方法。 et.al.|[2501.01320](http://arxiv.org/abs/2501.01320)|null|
 |**2025-01-02**|**Cutoff for non-negatively curved diffusions**|我们解决了一个长期存在的问题，即阐明一类庞大而重要的马尔可夫过程的截断现象，即Bakry和Emey意义上的非负曲率马尔可夫扩散。更确切地说，我们证明，只要满足产品条件，任何非负弯曲扩散序列都会在总变化中表现出截止。我们的结果适用于欧几里德空间和黎曼流形，也适用于任意非随机初始条件。它极大地简化、统一和推广了许多孤立的作品，这些作品通过对混合时间的精细和依赖于模型的分析建立了截止时间。证明很简单：我们利用变熵和熵之间的一个新的简单微分关系，在混合窗口的宽度上产生一个定量界。 et.al.|[2501.01304](http://arxiv.org/abs/2501.01304)|null|
 |**2025-01-02**|**Self-diffusive dynamics of active Brownian particles at moderate densities**|主动布朗粒子（ABP）模型已成为自推进粒子的原型。ABP以恒定速度 $V$沿旋转扩散缓慢变化的方向持续移动，其特征是系数$\Dr$。持续运动加上随机重新定向会产生长时间的随机游走，其扩散系数对于二维孤立的ABP来说，由$D_0=V^2/（2\Dr）$给出。在这里，我们使用最近提出的ABP动力学理论研究了密度对自扩散动力学的影响，其中持续碰撞被描述为在粒子上产生净位移。在中间时间尺度上，发生了许多碰撞，但标记粒子的指向矢尚未改变，出现了一种有效的随机动力学，其特征是有效的降低的流速度[V_text{eff}$和各向异性扩散，系数明显取决于密度。基于这一结果，提出了一种有效的理论和数值方法，其中粒子遵循随机动力学，基于局部密度的平均场相互作用。最后，在大于$\Dr^{-1}$的时间尺度上，标记粒子显示出有效的扩散运动，系数为$D=V_\text{eff}^2/（2\Dr）$。$V_\text{eff}$ 对密度的依赖性表明，动力学理论仅限于小于0.42的分数，超过这个限制，就会出现非物理结果。 et.al.|[2501.01251](http://arxiv.org/abs/2501.01251)|null|
-|**2025-01-02**|**SVFR: A Unified Framework for Generalized Video Face Restoration**|人脸恢复（FR）是图像和视频处理中的一个关键领域，专注于从退化的输入中重建高质量的肖像。尽管图像FR取得了进步，但视频FR的探索仍然相对不足，主要是由于与时间一致性、运动伪影和高质量视频数据可用性有限相关的挑战。此外，传统的面部修复通常优先考虑提高分辨率，可能不会过多考虑面部着色和修复等相关任务。在这篇论文中，我们提出了一种新的广义视频人脸恢复（GVFR）任务方法，该方法将视频BFR、修复和着色任务集成在一起，我们的经验表明这些任务是相辅相成的。我们提出了一种统一的框架，称为稳定视频人脸恢复（SVFR），该框架利用稳定视频扩散（SVD）的生成先验和运动先验，并通过统一的人脸恢复框架整合特定任务的信息。引入了一种可学习的任务嵌入来增强任务识别。同时，采用了一种新的统一潜在正则化（ULR）来鼓励不同子任务之间的共享特征表示学习。为了进一步提高恢复质量和时间稳定性，我们引入了面部先验学习和自参考细化作为辅助策略，用于训练和推理。所提出的框架有效地结合了这些任务的互补优势，增强了时间连贯性，实现了卓越的恢复质量。这项工作推进了视频FR的最新进展，并为广义视频人脸恢复建立了一个新的范式。 et.al.|[2501.01235](http://arxiv.org/abs/2501.01235)|null|
-|**2025-01-02**|**Conditional Consistency Guided Image Translation and Enhancement**|一致性模型已成为扩散模型的一种有前景的替代方案，通过单步样本生成提供高质量的生成能力。然而，它们在多域图像翻译任务中的应用，如跨模态翻译和低光图像增强，在很大程度上仍未得到探索。本文介绍了通过引入额外的条件输入来实现多域图像翻译的条件一致性模型（CCM）。我们通过引入指导去噪过程的特定于任务的条件输入来实现这些修改，确保生成的输出保留来自相应输入域的结构和上下文信息。我们在10个不同的数据集上评估了CCM，证明了它们在跨多个领域生成高质量翻译图像的有效性。代码可在以下网址获得https://github.com/amilbhagat/Conditional-Consistency-Models. et.al.|[2501.01223](http://arxiv.org/abs/2501.01223)|**[link](https://github.com/amilbhagat/Conditional-Consistency-Models)**|
+|**2025-01-03**|**SVFR: A Unified Framework for Generalized Video Face Restoration**|人脸恢复（FR）是图像和视频处理中的一个关键领域，专注于从退化的输入中重建高质量的肖像。尽管图像FR取得了进步，但视频FR的探索仍然相对不足，主要是由于与时间一致性、运动伪影和高质量视频数据可用性有限相关的挑战。此外，传统的面部修复通常优先考虑提高分辨率，可能不会过多考虑面部着色和修复等相关任务。在这篇论文中，我们提出了一种新的广义视频人脸恢复（GVFR）任务方法，该方法将视频BFR、修复和着色任务集成在一起，我们的经验表明这些任务是相辅相成的。我们提出了一种统一的框架，称为稳定视频人脸恢复（SVFR），该框架利用稳定视频扩散（SVD）的生成先验和运动先验，并通过统一的人脸恢复框架整合特定任务的信息。引入了一种可学习的任务嵌入来增强任务识别。同时，采用了一种新的统一潜在正则化（ULR）来鼓励不同子任务之间的共享特征表示学习。为了进一步提高恢复质量和时间稳定性，我们引入了面部先验学习和自参考细化作为辅助策略，用于训练和推理。所提出的框架有效地结合了这些任务的互补优势，增强了时间连贯性，实现了卓越的恢复质量。这项工作推进了视频FR的最新进展，并为广义视频人脸恢复建立了一个新的范式。代码和视频演示可在https://github.com/wangzhiyaoo/SVFR.git. et.al.|[2501.01235](http://arxiv.org/abs/2501.01235)|**[link](https://github.com/wangzhiyaoo/svfr)**|
+|**2025-01-03**|**Conditional Consistency Guided Image Translation and Enhancement**|一致性模型已成为扩散模型的一种有前景的替代方案，通过单步样本生成提供高质量的生成能力。然而，它们在多域图像翻译任务中的应用，如跨模态翻译和低光图像增强，在很大程度上仍未得到探索。本文介绍了通过引入额外的条件输入来实现多域图像翻译的条件一致性模型（CCM）。我们通过引入指导去噪过程的特定于任务的条件输入来实现这些修改，确保生成的输出保留来自相应输入域的结构和上下文信息。我们在10个不同的数据集上评估了CCM，证明了它们在跨多个领域生成高质量翻译图像的有效性。代码可在以下网址获得https://github.com/amilbhagat/Conditional-Consistency-Models. et.al.|[2501.01223](http://arxiv.org/abs/2501.01223)|**[link](https://github.com/amilbhagat/Conditional-Consistency-Models)**|
 
-<p align=right>(<a href=#updated-on-20250105>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250106>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-18**|**Level-Set Parameters: Novel Representation for 3D Shape Analysis**|3D形状分析主要集中在点云和网格的传统3D表示上，但这些数据的离散性使得分析容易受到输入分辨率变化的影响。神经场的最新发展从带符号距离函数中引入了水平集参数，作为3D形状的新颖、连续和数值表示，其中形状表面被定义为这些函数的零水平集。这促使我们将形状分析从传统的3D数据扩展到这些新的参数数据。由于水平集参数不是类似欧几里德的点云，我们通过将它们表示为伪正态分布来建立不同形状之间的相关性，并从相应的数据集中预先学习分布。为了进一步探索具有形状变换的水平集参数，我们建议将这些参数的子集设置在旋转和平移上，并使用超网络生成它们。与使用传统数据相比，这简化了与姿势相关的形状分析。我们通过在形状分类（任意姿态）、检索和6D对象姿态估计中的应用，展示了新表示法的前景。本研究中的代码和数据见https://github.com/EnyaHermite/LevelSetParamData. et.al.|[2412.13502](http://arxiv.org/abs/2412.13502)|null|
 |**2024-12-13**|**Neural Vector Tomography for Reconstructing a Magnetization Vector Field**|矢量断层重建的离散化技术容易在重建中产生伪影。随着噪声量的增加，这些重建的质量可能会进一步恶化。在这项工作中，我们使用平滑神经场对底层向量场进行建模。由于神经网络中的激活函数可以被选择为平滑的，并且域不再像素化，因此即使在存在噪声的情况下，该模型也能得到高质量的重建。在我们具有潜在的全局连续对称性的情况下，我们发现神经网络比现有技术大大提高了重建的准确性。 et.al.|[2412.09927](http://arxiv.org/abs/2412.09927)|null|
 
-<p align=right>(<a href=#updated-on-20250105>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250106>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
