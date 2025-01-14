@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.01.13
+## Updated on 2025.01.14
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2024-12-31**|**SoundBrush: Sound as a Brush for Visual Scene Editing**|我们提出了SoundBrush，这是一种使用声音作为画笔来编辑和操纵视觉场景的模型。我们扩展了潜在扩散模型（LDM）的生成能力，以包含用于编辑视觉场景的音频信息。受现有图像编辑工作的启发，我们将这项任务视为一个监督学习问题，并利用各种现成的模型来构建一个声音配对的视觉场景数据集进行训练。这个生成丰富的数据集使SoundBrush能够学习将音频特征映射到LDM的文本空间中，从而允许在各种狂野声音的指导下进行视觉场景编辑。与现有方法不同，SoundBrush可以准确地操纵整体风景，甚至插入声音对象，以最好地匹配音频输入，同时保留原始内容。此外，通过与新颖的视图合成技术集成，我们的框架可以扩展到编辑3D场景，从而促进声音驱动的3D场景操作。演示可在https://soundbrush.github.io/. et.al.|[2501.00645](http://arxiv.org/abs/2501.00645)|null|
 |**2024-12-31**|**SG-Splatting: Accelerating 3D Gaussian Splatting with Spherical Gaussians**|3D高斯散斑正在成为新颖视图合成中的一种最先进的技术，因其在视觉质量、速度和渲染效率之间令人印象深刻的平衡而受到认可。然而，依赖三次球面谐波进行颜色表示会带来巨大的存储需求和计算开销，从而导致内存占用大和渲染速度慢。我们引入了基于球面高斯颜色表示的SG Splatting，这是一种在新视图合成中提高渲染速度和质量的新方法。我们的方法首先使用球面高斯表示视图相关的颜色，而不是三次球面谐波，这大大减少了用于颜色表示的参数数量，并显著加速了渲染过程。然后，我们开发了一种有效的策略来组织多个球面高斯分布，优化它们的排列，以实现平衡和精确的场景表示。为了进一步提高渲染质量，我们提出了一种混合表示方法，将球面高斯与低次球面谐波相结合，有效地捕获了高频和低频颜色信息。SG Splatting还具有即插即用功能，可以轻松集成到现有系统中。这种方法提高了计算效率和整体视觉保真度，使其成为实时应用的实用解决方案。 et.al.|[2501.00342](http://arxiv.org/abs/2501.00342)|null|
 
-<p align=right>(<a href=#updated-on-20250113>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250114>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2025-01-03**|**Laparoscopic Scene Analysis for Intraoperative Visualisation of Gamma Probe Signals in Minimally Invasive Cancer Surgery**|癌症在全球范围内仍然是一个重大的健康挑战，英国每两分钟就有一次新的诊断。手术是癌症的主要治疗选择之一。然而，由于缺乏可靠的术中可视化工具，外科医生依靠触觉和肉眼，有限地使用术前图像数据来直接指导癌组织和转移瘤的切除。如果癌症以正边缘切除，或其他关键结构受到无意影响，这会导致成本增加，并对患者造成伤害。因此，迫切需要更可靠和准确的微创手术术中可视化工具，以改善手术结果并加强患者护理。最近的小型癌症检测探针（即Lightpoint Medical有限公司开发的SENSEI）利用核制剂的癌症靶向能力，使用发射的伽马信号在手术中更准确地识别癌症。然而，使用这种探头带来了可视化挑战，因为探头是非成像的，与组织有气隙，这使得外科医生难以在组织表面上定位探头感应区域。从几何上讲，感测区域被定义为伽马探头轴和3D空间中组织表面之间的交点，但投影到2D腹腔镜图像上。因此，本文首先开发了工具跟踪、姿态估计和分割工具，然后是腹腔镜图像深度估计算法和3D重建方法。 et.al.|[2501.01752](http://arxiv.org/abs/2501.01752)|null|
 |**2025-01-03**|**AR4D: Autoregressive 4D Generation from Monocular Videos**|生成模型的最新进展引发了人们对动态3D内容创建（即4D生成）的极大兴趣。现有的方法主要依赖于分数蒸馏采样（SDS）来推断新的视图视频，由于SDS的固有随机性，通常会导致多样性有限、时空不一致和提示对齐不佳等问题。为了解决这些问题，我们提出了AR4D，这是一种无SDS 4D生成的新范式。具体来说，我们的范式由三个阶段组成。首先，对于生成或捕获的单眼视频，我们首先利用预训练的专家模型来创建第一帧的3D表示，然后对其进行进一步微调以用作规范空间。随后，由于视频以自回归方式自然发生，我们建议根据前一帧的表示生成每一帧的3D表示，因为这种自回归生成方式可以促进更准确的几何和运动估计。同时，为了防止在此过程中过度拟合，我们引入了一种渐进式视图采样策略，利用预训练的大规模3D重建模型的先验。为了避免自回归生成引入的外观漂移，我们进一步引入了一个基于全局变形场和每个帧3D表示的几何形状的细化阶段。大量实验表明，AR4D可以在没有SDS的情况下实现最先进的4D生成，提供更大的多样性，提高时空一致性，并更好地与输入提示对齐。 et.al.|[2501.01722](http://arxiv.org/abs/2501.01722)|null|
 
-<p align=right>(<a href=#updated-on-20250113>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250114>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2025-01-10**|**Overcoming the surface paradox: Buried perovskite quantum dots in wide-bandgap perovskite thin films**|胶体钙钛矿量子点（PQD）是按需量子、经典光电和光子器件的一个令人兴奋的平台。然而，它们的潜在成功受到其弱内在晶格键能和复杂表面化学引起的极端敏感性和低稳定性的限制。在这里，我们报告了一种在三维钙钛矿薄膜中埋入钙钛矿量子点（b-PQD）的新平台，该平台使用一步闪光退火制造，克服了胶体钙钛矿点中与表面相关的不稳定性。b-PQD表现出超亮和稳定的单点发射，分辨率限制线宽低于130μeV，光子反聚束（g^2（0）=0.1），无闪烁，光谱扩散受到抑制，光子计数率高达10^4/s，与单位量子产率一致。超尖锐线宽解析了激子精细结构（暗激子和三重态激子）及其在磁场下的动力学。此外，b-PQD可以电驱动发射线宽为1meV、光子反聚束（g^2（0）=0.4）的单光子。这些结果为下一代量子光通信和传感的片上低成本单光子源铺平了道路。 et.al.|[2501.06061](http://arxiv.org/abs/2501.06061)|null|
 |**2025-01-10**|**Nonisotropic Gaussian Diffusion for Realistic 3D Human Motion Prediction**|概率人体运动预测旨在根据过去的观测结果预测未来多种可能的运动。虽然目前的方法报告了高度的多样性和真实性，但它们通常会产生未被检测到的肢体拉伸和抖动的运动。为了解决这个问题，我们引入了SkeletonDiffusion，这是一种潜在的扩散模型，在其架构和训练中嵌入了对人体的显式归纳偏见。我们的模型是用一种新的非各向同性高斯扩散公式训练的，该公式与人体骨骼的自然运动结构相一致。结果表明，我们的方法优于传统的各向同性替代方案，能够始终如一地生成逼真的预测，同时避免肢体变形等伪影。此外，我们发现了常用多样性度量的一个局限性，这可能会无意中有利于在同一序列中产生不一致肢体长度的模型。SkeletonDiffusion在三个真实世界的数据集上设定了一个新的基准，在多个评估指标上超越了各种基线。访问我们的项目页面：https://ceveloper.github.io/publications/skeletondiffusion/ et.al.|[2501.06035](http://arxiv.org/abs/2501.06035)|null|
 
-<p align=right>(<a href=#updated-on-20250113>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250114>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2025-01-04**|**S-INF: Towards Realistic Indoor Scene Synthesis via Scene Implicit Neural Field**|基于学习的方法在3D室内场景合成（ISS）中越来越受欢迎，显示出优于传统基于优化的方法的性能。这些基于学习的方法通常使用生成模型在简单但明确的场景表示上对分布进行建模。然而，由于过于简单的显式表示忽略了详细信息，并且缺乏场景内多模态关系的指导，大多数基于学习的方法都难以生成具有逼真对象排列和风格的室内场景。本文介绍了一种新的室内场景合成方法——场景隐式神经场（S-INF），旨在学习多模态关系的有意义表示，以提高室内场景合成的真实感。S-INF假设场景布局通常与对象详细信息有关。它将多模态关系分解为场景布局关系和详细对象关系，然后通过隐式神经场（INF）将它们融合在一起。通过学习专门的场景布局关系并将其投影到S-INF中，我们实现了场景布局的真实生成。此外，S-INF通过可微分渲染捕获密集而详细的对象关系，确保对象之间的风格一致性。通过在基准3D-FRONT数据集上的广泛实验，我们证明了我们的方法在不同类型的ISS下始终达到最先进的性能。 et.al.|[2412.17561](http://arxiv.org/abs/2412.17561)|**[link](https://github.com/zixiliang/s-inf)**|
 |**2024-12-22**|**HyperNet Fields: Efficiently Training Hypernetworks without Ground Truth by Learning Weight Trajectories**|为了有效地适应大型模型或训练神经表示的生成模型，超网络引起了人们的兴趣。虽然超级网络工作良好，但训练它们很麻烦，而且通常需要为每个样本进行地面实况优化的权重。然而，获得这些权重中的每一个都是一个需要训练的训练问题，例如，适应权重，甚至是超网络回归的整个神经场。在这项工作中，我们提出了一种训练超网络的方法，而不需要任何每个样本的地面真实值。我们的关键思想是学习一个超网络“场”，并估计网络权重训练的整个轨迹，而不是简单地估计其收敛状态。换句话说，我们向超网络引入了一个额外的输入，即收敛状态，这使它成为一个神经场，对任务网络的整个收敛路径进行建模。这样做的一个关键好处是，在任何收敛状态下，估计权重的梯度都必须与原始任务的梯度相匹配——仅此约束就足以训练超网络场。我们通过个性化图像生成和从图像和点云进行3D形状重建的任务来证明我们的方法的有效性，在没有任何样本地面真实性的情况下展示了具有竞争力的结果。 et.al.|[2412.17040](http://arxiv.org/abs/2412.17040)|null|
 
-<p align=right>(<a href=#updated-on-20250113>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250114>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
