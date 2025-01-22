@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.01.21
+## Updated on 2025.01.22
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2025-01-09**|**Scaffold-SLAM: Structured 3D Gaussians for Simultaneous Localization and Photorealistic Mapping**|3D高斯散斑（3DGS）最近彻底改变了同步定位和映射（SLAM）中的新颖视图合成。然而，利用3DGS的现有SLAM方法未能同时为单眼、立体和RGB-D相机提供高质量的新颖视图渲染。值得注意的是，一些方法在RGB-D相机上表现良好，但在单眼相机的渲染质量方面却严重下降。在本文中，我们提出了脚手架SLAM，它可以在单目、立体和RGB-D相机上同时进行定位和高质量的真实感映射。我们引入了两项关键创新，以实现这种最先进的视觉质量。首先，我们提出了运动中的外观嵌入，使3D高斯模型能够更好地模拟不同相机姿态下的图像外观变化。其次，我们引入了一个频率正则化金字塔来引导高斯分布，使模型能够有效地捕捉场景中更精细的细节。对单眼、立体和RGB-D数据集的广泛实验表明，脚手架SLAM在真实感映射质量方面明显优于最先进的方法，例如，单眼相机的TUM RGB-D数据集中的PSNR高出16.76%。 et.al.|[2501.05242](http://arxiv.org/abs/2501.05242)|null|
 |**2025-01-08**|**FatesGS: Fast and Accurate Sparse-View Surface Reconstruction using Gaussian Splatting with Depth-Feature Consistency**|最近，高斯散斑在计算机视觉领域引发了一种新的趋势。除了新颖的视图合成外，它还被扩展到多视图重建领域。最新的方法有助于完成详细的表面重建，同时确保快速的训练速度。然而，这些方法仍然需要密集的输入视图，并且它们的输出质量会随着稀疏视图的出现而显著降低。我们观察到高斯基元倾向于过拟合少数训练视图，导致有噪声的浮点运算和不完整的重建曲面。在本文中，我们提出了一种创新的稀疏视图重建框架，该框架利用视图内深度和多视图特征一致性来实现非常精确的表面重建。具体来说，我们利用单眼深度排名信息来监督斑块内深度分布的一致性，并采用平滑度损失来增强分布的连续性。为了实现更精细的表面重建，我们通过多视图投影特征优化了深度的绝对位置。在DTU和BlenedMVS上进行的大量实验表明，我们的方法优于最先进的方法，速度提高了60倍至200倍，实现了快速和细粒度的网格重建，而不需要昂贵的预训练。 et.al.|[2501.04628](http://arxiv.org/abs/2501.04628)|null|
 
-<p align=right>(<a href=#updated-on-20250121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250122>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2025-01-16**|**PO-GVINS: Tightly Coupled GNSS-Visual-Inertial Integration with Pose-Only Representation**|准确可靠的定位对于自动驾驶、无人机和智能机器人中的感知、决策和其他高级应用至关重要。鉴于独立传感器的固有局限性，将具有互补功能的异构传感器集成是实现这一目标的最有效方法之一。本文提出了一种基于滤波的紧密耦合全球导航卫星系统（GNSS）-视觉惯性定位框架，该框架仅应用于视觉惯性系统（VINS），称为PO-GVINS。具体来说，当前VINS中使用的多视图成像需要先验的3D特征，然后联合估计相机姿态和3D特征位置，这不可避免地会引入特征的线性化误差以及面对维度爆炸。然而，仅姿态（PO）公式被证明与多视图成像等效，并已应用于视觉重建，它使用两个相机姿态表示特征深度，从而从状态向量中去除3D特征位置，避免了上述困难。受此启发，我们首先在VINS中应用PO配方，即PO-VINS。然后将GNSS原始测量值与解决的整周模糊度相结合，以实现准确和无漂移的估计。大量实验表明，所提出的PO-VINS明显优于多状态约束卡尔曼滤波器（MSCKF）。通过结合GNSS测量，PO-GVINS实现了准确、无漂移的状态估计，使其成为在具有挑战性的环境中进行定位的稳健解决方案。 et.al.|[2501.07259](http://arxiv.org/abs/2501.07259)|null|
 |**2025-01-13**|**Representation Learning of Point Cloud Upsampling in Global and Local Inputs**|近年来，点云上采样在三维重建等领域得到了广泛的应用。我们的研究通过表示学习在全球和局部层面调查了影响点云上采样的因素。具体来说，本文将同一点云模型对象的全局和局部信息输入到两个编码器中，以提取这些特征，融合它们，然后将组合的特征馈送到上采样解码器中。目标是通过利用来自全局和局部输入的先验知识来解决点云中的稀疏性和噪声问题。所提出的框架可以应用于任何最先进的点云上采样神经网络。在一系列基于自动编码器的模型上进行了实验，利用深度学习，对全局和局部输入都产生了可解释性，结果证明，我们提出的框架可以进一步改善先前SOTA工作中的上采样效果。同时，显著性图反映了全局和局部特征输入之间的差异，以及同时使用这两种输入进行训练的有效性。 et.al.|[2501.07076](http://arxiv.org/abs/2501.07076)|null|
 
-<p align=right>(<a href=#updated-on-20250121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250122>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2025-01-17**|**DiffVSR: Enhancing Real-World Video Super-Resolution with Diffusion Models for Advanced Visual Quality and Temporal Consistency**|扩散模型在图像生成和恢复方面表现出了卓越的能力，但它们在视频超分辨率中的应用在保持高保真度和时间一致性方面面临着重大挑战。我们提出了DiffVSR，这是一个基于扩散的现实世界视频超分辨率框架，通过关键创新有效地解决了这些挑战。对于序列内一致性，我们开发了一个多尺度时间注意力模块和时间增强的VAE解码器，可以捕获细粒度的运动细节。为了确保序列间的稳定性，我们引入了一种具有交织潜在转换方法的噪声重调度机制，该机制在不增加额外训练开销的情况下提高了时间一致性。我们提出了一种渐进式学习策略，可以从简单的降级过渡到复杂的降级，从而在高质量视频数据有限的情况下实现稳健的优化。大量实验表明，DiffVSR在视觉质量和时间一致性方面都能提供卓越的结果，为现实世界的视频超分辨率设定了新的性能标准。 et.al.|[2501.10110](http://arxiv.org/abs/2501.10110)|null|
 |**2025-01-17**|**The R-Vessel-X Project**|1） 目的：本技术报告介绍了由法国国家研究机构资助并在2019年至2023年间开发的R-Vessel-X项目（“肝脏生物医学图像中稳健的血管网络提取和理解”）的综合总结和主要成果。2） 材料和方法：我们使用IRCAD、Bullitt或VascuSynth等公开可用的数据集和工具来获取真实或合成的血管造影图像。主要贡献在于3D血管造影图像分析领域：滤波、分割、建模和仿真，特别关注肝脏。3） 结果：我们特别关注所开发方法的开源软件传播，通过用于肝脏解剖分割（SlicerRVXLiverSegmentation）和血管过滤（Slicer RVXVesselnessFilters）的3D Slicer插件，以及用于生成2D和3D合成和真实血管的在线演示（OpenCCO）。4） 结论：R-Vessel-X项目提供了广泛的研究成果，涵盖了与3D血管造影图像分析相关的各种主题，如滤波、分割、建模和仿真。我们还开发了开源和免费软件，以便生物医学工程的研究界可以在未来的研究中使用这些结果。 et.al.|[2501.10068](http://arxiv.org/abs/2501.10068)|null|
 
-<p align=right>(<a href=#updated-on-20250121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250122>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-26**|**Humans as a Calibration Pattern: Dynamic 3D Scene Reconstruction from Unsynchronized and Uncalibrated Videos**|最近关于动态神经场重建的工作假设输入来自具有已知姿势的同步多视图视频。这些输入约束在现实世界的设置中经常得不到满足，使得这种方法不切实际。我们证明，如果视频捕捉到人体运动，则姿态未知的非同步视频可以生成动态神经场。人类是最常见的动态主体之一，其姿势可以使用最先进的方法进行估计。在有噪声的情况下，估计的人体形状和姿态参数为训练一致的动态神经表示的高度非凸和欠约束问题提供了一个不错的初始化。给定人类的姿势和形状序列，我们估计视频之间的时间偏移，然后通过分析3D关节位置进行相机姿势估计。然后，我们使用多分辨率脊训练动态NeRF，同时细化时间偏移和相机姿态。该设置仍然涉及优化许多参数，因此，我们引入了一种鲁棒的渐进学习策略来稳定该过程。实验表明，我们的方法在具有挑战性的条件下实现了精确的时空校准和高质量的场景重建。 et.al.|[2412.19089](http://arxiv.org/abs/2412.19089)|null|
 |**2024-12-29**|**PartGen: Part-level 3D Generation and Reconstruction with Multi-View Diffusion Models**|文本或图像到3D生成器和3D扫描仪现在可以生成具有高质量形状和纹理的3D资产。这些资产通常由一个单一的融合表示组成，如隐式神经场、高斯混合或网格，没有任何有用的结构。然而，大多数应用程序和创意工作流程都要求资产由几个可以独立操作的有意义的部分组成。为了解决这一差距，我们引入了PartGen，这是一种新颖的方法，可以从文本、图像或非结构化3D对象生成由有意义的部分组成的3D对象。首先，给定生成或渲染的3D对象的多个视图，多视图扩散模型提取一组合理且视图一致的零件分割，将对象划分为零件。然后，第二个多视图扩散模型分别获取每个部分，填充遮挡，并通过将这些完成的视图馈送到3D重建网络来使用它们进行3D重建。这个完成过程考虑了整个对象的上下文，以确保各部分紧密结合。生成完成模型可以弥补因遮挡而丢失的信息；在极端情况下，它可以根据输入的3D资源产生完全不可见的部分的幻觉。我们在生成的和真实的3D资产上评估了我们的方法，并表明它在很大程度上优于分割和零件提取基线。我们还展示了3D零件编辑等下游应用程序。 et.al.|[2412.18608](http://arxiv.org/abs/2412.18608)|null|
 
-<p align=right>(<a href=#updated-on-20250121>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250122>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
