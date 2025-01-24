@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.01.23
+## Updated on 2025.01.24
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2025-01-13**|**Evaluating Human Perception of Novel View Synthesis: Subjective Quality Assessment of Gaussian Splatting and NeRF in Dynamic Scenes**|高斯散斑（GS）和神经辐射场（NeRF）是两项突破性的技术，它们彻底改变了新视图合成（NVS）领域，通过从一组稀疏视图的图像中合成多个视点，实现了沉浸式真实感渲染和用户体验。NVS的潜在应用，如高质量的虚拟和增强现实、详细的3D建模和逼真的医学器官成像，强调了从人类感知的角度对NVS方法进行质量评估的重要性。尽管之前的一些研究已经探索了NVS技术的主观质量评估，但它们仍然面临着一些挑战，特别是在NVS方法选择、场景覆盖和评估方法方面。为了应对这些挑战，我们进行了两个主观实验，对NVS技术进行质量评估，包括基于GS和基于NeRF的方法，重点关注动态和现实世界的场景。本研究涵盖了360度、正面和单视点视频，同时提供了更丰富、更多的真实场景。同时，这是首次探索NVS方法在具有运动物体的动态场景中的影响。这两种主观实验有助于从人类感知的角度充分理解不同观察路径的影响，并为未来开发全参考和无参考质量指标铺平道路。此外，我们在拟议的数据库上建立了各种最先进的客观指标的综合基准，强调现有方法仍然难以准确捕捉主观质量。这些结果让我们对现有NVS方法的局限性有了一些了解，并可能促进新NVS方法发展。 et.al.|[2501.08072](http://arxiv.org/abs/2501.08072)|null|
 |**2025-01-13**|**Motion Tracks: A Unified Representation for Human-Robot Transfer in Few-Shot Imitation Learning**|教机器人自主完成日常任务仍然是一个挑战。模仿学习（IL）是一种强大的方法，通过演示向机器人灌输技能，但受到收集远程操作机器人数据的劳动密集型过程的限制。人类视频提供了一种可扩展的替代方案，但由于缺乏机器人动作标签，仍然很难直接从中训练IL策略。为了解决这个问题，我们建议将动作表示为图像上的短程2D轨迹。这些动作或运动轨迹捕捉人手或机器人末端执行器的预测运动方向。我们实例化了一个名为运动轨迹策略（MT-pi）的IL策略，该策略接收图像观测值并将运动轨迹作为动作输出。通过利用这种统一的跨实施例动作空间，MT-pi在只需几分钟的人类视频和有限的额外机器人演示的情况下，就可以成功完成任务。在测试时，我们从两个相机视图预测运动轨迹，通过多视图合成恢复6DoF轨迹。MT pi在4个现实世界任务中的平均成功率为86.5%，比不利用人类数据或我们的动作空间的最先进的IL基线高出40%，并推广到仅在人类视频中看到的场景。代码和视频可在我们的网站上找到https://portal-cornell.github.io/motion_track_policy/. et.al.|[2501.06994](http://arxiv.org/abs/2501.06994)|null|
 
-<p align=right>(<a href=#updated-on-20250123>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250124>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2025-01-18**|**PB-NBV: Efficient Projection-Based Next-Best-View Planning Framework for Reconstruction of Unknown Objects**|完全捕获物体的三维（3D）数据在工业和机器人应用中至关重要。下一最佳视图（NBV）规划的任务是根据当前数据计算下一个最佳视点，逐步实现对象的完整3D重建。然而，由于光线投射的广泛使用，许多现有的NBV规划算法会产生巨大的计算成本。具体来说，该框架根据体素结构将不同类型的体素簇重新组合成椭球体。然后，使用基于投影的视点质量评估函数结合全局划分策略从候选视图中选择下一个最佳视点。此过程取代了大量的光线投射，显著提高了计算效率。仿真环境中的对比实验表明，与其他框架相比，我们的框架以较低的计算时间实现了最高的点云覆盖率。真实世界的实验也证实了该框架的效率和可行性。我们的方法将开源，造福社区。 et.al.|[2501.10663](http://arxiv.org/abs/2501.10663)|null|
 |**2025-01-17**|**Elucidating the high compliance mechanism by which the urinary bladder fills under low pressures**|膀胱在充盈过程中的高顺应性对其正常功能至关重要，使其能够以最小的透壁压升高来适应显著的体积增加。本研究旨在通过使用三种互补的成像方式分析大鼠从完全排空状态到完全膨胀的离体充盈过程，阐明这一现象背后的物理机制，而无需预处理。使用分辨率为10.8μm的高分辨率显微CT对膀胱腔进行详细的3D重建，显示在填充过程中膀胱体积增加了62倍。对整个膀胱的压力-容积研究描绘了三种机械填充状态：初始的高顺应性阶段、过渡阶段和最终的高压阶段。虽然先前的研究推测小粘膜皱襞（450μm）是高顺应性阶段的原因，但排尿膀胱圆顶的多光子显微镜（MPM）显示，大皱襞比这些皱襞大一个数量级。充气过程中的膀胱成像显示，这些大范围褶皱的扁平化是初始高顺应性阶段体积增加的原因。膀胱腔在充满和排空状态下的3D重建显示了97.13%的高排空效率。MPM成像结果表明，圆顶中的大规模褶皱通过将尿液推向膀胱出口来实现这种高排尿率。这些见解对于膀胱生物力学的计算模型和理解由于膀胱出口梗阻和与年龄相关的功能障碍等病理条件导致的膀胱功能变化至关重要。 et.al.|[2501.10312](http://arxiv.org/abs/2501.10312)|null|
 
-<p align=right>(<a href=#updated-on-20250123>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250124>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2025-01-22**|**Low-dimensional adaptation of diffusion models: Convergence in total variation**|本文研究了扩散生成模型如何利用（未知）低维结构来加速采样。聚焦于两个主流采样器——去噪扩散隐式模型（DDIM）和去噪扩散概率模型（DDPM）——并假设准确的分数估计，我们证明了它们的迭代复杂度不大于 $k/\varepsilon$的数量级（高达某个对数因子），其中$\varepilon$是总变化距离的精度，$k$ 是目标分布的某个内在维度。我们的结果适用于广泛的目标分布家族，不需要平滑度或对数凹度假设。此外，我们开发了一个下限，表明Ho等人（2020年）和Song等人（2020）引入的系数在促进低维适应方面（接近）必要性。我们的发现为DDIM型采样器对未知低维结构的适应性提供了第一个严格的证据，并在总变分收敛方面改进了最先进的DDPM理论。 et.al.|[2501.12982](http://arxiv.org/abs/2501.12982)|null|
 |**2025-01-22**|**LiT: Delving into a Simplified Linear Diffusion Transformer for Image Generation**|在常用的亚二次复杂度模块中，线性注意力受益于简单性和高并行性，使其有望用于图像合成任务。然而，线性注意力的建筑设计和学习策略在这一领域仍然没有得到充分的探索。在本文中，我们为高效的线性扩散变压器提供了一套现成的解决方案。我们的核心贡献包括：（1）使用少量头部简化线性注意力，观察性能的免费午餐效应，而不会增加延迟。（2） 来自完全预训练的扩散变换器的权重继承：使用预训练的传播变换器初始化线性变换器，并加载除与线性注意力相关的参数外的所有参数。（3） 混合知识蒸馏目标：使用预训练的扩散变换器来帮助训练学生线性变换器，不仅监督预测的噪声，还监督反向扩散过程的方差。这些指导方针促成了我们提出的线性扩散变换器（LiT），这是一种高效的文本到图像变换器，可以在笔记本电脑上离线部署。实验表明，类内条件256*256和512*512 ImageNet基准LiT实现了极具竞争力的FID，同时与DiT相比，训练步骤分别减少了80%和77%。LiT还可以与基于Mamba或门控线性注意力的方法相媲美。此外，对于文本到图像的生成，LiT允许快速合成高达1K分辨率的照片级真实感图像。项目页面：https://techmonsterwang.github.io/LiT/. et.al.|[2501.12976](http://arxiv.org/abs/2501.12976)|null|
 
-<p align=right>(<a href=#updated-on-20250123>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250124>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-30**|**Hierarchical Pose Estimation and Mapping with Multi-Scale Neural Feature Fields**|机器人应用需要对场景有全面的了解。近年来，基于神经场的参数化整个环境的方法已经变得流行。由于其连续性和学习场景先验的能力，这些方法很有前景。然而，当处理未知的传感器姿态和连续测量时，在机器人中使用神经场变得具有挑战性。本文主要研究大规模神经隐式SLAM的传感器姿态估计问题。我们从概率的角度研究了隐式映射，并提出了具有相应神经网络架构的分层姿态估计。我们的方法非常适合大规模隐式映射表示。所提出的方法在连续的室外LiDAR扫描上运行，实现了精确的姿态估计，同时保持了短轨迹和长轨迹的稳定映射质量。我们在适合大规模重建的结构化稀疏隐式表示上构建了我们的方法，并使用KITTI和MaiCity数据集对其进行了评估。我们的方法在未知姿态的映射方面优于基线，并实现了最先进的定位精度。 et.al.|[2412.20976](http://arxiv.org/abs/2412.20976)|null|
 |**2024-12-26**|**Humans as a Calibration Pattern: Dynamic 3D Scene Reconstruction from Unsynchronized and Uncalibrated Videos**|最近关于动态神经场重建的工作假设输入来自具有已知姿势的同步多视图视频。这些输入约束在现实世界的设置中经常得不到满足，使得这种方法不切实际。我们证明，如果视频捕捉到人体运动，则姿态未知的非同步视频可以生成动态神经场。人类是最常见的动态主体之一，其姿势可以使用最先进的方法进行估计。在有噪声的情况下，估计的人体形状和姿态参数为训练一致的动态神经表示的高度非凸和欠约束问题提供了一个不错的初始化。给定人类的姿势和形状序列，我们估计视频之间的时间偏移，然后通过分析3D关节位置进行相机姿势估计。然后，我们使用多分辨率脊训练动态NeRF，同时细化时间偏移和相机姿态。该设置仍然涉及优化许多参数，因此，我们引入了一种鲁棒的渐进学习策略来稳定该过程。实验表明，我们的方法在具有挑战性的条件下实现了精确的时空校准和高质量的场景重建。 et.al.|[2412.19089](http://arxiv.org/abs/2412.19089)|null|
 
-<p align=right>(<a href=#updated-on-20250123>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250124>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
