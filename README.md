@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.01.24
+## Updated on 2025.01.25
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2025-01-14**|**VINGS-Mono: Visual-Inertial Gaussian Splatting Monocular SLAM in Large Scenes**|VINGS Mono是一个专为大型场景设计的单目（惯性）高斯散斑（GS）SLAM框架。该框架由四个主要组件组成：VIO前端、2D高斯映射、NVS环路闭合和动态擦除器。在VIO前端中，RGB帧通过密集束调整和不确定性估计进行处理，以提取场景几何形状和姿态。基于该输出，映射模块递增地构建和维护2D高斯映射。2D高斯映射的关键组件包括基于样本的光栅化器、分数管理器和姿态细化，它们共同提高了映射速度和定位精度。这使得SLAM系统能够处理多达5000万个高斯椭球的大规模城市环境。为了确保大规模场景中的全局一致性，我们设计了一个环路闭合模块，该模块创新性地利用高斯散点的新颖视图合成（NVS）功能进行环路闭合检测和高斯图的校正。此外，我们提出了一种动态橡皮擦，以解决现实世界户外场景中动态对象不可避免的存在问题。在室内和室外环境中进行的广泛评估表明，我们的方法实现了与视觉惯性里程表相当的定位性能，同时超越了最近的GS/NeRF SLAM方法。在映射和渲染质量方面，它也明显优于所有现有方法。此外，我们开发了一款移动应用程序，并验证了我们的框架可以仅使用智能手机摄像头和低频IMU传感器实时生成高质量的高斯地图。据我们所知，VINGS Mono是第一种能够在室外环境中运行并支持公里级大型场景的单目高斯SLAM方法。 et.al.|[2501.08286](http://arxiv.org/abs/2501.08286)|null|
 |**2025-01-13**|**Evaluating Human Perception of Novel View Synthesis: Subjective Quality Assessment of Gaussian Splatting and NeRF in Dynamic Scenes**|高斯散斑（GS）和神经辐射场（NeRF）是两项突破性的技术，它们彻底改变了新视图合成（NVS）领域，通过从一组稀疏视图的图像中合成多个视点，实现了沉浸式真实感渲染和用户体验。NVS的潜在应用，如高质量的虚拟和增强现实、详细的3D建模和逼真的医学器官成像，强调了从人类感知的角度对NVS方法进行质量评估的重要性。尽管之前的一些研究已经探索了NVS技术的主观质量评估，但它们仍然面临着一些挑战，特别是在NVS方法选择、场景覆盖和评估方法方面。为了应对这些挑战，我们进行了两个主观实验，对NVS技术进行质量评估，包括基于GS和基于NeRF的方法，重点关注动态和现实世界的场景。本研究涵盖了360度、正面和单视点视频，同时提供了更丰富、更多的真实场景。同时，这是首次探索NVS方法在具有运动物体的动态场景中的影响。这两种主观实验有助于从人类感知的角度充分理解不同观察路径的影响，并为未来开发全参考和无参考质量指标铺平道路。此外，我们在拟议的数据库上建立了各种最先进的客观指标的综合基准，强调现有方法仍然难以准确捕捉主观质量。这些结果让我们对现有NVS方法的局限性有了一些了解，并可能促进新NVS方法发展。 et.al.|[2501.08072](http://arxiv.org/abs/2501.08072)|null|
 
-<p align=right>(<a href=#updated-on-20250124>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250125>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2025-01-21**|**Self-Calibrated Epipolar Reconstruction for Assessment of Aneurysms in the Internal Carotid Artery Using In-Silico Biplane Angiograms**|颅内动脉瘤（IA）的治疗依赖于使用双平面视图的血管造影指导。然而，血管重叠和缩短往往会影响治疗的准确流量估计和设备尺寸，从而掩盖关键细节。本研究介绍了一种极线重建方法，利用常规采集的双平面血管造影数据增强颈内动脉（ICA）和动脉瘤圆顶的3D渲染。我们的方法旨在通过克服传统二维成像技术的局限性来改善程序指导。本研究采用ICA动脉瘤的三种3D几何形状来模拟虚拟血管造影。这些血管造影是使用计算流体动力学（CFD）求解器生成的，然后使用锥束几何形状模拟双平面血管造影。通过匹配对比剂位置作为双平面视图之间时间的函数来实现自校准。特征匹配用于在3D中对血管结构进行三角剖分和重建。投影数据用于改进3D估计，包括消除错误结构和椭圆拟合。使用Dice Sorensen系数评估重建的准确性，将3D重建与原始模型进行比较。所提出的极线重建方法在三个测试的动脉瘤模型中得到了很好的推广，Dice-Sorensen系数分别为0.745、0.759和0.654。错误主要是由于部分血管重叠造成的。所有三个体积的平均重建时间约为10秒。所提出的极线重建方法增强了3D可视化，解决了投影诱导血管缩短等挑战。该方法为IA可视化的复杂性提供了一种解决方案，有可能为治疗提供更准确的分析和设备尺寸。 et.al.|[2501.11793](http://arxiv.org/abs/2501.11793)|null|
 |**2025-01-20**|**Multi-View Spectral Clustering for Graphs with Multiple View Structures**|尽管聚类具有根本重要性，但到目前为止，许多相关研究仍然基于模糊的基础，导致对各种聚类方法是否或如何相互联系的理解不清。在这项工作中，我们通过提出一个通用的聚类框架，包括一系列看似不同的聚类方法，包括属于广受欢迎的光谱聚类框架的各种方法，为解决此类歧义提供了额外的垫脚石。事实上，所提出的框架的通用性还能够揭示多视图图中尚未探索的领域，这些领域的每个视图可能具有不同的聚类节点。反过来，我们提出了GenClus：一种同时是该框架的实例和谱聚类的推广的方法，同时也与k-means密切相关。这为研究这种特殊类型的多视图图的少数现有方法提供了一种有原则的替代方案。然后，我们进行了深入的实验，证明GenClus在计算效率上比现有方法更高，同时也获得了类似或更好的聚类性能。最后，一个定性的现实案例研究进一步证明了GenClus产生有意义聚类的能力。 et.al.|[2501.11422](http://arxiv.org/abs/2501.11422)|null|
 
-<p align=right>(<a href=#updated-on-20250124>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250125>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2025-01-23**|**Cold dark gas in Cygnus X: The first large-scale mapping of low-frequency carbon recombination lines**|理解从原子气体到分子气体的转变对于解释分子云的形成和演化至关重要。然而，所涉及的气相，冷HI和CO暗分子气体，很难直接观察和物理表征。我们用分辨率为21pc（48'）的格林班克望远镜在274-399 MHz的碳无线电复合线（CRRL）中观察到天鹅座X恒星形成复合体。在所调查的30度2中，我们检测到24度2的线合成C273alpha发射，并绘制了低频CRRL的第一张大面积图。C273alpha辐射的形态显示了弧、脊和可能延伸的片状气体，这些气体通常位于CO发射的外围，可能从HI过渡到H_2。C273alpha和13CO发射的典型角间距为12pc，我们估计C273alpha气体密度为n_H~40-400cm^3。C273alpha线剖面是高斯分布的，可能是湍流加宽的，半峰全宽范围从2到20公里/秒，中值为10.6公里/秒。马赫数在10-30之间。湍流时间尺度相对较短，为2.6 Myr，我们推断湍流压力可能主导C273alpha气体的演化。C273alpha和13CO成分之间的速度偏移在整个地区都很明显，典型值为2.9 km/s。数据中出现了两种状态：一种状态是C273alpha与13CO密切相关（在N_H~4 x 10^21 cm^-2），另一种状态则是C273阿尔法与13CO强度无关地发射。在前一种状态下，C273alpha可能来自大质量云（细丝）的包层，在后一种状态中，C273阿尔法以更扩散的HI和H_2气体混合物从冷团块中发射出来。 et.al.|[2501.13838](http://arxiv.org/abs/2501.13838)|null|
 |**2025-01-23**|**Reaction kinetics of membrane receptors: a spatial modeling approach**|扩散分子和膜结合受体之间的相互作用驱动了许多细胞过程。在这项工作中，我们通过均质化细胞膜并描述分子扩散和分子-受体相互作用的演变，开发了一个分子与膜受体相互作用空间模型。通过分析与常微分方程耦合的偏微分方程，我们推导出了四种典型相互作用场景中稳态分子流入率的解析表达式：米氏动力学、底物竞争、竞争性抑制和非竞争性抑制。对于每种情况，我们展示了如何修改经典的充分混合反应速率理论，以解决与细胞膜结合的受体固有的空间特征。我们发现，在某些生物物理参数条件下，简单的混合计算明显高估了反应速率。 et.al.|[2501.13837](http://arxiv.org/abs/2501.13837)|null|
 
-<p align=right>(<a href=#updated-on-20250124>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250125>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-30**|**Hierarchical Pose Estimation and Mapping with Multi-Scale Neural Feature Fields**|机器人应用需要对场景有全面的了解。近年来，基于神经场的参数化整个环境的方法已经变得流行。由于其连续性和学习场景先验的能力，这些方法很有前景。然而，当处理未知的传感器姿态和连续测量时，在机器人中使用神经场变得具有挑战性。本文主要研究大规模神经隐式SLAM的传感器姿态估计问题。我们从概率的角度研究了隐式映射，并提出了具有相应神经网络架构的分层姿态估计。我们的方法非常适合大规模隐式映射表示。所提出的方法在连续的室外LiDAR扫描上运行，实现了精确的姿态估计，同时保持了短轨迹和长轨迹的稳定映射质量。我们在适合大规模重建的结构化稀疏隐式表示上构建了我们的方法，并使用KITTI和MaiCity数据集对其进行了评估。我们的方法在未知姿态的映射方面优于基线，并实现了最先进的定位精度。 et.al.|[2412.20976](http://arxiv.org/abs/2412.20976)|null|
 |**2024-12-26**|**Humans as a Calibration Pattern: Dynamic 3D Scene Reconstruction from Unsynchronized and Uncalibrated Videos**|最近关于动态神经场重建的工作假设输入来自具有已知姿势的同步多视图视频。这些输入约束在现实世界的设置中经常得不到满足，使得这种方法不切实际。我们证明，如果视频捕捉到人体运动，则姿态未知的非同步视频可以生成动态神经场。人类是最常见的动态主体之一，其姿势可以使用最先进的方法进行估计。在有噪声的情况下，估计的人体形状和姿态参数为训练一致的动态神经表示的高度非凸和欠约束问题提供了一个不错的初始化。给定人类的姿势和形状序列，我们估计视频之间的时间偏移，然后通过分析3D关节位置进行相机姿势估计。然后，我们使用多分辨率脊训练动态NeRF，同时细化时间偏移和相机姿态。该设置仍然涉及优化许多参数，因此，我们引入了一种鲁棒的渐进学习策略来稳定该过程。实验表明，我们的方法在具有挑战性的条件下实现了精确的时空校准和高质量的场景重建。 et.al.|[2412.19089](http://arxiv.org/abs/2412.19089)|null|
 
-<p align=right>(<a href=#updated-on-20250124>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250125>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
