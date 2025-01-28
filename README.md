@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.01.27
+## Updated on 2025.01.28
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2025-01-18**|**Decoupling Appearance Variations with 3D Consistent Features in Gaussian Splatting**|高斯散斑已成为新颖视图合成中一种突出的3D表示，但它仍然存在外观变化，这是由各种因素引起的，如现代相机ISP、一天中的不同时间、天气条件和局部光线变化。这些变化可能会导致渲染图像/视频中的浮动和颜色失真。高斯散斑中最近的外观建模方法要么与渲染过程紧密耦合，阻碍了实时渲染，要么只考虑了轻微的全局变化，在局部光线变化的场景中表现不佳。在本文中，我们提出了DAVIGS，这是一种以即插即用和高效的方式解耦外观变化的方法。通过在图像级别而不是高斯级别转换渲染结果，我们的方法可以在最小的优化时间和内存开销下对外观变化进行建模。此外，我们的方法在3D空间中收集与外观相关的信息来转换渲染图像，从而隐式地建立视图之间的3D一致性。我们在几个外观变体场景上验证了我们的方法，并证明它在不影响渲染速度的情况下，以最少的训练时间和内存使用实现了最先进的渲染质量。此外，它以即插即用的方式为不同的高斯散斑基线提供了性能改进。 et.al.|[2501.10788](http://arxiv.org/abs/2501.10788)|null|
 |**2025-01-16**|**CrossModalityDiffusion: Multi-Modal Novel View Synthesis with Unified Intermediate Representation**|地理空间成像利用了来自各种传感方式的数据，如地球观测、合成孔径雷达和激光雷达，从地面无人机到卫星视图。这些异构输入为场景理解提供了重要机会，但在准确解释几何体方面存在挑战，特别是在缺乏精确地面实况数据的情况下。为了解决这个问题，我们提出了CrossModalityDiffusion，这是一个模块化框架，旨在在没有场景几何先验知识的情况下生成不同模态和视点的图像。CrossModalityDiffusion采用特定于模态的编码器，这些编码器拍摄多个输入图像并产生几何感知特征体，这些特征体对相对于其输入相机位置的场景结构进行编码。放置特征体积的空间是统一输入模式的共同基础。这些特征体被重叠，并使用体绘制技术从新的角度渲染成特征图像。渲染的特征图像被用作特定模态扩散模型的调节输入，从而能够合成所需输出模态的新图像。在本文中，我们证明了联合训练不同的模块可以确保框架内所有模态的一致几何理解。我们在合成ShapeNet汽车数据集上验证了CrossModalityDiffusion的能力，证明了它在跨多种成像模态和视角生成准确一致的新视图方面的有效性。 et.al.|[2501.09838](http://arxiv.org/abs/2501.09838)|**[link](https://github.com/alexberian/crossmodalitydiffusion)**|
 
-<p align=right>(<a href=#updated-on-20250127>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250128>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2025-01-23**|**MV-GMN: State Space Model for Multi-View Action Recognition**|多视图动作识别的最新进展在很大程度上依赖于基于Transformer的模型。虽然这些模型有效且适应性强，但通常需要大量的计算资源，特别是在具有多个视图和多个时间序列的场景中。为了解决这一局限性，本文介绍了MV-GMN模型，这是一种状态空间模型，专门用于高效地聚合多模态数据（RGB和骨架）、多视图视角和多时相信息，以降低计算复杂度进行动作识别。MV-GMN模型采用了一种创新的多视图图Mamba网络，该网络由一系列MV-GMN块组成。每个块包括一个拟议的双向状态空间块和一个GCN模块。双向状态空间块引入了四种扫描策略，包括视图优先和时间优先方法。GCN模块利用基于规则和基于KNN的方法构建图网络，有效地整合了来自不同视角和时间实例的特征。MV-GMN在多个数据集上的表现优于最新技术，在跨主题和跨视图场景下，在NTU RGB+D 120数据集上分别实现了97.3%和96.7%的显著准确率，证明了其有效性。MV-GMN还超越了基于Transformer的基线，同时只需要线性推理复杂性，突显了该模型减少计算负载、增强多视图动作识别技术的可扩展性和适用性的能力。 et.al.|[2501.13829](http://arxiv.org/abs/2501.13829)|null|
 |**2025-01-23**|**VARFVV: View-Adaptive Real-Time Interactive Free-View Video Streaming with Edge Computing**|自由观看视频（FVV）允许用户从多个视角探索沉浸式视频内容。然而，由于视图切换的不确定性，再加上传输和解码多个视频流所需的大量带宽和计算资源，交付FVV带来了重大挑战，这可能会导致频繁的播放中断。现有的方法，无论是基于客户端还是基于云，都难以在有限的带宽和计算资源下满足高质量的体验（QoE）要求。为了解决这些问题，我们提出了VARFVV，这是一种带宽和计算效率高的系统，能够实现具有高QoE和低切换延迟的实时交互式FVV流。具体来说，VARFVV引入了一种低复杂度的FVV生成方案，该方案基于用户选择的视图轨迹在边缘服务器上重新组装多视图视频帧，消除了转码的需要，并显著降低了计算开销。这种设计使其非常适合大规模、基于移动的UHD FVV体验。此外，我们提出了一种利用图神经网络的流行度自适应比特分配方法，该方法预测视图流行度并动态调整比特分配，以在带宽限制内最大化QoE。我们还构建了一个FVV数据集，其中包括来自10个场景的330个视频，包括篮球、歌剧等。大量实验表明，VARFVV在视频质量、切换延迟、计算效率和带宽使用方面优于现有方法，在单个边缘服务器上支持500多个用户，切换延迟为71.5ms。我们的代码和数据集可在https://github.com/qianghu-huber/VARFVV. et.al.|[2501.13630](http://arxiv.org/abs/2501.13630)|null|
 
-<p align=right>(<a href=#updated-on-20250127>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250128>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2025-01-24**|**Handling Heterophily in Recommender Systems with Wavelet Hypergraph Diffusion**|推荐系统在跨各个领域提供个性化用户体验方面至关重要。然而，捕捉用户-项目交互的异质性模式和多维性带来了重大挑战。为了解决这个问题，我们引入了FWHDNN（基于融合的小波超图扩散神经网络），这是一种创新的框架，旨在推进基于超图的推荐任务中的表示学习。该模型包含三个关键组成部分：（1）交叉差分关系编码器，利用异质性感知超图扩散来适应不同类别标签的消息传递；（2）多级聚类编码器，采用基于小波变换的超图神经网络层来捕获多尺度拓扑关系；（3）集成的多模态融合机制，通过中间和后期融合策略将结构和文本信息结合起来。对真实世界数据集的广泛实验表明，FWHDNN在捕获用户和项目之间的高阶互连方面，在准确性、鲁棒性和可扩展性方面超越了最先进的方法。 et.al.|[2501.14399](http://arxiv.org/abs/2501.14399)|null|
 |**2025-01-24**|**Advancing data-driven broadband seismic wavefield simulation with multi-conditional diffusion model**|地震传感器和震源的稀疏分布给地下成像、震源表征和地震动建模带来了挑战。虽然大型N阵列显示了密集观测数据的潜力，但它们在广大地区的部署受到经济和后勤限制的限制。数值模拟提供了一种替代方案，但模拟真实的波场在计算上仍然很昂贵。为了应对这些挑战，我们开发了一种多条件扩散变换器，用于在不需要先验地质知识的情况下生成地震波场。我们的方法产生高分辨率的波场，可以准确地捕获不同源和站配置的振幅和相位信息。该模型首先生成以输入属性为条件的振幅谱，随后通过迭代相位优化来细化波场。我们使用间歇泉地热场的数据验证了我们的方法，展示了在光谱振幅和相位方面具有空间连续性和保真度的波场的生成。这些合成波场有望推进地震学中的结构成像和震源表征。 et.al.|[2501.14348](http://arxiv.org/abs/2501.14348)|null|
 
-<p align=right>(<a href=#updated-on-20250127>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250128>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-30**|**Hierarchical Pose Estimation and Mapping with Multi-Scale Neural Feature Fields**|机器人应用需要对场景有全面的了解。近年来，基于神经场的参数化整个环境的方法已经变得流行。由于其连续性和学习场景先验的能力，这些方法很有前景。然而，当处理未知的传感器姿态和连续测量时，在机器人中使用神经场变得具有挑战性。本文主要研究大规模神经隐式SLAM的传感器姿态估计问题。我们从概率的角度研究了隐式映射，并提出了具有相应神经网络架构的分层姿态估计。我们的方法非常适合大规模隐式映射表示。所提出的方法在连续的室外LiDAR扫描上运行，实现了精确的姿态估计，同时保持了短轨迹和长轨迹的稳定映射质量。我们在适合大规模重建的结构化稀疏隐式表示上构建了我们的方法，并使用KITTI和MaiCity数据集对其进行了评估。我们的方法在未知姿态的映射方面优于基线，并实现了最先进的定位精度。 et.al.|[2412.20976](http://arxiv.org/abs/2412.20976)|null|
 |**2024-12-26**|**Humans as a Calibration Pattern: Dynamic 3D Scene Reconstruction from Unsynchronized and Uncalibrated Videos**|最近关于动态神经场重建的工作假设输入来自具有已知姿势的同步多视图视频。这些输入约束在现实世界的设置中经常得不到满足，使得这种方法不切实际。我们证明，如果视频捕捉到人体运动，则姿态未知的非同步视频可以生成动态神经场。人类是最常见的动态主体之一，其姿势可以使用最先进的方法进行估计。在有噪声的情况下，估计的人体形状和姿态参数为训练一致的动态神经表示的高度非凸和欠约束问题提供了一个不错的初始化。给定人类的姿势和形状序列，我们估计视频之间的时间偏移，然后通过分析3D关节位置进行相机姿势估计。然后，我们使用多分辨率脊训练动态NeRF，同时细化时间偏移和相机姿态。该设置仍然涉及优化许多参数，因此，我们引入了一种鲁棒的渐进学习策略来稳定该过程。实验表明，我们的方法在具有挑战性的条件下实现了精确的时空校准和高质量的场景重建。 et.al.|[2412.19089](http://arxiv.org/abs/2412.19089)|null|
 
-<p align=right>(<a href=#updated-on-20250127>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250128>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
