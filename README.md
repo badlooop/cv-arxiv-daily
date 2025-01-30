@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.01.29
+## Updated on 2025.01.30
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2025-01-21**|**Survey on Monocular Metric Depth Estimation**|单目深度估计（MDE）是一项基本的计算机视觉任务，支撑着空间理解、3D重建和自动驾驶等应用。虽然基于深度学习的MDE方法可以从单个图像中预测相对深度，但它们缺乏度量尺度信息通常会导致尺度不一致，限制了它们在视觉SLAM、3D重建和新颖视图合成等下游任务中的实用性。单目度量深度估计（MMDE）通过实现精确的场景级深度推断来解决这些挑战。MMDE提高了深度一致性，增强了顺序任务的稳定性，简化了与下游应用程序的集成，并拓宽了实际用例。本文对深度估计技术进行了全面的回顾，重点介绍了从基于几何的方法到最先进的深度学习方法的演变。它强调了标度不可知方法的进步，这对于实现零样本泛化作为MMDE的基础能力至关重要。探讨了零样本MMDE研究的最新进展，重点讨论了模型泛化和场景边界细节丢失等挑战。解决这些问题的创新策略包括无标签数据增强、图像修补、架构优化和生成技术。详细分析后，这些进步表明了对克服现有局限性的重大贡献。最后，本文综合了零样本MMDE的最新发展，确定了尚未解决的挑战，并概述了未来的研究方向。通过提供清晰的路线图和前沿的见解，这项工作旨在加深对MMDE的理解，激发新的应用，并推动技术创新。 et.al.|[2501.11841](http://arxiv.org/abs/2501.11841)|null|
 |**2025-01-20**|**See In Detail: Enhancing Sparse-view 3D Gaussian Splatting with Local Depth and Semantic Regularization**|3D高斯散斑（3DGS）在新颖的视图合成中表现出了显著的性能。然而，当输入视图稀疏时，其渲染质量会下降，导致内容失真和细节减少。这种限制阻碍了它的实际应用。为了解决这个问题，我们提出了一种稀疏视图3DGS方法。鉴于稀疏视图渲染固有的不适定性，整合先验信息至关重要。我们提出了一种语义正则化技术，使用从预训练的DINO-ViT模型中提取的特征来确保多视图语义的一致性。此外，我们提出了局部深度正则化，它约束深度值以提高对看不见的视图的泛化能力。我们的方法优于最先进的新颖视图合成方法，在LLFF数据集上实现了高达0.4dB的PSNR改善，同时减少了失真并提高了视觉质量。 et.al.|[2501.11508](http://arxiv.org/abs/2501.11508)|null|
 
-<p align=right>(<a href=#updated-on-20250129>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250130>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2025-01-24**|**Trick-GS: A Balanced Bag of Tricks for Efficient Gaussian Splatting**|高斯溅射（GS）用于3D重建因其快速训练、推理速度和高质量重建而变得非常流行。然而，基于GS的重建通常由数百万高斯人组成，这使得它们很难在智能手机等计算受限的设备上使用。本文首先对高效GS方法的进展进行了原则性分析。然后，我们提出了Trick GS，它是几种策略的精心组合，包括（1）具有分辨率、噪声和高斯尺度的渐进式训练，（2）学习根据基元和SH带的重要性修剪和屏蔽基元和SH-带，以及（3）加速GS训练框架。Trick GS向资源受限的GS迈出了一大步，其中更快的运行时间、更小更快的模型收敛是最重要的。我们在三个数据集上的结果表明，与普通GS相比，Trick GS的训练速度提高了2倍，磁盘大小减小了40倍，渲染速度提高了两倍，同时具有相当的准确性。 et.al.|[2501.14534](http://arxiv.org/abs/2501.14534)|null|
 |**2025-01-24**|**Scalable Benchmarking and Robust Learning for Noise-Free Ego-Motion and 3D Reconstruction from Noisy Video**|我们的目标是通过解决现有模型中对无噪声数据的依赖这一关键限制，重新定义鲁棒的自我运动估计和逼真的3D重建。虽然这种经过净化的条件简化了评估，但它们未能捕捉到现实世界环境中不可预测、嘈杂的复杂性。当这些模型在实践中部署时，动态运动、传感器缺陷和同步扰动会导致性能急剧下降，这表明迫切需要能够在现实世界的噪音中接受并表现出色的框架。为了弥合这一差距，我们解决了三个核心挑战：可扩展的数据生成、全面的基准测试和模型鲁棒性增强。首先，我们介绍了一个可扩展的噪声数据合成流水线，该流水线生成各种数据集，模拟复杂的运动、传感器缺陷和同步误差。其次，我们利用这个管道创建了Robust-Ego3D，这是一个严格设计的基准，旨在暴露噪声引起的性能下降，突显了当前基于学习的方法在自我运动精度和3D重建质量方面的局限性。第三，我们提出了对应引导高斯散斑（CorrGS），这是一种新的测试时间自适应方法，通过将噪声观测值与来自干净3D地图的渲染RGB-D帧对齐，逐步细化内部干净的3D表示，通过视觉对应增强几何对齐和外观恢复。对合成和真实世界数据的广泛实验表明，CorrGS始终优于现有的最先进方法，特别是在涉及快速运动和动态照明的场景中。 et.al.|[2501.14319](http://arxiv.org/abs/2501.14319)|**[link](https://github.com/xiaohao-xu/slam-under-perturbation)**|
 
-<p align=right>(<a href=#updated-on-20250129>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250130>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2025-01-28**|**Adversarial Masked Autoencoder Purifier with Defense Transferability**|对抗性防御的研究仍然难以应对先进的对抗性攻击。与之前大多数依赖扩散模型进行测试时间防御以显著增加推理时间的研究相反，我们提出了Masked AutoEncoder Purifier（MAEP），它将Masked AutoEncoder（MAE）集成到对抗性净化器框架中，用于测试时间净化。虽然MAEP实现了有前景的对抗鲁棒性，但它特别具有模型防御可转移性和攻击泛化能力，而不依赖于使用与训练数据集不同的额外数据。据我们所知，MAEP是第一个基于MAE的对抗性净化器的研究。大量的实验结果表明，我们的方法不仅可以保持清晰的精度，只会略有下降，而且在清晰的精度和鲁棒的精度之间也有很小的差距。值得注意的是，即使直接在ImageNet上进行测试，在CIFAR10上训练的MAEP也能达到最先进的性能，优于专门在ImageNet中训练的现有基于扩散的模型。 et.al.|[2501.16904](http://arxiv.org/abs/2501.16904)|null|
 |**2025-01-28**|**Reversal of Spin-torque Polarity with Inverting Current Vorticity in Composition-graded Layer at the Ti/W Interface**|虽然已经探索了成分梯度诱导的自旋电流产生，但其微观机制仍然知之甚少。本文探讨了组分梯度极性对自旋电流产生的贡献。在10 nm厚的W和Ti层之间引入了由超薄Ti和W层的原位原子扩散形成的纳米级成分梯度。沉积在该梯度上的铁磁性Ni95Cu5中的自旋力矩铁磁共振表明，适度的成分梯度抑制了W中自旋霍尔效应的负自旋力矩。相比之下，反转Ti/W堆叠顺序（使梯度反转）抑制了Ti中轨道霍尔效应的正自旋力矩。这些发现表明，自旋力矩的符号由成分梯度的极性决定，为有效产生自旋力矩提供了一种新策略，而不依赖于具有强自旋或轨道霍尔效果的材料。 et.al.|[2501.16806](http://arxiv.org/abs/2501.16806)|null|
 
-<p align=right>(<a href=#updated-on-20250129>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250130>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-30**|**Hierarchical Pose Estimation and Mapping with Multi-Scale Neural Feature Fields**|机器人应用需要对场景有全面的了解。近年来，基于神经场的参数化整个环境的方法已经变得流行。由于其连续性和学习场景先验的能力，这些方法很有前景。然而，当处理未知的传感器姿态和连续测量时，在机器人中使用神经场变得具有挑战性。本文主要研究大规模神经隐式SLAM的传感器姿态估计问题。我们从概率的角度研究了隐式映射，并提出了具有相应神经网络架构的分层姿态估计。我们的方法非常适合大规模隐式映射表示。所提出的方法在连续的室外LiDAR扫描上运行，实现了精确的姿态估计，同时保持了短轨迹和长轨迹的稳定映射质量。我们在适合大规模重建的结构化稀疏隐式表示上构建了我们的方法，并使用KITTI和MaiCity数据集对其进行了评估。我们的方法在未知姿态的映射方面优于基线，并实现了最先进的定位精度。 et.al.|[2412.20976](http://arxiv.org/abs/2412.20976)|null|
 |**2024-12-26**|**Humans as a Calibration Pattern: Dynamic 3D Scene Reconstruction from Unsynchronized and Uncalibrated Videos**|最近关于动态神经场重建的工作假设输入来自具有已知姿势的同步多视图视频。这些输入约束在现实世界的设置中经常得不到满足，使得这种方法不切实际。我们证明，如果视频捕捉到人体运动，则姿态未知的非同步视频可以生成动态神经场。人类是最常见的动态主体之一，其姿势可以使用最先进的方法进行估计。在有噪声的情况下，估计的人体形状和姿态参数为训练一致的动态神经表示的高度非凸和欠约束问题提供了一个不错的初始化。给定人类的姿势和形状序列，我们估计视频之间的时间偏移，然后通过分析3D关节位置进行相机姿势估计。然后，我们使用多分辨率脊训练动态NeRF，同时细化时间偏移和相机姿态。该设置仍然涉及优化许多参数，因此，我们引入了一种鲁棒的渐进学习策略来稳定该过程。实验表明，我们的方法在具有挑战性的条件下实现了精确的时空校准和高质量的场景重建。 et.al.|[2412.19089](http://arxiv.org/abs/2412.19089)|null|
 
-<p align=right>(<a href=#updated-on-20250129>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250130>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
