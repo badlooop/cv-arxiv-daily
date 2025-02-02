@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.02.01
+## Updated on 2025.02.02
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2025-01-21**|**Survey on Monocular Metric Depth Estimation**|单目深度估计（MDE）是一项基本的计算机视觉任务，支撑着空间理解、3D重建和自动驾驶等应用。虽然基于深度学习的MDE方法可以从单个图像中预测相对深度，但它们缺乏度量尺度信息通常会导致尺度不一致，限制了它们在视觉SLAM、3D重建和新颖视图合成等下游任务中的实用性。单目度量深度估计（MMDE）通过实现精确的场景级深度推断来解决这些挑战。MMDE提高了深度一致性，增强了顺序任务的稳定性，简化了与下游应用程序的集成，并拓宽了实际用例。本文对深度估计技术进行了全面的回顾，重点介绍了从基于几何的方法到最先进的深度学习方法的演变。它强调了标度不可知方法的进步，这对于实现零样本泛化作为MMDE的基础能力至关重要。探讨了零样本MMDE研究的最新进展，重点讨论了模型泛化和场景边界细节丢失等挑战。解决这些问题的创新策略包括无标签数据增强、图像修补、架构优化和生成技术。详细分析后，这些进步表明了对克服现有局限性的重大贡献。最后，本文综合了零样本MMDE的最新发展，确定了尚未解决的挑战，并概述了未来的研究方向。通过提供清晰的路线图和前沿的见解，这项工作旨在加深对MMDE的理解，激发新的应用，并推动技术创新。 et.al.|[2501.11841](http://arxiv.org/abs/2501.11841)|null|
 |**2025-01-20**|**See In Detail: Enhancing Sparse-view 3D Gaussian Splatting with Local Depth and Semantic Regularization**|3D高斯散斑（3DGS）在新颖的视图合成中表现出了显著的性能。然而，当输入视图稀疏时，其渲染质量会下降，导致内容失真和细节减少。这种限制阻碍了它的实际应用。为了解决这个问题，我们提出了一种稀疏视图3DGS方法。鉴于稀疏视图渲染固有的不适定性，整合先验信息至关重要。我们提出了一种语义正则化技术，使用从预训练的DINO-ViT模型中提取的特征来确保多视图语义的一致性。此外，我们提出了局部深度正则化，它约束深度值以提高对看不见的视图的泛化能力。我们的方法优于最先进的新颖视图合成方法，在LLFF数据集上实现了高达0.4dB的PSNR改善，同时减少了失真并提高了视觉质量。 et.al.|[2501.11508](http://arxiv.org/abs/2501.11508)|null|
 
-<p align=right>(<a href=#updated-on-20250201>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250202>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2025-01-24**|**Towards Unified Structured Light Optimization**|结构光（SL）3D重建捕捉物体的精确表面形状，提供工业检测和机器人视觉系统所必需的高精度3D数据。然而，目前在SL 3D重建中优化投影模式的研究面临两个主要局限性：每个场景都需要单独训练校准参数，优化仅限于特定类型的SL，这限制了它们的应用范围。为了解决这些局限性，我们提出了一个统一的SL优化框架，适用于不同的照明条件、对象类型和不同类型的SL。我们的框架仅使用单个投影图像即可快速确定最佳投影模式。主要贡献包括一种针对投影仪的新型全局匹配方法，该方法仅使用一个投影图像即可实现精确的投影仪-相机对准，以及一种具有光度调整模块的新投影补偿模型，以减少色域外裁剪产生的伪影。实验结果表明，我们的方法在各种对象、SL模式和光照条件下实现了卓越的解码精度，明显优于以前的方法。 et.al.|[2501.14659](http://arxiv.org/abs/2501.14659)|null|
 |**2025-01-24**|**Trick-GS: A Balanced Bag of Tricks for Efficient Gaussian Splatting**|高斯溅射（GS）用于3D重建因其快速训练、推理速度和高质量重建而变得非常流行。然而，基于GS的重建通常由数百万高斯人组成，这使得它们很难在智能手机等计算受限的设备上使用。本文首先对高效GS方法的进展进行了原则性分析。然后，我们提出了Trick GS，它是几种策略的精心组合，包括（1）具有分辨率、噪声和高斯尺度的渐进式训练，（2）学习根据基元和SH带的重要性修剪和屏蔽基元和SH-带，以及（3）加速GS训练框架。Trick GS向资源受限的GS迈出了一大步，其中更快的运行时间、更小更快的模型收敛是最重要的。我们在三个数据集上的结果表明，与普通GS相比，Trick GS的训练速度提高了2倍，磁盘大小减小了40倍，渲染速度提高了两倍，同时具有相当的准确性。 et.al.|[2501.14534](http://arxiv.org/abs/2501.14534)|null|
 
-<p align=right>(<a href=#updated-on-20250201>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250202>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2025-01-30**|**An extensive thermal conductivity measurement method based on atomic force microscopy**|由于各种尺寸相关的影响，低维固体中的热传输可能与它们的体积对应物存在显著差异。这提供了丰富的热传输现象。然而，在样品尺寸和维度减小的情况下，找到一种合适的热导率测量方法是一个挑战。在这里，我们提出并研究了在原子力显微镜（AFM）上实现的基于测辐射热法的纳米级分辨率热导率测量方法的可行性。AFM尖端和样品之间的局部热交换发生在样品的悬浮部分，由测辐射热效应引起的测量电阻变化的热建模为热导率提供了一个独特的值。正如我们通过热模拟所说明的那样，所提出的方法可以在约20nm的横向分辨率下，在0.2 K的温度下测量样品的热导率。我们的深入分析表明，所提出的基于AFM的辐射热测量方法在低维材料上的可行性和广泛适用性，包括从低温到室温以上的扩散和弹道热传输状态。因此，所提出的方法可以更深入地实验理解许多不同材料类别中纳米级和低维热传输现象的基本问题，以及傅里叶和非傅里叶传热机制。 et.al.|[2501.18384](http://arxiv.org/abs/2501.18384)|null|
 |**2025-01-30**|**Free-T2M: Frequency Enhanced Text-to-Motion Diffusion Model With Consistency Loss**|文本到运动生成的快速发展在很大程度上是由扩散模型推动的。然而，现有的方法只关注时间建模，从而忽视了频域分析。我们确定了运动去噪的两个关键阶段：**语义规划阶段**和**细粒度改进阶段**。为了有效地解决这些阶段，我们提出了**频率**e**增强**t**ext-**到**-**m**运动扩散模型（**Free-T2M**），结合了特定阶段的一致性损失，增强了静态特征的鲁棒性，提高了细粒度精度。大量实验证明了我们方法的有效性。具体来说，在StableMoFusion上，我们的方法将FID从**0.189**降低到**0.051**，在扩散架构内建立了新的SOTA性能。这些发现强调了将频域见解纳入文本到运动生成中以获得更精确和稳健结果的重要性。 et.al.|[2501.18232](http://arxiv.org/abs/2501.18232)|**[link](https://github.com/Hxxxz0/Free-T2m)**|
 
-<p align=right>(<a href=#updated-on-20250201>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250202>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2024-12-30**|**Hierarchical Pose Estimation and Mapping with Multi-Scale Neural Feature Fields**|机器人应用需要对场景有全面的了解。近年来，基于神经场的参数化整个环境的方法已经变得流行。由于其连续性和学习场景先验的能力，这些方法很有前景。然而，当处理未知的传感器姿态和连续测量时，在机器人中使用神经场变得具有挑战性。本文主要研究大规模神经隐式SLAM的传感器姿态估计问题。我们从概率的角度研究了隐式映射，并提出了具有相应神经网络架构的分层姿态估计。我们的方法非常适合大规模隐式映射表示。所提出的方法在连续的室外LiDAR扫描上运行，实现了精确的姿态估计，同时保持了短轨迹和长轨迹的稳定映射质量。我们在适合大规模重建的结构化稀疏隐式表示上构建了我们的方法，并使用KITTI和MaiCity数据集对其进行了评估。我们的方法在未知姿态的映射方面优于基线，并实现了最先进的定位精度。 et.al.|[2412.20976](http://arxiv.org/abs/2412.20976)|null|
 |**2024-12-26**|**Humans as a Calibration Pattern: Dynamic 3D Scene Reconstruction from Unsynchronized and Uncalibrated Videos**|最近关于动态神经场重建的工作假设输入来自具有已知姿势的同步多视图视频。这些输入约束在现实世界的设置中经常得不到满足，使得这种方法不切实际。我们证明，如果视频捕捉到人体运动，则姿态未知的非同步视频可以生成动态神经场。人类是最常见的动态主体之一，其姿势可以使用最先进的方法进行估计。在有噪声的情况下，估计的人体形状和姿态参数为训练一致的动态神经表示的高度非凸和欠约束问题提供了一个不错的初始化。给定人类的姿势和形状序列，我们估计视频之间的时间偏移，然后通过分析3D关节位置进行相机姿势估计。然后，我们使用多分辨率脊训练动态NeRF，同时细化时间偏移和相机姿态。该设置仍然涉及优化许多参数，因此，我们引入了一种鲁棒的渐进学习策略来稳定该过程。实验表明，我们的方法在具有挑战性的条件下实现了精确的时空校准和高质量的场景重建。 et.al.|[2412.19089](http://arxiv.org/abs/2412.19089)|null|
 
-<p align=right>(<a href=#updated-on-20250201>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250202>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
