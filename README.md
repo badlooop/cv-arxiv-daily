@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.02.03
+## Updated on 2025.02.04
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2025-01-22**|**DWTNeRF: Boosting Few-shot Neural Radiance Fields via Discrete Wavelet Transform**|神经辐射场（NeRF）在新颖的视图合成和3D场景表示方面取得了卓越的性能，但其实际应用受到收敛缓慢和依赖密集训练视图的阻碍。为此，我们提出了DWTNeRF，这是一个基于Instant NGP快速训练哈希编码的统一框架。它与为少镜头NeRF设计的正则化项相结合，后者在稀疏训练视图上运行。我们的DWTNeRF包括一种新颖的离散小波损耗，允许在训练目标中直接对低频进行显式优先级排序，从而减少早期训练阶段少数镜头NeRF对高频的过拟合。我们还引入了一种基于模型的方法，该方法基于多头注意力，与基于INGP的模型兼容，这些模型对架构变化很敏感。在3-shot LLFF基准测试中，DWTNeRF的PSNR、SSIM和LPIPS分别比Vanilla NeRF高出15.07%、24.45%和36.30%。我们的方法鼓励重新思考基于INGP模型的当前少镜头方法。 et.al.|[2501.12637](http://arxiv.org/abs/2501.12637)|null|
 |**2025-01-22**|**HAC++: Towards 100X Compression of 3D Gaussian Splatting**|3D高斯散斑（3DGS）已成为一种有前景的新型视图合成框架，具有快速渲染速度和高保真度。然而，大量的高斯分布及其相关属性需要有效的压缩技术。然而，高斯点云（或我们论文中的锚点）的稀疏性和无组织性给压缩带来了挑战。为了实现紧凑的大小，我们提出了HAC++，它利用了无组织锚点和结构化哈希网格之间的关系，利用它们的互信息进行上下文建模。此外，HAC++捕获锚点内的上下文关系，以进一步提高压缩性能。为了促进熵编码，我们利用高斯分布来精确估计每个量化属性的概率，其中提出了一种自适应量化模块来实现这些属性的高精度量化，以提高保真度恢复。此外，我们采用了一种自适应掩蔽策略来消除无效的高斯分布和锚点。总体而言，与vanilla 3DGS相比，HAC++在所有数据集上平均时实现了超过100倍的显著尺寸减小，同时提高了保真度。与脚手架GS相比，它还可以减少20倍以上的尺寸。我们的代码可在https://github.com/YihangChen-ee/HAC-plus. et.al.|[2501.12255](http://arxiv.org/abs/2501.12255)|**[link](https://github.com/yihangchen-ee/hac-plus)**|
 
-<p align=right>(<a href=#updated-on-20250203>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250204>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2025-01-24**|**Glissando-Net: Deep sinGLe vIew category level poSe eStimation ANd 3D recOnstruction**|我们提出了一个名为Glissando Net的深度学习模型，可以从单个RGB图像中同时估计物体的姿态并在类别级别重建物体的3D形状。以前的工作主要集中在估计姿势（通常在实例级别）或重建形状，但不是两者兼而有之。Glissando Net由两个联合训练的自动编码器组成，一个用于RGB图像，另一个用于点云。我们在Glissando Net中采用了两个关键的设计选择，以在给定单个RGB图像作为输入的情况下，更准确地预测物体的3D形状和姿态。首先，我们用来自图像解码器的变换特征图来增强点云编码器和解码器的特征图，从而在训练和预测中实现有效的2D-3D交互。其次，我们在解码器阶段预测对象的3D形状和姿态。这样，我们可以更好地利用仅在训练阶段呈现的3D点云中的信息来训练网络，以进行更准确的预测。我们联合训练RGB和点云数据的两个编码器-解码器，学习如何在推理过程中将潜在特征传递给点云解码器。在测试中，3D点云的编码器被丢弃。Glissando Net的设计灵感来自codeSLAM。与以场景三维重建为目标的codeSLAM不同，我们专注于物体的姿态估计和形状重建，直接预测物体的姿态和姿态不变的三维重建，而不需要代码优化步骤。广泛的实验，包括消融研究和与竞争方法的比较，证明了我们提出的方法的有效性，并与最先进的方法进行了比较。 et.al.|[2501.14896](http://arxiv.org/abs/2501.14896)|null|
 |**2025-01-24**|**Towards Unified Structured Light Optimization**|结构光（SL）3D重建捕捉物体的精确表面形状，提供工业检测和机器人视觉系统所必需的高精度3D数据。然而，目前在SL 3D重建中优化投影模式的研究面临两个主要局限性：每个场景都需要单独训练校准参数，优化仅限于特定类型的SL，这限制了它们的应用范围。为了解决这些局限性，我们提出了一个统一的SL优化框架，适用于不同的照明条件、对象类型和不同类型的SL。我们的框架仅使用单个投影图像即可快速确定最佳投影模式。主要贡献包括一种针对投影仪的新型全局匹配方法，该方法仅使用一个投影图像即可实现精确的投影仪-相机对准，以及一种具有光度调整模块的新投影补偿模型，以减少色域外裁剪产生的伪影。实验结果表明，我们的方法在各种对象、SL模式和光照条件下实现了卓越的解码精度，明显优于以前的方法。 et.al.|[2501.14659](http://arxiv.org/abs/2501.14659)|null|
 
-<p align=right>(<a href=#updated-on-20250203>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250204>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2025-01-31**|**RMDM: Radio Map Diffusion Model with Physics Informed**|随着无线通信技术的快速发展，频谱资源的有效利用、通信质量的优化和智能通信变得至关重要。无线电地图重建对于实现高级应用至关重要，但复杂的信号传播和稀疏数据等挑战阻碍了准确的重建。为了解决这些问题，我们提出了**无线电地图扩散模型（RMDM）**，这是一个基于物理的框架，集成了**基于物理的神经网络（PINN）**，以包含**亥姆霍兹方程**等约束。RMDM采用双U-Net架构：第一种通过最小化PDE残差、边界条件和源约束来确保物理一致性，而第二种通过基于扩散的去噪来细化预测。通过利用物理定律，RMDM显著提高了准确性、鲁棒性和泛化能力。实验表明，RMDM优于最先进的方法，在静态RM（SRM）设置下实现了0.0031**的**NMSE和0.0125**的**RMSE，在动态RM（DRM）设置下达到了0.0047**的**NMCE和0.0146**的**RMS。这些结果为在无线电地图重建中整合物理信息和数据驱动方法建立了一个新的范式，特别是在稀疏数据条件下。 et.al.|[2501.19160](http://arxiv.org/abs/2501.19160)|null|
 |**2025-01-31**|**Effective theory for stochastic particle acceleration, with application to magnetized turbulence**|湍流等离子体中粒子加速的物理学是一个广泛关注的课题，由于专门的大规模数值实验，这一课题正在取得快速进展。本文的第一部分提出了一种有效的随机费米加速度理论，该理论涵盖了理想电场中所有形式的非共振加速度，适用于一般环境。它结合了一个将通电率与速度场统计数据联系起来的精确方程，以及粒子通过结构（即强速度梯度区域）传输的统计模型。在第二部分中，将这种形式主义应用于MHD湍流，以全面评估平流和扩散系数的逐尺度贡献。研究发现，在涡流转弯时间尺度内，粒子可以被困在结构内，或者在与大振幅湍流中磁场线急剧弯曲相关的强结构中（如前所述），加速度最大。这些在空间中不均匀的快速加速机制为丰富的现象学铺平了道路。我们讨论了所获得的标度及其解释，并表明这些发现与现有的数值结果进行了令人满意的比较。 et.al.|[2501.19136](http://arxiv.org/abs/2501.19136)|null|
 
-<p align=right>(<a href=#updated-on-20250203>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250204>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2025-01-03**|**Fusion DeepONet: A Data-Efficient Neural Operator for Geometry-Dependent Hypersonic Flows on Arbitrary Grids**|设计再入飞行器需要准确预测其几何形状周围的高超音速流动。对这种流动的快速预测可以彻底改变车辆设计，特别是对于变形几何形状。我们评估了先进的神经算子模型，如深度算子网络（DeepONet）、参数条件U-Net、傅里叶神经算子（FNO）和MeshGraphNet，目的是解决在有限数据下学习依赖几何的高超音速流场的挑战。具体来说，我们比较了两种网格类型的这些模型的性能：均匀笛卡尔网格和不规则网格。为了训练这些模型，我们使用36个独特的椭圆几何体，使用高阶熵稳定的DGSEM求解器生成高保真模拟，强调了使用稀缺数据集的挑战。我们评估并比较了四种基于算子的模型在预测椭圆体周围高超音速流场方面的有效性。此外，我们开发了一个名为Fusion DeepONet的新框架，该框架利用了神经场概念，并在不同的几何结构中有效地进行了推广。尽管训练数据稀缺，Fusion DeepONet在均匀网格上的性能与参数条件U-Net相当，而在不规则、任意网格上的表现优于MeshGraphNet和vanilla DeepONnet。与U-Net、MeshGraphNet和FNO相比，Fusion DeepONet需要更少的可训练参数，使其计算效率更高。我们还使用奇异值分解分析了Fusion DeepONet模型的基函数。该分析表明，Fusion DeepONet能够有效地推广到看不见的解决方案，并适应不同的几何形状和网格点，证明了其在训练数据有限的情况下的鲁棒性。 et.al.|[2501.01934](http://arxiv.org/abs/2501.01934)|null|
 |**2024-12-30**|**Hierarchical Pose Estimation and Mapping with Multi-Scale Neural Feature Fields**|机器人应用需要对场景有全面的了解。近年来，基于神经场的参数化整个环境的方法已经变得流行。由于其连续性和学习场景先验的能力，这些方法很有前景。然而，当处理未知的传感器姿态和连续测量时，在机器人中使用神经场变得具有挑战性。本文主要研究大规模神经隐式SLAM的传感器姿态估计问题。我们从概率的角度研究了隐式映射，并提出了具有相应神经网络架构的分层姿态估计。我们的方法非常适合大规模隐式映射表示。所提出的方法在连续的室外LiDAR扫描上运行，实现了精确的姿态估计，同时保持了短轨迹和长轨迹的稳定映射质量。我们在适合大规模重建的结构化稀疏隐式表示上构建了我们的方法，并使用KITTI和MaiCity数据集对其进行了评估。我们的方法在未知姿态的映射方面优于基线，并实现了最先进的定位精度。 et.al.|[2412.20976](http://arxiv.org/abs/2412.20976)|null|
 
-<p align=right>(<a href=#updated-on-20250203>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250204>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
