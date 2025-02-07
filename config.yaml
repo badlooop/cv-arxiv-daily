@@ -22,6 +22,8 @@ md_wechat_path: './docs/wechat.md'
 
 # keywords to search
 keywords:
+    "Video Diffusion": 
+        filters: ["Video Diffusion", "Video Generation"]
     "3D": 
         filters: ["3D", "Mesh", "Rendering", "SDF", "NVS", "View Synthesis", "voxel", "triplane"]
     "3D Reconstruction": 
