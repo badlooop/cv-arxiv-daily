@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.02.06
+## Updated on 2025.02.07
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -31,7 +31,7 @@
 |**2025-01-24**|**CheapNVS: Real-Time On-Device Narrow-Baseline Novel View Synthesis**|单视图新视图合成（NVS）因其不适定性而成为一个臭名昭著的问题，并且通常需要大量计算昂贵的方法来产生有形的结果。在本文中，我们提出了CheapNVS：一种基于多级训练的新颖、高效的多编码器/解码器设计的窄基线单视图NVS的完全端到端方法。CheapNVS首先使用轻量级的可学习模块来近似费力的3D图像扭曲，这些模块以目标视图的相机姿态嵌入为条件，然后并行地对遮挡区域进行修复，以实现显著的性能提升。一旦在Open Images数据集的一个子集上进行了训练，CheapNVS的性能就超过了最先进的技术，尽管速度快了10倍，内存消耗减少了6%。此外，CheapNVS在移动设备上实时运行舒适，在三星Tab 9+上达到30 FPS以上。 et.al.|[2501.14533](http://arxiv.org/abs/2501.14533)|null|
 |**2025-01-23**|**GoDe: Gaussians on Demand for Progressive Level of Detail and Scalable Compression**|3D高斯散斑通过用高斯混合表示场景并利用可微光栅化来增强新颖视图合成中的实时性能。然而，它通常需要大的存储容量和高VRAM，要求设计有效的修剪和压缩技术。现有方法虽然在某些情况下有效，但在可扩展性方面存在困难，无法根据计算能力或带宽等关键因素调整模型，需要在不同配置下重新训练模型。在这项工作中，我们提出了一种新颖的、与模型无关的技术，将高斯分布组织成几个层次，实现了渐进的细节层次（LoD）策略。这种方法与最近的3DGS压缩方法相结合，允许单个模型在多个压缩比上即时扩展，与单个不可扩展模型相比，对质量的影响最小或没有影响，也不需要重新训练。我们在典型的数据集和基准上验证了我们的方法，展示了低失真和在可扩展性和适应性方面的显著收益。 et.al.|[2501.13558](http://arxiv.org/abs/2501.13558)|null|
 
-<p align=right>(<a href=#updated-on-20250206>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250207>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -48,7 +48,7 @@
 |**2025-01-29**|**3D Reconstruction of Shoes for Augmented Reality**|本文介绍了一种基于移动设备的解决方案，该解决方案通过3D建模和增强现实（AR）增强了在线鞋类购物，利用了3D高斯飞溅的效率。该框架解决了静态2D图像的局限性，从2D图像生成逼真的3D鞋模型，实现了0.32的平均峰值信噪比（PSNR），并通过智能手机实现了沉浸式AR交互。创建了一个包含3120张图像的定制鞋子分割数据集，其中性能最佳的分割模型的交集超过联盟（IoU）得分为0.95。本文展示了3D建模和AR通过提供逼真的虚拟交互来彻底改变在线购物的潜力，这些交互适用于更广泛的时尚类别。 et.al.|[2501.18643](http://arxiv.org/abs/2501.18643)|null|
 |**2025-01-30**|**Efficient Interactive 3D Multi-Object Removal**|对象去除对于3D场景理解具有重要意义，对于内容过滤和场景编辑中的应用至关重要。目前的主流方法主要侧重于删除单个对象，少数方法专门用于删除整个区域或某一类别的所有对象。然而，他们面临着现实世界应用程序粒度和灵活性不足的挑战，用户要求在定义的区域内对对象进行量身定制的切除和保存。此外，目前的大多数方法在处理多视图修复时都需要各种先验，这很耗时。为了解决这些局限性，我们提出了一种高效且用户友好的3D多对象删除管道，使用户能够灵活选择区域并定义要删除或保存的对象。具体来说，为了确保对象在多个视图之间的一致性和对应性，我们提出了一种新的掩模匹配和细化模块，该模块将基于单应性的扭曲与高置信度锚点相结合，用于分割。通过利用IoU关节形状上下文距离损失，我们提高了扭曲掩模的准确性，并改进了后续的修复过程。考虑到目前3D多目标去除的不成熟，我们提供了一个新的评估数据集来填补发展空白。实验结果表明，我们的方法显著降低了计算成本，处理速度比最先进的方法快80%以上，同时保持了同等或更高的重建质量。 et.al.|[2501.17636](http://arxiv.org/abs/2501.17636)|null|
 
-<p align=right>(<a href=#updated-on-20250206>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250207>back to top</a>)</p>
 
 ## Diffusion
 
@@ -65,7 +65,7 @@
 |**2025-02-05**|**Time scale competition in the Active Coagulation Model**|在主动动力学之上的传播过程为捕捉生命系统中新兴的集体行为提供了一个新的理论框架。我认为跑步和翻滚动力学与导致吸收状态相变的凝血/抗凝反应相结合。虽然主动动力学不会改变转变点的位置，但向静止状态的弛豫取决于运动参数。由于扩散动力学和主动运动之间的竞争，该系统可以支持长寿命电流，其典型的时间尺度是运动和反应速率的重要函数。在平均场机制之外，有限长度尺度上的不稳定性调节了从周期模式到扩散模式的交叉。最后，可以在大时间尺度上对模式形成的不同机制进行个性化，从Fisher Kolmogorov到Kardar-Parisi-Zhang方程。 et.al.|[2502.03372](http://arxiv.org/abs/2502.03372)|null|
 |**2025-02-05**|**A Mixture-Based Framework for Guiding Diffusion Models**|去噪扩散模型推动了贝叶斯逆问题领域的重大进展。最近的方法使用预训练的扩散模型作为先验来解决各种此类问题，只利用推理时间计算，从而消除了在同一数据集上重新训练特定任务模型的需要。为了近似贝叶斯逆问题的后验值，扩散模型从一系列中间后验分布中采样，每个分布都有一个难以处理的似然函数。这项工作提出了这些中间分布的一种新的混合近似。由于这些混合物的难以处理的项，直接基于梯度的采样是不可行的，因此我们提出了一种基于吉布斯采样的实用方法。我们通过在图像逆问题上进行广泛的实验来验证我们的方法，利用像素和潜在空间扩散先验，以及使用音频扩散模型进行源分离。该代码可在以下网址获得https://www.github.com/badr-moufad/mgdm et.al.|[2502.03332](http://arxiv.org/abs/2502.03332)|null|
 
-<p align=right>(<a href=#updated-on-20250206>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250207>back to top</a>)</p>
 
 ## NeRF
 
@@ -82,7 +82,7 @@
 |**2025-01-22**|**Retrieval-Augmented Neural Field for HRTF Upsampling and Personalization**|具有密集空间网格的头部相关传递函数（HRTF）是沉浸式双耳音频生成的理想选择，但它们的记录很耗时。尽管HRTF空间上采样在神经场方面取得了显著进展，但仅从几个测量方向（例如3或5个测量方向）进行空间上采样仍然具有挑战性。为了解决这个问题，我们提出了一种检索增强神经场（RANF）。RANF从数据集中检索HRTF接近目标受试者HRTF的受试者。除了声源方向本身之外，检索到的对象在所需方向上的HRTF也被馈送到神经场中。此外，我们提出了一种神经网络，它可以有效地处理多个检索到的主题，灵感来自一种称为变换平均连接的多通道处理技术。我们的实验证实了RANF在SONICOM数据集上的优势，它是2024年听众声学个性化挑战任务2获胜解决方案的关键组成部分。 et.al.|[2501.13017](http://arxiv.org/abs/2501.13017)|**[link](https://github.com/merlresearch/ranf-hrtf)**|
 |**2025-01-15**|**CityDreamer4D: Compositional Generative Model of Unbounded 4D Cities**|近年来，3D场景生成引起了越来越多的关注，并取得了重大进展。生成4D城市比3D场景更具挑战性，因为存在结构复杂、视觉多样的物体，如建筑物和车辆，并且人类对城市环境中的扭曲更加敏感。为了解决这些问题，我们提出了CityDreamer4D，这是一个专门为生成无界4D城市而定制的组合生成模型。我们的主要见解是1）4D城市生成应该将动态对象（如车辆）与静态场景（如建筑物和道路）分开，2）4D场景中的所有对象都应该由建筑物、车辆和背景材料的不同类型的神经场组成。具体来说，我们提出了交通场景生成器和无边界布局生成器，使用高度紧凑的BEV表示生成动态交通场景和静态城市布局。4D城市中的对象是通过结合面向对象和面向实例的神经场来生成的，用于背景材料、建筑物和车辆。为了适应背景材料和实例的不同特征，神经场采用定制的生成哈希网格和周期性位置嵌入作为场景参数化。此外，我们还为城市生成提供了一套全面的数据集，包括OSM、GoogleEarth和CityTopia。OSM数据集提供了各种真实世界的城市布局，而谷歌地球和CityTopia数据集则提供了大规模、高质量的城市图像，并附有3D实例注释。利用其组合设计，CityDreamer4D支持一系列下游应用程序，如实例编辑、城市风格化和城市模拟，同时在生成逼真的4D城市方面提供最先进的性能。 et.al.|[2501.08983](http://arxiv.org/abs/2501.08983)|**[link](https://github.com/hzxie/CityDreamer4D)**|
 
-<p align=right>(<a href=#updated-on-20250206>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250207>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
