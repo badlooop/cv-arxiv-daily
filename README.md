@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.02.09
+## Updated on 2025.02.10
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-02-05**|**MotionAgent: Fine-grained Controllable Video Generation via Motion Field Agent**|我们提出了MotionAgent，为文本引导的图像到视频生成提供了细粒度的运动控制。关键技术是运动场代理，它将文本提示中的运动信息转换为明确的运动场，提供灵活精确的运动引导。具体来说，代理提取文本中描述的对象运动和相机运动，并将其分别转换为对象轨迹和相机外部特征。分析光流合成模块将这些运动表示整合到3D空间中，并将其投影到统一的光流中。光流适配器采用流来控制基础图像到视频的扩散模型，以生成细粒度受控视频。VBench上视频文本相机运动度量的显著改进表明，我们的方法实现了对相机运动的精确控制。我们构建了一个子集VBench来评估文本和生成的视频中运动信息的对齐情况，在运动生成精度方面优于其他高级模型。 et.al.|[2502.03207](http://arxiv.org/abs/2502.03207)|null|
 |**2025-02-04**|**Controllable Video Generation with Provable Disentanglement**|尽管最近在生成高质量和一致的视频方面取得了进展，但可控的视频生成仍然是一个重大挑战。大多数现有的控制视频生成的方法将视频视为一个整体，忽略了复杂的细粒度时空关系，这限制了控制精度和效率。在本文中，我们提出了可控视频生成对抗网络（CoVoGAN）来解开视频概念，从而促进对单个概念的有效和独立控制。具体来说，遵循最小变化原理，我们首先将静态和动态潜在变量分开。然后，我们利用充分变化特性来实现动态潜在变量的组件可识别性，从而实现对运动和身份的独立控制。为了建立理论基础，我们进行了严格的分析，证明了我们方法的可识别性。基于这些理论见解，我们设计了一个时间转换模块来解开潜在的动态。为了实施最小变化原则和充分变化性质，我们最小化潜在动态变量的维数，并施加时间条件独立性。为了验证我们的方法，我们将此模块集成为GAN的插件。对各种视频生成基准的广泛定性和定量实验表明，我们的方法在不同的现实世界场景中显著提高了生成质量和可控性。 et.al.|[2502.02690](http://arxiv.org/abs/2502.02690)|null|
 
-<p align=right>(<a href=#updated-on-20250209>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250210>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-01-25**|**HuGDiffusion: Generalizable Single-Image Human Rendering via 3D Gaussian Diffusion**|我们提出了HuGDiffusion，这是一种可推广的3D高斯飞溅（3DGS）学习管道，用于从单视图输入图像中实现人物角色的新颖视图合成（NVS）。现有的方法通常需要单目视频或校准的多视图图像作为输入，在具有任意和/或未知相机姿态的现实世界场景中，其适用性可能会减弱。在本文中，我们的目标是通过基于扩散的框架生成3DGS属性集，该框架以从单幅图像中提取的人类先验为条件。具体来说，我们从精心整合的以人为中心的特征提取过程开始，以推断出信息丰富的条件信号。基于我们的经验观察，联合学习整个3DGS属性具有优化挑战性，我们设计了一种多阶段生成策略来获得不同类型的3DGS属性。为了简化训练过程，我们研究了将代理地面真值3D高斯属性构建为高质量的属性级监督信号。通过广泛的实验，我们的HuGDiffusion显示出比最先进的方法有显著的性能改进。我们的代码将公开。 et.al.|[2501.15008](http://arxiv.org/abs/2501.15008)|null|
 |**2025-01-24**|**CheapNVS: Real-Time On-Device Narrow-Baseline Novel View Synthesis**|单视图新视图合成（NVS）因其不适定性而成为一个臭名昭著的问题，并且通常需要大量计算昂贵的方法来产生有形的结果。在本文中，我们提出了CheapNVS：一种基于多级训练的新颖、高效的多编码器/解码器设计的窄基线单视图NVS的完全端到端方法。CheapNVS首先使用轻量级的可学习模块来近似费力的3D图像扭曲，这些模块以目标视图的相机姿态嵌入为条件，然后并行地对遮挡区域进行修复，以实现显著的性能提升。一旦在Open Images数据集的一个子集上进行了训练，CheapNVS的性能就超过了最先进的技术，尽管速度快了10倍，内存消耗减少了6%。此外，CheapNVS在移动设备上实时运行舒适，在三星Tab 9+上达到30 FPS以上。 et.al.|[2501.14533](http://arxiv.org/abs/2501.14533)|null|
 
-<p align=right>(<a href=#updated-on-20250209>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250210>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-02-03**|**Three-dimensional holographic imaging of incoherent objects through scattering media**|三维（3D）高分辨率成像在显微镜中至关重要，但光散射在实现这一目标方面带来了重大挑战。在这里，我们提出了一种通过散射介质对空间非相干物体进行全息成像的方法，利用一种复制实际介质散射效应的虚拟介质。这种介质是通过从物体中检索相互不相干的场，并利用它们之间的空间相关性来构建的。通过在虚拟介质中数值传播非相干场，我们非侵入性地补偿散射，实现了隐藏物体的精确3D重建。荧光和合成非相干物体的实验验证证实了这种方法的有效性，为散射环境中的高级3D高分辨率显微镜开辟了新的可能性。 et.al.|[2502.01475](http://arxiv.org/abs/2502.01475)|null|
 |**2025-02-02**|**Environment-Driven Online LiDAR-Camera Extrinsic Calibration**|激光雷达相机外部校准（LCEC）是计算机视觉中数据融合的核心。现有的方法通常依赖于定制的校准目标或固定的场景类型，缺乏处理传感器数据和环境背景变化的灵活性。本文介绍了EdO LCEC，这是第一种实现人类适应性的环境驱动的在线校准方法。受人类感知系统的启发，EdO LCEC采用了一种通用的场景鉴别器来主动解释环境条件，创建了多个虚拟相机来捕捉详细的空间和纹理信息。为了克服激光雷达和相机之间的跨模态特征匹配挑战，我们提出了双路径对应匹配（DPCM），它利用结构和纹理的一致性来实现可靠的3D-2D对应。我们的方法将校准过程表述为时空联合优化问题，利用来自多个视图和场景的全局约束来提高精度，特别是在稀疏或部分重叠的传感器视图中。对真实世界数据集的广泛实验表明，EdO LCEC实现了最先进的性能，在各种具有挑战性的环境中提供了可靠和精确的校准。 et.al.|[2502.00801](http://arxiv.org/abs/2502.00801)|null|
 
-<p align=right>(<a href=#updated-on-20250209>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250210>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-02-06**|**Discontinuous transition in 2D Potts: I. Order-Disorder Interface convergence**|众所周知，当q>4时，平面q态Potts模型会经历不连续的相变，并且在转变点处恰好有q+1个极值吉布斯测度：q个有序（单色）测度和一个无序（自由）测度。我们关注的是方形网格有限 $N\times N$部分上Dobrushin有序无序边界条件下的Potts模型。我们的主要结果是，该界面是一个定义良好的对象，具有$\sqrt{N}$波动，并在扩散尺度下收敛到布朗桥。对于所有q>4的相应FK渗流模型也是如此。我们的证明依赖于FK渗流、六顶点模型和Ashkin-Teller模型（ATRC）的随机簇表示之间的耦合，以及对后者的详细研究。这种耦合将FK渗流中的界面与ATRC模型中的长亚临界团簇联系起来。对于这个集群，我们开发了一个类似Ornstein-Zernike的“更新图景”。这是基于我们使用六顶点模型及其高度函数的链接建立的ATRC模型的精细混合特性。在此过程中，我们推导了Ashkin-Teller模型的各种性质，例如其两点函数的Ornstein-Zernike渐近性。在一项配套工作中，我们详细研究了有序Dobrushin条件下的Potts模型。我们发现在两个有序相（润湿）之间出现了一个宽度为$\sqrt{N}$ 的自由层，并将其边界收敛到两个不相交的布朗桥。 et.al.|[2502.04129](http://arxiv.org/abs/2502.04129)|null|
 |**2025-02-06**|**Llasa: Scaling Train-Time and Inference-Time Compute for Llama-based Speech Synthesis**|基于文本的大型语言模型（LLM）的最新进展，特别是GPT系列和o1模型，已经证明了扩展训练时间和推理时间计算的有效性。然而，目前利用LLM的最先进的TTS系统通常是多阶段的，需要单独的模型（例如，LLM后的扩散模型），这使得在训练或测试期间是否扩展特定模型的决策变得复杂。这项工作做出了以下贡献：首先，我们探索了语音合成中训练时间和推理时间计算的缩放。其次，我们提出了一个简单的语音合成框架Llasa，该框架采用单层矢量量化器（VQ）编解码器和单个Transformer架构，与Llama等标准LLM完全对齐。我们的实验表明，Llasa的缩放训练时间计算能够持续提高合成语音的自然度，并能够生成更复杂、更准确的韵律模式。此外，从缩放推理时间计算的角度来看，我们在搜索过程中使用语音理解模型作为验证器，发现缩放推理时间的计算将采样模式向特定验证器的偏好转变，从而提高了情感表达能力、音色一致性和内容准确性。此外，我们还公开了TTS模型（1B、3B、8B）和编解码器模型的检查点和训练代码。 et.al.|[2502.04128](http://arxiv.org/abs/2502.04128)|null|
 
-<p align=right>(<a href=#updated-on-20250209>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250210>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-01-22**|**Retrieval-Augmented Neural Field for HRTF Upsampling and Personalization**|具有密集空间网格的头部相关传递函数（HRTF）是沉浸式双耳音频生成的理想选择，但它们的记录很耗时。尽管HRTF空间上采样在神经场方面取得了显著进展，但仅从几个测量方向（例如3或5个测量方向）进行空间上采样仍然具有挑战性。为了解决这个问题，我们提出了一种检索增强神经场（RANF）。RANF从数据集中检索HRTF接近目标受试者HRTF的受试者。除了声源方向本身之外，检索到的对象在所需方向上的HRTF也被馈送到神经场中。此外，我们提出了一种神经网络，它可以有效地处理多个检索到的主题，灵感来自一种称为变换平均连接的多通道处理技术。我们的实验证实了RANF在SONICOM数据集上的优势，它是2024年听众声学个性化挑战任务2获胜解决方案的关键组成部分。 et.al.|[2501.13017](http://arxiv.org/abs/2501.13017)|**[link](https://github.com/merlresearch/ranf-hrtf)**|
 |**2025-01-15**|**CityDreamer4D: Compositional Generative Model of Unbounded 4D Cities**|近年来，3D场景生成引起了越来越多的关注，并取得了重大进展。生成4D城市比3D场景更具挑战性，因为存在结构复杂、视觉多样的物体，如建筑物和车辆，并且人类对城市环境中的扭曲更加敏感。为了解决这些问题，我们提出了CityDreamer4D，这是一个专门为生成无界4D城市而定制的组合生成模型。我们的主要见解是1）4D城市生成应该将动态对象（如车辆）与静态场景（如建筑物和道路）分开，2）4D场景中的所有对象都应该由建筑物、车辆和背景材料的不同类型的神经场组成。具体来说，我们提出了交通场景生成器和无边界布局生成器，使用高度紧凑的BEV表示生成动态交通场景和静态城市布局。4D城市中的对象是通过结合面向对象和面向实例的神经场来生成的，用于背景材料、建筑物和车辆。为了适应背景材料和实例的不同特征，神经场采用定制的生成哈希网格和周期性位置嵌入作为场景参数化。此外，我们还为城市生成提供了一套全面的数据集，包括OSM、GoogleEarth和CityTopia。OSM数据集提供了各种真实世界的城市布局，而谷歌地球和CityTopia数据集则提供了大规模、高质量的城市图像，并附有3D实例注释。利用其组合设计，CityDreamer4D支持一系列下游应用程序，如实例编辑、城市风格化和城市模拟，同时在生成逼真的4D城市方面提供最先进的性能。 et.al.|[2501.08983](http://arxiv.org/abs/2501.08983)|**[link](https://github.com/hzxie/CityDreamer4D)**|
 
-<p align=right>(<a href=#updated-on-20250209>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250210>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
