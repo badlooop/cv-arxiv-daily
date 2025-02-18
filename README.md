@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.02.17
+## Updated on 2025.02.18
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-02-14**|**Magic 1-For-1: Generating One Minute Video Clips within One Minute**|在本技术报告中，我们介绍了Magic 1-For-1（Magic141），这是一种高效的视频生成模型，具有优化的内存消耗和推理延迟。关键思想很简单：将文本到视频生成任务分解为两个单独的更容易的扩散步骤蒸馏任务，即文本到图像生成和图像到视频生成。我们验证了使用相同的优化算法，图像到视频任务确实比文本到视频任务更容易收敛。我们还从三个方面探索了一系列优化技巧，以降低训练图像到视频（I2V）模型的计算成本：1）通过使用多模态先验条件注入来加速模型收敛；2） 通过应用对抗性步骤蒸馏来加速推理延迟，以及3）通过参数稀疏化进行推理内存成本优化。通过这些技术，我们能够在3秒内生成5秒的视频片段。通过应用测试时间滑动窗口，我们能够在一分钟内生成一分钟长的视频，显著提高了视觉质量和运动动态，平均生成1秒视频片段的时间不到1秒。我们进行了一系列初步探索，以找出扩散阶跃蒸馏过程中计算成本和视频质量之间的最佳权衡，并希望这能成为开源探索的良好基础模型。代码和模型权重可在以下网址获得https://github.com/DA-Group-PKU/Magic-1-For-1. et.al.|[2502.07701](http://arxiv.org/abs/2502.07701)|**[link](https://github.com/da-group-pku/magic-1-for-1)**|
 |**2025-02-12**|**VidCRAFT3: Camera, Object, and Lighting Control for Image-to-Video Generation**|最近的图像到视频生成方法在实现对一个或两个视觉元素（如相机轨迹或物体运动）的控制方面取得了成功。然而，由于数据和网络效率的限制，这些方法无法提供对多个视觉元素的控制。在本文中，我们介绍了VidCRAFT3，这是一种用于精确图像到视频生成的新框架，可以同时控制相机运动、物体运动和照明方向。为了更好地解耦对每个视觉元素的控制，我们提出了空间三重注意力转换器，它以对称的方式集成了照明方向、文本和图像。由于大多数真实世界的视频数据集缺乏照明注释，我们构建了一个高质量的合成视频数据集，即VideoLightingDirection（VLD）数据集。该数据集包括照明方向注释和不同外观的对象，使VidCRAFT3能够有效地处理强光透射和反射效果。此外，我们提出了一种三阶段训练策略，该策略消除了同时使用多个视觉元素（相机运动、物体运动和照明方向）注释训练数据的需要。对基准数据集的广泛实验证明了VidCRAFT3在制作高质量视频内容方面的功效，在控制粒度和视觉连贯性方面超越了现有的最先进方法。所有代码和数据都将公开。 et.al.|[2502.07531](http://arxiv.org/abs/2502.07531)|null|
 
-<p align=right>(<a href=#updated-on-20250217>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250218>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-02-04**|**Geometric Neural Process Fields**|本文解决了神经场（NeF）泛化的挑战，其中模型必须有效地适应仅给出少量观测值的新信号。为了解决这个问题，我们提出了几何神经过程场（G-NPF），这是一个明确捕捉不确定性的神经辐射场的概率框架。我们将NeF泛化表述为概率问题，从而能够从有限的上下文观测中直接推断出NeF函数分布。为了引入结构归纳偏差，我们引入了一组几何基来编码空间结构，并促进NeF函数分布的推断。在此基础上，我们设计了一个分层潜在变量模型，使G-NPF能够整合多个空间层次的结构信息，并有效地参数化INR函数。这种分层方法提高了对新场景和未知信号的泛化能力。针对3D场景的新颖视图合成以及2D图像和1D信号回归的实验证明了我们的方法在捕捉不确定性和利用结构信息提高泛化能力方面的有效性。 et.al.|[2502.02338](http://arxiv.org/abs/2502.02338)|null|
 |**2025-02-05**|**GP-GS: Gaussian Processes for Enhanced Gaussian Splatting**|3D高斯散斑已经成为一种高效的真实感新型视图合成方法。然而，它对稀疏运动结构（SfM）点云的依赖一直会损害场景重建的质量。为了解决这些局限性，本文提出了一种新的3D重建框架高斯过程高斯散斑（GP-GS），其中开发了一个多输出高斯过程模型，以实现稀疏SfM点云的自适应和不确定性引导的致密化。具体来说，我们提出了一种动态采样和滤波流水线，通过利用基于GP的预测从输入的2D像素和深度图中推断出新的候选点，自适应地扩展SfM点云。该管道利用不确定性估计来指导高方差预测的修剪，确保几何一致性，并能够生成密集的点云。加密的点云提供了高质量的初始3D高斯分布，以提高重建性能。在各种规模的合成和真实世界数据集上进行的广泛实验验证了所提出框架的有效性和实用性。 et.al.|[2502.02283](http://arxiv.org/abs/2502.02283)|null|
 
-<p align=right>(<a href=#updated-on-20250217>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250218>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-02-06**|**Measuring Physical Plausibility of 3D Human Poses Using Physics Simulation**|在物理场景中对人类进行建模对于理解涉及增强现实或从视频中评估人类行为（如体育或身体康复）的应用程序中的人类与环境交互至关重要。最先进的文献从单目或多视角的3D人体姿势开始，并使用这种表示将人固定在3D世界空间中。虽然精度的标准指标捕捉了关节位置误差，但它们并没有考虑3D姿势的物理合理性。这一局限性促使研究人员提出了评估抖动、地板穿透和不平衡姿势的其他指标。然而，这些方法测量的是独立的误差实例，并不代表运动过程中的平衡或稳定性。在这项工作中，我们建议从物理模拟中测量物理合理性。我们引入了两个指标来捕捉来自任何3D人体姿态估计模型的预测3D姿态的物理合理性和稳定性。通过物理模拟，我们发现了与现有合理性度量和运动过程中测量稳定性的相关性。我们评估并比较了两种最先进的方法的性能，即多视图三角基线和来自Human3.6m数据集的地面真实3D标记。 et.al.|[2502.04483](http://arxiv.org/abs/2502.04483)|**[link](https://github.com/MichiganCOG/Simulation_Physical_Plausibility)**|
 |**2025-02-06**|**sshELF: Single-Shot Hierarchical Extrapolation of Latent Features for 3D Reconstruction from Sparse-Views**|由于视图重叠最小，从稀疏的朝外视图重建无边界的室外场景带来了重大挑战。以前的方法通常缺乏跨场景理解，其以原始为中心的公式会过载局部特征以补偿缺失的全局上下文，导致场景中看不见的部分模糊。我们提出了sshELF，这是一种通过潜在特征的分层外推进行稀疏视图3D场景重建的快速单镜头流水线。我们的关键见解是，从原始解码中提取信息外推，可以在训练场景中有效地传递结构模式。我们的方法：（1）学习跨场景先验来生成中间虚拟视图，以外推到未观察到的区域，（2）提供了一种将虚拟视图生成与3D原始解码分离的两阶段网络设计，用于高效训练和模块化模型设计，（3）集成了一个预训练的基础模型，用于联合推断潜在特征和纹理，提高了场景理解和泛化能力。sshELF可以从六个稀疏输入视图重建360度场景，并在合成和现实数据集上取得有竞争力的结果。我们发现sshELF忠实地重建了闭塞区域，支持实时渲染，并为下游应用提供了丰富的潜在特征。代码将被发布。 et.al.|[2502.04318](http://arxiv.org/abs/2502.04318)|null|
 
-<p align=right>(<a href=#updated-on-20250217>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250218>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-02-14**|**Step-Video-T2V Technical Report: The Practice, Challenges, and Future of Video Foundation Model**|我们介绍了Step-Video-T2V，这是一种最先进的文本到视频预训练模型，具有30B参数，能够生成长达204帧的视频。深度压缩变分自编码器Video VAE专为视频生成任务而设计，可实现16x16的空间和8倍的时间压缩比，同时保持出色的视频重建质量。用户提示使用两个双语文本编码器进行编码，以处理英语和中文。使用流匹配训练具有3D全注意力的DiT，并将其用于将输入噪声去噪到潜在帧中。应用基于视频的DPO方法video DPO来减少伪影并提高生成视频的视觉质量。我们还详细介绍了我们的培训策略，并分享了关键的观察结果和见解。Step-Video-T2V的性能在一个新的视频生成基准Step-Video-T2V-Eval上进行了评估，与开源和商业引擎相比，展示了其最先进的文本到视频质量。此外，我们讨论了当前基于扩散的模型范式的局限性，并概述了视频基础模型的未来方向。我们提供Step-Video-T2V和Step-Video-T2V-Eval，网址为https://github.com/stepfun-ai/Step-Video-T2V.在线版本可以从以下网址访问https://yuewen.cn/videos也。我们的目标是加速视频基础模型的创新，并赋予视频内容创作者权力。 et.al.|[2502.10248](http://arxiv.org/abs/2502.10248)|null|
 |**2025-02-14**|**Shaping Inductive Bias in Diffusion Models through Frequency-Based Noise Control**|扩散概率模型（DPMs）是一种强大的生成模型，在许多生成任务中取得了无与伦比的成功。在这项工作中，我们的目标是在扩散模型的训练和采样中建立归纳偏差，以更好地适应模型数据的目标分布。对于拓扑结构的数据，我们设计了一种基于频率的噪声算子，有目的地操纵和设置这些归纳偏差。我们首先证明，对噪声正向过程的适当操作可以使DPM专注于分布的特定方面进行学习。我们表明，不同的数据集需要不同的归纳偏差，与标准扩散相比，适当的基于频率的噪声控制可以提高生成性能。最后，我们证明了在学习时忽略特定频率信息的可能性。我们在图像损坏和恢复任务中展示了这一点，在该任务中，我们训练DPM在严重噪声损坏后恢复原始目标分布。 et.al.|[2502.10236](http://arxiv.org/abs/2502.10236)|null|
 
-<p align=right>(<a href=#updated-on-20250217>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250218>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-01-22**|**Retrieval-Augmented Neural Field for HRTF Upsampling and Personalization**|具有密集空间网格的头部相关传递函数（HRTF）是沉浸式双耳音频生成的理想选择，但它们的记录很耗时。尽管HRTF空间上采样在神经场方面取得了显著进展，但仅从几个测量方向（例如3或5个测量方向）进行空间上采样仍然具有挑战性。为了解决这个问题，我们提出了一种检索增强神经场（RANF）。RANF从数据集中检索HRTF接近目标受试者HRTF的受试者。除了声源方向本身之外，检索到的对象在所需方向上的HRTF也被馈送到神经场中。此外，我们提出了一种神经网络，它可以有效地处理多个检索到的主题，灵感来自一种称为变换平均连接的多通道处理技术。我们的实验证实了RANF在SONICOM数据集上的优势，它是2024年听众声学个性化挑战任务2获胜解决方案的关键组成部分。 et.al.|[2501.13017](http://arxiv.org/abs/2501.13017)|**[link](https://github.com/merlresearch/ranf-hrtf)**|
 |**2025-01-15**|**CityDreamer4D: Compositional Generative Model of Unbounded 4D Cities**|近年来，3D场景生成引起了越来越多的关注，并取得了重大进展。生成4D城市比3D场景更具挑战性，因为存在结构复杂、视觉多样的物体，如建筑物和车辆，并且人类对城市环境中的扭曲更加敏感。为了解决这些问题，我们提出了CityDreamer4D，这是一个专门为生成无界4D城市而定制的组合生成模型。我们的主要见解是1）4D城市生成应该将动态对象（如车辆）与静态场景（如建筑物和道路）分开，2）4D场景中的所有对象都应该由建筑物、车辆和背景材料的不同类型的神经场组成。具体来说，我们提出了交通场景生成器和无边界布局生成器，使用高度紧凑的BEV表示生成动态交通场景和静态城市布局。4D城市中的对象是通过结合面向对象和面向实例的神经场来生成的，用于背景材料、建筑物和车辆。为了适应背景材料和实例的不同特征，神经场采用定制的生成哈希网格和周期性位置嵌入作为场景参数化。此外，我们还为城市生成提供了一套全面的数据集，包括OSM、GoogleEarth和CityTopia。OSM数据集提供了各种真实世界的城市布局，而谷歌地球和CityTopia数据集则提供了大规模、高质量的城市图像，并附有3D实例注释。利用其组合设计，CityDreamer4D支持一系列下游应用程序，如实例编辑、城市风格化和城市模拟，同时在生成逼真的4D城市方面提供最先进的性能。 et.al.|[2501.08983](http://arxiv.org/abs/2501.08983)|**[link](https://github.com/hzxie/CityDreamer4D)**|
 
-<p align=right>(<a href=#updated-on-20250217>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250218>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
