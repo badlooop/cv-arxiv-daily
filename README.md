@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.02.18
+## Updated on 2025.02.19
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-02-17**|**Step-Video-T2V Technical Report: The Practice, Challenges, and Future of Video Foundation Model**|我们介绍了Step-Video-T2V，这是一种最先进的文本到视频预训练模型，具有30B参数，能够生成长达204帧的视频。深度压缩变分自编码器Video VAE专为视频生成任务而设计，可实现16x16的空间和8倍的时间压缩比，同时保持出色的视频重建质量。用户提示使用两个双语文本编码器进行编码，以处理英语和中文。使用流匹配训练具有3D全注意力的DiT，并将其用于将输入噪声去噪到潜在帧中。应用基于视频的DPO方法video DPO来减少伪影并提高生成视频的视觉质量。我们还详细介绍了我们的培训策略，并分享了关键的观察结果和见解。Step-Video-T2V的性能在一个新的视频生成基准Step-Video-T2V-Eval上进行了评估，与开源和商业引擎相比，展示了其最先进的文本到视频质量。此外，我们讨论了当前基于扩散的模型范式的局限性，并概述了视频基础模型的未来方向。我们提供Step-Video-T2V和Step-Video-T2V-Eval，网址为https://github.com/stepfun-ai/Step-Video-T2V.在线版本可以从以下网址访问https://yuewen.cn/videos也。我们的目标是加速视频基础模型的创新，并赋予视频内容创作者权力。 et.al.|[2502.10248](http://arxiv.org/abs/2502.10248)|null|
 |**2025-02-14**|**RealCam-I2V: Real-World Image-to-Video Generation with Interactive Complex Camera Control**|与基于文本的方法相比，相机轨迹引导图像到视频生成的最新进展为复杂的相机控制提供了更高的精度和更好的支持。然而，它们也带来了重大的可用性挑战，因为用户在处理任意真实世界的图像时，在不了解其深度或场景比例的情况下，往往难以提供精确的相机参数。为了解决这些现实世界的应用问题，我们提出了RealCam-I2V，这是一种新的基于扩散的视频生成框架，它集成了单目度量深度估计，在预处理步骤中建立了3D场景重建。在训练过程中，重建的3D场景能够将相机参数从相对值缩放到绝对值，确保不同真实世界图像的兼容性和缩放一致性。因此，RealCam-I2V提供了一个直观的界面，用户可以通过在3D场景中拖动来精确绘制相机轨迹。为了进一步增强精确的相机控制和场景一致性，我们提出了场景约束噪声整形，该整形可以整形高级别噪声，并允许该框架在低噪声阶段保持动态、连贯的视频生成。RealCam-I2V在RealEstate10K和域外图像的可控性和视频质量方面取得了显著改善。我们还支持相机控制的循环视频生成和生成帧插值等应用。我们将发布我们的绝对比例注释、代码和所有检查点。请在中查看动态结果https://zgctroy.github.io/RealCam-I2V. et.al.|[2502.10059](http://arxiv.org/abs/2502.10059)|null|
 
-<p align=right>(<a href=#updated-on-20250218>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250219>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-02-10**|**SIREN: Semantic, Initialization-Free Registration of Multi-Robot Gaussian Splatting Maps**|我们提出了SIREN用于多机器人高斯散点（GSplat）地图的注册，对相机姿态、图像和用于初始化或融合局部子地图的地图间变换零访问。为了实现这些功能，SIREN以三种关键方式利用语义的通用性和鲁棒性，为多机器人GSplat地图推导出严格的配准流水线。首先，SIREN利用语义来识别局部图中特征丰富的区域，在这些区域中更好地提出了配准问题，从而消除了先前工作中通常需要的任何初始化。其次，SIREN使用鲁棒的语义特征来识别局部地图中高斯之间的候选对应关系，为鲁棒的几何优化奠定了基础，粗略地对齐了从局部地图中提取的3D高斯基元。第三，这一关键步骤使子图之间的变换能够进行后续的光度细化，其中SIREN利用GSplat图中的新颖视图合成以及基于语义的图像滤波器来计算高精度的非刚性变换，以生成高保真融合图。我们在一系列真实世界的数据集中，特别是在最广泛使用的机器人硬件平台上，包括机械手、无人机和四足动物，展示了SIREN与竞争基线相比的卓越性能。在我们的实验中，SIREN在最具挑战性的场景中实现了约90倍的较小旋转误差、300倍的较小平移误差和44倍的较小尺度误差，在这些场景中，竞争方法很难解决。在审查过程结束后，我们将发布代码并提供项目页面的链接。 et.al.|[2502.06519](http://arxiv.org/abs/2502.06519)|null|
 |**2025-02-11**|**PoI: Pixel of Interest for Novel View Synthesis Assisted Scene Coordinate Regression**|通过新的视图合成技术，如NeRF和高斯散斑，可以增强估计相机姿态的任务，以增加训练数据的多样性和扩展性。然而，这些技术通常会产生模糊和重影等问题的渲染图像，从而影响其可靠性。对于在像素级别估计3D坐标的场景坐标回归（SCR）方法来说，这些问题变得尤为明显。为了缓解与不可靠渲染图像相关的问题，我们引入了一种新的滤波方法，该方法选择性地提取渲染良好的像素，同时丢弃较差的像素。该滤波器在训练过程中同时测量SCR模型的实时重投影损失和梯度。基于这种滤波技术，我们还开发了一种新的策略，利用稀疏输入改进场景坐标回归，并借鉴了稀疏输入技术在新颖视图合成中的成功应用。我们的实验结果验证了我们方法的有效性，在室内和室外数据集上展示了最先进的性能。 et.al.|[2502.04843](http://arxiv.org/abs/2502.04843)|null|
 
-<p align=right>(<a href=#updated-on-20250218>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250219>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,15 +66,15 @@
 |**2025-02-13**|**Large Images are Gaussians: High-Quality Large Image Representation with Levels of 2D Gaussian Splatting**|虽然内隐神经表征（INR）在图像表征方面取得了显著成功，但它们往往受到训练记忆大和解码速度慢的阻碍。最近，高斯散斑（GS）因其高质量的新颖视图合成和快速渲染能力而成为3D重建中一种有前景的解决方案，使其成为广泛应用的有价值的工具。特别是，基于GS的表示2DGS已经显示出图像拟合的潜力。在我们的工作中，我们提出\textbf{L}arge\textbf{I}magesare \textbf{G}aussians（\textbf{LIG}），深入研究了2DGS在图像表示中的应用，通过两个不同的修改解决了在高斯点众多的情况下用2DGS拟合大图像的挑战：1）我们采用了一种表示和优化策略的变体，促进了大量高斯点的拟合；2） 我们提出了一种高斯水平方法，用于重建粗略的低频初始化和精细的高频细节。因此，我们成功地将大图像表示为高斯点，并实现了高质量的大图像表示，证明了其在各种类型的大图像中的有效性。代码可在｛\href获得{https://github.com/HKU-MedAI/LIG}{https://github.com/HKU-MedAI/LIG}}. et.al.|[2502.09039](http://arxiv.org/abs/2502.09039)|**[link](https://github.com/hku-medai/lig)**|
 |**2025-02-16**|**Re $^3$Sim: Generating High-Fidelity Simulation Data via 3D-Photorealistic Real-to-Sim for Robotic Manipulation**|机器人的真实世界数据收集成本高昂，资源密集，需要熟练的操作员和昂贵的硬件。仿真提供了一种可扩展的替代方案，但由于几何和视觉差距，往往无法实现模拟到真实的泛化。为了应对这些挑战，我们提出了一种3D逼真的真实到模拟系统，即RE$^3$sim，解决了几何和视觉上的模拟到真实的差距。RE$^3$ SIM采用先进的3D重建和神经渲染技术，忠实地重建现实世界的场景，在基于物理的模拟器中实时渲染模拟的交叉视图相机。通过利用特权信息在仿真中有效地收集专家演示，并用模仿学习训练机器人策略，我们验证了真实到模拟到真实管道在各种操纵任务场景中的有效性。值得注意的是，只需模拟数据，我们就可以实现零样本模拟到真实传输，平均成功率超过58%。为了突破真实到模拟的极限，我们进一步生成了一个大规模的模拟数据集，演示了如何从跨各种对象的模拟数据中构建稳健的策略。代码和演示可在以下网址获得：http://xshenhan.github.io/Re3Sim/. et.al.|[2502.08645](http://arxiv.org/abs/2502.08645)|null|
 
-<p align=right>(<a href=#updated-on-20250218>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250219>back to top</a>)</p>
 
 ## Diffusion
 
 |Publish Date|Title|Abstract|PDF|Code|
 |---|---|---|---|---|
-|**2025-02-17**|**Diffusion Models without Classifier-free Guidance**|本文提出了模型制导（MG），这是一种训练扩散模型的新目标，解决并消除了常用的无分类器制导（CFG）。我们的创新方法超越了单纯数据分布的标准建模，将条件的后验概率纳入其中。所提出的技术源于CFG的思想，简单而有效，使其成为现有模型的即插即用模块。我们的方法显著加快了训练过程，使推理速度加倍，并实现了与CFG并行甚至超越并发扩散模型的卓越质量。广泛的实验证明了不同模型和数据集的有效性、效率和可扩展性。最后，我们在FID为1.34的ImageNet 256基准上建立了最先进的性能。我们的代码可在https://github.com/tzco/Diffusion-wo-CFG. et.al.|[2502.12154](http://arxiv.org/abs/2502.12154)|null|
+|**2025-02-17**|**Diffusion Models without Classifier-free Guidance**|本文提出了模型制导（MG），这是一种训练扩散模型的新目标，解决并消除了常用的无分类器制导（CFG）。我们的创新方法超越了单纯数据分布的标准建模，将条件的后验概率纳入其中。所提出的技术源于CFG的思想，简单而有效，使其成为现有模型的即插即用模块。我们的方法显著加快了训练过程，使推理速度加倍，并实现了与CFG并行甚至超越并发扩散模型的卓越质量。广泛的实验证明了不同模型和数据集的有效性、效率和可扩展性。最后，我们在FID为1.34的ImageNet 256基准上建立了最先进的性能。我们的代码可在https://github.com/tzco/Diffusion-wo-CFG. et.al.|[2502.12154](http://arxiv.org/abs/2502.12154)|**[link](https://github.com/tzco/Diffusion-wo-CFG)**|
 |**2025-02-17**|**Diffusion-Sharpening: Fine-tuning Diffusion Models with Denoising Trajectory Sharpening**|我们提出了扩散锐化，这是一种微调方法，通过优化采样轨迹来增强下游对齐。现有的基于RL的微调方法侧重于单个训练时间步长，忽视了轨迹级对齐，而最近的采样轨迹优化方法则产生了巨大的推理NFE成本。扩散锐化通过使用路径积分框架在训练过程中选择最佳轨迹、利用奖励反馈和摊销推理成本来克服这一点。我们的方法表现出更高的训练效率，收敛速度更快，推理效率最高，不需要额外的NFE。广泛的实验表明，扩散锐化在包括文本对齐、合成能力和人类偏好在内的各种指标上优于基于RL的微调方法（如扩散DPO）和采样轨迹优化方法（如推理缩放），为未来的扩散模型微调提供了一种可扩展且高效的解决方案。代码：https://github.com/Gen-Verse/Diffusion-Sharpening et.al.|[2502.12146](http://arxiv.org/abs/2502.12146)|null|
-|**2025-02-17**|**MagicArticulate: Make Your 3D Models Articulation-Ready**|随着3D内容创作的爆炸性增长，对自动将静态3D模型转换为支持逼真动画的发音就绪版本的需求越来越大。传统方法严重依赖手动注释，这既费时又费力。此外，缺乏大规模基准阻碍了基于学习的解决方案的发展。在这项工作中，我们介绍了MagicArticulate，这是一个有效的框架，可以自动将静态3D模型转换为可发音的资产。我们的主要贡献有三方面。首先，我们介绍Articulation XL，这是一个大型基准测试，包含超过33k个具有高质量发音注释的3D模型，由Objaverse XL精心策划。其次，我们提出了一种新的骨架生成方法，该方法将任务表示为序列建模问题，利用自回归变换器自然地处理骨架内不同数量的骨骼或关节及其在不同3D模型之间的固有依赖关系。第三，我们使用函数扩散过程来预测蒙皮权重，该过程结合了顶点和关节之间的体积测地线距离先验。大量实验表明，MagicArticulate在不同对象类别中的表现明显优于现有方法，实现了高质量的清晰度，实现了逼真的动画。项目页面：https://chaoyuesong.github.io/MagicArticulate. et.al.|[2502.12135](http://arxiv.org/abs/2502.12135)|null|
+|**2025-02-18**|**MagicArticulate: Make Your 3D Models Articulation-Ready**|随着3D内容创作的爆炸性增长，对自动将静态3D模型转换为支持逼真动画的发音就绪版本的需求越来越大。传统方法严重依赖手动注释，这既费时又费力。此外，缺乏大规模基准阻碍了基于学习的解决方案的发展。在这项工作中，我们介绍了MagicArticulate，这是一个有效的框架，可以自动将静态3D模型转换为可发音的资产。我们的主要贡献有三方面。首先，我们介绍Articulation XL，这是一个大型基准测试，包含超过33k个具有高质量发音注释的3D模型，由Objaverse XL精心策划。其次，我们提出了一种新的骨架生成方法，该方法将任务表示为序列建模问题，利用自回归变换器自然地处理骨架内不同数量的骨骼或关节及其在不同3D模型之间的固有依赖关系。第三，我们使用函数扩散过程来预测蒙皮权重，该过程结合了顶点和关节之间的体积测地线距离先验。大量实验表明，MagicArticulate在不同对象类别中的表现明显优于现有方法，实现了高质量的清晰度，实现了逼真的动画。项目页面：https://chaoyuesong.github.io/MagicArticulate. et.al.|[2502.12135](http://arxiv.org/abs/2502.12135)|null|
 |**2025-02-17**|**How compositional generalization and creativity improve as diffusion models are trained**|自然数据通常被组织为特征的分层组合。生成模型需要多少个样本来学习组合规则，从而产生组合数量的新数据？数据中的哪些信号被用来学习？我们从理论和实证上研究了这些问题。理论上，我们考虑在简单的概率上下文无关语法上训练的扩散模型——用于表示语言和图像等数据结构的树状图形模型。我们证明，扩散模型学习具有统计相似上下文的特征聚类所需样本复杂度的组合规则，这一过程类似于word2vec算法。然而，这种聚类是分层出现的：与较长上下文相关的更高级、更抽象的特征需要识别更多的数据。这种机制导致样本复杂度随所述上下文大小多项式缩放。因此，在中等数据集大小上训练的扩散模型生成了一定规模的连贯数据，但缺乏全局连贯性。我们在不同的领域测试了这些预测，并发现了显著的一致性：随着训练时间或数据集大小的增长，生成的文本和图像都实现了越来越大的连贯长度。我们讨论了我们在这里介绍的分层聚类机制与物理学中的重整化群之间的联系。 et.al.|[2502.12089](http://arxiv.org/abs/2502.12089)|null|
 |**2025-02-17**|**HumanGif: Single-View Human Diffusion with Generative Prior**|虽然之前的基于单视图的3D人体重建方法在新颖的视图合成方面取得了重大进展，但从单个图像输入中合成可动画化的人体化身的视图一致性和姿态一致性结果仍然是一个挑战。受2D角色动画成功的启发，我们提出了<strong>HumanGif</strong>，这是一种具有生成先验的单视图人类扩散模型。具体来说，我们利用基础扩散模型的生成先验，将基于单视图的3D人体新视图和姿态合成表述为单视图条件下的人体扩散过程。为了确保精细和一致的新颖视图和姿态合成，我们在HumanGif中引入了一个Human NeRF模块，从输入图像中学习空间对齐的特征，隐式地捕捉相对相机和人体姿态变换。此外，我们在优化过程中引入了图像级损失，以弥合扩散模型中潜在空间和图像空间之间的差距。对RenderPeople和DNA Rendering数据集的广泛实验表明，HumanGif实现了最佳的感知性能，对新颖的视图和姿势合成具有更好的泛化能力。 et.al.|[2502.12080](http://arxiv.org/abs/2502.12080)|null|
 |**2025-02-17**|**A Survey on Bridging EEG Signals and Generative AI: From Image and Text to Beyond**|脑机接口（BCI）和生成性人工智能（GenAI）的集成开辟了大脑信号解码的新领域，实现了辅助交流、神经表征学习和多模式集成。BCI，特别是那些利用脑电图（EEG）的BCI，提供了一种将神经活动转化为有意义输出的非侵入性方法。深度学习的最新进展，包括生成对抗网络（GAN）和基于变换器的大型语言模型（LLM），显著改善了基于EEG的图像、文本和语音生成。本文对基于EEG的多模态生成的最新进展进行了文献综述，重点关注（i）通过GAN、变分自编码器（VAE）和扩散模型生成EEG到图像，以及（ii）利用基于Transformer的语言模型和对比学习方法生成EEG到文本。此外，我们还讨论了脑电到语音合成的新兴领域，这是一个不断发展的多模态前沿。我们重点介绍支持生成方法的关键数据集、用例、挑战和EEG特征编码方法。通过提供基于EEG的生成人工智能的结构化概述，这项调查旨在为研究人员和从业者提供见解，以推进神经解码，增强辅助技术，并扩展脑机交互的前沿。 et.al.|[2502.12048](http://arxiv.org/abs/2502.12048)|null|
@@ -83,7 +83,7 @@
 |**2025-02-17**|**Image Inversion: A Survey from GANs to Diffusion and Beyond**|图像反演是生成模型中的一项基本任务，旨在将图像映射回其潜在表示，以实现编辑、恢复和风格转换等下游应用。本文全面回顾了图像反演技术的最新进展，重点介绍了两种主要范式：生成对抗网络（GAN）反演和扩散模型反演。我们根据这些技术的优化方法对其进行分类。对于GAN反演，我们系统地将现有方法分为基于编码器的方法、潜在优化方法和混合方法，分析了它们的理论基础、技术创新和实际权衡。对于扩散模型反演，我们探索了无训练策略、微调方法和额外可训练模块的设计，突出了它们的独特优势和局限性。此外，我们还讨论了图像任务之外的几个流行的下游应用和新兴应用，确定了当前的挑战和未来的研究方向。通过综合最新进展，本文旨在为研究人员和从业者提供有价值的参考资源，促进图像反演领域的进一步发展。我们密切关注最新作品https://github.com/RyanChenYN/ImageInversion et.al.|[2502.11974](http://arxiv.org/abs/2502.11974)|null|
 |**2025-02-17**|**Single-Molecule Water Motion on h-BN and Graphene: A Paradigm Shift in Understanding the Behaviour of Water on 2D Material Interfaces**|了解二维材料上的水行为对于传感、微流体和摩擦学至关重要。虽然水/石墨烯相互作用得到了很好的研究，但六方氮化硼（h-BN）上的水在很大程度上仍未得到探索。尽管与石墨烯在结构上相似，但h-BN的轻微极性B-N键赋予了它大的带隙、高导热性和化学稳定性，使其在电子、润滑剂和涂料方面具有广阔的应用前景。此外，现有的水研究往往侧重于多层水动力学，忽视了单分子的细节。我们通过研究h-BN上的单分子水摩擦和扩散来弥合这一差距，并使用氦自旋回波实验和从头计算将其与石墨烯进行比较。我们的研究结果表明，与石墨烯不同，h-BN/Ni上的水扩散遵循复杂的旋转-平移动力学。虽然传统观点将水的运动视为等效吸附位点之间的离散跳跃，但我们证明，在h-BN上，水分子围绕其质心自由旋转。尽管水在h-BN和石墨烯上的结合能相似，但h-BN上的水动力学活化能比石墨烯低2.5倍，这意味着分子流动的势垒要低得多。经典模型无法捕捉到的根本不同的扩散特性，强调了重新思考我们如何在极性二维材料上模拟水的必要性。此外，我们的分析表明，金属基材强烈影响水摩擦，h-BN/Ni的摩擦明显低于石墨烯/Ni，与自支撑材料形成鲜明对比。这些发现挑战了关于二维材料-水相互作用的假设，突出了基质效应在化学和材料科学中的关键作用，并为设计需要精确水流动控制的下一代微流体设备提供了见解。 et.al.|[2502.11944](http://arxiv.org/abs/2502.11944)|null|
 
-<p align=right>(<a href=#updated-on-20250218>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250219>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-01-30**|**Zero-Shot Novel View and Depth Synthesis with Multi-View Geometric Diffusion**|从稀疏姿态图像重建3D场景的当前方法采用中间3D表示，如神经场、体素网格或3D高斯，以实现多视图一致的场景外观和几何形状。本文介绍了MVGD，这是一种基于扩散的架构，能够在给定任意数量的输入视图的情况下，从新的视点直接生成像素级的图像和深度图。我们的方法使用光线图调节来增强来自不同视点的空间信息的视觉特征，并指导从新视图生成图像和深度图。我们方法的一个关键方面是图像和深度图的多任务生成，使用可学习的任务嵌入来指导向特定模态的扩散过程。我们从公开可用的数据集中收集了6000多万个多视图样本来训练这个模型，并提出了在这种不同条件下实现高效和一致学习的技术。我们还提出了一种新策略，通过逐步微调较小的模型，实现了对较大模型的有效训练，并具有很好的扩展行为。通过广泛的实验，我们报告了多个新颖的视图合成基准以及多视图立体和视频深度估计的最新结果。 et.al.|[2501.18804](http://arxiv.org/abs/2501.18804)|null|
 |**2025-01-22**|**Retrieval-Augmented Neural Field for HRTF Upsampling and Personalization**|具有密集空间网格的头部相关传递函数（HRTF）是沉浸式双耳音频生成的理想选择，但它们的记录很耗时。尽管HRTF空间上采样在神经场方面取得了显著进展，但仅从几个测量方向（例如3或5个测量方向）进行空间上采样仍然具有挑战性。为了解决这个问题，我们提出了一种检索增强神经场（RANF）。RANF从数据集中检索HRTF接近目标受试者HRTF的受试者。除了声源方向本身之外，检索到的对象在所需方向上的HRTF也被馈送到神经场中。此外，我们提出了一种神经网络，它可以有效地处理多个检索到的主题，灵感来自一种称为变换平均连接的多通道处理技术。我们的实验证实了RANF在SONICOM数据集上的优势，它是2024年听众声学个性化挑战任务2获胜解决方案的关键组成部分。 et.al.|[2501.13017](http://arxiv.org/abs/2501.13017)|**[link](https://github.com/merlresearch/ranf-hrtf)**|
 
-<p align=right>(<a href=#updated-on-20250218>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250219>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
