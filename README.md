@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.02.22
+## Updated on 2025.02.23
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-02-18**|**High-Fidelity Novel View Synthesis via Splatting-Guided Diffusion**|尽管新视图合成（NVS）最近取得了进展，但从单个或稀疏观测中生成高保真视图仍然是一个重大挑战。现有的基于飞溅的方法通常会由于飞溅误差而产生扭曲的几何形状。虽然基于扩散的方法利用丰富的3D先验来实现改进的几何形状，但它们经常出现纹理幻觉。本文介绍了SplatDiff，这是一种像素飞溅引导的视频扩散模型，旨在从单张图像中合成高保真的新颖视图。具体来说，我们提出了一种对齐的合成策略，用于精确控制目标视点和几何一致的视图合成。为了减轻纹理幻觉，我们设计了一个纹理桥模块，通过自适应特征融合实现高保真纹理生成。通过这种方式，SplatDiff利用飞溅和扩散的优势来生成具有一致几何形状和高保真细节的新颖视图。大量实验验证了SplatDiff在单视图NVS中的最先进性能。此外，在没有额外训练的情况下，SplatDiff在各种任务（包括稀疏视图NVS和立体视频转换）中表现出出色的零样本性能。 et.al.|[2502.12752](http://arxiv.org/abs/2502.12752)|null|
 |**2025-02-18**|**MALT Diffusion: Memory-Augmented Latent Transformers for Any-Length Video Generation**|扩散模型在合成高质量视频方面是成功的，但仅限于生成短片（例如2-10秒）。合成持续的镜头（例如超过几分钟）仍然是一个悬而未决的研究问题。在本文中，我们提出了MALT扩散（使用记忆增强潜伏变换器），这是一种专门用于长视频生成的新扩散模型。MALT扩散（或简称MALT）通过将长视频细分为短片段并进行片段级自回归生成来处理长视频。为了实现这一点，我们首先提出了循环注意力层，将多个片段编码成一个紧凑的记忆潜在向量；通过随时间保持这个记忆向量，MALT能够对其进行调节，并基于长时间上下文连续生成新的镜头。我们还介绍了几种训练技术，使模型能够在长时间内生成具有一致质量和最小退化的帧。我们通过在长视频基准上的实验验证了MALT的有效性。我们首先使用流行的长视频基准对MALT的长上下文理解能力和稳定性进行了广泛的分析。例如，MALT在UCF-101上生成128帧视频时的FVD得分为220.4，超过了之前最先进的648.4。最后，我们探讨了MALT在文本到视频生成设置中的功能，并表明与最近的长文本到视频生成器技术相比，它可以生成长视频。 et.al.|[2502.12632](http://arxiv.org/abs/2502.12632)|null|
 
-<p align=right>(<a href=#updated-on-20250222>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250223>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-02-17**|**HumanGif: Single-View Human Diffusion with Generative Prior**|虽然之前的基于单视图的3D人体重建方法在新颖的视图合成方面取得了重大进展，但从单个图像输入中合成可动画化的人体化身的视图一致性和姿态一致性结果仍然是一个挑战。受2D角色动画成功的启发，我们提出了<strong>HumanGif</strong>，这是一种具有生成先验的单视图人类扩散模型。具体来说，我们利用基础扩散模型的生成先验，将基于单视图的3D人体新视图和姿态合成表述为单视图条件下的人体扩散过程。为了确保精细和一致的新颖视图和姿态合成，我们在HumanGif中引入了一个Human NeRF模块，从输入图像中学习空间对齐的特征，隐式地捕捉相对相机和人体姿态变换。此外，我们在优化过程中引入了图像级损失，以弥合扩散模型中潜在空间和图像空间之间的差距。对RenderPeople和DNA Rendering数据集的广泛实验表明，HumanGif实现了最佳的感知性能，对新颖的视图和姿势合成具有更好的泛化能力。 et.al.|[2502.12080](http://arxiv.org/abs/2502.12080)|**[link](https://github.com/skhu101/humangif)**|
 |**2025-02-16**|**OMG: Opacity Matters in Material Modeling with Gaussian Splatting**|从一组图像中分解几何、材质和光照，即逆渲染，一直是计算机视觉和图形学中的一个长期问题。神经渲染的最新进展使照片逼真和合理的反向渲染结果成为可能。3D高斯散斑的出现通过显示实时渲染潜力将其提升到了一个新的水平。一个直观的发现是，用于逆渲染的模型没有考虑不透明度对材料属性（即横截面）的依赖性，正如光学所暗示的那样。因此，我们开发了一种新方法，将这种依赖性添加到建模本身。受辐射传输的启发，我们通过引入一个神经网络来增加不透明度项，该神经网络将材料属性作为输入，以提供横截面的建模和物理上正确的激活函数。因此，材质属性的渐变不仅来自颜色，还来自不透明度，从而为其优化提供了约束。因此，与之前的工作相比，所提出的方法结合了更精确的物理特性。我们将我们的方法实现到3个不同的基线中，这些基线使用高斯散斑进行逆渲染，并在新颖的视图合成和材质建模方面普遍取得了显著的改进。 et.al.|[2502.10988](http://arxiv.org/abs/2502.10988)|null|
 
-<p align=right>(<a href=#updated-on-20250222>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250223>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-02-17**|**Improving electron tomography of mesoporous silica by Ga intrusion**|电子断层扫描（ET）提供了介孔材料的纳米级3D表征，但通常受到其低散射对比度的限制。在这里，我们介绍了一种用于介孔二氧化硅的镓（Ga）侵入策略，该策略显著提高了成像对比度，这是实现更精确3D重建的关键优势。通过改进的压汞孔隙率法渗透Ga，高角度环形暗场（HAADF）STEM信号增强了5倍，使重建分辨率提高了34%，界面锐度提高了49%。此外，样品电导率的增加通过最小化充电效应和减少漂移来促进聚焦离子束（FIB）铣削。这种方法能够精确分割和定量分析孔隙连通性和尺寸分布，从而将ET的适用性扩展到轻元素非导电材料，并推进复杂多孔系统的结构特性表征。 et.al.|[2502.11794](http://arxiv.org/abs/2502.11794)|null|
 |**2025-02-17**|**No-reference geometry quality assessment for colorless point clouds via list-wise rank learning**|无色点云的几何质量评估（GQA）对于评估新兴的基于点云的解决方案（如水印、压缩和三维（3D）重建）的性能至关重要。不幸的是，现有的客观GQA方法是传统的全参考指标，而最先进的基于学习的点云质量评估（PCQA）方法同时针对颜色和几何失真，这两种方法都不适合无参考GQA任务。此外，缺乏具有主观评分的大规模GQA数据集，这些数据集总是不精确、有偏见和不一致的，这也阻碍了基于学习的GQA指标的发展。在这些局限性的驱动下，本文提出了一种基于列表排序学习的无参考几何质量评估方法，称为LRL-GQA，该方法由几何质量评估网络（GQANet）和列表排序学习网络（LRLNet）组成。所提出的LRL-GQA将无参考GQA表述为列表排序问题，目的是直接优化整个质量排序。具体来说，首先构建一个包含各种仅几何失真的大型数据集，称为LRL数据集，其中每个样本都是无标签的，但都有质量排序信息。然后，GQANet被设计为捕获内在的多尺度逐块几何特征，以预测每个点云的质量指数。之后，LRLNet利用LRL数据集和似然损失来训练GQANet，并根据其失真水平对退化点云的输入列表进行排名。此外，预训练的GQANet可以进一步微调以获得绝对质量分数。实验结果表明，与现有的全参考GQA度量相比，所提出的无参考LRL-GQA方法具有更优的性能。 et.al.|[2502.11726](http://arxiv.org/abs/2502.11726)|**[link](https://github.com/vcg-njust/lrl-gqa)**|
 
-<p align=right>(<a href=#updated-on-20250222>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250223>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-02-20**|**ReQFlow: Rectified Quaternion Flow for Efficient and High-Quality Protein Backbone Generation**|蛋白质骨架生成在从头开始的蛋白质设计中起着核心作用，对许多生物和医学应用具有重要意义。尽管基于扩散和流动的生成模型为这一具有挑战性的任务提供了潜在的解决方案，但它们通常会生成具有不希望的可设计性的蛋白质，并导致计算效率低下。在这项研究中，我们提出了一种新的校正四元数流（ReQFlow）匹配方法，用于快速、高质量地生成蛋白质骨架。特别是，我们的方法从蛋白质链中每个残基的随机噪声中生成局部平移和3D旋转，将每个3D旋转表示为单位四元数，并通过指数格式的球面线性插值（SLERP）构建其流。我们通过四元数流（QFlow）匹配和保证数值稳定性来训练模型，并对QFlow模型进行修正，以加速其推理并提高生成的蛋白质骨架的可设计性，从而提出了ReQFlow模型。实验表明，ReQFlow在蛋白质骨架生成方面实现了最先进的性能，同时需要更少的采样步骤和更少的推理时间（例如，在生成长度为300的骨架时，比RFDiffusion快37倍，比Genie2快62倍），证明了其有效性和效率。该代码可在以下网址获得https://github.com/AngxiaoYue/ReQFlow. et.al.|[2502.14637](http://arxiv.org/abs/2502.14637)|**[link](https://github.com/AngxiaoYue/ReQFlow)**|
 |**2025-02-20**|**Random walks with homotopic spatial inhomogeneities**|在这项工作中，我们研究了标准随机游走的推广，即同伦随机游走（HRW），使用变形平移幺正步长，该步长由与Tsallis和Kaniadakis非广义统计相关的位置相关质量的同伦产生。HRW意味着一个相关的同位福克-普朗克方程（HFPE），该方程具有双参数非均匀扩散。根据变形和同伦参数，HRW的轨迹表现出向位置收敛、随机性和发散性。从HRW的相关主方程获得的HFPE具有以下特征：a）它是参考文献[N.G.van Kampen，\emph{Z.Phys.B凝聚态}\textbf{68}，135（1987）]的van Kampen扩散方程（5）的特例；b） 它表现出变形和同位参数函数的超扩散；c） Tsallis和Kaniadakis畸形FPE作为特例恢复；d） 观察到同位混合扩散；e）它具有一个稳定的熵密度，表征了介质的非均匀屏蔽，这是从H-定理的同位版本获得的。 et.al.|[2502.14590](http://arxiv.org/abs/2502.14590)|null|
 
-<p align=right>(<a href=#updated-on-20250222>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250223>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-01-31**|**Lifting by Gaussians: A Simple, Fast and Flexible Method for 3D Instance Segmentation**|我们介绍了一种新的三维高斯散斑辐射场（3DGS）开放世界实例分割方法——高斯提升（LBG）。最近，3DGS场已经成为基于神经场的高质量新视图合成方法的高效和明确的替代方案。我们的3D实例分割方法直接从SAM（或FastSAM等）中提取2D分割掩模，以及CLIP和DINOv2的特征，直接将它们融合到3DGS（或类似的高斯辐射场，如2DGS）上。与以前的方法不同，LBG不需要每个场景的训练，使其能够在任何现有的3DGS重建上无缝运行。我们的方法不仅比现有方法快一个数量级，而且更简单；它也是高度模块化的，能够对现有的3DGS字段进行3D语义分割，而不需要对3D高斯进行特定的参数化。此外，我们的技术在保持灵活性和效率的同时，为2D语义新颖视图合成和3D资产提取结果实现了卓越的语义分割。我们进一步介绍了一种从3D辐射场分割方法中评估单独分割的3D资产的新方法。 et.al.|[2502.00173](http://arxiv.org/abs/2502.00173)|null|
 |**2025-01-30**|**Zero-Shot Novel View and Depth Synthesis with Multi-View Geometric Diffusion**|从稀疏姿态图像重建3D场景的当前方法采用中间3D表示，如神经场、体素网格或3D高斯，以实现多视图一致的场景外观和几何形状。本文介绍了MVGD，这是一种基于扩散的架构，能够在给定任意数量的输入视图的情况下，从新的视点直接生成像素级的图像和深度图。我们的方法使用光线图调节来增强来自不同视点的空间信息的视觉特征，并指导从新视图生成图像和深度图。我们方法的一个关键方面是图像和深度图的多任务生成，使用可学习的任务嵌入来指导向特定模态的扩散过程。我们从公开可用的数据集中收集了6000多万个多视图样本来训练这个模型，并提出了在这种不同条件下实现高效和一致学习的技术。我们还提出了一种新策略，通过逐步微调较小的模型，实现了对较大模型的有效训练，并具有很好的扩展行为。通过广泛的实验，我们报告了多个新颖的视图合成基准以及多视图立体和视频深度估计的最新结果。 et.al.|[2501.18804](http://arxiv.org/abs/2501.18804)|null|
 
-<p align=right>(<a href=#updated-on-20250222>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250223>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
