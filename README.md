@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.03.05
+## Updated on 2025.03.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-02-28**|**HAIC: Improving Human Action Understanding and Generation with Better Captions for Multi-modal Large Language Models**|最近的多模态大语言模型（MLLM）在视频理解方面取得了很大进展。然而，由于缺乏高质量的数据，它们在涉及人类行为的视频上的表现仍然有限。为了解决这个问题，我们引入了一个两阶段数据注释管道。首先，我们设计策略，从互联网上收集具有清晰人类行为的视频。其次，视频以标准化的字幕格式进行注释，该格式使用人类属性来区分个人，并按时间顺序详细说明他们的行为和互动。通过这个管道，我们策划了两个数据集，即HAICTrain和HAICBench。\textbf{HAICTrain}由Gemini Pro生成的126K个视频字幕对组成，并经过验证用于训练目的。同时，\textbf{HAICBench}包括500个手动注释的视频字幕对和1400个QA对，用于全面评估人类行为理解。实验结果表明，使用HAICTrain进行训练不仅可以显著提高人类在4个基准测试中的理解能力，还可以改善文本到视频的生成结果。HAICTrain和HAICBench均于https://huggingface.co/datasets/KuaishouHAIC/HAIC. et.al.|[2502.20811](http://arxiv.org/abs/2502.20811)|null|
 |**2025-02-28**|**WorldModelBench: Judging Video Generation Models As World Models**|视频生成模型发展迅速，将自己定位为能够支持机器人和自动驾驶等决策应用的视频世界模型。然而，目前的基准测试未能严格评估这些说法，只关注一般的视频质量，忽视了世界模型的重要因素，如物理依从性。为了弥合这一差距，我们提出了WorldModelBench，这是一个基准测试，旨在评估应用程序驱动领域中视频生成模型的世界建模能力。WorldModelBench提供了两个关键优势：（1）针对细微的世界建模违规：通过结合指令遵循和物理遵守维度，WorldModelBench可以检测到微妙的违规行为，例如违反质量守恒定律的物体大小的不规则变化——这些问题被之前的基准所忽视。（2） 与大规模人类偏好相一致：我们众包了6700个人类标签，以准确测量14个前沿模型。使用我们高质量的人类标签，我们进一步微调了一个准确的判断器，使评估过程自动化，在预测世界建模违规方面的平均准确率比2B参数的GPT-4o高8.6%。此外，我们证明，通过最大化评判者的奖励来对齐人类注释的训练显著提高了世界建模能力。该网站可在https://worldmodelbench-team.github.io. et.al.|[2502.20694](http://arxiv.org/abs/2502.20694)|null|
 
-<p align=right>(<a href=#updated-on-20250305>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250306>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-02-25**|**Synthesizing Consistent Novel Views via 3D Epipolar Attention without Re-Training**|大型扩散模型在单个图像的新颖视图合成中表现出显著的零样本能力。然而，这些模型在保持新颖和参考视图之间的一致性方面经常面临挑战。导致这一问题的一个关键因素是参考视图中上下文信息的利用有限。具体来说，当两个视图之间的视锥中存在重叠时，必须确保相应的区域在几何形状和外观上保持一致性。这一观察结果导致了一种简单而有效的方法，我们建议使用极线几何来定位和检索输入视图中的重叠信息。然后，这些信息被纳入目标视图的生成中，从而消除了训练或微调的需要，因为该过程不需要可学习的参数。此外，为了增强生成视图的整体一致性，我们将极线注意力的利用扩展到多视图设置，允许从输入视图和其他目标视图中检索重叠信息。定性和定量实验结果表明，我们的方法在不需要任何微调的情况下显著提高了合成视图的一致性。此外，这种增强还提高了3D重建等下游应用的性能。该代码可在以下网址获得https://github.com/botaoye/ConsisSyn. et.al.|[2502.18219](http://arxiv.org/abs/2502.18219)|null|
 |**2025-02-23**|**Efficient 4D Gaussian Stream with Low Rank Adaptation**|最近的方法在合成具有长视频序列的新视图方面取得了重大进展。本文提出了一种高度可扩展的连续学习动态新视图合成方法。我们利用3D高斯分布来表示场景，并利用基于低阶自适应的变形模型来捕捉动态场景变化。我们的方法使用视频帧块连续重建动态，将流带宽减少了90%，同时保持了与离线SOTA方法相当的高渲染质量。 et.al.|[2502.16575](http://arxiv.org/abs/2502.16575)|null|
 
-<p align=right>(<a href=#updated-on-20250305>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250306>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-03-02**|**PSRGS:Progressive Spectral Residual of 3D Gaussian for High-Frequency Recovery**|3D高斯散斑（3D GS）通过高斯椭球初始化和自适应密度控制，在小型单对象场景的新颖视图合成中取得了令人印象深刻的结果。然而，当应用于大规模遥感场景时，3D GS面临着挑战：运动结构（SfM）生成的点云通常很稀疏，3D GS固有的平滑行为导致高频区域的过度重建，这些区域具有详细的纹理和颜色变化。这会导致产生大的不透明高斯椭球体，从而导致梯度伪影。此外，几何和纹理的同时优化可能会导致高斯椭球在不正确的几何位置致密化，从而在其他视图中产生伪影。为了解决这些问题，我们提出了PSRGS，这是一种基于频谱残差图的渐进优化方案。具体来说，我们创建了一个频谱残差显著性图来分离低频和高频区域。在低频区域，我们应用深度感知和深度平滑损失来用低阈值初始化场景几何体。对于高频区域，我们使用具有较高阈值的梯度特征来分割和克隆椭球体，从而细化场景。采样率由特征响应和梯度损失决定。最后，我们引入了一个预训练的网络，该网络联合计算多个视图的感知损失，确保高斯椭球几何和颜色中高频细节的准确恢复。我们在多个数据集上进行实验，以评估我们的方法的有效性，该方法展示了具有竞争力的渲染质量，特别是在恢复高频区域的纹理细节方面。 et.al.|[2503.00848](http://arxiv.org/abs/2503.00848)|null|
 |**2025-03-02**|**Multi-Cali Anything: Dense Feature Multi-Frame Structure-from-Motion for Large-Scale Camera Array Calibration**|校准大型相机阵列，如基于圆顶的设置中的阵列，需要耗费大量时间，通常需要专门捕捉已知模式。虽然由于物理设置，此类阵列中的外部函数是固定的，但由于镜头调整或温度变化等因素，内部函数在会话中通常会有所不同。在本文中，我们提出了一种密集特征驱动的多帧校准方法，该方法直接从场景数据中提炼出内部函数，消除了额外校准捕获的必要性。我们的方法通过引入外部函数正则化项来逐步将估计的外部函数与地面真值对齐，引入密集特征重投影项来通过最小化特征空间中的重投影损失来减少关键点误差，并引入内部函数方差项来跨多帧进行联合优化，从而增强了传统的运动结构（SfM）管道。在多面数据集上的实验表明，我们的方法实现了与专用校准过程几乎相同的精度，并显著提高了内部函数和3D重建的精度。我们的方法与现有的SfM管道完全兼容，为大规模相机设置提供了一种高效实用的即插即用解决方案。我们的代码可在以下网址公开获取：https://github.com/YJJfish/Multi-Cali-Anything et.al.|[2503.00737](http://arxiv.org/abs/2503.00737)|**[link](https://github.com/yjjfish/multi-cali-anything)**|
 
-<p align=right>(<a href=#updated-on-20250305>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250306>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-03-04**|**Improving Oil Slick Trajectory Simulations with Bayesian Optimization**|准确模拟石油泄漏轨迹对于支持从业者的应对措施和减轻环境和社会经济影响至关重要。MEDSLIK-II等数值模型模拟了油颗粒的平流、弥散和转换过程。然而，模拟在很大程度上依赖于精确的参数调整，仍然基于专家知识和手动校准。为了克服这些局限性，我们将MEDSLIK-II数值溢油模型与贝叶斯优化框架相结合，迭代估计最佳物理参数配置，使模拟更接近卫星对浮油的观测。我们专注于关键参数，如水平扩散率和漂移因子，最大化分数技能得分（FSS），作为模拟和观察到的石油分布之间时空重叠的衡量标准。我们验证了2021年8月23日至9月4日在叙利亚发生的巴尼亚斯石油事件的框架，该事件释放了超过12000亿美元的石油。我们表明，与用默认参数初始化的控制模拟相比，平均而言，所提出的方法将FSS从5.82%系统地提高到11.07%。优化结果在多个时间步长内持续改进，特别是在漂移变化增加的时期，证明了我们的方法在动态环境条件下的鲁棒性。 et.al.|[2503.02749](http://arxiv.org/abs/2503.02749)|null|
 |**2025-03-04**|**Variable-Friction In-Hand Manipulation for Arbitrary Objects via Diffusion-Based Imitation Learning**|由于丰富而微妙的接触过程，对任意物体进行灵巧的手部操作（IHM）具有挑战性。可变摩擦操纵是一种灵巧性的替代方法，之前仅用两个单关节手指就展示了强大而通用的2D IHM功能。然而，可变摩擦手的硬编码操纵方法仅限于正多边形对象和有限的目标姿态，并且要求为每个对象量身定制策略。本文提出了一种基于端到端学习的操纵方法，以最小的工程工作量和数据收集，在真实硬件上实现对任何目标姿态的任意对象操纵。该方法采用基于扩散策略的模仿学习方法，通过模拟和少量真实世界数据进行联合训练。通过所提出的框架，可以精确操纵包括多边形和非多边形在内的任意对象，在A100 GPU上训练2小时内达到任意目标姿势，只需1小时的真实数据收集。精度高于之前的定制对象特定策略，平均成功率为71.3%，平均姿态误差为2.676毫米和1.902度。 et.al.|[2503.02738](http://arxiv.org/abs/2503.02738)|null|
 
-<p align=right>(<a href=#updated-on-20250305>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250306>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-02-02**|**Lifting the Winding Number: Precise Representation of Complex Cuts in Subspace Physics Simulations**|切割薄壁可变形结构在日常生活中很常见，但由于引入了空间不连续性，给模拟带来了重大挑战。传统方法依赖于基于网格的域表示，这需要频繁的重新网格划分和细化，以准确捕捉不断变化的不连续性。这些挑战在缩减空间模拟中进一步加剧，在这种模拟中，基函数固有地依赖于几何和网格，使得基难以甚至不可能表示切割引入的各种不连续性。用神经场表示基函数的最新进展提供了一种有前景的替代方案，利用其离散化不可知的性质来表示不同几何形状的变形。然而，神经场的固有连续性阻碍了泛化，特别是在神经网络权重中编码了不连续性的情况下。我们提出了Wind-Lifter，这是一种新的神经表示，旨在精确模拟薄壁可变形结构中的复杂切割。我们的方法构建神经场，在指定位置精确再现不连续性，而无需在切割线的位置烘烤。至关重要的是，我们的方法没有将不连续性嵌入神经网络的权重中，为切割位置的泛化开辟了道路。我们的方法实现了实时仿真速度，并支持在仿真过程中动态更新切割线几何形状。此外，不连续性的显式表示使我们的神经场易于控制和编辑，与传统的神经场相比具有显著的优势，在传统的神经场内，不连续被嵌入网络的权重中，并支持依赖于一般切割位置的新应用。 et.al.|[2502.00626](http://arxiv.org/abs/2502.00626)|null|
 |**2025-01-31**|**Lifting by Gaussians: A Simple, Fast and Flexible Method for 3D Instance Segmentation**|我们介绍了一种新的三维高斯散斑辐射场（3DGS）开放世界实例分割方法——高斯提升（LBG）。最近，3DGS场已经成为基于神经场的高质量新视图合成方法的高效和明确的替代方案。我们的3D实例分割方法直接从SAM（或FastSAM等）中提取2D分割掩模，以及CLIP和DINOv2的特征，直接将它们融合到3DGS（或类似的高斯辐射场，如2DGS）上。与以前的方法不同，LBG不需要每个场景的训练，使其能够在任何现有的3DGS重建上无缝运行。我们的方法不仅比现有方法快一个数量级，而且更简单；它也是高度模块化的，能够对现有的3DGS字段进行3D语义分割，而不需要对3D高斯进行特定的参数化。此外，我们的技术在保持灵活性和效率的同时，为2D语义新颖视图合成和3D资产提取结果实现了卓越的语义分割。我们进一步介绍了一种从3D辐射场分割方法中评估单独分割的3D资产的新方法。 et.al.|[2502.00173](http://arxiv.org/abs/2502.00173)|null|
 
-<p align=right>(<a href=#updated-on-20250305>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250306>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
