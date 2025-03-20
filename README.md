@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.03.19
+## Updated on 2025.03.20
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-03-18**|**AIGVE-Tool: AI-Generated Video Evaluation Toolkit with Multifaceted Benchmark**|人工智能生成视频合成的快速发展导致了对标准化和有效评估指标的需求不断增长。现有的指标缺乏一个统一的框架来系统地对方法进行分类，限制了对评估环境的整体理解。此外，零散的实现和缺乏标准化的接口会导致冗余的处理开销。此外，许多先前的方法受到数据集特定依赖关系的限制，限制了它们在不同视频领域的适用性。为了应对这些挑战，我们引入了AIGVE工具（AI生成的视频评估工具包），这是一个统一的框架，为全面的AI生成视频评估提供了一个结构化和可扩展的评估管道。AIGVE工具采用新颖的五类分类法进行组织，集成了多种评估方法，同时允许通过模块化配置系统进行灵活定制。此外，我们提出了AIGVE Bench，这是一个基于手工制作的指令和提示，由五个SOTA视频生成模型创建的大规模基准数据集。该数据集系统地评估了九个关键质量维度上的各种视频生成模型。广泛的实验证明了AIGVE工具在提供标准化和可靠的评估结果方面的有效性，突出了当前模型的特定优势和局限性，并促进了下一代人工智能生成视频技术的进步。 et.al.|[2503.14064](http://arxiv.org/abs/2503.14064)|null|
 |**2025-03-17**|**Generative Gaussian Splatting: Generating 3D Scenes with Video Diffusion Priors**|合成一致且逼真的3D场景是计算机视觉领域的一个悬而未决的问题。视频扩散模型生成令人印象深刻的视频，但不能直接合成3D表示，即生成的序列缺乏3D一致性。此外，由于缺乏大规模的3D训练数据，直接训练生成性3D模型具有挑战性。在这项工作中，我们提出了生成高斯散斑（GGS）——一种将3D表示与预训练的潜在视频扩散模型相结合的新方法。具体来说，我们的模型合成了一个通过3D高斯基元参数化的特征场。然后，特征场被渲染为特征图并解码为多视图图像，或者直接上采样为3D辐射场。我们在场景合成的两个常见基准数据集RealEstate10K和ScanNet+上评估了我们的方法，发现我们提出的GGS模型显著提高了生成的多视图图像的3D一致性，以及在所有相关基线上生成的3D场景的质量。与没有3D表示的类似模型相比，GGS在RealEstate10K和ScanNet+上将生成的3D场景的FID提高了约20%。项目页面：https://katjaschwarz.github.io/ggs/ et.al.|[2503.13272](http://arxiv.org/abs/2503.13272)|null|
 
-<p align=right>(<a href=#updated-on-20250319>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250320>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-03-17**|**Next-Scale Autoregressive Models are Zero-Shot Single-Image Object View Synthesizers**|基于扩散骨架的方法最近彻底改变了新的视图合成（NVS）。然而，这些模型需要预训练的2D扩散检查点（例如稳定扩散）作为几何先验的基础。由于此类检查点需要大量的数据和计算来训练，这极大地限制了基于扩散的NVS模型的可扩展性。我们提出了视图条件下的下一尺度自动回归（ArchonView），尽管只使用3D渲染数据从头开始训练，没有进行2D预训练，但该方法明显超过了最先进的方法。我们通过将全局（姿势增强语义）和局部（多尺度分层编码）条件整合到基于下一尺度自回归范式的主干中来实现这一点。我们的模型即使在先前方法失败的困难相机姿态下也表现出鲁棒的性能，并且与扩散相比，推理速度快几倍。我们通过实验验证了性能随模型和数据集大小而变化，并在多个任务中对我们的方法的综合质量进行了广泛的演示。我们的代码开源于https://github.com/Shiran-Yuan/ArchonView. et.al.|[2503.13588](http://arxiv.org/abs/2503.13588)|null|
 |**2025-03-17**|**TriDF: Triplane-Accelerated Density Fields for Few-Shot Remote Sensing Novel View Synthesis**|遥感新视图合成（NVS）为遥感场景的3D解释提供了巨大的潜力，在城市规划和环境监测中具有重要应用。然而，由于采集限制，遥感场景经常缺乏足够的多视图图像。虽然现有的NVS方法在处理有限的输入视图时往往会过拟合，但先进的少镜头NVS方法计算量大，在遥感场景中的表现欠佳。本文介绍了TriDF，这是一种高效的混合3D表示方法，用于从少至3个输入视图快速遥感NVS。我们的方法将颜色和体积密度信息解耦，独立建模，以减少隐式辐射场的计算负担并加速重建。我们通过将高频颜色信息映射到这种紧凑的结构上，探索了三平面表示在少镜头NVS任务中的潜力，特征平面的直接优化显著加快了收敛速度。体积密度被建模为连续的密度场，通过基于图像的渲染结合来自相邻视图的参考特征，以补偿有限的输入数据。此外，我们引入了基于点云的深度引导优化，有效地缓解了少镜头NVS中的过拟合问题。跨多个遥感场景的综合实验表明，与基于NeRF的方法相比，我们的混合表示实现了30倍的速度提升，同时比先进的少镜头方法提高了渲染质量指标（PSNR提高了7.4%，SSIM提高了12.2%，LPIPS提高了18.7%）。该代码可在以下网址公开获取https://github.com/kanehub/TriDF et.al.|[2503.13347](http://arxiv.org/abs/2503.13347)|null|
 
-<p align=right>(<a href=#updated-on-20250319>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250320>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-03-17**|**DeGauss: Dynamic-Static Decomposition with Gaussian Splatting for Distractor-free 3D Reconstruction**|从真实世界的捕捉中重建干净、无干扰的3D场景仍然是一个重大挑战，特别是在高度动态和混乱的环境中，如以自我为中心的视频。为了解决这个问题，我们引入了DeGauss，这是一种基于解耦动态静态高斯散斑设计的简单而鲁棒的动态场景重建自监督框架。DeGauss使用前景高斯模型对动态元素进行建模，使用背景高斯模型对静态内容进行建模，并使用概率掩模来协调它们的组成，从而实现独立但互补的优化。DeGauss在广泛的现实世界场景中具有鲁棒性，从随意的图像收集到长而动态的以自我为中心的视频，而不依赖于复杂的启发式或广泛的监督。包括NeRF on the go、ADT、AEA、Hot3D和EPIC Fields在内的基准测试表明，DeGauss始终优于现有方法，为高度动态、交互丰富的环境中的通用、无干扰的3D重建建立了强有力的基线。 et.al.|[2503.13176](http://arxiv.org/abs/2503.13176)|null|
 |**2025-03-17**|**CompMarkGS: Robust Watermarking for Compression 3D Gaussian Splatting**|3D高斯散斑（3DGS）能够实现快速可微分渲染，用于3D重建和新颖的视图合成，从而使其得到广泛的商业应用。因此，通过水印进行版权保护变得至关重要。然而，由于3DGS依赖于数百万高斯人，这需要千兆字节的存储空间，因此高效的传输和存储需要压缩。现有的3DGS水印方法容易受到基于量化的压缩，通常会导致嵌入的水印丢失。为了应对这一挑战，我们提出了一种新的水印方法，该方法在保持高渲染质量的同时，确保模型压缩后的水印鲁棒性。具体来说，我们引入了一个量化失真层，在训练过程中模拟压缩，在基于量化的压缩下保留水印。此外，我们提出了一种可学习的水印嵌入特征，将水印嵌入锚特征中，确保结构一致性和无缝集成到3D场景中。此外，我们提出了一种频率感知锚生长机制，通过有效识别高频区域内的高斯分布来提高这些区域的图像质量。实验结果证实，我们的方法保留了水印，并在高压缩下保持了优异的图像质量，验证了它是一种有前景的安全3DGS模型方法。 et.al.|[2503.12836](http://arxiv.org/abs/2503.12836)|null|
 
-<p align=right>(<a href=#updated-on-20250319>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250320>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-03-18**|**MagicComp: Training-free Dual-Phase Refinement for Compositional Video Generation**|文本到视频（T2V）生成在扩散模型方面取得了重大进展。然而，现有的方法仍然难以准确绑定属性、确定空间关系和捕捉多个主体之间的复杂动作交互。为了解决这些局限性，我们提出了MagicComp，这是一种无需训练的方法，通过双相细化来增强合成T2V的生成。具体来说，（1）在条件化阶段：我们引入语义锚消歧，通过逐步将语义锚的方向向量注入原始文本嵌入，来强化特定主题的语义，解决主题间的歧义；（2） 在去噪阶段：我们提出了动态布局融合注意力，它集成了接地先验和模型自适应空间感知，通过掩蔽注意力调制将受试者灵活地绑定到他们的时空区域。此外，MagicComp是一种与模型无关且通用的方法，可以无缝集成到现有的T2V架构中。在T2V CompBench和VBench上进行的广泛实验表明，MagicComp的性能优于最先进的方法，突显了其在基于复杂提示和轨迹可控视频生成等应用中的潜力。项目页面：https://hong-yu-zhang.github.io/MagicComp-Page/. et.al.|[2503.14428](http://arxiv.org/abs/2503.14428)|null|
 |**2025-03-18**|**Neutron portal to ultra-high-energy neutrinos**|目前关于超高能（UHE）宇宙射线的数据表明，它们主要由重核组成。这表明质子碰撞在宇宙微波背景上产生的中微子通量很小，很难观测到。受KM3NeT最近报道的高能μ介子事件的启发，我们探索了在新物理学存在的情况下通过核光解增强宇宙中微子能量通量的可能性。具体来说，我们推测UHE中子可能会振荡到一种新的状态，即暗（或镜像）中子 $n'$，它反过来会衰变，为中微子注入大量能量，$n\to n\to\nu_\text{UHE}$ 。虽然这一机制并不能解释KM3NeT事件与IceCube的零结果之间的紧张关系，但它调和了实验对较重宇宙射线成分的偏好与UHE中微子的大扩散宇宙成因通量。 et.al.|[2503.14419](http://arxiv.org/abs/2503.14419)|null|
 
-<p align=right>(<a href=#updated-on-20250319>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250320>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-02-15**|**Implicit Neural Representations of Molecular Vector-Valued Functions**|分子有各种计算表示，包括数值描述符、字符串、图形、点云和曲面。每种表示方法都可以应用各种机器学习方法，从线性回归到与大型语言模型配对的图神经网络。为了补充现有的表示，我们通过向量值函数或n维向量场引入分子的表示，这些向量值函数由神经网络参数化，我们称之为分子神经场。与表面表征不同，分子神经场捕获蛋白质等大分子的外部特征和疏水核心。与离散图或点表示相比，分子神经场结构紧凑，分辨率无关，天生适合在空间和时间维度上进行插值。分子神经场继承的这些特性适用于包括基于所需形状、结构和组成生成分子，以及空间和时间中分子构象之间分辨率无关的插值在内的任务。在这里，我们为分子神经场提供了一个框架和概念证明，即使用自动解码器架构对蛋白质-配体复合物进行参数化和超分辨率重建，以及使用自动编码器架构将分子体积嵌入潜在空间。 et.al.|[2502.10848](http://arxiv.org/abs/2502.10848)|**[link](https://github.com/daenuprobst/minf)**|
 |**2025-02-05**|**Poisson Hypothesis and large-population limit for networks of spiking neurons**|我们研究了具有随机尖峰时间的线性（泄漏）和二次积分和放电神经元的空间扩展网络的平均场描述。我们考虑了具有线性和二次内在动力学的连续时间Galves-L“ocherbach（GL）网络的大种群极限。我们证明了泊松假设适用于这些网络的复制平均场极限，即在适当定义的极限内，神经元是独立的，相互作用时间被强度取决于平均放电率的独立时间非均匀泊松过程所取代，将已知结果扩展到具有二次内在动态和重置的网络。证明泊松假设成立为研究这些网络中的大种群限值开辟了可能性。我们证明这个极限是一个适定的神经场模型，受随机重置的影响。 et.al.|[2502.03379](http://arxiv.org/abs/2502.03379)|null|
 
-<p align=right>(<a href=#updated-on-20250319>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250320>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
