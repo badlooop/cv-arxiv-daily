@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.03.27
+## Updated on 2025.03.28
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-03-26**|**Video Motion Graphs**|我们介绍了视频运动图，这是一个旨在生成逼真人体运动视频的系统。使用参考视频和音乐或运动标签等条件信号，该系统通过首先检索具有与条件匹配的手势的视频剪辑，然后生成插值帧以无缝连接剪辑边界来合成新视频。我们方法的核心是HMInterp，这是一种强大的视频帧插值（VFI）模型，即使在跳舞等复杂的运动场景中，也能实现不连续帧的无缝插值。HMInterp i）采用双分支插值方法，将用于人体骨架运动插值的运动扩散模型与用于最终帧生成的基于扩散的视频帧插值模型相结合。ii）采用条件渐进训练，有效利用身份强弱条件，如图像和姿势。这些设计确保了高视频纹理质量和精确的运动轨迹。结果表明，我们的视频运动图在多模态条件人体运动视频生成方面优于现有的基于生成和检索的方法。项目页面可以在以下网址找到https://h-liu1997.github.io/Video-Motion-Graphs/ et.al.|[2503.20218](http://arxiv.org/abs/2503.20218)|null|
 |**2025-03-25**|**Zero-Shot Human-Object Interaction Synthesis with Multimodal Priors**|人机交互（HOI）合成对于从虚拟现实到机器人的各种应用都很重要。然而，由于其复杂性和高成本，获取3D HOI数据具有挑战性，将现有方法限制在训练数据集中对象类型和交互模式的狭隘多样性上。本文提出了一种新的零样本HOI合成框架，该框架不依赖于当前有限的3D HOI数据集上的端到端训练。我们方法的核心思想在于利用预先训练的多模态模型中广泛的HOI知识。给定文本描述，我们的系统首先使用图像或视频生成模型获得时间一致的2D HOI图像序列，然后将其提升到人类和物体姿态的3D HOI里程碑。我们采用预训练的人体姿态估计模型来提取人体姿态，并引入了一种可推广的类别级6-DoF估计方法来从2D HOI图像中获得物体姿态。我们的估计方法适用于从文本到三维模型或在线检索中获得的各种对象模板。基于物理的3D HOI运动学里程碑跟踪进一步应用于细化身体运动和物体姿势，从而产生更合理的HOI生成结果。实验结果表明，我们的方法能够生成具有物理真实性和语义多样性的开放词汇HOI。 et.al.|[2503.20118](http://arxiv.org/abs/2503.20118)|null|
 
-<p align=right>(<a href=#updated-on-20250327>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250328>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-03-24**|**Hardware-Rasterized Ray-Based Gaussian Splatting**|我们提出了一种用于基于光线的3D高斯散斑（RayGS）的新颖硬件光栅化渲染方法，为新颖的视图合成获得了快速和高质量的结果。我们的工作包含一个数学严谨和几何直观的推导，关于如何有效地估计渲染RayGS模型的所有相关量，这些模型是相对于标准硬件光栅化着色器构建的。我们的解决方案是第一个能够以足够高的帧率渲染RayGS模型，以支持虚拟现实和混合现实等对质量敏感的应用程序。我们的第二个贡献是通过解决在训练和测试期间渲染不同尺度时出现的MIP相关问题，实现了RayGS的无别名渲染。我们在不同的基准场景中展示了显著的性能提升，同时保留了RayGS最先进的外观质量。 et.al.|[2503.18682](http://arxiv.org/abs/2503.18682)|null|
 |**2025-03-25**|**LookCloser: Frequency-aware Radiance Field for Tiny-Detail Scene**|人类通过跨越多个频率的信息来感知和理解周围的环境。在沉浸式场景中，人们自然地扫描他们的环境以掌握其整体结构，同时检查吸引他们注意力的物体的细节。然而，目前的NeRF框架主要侧重于对高频局部视图或具有低频信息的场景的广泛结构进行建模，这仅限于平衡两者。我们介绍了FA NeRF，这是一种用于视图合成的新型频率感知框架，可在单个NeRF模型中同时捕获整体场景结构和高清细节。为了实现这一目标，我们提出了一种3D频率量化方法，该方法分析场景的频率分布，实现频率感知渲染。我们的框架包含一个用于快速收敛和查询的频率网格，一个用于平衡不同频率内容特征的频率感知特征重新加权策略。大量实验表明，我们的方法在保留细节的同时，在建模整个场景方面明显优于现有方法。项目页面：https://coscatter.github.io/LookCloser/ et.al.|[2503.18513](http://arxiv.org/abs/2503.18513)|null|
 
-<p align=right>(<a href=#updated-on-20250327>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250328>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-03-22**|**3D Modeling: Camera Movement Estimation and path Correction for SFM Model using the Combination of Modified A-SIFT and Stereo System**|创建准确高效的3D模型带来了重大挑战，特别是在解决大视点变化、计算复杂性和对齐差异方面。高效的相机路径生成可以帮助解决这些问题。在此背景下，提出了一种仿射尺度不变特征变换（ASIFT）的改进版本，以减少计算开销的方式提取更多的匹配点，确保有足够数量的内层用于精确的相机旋转角度估计。此外，引入了一种新的基于双相机的旋转校正模型，以减轻小的旋转误差，进一步提高精度。此外，通过改变运动结构（SFM）模型，实现了基于立体相机的平移估计和校正模型，以确定3D空间中的相机运动。最后，ASIFT和基于两个相机的SFM模型的新颖组合提供了3D空间中精确的相机运动轨迹。实验结果表明，与实际相机运动路径相比，所提出的相机运动方法达到了99.9%的精度，并且优于最先进的相机路径估计方法。通过利用这种精确的相机路径，该系统有助于创建精确的3D模型，使其成为3D重建中需要高保真度和效率的应用的强大解决方案。 et.al.|[2503.17668](http://arxiv.org/abs/2503.17668)|null|
 |**2025-03-21**|**Pow3R: Empowering Unconstrained 3D Reconstruction with Camera and Scene Priors**|我们提出了Pow3r，这是一种新型的大型3D视觉回归模型，在接受的输入模式方面具有高度的通用性。与之前缺乏在测试时利用已知相机或场景先验的任何机制的前馈模型不同，Pow3r在单个网络中结合了辅助信息的任何组合，如内部函数、相对姿态、密集或稀疏深度，以及输入图像。基于最新的DUSt3R范式，这是一种利用强大预训练的基于变换器的架构，我们的轻量级和多功能的调节为网络提供了额外的指导，以便在辅助信息可用时预测更准确的估计。在训练过程中，我们在每次迭代时向模型提供模态的随机子集，这使得模型能够在测试时在不同水平的已知先验下运行。这反过来又开辟了新的功能，例如以本机图像分辨率执行推理或点云完成。我们在3D重建、深度完成、多视图深度预测、多视图立体和多视图姿态估计任务上的实验产生了最先进的结果，并证实了Pow3r在利用所有可用信息方面的有效性。项目网页为https://europe.naverlabs.com/pow3r. et.al.|[2503.17316](http://arxiv.org/abs/2503.17316)|null|
 
-<p align=right>(<a href=#updated-on-20250327>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250328>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-03-26**|**Fast relaxation of a viscous vortex in an external flow**|我们研究了二维空间中由平滑、无发散速度场平流的集中涡旋的演变。在初始涡量为狄拉克质量的理想化情况下，我们计算了解的近似值，该近似值在高雷诺数范围内准确描述了涡流中心的运动和外部流动剪切应力下流线的变形。对于准备不充分的初始数据，对应于尖峰高斯涡旋，我们证明了由于涡旋核心内部耗散的增强，在比扩散时间短得多的时间尺度上对先前解的弛豫。 et.al.|[2503.20643](http://arxiv.org/abs/2503.20643)|null|
 |**2025-03-26**|**Diffusion Counterfactuals for Image Regressors**|反事实解释已被成功应用于为各种黑匣子模型创建人类可解释的解释。它们对于图像领域的任务非常方便，在图像领域，解释的质量得益于生成模型的最新进展。尽管反事实解释已被广泛应用于分类模型，但它们在回归任务中的应用仍未得到充分探索。我们提出了两种方法，使用基于扩散的生成模型为图像回归任务创建反事实解释，以解决稀疏性和质量方面的挑战：1）一种基于直接在像素空间中操作的去噪扩散概率模型，2）另一种基于在潜在空间中运行的扩散自编码器。两者都在Celebra HQ和合成数据集上产生了现实、语义和平滑的反事实，为回归模型的决策过程提供了易于解释的见解，并揭示了虚假的相关性。我们发现，对于回归反事实，特征的变化取决于预测值的区域。预测值的显著变化需要较大的语义变化，因此比使用分类器更难找到稀疏的反事实。此外，像素空间反事实更稀疏，而潜在空间反事实质量更高，允许更大的语义变化。 et.al.|[2503.20595](http://arxiv.org/abs/2503.20595)|null|
 
-<p align=right>(<a href=#updated-on-20250327>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250328>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-03-09**|**X-LRM: X-ray Large Reconstruction Model for Extremely Sparse-View Computed Tomography Recovery in One Second**|稀疏视图3D CT重建旨在从有限数量的2D X射线投影中恢复体积结构。现有的前馈方法受到基于CNN的架构容量有限和大规模训练数据集稀缺的限制。本文提出了一种用于极稀疏视图（<10视图）CT重建的X射线大重建模型（X-LRM）。X-LRM由两个关键部件组成：X-former和X-triplane。我们的X-former可以使用基于MLP的图像标记器和基于Transformer的编码器来处理任意数量的输入视图。然后，输出标记被上采样到我们的X三平面表示中，该表示将3D辐射密度建模为隐式神经场。为了支持X-LRM的训练，我们引入了Torso-16K，这是一个由各种躯干器官的16K多个体积投影对组成的大规模数据集。大量实验表明，X-LRM的性能比最先进的方法高出1.5 dB，速度快27倍，灵活性更好。此外，肺部分割任务的下游评估也表明了我们方法的实用价值。我们的代码、预训练模型和数据集将于https://github.com/caiyuanhao1998/X-LRM et.al.|[2503.06382](http://arxiv.org/abs/2503.06382)|null|
 |**2025-03-05**|**Distilling Dataset into Neural Field**|利用大规模数据集对于训练高性能深度学习模型至关重要，但它也带来了巨大的计算和存储成本。为了克服这些挑战，数据集蒸馏已成为一种有前景的解决方案，它将大规模数据集压缩成一个较小的合成数据集，保留了训练所需的基本信息。本文提出了一种新的数据集提取参数化框架，称为神经场提取数据集（DDiF），它利用神经场存储大规模数据集的必要信息。由于神经场以坐标作为输入和输出量的独特性质，DDiF有效地保留了信息，并易于生成各种形状的数据。我们从理论上证实，当单个合成实例的使用预算相同时，DDiF表现出比以前的一些文献更大的表现力。通过广泛的实验，我们证明DDiF在几个基准数据集上取得了卓越的性能，扩展到图像域之外，包括视频、音频和3D体素。我们在发布代码https://github.com/aailab-kaist/DDiF. et.al.|[2503.04835](http://arxiv.org/abs/2503.04835)|**[link](https://github.com/aailab-kaist/ddif)**|
 
-<p align=right>(<a href=#updated-on-20250327>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250328>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
