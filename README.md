@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.03.29
+## Updated on 2025.03.30
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-03-26**|**RecTable: Fast Modeling Tabular Data with Rectified Flow**|基于分数或扩散的模型生成高质量的表格数据，超越了基于GAN和基于VAE的模型。然而，这些方法需要大量的训练时间。本文介绍了RecTable，它使用整流流建模，应用于文本到图像生成和文本到视频生成。RecTable具有由几个堆叠的门控线性单元块组成的简单架构。此外，我们的训练策略也很简单，包括混合型噪声分布和logit正态时间步长分布。我们的实验表明，与几种最先进的扩散和基于分数的模型相比，RecTable在减少所需训练时间的同时实现了具有竞争力的性能。我们的代码可在https://github.com/fmp453/rectable. et.al.|[2503.20731](http://arxiv.org/abs/2503.20731)|**[link](https://github.com/fmp453/rectable)**|
 |**2025-03-26**|**AccidentSim: Generating Physically Realistic Vehicle Collision Videos from Real-World Accident Reports**|由于其罕见性和复杂性，为自动驾驶研究收集真实世界的车辆事故视频具有挑战性。虽然现有的驾驶视频生成方法可以生成视觉上逼真的视频，但它们往往无法提供物理上逼真的模拟，因为它们缺乏生成准确碰撞后轨迹的能力。本文介绍了AccidentSim，这是一种新的框架，通过提取和利用现实世界车辆事故报告中可用的物理线索和上下文信息来生成物理逼真的车辆碰撞视频。具体而言，AccidentSim利用可靠的物理模拟器从事故报告中的物理和上下文信息中复制碰撞后的车辆轨迹，并构建车辆碰撞轨迹数据集。然后，该数据集用于微调语言模型，使其能够响应用户提示，并根据用户描述预测各种驾驶场景中物理上一致的碰撞后轨迹。最后，我们使用神经辐射场（NeRF）来渲染高质量的背景，将它们与表现出物理真实轨迹的前景车辆合并，以生成车辆碰撞视频。实验结果表明，AccidentSim制作的视频在视觉和物理真实性方面都表现出色。 et.al.|[2503.20654](http://arxiv.org/abs/2503.20654)|null|
 
-<p align=right>(<a href=#updated-on-20250329>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250330>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-03-25**|**HoGS: Unified Near and Far Object Reconstruction via Homogeneous Gaussian Splatting**|新型视图合成最近取得了令人瞩目的进展，3D高斯散点（3DGS）提供了高效的训练时间和逼真的实时渲染。然而，对笛卡尔坐标的依赖限制了3DGS在远处物体上的性能，这对于重建无界的室外环境非常重要。我们发现，尽管3DGS管道非常简单，但使用齐次坐标（投影几何中的一个概念）显著提高了远处物体的渲染精度。因此，我们提出了将齐次坐标合并到3DGS框架中的齐次高斯散斑（HoGS），为增强远近物体提供了统一的表示。HoGS通过采用射影几何原理，有效地管理了广阔的空间位置和尺度，特别是在室外无界环境中。实验表明，HoGS显著提高了重建远处物体的准确性，同时保持了附近物体的高质量渲染，以及快速的训练速度和实时渲染能力。我们的实现可以在我们的项目页面上找到https://kh129.github.io/hogs/. et.al.|[2503.19232](http://arxiv.org/abs/2503.19232)|**[link](https://github.com/huntorochi/HoGS)**|
 |**2025-03-24**|**RomanTex: Decoupling 3D-aware Rotary Positional Embedded Multi-Attention Network for Texture Synthesis**|为现有几何体绘制纹理是3D资产生成中一个关键但劳动密集型的过程。文本到图像（T2I）模型的最新进展导致了纹理生成的重大进展。大多数现有的研究通过首先使用图像扩散模型在2D空间中生成图像，然后进行纹理烘焙过程来实现UV纹理，从而完成这项任务。然而，由于生成的多视图图像之间的不一致性，这些方法往往难以产生高质量的纹理，从而导致接缝和重影伪影。相比之下，基于3D的纹理合成方法旨在解决这些不一致性，但它们往往忽略了2D扩散模型先验，使其难以应用于现实世界的对象。为了克服这些局限性，我们提出了RomanTex，这是一种基于多视图的纹理生成框架，通过我们新颖的3D感知旋转位置嵌入，将多注意力网络与底层3D表示相结合。此外，我们在多注意力块中加入了解耦特性，以增强模型在图像到纹理任务中的鲁棒性，从而实现语义正确的后视图合成。此外，我们引入了一种与几何相关的无分类器引导（CFG）机制，以进一步改善与几何和图像的对齐。定量和定性评估以及全面的用户研究表明，我们的方法在纹理质量和一致性方面取得了最先进的结果。 et.al.|[2503.19011](http://arxiv.org/abs/2503.19011)|null|
 
-<p align=right>(<a href=#updated-on-20250329>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250330>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-03-23**|**MLLM-For3D: Adapting Multimodal Large Language Model for 3D Reasoning Segmentation**|推理分割旨在基于人类意图和空间推理对复杂场景中的目标对象进行分割。虽然最近的多模态大型语言模型（MLLM）已经证明了令人印象深刻的2D图像推理分割，但将这些功能应用于3D场景的探索仍然不足。在本文中，我们介绍了MLLM-For3D，这是一个简单而有效的框架，可以将知识从2D MLLMs转移到3D场景理解。具体来说，我们利用MLLM生成多视图伪分割掩模和相应的文本嵌入，然后将2D掩模投影到3D空间中，并将其与文本嵌入对齐。主要的挑战在于缺乏跨多个视图的3D上下文和空间一致性，导致模型产生幻觉，使不存在的对象无法一致地定位对象。用这种不相关的对象训练3D模型会导致性能下降。为了解决这个问题，我们引入了一种空间一致性策略，以强制分割掩模在3D空间中保持一致，有效地捕捉场景的几何形状。此外，我们开发了一种用于多模态语义对齐的查询令牌方法，实现了跨不同视图对同一对象的一致识别。对各种具有挑战性的室内场景基准的广泛评估表明，即使没有任何标记的3D训练数据，MLLM-For3D也优于现有的3D推理分割方法，有效地解释了用户意图，理解了3D场景，并对空间关系进行了推理。 et.al.|[2503.18135](http://arxiv.org/abs/2503.18135)|null|
 |**2025-03-22**|**GaussianFocus: Constrained Attention Focus for 3D Gaussian Splatting**|3D重建和神经渲染的最新发展极大地推动了各种学术和工业领域中照片级逼真3D场景渲染的能力。3D高斯散点技术及其衍生技术集成了基于基元和体积表示的优点，以提供顶级渲染质量和效率。尽管取得了这些进步，但该方法往往会产生过度冗余的噪声高斯分布，过度适应每个训练视图，从而降低渲染质量。此外，虽然3D高斯散斑在小规模和以对象为中心的场景中表现出色，但它在更大场景中的应用受到视频内存有限、优化持续时间过长和视图外观可变等限制的阻碍。为了应对这些挑战，我们引入了GaussianFocus，这是一种创新的方法，它结合了补丁注意力算法来提高渲染质量，并实现了高斯约束策略来最小化冗余。此外，我们提出了一种针对大规模场景的细分重建策略，将它们划分为更小、可管理的块进行单独训练。我们的结果表明，GaussianFocus显著减少了不必要的高斯分布，提高了渲染质量，超越了现有的最新技术（SoTA）方法。此外，我们展示了我们的方法能够有效地管理和渲染大型场景，如城市环境，同时保持视觉输出的高保真度。 et.al.|[2503.17798](http://arxiv.org/abs/2503.17798)|null|
 
-<p align=right>(<a href=#updated-on-20250329>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250330>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-03-27**|**Reducing of system of partial differential equations and generalized symmetry of ordinary differential equations**|研究了两个非线性偏微分方程组的对称约化问题。我们找到了将偏微分方程组简化为常微分方程组的方法。该方法应用于与Korteweg-de-Vries（KdV）方程和反应扩散方程相关的系统。我们还展示了构造包含一个或两个任意函数的非进化方程组解的可能性。 et.al.|[2503.21675](http://arxiv.org/abs/2503.21675)|null|
 |**2025-03-27**|**Numerical Analysis of the Stability of Iron Dust Bunsen Flames**|本文对铁粉本生火焰对颗粒晶种变化的响应进行了数值模拟。使用经过验证的数值模型研究了颗粒种子波动对火焰稳定性的影响。对右侧向上和上侧向下配置的本生装置进行了模拟。右侧向上和上侧向下配置之间的火焰稳定性没有发现火焰响应的显著差异。我们发现本生火焰对粒子负载的突然变化具有惊人的鲁棒性。颗粒载荷的突然变化不会激发火焰中的任何内在不稳定性。根据我们的研究结果，铁粉火焰对施加的波动具有鲁棒性。我们假设这是由于燃烧温度和热释放速率之间缺乏反馈机制。这种机制存在于传统的化学驱动的气态火焰中。然而，这种机制在铁粉火焰中是不存在的，因为单个铁颗粒的燃烧受到氧气扩散的限制，而氧气扩散对温度不敏感。 et.al.|[2503.21658](http://arxiv.org/abs/2503.21658)|null|
 
-<p align=right>(<a href=#updated-on-20250329>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250330>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-03-09**|**Gaussian RBFNet: Gaussian Radial Basis Functions for Fast and Accurate Representation and Reconstruction of Neural Fields**|DeepSDF和神经辐射场等神经场最近彻底改变了RGB图像和视频的新颖视图合成和3D重建。然而，实现高质量的表示、重建和渲染需要深度神经网络，而深度神经网络的训练和评估速度很慢。尽管已经提出了几种加速技术，但它们经常以速度换取内存。另一方面，基于高斯飞溅的方法加快了渲染时间，但在存储大量高斯参数所需的训练速度和内存方面仍然成本高昂。在本文中，我们介绍了一种新的神经表示方法，它在训练和推理时间都很快，而且很轻。我们的关键观察是，传统MLP中使用的神经元执行简单的计算（点积，然后是ReLU激活），因此需要使用宽和深MLP或高分辨率和高维特征网格来参数化复杂的非线性函数。我们在这篇论文中表明，通过用径向基函数（RBF）核替换传统神经元，只需一层这样的神经元，就可以实现2D（RGB图像）、3D（几何）和5D（辐射场）信号的高精度表示。该表示具有高度的并行性，可在低分辨率特征网格上运行，并且结构紧凑，内存高效。我们证明，所提出的新表示可以在不到15秒的时间内训练出3D几何表示，在不到十五分钟的时间内就可以训练出新的视图合成。在运行时，它可以在不牺牲质量的情况下以超过60 fps的速度合成新颖的视图。 et.al.|[2503.06762](http://arxiv.org/abs/2503.06762)|null|
 |**2025-03-09**|**X-LRM: X-ray Large Reconstruction Model for Extremely Sparse-View Computed Tomography Recovery in One Second**|稀疏视图3D CT重建旨在从有限数量的2D X射线投影中恢复体积结构。现有的前馈方法受到基于CNN的架构容量有限和大规模训练数据集稀缺的限制。本文提出了一种用于极稀疏视图（<10视图）CT重建的X射线大重建模型（X-LRM）。X-LRM由两个关键部件组成：X-former和X-triplane。我们的X-former可以使用基于MLP的图像标记器和基于Transformer的编码器来处理任意数量的输入视图。然后，输出标记被上采样到我们的X三平面表示中，该表示将3D辐射密度建模为隐式神经场。为了支持X-LRM的训练，我们引入了Torso-16K，这是一个由各种躯干器官的16K多个体积投影对组成的大规模数据集。大量实验表明，X-LRM的性能比最先进的方法高出1.5 dB，速度快27倍，灵活性更好。此外，肺部分割任务的下游评估也表明了我们方法的实用价值。我们的代码、预训练模型和数据集将于https://github.com/caiyuanhao1998/X-LRM et.al.|[2503.06382](http://arxiv.org/abs/2503.06382)|null|
 
-<p align=right>(<a href=#updated-on-20250329>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250330>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
