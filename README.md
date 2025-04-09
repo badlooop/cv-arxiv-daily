@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.04.08
+## Updated on 2025.04.09
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-04-03**|**How I Warped Your Noise: a Temporally-Correlated Noise Prior for Diffusion Models**|视频编辑和生成方法通常依赖于预训练的基于图像的扩散模型。然而，在扩散过程中，对不保留视频后续帧中存在的相关性的基本噪声采样技术的依赖对结果的质量有害。这要么会产生高频闪烁，要么会产生不适合后处理的纹理粘滞伪影。考虑到这一点，我们提出了一种在噪声样本序列中保持时间相关性的新方法。这种方法通过一种新的噪声表示来实现，称为 $\int$-噪声（积分噪声），它将单个噪声样本重新解释为连续积分的噪声场：像素值不表示离散值，而是像素区域上潜在的无限分辨率噪声的积分。此外，我们提出了一种精心定制的传输方法，该方法使用$\int$-噪声在帧序列上准确地平流噪声样本，最大限度地提高不同帧之间的相关性，同时保持噪声特性。我们的结果表明，所提出的\\int$ -噪声可用于各种任务，如视频恢复、替代渲染和条件视频生成。看见https://warpyournoise.github.io/视频结果。 et.al.|[2504.03072](http://arxiv.org/abs/2504.03072)|null|
 |**2025-04-03**|**Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets**|模仿学习已成为构建多面手机器人的一种有前景的方法。然而，由于依赖于高质量的专家演示，对大型机器人基础模型进行大规模模仿学习仍然具有挑战性。同时，描绘各种环境和不同行为的大量视频数据很容易获得。这些数据提供了有关真实世界动态和代理环境交互的丰富信息来源。然而，由于缺乏大多数现代方法所需的动作注释，直接利用这些数据进行模仿学习已被证明是困难的。在这项工作中，我们提出了统一世界模型（UWM），这是一个允许利用视频和行动数据进行政策学习的框架。具体来说，UWM在统一的变换器架构中集成了动作扩散过程和视频扩散过程，其中独立的扩散时间步长控制着每种模态。我们证明，通过简单地控制每个扩散时间步长，UWM可以灵活地表示策略、正向动态、反向动态和视频生成器。通过模拟和现实世界的实验，我们表明：（1）UWM能够对具有动力学和动作预测的大规模多任务机器人数据集进行有效的预训练，从而产生比模仿学习更具普遍性和鲁棒性的策略，（2）UWM通过独立控制特定模态的扩散时间步长，自然地促进了从无动作视频数据中的学习，进一步提高了微调策略的性能。我们的研究结果表明，UWM在利用大型异构数据集进行可扩展机器人学习方面迈出了有前景的一步，并在模仿学习和世界建模的经常不同的范式之间实现了简单的统一。视频和代码可在https://weirdlabuw.github.io/uwm/. et.al.|[2504.02792](http://arxiv.org/abs/2504.02792)|null|
 
-<p align=right>(<a href=#updated-on-20250408>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250409>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-04-02**|**FIORD: A Fisheye Indoor-Outdoor Dataset with LIDAR Ground Truth for 3D Scene Reconstruction and Benchmarking**|大规模3D场景重建和新型视图合成方法的发展主要依赖于包含窄视场（FoV）透视图像的数据集。虽然对小规模场景有效，但这些数据集需要大型图像集和广泛的运动结构（SfM）处理，限制了可扩展性。为了解决这个问题，我们引入了一个为场景重建任务量身定制的鱼眼图像数据集。使用双200度鱼眼镜头，我们的数据集提供了5个室内和5个室外场景的360度全覆盖。每个场景都有稀疏的SfM点云和精确的LIDAR衍生的密集点云，可以用作几何地面真实值，在遮挡和反射等具有挑战性的条件下实现稳健的基准测试。虽然基线实验侧重于香草高斯Splatting和基于NeRF的Nerfacto方法，但该数据集支持场景重建、新颖视图合成和基于图像的渲染的多种方法。 et.al.|[2504.01732](http://arxiv.org/abs/2504.01732)|null|
 |**2025-04-02**|**FlowR: Flowing from Sparse to Dense 3D Reconstructions**|3D高斯飞溅技术能够以实时帧率实现高质量的新颖视图合成（NVS）。然而，随着我们偏离训练的观点，它的质量急剧下降。因此，需要密集的捕捉来满足某些应用程序的高质量期望，例如虚拟现实（VR）。然而，获得如此密集的捕获是非常费力和昂贵的。现有的工作已经探索了使用2D生成模型通过蒸馏或生成额外的训练视图来缓解这一要求。这些方法通常仅以少数参考输入视图为条件，因此没有充分利用可用的3D信息，导致生成结果不一致和重建伪影。为了解决这个问题，我们提出了一种多视图流匹配模型，该模型学习一个流，将可能稀疏重建的新视图渲染连接到我们期望密集重建的渲染。这使得能够用新颖的、生成的视图来增强场景捕获，以提高重建质量。我们的模型是在一个360万图像对的新数据集上训练的，可以在一个H100 GPU上以540x960分辨率（91K令牌）在一次前向传递中处理多达45个视图。我们的流水线在稀疏和密集视图场景中持续改进NVS，从而在多个广泛使用的NVS基准测试中实现比先前工作更高质量的重建。 et.al.|[2504.01647](http://arxiv.org/abs/2504.01647)|null|
 
-<p align=right>(<a href=#updated-on-20250408>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250409>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-04-03**|**Compressing 3D Gaussian Splatting by Noise-Substituted Vector Quantization**|3D高斯散点（3DGS）在3D重建中表现出了显著的有效性，通过实时辐射场渲染实现了高质量的结果。然而，一个关键的挑战是巨大的存储成本：重建单个场景通常需要数百万个高斯散点，每个散点由59个浮点参数表示，大约需要1~GB的内存。为了应对这一挑战，我们提出了一种压缩方法，通过构建单独的属性码本并仅存储离散的码索引。具体来说，我们采用噪声替代的矢量量化技术来联合训练码本和模型特征，确保梯度下降优化和参数离散化之间的一致性。我们的方法有效地降低了内存消耗（约45美元），同时在标准3D基准场景上保持了有竞争力的重建质量。不同码本大小的实验表明了压缩比和图像质量之间的权衡。此外，经过训练的压缩模型仍然与流行的3DGS查看器完全兼容，并能够实现更快的渲染速度，使其非常适合实际应用。 et.al.|[2504.03059](http://arxiv.org/abs/2504.03059)|null|
 |**2025-04-03**|**MD-ProjTex: Texturing 3D Shapes with Multi-Diffusion Projection**|我们介绍了MD ProjTex，这是一种使用预训练的文本到图像扩散模型为3D形状快速一致地生成文本引导纹理的方法。我们方法的核心是UV空间中的多视图一致性机制，它确保了不同视点之间的连贯纹理。具体来说，MD ProjTex在每个扩散步骤融合来自多个视图的噪声预测，并联合更新每个视图的去噪方向，以保持3D一致性。与依赖于优化或顺序视图合成的现有最先进的方法相比，MD-ProjTex在计算上更高效，并获得了更好的定量和定性结果。 et.al.|[2504.02762](http://arxiv.org/abs/2504.02762)|null|
 
-<p align=right>(<a href=#updated-on-20250408>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250409>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-04-07**|**Kinetic study of compressible Rayleigh-Taylor instability with time-varying acceleration**|在实际应用中，瑞利-泰勒（RT）不稳定性通常出现在具有时变加速度的可压缩系统中。为了捕捉此类系统的复杂动力学，开发了一种双组分离散玻尔兹曼方法来系统地研究变加速度驱动的可压缩RT不稳定性。具体而言，系统分析了不同加速周期、振幅和相位的影响。模拟结果从三个关键角度进行解释：密度梯度，表征密度的空间变化；热力学非平衡强度，量化系统与局部热力学平衡的偏差；以及非平衡区域的分数，它捕捉到了非平衡行为的空间分布。值得注意的是，流体系统表现出丰富多样的动态模式，这是由多种相互竞争的物理机制相互作用引起的，包括时间依赖的加速、RT不稳定性、扩散和耗散效应。这些发现为复杂驾驶条件下可压缩RT不稳定性的演变和调节提供了更深入的见解。 et.al.|[2504.05128](http://arxiv.org/abs/2504.05128)|null|
 |**2025-04-07**|**Morse Index Theorem for Sturm-Liouville Operators on the Real Line**|经典的Morse指数定理建立了Morse指数、表征线性自伴微分算子关键谱性质的负特征值数量和相应共轭点计数之间的基本联系。本文将这些基本结果推广到 $\mathbb{R}$ 上的Sturm-Liouville算子。特别是，对于自治拉格朗日系统，我们采用几何论证来推导莫尔斯指数的下限。作为具体应用，我们建立了一个检测梯度反应扩散系统中行波不稳定性的标准。 et.al.|[2504.05091](http://arxiv.org/abs/2504.05091)|null|
 
-<p align=right>(<a href=#updated-on-20250408>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250409>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-03-19**|**GO-N3RDet: Geometry Optimized NeRF-enhanced 3D Object Detector**|我们提出了GO-N3RDet，这是一种通过神经辐射场增强的场景几何优化的多视图3D物体检测器。准确的3D对象检测的关键在于有效的体素表示。然而，由于遮挡和缺乏3D信息，从多视图2D图像构建3D特征具有挑战性。为了解决这个问题，我们引入了一种独特的3D位置信息嵌入体素优化机制来融合多视图特征。为了优先考虑目标区域的神经场重建，我们还为探测器的NeRF分支设计了一种双重重要性采样方案。我们还提出了一个不透明度优化模块，通过实施多视图一致性约束来进行精确的体素不透明度预测。此外，为了进一步提高跨多个视角的体素密度一致性，我们将射线距离作为加权因子，以最小化累积射线误差。我们独特的模块协同形成了一个端到端的神经模型，建立了基于NeRF的多视图3D检测的最新技术，并在ScanNet和ARKITCenes上进行了广泛的实验验证。代码将在以下网址提供https://github.com/ZechuanLi/GO-N3RDet. et.al.|[2503.15211](http://arxiv.org/abs/2503.15211)|null|
 |**2025-03-14**|**NF-SLAM: Effective, Normalizing Flow-supported Neural Field representations for object-level visual SLAM in automotive applications**|我们提出了一种新颖的、仅限视觉的对象级SLAM框架，用于通过隐式符号距离函数表示3D形状的汽车应用。我们的主要创新包括通过归一化流网络增强标准神经表示。因此，通过仅具有16维潜码的紧凑网络，可以在特定类别的道路车辆上实现强大的表示能力。此外，通过对合成数据的比较实验证明，新提出的架构在仅存在稀疏和噪声数据的情况下表现出显著的性能改进。该模块嵌入到基于立体视觉的框架的后端，用于联合增量形状优化。损失函数由基于稀疏3D点的SDF损失、稀疏渲染损失和基于语义掩码的轮廓一致性项的组合给出。我们还利用语义信息来确定前端的关键点提取密度。最后，对真实世界数据的实验结果显示，与使用直接深度读数的替代框架相比，其性能准确可靠。所提出的方法仅在通过束调整获得的稀疏3D点上表现良好，即使在仅使用掩模一致性项的情况下，最终也能继续提供稳定的结果。 et.al.|[2503.11199](http://arxiv.org/abs/2503.11199)|null|
 
-<p align=right>(<a href=#updated-on-20250408>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250409>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
