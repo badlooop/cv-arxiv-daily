@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.04.11
+## Updated on 2025.04.12
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-04-08**|**CamContextI2V: Context-aware Controllable Video Generation**|最近，图像到视频（I2V）扩散模型已经证明了令人印象深刻的场景理解和生成质量，结合了图像条件来指导生成。然而，这些模型主要为静态图像制作动画，而不会超出其提供的上下文。引入额外的约束，如相机轨迹，可以增强多样性，但往往会降低视觉质量，限制了它们在需要忠实场景表示的任务中的适用性。我们提出了CamContextI2V，这是一种I2V模型，它将多种图像条件与3D约束以及相机控制相结合，以丰富全局语义和细粒度视觉细节。这使得视频生成更加连贯和上下文感知。此外，我们强调了时间意识对于有效语境表征的必要性。我们对RealEstate10K数据集的全面研究表明，视觉质量和相机可控性得到了改善。我们在以下网址公开我们的代码和模型：https://github.com/LDenninger/CamContextI2V. et.al.|[2504.06022](http://arxiv.org/abs/2504.06022)|null|
 |**2025-04-07**|**One-Minute Video Generation with Test-Time Training**|今天的变形金刚仍然很难制作一分钟的视频，因为自我关注层在长时间的背景下效率低下。曼巴图层等替代方案难以处理复杂的多场景故事，因为它们的隐藏状态表现力较弱。我们尝试了测试时间训练（TTT）层，其隐藏状态本身可以是神经网络，因此更具表现力。将TTT层添加到预训练的Transformer中，使其能够从文本故事板生成一分钟的视频。为了验证概念，我们根据《猫和老鼠》漫画策划了一个数据集。与Mamba~2、门控DeltaNet和滑动窗口注意力层等基线相比，TTT层生成了更连贯的视频，讲述了复杂的故事，在每种方法100个视频的人类评估中领先34个Elo点。尽管有希望，但结果仍然包含伪影，这可能是由于预训练的5B模型的能力有限。我们的执行效率也可以提高。由于资源限制，我们只尝试了一分钟的视频，但这种方法可以扩展到更长的视频和更复杂的故事。示例视频、代码和注释可在以下网址获得：https://test-time-training.github.io/video-dit et.al.|[2504.05298](http://arxiv.org/abs/2504.05298)|null|
 
-<p align=right>(<a href=#updated-on-20250411>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250412>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-04-05**|**3R-GS: Best Practice in Optimizing Camera Poses Along with 3DGS**|3D高斯散点（3DGS）以其效率和质量彻底改变了神经渲染，但与许多新颖的视图合成方法一样，它在很大程度上依赖于运动结构（SfM）系统的精确相机姿态。尽管最近的SfM管道取得了令人印象深刻的进展，但如何同时进一步提高其在具有挑战性的条件下（例如无纹理场景）的鲁棒性能和相机参数估计的精度仍然是个问题。我们提出了3R-GS，这是一个3D高斯散布框架，通过联合优化来自大型重建先验MASt3R SfM的3D高斯和相机参数来弥合这一差距。我们注意到，天真地执行联合3D高斯和相机优化面临着两个挑战：对SfM初始化质量的敏感性，以及其有限的全局优化能力，导致次优重建结果。我们的3R-GS通过整合优化实践克服了这些问题，即使在相机配准不完美的情况下也能实现稳健的场景重建。大量实验表明，3R-GS提供了高质量的新颖视图合成和精确的相机姿态估计，同时保持了计算效率。项目页面：https://zsh523.github.io/3R-GS/ et.al.|[2504.04294](http://arxiv.org/abs/2504.04294)|null|
 |**2025-04-04**|**WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments**|我们介绍了WildGS SLAM，这是一个强大而高效的单目RGB SLAM系统，旨在通过利用不确定性感知几何映射来处理动态环境。与假设静态场景的传统SLAM系统不同，我们的方法集成了深度和不确定性信息，以提高存在运动物体时的跟踪、映射和渲染性能。我们引入了一个由浅层多层感知器和DINOv2特征预测的不确定性映射，以指导跟踪和映射过程中的动态对象去除。该不确定性图增强了密集束调整和高斯图优化，提高了重建精度。我们的系统在多个数据集上进行了评估，并演示了无伪影的视图合成。结果显示，与最先进的方法相比，WildGS SLAM在动态环境中具有卓越的性能。 et.al.|[2504.03886](http://arxiv.org/abs/2504.03886)|null|
 
-<p align=right>(<a href=#updated-on-20250411>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250412>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-04-09**|**GSta: Efficient Training Scheme with Siestaed Gaussians for Monocular 3D Scene Reconstruction**|高斯散斑（GS）是一种流行的3D重建方法，主要是因为它能够合理快速地收敛，忠实地表示场景，并以快速的方式渲染（新颖的）视图。然而，它存在较大的存储和内存需求，其训练速度仍然落后于基于哈希网格的辐射场方法（如Instant NGP），这使得在机器人场景中部署它们变得特别困难，在这些场景中，3D重建对于精确操作至关重要。在本文中，我们提出了GSta，它基于高斯分布的位置和颜色梯度规范，动态识别在训练过程中收敛良好的高斯分布。通过迫使这些高斯人午睡并在训练过程中停止更新（冻结），与现有技术相比，我们以具有竞争力的准确性提高了训练速度。我们还提出了一种基于在训练图像子集上计算的PSNR值的早期停止机制。结合其他改进，如集成学习率调度器，GSta在保持质量的同时，在收敛速度、内存和存储要求方面实现了改进的帕累托前沿。我们还表明，GSta可以改进其他方法，并在提高效率方面补充正交方法；一旦与Trick GS结合使用，GSta的训练速度将提高5倍，磁盘大小比普通GS小16倍，同时具有相当的准确性，只消耗一半的峰值内存。更多可视化信息请访问https://anilarmagan.github.io/SRUK-GSta. et.al.|[2504.06716](http://arxiv.org/abs/2504.06716)|null|
 |**2025-04-08**|**D^2USt3R: Enhancing 3D Reconstruction with 4D Pointmaps for Dynamic Scenes**|我们解决了动态场景中的3D重建任务，其中对象运动会降低先前3D点图回归方法的质量，例如最初为静态3D场景重建设计的DUSt3R。尽管这些方法在静态环境中提供了一种优雅而强大的解决方案，但它们在仅基于相机姿态的动态运动中难以实现。为了克服这一点，我们提出了D^2USt3R，它对4D点图进行回归，以前馈方式同时捕获静态和动态3D场景几何。通过明确地结合空间和时间方面，我们的方法成功地封装了与所提出的4D点图的时空密集对应关系，增强了下游任务。广泛的实验评估表明，我们提出的方法在具有复杂运动的各种数据集上始终实现了卓越的重建性能。 et.al.|[2504.06264](http://arxiv.org/abs/2504.06264)|null|
 
-<p align=right>(<a href=#updated-on-20250411>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250412>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-04-10**|**Revisiting Likelihood-Based Out-of-Distribution Detection by Modeling Representations**|分布外（OOD）检测对于确保深度学习系统的可靠性至关重要，特别是在安全关键的应用中。基于似然性的深度生成模型历来因其在面向对象检测中的表现不佳而受到批评，当应用于图像数据时，它们通常为面向对象数据分配比分布样本更高的似然性。在这项工作中，我们证明了可能性本身并没有缺陷。相反，图像空间中的几个属性禁止将似然性作为有效的检测分数。给定一个足够好的似然估计器，特别是使用扩散模型的概率流公式，我们表明，当应用于预训练编码器的表示空间时，基于似然的方法仍然可以与最先进的方法相提并论。我们的工作代码可以在 $\href上找到{https://github.com/limchaos/Likelihood-OOD.git}｛\texttt{https://github.com/limchaos/Likelihood-OOD.git}}$ . et.al.|[2504.07793](http://arxiv.org/abs/2504.07793)|null|
 |**2025-04-10**|**Millimeter emission from supermassive black hole coronae**|活动星系核（AGN）是吸积超大质量黑洞（SMBH）的宿主。吸积会导致在SMBH附近形成一个高温的X射线发射日冕，能够加速相对论电子。毫米波段的观测可以探测到它的同步辐射。我们提供了一个框架，通过模拟从无线电到远红外频率的光谱能量分布（SED）来获取SMBH日冕的物理信息。我们还探索了从毫米观测中获取额外信息的可能性，如SMBH质量，并研究了高红移透镜源。我们介绍了一种基于单区球形区域的电晕发射模型，该模型具有混合的热等离子体和非热等离子体。我们详细研究了电晕SED如何取决于不同的参数，如尺寸、不透明度和磁场强度。来自尘埃、电离气体和扩散相对论电子的其他星系发射成分也包括在SED拟合方案中。我们一致地将我们的代码应用于一个无线电静默AGN样本，该样本在毫米范围内有强烈的日冕成分指示。检测到的SMBH日冕的毫米辐射与非热相对论粒子群的能量密度一致，该粒子群的能量密度约为热等离子体中的0.5-10%。这需要接近热气体均分的磁能密度，以及60-250重力半径的日冕尺寸。在考虑电晕尺寸的不确定性时，该模型还可以再现观察到的毫米发射和SMBH质量之间的相关性。毫米波段为SMBH日冕的物理学提供了一个独特的窗口，可以研究高度尘埃遮蔽的源和高红移透镜类星体。深入了解SMBH日冕中的相对论粒子群可以为其潜在的多波长和中微子发射提供关键见解。 et.al.|[2504.07762](http://arxiv.org/abs/2504.07762)|null|
 
-<p align=right>(<a href=#updated-on-20250411>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250412>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-03-25**|**Decoupled Dynamics Framework with Neural Fields for 3D Spatio-temporal Prediction of Vehicle Collisions**|本研究提出了一种神经框架，通过独立建模全局刚体运动和局部结构变形来预测3D车辆碰撞动力学。与直接预测绝对位移的方法不同，这种方法明确地将车辆的整体平移和旋转与其结构变形分开。两个专门的网络构成了该框架的核心：一个基于四元数的刚性网络用于刚性运动，一个基于坐标的变形网络用于局部变形。通过独立处理根本不同的物理现象，所提出的架构实现了准确的预测，而不需要对每个组件进行单独的监督。该模型仅在10%的可用模拟数据上进行训练，其性能明显优于基线模型，包括单层感知器（MLP）和深度算子网络（DeepONet），预测误差降低了83%。广泛的验证表明，它对训练范围外的碰撞条件具有很强的泛化能力，即使在涉及极端速度和大冲击角度的严重冲击下，也能准确预测响应。此外，该框架成功地从低分辨率输入重建了高分辨率变形细节，而无需增加计算工作量。因此，所提出的方法为在复杂的碰撞场景中快速可靠地评估车辆安全提供了一种有效、计算高效的方法，大大减少了所需的模拟数据和时间，同时保持了预测的保真度。 et.al.|[2503.19712](http://arxiv.org/abs/2503.19712)|null|
 |**2025-03-21**|**Towards Understanding the Benefits of Neural Network Parameterizations in Geophysical Inversions: A Study With Neural Fields**|在这项工作中，我们采用了神经场，它使用神经网络以测试时学习的方式将坐标映射到该坐标处的相应物理属性值。对于测试时学习方法，与需要使用训练数据集训练网络的传统方法相比，在反演过程中学习权重。首先展示了地震层析成像和直流电阻率反演中的合成示例结果。然后，我们对这两种情况下的神经网络权重的雅可比矩阵进行奇异值分解分析（SVD分析），以探索神经网络对恢复模型的影响。结果表明，测试时间学习方法可以消除恢复的地下物理性质模型中由测量和物理敏感性引起的不必要的伪影。因此，在某些情况下，与常规反演相比，NFs-Inv可以改善反演结果，例如恢复倾角或预测主要目标的边界。在SVD分析中，我们观察到左奇异向量中的相似模式，就像在计算机视觉中的生成任务中以监督方式训练的一些扩散模型中观察到的那样。这一观察结果提供了证据，表明神经网络结构中固有的隐式偏差在监督学习和测试时学习模型中很有用。这种隐式偏差有可能对地球物理反演中的模型恢复有用。 et.al.|[2503.17503](http://arxiv.org/abs/2503.17503)|null|
 
-<p align=right>(<a href=#updated-on-20250411>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250412>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
