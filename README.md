@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.04.14
+## Updated on 2025.04.15
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-04-10**|**Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction**|我们介绍了Geo4D，这是一种将视频扩散模型重新用于动态场景的单目3D重建的方法。通过利用这种视频模型捕获的强动态先验，可以仅使用合成数据来训练Geo4D，同时以零样本的方式将其很好地推广到真实数据。Geo4D预测了几种互补的几何形态，即点、深度和射线图。它使用一种新的多模态对齐算法在推理时对齐和融合这些模态以及多个滑动窗口，从而获得长视频的鲁棒和准确的4D重建。跨多个基准的广泛实验表明，Geo4D显著超越了最先进的视频深度估计方法，包括MonST3R等最新方法，这些方法也被设计用于处理动态场景。 et.al.|[2504.07961](http://arxiv.org/abs/2504.07961)|null|
 |**2025-04-10**|**Beyond the Frame: Generating 360° Panoramic Videos from Perspective Videos**|360度视频已经成为代表我们动态视觉世界的有前景的媒介。与标准相机的“隧道视觉”相比，它们的无边界视野为我们的周围环境提供了更完整的视角。虽然现有的视频模型擅长制作标准视频，但它们生成完整全景视频的能力仍然难以捉摸。在本文中，我们研究了视频到360度生成的任务：给定一个透视视频作为输入，我们的目标是生成一个与原始视频一致的完整全景视频。与传统的视频生成任务不同，输出的视场要大得多，模型需要对场景的空间布局和对象的动态有深入的了解，以保持时空一致性。为了应对这些挑战，我们首先利用在线提供的丰富的360度视频，并开发一个高质量的数据过滤管道来管理成对训练数据。然后，我们仔细设计了一系列几何和运动感知操作，以促进学习过程并提高360度视频生成的质量。实验结果表明，我们的模型可以从野外视角视频中生成逼真连贯的360度视频。此外，我们还展示了它的潜在应用，包括视频稳定、相机视点控制和交互式视觉问答。 et.al.|[2504.07940](http://arxiv.org/abs/2504.07940)|null|
 
-<p align=right>(<a href=#updated-on-20250414>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250415>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-04-08**|**HiMoR: Monocular Deformable Gaussian Reconstruction with Hierarchical Motion Representation**|我们提出了分层运动表示（HiMoR），这是一种用于3D高斯基元的新型变形表示，能够实现高质量的单目动态3D重建。HiMoR背后的见解是，日常场景中的运动可以分解为更粗糙的运动，作为更精细细节的基础。使用树结构，HiMoR的节点表示不同级别的运动细节，较浅的节点对粗略运动进行建模以实现时间平滑，较深的节点捕获更精细的运动。此外，我们的模型使用一些共享的运动基来表示不同节点集的运动，这与运动趋于平滑和简单的假设相一致。这种运动表示设计为高斯模型提供了更结构化的变形，最大限度地利用时间关系来解决单目动态3D重建的挑战性任务。我们还建议使用更可靠的感知度量作为替代方案，因为用于评估单眼动态3D重建的像素级度量有时可能无法准确反映重建的真实质量。大量实验证明了我们的方法在从具有复杂运动的挑战性单眼视频中实现卓越的新颖视图合成方面的有效性。 et.al.|[2504.06210](http://arxiv.org/abs/2504.06210)|null|
 |**2025-04-08**|**Meta-Continual Learning of Neural Fields**|神经场（NF）作为一种用于复杂数据表示的通用框架，已经获得了突出地位。这项工作揭示了一个新的问题设置，称为“神经场元连续学习”（MCL-NF），并引入了一种新的策略，该策略采用模块化架构与基于优化的元学习相结合。我们的策略侧重于克服现有神经场连续学习方法的局限性，如灾难性遗忘和缓慢收敛，实现了高质量的重建，显著提高了学习速度。我们进一步引入了神经辐射场的Fisher信息最大化损失（FIM-NeRF），它在样本级别最大化信息增益以增强学习泛化，并证明了收敛保证和泛化界限。我们在六个不同的数据集上对图像、音频、视频重建和视图合成任务进行了广泛的评估，证明了我们的方法在重建质量和速度方面优于现有的MCL和CL-NF方法。值得注意的是，我们的方法在降低参数要求的情况下，实现了神经场对城市级NeRF渲染的快速适应。 et.al.|[2504.05806](http://arxiv.org/abs/2504.05806)|null|
 
-<p align=right>(<a href=#updated-on-20250414>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250415>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-04-09**|**Wheat3DGS: In-field 3D Reconstruction, Instance Segmentation and Phenotyping of Wheat Heads with Gaussian Splatting**|植物形态特征的自动提取对于通过高通量田间表型分析（HTFP）支持作物育种和农业管理至关重要。基于多视图RGB图像的解决方案因其可扩展性和可负担性而具有吸引力，能够实现2D方法无法直接捕获的体积测量。虽然神经辐射场（NeRFs）等先进方法显示出了希望，但它们的应用仅限于从少数植物或器官中计数或提取特征。此外，由于田间条件下作物冠层的遮挡和密集排列，准确测量研究作物产量所必需的单个小麦头等复杂结构仍然特别具有挑战性。3D高斯散斑（3DGS）的最新发展为HTFP提供了一种有前景的替代方案，因为它具有高质量的重建和显式的基于点的表示。在本文中，我们提出了Wheat3DGS，这是一种利用3DGS和Segment Anything模型（SAM）自动对数百个小麦头进行精确3D实例分割和形态测量的新方法，代表了3DGS在HTFP中的首次应用。我们根据高分辨率激光扫描数据验证了小麦头提取的准确性，获得了长度、宽度和体积的平均绝对百分比误差分别为15.1%、18.3%和40.2%。我们提供了与基于NeRF的方法和传统多视图立体声（MVS）的额外比较，展示了卓越的结果。我们的方法能够大规模快速、无损地测量与产量相关的关键性状，这对加快作物育种和提高我们对小麦发育的理解具有重要意义。 et.al.|[2504.06978](http://arxiv.org/abs/2504.06978)|null|
 |**2025-04-09**|**S-EO: A Large-Scale Dataset for Geometry-Aware Shadow Detection in Remote Sensing Applications**|我们介绍S-EO数据集：一个大规模、高分辨率的数据集，旨在推进几何感知阴影检测。我们的数据集来自不同的公共领域来源，包括挑战数据集和美国地质调查局等政府提供商，包括美国各地的702个地理参考图块，每个图块覆盖500x500米。每个图块包括多日期、多角度WorldView-3泛色RGB图像、全色图像和从激光雷达扫描获得的该地区的地面实况DSM。对于每张图像，我们提供了一个基于几何形状和太阳位置的阴影掩模、一个基于NDVI指数的植被掩模和一个捆绑调整的RPC模型。S-EO数据集拥有约20000张图像，为遥感图像中的阴影检测及其在3D重建中的应用建立了一个新的公共资源。为了证明数据集的影响，我们训练和评估了一个阴影探测器，展示了它的泛化能力，甚至是对航空图像的泛化能力。最后，我们扩展了EO-NeRF——一种最先进的卫星图像NeRF方法——以利用我们的阴影预测来改进3D重建。 et.al.|[2504.06920](http://arxiv.org/abs/2504.06920)|null|
 
-<p align=right>(<a href=#updated-on-20250414>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250415>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-04-11**|**Training-free Guidance in Text-to-Video Generation via Multimodal Planning and Structured Noise Initialization**|文本到视频（T2V）扩散模型的最新进展显著提高了生成视频的视觉质量。然而，即使是最近的T2V模型也发现很难准确地遵循文本描述，特别是当提示需要精确控制空间布局或对象轨迹时。最近的一项研究使用了T2V模型的布局指导，这些模型需要在推理过程中对注意力图进行微调或迭代操作。这大大增加了内存需求，使得很难采用大型T2V模型作为骨干。为了解决这个问题，我们引入了视频MSG，这是一种基于多模态规划和结构化噪声初始化的T2V生成无需训练的引导方法。视频MSG由三个步骤组成，在前两个步骤中，视频MSG创建视频草图，这是最终视频的精细时空计划，以草稿视频帧的形式指定背景、前景和对象轨迹。在最后一步中，Video MSG通过噪声反演和去噪，使用Video Sketch引导下游T2V扩散模型。值得注意的是，在推理过程中，视频MSG不需要进行微调或注意力操纵，也不需要额外的记忆，这使得采用大型T2V模型变得更加容易。Video MSG在流行的T2V生成基准（T2VCompBench和VBench）上展示了其在增强多个T2V主干（VideoCrafter2和CogVideoX-5B）的文本对齐方面的有效性。我们提供了关于噪声反转率、不同背景生成器、背景对象检测和前景对象分割的全面消融研究。 et.al.|[2504.08641](http://arxiv.org/abs/2504.08641)|null|
 |**2025-04-11**|**Latent Diffusion Autoencoders: Toward Efficient and Meaningful Unsupervised Representation Learning in Medical Imaging**|本研究提出了潜在扩散自动编码器（LDAE），这是一种基于编码器-解码器扩散的新型框架，用于医学成像中高效和有意义的无监督学习，重点研究阿尔茨海默病（AD），使用ADNI数据库中的脑MR作为案例研究。与在图像空间中操作的传统扩散自编码器不同，LDAE在压缩的潜在表示中应用扩散过程，提高了计算效率，使3D医学成像表示学习易于处理。为了验证所提出的方法，我们探索了两个关键假设：（i）LDAE有效地捕获了与AD和衰老相关的3D大脑MR上有意义的语义表示，以及（ii）LDAE在计算效率高的同时实现了高质量的图像生成和重建。实验结果支持这两个假设：（i）线性探针评估对AD（ROC-AUC:90%，ACC:84%）和年龄预测（MAE:4.1年，RMSE:5.2年）具有很好的诊断性能；（ii）所学习的语义表示能够进行属性操纵，从而产生解剖学上合理的修改；（iii）语义插值实验表明，在6个月的间隔内，缺失扫描的重建能力很强，SSIM为0.969（MSE:0.0019）。即使间隔时间较长（24个月），该模型也保持了稳健的性能（SSIM>0.93，MSE<0.004），表明有能力捕捉时间进程趋势；（iv）与传统的扩散自编码器相比，LDAE显著提高了推理吞吐量（快20倍），同时也提高了重建质量。这些发现使LDAE成为可扩展医学成像应用的有前景的框架，有可能成为医学图像分析的基础模型。代码可在https://github.com/GabrieleLozupone/LDAE et.al.|[2504.08635](http://arxiv.org/abs/2504.08635)|**[link](https://github.com/GabrieleLozupone/LDAE)**|
 
-<p align=right>(<a href=#updated-on-20250414>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250415>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-03-25**|**Thin-Shell-SfT: Fine-Grained Monocular Non-rigid 3D Surface Tracking with Neural Deformation Fields**|从单目RGB视频中重建高度可变形的表面（如布料）是一个具有挑战性的问题，没有任何解决方案可以提供一致和准确的细粒度表面细节恢复。为了解释环境的病态性，现有的方法使用具有统计、神经或物理先验的变形模型。它们还主要依赖于非自适应离散曲面表示（例如多边形网格），逐帧优化导致误差传播，并受到基于网格的可微渲染器梯度差的影响。因此，织物褶皱等精细表面细节往往无法以所需的精度恢复。针对这些局限性，我们提出了ThinShell SfT，这是一种用于非刚性3D跟踪的新方法，将表面表示为隐式和连续的时空神经场。我们采用基于基尔霍夫-洛夫模型的连续薄壳物理先验进行空间正则化，这与早期作品的离散化替代方案形成了鲜明对比。最后，我们利用3D高斯溅射将表面可微分地渲染到图像空间中，并根据合成原理分析优化变形。我们的薄壳SfT在定性和定量上都优于先前的工作，这要归功于我们的连续表面公式以及专门定制的模拟先验和表面诱导的3D高斯。请访问我们的项目页面https://4dqv.mpiinf.mpg.de/ThinShellSfT. et.al.|[2503.19976](http://arxiv.org/abs/2503.19976)|null|
 |**2025-03-25**|**Decoupled Dynamics Framework with Neural Fields for 3D Spatio-temporal Prediction of Vehicle Collisions**|本研究提出了一种神经框架，通过独立建模全局刚体运动和局部结构变形来预测3D车辆碰撞动力学。与直接预测绝对位移的方法不同，这种方法明确地将车辆的整体平移和旋转与其结构变形分开。两个专门的网络构成了该框架的核心：一个基于四元数的刚性网络用于刚性运动，一个基于坐标的变形网络用于局部变形。通过独立处理根本不同的物理现象，所提出的架构实现了准确的预测，而不需要对每个组件进行单独的监督。该模型仅在10%的可用模拟数据上进行训练，其性能明显优于基线模型，包括单层感知器（MLP）和深度算子网络（DeepONet），预测误差降低了83%。广泛的验证表明，它对训练范围外的碰撞条件具有很强的泛化能力，即使在涉及极端速度和大冲击角度的严重冲击下，也能准确预测响应。此外，该框架成功地从低分辨率输入重建了高分辨率变形细节，而无需增加计算工作量。因此，所提出的方法为在复杂的碰撞场景中快速可靠地评估车辆安全提供了一种有效、计算高效的方法，大大减少了所需的模拟数据和时间，同时保持了预测的保真度。 et.al.|[2503.19712](http://arxiv.org/abs/2503.19712)|null|
 
-<p align=right>(<a href=#updated-on-20250414>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250415>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
