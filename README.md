@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.04.18
+## Updated on 2025.04.19
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-04-15**|**NormalCrafter: Learning Temporally Consistent Normals from Video Diffusion Priors**|表面法线估计是一系列计算机视觉应用的基石。尽管已经对静态图像场景进行了大量研究，但确保基于视频的正常估计中的时间一致性仍然是一个艰巨的挑战。我们提出NormalCrafter来利用视频扩散模型的固有时间先验，而不是仅仅用时间分量来增强现有的方法。为了确保跨序列的高保真正态估计，我们提出了语义特征正则化（SFR），它将扩散特征与语义线索对齐，鼓励模型专注于场景的内在语义。此外，我们引入了一种两阶段训练协议，该协议利用潜在和像素空间学习来保持空间精度，同时保持长时间上下文。广泛的评估证明了我们的方法的有效性，展示了从不同视频中生成具有复杂细节的时间一致的正常序列的卓越性能。 et.al.|[2504.11427](http://arxiv.org/abs/2504.11427)|null|
 |**2025-04-15**|**VideoPanda: Video Panoramic Diffusion with Multi-view Attention**|高分辨率全景视频内容对于虚拟现实中的沉浸式体验至关重要，但收集起来并不容易，因为它需要专门的设备和复杂的相机设置。在这项工作中，我们介绍了VideoPanda，这是一种基于文本或单视图视频数据合成360度视频的新方法。VideoPanda利用多视图注意力层来增强视频扩散模型，使其能够生成一致的多视图视频，这些视频可以组合成沉浸式全景内容。VideoPanda使用两种条件联合训练：纯文本和单视图视频，并支持长视频的自回归生成。为了克服多视图视频生成的计算负担，我们随机对训练过程中使用的持续时间和相机视图进行子采样，并表明该模型能够优雅地推广到在推理过程中生成更多帧。对真实世界和合成视频数据集的广泛评估表明，与现有方法相比，VideoPanda在所有输入条件下生成了更逼真、更连贯的360度全景图。访问项目网站https://research-staging.nvidia.com/labs/toronto-ai/VideoPanda/为了获得结果。 et.al.|[2504.11389](http://arxiv.org/abs/2504.11389)|null|
 
-<p align=right>(<a href=#updated-on-20250418>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250419>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-04-13**|**DropoutGS: Dropping Out Gaussians for Better Sparse-view Rendering**|尽管3D高斯散斑（3DGS）在新颖的视图合成中显示出有前景的结果，但其性能会随着稀疏输入而急剧下降，并产生不希望的伪影。随着训练视图数量的减少，新的视图合成任务会退化为一个高度不确定的问题，导致现有方法存在臭名昭著的过拟合问题。有趣的是，我们观察到高斯基元较少的模型在稀疏输入下表现出较少的过拟合。受这一观察的启发，我们提出了一种随机丢弃正则化（RDR）来利用低复杂度模型的优点来缓解过拟合。此外，为了弥补这些模型缺乏高频细节的问题，开发了一种边缘引导的分割策略（ESS）。通过这两种技术，我们的方法（称为DropoutGS）提供了一种简单而有效的插件方法来提高现有3DGS方法的泛化性能。广泛的实验表明，我们的DropoutGS在包括Blender、LLFF和DTU在内的基准数据集的稀疏视图下产生了最先进的性能。项目页面位于：https://xuyx55.github.io/DropoutGS/. et.al.|[2504.09491](http://arxiv.org/abs/2504.09491)|null|
 |**2025-04-15**|**BlockGaussian: Efficient Large-Scale Scene Novel View Synthesis via Adaptive Block-Based Gaussian Splatting**|3D高斯散斑（3DGS）的最新进展在新的视图合成任务中显示出巨大的潜力。分而治之范式实现了大规模场景重建，但在场景分割、优化和合并过程中仍然存在重大挑战。本文介绍了BlockGaussian，这是一种新的框架，结合了内容感知场景分割策略和可见性感知块优化，以实现高效、高质量的大规模场景重建。具体来说，我们的方法考虑了不同区域之间的内容复杂度变化，并在场景分割过程中平衡了计算负载，从而实现了高效的场景重建。为了解决独立块优化中的监督不匹配问题，我们在单个块优化中引入了辅助点来对齐地面真实监督，从而提高了重建质量。此外，我们提出了一种伪视图几何约束，有效地减轻了块合并过程中空域浮动导致的渲染质量下降。大规模场景上的大量实验表明，我们的方法在重建效率和渲染质量方面都达到了最先进的性能，优化速度提高了5倍，在多个基准测试中平均PSNR提高了1.21dB。值得注意的是，BlockGaussian显著降低了计算要求，可以在单个24GB VRAM设备上进行大规模场景重建。项目页面可在https://github.com/SunshineWYC/BlockGaussian et.al.|[2504.09048](http://arxiv.org/abs/2504.09048)|null|
 
-<p align=right>(<a href=#updated-on-20250418>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250419>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-04-16**|**Mind2Matter: Creating 3D Models from EEG Signals**|从脑信号重建三维物体在脑机接口（BCI）研究中受到了广泛关注。由于其出色的空间分辨率，目前的研究主要利用功能性磁共振成像（fMRI）进行3D重建任务。然而，fMRI的临床应用受到其高昂成本和无法支持实时操作的限制。相比之下，脑电图（EEG）作为一种经济实惠、非侵入性和移动的实时脑机交互系统解决方案，具有明显的优势。尽管深度学习的最新进展使神经数据图像生成取得了显著进展，但将EEG信号解码为结构化的3D表示在很大程度上仍未得到探索。在这篇论文中，我们提出了一种新的框架，通过利用神经解码技术和生成模型将EEG记录转换为3D对象重建。我们的方法包括训练EEG编码器以提取时空视觉特征，微调大型语言模型以将这些特征解释为描述性多模态输出，并利用具有布局引导控制的生成性3D高斯来合成最终的3D结构。实验表明，我们的模型捕捉到了显著的几何和语义特征，为脑机接口（BCI）、虚拟现实和神经假体的应用铺平了道路。我们的代码可以在https://github.com/sddwwww/Mind2Matter. et.al.|[2504.11936](http://arxiv.org/abs/2504.11936)|null|
 |**2025-04-15**|**Deep Learning-based Bathymetry Retrieval without In-situ Depths using Remote Sensing Imagery and SfM-MVS DSMs with Data Gaps**|准确、详细和高频的测深对于面临强烈气候和人为压力的浅海底区域至关重要。目前利用机载或卫星光学图像进行测深的方法主要依赖于具有折射校正的SfM MVS或光谱衍生测深（SDB）。然而，SDB方法通常需要大量的人工实地考察或昂贵的参考数据，而SfM MVS方法即使在折射校正后也面临着挑战。这些包括具有均匀视觉纹理的环境中的深度数据间隙和噪声，这阻碍了海底准确和完整的数字表面模型（DSM）的创建。为了应对这些挑战，这项工作引入了一种方法，该方法将SfM MVS方法的高保真3D重建能力与最先进的折射校正技术相结合，以及一种新的基于深度学习的测深预测方法的光谱分析能力。这种集成实现了一种协同方法，其中使用具有数据差距的SfM MVS衍生的DSM作为训练数据来生成完整的测深图。在此背景下，我们提出了Swin BathyUNet，它将U-Net与Swin Transformer的自我关注层和专门为SDB量身定制的交叉关注机制相结合。Swin BathyUNet旨在通过捕获长距离空间关系来提高测深精度，也可以作为具有各种训练深度数据的标准SDB的独立解决方案，独立于SfM MVS输出。地中海和波罗的海两个完全不同的测试地点的实验结果通过广泛的实验证明了所提出方法的有效性，这些实验证明了预测的DSM在测深精度、细节、覆盖范围和降噪方面的改进。该代码可在以下网址获得https://github.com/pagraf/Swin-BathyUNet. et.al.|[2504.11416](http://arxiv.org/abs/2504.11416)|null|
 
-<p align=right>(<a href=#updated-on-20250418>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250419>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-04-17**|**TTRD3: Texture Transfer Residual Denoising Dual Diffusion Model for Remote Sensing Image Super-Resolution**|遥感图像超分辨率（RSIRS）从低分辨率输入重建高分辨率（HR）遥感图像，以支持细粒度地面目标解释。现有方法面临三个关键挑战：（1）难以从空间异构的遥感场景中提取多尺度特征，（2）有限的先验信息导致重建中的语义不一致，以及（3）在几何精度和视觉质量之间进行权衡。为了解决这些问题，我们提出了纹理转移残差去噪双扩散模型（TTRD3），该模型有三个创新：第一，采用并行异构卷积核进行多尺度特征提取的多尺度特征聚合块（MFAB）。其次，稀疏纹理传输引导（STTG）模块，从相似场景的参考图像传输HR纹理先验。第三，残差去噪双扩散模型（RDDM）框架结合了用于确定性重建的残差扩散和用于不同生成的噪声扩散。多源遥感数据集的实验表明，TTRD3优于最先进的方法，与性能最佳的基线相比，LPIPS提高了1.43%，FID提高了3.67%。代码/型号：https://github.com/LED-666/TTRD3. et.al.|[2504.13026](http://arxiv.org/abs/2504.13026)|null|
 |**2025-04-17**|**ALMAGAL IV. Morphological comparison of molecular and thermal dust emission using the histogram of oriented gradients (HOG) method**|分子线发射的研究对于揭示恒星形成区气体的运动学和物理条件至关重要。我们的目的是量化使用单个分子跃迁来推导大部分H2气体物理性质的可靠性，研究它们与冷尘整体集成分子线发射的形态相关性。在这项研究中，我们选择了H2CO、CH $_3$OH、DCN、HC$_3$N、CH$-3$CN、CH$_3$OCHO、SO和SiO的跃迁，并将其与ALMAGAL样品中不同空间尺度的1.38毫米尘埃连续发射进行了比较，该样品共观测到1013个目标，涵盖了高质量恒星形成过程的所有演化阶段和不同的团块碎裂条件。我们使用astroHOG工具中实现的定向梯度直方图（HOG）方法，将积分线发射的形态与1.38毫米尘埃连续发射图进行了比较。此外，我们计算了斯皮尔曼相关系数，并将其与我们的天文HOG结果进行了比较。只有H$_2$CO、CH$_3$OH和SO在空间尺度上显示出与扩散连续发射相当的发射。然而，从HOG方法来看，这些物种的排放量与连续体的中值相关性仅为24-29%。与密集片段相比，这些分子物种的相关值仍然较低。另一方面，DCN、HC$_3$N、CH$_3$CN和CH$_3$ OCHO与密集的粉尘碎片显示出良好的相关性，超过60%。SiO的相关性最差，无论是与扩展连续发射还是与紧凑源。通过比较HOG方法和Spearman相关系数的结果，HOG方法在估计发射形态的相似性水平方面比基于强度的系数给出了更可靠的结果。 et.al.|[2504.12963](http://arxiv.org/abs/2504.12963)|null|
 
-<p align=right>(<a href=#updated-on-20250418>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250419>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-03-29**|**NeuralGS: Bridging Neural Fields and 3D Gaussian Splatting for Compact 3D Representations**|3D高斯散点（3DGS）显示了卓越的质量和渲染速度，但有数百万的3D高斯分布和巨大的存储和传输成本。最近的3DGS压缩方法主要集中在压缩脚手架GS上，取得了令人印象深刻的性能，但增加了体素结构和复杂的编码和量化策略。在这篇论文中，我们的目标是开发一种简单而有效的方法，称为NeuralGS，它以另一种方式探索将原始3DGS压缩成紧凑的表示，而不需要体素结构和复杂的量化策略。我们的观察是，像NeRF这样的神经场可以用多层感知器（MLP）神经网络表示复杂的3D场景，只需要几兆字节。因此，NeuralGS有效地采用神经场表示来用MLP对3D高斯的属性进行编码，即使对于大规模场景，也只需要很小的存储空间。为了实现这一点，我们采用了一种聚类策略，并根据高斯的重要性得分作为拟合权重，为每个聚类用不同的微小MLP对高斯进行拟合。我们在多个数据集上进行实验，在不损害视觉质量的情况下实现了平均模型大小减少45倍。我们的方法在原始3DGS上的压缩性能与基于Scaffold GS的专用压缩方法相当，这表明了用神经场直接压缩原始3DGS的巨大潜力。 et.al.|[2503.23162](http://arxiv.org/abs/2503.23162)|null|
 |**2025-03-27**|**Renormalization group analysis of noisy neural field**|大脑中的神经元在个体特性和与其他神经元的连接方面表现出极大的多样性。为了深入了解神经元多样性如何在大尺度上促进大脑动力学和功能，我们借鉴了复制方法的框架，该框架已成功应用于平衡统计力学中一大类具有淬灭噪声的问题。我们分析了Wilson Cowan模型的两个线性化版本，其随机系数在空间上是相关的。特别是：（A）神经元本身的性质是异质的，（B）它们的连接是各向异性的。在这两个模型中，淬火随机性的平均会产生额外的非线性。这些非线性在威尔逊重整化群的框架内进行了分析。我们发现，对于模型A，如果噪声的空间相关性随距离衰减，指数小于-2 $，则在大的空间尺度上，噪声的影响消失了。相比之下，对于模型B，只有当空间相关性以小于-1$ 的指数衰减时，噪声对神经元连接的影响才会消失。我们的计算还表明，在某些条件下，噪声的存在可能会在大尺度上产生类似行波的行为，尽管这一结果在微扰理论的高阶下是否仍然有效还有待观察。 et.al.|[2503.21605](http://arxiv.org/abs/2503.21605)|null|
 
-<p align=right>(<a href=#updated-on-20250418>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250419>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
