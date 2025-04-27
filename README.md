@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.04.26
+## Updated on 2025.04.27
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-04-22**|**Efficient Temporal Consistency in Diffusion-Based Video Editing with Adaptor Modules: A Theoretical Framework**|基于适配器的方法通常用于以最小的额外复杂性提高模型性能，特别是在需要帧间一致性的视频编辑任务中。通过将小的、可学习的模块插入预训练的扩散模型中，这些适配器可以在不进行大量再训练的情况下保持时间连贯性。将快速学习与共享和帧特定令牌相结合的方法在以低训练成本保持帧间的连续性方面特别有效。在这项工作中，我们希望为适配器提供一个通用的理论框架，以便在时间一致性丢失的情况下，在基于DDIM的模型中保持帧一致性。首先，我们证明了时间一致性目标在有界特征范数下是可微的，并在其梯度上建立了Lipschitz界。其次，我们证明，如果学习率在适当的范围内，在这个目标上的梯度下降会单调地减少损失并收敛到局部最小值。最后，我们分析了DDIM反演过程中模块的稳定性，表明相关误差保持可控。这些理论发现将加强基于扩散的视频编辑方法的可靠性，这些方法依赖于适配器策略，并为视频生成任务提供理论见解。 et.al.|[2504.16016](http://arxiv.org/abs/2504.16016)|null|
 |**2025-04-22**|**Reasoning Physical Video Generation with Diffusion Timestep Tokens via Reinforcement Learning**|尽管最近在视频生成方面取得了进展，但制作符合物理定律的视频仍然是一个重大挑战。传统的基于扩散的方法由于依赖于数据驱动的近似值，很难推断出看不见的物理条件（如速度）。为了解决这个问题，我们建议将符号推理和强化学习相结合，以增强视频生成中的物理一致性。我们首先介绍扩散时间步标记器（DDT），它通过恢复扩散过程中丢失的视觉属性来学习离散的递归视觉标记。递归视觉标记允许通过大型语言模型进行符号推理。在此基础上，我们提出了Phys AR框架，该框架分为两个阶段：第一阶段使用监督微调来传递符号知识，第二阶段应用强化学习通过基于物理条件的奖励函数来优化模型的推理能力。我们的方法允许模型动态调整和改进生成视频的物理属性，确保遵守物理定律。实验结果表明，PhysAR可以生成物理一致的视频。 et.al.|[2504.15932](http://arxiv.org/abs/2504.15932)|null|
 
-<p align=right>(<a href=#updated-on-20250426>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250427>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-04-21**|**SLAM&Render: A Benchmark for the Intersection Between Neural Rendering, Gaussian Splatting and SLAM**|最初为新颖的视图合成和场景渲染开发的模型和方法，如神经辐射场（NeRF）和高斯散斑，正越来越多地被用作同步定位和映射（SLAM）中的表示。然而，现有的数据集未能包括这两个领域的具体挑战，例如SLAM中的多模态和顺序性，或神经渲染中跨视点和光照条件的泛化。为了弥合这一差距，我们引入了SLAM&Render，这是一个新的数据集，旨在为SLAM和新视图渲染之间的交叉点方法进行基准测试。它由40个序列组成，具有同步的RGB、深度、IMU、机器人运动学数据和地面真实姿态流。通过发布机器人运动学数据，该数据集还可以评估应用于机器人操纵器的新型SLAM策略。数据集序列涵盖了五种不同的设置，在四种不同的光照条件下展示消费者和工业对象，每个场景都有单独的训练和测试轨迹，以及对象重新排列。我们的实验结果是通过文献中的几个基线获得的，验证了SLAM和Render是这一新兴研究领域的相关基准。 et.al.|[2504.13713](http://arxiv.org/abs/2504.13713)|**[link](https://github.com/samuel-cerezo/SLAM-Render)**|
 |**2025-04-17**|**Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation**|从远程操作演示中学习到的Visuomotor政策面临着数据收集时间长、成本高、数据多样性有限等挑战。现有的方法通过增强RGB空间中的图像观测或基于物理模拟器采用Real到Sim到Real的管道来解决这些问题。然而，前者仅限于二维数据增强，而后者则因不准确的几何重建而遭受不精确的物理模拟。本文介绍了RoboSplat，这是一种通过直接操纵3D高斯分布生成多样化、视觉逼真演示的新方法。具体来说，我们通过3D高斯散布（3DGS）重建场景，直接编辑重建的场景，并使用五种技术在六种类型的泛化中增强数据：不同对象类型的3D高斯替换、场景外观和机器人实施例；不同物体姿态的等变变换；针对各种照明条件的视觉属性编辑；用于新相机视角的新颖视图合成；以及用于不同对象类型的3D内容生成。全面的现实世界实验表明，RoboSplat在各种干扰下显著提高了视觉运动策略的泛化能力。值得注意的是，虽然经过数百次真实世界演示和额外2D数据增强训练的策略的平均成功率为57.2%，但RoboSplat在现实世界中的六种泛化类型的单次设置中达到了87.8%。 et.al.|[2504.13175](http://arxiv.org/abs/2504.13175)|null|
 
-<p align=right>(<a href=#updated-on-20250426>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250427>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-04-20**|**Back on Track: Bundle Adjustment for Dynamic Scene Reconstruction**|传统的SLAM系统依赖于捆绑调整，难以应对休闲视频中常见的高度动态场景。这样的视频纠缠了动态元素的运动，破坏了传统系统所需的静态环境的假设。现有技术要么过滤掉动态元素，要么独立地对它们的运动进行建模。然而，前者通常会导致重建不完整，而后者可能会导致运动估计不一致。这项工作采用了一种新颖的方法，利用3D点跟踪器将相机引起的运动与观察到的动态物体的运动分开。通过仅考虑相机引起的分量，束调整可以在所有场景元素上可靠地运行。我们通过基于比例图的轻量级后处理进一步确保视频帧的深度一致性。我们的框架将传统SLAM的核心——捆绑调整——与强大的基于学习的3D跟踪器前端相结合。我们的统一框架BA-Track集成了运动分解、束调整和深度细化，可以准确地跟踪相机运动，并产生时间连贯和尺度一致的密集重建，同时容纳静态和动态元素。我们在具有挑战性的数据集上的实验表明，相机姿态估计和3D重建精度有了显著提高。 et.al.|[2504.14516](http://arxiv.org/abs/2504.14516)|null|
 |**2025-04-18**|**Mono3R: Exploiting Monocular Cues for Geometric 3D Reconstruction**|数据驱动的几何多视图3D重建基础模型（如DUSt3R）的最新进展在各种3D视觉任务中表现出了显著的性能，这得益于大规模、高质量3D数据集的发布。然而，正如我们所观察到的，受其基于匹配的原理的限制，现有模型的重建质量在匹配线索有限的具有挑战性的区域中会显著下降，特别是在弱纹理区域和低光照条件下。为了减轻这些局限性，我们建议利用单目几何估计的固有鲁棒性来弥补基于匹配的方法的固有缺点。具体来说，我们引入了一个单目引导的细化模块，该模块将单目几何先验集成到多视图重建框架中。这种集成大大增强了多视图重建系统的鲁棒性，从而实现了高质量的前馈重建。跨多个基准的综合实验表明，我们的方法在多视图相机姿态估计和点云精度方面都取得了实质性的改进。 et.al.|[2504.13419](http://arxiv.org/abs/2504.13419)|null|
 
-<p align=right>(<a href=#updated-on-20250426>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250427>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-04-24**|**Beyond Labels: Zero-Shot Diabetic Foot Ulcer Wound Segmentation with Self-attention Diffusion Models and the Potential for Text-Guided Customization**|糖尿病足溃疡（DFU）对医疗保健构成了重大挑战，需要精确有效的伤口评估来提高患者的治疗效果。本研究介绍了注意力扩散零样本无监督系统（ADZUS），这是一种新的文本引导扩散模型，可以在不依赖标记训练数据的情况下进行伤口分割。与需要大量注释的传统深度学习模型不同，ADZUS利用零样本学习基于描述性提示动态调整分割，在临床应用中提供增强的灵活性和适应性。实验评估表明，ADZUS超越了传统和最先进的分割模型，在慢性伤口数据集上实现了86.68%的IoU和94.69%的最高精度，优于FUSegNet等监督方法。对定制的DFU数据集的进一步验证增强了其稳健性，ADZUS的DSC中值为75%，大大超过了FUSegNet的45%。该模型的文本引导分割功能实现了分割输出的实时定制，允许基于临床描述对伤口特征进行有针对性的分析。尽管其性能具有竞争力，但基于扩散的推理的计算成本和潜在的微调需求仍然是未来需要改进的领域。ADZUS代表了伤口分割的变革性一步，为医学成像提供了一种可扩展、高效和适应性强的人工智能驱动解决方案。 et.al.|[2504.17628](http://arxiv.org/abs/2504.17628)|null|
 |**2025-04-24**|**TarDiff: Target-Oriented Diffusion Guidance for Synthetic Electronic Health Record Time Series Generation**|合成电子健康记录（EHR）时间序列生成对于推进临床机器学习模型至关重要，因为它通过提供更多的训练数据来帮助解决数据稀缺问题。然而，大多数现有方法主要侧重于复制真实世界数据的统计分布和时间依赖性。我们认为，仅对观测数据的保真度并不能保证更好的模型性能，因为常见模式可能占主导地位，限制了罕见但重要条件的表示。这突显了生成合成样本以提高特定临床模型性能以实现其目标结果的必要性。为了解决这个问题，我们提出了TarDiff，这是一种新的面向目标的扩散框架，将特定任务的影响引导集成到合成数据生成过程中。与模拟训练数据分布的传统方法不同，TarDiff通过量化合成样本对通过影响函数提高下游模型性能的预期贡献来优化合成样本。具体来说，我们测量合成样本引起的任务特定损失的减少，并将这种影响梯度嵌入到反向扩散过程中，从而将生成转向效用优化的数据。在六个公开可用的EHR数据集上进行评估后，TarDiff达到了最先进的性能，在AUPRC和AUROC中分别比现有方法高出20.4%和18.4%。我们的研究结果表明，TarDiff不仅保留了时间保真度，还提高了下游模型的性能，为医疗分析中的数据稀缺和类别不平衡提供了一个稳健的解决方案。 et.al.|[2504.17613](http://arxiv.org/abs/2504.17613)|null|
 
-<p align=right>(<a href=#updated-on-20250426>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250427>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-04-08**|**econSG: Efficient and Multi-view Consistent Open-Vocabulary 3D Semantic Gaussians**|最近关于开放词汇神经场的工作的主要重点是从VLM中提取精确的语义特征，然后将它们有效地整合到多视图一致的3D神经场表示中。然而，大多数现有的工作都是在受信任的SAM上进行的，以规范图像级CLIP，而无需进一步细化。此外，一些现有的研究通过在与3DGS语义场融合之前对2D VLM的语义特征进行降维来提高效率，这不可避免地导致了多视图不一致。在这项工作中，我们提出了使用3DGS进行开放式词汇语义分割的econSG。我们的econSG由以下部分组成：1）置信区间引导正则化（CRR），它相互细化SAM和CLIP，以获得具有完整和精确边界的精确语义特征的两全其美。2）低维上下文空间，通过融合反投影的多视图2D特征来增强3D多视图一致性，同时提高计算效率，然后直接对融合的3D特征进行降维，而不是分别对每个2D视图进行操作。与现有方法相比，我们的econSG在四个基准数据集上显示了最先进的性能。此外，我们也是所有方法中最有效的培训。 et.al.|[2504.06003](http://arxiv.org/abs/2504.06003)|null|
 |**2025-04-08**|**Meta-Continual Learning of Neural Fields**|神经场（NF）作为一种用于复杂数据表示的通用框架，已经获得了突出地位。这项工作揭示了一个新的问题设置，称为“神经场元连续学习”（MCL-NF），并引入了一种新的策略，该策略采用模块化架构与基于优化的元学习相结合。我们的策略侧重于克服现有神经场连续学习方法的局限性，如灾难性遗忘和缓慢收敛，实现了高质量的重建，显著提高了学习速度。我们进一步引入了神经辐射场的Fisher信息最大化损失（FIM-NeRF），它在样本级别最大化信息增益以增强学习泛化，并证明了收敛保证和泛化界限。我们在六个不同的数据集上对图像、音频、视频重建和视图合成任务进行了广泛的评估，证明了我们的方法在重建质量和速度方面优于现有的MCL和CL-NF方法。值得注意的是，我们的方法在降低参数要求的情况下，实现了神经场对城市级NeRF渲染的快速适应。 et.al.|[2504.05806](http://arxiv.org/abs/2504.05806)|null|
 
-<p align=right>(<a href=#updated-on-20250426>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250427>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
