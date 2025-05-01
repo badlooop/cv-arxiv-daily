@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.04.30
+## Updated on 2025.05.01
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-04-24**|**Dynamic Camera Poses and Where to Find Them**|在动态互联网视频上按比例注释相机姿势对于推进逼真视频生成和模拟等领域至关重要。然而，收集这样的数据集是困难的，因为大多数互联网视频都不适合姿势估计。此外，即使对于最先进的方法来说，注释动态互联网视频也带来了重大挑战。本文介绍了DynPose-100K，这是一个用相机姿态注释的动态互联网视频的大规模数据集。我们的收集管道使用一组精心组合的任务特定和通用模型来解决过滤问题。对于姿态估计，我们结合了点跟踪、动态掩蔽和运动结构的最新技术，以实现对最先进方法的改进。我们的分析和实验表明，DynPose-100K在几个关键属性上既大规模又多样化，为各种下游应用的进步开辟了道路。 et.al.|[2504.17788](http://arxiv.org/abs/2504.17788)|null|
 |**2025-04-24**|**MV-Crafter: An Intelligent System for Music-guided Video Generation**|音乐视频作为一种流行的多媒体娱乐形式，为观众提供引人入胜的视听体验，在歌手和粉丝中广受欢迎。创作者可以通过视觉元素自然地表达他们对音乐的诠释。然而，音乐视频的创作过程需要熟练掌握脚本设计、视频拍摄和音乐视频同步，这对非专业人士来说是一个重大挑战。之前的工作设计了自动音乐视频生成框架。然而，它们的输入复杂，输出质量差。作为回应，我们推出了MV Crafter，这是一个能够制作具有同步音乐视频节奏和风格的高质量音乐视频的系统。我们的方法涉及三个模拟人类创作过程的技术模块：脚本生成模块、视频生成模块和音乐视频同步模块。MV Crafter利用大型语言模型生成考虑音乐语义的脚本。为了解决短视频片段与不同长度音乐同步的挑战，我们提出了一种动态节拍匹配算法和视觉包络诱导扭曲方法，以确保精确、单调的音乐视频同步。此外，我们设计了一个用户友好的界面，通过直观的编辑功能简化了创建过程。大量实验表明，MV Crafter为提高生成的音乐视频的质量提供了一种有效的解决方案。 et.al.|[2504.17267](http://arxiv.org/abs/2504.17267)|null|
 
-<p align=right>(<a href=#updated-on-20250430>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250501>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-04-24**|**CasualHDRSplat: Robust High Dynamic Range 3D Gaussian Splatting from Casually Captured Videos**|最近，神经辐射场（NeRF）和3D高斯散斑（3DGS）等多视图图像的照片级逼真新视图合成因其卓越的性能而受到广泛关注。然而，大多数作品依赖于低动态范围（LDR）图像，这限制了更丰富场景细节的捕捉。一些先前的工作侧重于高动态范围（HDR）场景重建，通常需要在曝光时间内在固定的相机位置捕获具有不同曝光时间的多视图清晰图像，这在实践中既耗时又具有挑战性。为了获得更灵活的数据采集，我们提出了一种单阶段方法：\textbf{CasualHDRSplat}，即使在存在严重运动模糊和未知曝光时间变化的情况下，也能从随机捕获的视频中轻松、稳健地重建3D HDR场景，并启用自动曝光。\textbf{CasualHDRSplat}包含一个统一的可微分物理成像模型，该模型首先对成像过程应用连续时间轨迹约束，以便我们可以共同优化曝光时间、相机响应函数（CRF）、相机姿态和清晰的3D HDR场景。大量实验表明，我们的方法在鲁棒性和渲染质量方面优于现有方法。我们的源代码将在https://github.com/WU-CVGL/CasualHDRSplat et.al.|[2504.17728](http://arxiv.org/abs/2504.17728)|null|
 |**2025-04-24**|**Perspective-Aware Reasoning in Vision-Language Models via Mental Imagery Simulation**|我们提出了一种通过心理意象模拟在视觉语言模型（VLMs）中进行透视感知推理的框架。视角获取，即从另一个角度感知环境或情况的能力，是人类视觉理解的关键基准，对于与自主代理的环境交互和协作至关重要。尽管VLM在空间推理方面取得了进步，但最近的研究表明，现代VLM严重缺乏透视感知推理能力，并表现出强烈的自我中心解释倾向。为了弥合VLM和人类感知之间的差距，我们关注心理意象的作用，即人类通过抽象的表征来感知世界，从而促进视角的转变。受此启发，我们提出了一个名为抽象透视变化（APC）的透视感知推理框架，该框架有效地利用视觉基础模型，如对象检测、分割和方向估计，来构建场景抽象并实现透视变换。与各种VLM相比，我们在合成和真实图像基准上的实验表明，我们的框架在透视感知推理方面有了显著改进，进一步优于微调的空间推理模型和新的基于视图合成的方法。 et.al.|[2504.17207](http://arxiv.org/abs/2504.17207)|null|
 
-<p align=right>(<a href=#updated-on-20250430>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250501>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-04-25**|**PerfCam: Digital Twinning for Production Lines Using 3D Gaussian Splatting and Vision Models**|我们介绍了PerfCam，这是一个开源的概念验证（PoC）数字孪生框架，它将相机和感官数据与3D高斯散斑和计算机视觉模型相结合，用于工业生产线中的数字孪生、对象跟踪和关键性能指标（KPI）提取。通过利用3D重建和卷积神经网络（CNN），PerfCam提供了一种半自动的对象跟踪和空间映射方法，使数字孪生能够捕获实时KPI，如可用性、性能、整体设备效率（OEE）和生产线中传送带的速度。我们通过在制药行业现实测试生产线上的实际部署验证了PerfCam的有效性，并提供了一个公开发布的数据集，以支持该领域的进一步研究和开发。结果表明，PerfCam能够通过其精确的数字孪生功能提供可操作的见解，突显了其作为在智能制造环境中开发可用数字孪生和提取运营分析的有效工具的价值。 et.al.|[2504.18165](http://arxiv.org/abs/2504.18165)|null|
 |**2025-04-24**|**Range Image-Based Implicit Neural Compression for LiDAR Point Clouds**|本文提出了一种高效压缩光探测和测距（LiDAR）点云的新方案，实现了高精度的3D场景档案，这些档案为详细了解相应的3D场景铺平了道路。我们专注于2D距离图像~（RI）作为一种轻量级的格式，用于表示3D LiDAR观测结果。尽管传统的图像压缩技术可以提高RI的压缩效率，但由于比特精度的差异以及自然图像和RI之间不同的像素值分布特征，它们的实际性能预计会受到限制。我们提出了一种新的基于隐式神经表示的RI压缩方法，可以有效地处理浮点值像素。所提出的方法将RI分为深度和掩模图像，并分别使用具有模型修剪和量化的逐块和逐像素INR架构对其进行压缩。在KITTI数据集上的实验表明，在低比特率和解码延迟下，所提出的方法在3D重建和检测质量方面优于现有的基于图像、点云、RI和INR的压缩方法。 et.al.|[2504.17229](http://arxiv.org/abs/2504.17229)|null|
 
-<p align=right>(<a href=#updated-on-20250430>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250501>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-04-29**|**On optimal error rates for strong approximation of SDEs with a Hölder continuous drift coefficient**|在本文中，我们研究了在时间点 $1$具有有界和$\alpha$-H“旧连续漂移系数和恒定扩散系数的标量随机微分方程（SDEs）解的强近似。最近，在[arXiv:1909.07961v4（2021）]中表明，对于此类SDEs，等距Euler方案在所有$p\geq 1$和所有$\alpha \In（0,1]$的驱动布朗运动$W$的评估次数方面，实现了至少$（1+\alpha）/2$的$L^p$-误差率，直到任意小的$\varepsilon$。在这篇文章中，我们证明了$\alpha \In（0,1）$的匹配下限。更确切地说，我们证明，对于每一个$\alpha \ In（0,1）$，[arXiv:1909.07961v4（2021）]中Euler方案的$L^p$-错误率$（1+\alpha）/2$通常不能通过基于固定时间点$W$有限次评估的数值方法来改善。到目前为止，这一结果在文献中只为$\alpha=1$所知。此外，我们扩展了[arXiv:2402.13732v2（2024）]的一个结果，该结果关于具有分数Sobolev正则性$\alpha\in（0,1）$的有界漂移系数和时间点处的恒定扩散系数$1$的SDE的强近似的尖锐下限误差。我们证明，对于（0,1）$中的每一个$\alpha，在[arXiv:21011.1285v2（2022）]中显示的等距Euler方案的$L^p$-错误率$（1+\alpha）/2$，在对数项之前，通常不能通过基于固定时间点W的有限次计算的数值方法来改善。这一结果从[arXiv:2402.13732v2（2024）]中得知，仅适用于$\alpha\in（1/2.1）$和$p=2$ 。为了证明这些下限，我们使用Weierstrass函数的变体作为漂移系数，并采用最近在[arXiv:2010.00915v1（2020）]中引入的噪声耦合技术。 et.al.|[2504.20728](http://arxiv.org/abs/2504.20728)|null|
 |**2025-04-29**|**Neural semi-Lagrangian method for high-dimensional advection-diffusion problems**|这项工作致力于高维平流扩散方程的数值近似。众所周知，经典方法，如有限体积法，存在维数灾难，并且它们的时间步长受到稳定性条件的约束。众所周知，半拉格朗日方法可以克服稳定性问题，而最近的基于时间离散神经网络的方法克服了维数灾难。在这项工作中，我们提出了一种新的神经半拉格朗日方法，结合了后两种方法。它依赖于将初始条件投影到有限维神经空间上，然后在每个时间步长求解涉及向后特征方程的优化问题。它特别适合在GPU上实现，因为它是完全可并行的，不需要网格。我们提供了粗略的误差估计，并展示了几个高维数值实验来评估我们方法的性能，并将其与其他神经方法进行了比较。 et.al.|[2504.20715](http://arxiv.org/abs/2504.20715)|null|
 
-<p align=right>(<a href=#updated-on-20250430>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250501>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-04-16**|**SCENT: Robust Spatiotemporal Learning for Continuous Scientific Data via Scalable Conditioned Neural Fields**|由于空间和时间依赖性之间的复杂相互作用、数据的高维度和可扩展性约束，时空学习具有挑战性。这些挑战在科学领域进一步加剧，在这些领域，数据通常是不规则分布的（例如，传感器故障的缺失值）和高容量的（例如高保真模拟），带来了额外的计算和建模困难。在本文中，我们提出了SCENT，这是一种用于可扩展和连续性知情的时空表示学习的新框架。SCENT在单一架构中统一了插值、重建和预测。SCENT建立在基于变换器的编码器-处理器-解码器骨干上，引入了可学习的查询来增强泛化能力，并引入了查询式交叉关注机制来有效捕获多尺度依赖关系。为了确保数据大小和模型复杂性的可扩展性，我们引入了稀疏注意力机制，实现了灵活的输出表示和任意分辨率的高效评估。我们通过广泛的模拟和真实世界的实验来验证SCENT，在实现卓越可扩展性的同时，在多个具有挑战性的任务中展示了最先进的性能。 et.al.|[2504.12262](http://arxiv.org/abs/2504.12262)|null|
 |**2025-04-14**|**DNF-Avatar: Distilling Neural Fields for Real-time Animatable Avatar Relighting**|从单眼视频中创建可重现和可动画化的人类化身是一个新兴的研究课题，具有广泛的应用，例如虚拟现实、体育和视频游戏。之前的研究利用神经场和基于物理的渲染（PBR）来估计人类化身的几何形状并解开其外观属性。然而，这些方法的一个缺点是由于昂贵的蒙特卡洛射线追踪导致渲染速度较慢。为了解决这个问题，我们提出将隐式神经场（教师）的知识提取为显式的2D高斯飞溅（学生）表示，以利用高斯飞溅的快速光栅化特性。为了避免光线追踪，我们对PBR外观采用了分裂和近似。我们还提出了用于阴影计算的新型部分式环境遮挡探头。阴影预测是通过每像素只查询一次这些探测器来实现的，这为化身的实时重新照明铺平了道路。这些技术相结合，可以提供高质量的重新照明效果和逼真的阴影效果。我们的实验表明，所提出的学生模型与我们的教师模型实现了相当甚至更好的重新照明结果，同时在推理时快了370倍，达到了67 FPS的渲染速度。 et.al.|[2504.10486](http://arxiv.org/abs/2504.10486)|null|
 
-<p align=right>(<a href=#updated-on-20250430>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250501>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
