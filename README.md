@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.05.03
+## Updated on 2025.05.04
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-04-29**|**TesserAct: Learning 4D Embodied World Models**|本文提出了一种学习新的4D实体世界模型的有效方法，该模型预测了3D场景随时间的动态演变，以响应实体代理的动作，提供了空间和时间的一致性。我们建议通过RGB-DN（RGB、深度和法线）视频训练来学习4D世界模型。这不仅超越了传统的2D模型，将详细的形状、配置和时间变化纳入其预测中，而且使我们能够有效地学习具体代理的精确逆动态模型。具体来说，我们首先利用现成的模型，利用深度和正常信息扩展现有的机器人操纵视频数据集。接下来，我们在此带注释的数据集上微调视频生成模型，该模型联合预测每帧的RGB-DN（RGB、深度和法线）。然后，我们提出了一种算法，可以将生成的RGB、深度和法线视频直接转换为高质量的4D世界场景。我们的方法确保了来自具体场景的4D场景预测的时间和空间一致性，为具体环境实现了新颖的视图合成，并促进了策略学习，其性能明显优于先前基于视频的世界模型。 et.al.|[2504.20995](http://arxiv.org/abs/2504.20995)|null|
 |**2025-04-29**|**DDPS: Discrete Diffusion Posterior Sampling for Paths in Layered Graphs**|扩散模型构成了当今生成模型的一个重要类别，在尖端人工智能研究中占据了很大一部分。虽然存在许多超出图像和视频生成的扩展，但很少有这样的方法解决所生成样本中的显式约束问题。在本文中，我们研究了使用离散扩散模型在分层图（有向无环图的变体）中生成路径的问题，同时保证我们生成的样本确实是路径。我们的方法利用了一种简单而有效的路径表示，我们称之为填充邻接表矩阵（PALM）。此外，我们展示了如何有效地执行分类器引导，这有助于将采样路径引导到特定的首选边，而无需对扩散模型进行任何重新训练。我们的初步结果表明，从经验上讲，我们的方法优于没有明确考虑路径约束的替代方案。 et.al.|[2504.20754](http://arxiv.org/abs/2504.20754)|null|
 
-<p align=right>(<a href=#updated-on-20250503>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250504>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-04-24**|**iVR-GS: Inverse Volume Rendering for Explorable Visualization via Editable 3D Gaussian Splatting**|在体积可视化中，用户可以通过在传递函数（TF）中指定颜色和不透明度映射或调整照明参数来交互式地探索三维数据，从而有助于对底层结构进行有意义的解释。然而，渲染大规模卷需要强大的GPU和高速内存访问来实现实时性能。虽然现有的新颖视图合成（NVS）方法以较低的硬件要求提供了更快的渲染速度，但重建场景的可见部分是固定的，并受到预设TF设置的限制，这大大限制了用户的探索。本文介绍了一种创新的NVS方法——基于高斯飞溅的逆体绘制（iVR GS），该方法在降低绘制成本的同时，还支持交互式体探索的场景编辑。具体来说，我们组合了多个与基本TF相关的iVR GS模型，覆盖不相交的可见部分，使整个体积场景可见。每个基本模型都包含一组3D可编辑高斯分布，其中每个高斯分布都是一个支持实时场景渲染和编辑的3D空间点。我们在各种体积数据集上展示了iVR GS相对于其他NVS解决方案（Plenox、CCNeRF和base 3DGS）的卓越重建质量和可组合性。该代码可在以下网址获得https://github.com/TouKaienn/iVR-GS. et.al.|[2504.17954](http://arxiv.org/abs/2504.17954)|null|
 |**2025-04-24**|**CasualHDRSplat: Robust High Dynamic Range 3D Gaussian Splatting from Casually Captured Videos**|最近，神经辐射场（NeRF）和3D高斯散斑（3DGS）等多视图图像的照片级逼真新视图合成因其卓越的性能而受到广泛关注。然而，大多数作品依赖于低动态范围（LDR）图像，这限制了更丰富场景细节的捕捉。一些先前的工作侧重于高动态范围（HDR）场景重建，通常需要在曝光时间内在固定的相机位置捕获具有不同曝光时间的多视图清晰图像，这在实践中既耗时又具有挑战性。为了获得更灵活的数据采集，我们提出了一种单阶段方法：\textbf{CasualHDRSplat}，即使在存在严重运动模糊和未知曝光时间变化的情况下，也能从随机捕获的视频中轻松、稳健地重建3D HDR场景，并启用自动曝光。\textbf{CasualHDRSplat}包含一个统一的可微分物理成像模型，该模型首先对成像过程应用连续时间轨迹约束，以便我们可以共同优化曝光时间、相机响应函数（CRF）、相机姿态和清晰的3D HDR场景。大量实验表明，我们的方法在鲁棒性和渲染质量方面优于现有方法。我们的源代码将在https://github.com/WU-CVGL/CasualHDRSplat et.al.|[2504.17728](http://arxiv.org/abs/2504.17728)|null|
 
-<p align=right>(<a href=#updated-on-20250503>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250504>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-04-28**|**Modeling of Parallel Single-Pixel Imaging for 3D Reconstruction: New Insights and Opportunities**|智能制造和自动驾驶汽车的日益普及加剧了对复杂反射和传输条件下三维（3D）重建的需求。传统的结构光技术依赖于固有的点对点三角测量，这限制了在这些具有挑战性的场景中进行精确的3D测量。并行单像素成像（PSI）在极端条件下表现出前所未有的优越性，并已成为一种有前景的精确3D测量方法。然而，在现有的工作中，还没有一个完整的理论模型来很好地解释其潜在机制并定量表征其性能。在这项研究中，提出了PSI方法的综合理论模型，包括成像和噪声模型。所提出的成像模型描述了复杂光照下的光传输系数，阐明了使用PSI成功进行3D成像的内在机制。所开发的噪声模型定量分析了环境噪声对测量精度的影响，为指导PSI系统的误差分析提供了框架。数值模拟和实验结果验证了所提出的模型，揭示了PSI的通用性和鲁棒性。最后，强调了潜在的研究方向，以指导和激励未来的研究。建立的理论模型为PSI奠定了坚实的基础，并为未来在更苛刻的3D重建任务中的应用带来了新的见解和机遇。 et.al.|[2504.19923](http://arxiv.org/abs/2504.19923)|null|
 |**2025-04-28**|**Boosting 3D Liver Shape Datasets with Diffusion Models and Implicit Neural Representations**|虽然开放式3D医学形状数据集的可用性正在增加，为研究界带来了实质性的好处，但我们发现，不幸的是，其中许多数据集都是混乱的，并且包含伪影。这些问题限制了鲁棒模型的开发和训练，特别是对于精确的3D重建任务。在这篇论文中，我们研究了现有3D肝脏形状数据集的现状，并提出了一种使用扩散模型结合隐式神经表示（INR）来增强和扩展现有数据集的解决方案。我们的方法利用扩散模型的生成能力来创建逼真、多样化的3D肝脏形状，捕捉广泛的解剖变化，并解决数据稀缺的问题。实验结果表明，我们的方法增强了数据集的多样性，提供了一种可扩展的解决方案，以提高医学应用中三维肝脏重建和生成的准确性和可靠性。最后，我们建议扩散模型也可以应用于3D医学成像中的其他下游任务。 et.al.|[2504.19402](http://arxiv.org/abs/2504.19402)|null|
 
-<p align=right>(<a href=#updated-on-20250503>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250504>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-05-01**|**Leveraging Pretrained Diffusion Models for Zero-Shot Part Assembly**|3D零件装配旨在了解零件关系并预测其6-DoF姿态，以构建逼真的3D形状，满足对自主装配日益增长的需求，这对机器人至关重要。现有的方法主要通过在监督下训练神经网络来估计每个部分的变换，这需要大量的手动标记数据。然而，数据收集的高成本以及现实世界形状和零件的巨大可变性使得传统方法对于大规模应用来说不切实际。在本文中，我们首先提出了一种零样本零件装配方法，该方法利用预先训练的点云扩散模型作为装配过程中的鉴别器，指导零件操作以形成逼真的形状。具体而言，我们从理论上证明，利用零样本零件装配的扩散模型可以转化为迭代最近点（ICP）过程。然后，我们提出了一种新的推开策略来解决重叠部分，从而进一步增强了该方法的鲁棒性。为了验证我们的工作，我们对几种强基线方法进行了广泛的实验和定量比较，证明了所提出方法的有效性，甚至超过了监督学习方法。该代码已于发布https://github.com/Ruiyuan-Zhang/Zero-Shot-Assembly. et.al.|[2505.00426](http://arxiv.org/abs/2505.00426)|null|
 |**2025-05-01**|**Prospects for Ultralow-Mass Nuclear Magnetic Resonance using Spin Defects in Hexagonal Boron Nitride**|固体中的光学活性量子缺陷，如金刚石中的氮空位（NV）中心，是环境条件下微米级和纳米级（超低质量）核磁共振（NMR）光谱和成像的主要形式。然而，当距离金刚石表面小于约10nm时，NV中心的自旋和光学性质会降低，从而限制了NMR灵敏度以及光谱和空间分辨率。在这里，我们概述了使用六方氮化硼（hBN）中带负电荷的硼空位（ $V_B^-$）开发替代纳米级核磁共振传感器的努力。作为范德华材料，hBN的表面没有悬空键和其他降低近表面NVs性能的顺磁噪声源，允许材料表面存在稳定的$V_B^-$缺陷。我们讨论了硼空位在应用于窄带（AC）磁场传感时的性质，并概述了针对该系统优化的实验设计。我们提出了纳米和微米尺度上统计和均匀极化样品的$V_B^-$NMR测量协议，包括相关脉冲序列、灵敏度计算和样品限制策略；并将预期性能与NV-NMR进行比较。我们在纳米尺度上估计了$V_B^-$电子自旋和样品核自旋之间的反作用效应；并考虑了流动受限纳米尺度下的非常规扩散动力学，计算了其对预期的$V_B^-$NMR信号的影响。最后，我们确定了最适合纳米级和微米级$V_B^-$ NMR的潜在样品靶点和操作制度。 et.al.|[2505.00383](http://arxiv.org/abs/2505.00383)|null|
 
-<p align=right>(<a href=#updated-on-20250503>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250504>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-04-16**|**SCENT: Robust Spatiotemporal Learning for Continuous Scientific Data via Scalable Conditioned Neural Fields**|由于空间和时间依赖性之间的复杂相互作用、数据的高维度和可扩展性约束，时空学习具有挑战性。这些挑战在科学领域进一步加剧，在这些领域，数据通常是不规则分布的（例如，传感器故障的缺失值）和高容量的（例如高保真模拟），带来了额外的计算和建模困难。在本文中，我们提出了SCENT，这是一种用于可扩展和连续性知情的时空表示学习的新框架。SCENT在单一架构中统一了插值、重建和预测。SCENT建立在基于变换器的编码器-处理器-解码器骨干上，引入了可学习的查询来增强泛化能力，并引入了查询式交叉关注机制来有效捕获多尺度依赖关系。为了确保数据大小和模型复杂性的可扩展性，我们引入了稀疏注意力机制，实现了灵活的输出表示和任意分辨率的高效评估。我们通过广泛的模拟和真实世界的实验来验证SCENT，在实现卓越可扩展性的同时，在多个具有挑战性的任务中展示了最先进的性能。 et.al.|[2504.12262](http://arxiv.org/abs/2504.12262)|null|
 |**2025-04-14**|**DNF-Avatar: Distilling Neural Fields for Real-time Animatable Avatar Relighting**|从单眼视频中创建可重现和可动画化的人类化身是一个新兴的研究课题，具有广泛的应用，例如虚拟现实、体育和视频游戏。之前的研究利用神经场和基于物理的渲染（PBR）来估计人类化身的几何形状并解开其外观属性。然而，这些方法的一个缺点是由于昂贵的蒙特卡洛射线追踪导致渲染速度较慢。为了解决这个问题，我们提出将隐式神经场（教师）的知识提取为显式的2D高斯飞溅（学生）表示，以利用高斯飞溅的快速光栅化特性。为了避免光线追踪，我们对PBR外观采用了分裂和近似。我们还提出了用于阴影计算的新型部分式环境遮挡探头。阴影预测是通过每像素只查询一次这些探测器来实现的，这为化身的实时重新照明铺平了道路。这些技术相结合，可以提供高质量的重新照明效果和逼真的阴影效果。我们的实验表明，所提出的学生模型与我们的教师模型实现了相当甚至更好的重新照明结果，同时在推理时快了370倍，达到了67 FPS的渲染速度。 et.al.|[2504.10486](http://arxiv.org/abs/2504.10486)|null|
 
-<p align=right>(<a href=#updated-on-20250503>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250504>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
