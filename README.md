@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.05.10
+## Updated on 2025.05.11
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-05-02**|**VIDSTAMP: A Temporally-Aware Watermark for Ownership and Integrity in Video Diffusion Models**|视频传播模型的迅速崛起使得生成高度逼真和时间连贯的视频成为可能，这引发了人们对内容真实性、来源和滥用的严重担忧。现有的水印方法，无论是被动的、事后的还是基于图像技术的，通常都难以承受特定于视频的操作，如帧插入、丢弃或重新排序，并且通常会降低视觉质量。在这项工作中，我们引入了VIDSPAMP，这是一种水印框架，它将每帧或每段消息直接嵌入到时间感知视频扩散模型的潜在空间中。通过两级流水线对模型的解码器进行微调，首先在静态图像数据集上促进空间消息分离，然后在合成视频序列上恢复时间一致性，VIDSPAMP学会了嵌入高容量、灵活的水印，同时将感知影响降到最低。利用3D卷积和时间注意力等架构组件，我们的方法不会产生额外的推理成本，并且提供了比现有方法更好的感知质量，同时对常见的失真和篡改保持了相当的鲁棒性。VIDSPAMP在每个视频中嵌入768位（每帧48位），比特准确率为95.0%，实现了-166.65的对数P值（越低越好），并保持了0.836的视频质量得分，与无标记输出（0.838）相当，在容量质量权衡方面超越了现有方法。代码：代码：\url{https://github.com/SPIN-UMass/VidStamp} et.al.|[2505.01406](http://arxiv.org/abs/2505.01406)|**[link](https://github.com/spin-umass/vidstamp)**|
 |**2025-05-02**|**FreePCA: Integrating Consistency Information across Long-short Frames in Training-free Long Video Generation via Principal Component Analysis**|长视频生成涉及使用在短视频上训练的模型生成扩展视频，由于帧数不同，分布会发生变化。它需要使用来自原始短帧的局部信息来提高视觉和运动质量，并使用来自整个长帧的全局信息来确保外观一致性。现有的无训练方法难以有效地整合两者的好处，因为视频中的外观和运动是紧密耦合的，导致运动不一致和视觉质量。本文揭示了通过应用主成分分析（PCA），可以将全局和局部信息精确解耦为一致的外观和运动强度信息，从而实现全局一致性和局部质量的精细互补集成。基于这一认识，我们提出了FreePCA，这是一种基于PCA的无训练长视频生成范式，同时实现了高一致性和高质量。具体来说，我们通过测量主成分空间中的余弦相似性来解耦一致的外观和运动强度特征。至关重要的是，我们逐步整合这些特征以保持原始质量并确保平滑过渡，同时通过重用初始噪声的平均统计数据进一步增强一致性。实验表明，FreePCA可以应用于各种视频扩散模型，而不需要训练，从而带来了实质性的改进。代码可在以下网址获得https://github.com/JosephTiTan/FreePCA. et.al.|[2505.01172](http://arxiv.org/abs/2505.01172)|**[link](https://github.com/josephtitan/freepca)**|
 
-<p align=right>(<a href=#updated-on-20250510>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250511>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-04-29**|**EfficientHuman: Efficient Training and Reconstruction of Moving Human using Articulated 2D Gaussian**|3D高斯散斑（3DGS）已被公认为场景重建和新颖视图合成的开创性技术。最近使用3DGS重建3D人体的工作试图利用人体姿势的先验信息来提高渲染质量并提高训练速度。然而，由于多视图不一致和冗余的高斯分布，它很难有效地拟合动态曲面平面。这种不一致性是因为高斯椭球体不能准确地表示动态物体的表面，这阻碍了动态人体的快速重建。同时，冗余高斯分布的普遍性意味着这些作品的训练时间对于快速适应动态人体来说仍然不理想。为了解决这些问题，我们提出了EfficientHuman，这是一种使用铰接2D高斯快速完成人体动态重建的模型，同时确保了高渲染质量。关键创新在于将高斯斑点编码为规范空间中的铰接二维高斯曲面，然后通过线性混合蒙皮（LBS）将其转换为姿态空间，以实现高效的姿态转换。与3D高斯曲面不同，铰接式2D高斯曲面可以快速适应动态人体，同时确保视图一致的几何形状。此外，我们引入了一个姿态校准模块和一个LBS优化模块，以实现动态人体姿态的精确拟合，提高模型的性能。在ZJU MoCap数据集上进行的广泛实验表明，EfficientHuman平均在不到一分钟的时间内实现了快速的3D动态人体重建，比目前最先进的方法快20秒，同时也减少了冗余高斯的数量。 et.al.|[2504.20607](http://arxiv.org/abs/2504.20607)|null|
 |**2025-04-28**|**Joint Optimization of Neural Radiance Fields and Continuous Camera Motion from a Monocular Video**|神经辐射场（NeRF）已经证明了其表示3D几何的优越能力，但在训练过程中需要精确地预先计算相机姿态。为了降低这一要求，现有的方法通常依赖于良好的姿态初始化或深度先验来联合优化相机姿态和NeRF。然而，这些方法在具有挑战性的场景中很难实现，例如大旋转，因为它们将每个相机映射到世界坐标系。我们提出了一种新方法，通过将连续相机运动建模为随时间变化的角速度和速度来消除先验依赖性。相机之间的相对运动首先通过速度积分来学习，而相机姿态可以通过将这些相对运动聚合到视频中单个时间步长定义的世界坐标系来获得。具体来说，通过时间依赖的NeRF学习精确的连续相机运动，该NeRF通过在每个时间步长从相邻帧进行训练来捕获局部场景几何形状和运动。学习到的运动能够微调NeRF以表示整个场景几何体。在Co3D和Scannet上的实验表明，与最先进的方法相比，我们的方法实现了卓越的相机姿态和深度估计，以及相当新颖的视图合成性能。我们的代码可在https://github.com/HoangChuongNguyen/cope-nerf. et.al.|[2504.19819](http://arxiv.org/abs/2504.19819)|null|
 
-<p align=right>(<a href=#updated-on-20250510>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250511>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-05-07**|**Multi-Granular Attention based Heterogeneous Hypergraph Neural Network**|异构图神经网络（HeteGNs）通过有效地提取异构图中的复杂结构和语义信息，表现出学习节点表示的强大能力。大多数流行的HeteGNN都遵循邻域聚合范式，利用基于元路径的消息传递来学习潜在节点表示。然而，由于元路径的成对性质，这些模型无法捕捉节点之间的高阶关系，导致性能不佳。此外，“过度压缩”的挑战，即HeteGNs中的远程信息传递导致严重的信息失真，进一步限制了这些模型的有效性。为了解决这些局限性，本文提出了MGA-HHN，这是一种用于异构图表示学习的基于多粒度注意力的异构超图神经网络。MGA-HHN引入了两项关键创新：（1）一种构建基于元路径的异构超图的新方法，该方法通过多个视图显式地模拟异构图中的高阶语义信息，以及（2）一种在节点和超边缘级别都运行的多粒度注意机制。该机制使模型能够捕获在超边缘类型内共享相同语义上下文的节点之间的细粒度交互，同时保持不同超边缘类型之间的语义多样性。因此，MGA-HHN有效地减轻了远程消息失真，并生成了更具表现力的节点表示。对真实世界基准数据集的广泛实验表明，MGA-HHN的性能优于最先进的模型，展示了其在节点分类、节点聚类和可视化任务中的有效性。 et.al.|[2505.04340](http://arxiv.org/abs/2505.04340)|null|
 |**2025-05-07**|**Low Resolution Next Best View for Robot Packing**|用机器人自动包装物体是工业自动化的一个关键挑战，高效的物体感知在其中起着至关重要的作用。本文重点介绍不需要精确3D重建的场景，优先考虑具有成本效益和可扩展性的解决方案。所提出的低分辨率下一最佳视图（LR-NBV）算法利用了一个平衡姿态冗余和采集密度的实用函数，确保了高效的对象重建。实验验证表明，LR-NBV始终优于标准NBV方法，在明显减少姿态的情况下实现了相当的精度。该方法被证明非常适合需要效率、可扩展性和适应性的应用，而不依赖于高精度传感。 et.al.|[2505.04228](http://arxiv.org/abs/2505.04228)|null|
 
-<p align=right>(<a href=#updated-on-20250510>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250511>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-05-08**|**GeomHair: Reconstruction of Hair Strands from Colorless 3D Scans**|我们提出了一种新方法，通过利用多模态头发方向提取，直接从无色3D扫描中重建发束。发束重建是计算机视觉和图形学中的一个基本问题，可用于高保真数字化身合成、动画和AR/VR应用。然而，由于人类头发的复杂和精细结构，从原始扫描数据中准确恢复发束仍然具有挑战性。现有的方法通常依赖于RGB捕获，RGB捕获对环境很敏感，对于提取引导线的方向来说可能是一个具有挑战性的领域，特别是在具有挑战性发型的情况下。为了纯粹从观察到的几何形状重建头发，我们的方法直接在扫描上找到清晰的表面特征，并通过应用于扫描着色渲染的神经2D线检测器来估计头发的方向。此外，我们还结合了一种在各种合成头发扫描上训练的扩散先验，通过改进的噪声调度进行了改进，并通过扫描特定的文本提示适应了重建的内容。我们证明，这种监督信号的组合能够准确重建简单和复杂的发型，而不依赖于颜色信息。为了促进进一步的研究，我们介绍了Strands400，这是最大的公开可用的发束数据集，具有从真实世界数据中提取的详细表面几何形状，其中包含从400名受试者的扫描中重建的发束。 et.al.|[2505.05376](http://arxiv.org/abs/2505.05376)|null|
 |**2025-05-08**|**Finite element approximation for quantitative photoacoustic tomography in a diffusive regime**|本文主要研究定量光声层析成像的数值分析。我们的目标是使用多个内部观测数据重建光学系数，即扩散系数和吸收系数。我们的数值算法的基础在于求解逆扩散率问题和与椭圆方程相关的直接问题。逆问题的稳定性在很大程度上取决于内部观测中的非零条件，使用随机选择的边界激励数据可以满足这一条件。利用这些随机生成的边界数据，我们实现了一个结合有限元离散化的输出最小二乘公式来解决逆问题。在这种情况下，受新提出的条件稳定性结果分析的启发，我们使用加权能量估计为数值重建提供了一个严格的L^2（\Omega）$范数误差估计。由此产生的误差估计为根据数据中存在的噪声水平选择适当的正则化参数和离散化网格大小提供了有价值的指导。本文给出了几个数值实验来支持我们的理论结果，并说明了我们的数值方案的有效性。 et.al.|[2505.05361](http://arxiv.org/abs/2505.05361)|null|
 
-<p align=right>(<a href=#updated-on-20250510>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250511>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-04-20**|**Efficient Implicit Neural Compression of Point Clouds via Learnable Activation in Latent Space**|隐式神经表示（INR），也称为神经场，已成为深度学习中的一种强大范式，使用基于坐标的神经网络对连续空间场进行参数化。在本文中，我们提出了\textbf{PICO}，这是一个基于INR的静态点云压缩框架。与主流的编码器-解码器范式不同，我们将点云压缩任务分解为两个单独的阶段：几何压缩和属性压缩，每个阶段都有不同的INR优化目标。受Kolmogorov-Arnold网络（KANs）的启发，我们引入了一种新的网络架构\textbf{LeAFNet}，它利用潜在空间中的可学习激活函数来更好地近似目标信号的隐函数。通过将点云压缩重新表述为神经参数压缩，我们通过量化和熵编码进一步提高了压缩效率。实验结果表明，\textbf{LeAFNet}在基于INR的点云压缩中优于传统的MLP。此外，与当前的MPEG点云压缩标准相比，\textbf{PICO}实现了卓越的几何压缩性能，D1 PSNR平均提高了4.92 $dB。在联合几何和属性压缩方面，我们的方法表现出了极具竞争力的结果，平均PCQM增益为2.7美元乘以10^{-3}$ 。 et.al.|[2504.14471](http://arxiv.org/abs/2504.14471)|null|
 |**2025-04-17**|**Radial Basis Function Techniques for Neural Field Models on Surfaces**|我们提出了一种使用径向基函数（RBF）插值和求积求解曲面上神经场方程的数值框架。神经场模型描述了宏观大脑活动的演变，但建模研究往往忽视了弯曲皮质区域的复杂几何形状。传统的数值方法，如有限元或谱方法，在计算上可能很昂贵，并且在不规则域上实现具有挑战性。相比之下，基于RBF的方法提供了一种灵活的替代方案，通过提供插值和正交方案，以高阶精度有效地处理任意几何形状。我们首先为一般曲面上的神经场模型开发了一个基于RBF的插值投影框架。详细推导了平面和曲面域的求积法，确保了高阶精度和稳定性，因为它们取决于RBF超参数（基函数、增广多项式和模板大小）。通过数值实验，我们证明了我们的方法的收敛性，突出了它在灵活性和准确性方面优于传统方法。最后，我们阐述了复杂表面上时空活动的数值模拟，说明了该方法捕捉复杂波传播模式的能力。 et.al.|[2504.13379](http://arxiv.org/abs/2504.13379)|null|
 
-<p align=right>(<a href=#updated-on-20250510>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250511>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
