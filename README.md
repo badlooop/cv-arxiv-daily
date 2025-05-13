@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.05.12
+## Updated on 2025.05.13
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-05-02**|**VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations for Synthetic Videos**|基于基础模型的合成视频生成因其真实性和广泛的应用而受到关注。虽然这些模型产生了高质量的帧，但它们往往不尊重常识和物理定律，导致内容异常。现有的指标，如VideoScore，强调一般质量，但忽略了此类违规行为，缺乏可解释性。一种更具洞察力的方法是使用多模态大型语言模型（MLLM）作为可解释的评估器，如FactScore所示。然而，MLLM检测合成视频中异常的能力仍有待探索。为了解决这个问题，我们引入了VideoHallu，这是一个基准测试，它包含来自Veo2、Sora和Kling等模型的合成视频，并与专家设计的QA任务相结合，这些任务可以通过人类层面的推理来解决。我们评估了几种SoTA MLLM，包括GPT-4o、Gemini-2.5-Pro、Qwen-2.5-VL以及Video-R1和VideoChat-R1等较新型号。尽管在MVBench和MovieChat上表现强劲，但这些模型在合成环境中的基本常识和物理任务上仍然会产生幻觉，突显了幻觉的挑战。我们使用组相对策略优化（GRPO）在真实和合成常识/物理数据上进一步微调SoTA MLLM。结果表明，特别是通过反例积分，MLLM的推理能力得到了显著提高。我们的数据可在https://github.com/zli12321/VideoHallu. et.al.|[2505.01481](http://arxiv.org/abs/2505.01481)|**[link](https://github.com/zli12321/videohallu)**|
 |**2025-05-02**|**VIDSTAMP: A Temporally-Aware Watermark for Ownership and Integrity in Video Diffusion Models**|视频传播模型的迅速崛起使得生成高度逼真和时间连贯的视频成为可能，这引发了人们对内容真实性、来源和滥用的严重担忧。现有的水印方法，无论是被动的、事后的还是基于图像技术的，通常都难以承受特定于视频的操作，如帧插入、丢弃或重新排序，并且通常会降低视觉质量。在这项工作中，我们引入了VIDSPAMP，这是一种水印框架，它将每帧或每段消息直接嵌入到时间感知视频扩散模型的潜在空间中。通过两级流水线对模型的解码器进行微调，首先在静态图像数据集上促进空间消息分离，然后在合成视频序列上恢复时间一致性，VIDSPAMP学会了嵌入高容量、灵活的水印，同时将感知影响降到最低。利用3D卷积和时间注意力等架构组件，我们的方法不会产生额外的推理成本，并且提供了比现有方法更好的感知质量，同时对常见的失真和篡改保持了相当的鲁棒性。VIDSPAMP在每个视频中嵌入768位（每帧48位），比特准确率为95.0%，实现了-166.65的对数P值（越低越好），并保持了0.836的视频质量得分，与无标记输出（0.838）相当，在容量质量权衡方面超越了现有方法。代码：代码：\url{https://github.com/SPIN-UMass/VidStamp} et.al.|[2505.01406](http://arxiv.org/abs/2505.01406)|**[link](https://github.com/spin-umass/vidstamp)**|
 
-<p align=right>(<a href=#updated-on-20250512>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250513>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-05-01**|**RayZer: A Self-supervised Large View Synthesis Model**|我们介绍了RayZer，这是一种自我监督的多视图3D视觉模型，在没有任何3D监督（即相机姿态和场景几何形状）的情况下进行训练，同时表现出新兴的3D意识。具体来说，RayZer将未经基础和校准的图像作为输入，恢复相机参数，重建场景表示，并合成新的视图。在训练过程中，RayZer仅依靠其自我预测的相机姿态来渲染目标视图，消除了对任何地面实况相机注释的需要，并允许RayZer通过2D图像监控进行训练。RayZer的新兴3D意识归因于两个关键因素。首先，我们设计了一个自监督框架，通过解纠缠相机和场景表示来实现输入图像的3D感知自动编码。其次，我们设计了一个基于变换器的模型，其中唯一的3D先验是光线结构，同时连接相机、像素和场景。RayZer展示了与在训练和测试中依赖姿势注释的“oracle”方法相当甚至更优的新颖视图合成性能。项目：https://hwjiang1510.github.io/RayZer/ et.al.|[2505.00702](http://arxiv.org/abs/2505.00702)|null|
 |**2025-04-29**|**TesserAct: Learning 4D Embodied World Models**|本文提出了一种学习新的4D实体世界模型的有效方法，该模型预测了3D场景随时间的动态演变，以响应实体代理的动作，提供了空间和时间的一致性。我们建议通过RGB-DN（RGB、深度和法线）视频训练来学习4D世界模型。这不仅超越了传统的2D模型，将详细的形状、配置和时间变化纳入其预测中，而且使我们能够有效地学习具体代理的精确逆动态模型。具体来说，我们首先利用现成的模型，利用深度和正常信息扩展现有的机器人操纵视频数据集。接下来，我们在此带注释的数据集上微调视频生成模型，该模型联合预测每帧的RGB-DN（RGB、深度和法线）。然后，我们提出了一种算法，可以将生成的RGB、深度和法线视频直接转换为高质量的4D世界场景。我们的方法确保了来自具体场景的4D场景预测的时间和空间一致性，为具体环境实现了新颖的视图合成，并促进了策略学习，其性能明显优于先前基于视频的世界模型。 et.al.|[2504.20995](http://arxiv.org/abs/2504.20995)|null|
 
-<p align=right>(<a href=#updated-on-20250512>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250513>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-05-07**|**Merging and Disentangling Views in Visual Reinforcement Learning for Robotic Manipulation**|视觉以其在操纵中的应用而闻名，特别是使用视觉伺服。为了使其坚固耐用，需要多个摄像头来扩大视野。这在计算上具有挑战性。合并多个视图并使用Q-learning可以设计更有效的表示和优化样本效率。部署这样的解决方案可能很昂贵。为了缓解这一问题，我们引入了一种合并与去纠缠（MAD）算法，该算法有效地合并视图以提高采样效率，同时增加单视图功能以允许轻量级部署并确保稳健的策略。我们使用Meta World和ManiSkill3展示了我们的方法的效率和鲁棒性。有关项目网站和代码，请参阅https://aalmuzairee.github.io/mad et.al.|[2505.04619](http://arxiv.org/abs/2505.04619)|null|
 |**2025-05-08**|**TetWeave: Isosurface Extraction using On-The-Fly Delaunay Tetrahedral Grids for Gradient-Based Mesh Optimization**|我们介绍了TetWeave，这是一种用于基于梯度的网格优化的新型等值面表示，它联合优化了用于行进四面体的四面体网格的放置，以及每个点处的新型方向符号距离。TetWeave通过Delaunay三角剖分动态构建四面体网格，与预定义网格相比具有更高的灵活性。提取的网格保证水密、双流形和无交叉。TetWeave的灵活性使重采样策略成为可能，该策略在重建误差较高的地方放置新的点，并允许在不影响重建误差的情况下促进网格公平性。这导致了高质量、自适应的网格，需要最少的内存使用和很少的参数来优化。因此，TetWeave相对于输出网格的顶点数表现出近乎线性的内存缩放，这是对预定义网格的实质性改进。我们展示了TetWeave在计算机图形学和视觉领域广泛的挑战性任务中的适用性，如多视图3D重建、网格压缩和几何纹理生成。 et.al.|[2505.04590](http://arxiv.org/abs/2505.04590)|**[link](https://github.com/AlexandreBinninger/TetWeave)**|
 
-<p align=right>(<a href=#updated-on-20250512>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250513>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-05-09**|**Omni-Temporal Theory and Simulation of Hydrodynamic Dispersion using Fourier Transformation**|流体动力学弥散决定了具有强速度梯度流动的各种化学、地质和生物系统中溶质混合的程度和表观扩散通量。虽然已建立的分散理论捕捉到了扩散、流动和反应速率之间的瞬态相互作用，但在流动的特征时间尺度大大超过孔隙尺度扩散的情况下，通常采用长期近似。在这里，我们引入了一种基于频率的理论来模拟通过多孔介质的全时色散，该多孔介质同时捕获色散的快分量和慢分量。为了建立这一理论，我们形式化地对傅里叶变换的溶质孔尺度平流扩散方程进行体积平均，并获得周期性晶胞的放大输运系数：弥散张量、平流抑制向量和反应速率系数。这些系数双重充当传递函数，将某些输出与频域中的输入量相关联，从而能够使用傅里叶逆变换预测放大的时间动态。通过推导平行板间和圆管内泊肃叶流情况下色散系数的解析表达式，证明了它们的实用性。这种全时理论为非活性平行板之间的快速溶质脉冲产生了突破曲线，与直接数值模拟（DNS）预测的溶质传播速率一致，而传统的渐近理论则高估了几个数量级。溶质峰值幅度与DNS的偏差被证明是由溶质反向扩散到入口平面以及入口区域效应引起的，这可以通过闭合变量b的非周期性变化来证明。 et.al.|[2505.06063](http://arxiv.org/abs/2505.06063)|null|
 |**2025-05-09**|**Towards Better Cephalometric Landmark Detection with Diffusion Data Generation**|头影测量标志物检测对于正畸诊断和治疗计划至关重要。然而，数据收集中样本的稀缺以及手动注释所需的大量工作严重阻碍了不同数据集的可用性。这种局限性限制了基于深度学习的检测方法的有效性，特别是基于大规模视觉模型的检测方法。为了应对这些挑战，我们开发了一种创新的数据生成方法，能够在没有人为干预的情况下生成各种头影测量X射线图像以及相应的注释。为了实现这一目标，我们的方法首先使用解剖先验构建新的头影测量界标注释。然后，我们使用基于扩散的生成器来创建与这些注释紧密对应的逼真X射线图像。为了在生产具有不同属性的样本时实现精确控制，我们引入了一种新的快速头影测量X射线图像数据集。该数据集包括真实的头影测量X射线图像和描述图像的详细医学文本提示。通过利用这些详细的提示，我们的方法改进了生成过程，以控制不同的样式和属性。在大量、多样化的生成数据的推动下，我们将大规模视觉检测模型引入头影测量界标检测任务中，以提高准确性。实验结果表明，使用生成的数据进行训练可以显著提高性能。与不使用生成数据的方法相比，我们的方法将成功检测率（SDR）提高了6.5%，达到了显著的82.2%。所有代码和数据均可在以下网址获得：https://um-lab.github.io/cepha-generation et.al.|[2505.06055](http://arxiv.org/abs/2505.06055)|null|
 
-<p align=right>(<a href=#updated-on-20250512>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250513>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-04-20**|**Efficient Implicit Neural Compression of Point Clouds via Learnable Activation in Latent Space**|隐式神经表示（INR），也称为神经场，已成为深度学习中的一种强大范式，使用基于坐标的神经网络对连续空间场进行参数化。在本文中，我们提出了\textbf{PICO}，这是一个基于INR的静态点云压缩框架。与主流的编码器-解码器范式不同，我们将点云压缩任务分解为两个单独的阶段：几何压缩和属性压缩，每个阶段都有不同的INR优化目标。受Kolmogorov-Arnold网络（KANs）的启发，我们引入了一种新的网络架构\textbf{LeAFNet}，它利用潜在空间中的可学习激活函数来更好地近似目标信号的隐函数。通过将点云压缩重新表述为神经参数压缩，我们通过量化和熵编码进一步提高了压缩效率。实验结果表明，\textbf{LeAFNet}在基于INR的点云压缩中优于传统的MLP。此外，与当前的MPEG点云压缩标准相比，\textbf{PICO}实现了卓越的几何压缩性能，D1 PSNR平均提高了4.92 $dB。在联合几何和属性压缩方面，我们的方法表现出了极具竞争力的结果，平均PCQM增益为2.7美元乘以10^{-3}$ 。 et.al.|[2504.14471](http://arxiv.org/abs/2504.14471)|null|
 |**2025-04-17**|**Radial Basis Function Techniques for Neural Field Models on Surfaces**|我们提出了一种使用径向基函数（RBF）插值和求积求解曲面上神经场方程的数值框架。神经场模型描述了宏观大脑活动的演变，但建模研究往往忽视了弯曲皮质区域的复杂几何形状。传统的数值方法，如有限元或谱方法，在计算上可能很昂贵，并且在不规则域上实现具有挑战性。相比之下，基于RBF的方法提供了一种灵活的替代方案，通过提供插值和正交方案，以高阶精度有效地处理任意几何形状。我们首先为一般曲面上的神经场模型开发了一个基于RBF的插值投影框架。详细推导了平面和曲面域的求积法，确保了高阶精度和稳定性，因为它们取决于RBF超参数（基函数、增广多项式和模板大小）。通过数值实验，我们证明了我们的方法的收敛性，突出了它在灵活性和准确性方面优于传统方法。最后，我们阐述了复杂表面上时空活动的数值模拟，说明了该方法捕捉复杂波传播模式的能力。 et.al.|[2504.13379](http://arxiv.org/abs/2504.13379)|null|
 
-<p align=right>(<a href=#updated-on-20250512>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250513>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
