@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.06.24
+## Updated on 2025.06.25
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-06-23**|**RDPO: Real Data Preference Optimization for Physics Consistency Video Generation**|视频生成技术在视觉质量方面取得了显著进步，但忠实地再现现实世界的物理仍然难以捉摸。基于偏好的模型后训练可以提高物理一致性，但需要昂贵的人工注释数据集或尚不可行的奖励模型。为了应对这些挑战，我们提出了真实数据偏好优化（RDPO），这是一个无注释的框架，可以直接从现实世界的视频中提取物理先验。具体来说，所提出的RDPO使用预训练的生成器对真实视频序列进行反向采样，以自动构建在物理正确性方面统计上可区分的偏好对。然后，多阶段迭代训练计划引导生成器越来越好地遵守物理定律。受益于从真实视频中探索的动态信息，我们提出的RDPO显著提高了生成视频的动作连贯性和物理真实性。对多个基准和人工评估的评估表明，RDPO在多个维度上取得了进步。本文的源代码和演示可在以下网址获得：https://wwenxu.github.io/RDPO/ et.al.|[2506.18655](http://arxiv.org/abs/2506.18655)|null|
 |**2025-06-23**|**BulletGen: Improving 4D Reconstruction with Bullet-Time Generation**|将随意捕获的单目视频转换为完全沉浸式的动态体验是一项非常不适定的任务，并且会带来重大挑战，例如重建看不见的区域，以及处理单目深度估计中的模糊性。在这项工作中，我们介绍了BulletGen，这是一种利用生成模型在基于高斯的动态场景表示中纠正错误和完成缺失信息的方法。这是通过在单个冻结的“子弹时间”步骤中将基于扩散的视频生成模型的输出与4D重建对齐来实现的。然后，生成的帧用于监督4D高斯模型的优化。我们的方法将生成内容与静态和动态场景组件无缝融合，在新颖的视图合成和2D/3D跟踪任务上取得了最先进的结果。 et.al.|[2506.18601](http://arxiv.org/abs/2506.18601)|null|
 
-<p align=right>(<a href=#updated-on-20250624>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250625>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-06-16**|**TextureSplat: Per-Primitive Texture Mapping for Reflective Gaussian Splatting**|高斯散斑在高渲染帧速率下表现出卓越的新颖视图合成性能。然而，在复杂的捕捉场景中基于优化的逆渲染仍然是一个具有挑战性的问题。一个特殊的情况是为高反射场景建模复杂的表面光相互作用，这会导致复杂的高频镜面辐射分量。我们假设，这种具有挑战性的环境可以从增加的表现力中受益。因此，我们提出了一种方法，通过几何和物理上接地的高斯散斑辐射场来解决这个问题，其中法线和材料属性在原始体的局部空间中是空间可变的。为此，我们还建议使用每基元纹理贴图，利用GPU硬件通过统一的材质纹理图谱在测试时加速渲染。 et.al.|[2506.13348](http://arxiv.org/abs/2506.13348)|**[link](https://github.com/maeyounes/texturesplat)**|
 |**2025-06-16**|**WildCAT3D: Appearance-Aware Multi-View Diffusion in the Wild**|尽管稀疏新视图合成（NVS）在应用于以对象为中心的场景方面取得了最新进展，但场景级NVS仍然是一个挑战。一个核心问题是缺乏可用的干净多视图训练数据，除了多样性有限的手动策划数据集、相机变化或许可问题。另一方面，在野外存在大量不同的、经过许可的数据，包括来自旅游照片等来源的不同外观（照明、短暂遮挡等）的场景。为此，我们提出了WildCAT3D，这是一个用于生成从野外捕获的各种2D场景图像数据中学习到的场景新视图的框架。我们通过在图像中明确建模全局外观条件来解锁对这些数据源的训练，扩展了最先进的多视图扩散范式，从不同外观的场景视图中学习。我们训练的模型在推理时泛化到新场景，从而生成多个一致的新颖视图。WildCAT3D在对象和场景级别设置中的单视图NVS上提供了最先进的结果，同时在比以前的方法更少的数据源上进行训练。此外，它通过在生成过程中提供全局外观控制来实现新的应用。 et.al.|[2506.13030](http://arxiv.org/abs/2506.13030)|null|
 
-<p align=right>(<a href=#updated-on-20250624>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250625>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-06-19**|**Structured Semantic 3D Reconstruction (S23DR) Challenge 2025 -- Winning solution**|本文介绍了S23DR挑战2025的获胜解决方案，该方案涉及从稀疏点云和语义分割中预测房屋的3D屋顶线框。我们的方法直接在3D中操作，首先使用格式塔分割从COLMAP点云中识别候选顶点。然后，我们使用两个类似PointNet的模型：一个通过分析局部三次补丁来细化和分类这些候选对象，另一个通过处理连接顶点对的圆柱形区域来预测边缘。这种两阶段的3D深度学习方法在私人排行榜上获得了0.43的混合结构得分（HSS）。 et.al.|[2506.16421](http://arxiv.org/abs/2506.16421)|null|
 |**2025-06-23**|**R3eVision: A Survey on Robust Rendering, Restoration, and Enhancement for 3D Low-Level Vision**|神经辐射场（NeRF）和3D高斯散点（3DGS）等神经渲染方法在逼真的3D场景重建和新颖的视图合成方面取得了重大进展。然而，大多数现有模型都假设干净和高分辨率（HR）的多视图输入，这限制了它们在真实世界的退化（如噪声、模糊、低分辨率（LR）和天气引起的伪影）下的鲁棒性。为了解决这些局限性，新兴的3D低级视觉（3D LLV）领域将经典的2D低级视觉任务扩展到3D空间域，包括超分辨率（SR）、去模糊、天气退化去除、恢复和增强。这项调查被称为R\text上标{3}eVision，通过形式化退化感知渲染问题并确定与时空一致性和不适定优化相关的关键挑战，全面概述了3D LLV的鲁棒渲染、恢复和增强。将LLV集成到神经渲染框架中的最新方法被分类，以说明它们如何在不利条件下实现高保真3D重建。还讨论了自动驾驶、AR/VR和机器人等应用领域，在这些领域，从退化的输入中获得可靠的3D感知至关重要。通过回顾代表性的方法、数据集和评估协议，这项工作将3D LLV定位为现实世界环境中稳健的3D内容生成和场景级重建的基本方向。 et.al.|[2506.16262](http://arxiv.org/abs/2506.16262)|**[link](https://github.com/cmlab-korea/awesome-3d-low-level-vision)**|
 
-<p align=right>(<a href=#updated-on-20250624>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250625>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-06-23**|**DefFusionNet: Learning Multimodal Goal Shapes for Deformable Object Manipulation via a Diffusion-based Probabilistic Model**|可变形物体操纵对许多现实世界的机器人应用至关重要，从手术机器人和制造业中的软材料处理到洗衣折叠等家务。这个重要机器人领域的核心是形状伺服，这是一项专注于将可变形物体控制成所需形状的任务。形状伺服公式需要指定目标形状。然而，形状伺服中的大多数先前工作都依赖于不切实际的目标形状获取方法，例如繁琐的领域知识工程或手动操作。DefGoalNet之前提出了当前最先进的解决方案来解决这个问题，该方案直接从少量的人类演示中学习可变形的物体目标形状。然而，在多模式环境中，它会遇到很大的困难，在这种环境中，多个不同的目标形状都可以成功完成任务。作为一个确定性模型，DefGoalNet将这些可能性分解为一个平均解，通常会导致目标不可用。在本文中，我们通过开发DefFusionNet来解决这个问题，DefFusionNet是一种新型的神经网络，它利用扩散概率模型来学习所有有效目标形状的分布，而不是预测单一的确定性结果。这使得能够生成不同的目标形状，并避免了平均伪影。我们在模拟和物理机器人上展示了我们的方法在受制造和手术应用启发的机器人任务上的有效性。我们的工作是第一个能够为现实世界的机器人应用生成一组多样化、多模态的可变形对象目标的生成模型。 et.al.|[2506.18779](http://arxiv.org/abs/2506.18779)|null|
 |**2025-06-23**|**DPG loss functions for learning parameter-to-solution maps by neural networks**|我们开发、分析和实验探索了基于残差的损失函数，用于在参数相关的偏微分方程族（PDE）背景下对参数到解映射进行机器学习。我们主要关注的是严格的精度认证，以提高深度神经网络简化模型的预测能力。这是通过使用变量校正的损失函数来实现的。通过椭圆偏微分方程的一个具体例子，给出了从超弱间断Petrov-Galerkin（DPG）离散化建立损失函数变分正确性的细节。尽管重点放在示例上，但所提出的概念适用于更广泛的问题，即有稳定的DPG配方可用的问题。讨论了{高对比度}扩散场的问题以及随之而来的椭圆率降低的困难。数值结果和理论论证都表明，对于高对比度扩散参数，所提出的DPG损失函数比简单的最小二乘损失具有更稳健的性能。 et.al.|[2506.18773](http://arxiv.org/abs/2506.18773)|null|
 
-<p align=right>(<a href=#updated-on-20250624>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250625>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-05-29**|**AnySplat: Feed-forward 3D Gaussian Splatting from Unconstrained Views**|我们介绍了AnySplat，这是一种用于从未校准的图像集进行新颖视图合成的前馈网络。与需要已知相机姿态和每个场景优化的传统神经渲染管道，或最近在密集视图的计算权重下弯曲的前馈方法相比，我们的模型可以在一次拍摄中预测一切。单次前向传递产生一组3D高斯基元，对场景几何和外观进行编码，并为每个输入图像生成相应的相机内部和外部。这种统一的设计可以轻松扩展到随意捕获的多视图数据集，而无需任何姿势注释。在广泛的零拍摄评估中，AnySplat在稀疏和密集视图场景中都能匹配姿势感知基线的质量，同时超越现有的无姿势方法。此外，与基于优化的神经场相比，它大大降低了渲染延迟，为无约束的捕获设置带来了实时新颖的视图合成。项目页面：https://city-super.github.io/anysplat/ et.al.|[2505.23716](http://arxiv.org/abs/2505.23716)|null|
 |**2025-05-31**|**RF4D:Neural Radar Fields for Novel View Synthesis in Outdoor Dynamic Scenes**|神经场（NF）在场景重建中表现出了卓越的性能，为各种任务提供了动力，如新颖的视图合成。然而，依赖RGB或LiDAR输入的现有NF方法往往对恶劣天气表现出严重的脆弱性，特别是在自动驾驶等户外场景中应用时。相比之下，毫米波雷达对环境变化具有固有的鲁棒性，但不幸的是，它与NF的集成在很大程度上仍未得到充分探索。此外，由于户外驾驶场景经常涉及移动物体，因此时空建模对于时间一致的新颖视图合成至关重要。为此，我们介绍了RF4D，这是一种基于雷达的神经场框架，专门用于室外动态场景中的新颖视图合成。RF4D明确地将时间信息纳入其表示中，显著增强了其对运动物体建模的能力。我们进一步引入了一个特征级流模块，该模块预测相邻帧之间的潜在时间偏移，在动态场景建模中增强时间一致性。此外，我们提出了一种与雷达传感物理紧密结合的雷达专用功率渲染公式，提高了合成精度和互操作性。在公共雷达数据集上进行的广泛实验表明，RF4D在雷达测量合成质量和占用估计精度方面具有卓越的性能，在动态室外场景中取得了特别显著的改善。 et.al.|[2505.20967](http://arxiv.org/abs/2505.20967)|null|
 
-<p align=right>(<a href=#updated-on-20250624>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250625>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
