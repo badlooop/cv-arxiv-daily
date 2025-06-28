@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.06.27
+## Updated on 2025.06.28
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-06-25**|**Video Perception Models for 3D Scene Synthesis**|传统上，3D场景合成需要专业知识和大量的手动工作。自动化这一过程可以极大地造福于建筑设计、机器人仿真、虚拟现实和游戏等领域。最近的3D场景合成方法通常依赖于大型语言模型（LLM）的常识推理或现代图像生成模型的强视觉先验。然而，目前的LLM表现出有限的3D空间推理能力，这限制了它们生成逼真和连贯的3D场景的能力。同时，基于图像生成的方法在视点选择和多视图不一致性方面经常受到限制。在这项工作中，我们提出了用于3D场景合成的视频感知模型（VIPScene），这是一种新的框架，它利用视频生成模型中3D物理世界的编码常识知识，以确保连贯的场景布局和跨视图的一致对象放置。VIPScene接受文本和图像提示，并无缝集成视频生成、前馈3D重建和开放词汇感知模型，以对场景中的每个对象进行语义和几何分析。这实现了具有高真实感和结构一致性的灵活场景合成。为了进行更精确的分析，我们进一步引入了用于连贯性和合理性评估的第一人称视图分数（FPVScore），利用连续的第一人称视角来利用多模态大型语言模型的推理能力。大量实验表明，VIPScene明显优于现有方法，并在各种场景中具有良好的泛化能力。代码将被发布。 et.al.|[2506.20601](http://arxiv.org/abs/2506.20601)|null|
 |**2025-06-25**|**BrokenVideos: A Benchmark Dataset for Fine-Grained Artifact Localization in AI-Generated Videos**|深度生成模型的最新进展使视频生成取得了重大进展，但人工智能生成视频的保真度仍然有限。合成内容通常会出现视觉伪影，如时间不一致的运动、物理上不可信的轨迹、不自然的对象变形和局部模糊，这些伪影会破坏真实感和用户信任。这些伪影的准确检测和空间定位对于自动化质量控制和指导改进的生成模型的开发至关重要。然而，研究界目前缺乏一个专门为人工智能生成视频中的工件定位而设计的全面基准。现有的数据集要么局限于视频或帧级检测，要么缺乏评估定位方法所需的细粒度空间注释。为了解决这一差距，我们引入了BrokenVideos，这是一个由3254个人工智能生成的视频组成的基准数据集，带有精心注释的像素级掩码，突出了视觉腐败的区域。每个注释都经过详细的人工检查验证，以确保高质量的地面真实性。我们的实验表明，在BrokenVideos上训练最先进的伪影检测模型和多模态大语言模型（MLLM）显著提高了它们定位损坏区域的能力。通过广泛的评估，我们证明BrokenVideos为生成视频模型中伪影定位的基准测试和推进研究奠定了关键基础。数据集可在以下网址获得：https://broken-video-detection-datetsets.github.io/Broken-Video-Detection-Datasets.github.io/. et.al.|[2506.20103](http://arxiv.org/abs/2506.20103)|null|
 
-<p align=right>(<a href=#updated-on-20250627>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250628>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-06-25**|**Self-Supervised Multimodal NeRF for Autonomous Driving**|在本文中，我们提出了一种基于神经辐射场（NeRF）的框架，称为新视图合成框架（NVSF）。它联合学习LiDAR和Camera的空间和时变场景的隐式神经表示。我们在一个包含静态和动态场景的真实自动驾驶场景中测试了这一点。与现有的多模态动态NeRF相比，我们的框架是自监督的，从而消除了对3D标签的需求。为了提高训练效率和收敛速度，我们引入了基于启发式的图像像素采样，以关注信息丰富的像素。为了保留激光雷达点的局部特征，采用了基于双梯度的掩模。对KITTI-360数据集的广泛实验表明，与基线模型相比，我们的框架在激光雷达和相机领域都表现最佳。型号代码可在以下网址获得https://github.com/gaurav00700/Selfsupervised-NVSF et.al.|[2506.19615](http://arxiv.org/abs/2506.19615)|null|
 |**2025-06-24**|**Virtual Memory for 3D Gaussian Splatting**|3D高斯散斑是新颖视图合成领域的突破。它将高斯模型确立为高精度真实世界环境重建的核心渲染图元。最近的进展大大增加了可以创建的场景的大小。在这项工作中，我们提出了一种使用虚拟内存渲染大型复杂3D高斯散斑场景的方法。通过利用成熟的虚拟内存和虚拟纹理技术，我们的方法有效地识别可见的高斯分布，并将其动态地实时流式传输到GPU进行实时渲染。仅选择必要的高斯分布进行存储和渲染，可以减少内存使用，并有效地加速渲染，特别是对于高度复杂的场景。此外，我们演示了如何将细节级别集成到我们提出的方法中，以进一步提高大规模场景的渲染速度。通过优化实现，我们强调了关键的实际考虑因素，并彻底评估了所提出的技术及其对台式机和移动设备的影响。 et.al.|[2506.19415](http://arxiv.org/abs/2506.19415)|null|
 
-<p align=right>(<a href=#updated-on-20250627>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250628>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-06-24**|**Active View Selector: Fast and Accurate Active View Selection with Cross Reference Image Quality Assessment**|我们解决了新颖视图合成和3D重建中的主动视图选择问题。现有的方法，如FisheRF和ActiveNeRF，通过最小化不确定性或最大化3D中的信息增益来选择下一个最佳视图，但它们需要针对不同的3D表示进行专门的设计，并涉及3D空间中的复杂建模。相反，我们将其重新定义为2D图像质量评估（IQA）任务，选择当前渲染质量最低的视图。由于候选视图的真实图像不可用，因此PSNR和SSIM等完整参考指标不适用，而MUSIQ和MANIQA等参考指标则缺乏必要的多视图上下文。受最近交叉引用质量框架CrossScore的启发，我们训练了一个模型来预测多视图设置中的SSIM，并使用它来指导视图选择。我们的交叉引用IQA框架在标准基准测试中实现了实质性的定量和定性改进，同时对3D表示不可知，运行速度比以前的方法快14-33倍。 et.al.|[2506.19844](http://arxiv.org/abs/2506.19844)|null|
 |**2025-06-24**|**Experimental Assessment of Neural 3D Reconstruction for Small UAV-based Applications**|无人机（UAV）日益小型化，将其部署潜力扩展到室内和难以到达的地区。然而，这一趋势带来了明显的挑战，特别是在飞行动力学和功耗方面，这限制了无人机的自主性和任务能力。本文提出了一种通过将神经3D重建（N3DR）与小型无人机系统集成来克服这些局限性的新方法，用于对小型静态物体进行细粒度三维（3D）数字重建。具体来说，我们设计、实施和评估了一个基于N3DR的管道，该管道利用先进的模型，即Instant ngp、Nerfacto和Splatfacto，使用小型无人机编队捕获的物体图像来提高3D重建的质量。我们使用各种图像和点云度量来评估所考虑模型的性能，并将其与基线运动结构（SfM）算法进行比较。实验结果表明，N3DR增强流水线显著提高了重建质量，使小型无人机能够在受限环境中支持高精度3D映射和异常检测。更一般地说，我们的研究结果突出了N3DR在提升小型无人机系统能力方面的潜力。 et.al.|[2506.19491](http://arxiv.org/abs/2506.19491)|null|
 
-<p align=right>(<a href=#updated-on-20250627>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250628>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-06-26**|**A discontinuous in time Streamline Diffusion Virtual Element Method for Darcy-transport problem**|我们首次对涉及化学反应物种的输运现象进行了数值研究，该输运现象由对流扩散反应系统建模，流场由达西定律控制。在各种离散化方法中，我们考虑流线扩散法。速度场和物种浓度都是使用虚拟单元法计算的，该方法使用间断伽略金时间方案。使用高斯-拉道插值结合数值积分的特殊技术，推导出了一个抽象的误差估计。这些理论发现得到了在空间和时间上具有任意阶精度的数值实验的支持。 et.al.|[2506.21326](http://arxiv.org/abs/2506.21326)|null|
 |**2025-06-26**|**An H $α$ Cloud in the HI Tail: Recent Star Formation in the Outskirts of NGC 4258 Revealed by Nanshan 1-m Telescope**|我们展示了用南山1米宽视场望远镜在本地星系NGC 4258上拍摄的第一张浅H$\alpha$成像，以及哈勃太空望远镜（HST）、韦斯特博克合成射电望远镜和暗能量相机遗产调查的档案数据。H$\alpha$图像显示，恒星不仅在星系内部形成，而且在距离主星系约16 kpc的HI尾部的HI云中形成。HST图像揭示了H$\alpha$亮区中的几个超蓝色致密物体（$\rm F555W-F814W<-0.5 mag，\，FWHM\sim 0.2''$），与HI尾部对齐，表明HI尾部存在年轻的疏散星团候选者。我们的结果表明，宽视场H$\alpha$ 成像是研究NGC 4258扩展区域最近恒星形成的有价值的工具。此外，弥漫HI尾部的恒星形成可能突出了星系恒星晕形成的一个潜在方面，这使得进一步研究晕中恒星形成对星系演化的影响成为可能。 et.al.|[2506.21321](http://arxiv.org/abs/2506.21321)|null|
 
-<p align=right>(<a href=#updated-on-20250627>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250628>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-05-30**|**3D Gaussian Splat Vulnerabilities**|随着3D高斯散布（3DGS）在安全关键应用中的使用越来越多，对手如何操纵场景造成伤害？我们介绍了CLOAK，这是第一种利用视图相关的高斯外观（颜色和纹理随视角而变化）来嵌入仅从特定视点可见的对抗性内容的攻击。我们进一步演示了DAGGER，这是一种有针对性的对抗攻击，直接扰乱3D高斯分布，而无需访问底层训练数据，通过投影梯度下降等既定方法欺骗多级目标检测器，如Faster R-CNN。这些攻击突显了3DGS中未被充分探索的漏洞，为自主导航和其他安全关键的3DGS应用程序的机器人学习带来了新的潜在威胁。 et.al.|[2506.00280](http://arxiv.org/abs/2506.00280)|**[link](https://github.com/poloclub/3D-Gaussian-Splat-Attack)**|
 |**2025-05-29**|**AnySplat: Feed-forward 3D Gaussian Splatting from Unconstrained Views**|我们介绍了AnySplat，这是一种用于从未校准的图像集进行新颖视图合成的前馈网络。与需要已知相机姿态和每个场景优化的传统神经渲染管道，或最近在密集视图的计算权重下弯曲的前馈方法相比，我们的模型可以在一次拍摄中预测一切。单次前向传递产生一组3D高斯基元，对场景几何和外观进行编码，并为每个输入图像生成相应的相机内部和外部。这种统一的设计可以轻松扩展到随意捕获的多视图数据集，而无需任何姿势注释。在广泛的零拍摄评估中，AnySplat在稀疏和密集视图场景中都能匹配姿势感知基线的质量，同时超越现有的无姿势方法。此外，与基于优化的神经场相比，它大大降低了渲染延迟，为无约束的捕获设置带来了实时新颖的视图合成。项目页面：https://city-super.github.io/anysplat/ et.al.|[2505.23716](http://arxiv.org/abs/2505.23716)|null|
 
-<p align=right>(<a href=#updated-on-20250627>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250628>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
