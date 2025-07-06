@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.07.05
+## Updated on 2025.07.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-07-02**|**LLM-based Realistic Safety-Critical Driving Video Generation**|设计多样化和安全关键的驾驶场景对于评估自动驾驶系统至关重要。在这篇论文中，我们提出了一种新的框架，该框架利用大型语言模型（LLM）生成少量代码，在CARLA模拟器中自动合成驾驶场景，该框架在场景脚本编写、基于代码的交通参与者高效控制和实现物理动态执行方面具有灵活性。给定一些示例提示和代码示例，LLM生成安全关键场景脚本，指定交通参与者的行为和位置，特别关注碰撞事件。为了弥合模拟和现实世界外观之间的差距，我们使用Cosmos-Transfer1和ControlNet集成了一个视频生成管道，该管道将渲染的场景转换为逼真的驾驶视频。我们的方法能够实现可控的场景生成，并有助于创建罕见但关键的边缘情况，例如闭塞下的人行横道或突然的车辆切入。实验结果证明了我们的方法在生成各种真实、多样和安全关键场景方面的有效性，为基于模拟的自动驾驶汽车测试提供了一种有前景的工具。 et.al.|[2507.01264](http://arxiv.org/abs/2507.01264)|null|
 |**2025-07-02**|**AIGVE-MACS: Unified Multi-Aspect Commenting and Scoring Model for AI-Generated Video Evaluation**|人工智能生成的视频模型的快速发展迫切需要强大且可解释的评估框架。现有的指标仅限于在没有解释性注释的情况下产生数字分数，导致可解释性和人类评估一致性较低。为了应对这些挑战，我们引入了AIGVE-MACS，这是一个人工智能生成视频评估（AIGVE）的统一模型，它不仅可以提供数字分数，还可以在评估这些生成的视频时提供多方面的语言评论反馈。我们方法的核心是AIGVE-BENCH 2，这是一个大规模的基准测试，包括2500个人工智能生成的视频和22500个人工注释的详细评论以及九个关键评估方面的数字分数。AIGVE-MACS利用AIGVE-BENCH 2，将最新的视觉语言模型与新的令牌加权损失和动态帧采样策略相结合，以更好地与人类评估者保持一致。跨监督和零样本基准的综合实验表明，AIGVE-ACS在评分相关性和评论质量方面都达到了最先进的性能，显著优于包括GPT-4o和VideoScore在内的先前基线。此外，我们还展示了一个多代理细化框架，其中来自AIGVE-MACS的反馈推动了视频生成的迭代改进，从而提高了53.5%的质量。这项工作为人工智能生成的视频的全面、人性化评估建立了一个新的范式。我们发布AIGVE-BENCH 2和AIGVE-MACShttps://huggingface.co/xiaoliux/AIGVE-MACS. et.al.|[2507.01255](http://arxiv.org/abs/2507.01255)|null|
 
-<p align=right>(<a href=#updated-on-20250705>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250706>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-06-29**|**From Coarse to Fine: Learnable Discrete Wavelet Transforms for Efficient 3D Gaussian Splatting**|3D高斯散点已经成为新颖视图合成中的一种强大方法，可以提供快速的训练和渲染，但代价是不断增长的高斯基元集，这会占用内存和带宽。我们介绍了AutoOpti3DGS，这是一种训练时间框架，可以在不牺牲视觉保真度的情况下自动抑制高斯扩散。关键思想是将输入图像馈送到一系列可学习的正向和反向离散小波变换中，其中低通滤波器保持固定，高通滤波器可学习并初始化为零，辅助正交性损失逐渐激活精细频率。这种小波驱动的从粗到细的过程延迟了冗余精细高斯分布的形成，使3DGS能够首先捕获全局结构，并仅在必要时细化细节。通过广泛的实验，AutoOpti3DGS只需要一个过滤器学习率超参数，与现有的高效3DGS框架无缝集成，并始终如一地产生与内存或存储受限硬件更兼容的稀疏场景表示。 et.al.|[2506.23042](http://arxiv.org/abs/2506.23042)|null|
 |**2025-06-28**|**VoteSplat: Hough Voting Gaussian Splatting for 3D Scene Understanding**|3D高斯散点（3DGS）已成为高质量、实时渲染的强大引擎，用于3D场景的新颖视图合成。然而，现有的方法主要侧重于几何和外观建模，缺乏更深入的场景理解，同时也产生了高昂的训练成本，使原本流线型的可微分渲染管道复杂化。为此，我们提出了VoteSplat，这是一种将霍夫投票与3DGS集成在一起的新颖的3D场景理解框架。具体来说，Segment Anything Model（SAM）用于例如分割、提取对象和生成2D投票图。然后，我们将空间偏移向量嵌入高斯基元中。这些偏移通过将它们与2D图像投票相关联来构建3D空间投票，而深度失真约束则细化了沿深度轴的定位。对于开放词汇表对象本地化，VoteSplat通过投票点将2D图像语义映射到3D点云，降低了与高维CLIP特征相关的训练成本，同时保持了语义的明确性。大量实验证明了VoteSplat在开放词汇3D实例定位、3D点云理解、基于点击的3D对象定位、分层分割和消融研究中的有效性。我们的代码可在https://sy-ja.github.io/votesplat/ et.al.|[2506.22799](http://arxiv.org/abs/2506.22799)|null|
 
-<p align=right>(<a href=#updated-on-20250705>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250706>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-06-30**|**C3VDv2 -- Colonoscopy 3D video dataset with enhanced realism**|计算机视觉技术有可能提高结肠镜检查的诊断性能，但缺乏用于训练和验证的3D结肠镜检查数据集阻碍了它们的发展。本文介绍了C3VDv2，这是高清结肠镜3D视频数据集的第二个版本（v2），具有增强的真实感，旨在促进3D结肠重建算法的定量评估。通过成像60个独特的高保真硅胶结肠体模片段捕获了192个视频序列。为169个结肠镜检查视频提供了地面真实深度、表面法线、光流、遮挡、六自由度姿态、覆盖图和3D模型。胃肠病学家获得的八个模拟筛查结肠镜检查视频提供了真实的姿势。该数据集包括15个以结肠变形为特征的视频，用于定性评估。C3VDv2模拟了3D重建算法的各种具有挑战性的场景，包括粪便碎片、粘液池、血液、遮挡结肠镜镜头的碎片、面部视图和快速相机运动。C3VDv2增强的真实感将允许对3D重建算法进行更稳健和更具代表性的开发和评估。 et.al.|[2506.24074](http://arxiv.org/abs/2506.24074)|null|
 |**2025-06-30**|**Puzzles: Unbounded Video-Depth Augmentation for Scalable End-to-End 3D Reconstruction**|多视图三维重建仍然是计算机视觉领域的核心挑战。最近的方法，如DUST3R及其继任者，直接从图像对中回归点图，而不依赖于已知的场景几何形状或相机参数。然而，这些模型的性能受到可用训练数据的多样性和规模的限制。在这项工作中，我们介绍了Puzzles，这是一种数据增强策略，可以从单个图像或视频剪辑中合成无限量的高质量适配视频深度数据。通过有针对性的图像变换模拟不同的相机轨迹和逼真的场景几何，Puzzles显著增强了数据的多样性。大量实验表明，将Puzzles集成到现有的基于视频的3D重建管道中，可以在不修改底层网络架构的情况下持续提高性能。值得注意的是，仅在用Puzzles增强的原始数据的10%上训练的模型仍然可以达到与在完整数据集上训练的精度相当的精度。代码可在以下网址获得https://jiahao-ma.github.io/puzzles/. et.al.|[2506.23863](http://arxiv.org/abs/2506.23863)|null|
 
-<p align=right>(<a href=#updated-on-20250705>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250706>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-07-03**|**Diffusive charge transport in the gapped 1D Hubbard model at all finite temperatures**|基于流体动力学理论和Kardar-Parisi-Zhang（KPZ）标度的研究发现，在一维Hubbard模型中，自旋和电荷输运在所有温度T>0时都是异常的超扩散，分别在零磁场h=0和零化学势{\mu}=0时。然而，这与最近的确切结果相矛盾，即在非常低的温度下，电荷输运是正常的扩散。在这封信中，我们确定了控制h=0自旋和{\mu}=0电荷输运的不同类型温度依赖性的机制，并发现后者在所有有限温度T>0下都是正常扩散的，这与流体动力学理论和KPZ标度预测相反。 et.al.|[2507.02753](http://arxiv.org/abs/2507.02753)|null|
 |**2025-07-03**|**On the origin of the X-ray emission surrounding PSR B0656+14 in the eROSITA Cal-PV data**|我们对eROSITA Cal PV数据中PSR B0656+14周围的扩展X射线发射进行了警示性评估，以回应Niu等人2025年的工作（arXiv:2501.17046）。众所周知，eROSITA PSF模型低估了机翼超过1'的排放。这使得无法可靠地检测到arXiv:2501.17046中声称的PSR B0656+14周围的微弱星云发射。此外，光谱分析表明，周围的漫射X射线可以用与脉冲星发射本身相同的2BB+PL模型来拟合。这强烈否定了arXiv:2501.17046的作者的解释，即（4-10）'区域的X射线发射与高空水切伦科夫天文台（HAWC）最近发现的度尺度伽马射线晕有关，并表明它起源于脉冲星，这是由于PSF的翅膀造成的。 et.al.|[2507.02750](http://arxiv.org/abs/2507.02750)|null|
 
-<p align=right>(<a href=#updated-on-20250705>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250706>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-05-30**|**3D Gaussian Splat Vulnerabilities**|随着3D高斯散布（3DGS）在安全关键应用中的使用越来越多，对手如何操纵场景造成伤害？我们介绍了CLOAK，这是第一种利用视图相关的高斯外观（颜色和纹理随视角而变化）来嵌入仅从特定视点可见的对抗性内容的攻击。我们进一步演示了DAGGER，这是一种有针对性的对抗攻击，直接扰乱3D高斯分布，而无需访问底层训练数据，通过投影梯度下降等既定方法欺骗多级目标检测器，如Faster R-CNN。这些攻击突显了3DGS中未被充分探索的漏洞，为自主导航和其他安全关键的3DGS应用程序的机器人学习带来了新的潜在威胁。 et.al.|[2506.00280](http://arxiv.org/abs/2506.00280)|**[link](https://github.com/poloclub/3D-Gaussian-Splat-Attack)**|
 |**2025-05-29**|**AnySplat: Feed-forward 3D Gaussian Splatting from Unconstrained Views**|我们介绍了AnySplat，这是一种用于从未校准的图像集进行新颖视图合成的前馈网络。与需要已知相机姿态和每个场景优化的传统神经渲染管道，或最近在密集视图的计算权重下弯曲的前馈方法相比，我们的模型可以在一次拍摄中预测一切。单次前向传递产生一组3D高斯基元，对场景几何和外观进行编码，并为每个输入图像生成相应的相机内部和外部。这种统一的设计可以轻松扩展到随意捕获的多视图数据集，而无需任何姿势注释。在广泛的零拍摄评估中，AnySplat在稀疏和密集视图场景中都能匹配姿势感知基线的质量，同时超越现有的无姿势方法。此外，与基于优化的神经场相比，它大大降低了渲染延迟，为无约束的捕获设置带来了实时新颖的视图合成。项目页面：https://city-super.github.io/anysplat/ et.al.|[2505.23716](http://arxiv.org/abs/2505.23716)|null|
 
-<p align=right>(<a href=#updated-on-20250705>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250706>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
