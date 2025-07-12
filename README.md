@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.07.11
+## Updated on 2025.07.12
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-07-09**|**FIFA: Unified Faithfulness Evaluation Framework for Text-to-Video and Video-to-Text Generation**|视频多模态大型语言模型（VideoMLLM）在视频到文本和文本到视频任务方面都取得了显著进展。然而，他们经常出现幻觉，产生与视觉输入相矛盾的内容。现有的评估方法仅限于一项任务（例如V2T），也无法评估开放式、自由形式反应中的幻觉。为了解决这一差距，我们提出了FIFA，这是一个统一的FaIthFulness评估框架，可以提取全面的描述性事实，通过时空语义依赖图对其语义依赖关系进行建模，并使用VideoQA模型进行验证。我们进一步介绍了后修正，这是一种基于工具的修正框架，可以修正幻觉内容。大量的实验表明，与现有的评估方法相比，FIFA更符合人类的判断，并且后校正有效地提高了文本和视频生成中的事实一致性。 et.al.|[2507.06523](http://arxiv.org/abs/2507.06523)|null|
 |**2025-07-08**|**Bridging Sequential Deep Operator Network and Video Diffusion: Residual Refinement of Spatio-Temporal PDE Solutions**|由于其训练稳定性和高感知保真度，视频扩散模型最近在视频生成、修复和域翻译方面树立了标准。基于这些优势，我们将条件视频扩散重新用作由偏微分方程（PDE）控制的时空场的物理替代品。我们的两阶段代理首先应用顺序深度算子网络（S-DeepONet），从规定的边界或加载条件产生粗略的、物理一致的先验。然后将先验传递给条件视频扩散模型，该模型只学习残差：地面真实值和S-DeepONet预测之间的逐点差异。通过将学习负担从完整解转移到其更小的残差空间，扩散可以专注于锐化高频结构，而不会牺牲全局一致性。该框架基于两个不同的基准进行评估：（i）涡流主导的盖驱动腔流和（ii）狗骨试样的拉伸塑性变形。在这些数据集中，混合替代物始终优于单级替代物，将流动问题的平均相对L2误差从4.57%降至0.83%，将塑性问题的平均相关L2误差从4.42%降至2.94%，分别相对提高了81.8%和33.5%。混合方法不仅降低了定量误差，还提高了视觉质量，明显地恢复了精细的空间细节。这些结果表明，（i）在物理感知先验上调节扩散能够忠实地重建局部特征，（ii）残差学习减少了问题，加速了收敛并提高了精度，以及（iii）相同的架构从不可压缩流无缝转换为非线性弹塑性，而无需针对特定问题进行架构修改，突出了其对非线性、含时连续体的广泛适用性。 et.al.|[2507.06133](http://arxiv.org/abs/2507.06133)|null|
 
-<p align=right>(<a href=#updated-on-20250711>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250712>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-07-01**|**Enabling Robust, Real-Time Verification of Vision-Based Navigation through View Synthesis**|这项工作介绍了VISY-REVE：一种用于验证基于视觉的导航图像处理算法的新型流水线。传统的验证方法，如合成渲染或机器人测试台采集，存在设置困难和运行速度慢的问题。相反，我们建议用新姿态的合成视图实时增强图像数据集。这种方法在开放或闭环中从稀疏的、预先存在的数据集中创建连续的轨迹。此外，我们引入了一种新的相机姿态之间的距离度量，即视线偏差距离，它比现有的度量更适合视图合成。利用它，开发了一种提高图像数据集密度的方法。 et.al.|[2507.02993](http://arxiv.org/abs/2507.02993)|null|
 |**2025-07-03**|**DreamComposer++: Empowering Diffusion Models with Multi-View Conditions for 3D Content Generation**|利用预训练的2D扩散模型的最新进展实现了从单个野外图像生成高质量的新颖视图。然而，由于缺乏来自多个视角的信息，现有作品在产生可控的新颖视角方面面临挑战。在本文中，我们提出了DreamComposer++，这是一个灵活且可扩展的框架，旨在通过结合多视图条件来改进当前的视图感知扩散模型。具体来说，DreamComposer++利用视图感知的3D提升模块从各种视图中提取对象的3D表示。然后通过多视图特征融合模块将这些表示聚合并渲染为目标视图的潜在特征。最后，将获得的目标视图特征整合到预训练的图像或视频扩散模型中，以进行新的视图合成。实验结果表明，DreamComposer++与尖端的视图感知扩散模型无缝集成，增强了它们从多视图条件生成可控新视图的能力。这一进步促进了可控的3D对象重建，并实现了广泛的应用。 et.al.|[2507.02299](http://arxiv.org/abs/2507.02299)|null|
 
-<p align=right>(<a href=#updated-on-20250711>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250712>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-07-05**|**Move to Understand a 3D Scene: Bridging Visual Grounding and Exploration for Efficient and Versatile Embodied Navigation**|体现场景理解不仅需要理解已经观察到的视觉空间信息，还需要确定在3D物理世界中下一步探索的位置。现有的3D视觉语言（3D-VL）模型主要侧重于从3D重建的静态观测中接地物体，如网格和点云，但缺乏主动感知和探索其环境的能力。为了解决这一局限性，我们引入了\underline{\textbf{M}-ove \underline{\textbf{1t}o\underline}understand（\textbf{\model}），这是一个统一的框架，将主动感知与\underline{0textbf{3D}}视觉语言学习相结合，使具身代理能够有效地探索和理解他们的环境。这是通过三项关键创新实现的：1）基于在线查询的表示学习，实现了从RGB-D帧直接构建空间记忆，消除了显式3D重建的需要。2）接地和勘探的统一目标，将未勘探的位置表示为边界查询，共同优化对象接地和边界选择。3）结合\textbf的端到端轨迹学习{V}ision-\textbf{L}anguage-\textbf{E}xploration从模拟和现实世界的RGB-D序列中收集了超过一百万条不同的轨迹进行预训练。对各种嵌入式导航和问答基准的广泛评估表明，MTU3D在HM3D-OVON、GOAT Bench、SG3D和A-EQA上的成功率分别比最先进的强化学习和模块化导航方法高14%、23%、9%和2%。\ model的多功能性使其能够使用各种输入方式进行导航，包括类别、语言描述和参考图像。这些发现强调了弥合视觉基础和探索具身智能的重要性。 et.al.|[2507.04047](http://arxiv.org/abs/2507.04047)|null|
 |**2025-07-05**|**Robust Low-light Scene Restoration via Illumination Transition**|考虑到输入图像中存在的低可见度和高ISO噪声，从低光多视图图像合成正常光新视图是一项重要但具有挑战性的任务。现有的低光增强方法往往难以有效地预处理这种低光输入，因为它们未能考虑多个视图之间的相关性。尽管其他最先进的方法引入了与照明相关的组件，为问题提供了替代解决方案，但它们通常会导致颜色失真和伪影等缺点，并且它们提供的去噪效果有限。在这篇论文中，我们提出了一种新的鲁棒低光场景恢复框架（RoSe），该框架通过将任务表述为3D空间中的照度过渡估计问题，将其概念化为专门的渲染任务，能够在正常光照条件下从低光多视图图像输入中有效地合成新视图。这种多视图一致的照度过渡场在低光和正常光条件之间建立了牢固的联系。通过进一步利用光照固有的低秩特性来约束过渡表示，我们在没有复杂的2D技术或显式噪声建模的情况下实现了更有效的去噪。为了实现RoSe，我们设计了一个简洁的双分支架构，并引入了一个低秩去噪模块。实验表明，在标准基准测试中，RoSe在渲染质量和多视图一致性方面明显优于最先进的模型。代码和数据可在以下网址获得https://pegasus2004.github.io/RoSe. et.al.|[2507.03976](http://arxiv.org/abs/2507.03976)|null|
 
-<p align=right>(<a href=#updated-on-20250711>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250712>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-07-10**|**Benchmarking Content-Based Puzzle Solvers on Corrupted Jigsaw Puzzles**|基于内容的解谜器得到了广泛的研究，证明了计算技术的重大进步。然而，他们的评估往往缺乏对现实世界应用至关重要的现实挑战，例如重新组装碎片或撕碎的文档。在这项工作中，我们研究了最先进的基于内容的解谜器的鲁棒性，这些解谜器引入了三种类型的拼图损坏：缺失的碎片、侵蚀的边缘和侵蚀的内容。我们评估了启发式和基于深度学习的求解器，分析了它们处理这些腐败的能力，并确定了关键的局限性。我们的结果表明，如果更多的拼图被破坏，为标准拼图开发的解算器的性能会迅速下降。然而，深度学习模型可以通过使用增强数据进行微调来显著提高其鲁棒性。值得注意的是，先进的位置扩散模型适应得特别好，在大多数实验中都优于竞争对手。基于我们的研究结果，我们强调了加强现实世界人工制品自动重建的有前景的研究方向。 et.al.|[2507.07828](http://arxiv.org/abs/2507.07828)|null|
 |**2025-07-10**|**First-passage time for PDifMPs: an Exact simulation approach for time-varying thresholds**|分段扩散马尔可夫过程（PDifMP）对于连续动态被漂移和扩散的突然变化和/或变化中断的系统建模非常有价值。此类模型中的首次通过时间（FPT）在理解过程何时首次到达临界边界方面起着核心作用。在许多系统中，随时间变化的阈值提供了一个灵活的框架来反映不断变化的条件，这使得它们对于现实建模至关重要。我们提出了一种混合精确模拟方案，用于计算PDifMP对时间依赖阈值的FPT。传统上存在用于纯扩散的精确方法，使用布朗运动作为辅助过程，并接受具有概率权重的采样路径。在跳跃之间，PDifMP演变为扩散，使我们能够在每个跳跃间隔内应用精确的方法。当在一个区间内没有检测到阈值交叉时，主要的挑战出现了：然后我们需要跳跃时间的过程值，为此，我们引入了一种方法来模拟条件约束的辅助过程，并推导出相应的接受概率。此外，我们证明了该方法的收敛性，并用数值例子进行了说明。 et.al.|[2507.07822](http://arxiv.org/abs/2507.07822)|null|
 
-<p align=right>(<a href=#updated-on-20250711>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250712>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-06-02**|**Neural shape reconstruction from multiple views with static pattern projection**|基于主动立体的3D形状测量对于各种目的至关重要，如工业检测、逆向工程和医疗系统，因为它具有准确获取无纹理物体形状的强大能力。有源立体声系统通常由彼此紧密固定的相机和图案投影仪组成，需要在相机和投影仪之间进行精确校准，这反过来又降低了系统的可用性。如果在形状扫描过程中可以自由移动相机和投影仪，这将大大提高系统可用性的便利性。为了实现这一点，我们提出了一种技术，通过在相机和投影仪都在运动时捕获多个图像来恢复目标对象的形状，并且它们的相对姿态由我们的神经符号距离场（NeuralSDF）使用新颖的体积微分渲染技术自动校准。在实验中，通过使用合成图像和真实图像进行3D重建来评估所提出的方法。 et.al.|[2506.01389](http://arxiv.org/abs/2506.01389)|null|
 |**2025-05-30**|**3D Gaussian Splat Vulnerabilities**|随着3D高斯散布（3DGS）在安全关键应用中的使用越来越多，对手如何操纵场景造成伤害？我们介绍了CLOAK，这是第一种利用视图相关的高斯外观（颜色和纹理随视角而变化）来嵌入仅从特定视点可见的对抗性内容的攻击。我们进一步演示了DAGGER，这是一种有针对性的对抗攻击，直接扰乱3D高斯分布，而无需访问底层训练数据，通过投影梯度下降等既定方法欺骗多级目标检测器，如Faster R-CNN。这些攻击突显了3DGS中未被充分探索的漏洞，为自主导航和其他安全关键的3DGS应用程序的机器人学习带来了新的潜在威胁。 et.al.|[2506.00280](http://arxiv.org/abs/2506.00280)|**[link](https://github.com/poloclub/3D-Gaussian-Splat-Attack)**|
 
-<p align=right>(<a href=#updated-on-20250711>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250712>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
