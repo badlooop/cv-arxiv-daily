@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.07.16
+## Updated on 2025.07.17
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-07-10**|**Geometry Forcing: Marrying Video Diffusion and 3D Representation for Consistent World Modeling**|视频本质上代表了动态3D世界的2D投影。然而，我们的分析表明，仅基于原始视频数据训练的视频扩散模型往往无法在其学习的表示中捕捉到有意义的几何感知结构。为了弥合视频扩散模型与物理世界的潜在3D性质之间的差距，我们提出了几何强迫，这是一种简单而有效的方法，可以鼓励视频扩散模型内化潜在的3D表示。我们的关键见解是通过将模型的中间表示与预训练的几何基础模型的特征对齐，将其引导到几何感知结构。为此，我们引入了两个互补的对齐目标：角度对齐，通过余弦相似性实现方向一致性，以及尺度对齐，通过从归一化扩散表示中回归非归一化几何特征来保留尺度相关信息。我们在相机视图条件和动作条件的视频生成任务上评估了几何强迫。实验结果表明，与基线方法相比，我们的方法大大提高了视觉质量和3D一致性。项目页面：https://GeometryForcing.github.io. et.al.|[2507.07982](http://arxiv.org/abs/2507.07982)|null|
 |**2025-07-10**|**Martian World Models: Controllable Video Synthesis with Physically Accurate 3D Reconstructions**|合成逼真的火星景观视频对于任务排练和机器人模拟至关重要。然而，由于缺乏高质量的火星数据以及火星和地球图像之间的巨大领域差距，这项任务带来了独特的挑战。为了应对这些挑战，我们提出了一个由两个关键部分组成的整体解决方案：1）数据管理管道多模式火星合成（M3arsSynth），它从来自美国国家航空航天局行星数据系统（PDS）的真实立体导航图像重建3D火星环境，并渲染高保真多视图3D视频序列。2）火星地形视频生成器MarsGen，它合成了视觉逼真、几何上与数据中编码的3D结构一致的新颖视频。我们的M3arsSynth引擎覆盖了广泛的火星地形和采集日期，能够以公制分辨率生成物理上精确的3D表面模型。MarsGen在M3arsSynth数据上进行了微调，可以合成以初始图像帧为条件的视频，也可以选择相机轨迹或文本提示，从而在新环境中生成视频。实验结果表明，我们的方法优于在地面数据集上训练的视频合成模型，实现了卓越的视觉保真度和3D结构一致性。 et.al.|[2507.07978](http://arxiv.org/abs/2507.07978)|null|
 
-<p align=right>(<a href=#updated-on-20250716>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250717>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-07-06**|**A View-consistent Sampling Method for Regularized Training of Neural Radiance Fields**|神经辐射场（NeRF）已成为场景表示和3D恢复的一个引人注目的框架。为了提高其在真实世界数据上的性能，深度正则化已被证明是最有效的方法。然而，深度估计模型不仅在训练中需要昂贵的3D监督，而且还存在泛化问题。因此，深度估计在实践中可能是错误的，特别是对于室外无界场景。在本文中，我们建议使用视图一致分布而不是固定深度值估计来正则化NeRF训练。具体而言，通过利用来自基础模型的低级颜色特征和高级提取特征，在每条射线采样的3D点的投影2D像素位置计算分布。通过从视图一致性分布中采样，对NeRF的训练进行隐式正则化。我们还利用深度推进损失与采样技术相结合，共同提供有效的正则化，以消除故障模式。在公共数据集中的各种场景上进行的广泛实验表明，我们提出的方法可以产生比最先进的NeRF变体以及不同的深度正则化方法更好的新视图合成结果。 et.al.|[2507.04408](http://arxiv.org/abs/2507.04408)|null|
 |**2025-07-09**|**Gaussian-LIC2: LiDAR-Inertial-Camera Gaussian Splatting SLAM**|本文介绍了第一个照片级逼真的激光雷达惯性相机高斯散斑SLAM系统，该系统同时解决了视觉质量、几何精度和实时性能问题。所提出的方法在连续时间轨迹优化框架内执行鲁棒和精确的姿态估计，同时使用相机和LiDAR数据实时增量重建3D高斯地图。由此产生的贴图能够对RGB图像和深度贴图进行高质量、实时的新颖视图渲染。为了有效解决LiDAR未覆盖区域的重建不足问题，我们采用了一种轻量级的零样本深度模型，该模型将RGB外观线索与稀疏LiDAR测量结果协同结合，以生成密集的深度图。深度完成可在LiDAR盲区中实现可靠的高斯初始化，显著提高稀疏LiDAR传感器的系统适用性。为了提高几何精度，我们使用稀疏但精确的激光雷达深度来监督高斯地图优化，并使用精心设计的CUDA加速策略来加速它。此外，我们还探讨了增量重建的高斯映射如何提高里程计的鲁棒性。通过将高斯图的光度约束紧密结合到连续时间因子图优化中，我们展示了在激光雷达退化场景下改进的姿态估计。我们还通过扩展我们精心设计的系统来展示下游应用，包括视频帧插值和快速3D网格提取。为了支持严格的评估，我们构建了一个专用的LiDAR惯性相机数据集，其中包含地面真实姿态、深度图和外推轨迹，用于评估无序的新视图合成。数据集和代码都将在项目页面上公开https://xingxingzuo.github.io/gaussian_lic2. et.al.|[2507.04004](http://arxiv.org/abs/2507.04004)|null|
 
-<p align=right>(<a href=#updated-on-20250716>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250717>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-07-10**|**Stable-Hair v2: Real-World Hair Transfer via Multiple-View Diffusion Model**|虽然基于扩散的方法在捕捉多样化和复杂的发型方面表现出了令人印象深刻的能力，但它们生成一致和高质量的多视图输出的能力——对于数字人类和虚拟化身等现实世界的应用至关重要——仍然没有得到充分的探索。在这篇论文中，我们提出了Stable Hair v2，这是一种新的基于扩散的多视图头发转移框架。据我们所知，这是第一项利用多视图扩散模型在多个视角下实现鲁棒、高保真和视图一致的头发转移的工作。我们介绍了一种全面的多视图训练数据生成管道，包括基于扩散的秃顶转换器、数据增强修复模型和面部微调的多视图扩散模型，用于生成高质量的三元组数据，包括秃顶图像、参考发型和视向对齐的源秃顶对。我们的多视图毛发转移模型集成了用于姿势调节的极方位嵌入和时间注意力层，以确保视图之间的平滑过渡。为了优化该模型，我们设计了一种新的多阶段训练策略，包括姿势可控的潜在IdentityNet训练、拔毛器训练和时间注意力训练。大量实验表明，我们的方法能够准确地将详细逼真的发型转移到源对象，同时在不同视图之间实现无缝一致的结果，显著优于现有方法，并在多视图头发转移方面建立了一个新的基准。代码可在以下网址公开获取https://github.com/sunkymepro/StableHairV2. et.al.|[2507.07591](http://arxiv.org/abs/2507.07591)|null|
 |**2025-07-10**|**EscherNet++: Simultaneous Amodal Completion and Scalable View Synthesis through Masked Fine-Tuning and Enhanced Feed-Forward 3D Reconstruction**|我们提出了EscherNet++，这是一种掩蔽的微调扩散模型，可以以零样本的方式合成具有amodal完成能力的对象的新视图。现有的方法利用多个阶段和复杂的管道，首先产生图像缺失部分的幻觉，然后进行新颖的视图合成，这种方法没有考虑跨视图依赖性，需要为单独的阶段进行冗余存储和计算。相反，我们应用了掩码微调，包括输入级和特征级掩码，以实现端到端模型，并提高了合成新视图和进行无模完成的能力。此外，我们在无需额外训练的情况下，将我们的模型与其他前馈图像到网格模型进行了实证整合，并由于其能够合成任意查询视图，重建时间缩短了95%，从而获得了有竞争力的结果。我们的方法的可扩展性进一步增强了快速3D重建。尽管在较小的数据集和批量大小上进行了微调，但我们的方法取得了最先进的结果，在10个输入设置下的遮挡任务上，PSNR提高了3.9，Volume IoU提高了0.28，同时也推广到了现实世界的遮挡重建。 et.al.|[2507.07410](http://arxiv.org/abs/2507.07410)|null|
 
-<p align=right>(<a href=#updated-on-20250716>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250717>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-07-15**|**Diffusion-Based Imaginative Coordination for Bimanual Manipulation**|双手操作在机器人技术中至关重要，可以实现工业自动化和家庭服务中的复杂任务。然而，由于高维动作空间和复杂的协调要求，它带来了重大挑战。虽然视频预测最近被研究用于表示学习和控制，利用其捕获丰富的动态和行为信息的能力，但其增强双手协调的潜力仍未得到充分探索。为了弥合这一差距，我们提出了一个统一的基于扩散的框架，用于视频和动作预测的联合优化。具体来说，我们提出了一种多帧潜在预测策略，该策略在压缩的潜在空间中对未来状态进行编码，同时保留了与任务相关的特征。此外，我们引入了一种单向注意力机制，其中视频预测以动作为条件，而动作预测仍然独立于视频预测。这种设计允许我们在推理过程中省略视频预测，显著提高了效率。在两个模拟基准和一个真实世界设置上的实验表明，使用我们的方法，成功率比强基线ACT有了显著提高，ALOHA的成功率提高了\textbf{24.9\%}，RoboTwin的成功率增加了\textbf{11.1\%}。我们的模型和代码可在以下网址公开获取https://github.com/return-sleep/Diffusion_based_imaginative_Coordination. et.al.|[2507.11296](http://arxiv.org/abs/2507.11296)|null|
 |**2025-07-15**|**Markov approximation for controlled Hawkes Jump-Diffusions with general kernels**|我们提出了一个跳跃扩散的马尔可夫近似，其跳跃部分包含在由一般（可能是非单调）核驱动的强度霍克斯过程中。在最小可积性条件下，核可以用指数函数的线性组合来近似。这意味着霍克斯跳跃扩散可以用马尔可夫跳跃扩散来近似。我们通过将这种近似应用于一类随机控制问题来说明它的有用性。 et.al.|[2507.11294](http://arxiv.org/abs/2507.11294)|null|
 
-<p align=right>(<a href=#updated-on-20250716>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250717>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-06-02**|**Neural shape reconstruction from multiple views with static pattern projection**|基于主动立体的3D形状测量对于各种目的至关重要，如工业检测、逆向工程和医疗系统，因为它具有准确获取无纹理物体形状的强大能力。有源立体声系统通常由彼此紧密固定的相机和图案投影仪组成，需要在相机和投影仪之间进行精确校准，这反过来又降低了系统的可用性。如果在形状扫描过程中可以自由移动相机和投影仪，这将大大提高系统可用性的便利性。为了实现这一点，我们提出了一种技术，通过在相机和投影仪都在运动时捕获多个图像来恢复目标对象的形状，并且它们的相对姿态由我们的神经符号距离场（NeuralSDF）使用新颖的体积微分渲染技术自动校准。在实验中，通过使用合成图像和真实图像进行3D重建来评估所提出的方法。 et.al.|[2506.01389](http://arxiv.org/abs/2506.01389)|null|
 |**2025-05-30**|**3D Gaussian Splat Vulnerabilities**|随着3D高斯散布（3DGS）在安全关键应用中的使用越来越多，对手如何操纵场景造成伤害？我们介绍了CLOAK，这是第一种利用视图相关的高斯外观（颜色和纹理随视角而变化）来嵌入仅从特定视点可见的对抗性内容的攻击。我们进一步演示了DAGGER，这是一种有针对性的对抗攻击，直接扰乱3D高斯分布，而无需访问底层训练数据，通过投影梯度下降等既定方法欺骗多级目标检测器，如Faster R-CNN。这些攻击突显了3DGS中未被充分探索的漏洞，为自主导航和其他安全关键的3DGS应用程序的机器人学习带来了新的潜在威胁。 et.al.|[2506.00280](http://arxiv.org/abs/2506.00280)|**[link](https://github.com/poloclub/3D-Gaussian-Splat-Attack)**|
 
-<p align=right>(<a href=#updated-on-20250716>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250717>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
