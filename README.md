@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.07.19
+## Updated on 2025.07.20
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -32,7 +32,7 @@
 |**2025-07-14**|**Flows and Diffusions on the Neural Manifold**|基于扩散和流的生成模型在图像合成、视频生成和自然语言建模等领域取得了显著成功。在这项工作中，我们通过利用最新技术将这些进展扩展到权重空间学习，以结合从优化动力学中得出的结构先验。我们方法的核心是将梯度下降引起的轨迹建模为轨迹推理问题。我们在梯度流匹配的框架下统一了几种轨迹推理技术，为将优化路径视为归纳偏差提供了一个理论框架。我们进一步探索了架构和算法选择，包括通过伴随匹配进行奖励微调，使用自编码器进行潜在权重表示，对特定任务的上下文数据进行条件化，以及采用开明统一等信息源分布。实验证明，我们的方法在生成分布内权重方面与基线相匹配或超越基线，改进了下游训练的初始化，并支持微调以提高性能。最后，我们说明了安全关键系统中的一个实际应用：检测有害的协变量变化，我们的方法优于最接近的可比基线。 et.al.|[2507.10623](http://arxiv.org/abs/2507.10623)|null|
 |**2025-07-12**|**$I^{2}$-World: Intra-Inter Tokenization for Efficient Dynamic 4D Scene Forecasting**|通过基于占用的世界模型预测3D场景的演变并生成看不见的场景，为解决自动驾驶系统中的拐角情况提供了巨大的潜力。虽然标记化彻底改变了图像和视频生成，但有效标记复杂的3D场景仍然是3D世界模型的一个关键挑战。为了解决这个问题，我们提出了$I^{2}$-World，这是一个4D占用率预测的有效框架。我们的方法将场景标记分离为场景内和场景间标记器。场景内标记器采用多尺度残差量化策略来分层压缩3D场景，同时保留空间细节。场景间标记器剩余地聚合了时间步长之间的时间依赖关系。这种双重设计保留了3D标记器的紧凑性，同时保留了4D标记器的动态表现力。与仅解码器GPT风格的自回归模型不同，$I^{2}$-World采用编码器-解码器架构。编码器从当前场景聚合空间上下文，并预测变换矩阵，以实现对场景生成的高级控制。解码器以该矩阵和历史令牌为条件，确保生成过程中的时间一致性。实验表明，$I^{2}$ -World实现了最先进的性能，在用于4D占用预测的mIoU和IoU中分别比现有方法高出25.1%和36.9%，同时表现出卓越的计算效率：它只需要2.9 GB的训练内存，并以37.0 FPS的速度实现实时推理。我们的代码可在https://github.com/lzzzzzm/II-World. et.al.|[2507.09144](http://arxiv.org/abs/2507.09144)|null|
 
-<p align=right>(<a href=#updated-on-20250719>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250720>back to top</a>)</p>
 
 ## 3D
 
@@ -49,7 +49,7 @@
 |**2025-07-10**|**RegGS: Unposed Sparse Views Gaussian Splatting with 3DGS Registration**|3D高斯散斑（3DGS）已经证明了它在从无偏振图像重建场景方面的潜力。然而，由于先验知识有限，基于优化的3DGS方法难以处理稀疏视图。同时，前馈高斯方法受到输入格式的限制，这使得合并更多的输入视图变得具有挑战性。为了应对这些挑战，我们提出了RegGS，这是一个基于3D高斯配准的框架，用于重建无基稀疏视图。RegGS将前馈网络生成的局部3D高斯对齐为全局一致的3D高斯表示。从技术上讲，我们实现了一种熵正则化的Sinkhorn算法，以有效地求解最优传输混合2-Wasserstein $（\text{MW}_2)$distance，用作$\mathrm{Sim}（3）$空间中高斯混合模型（GMM）的对齐度量。此外，我们设计了一个联合3DGS注册模块，该模块集成了$\text{MW}_2$ 距离、光度一致性和深度几何体。这实现了从粗到细的配准过程，同时准确地估计相机姿态并对齐场景。在RE10K和ACID数据集上的实验表明，RegGS以高保真度有效地配准了局部高斯分布，实现了精确的姿态估计和高质量的新颖视图合成。项目页面：https://3dagentworld.github.io/reggs/. et.al.|[2507.08136](http://arxiv.org/abs/2507.08136)|null|
 |**2025-07-10**|**RTR-GS: 3D Gaussian Splatting for Inverse Rendering with Radiance Transfer and Reflection**|3D高斯散斑（3DGS）在新颖的视图合成中表现出了令人印象深刻的能力。然而，渲染反射对象仍然是一个重大挑战，特别是在反向渲染和重新照明方面。我们介绍了RTR-GS，这是一种新型的逆渲染框架，能够稳健地渲染具有任意反射特性的对象，分解BRDF和照明，并提供可靠的重新照明结果。给定一组多视图图像，我们的方法通过混合渲染模型有效地恢复了几何结构，该模型将用于辐射传输的前向渲染与用于反射的延迟渲染相结合。这种方法成功地分离了高频和低频外观，减轻了处理高频细节时由球面谐波过拟合引起的浮动伪影。我们使用额外的基于物理的延迟渲染分支进一步细化BRDF和照明分解。实验结果表明，我们的方法在保持高效训练推理过程的同时，增强了新的视图合成、正常估计、分解和重新照明。 et.al.|[2507.07733](http://arxiv.org/abs/2507.07733)|null|
 
-<p align=right>(<a href=#updated-on-20250719>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250720>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -66,7 +66,7 @@
 |**2025-07-11**|**An Efficient Approach for Muscle Segmentation and 3D Reconstruction Using Keypoint Tracking in MRI Scan**|磁共振成像（MRI）能够对肌肉结构进行无创、高分辨率的分析。然而，自动分割仍然受到高计算成本、对大型训练数据集的依赖以及分割较小肌肉准确性降低的限制。基于卷积神经网络（CNN）的方法虽然强大，但往往存在大量的计算开销、有限的泛化能力以及在不同人群中的可解释性差。本研究提出了一种基于关键点跟踪的无训练分割方法，该方法将关键点选择与Lucas-Kanade光流相结合。根据关键点选择策略，所提出的方法实现了0.6至0.7的平均Dice相似系数（DSC），其性能与最先进的基于CNN的模型相当，同时大大降低了计算需求并提高了可解释性。这种可扩展的框架为临床和研究应用中的肌肉分割提供了一种稳健且可解释的替代方案。 et.al.|[2507.08690](http://arxiv.org/abs/2507.08690)|null|
 |**2025-07-11**|**Adaptive Framework for Ambient Intelligence in Rehabilitation Assistance**|本文介绍了环境智能康复支持（AIRS）框架，这是一种针对家庭康复环境量身定制的先进的基于人工智能的解决方案。AIRS集成了实时3D重建（RT-3DR）、智能导航和大型视觉语言模型（VLM）等尖端技术，为机器引导的身体康复创建了一个全面的系统。在全膝关节置换术（TKR）后的康复场景中，利用263个视频记录的数据库进行评估，展示了通用AIRS框架。AIRS中使用智能手机对生活空间进行RT-3DR，并有一个与身体匹配的化身来提供关于锻炼的视觉反馈。这个化身在（a）优化运动配置，包括相机放置、患者定位和初始姿势，以及（b）解决隐私问题和促进遵守《人工智能法案》方面是必要的。该系统引导用户完成录制过程，以确保收集正确录制的视频。AIRS采用两种反馈机制：（i）视觉3D反馈，可以在预先录制的临床练习和患者家庭记录之间进行直接比较；（ii）VLM生成的反馈，为练习错误提供详细的解释和纠正。该框架还为视力和听力受损的人提供支持。它还具有模块化设计，可以适应更广泛的康复环境。AIRS软件组件可供进一步使用和定制。 et.al.|[2507.08624](http://arxiv.org/abs/2507.08624)|null|
 
-<p align=right>(<a href=#updated-on-20250719>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250720>back to top</a>)</p>
 
 ## Diffusion
 
@@ -83,7 +83,7 @@
 |**2025-07-17**|**Two-sided heat kernel bounds for $\sqrt{8/3}$-Liouville Brownian motion**|刘维尔布朗运动（LBM）是刘维尔量子引力（LQG）表面上的正则扩散过程。在这项工作中，我们根据$\sqrt{8/3}$-LQG度量，在$\gamma=\sqrt｛8/3}$ 时，为LBM的热核建立了上下限，该度量在指数中急剧上升到多对数因子。 et.al.|[2507.13269](http://arxiv.org/abs/2507.13269)|null|
 |**2025-07-17**|**On Accelerated Mixing of the No-U-turn Sampler**|变分弱能理论的最新进展表明，在临界状态下，随机哈密顿蒙特卡罗可以显著加速其收敛，从而提高扩散动力学的采样性能。手动临界调谐在实践中不可行，这促使了自动化算法解决方案的出现，特别是No-U-turn采样器。除了其实证成功之外，还缺少对这种方法实现加速收敛能力的严格研究。我们启动了这项研究，将集中测量方法与哈密顿蒙特卡罗的基于耦合的混合分析相结合，以检查自动调谐机制。在某些高斯目标分布中，这可以精确地表征采样器的行为，特别是在严格的混合保证中，描述了算法在实现加速收敛方面的能力和局限性。 et.al.|[2507.13259](http://arxiv.org/abs/2507.13259)|null|
 
-<p align=right>(<a href=#updated-on-20250719>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250720>back to top</a>)</p>
 
 ## NeRF
 
@@ -100,7 +100,7 @@
 |**2025-06-03**|**ViTNF: Leveraging Neural Fields to Boost Vision Transformers in Generalized Category Discovery**|广义类别发现（GCD）是开放世界识别中一项非常流行的任务，旨在使用已知的类数据识别未知的类样本。通过利用预训练、元训练和微调，ViT实现了出色的少镜头学习能力。它的MLP头是一个前馈网络，在同一过程中与整个网络同步训练，在没有充分利用特征提取器的能力的情况下增加了训练成本和难度。本文提出了一种新的架构，将MLP头替换为基于神经场的MLP头。我们首先提出了一种新的静态神经场函数来描述神经场的活动分布，然后使用两个静态神经场功能来构建一个高效的少镜头分类器。这种基于神经场的分类器由两个耦合的静态神经场组成。它按基本字段存储支持样本的特征信息，按高级字段存储已知类别，按跨字段连接存储支持样本类别信息。我们用提出的NF分类器替换MLP头部，从而产生了一种新的架构ViTNF，并通过在源任务上预训练特征提取器和在元测试中分别用支持样本训练NF分类器来简化三阶段训练模式，显著降低了ViT对训练样本的需求和模型训练的难度。为了提高模型识别新类别的能力，我们提供了一种有效的算法来确定基本场的横向相互作用尺度。实验结果表明，我们的模型在CIFAR-100、ImageNet-100、CUB-200和标准汽车上超越了现有的最先进的方法，在新类别和所有类别中分别实现了19%和16%的显著精度提高，表明了GCD的显著优势。 et.al.|[2506.02367](http://arxiv.org/abs/2506.02367)|null|
 |**2025-06-02**|**Neural shape reconstruction from multiple views with static pattern projection**|基于主动立体的3D形状测量对于各种目的至关重要，如工业检测、逆向工程和医疗系统，因为它具有准确获取无纹理物体形状的强大能力。有源立体声系统通常由彼此紧密固定的相机和图案投影仪组成，需要在相机和投影仪之间进行精确校准，这反过来又降低了系统的可用性。如果在形状扫描过程中可以自由移动相机和投影仪，这将大大提高系统可用性的便利性。为了实现这一点，我们提出了一种技术，通过在相机和投影仪都在运动时捕获多个图像来恢复目标对象的形状，并且它们的相对姿态由我们的神经符号距离场（NeuralSDF）使用新颖的体积微分渲染技术自动校准。在实验中，通过使用合成图像和真实图像进行3D重建来评估所提出的方法。 et.al.|[2506.01389](http://arxiv.org/abs/2506.01389)|null|
 
-<p align=right>(<a href=#updated-on-20250719>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250720>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
