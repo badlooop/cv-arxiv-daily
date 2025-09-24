@@ -44,7 +44,7 @@ jobs:
           pip install requests
           pip install pyyaml
           git config --global user.name ${{ env.GITHUB_USER_NAME }}
-          pip install git+https://github.com/tq-xyy/baidu-translate
+          pip install googletrans
           
       - name: Run daily arxiv 
         run: |
