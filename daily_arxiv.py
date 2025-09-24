@@ -7,13 +7,14 @@ import logging
 import argparse
 import datetime
 import requests
-from googletrans import Translator  # Replaced baidu_translate with googletrans
+from googletrans import Translator
 
 logging.basicConfig(format='[%(asctime)s %(levelname)s] %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
                     level=logging.INFO)
 
-base_url = "https://arxiv.paperswithcode.com/api/v0/papers/"
+# REMOVED: The defunct base_url
+# base_url = "https://arxiv.paperswithcode.com/api/v0/papers/" 
 github_url = "https://api.github.com/search/repositories"
 arxiv_url = "http://arxiv.org/"
 
@@ -91,7 +92,9 @@ def get_code_link(qword:str) -> str:
     results = r.json()
     code_link = None
     if results["total_count"] > 0:
-        code_link = results["items"][0]["html_url"]
+        # Check if the top result has a good score
+        if results['items'][0]['score'] > 1.0: # Heuristic to filter irrelevant results
+             code_link = results["items"][0]["html_url"]
     return code_link
 
 def get_daily_papers(topic,query="slam", max_results=2):
@@ -112,18 +115,15 @@ def get_daily_papers(topic,query="slam", max_results=2):
         paper_id = result.get_short_id()
         paper_title = result.title
         paper_url = result.entry_id
-        code_url = base_url + paper_id
+        # REMOVED: code_url = base_url + paper_id
         paper_abstract = result.summary.replace("\n"," ")
         paper_authors = get_authors(result.authors)
-        # Note: The original script reuses 'paper_first_author' to store the translated abstract.
-        # This is kept for consistency with the original logic.
         paper_first_author_name = get_authors(result.authors,first_author = True)
         primary_category = result.primary_category
         publish_time = result.published.date()
         update_time = result.updated.date()
         comments = result.comment
 
-        # Use the new translate_text function
         translated_abstract = translate_text(paper_abstract)
 
         logging.info(f"Time = {update_time} title = {paper_title} author = {paper_first_author_name}")
@@ -136,13 +136,10 @@ def get_daily_papers(topic,query="slam", max_results=2):
         paper_url = arxiv_url + 'abs/' + paper_key
 
         try:
-            r = requests.get(code_url).json()
-            repo_url = None
-            if "official" in r and r["official"]:
-                repo_url = r["official"]["url"]
+            # ADDED: Use get_code_link to search on GitHub by title
+            repo_url = get_code_link(paper_title)
 
-            # Using translated_abstract where paper_first_author was previously used for the abstract.
-            # And using paper_first_author_name for the actual author.
+            # MODIFIED: Logic now directly uses repo_url from the GitHub search
             if repo_url is not None:
                 content[paper_key] = "|**{}**|**{}**|{}|[{}]({})|**[link]({})**|\n".format(
                     update_time, paper_title, translated_abstract, paper_key, paper_url, repo_url)
@@ -154,7 +151,6 @@ def get_daily_papers(topic,query="slam", max_results=2):
                 content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({})".format(
                     update_time, paper_title, paper_first_author_name, paper_url, paper_url)
 
-            # TODO: select useful comments
             if comments:
                 content_to_web[paper_key] += f", {comments}\n"
             else:
@@ -176,7 +172,10 @@ def update_paper_links(filename):
         date = parts[1].strip()
         title = parts[2].strip()
         authors = parts[3].strip() # This is actually the translated abstract
-        arxiv_id = parts[4].strip()
+        arxiv_id_part = parts[4].strip()
+        # Extract arxiv_id from markdown link like [2301.0001](...)
+        match = re.search(r'\[(.*?)]', arxiv_id_part)
+        arxiv_id = match.group(1) if match else arxiv_id_part
         code = parts[5].strip()
         arxiv_id = re.sub(r'v\d+', '', arxiv_id)
         return date,title,authors,arxiv_id,code
@@ -193,26 +192,23 @@ def update_paper_links(filename):
         logging.info(f'keywords = {keywords}')
         for paper_id,contents in v.items():
             contents = str(contents)
-            update_time, paper_title, paper_abstract_translated, paper_url, code_url = parse_arxiv_string(contents)
-            contents = "|{}|{}|{}|{}|{}|\n".format(update_time,paper_title,paper_abstract_translated,paper_url,code_url)
-            json_data[keywords][paper_id] = str(contents)
-            logging.info(f'paper_id = {paper_id}, contents = {contents}')
+            update_time, paper_title, paper_abstract_translated, _, code_url = parse_arxiv_string(contents)
 
             valid_link = False if '|null|' in contents else True
             if valid_link:
                 continue
+            
+            # ADDED: Search for code link using GitHub API if it's null
             try:
-                code_url = base_url + paper_id #TODO
-                r = requests.get(code_url).json()
-                repo_url = None
-                if "official" in r and r["official"]:
-                    repo_url = r["official"]["url"]
-                    if repo_url is not None:
-                        new_cont = contents.replace('|null|',f'|**[link]({repo_url})**|')
-                        logging.info(f'ID = {paper_id}, contents = {new_cont}')
-                        json_data[keywords][paper_id] = str(new_cont)
+                repo_url = get_code_link(paper_title)
+                if repo_url is not None:
+                    paper_url_md = f"[{paper_id}]({arxiv_url}abs/{paper_id})"
+                    new_cont = "|{}|{}|{}|{}|**[link]({})**|\n".format(update_time, paper_title, paper_abstract_translated, paper_url_md, repo_url)
+                    logging.info(f'ID = {paper_id}, contents = {new_cont}')
+                    json_data[keywords][paper_id] = str(new_cont)
             except Exception as e:
-                logging.error(f"exception: {e} with id: {paper_id}")
+                logging.error(f"exception during link update: {e} with id: {paper_id}")
+                
     with open(filename,"w") as f:
         json.dump(json_data,f)
 
