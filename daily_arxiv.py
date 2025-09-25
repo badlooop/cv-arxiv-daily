@@ -14,9 +14,11 @@ logging.basicConfig(format='[%(asctime)s %(levelname)s] %(message)s',
                     level=logging.INFO)
 
 # REMOVED: The defunct base_url
-# base_url = "https://arxiv.paperswithcode.com/api/v0/papers/" 
 github_url = "https://api.github.com/search/repositories"
 arxiv_url = "http://arxiv.org/"
+
+# MODIFIED: Create the translator object once and reuse it for efficiency
+TRANSLATOR = Translator()
 
 def load_config(config_file:str) -> dict:
     '''
@@ -28,7 +30,7 @@ def load_config(config_file:str) -> dict:
         keywords = dict()
         EXCAPE = '\"'
         QUOTA = '' # NO-USE
-        OR = 'OR' # TODO
+        OR = 'OR'
         def parse_filters(filters:list):
             ret = ''
             for idx in range(0,len(filters)):
@@ -38,11 +40,13 @@ def load_config(config_file:str) -> dict:
                 else:
                     ret += (QUOTA + filter + QUOTA)
                 if idx != len(filters) - 1:
-                    ret += OR
+                    # FIX 2: Add spaces around the OR operator for a valid query
+                    ret += f' {OR} '
             return ret
         for k,v in config['keywords'].items():
             keywords[k] = parse_filters(v['filters'])
         return keywords
+        
     with open(config_file,'r') as f:
         config = yaml.load(f,Loader=yaml.FullLoader)
         config['kv'] = pretty_filters(**config)
@@ -65,11 +69,10 @@ def sort_papers(papers):
         output[key] = papers[key]
     return output
 
-# New translation function using googletrans
+# MODIFIED: Use the global TRANSLATOR object
 def translate_text(text, dest='zh-CN'):
-    translator = Translator()
     try:
-        translation = translator.translate(text, dest)
+        translation = TRANSLATOR.translate(text, dest=dest)
         return translation.text
     except Exception as e:
         logging.error(f"Translation failed: {e}")
@@ -115,7 +118,6 @@ def get_daily_papers(topic,query="slam", max_results=2):
         paper_id = result.get_short_id()
         paper_title = result.title
         paper_url = result.entry_id
-        # REMOVED: code_url = base_url + paper_id
         paper_abstract = result.summary.replace("\n"," ")
         paper_authors = get_authors(result.authors)
         paper_first_author_name = get_authors(result.authors,first_author = True)
@@ -136,10 +138,8 @@ def get_daily_papers(topic,query="slam", max_results=2):
         paper_url = arxiv_url + 'abs/' + paper_key
 
         try:
-            # ADDED: Use get_code_link to search on GitHub by title
             repo_url = get_code_link(paper_title)
 
-            # MODIFIED: Logic now directly uses repo_url from the GitHub search
             if repo_url is not None:
                 content[paper_key] = "|**{}**|**{}**|{}|[{}]({})|**[link]({})**|\n".format(
                     update_time, paper_title, translated_abstract, paper_key, paper_url, repo_url)
@@ -173,7 +173,6 @@ def update_paper_links(filename):
         title = parts[2].strip()
         authors = parts[3].strip() # This is actually the translated abstract
         arxiv_id_part = parts[4].strip()
-        # Extract arxiv_id from markdown link like [2301.0001](...)
         match = re.search(r'\[(.*?)]', arxiv_id_part)
         arxiv_id = match.group(1) if match else arxiv_id_part
         code = parts[5].strip()
@@ -198,7 +197,6 @@ def update_paper_links(filename):
             if valid_link:
                 continue
             
-            # ADDED: Search for code link using GitHub API if it's null
             try:
                 repo_url = get_code_link(paper_title)
                 if repo_url is not None:
@@ -212,28 +210,34 @@ def update_paper_links(filename):
     with open(filename,"w") as f:
         json.dump(json_data,f)
 
-def update_json_file(filename,data_dict):
+# FIX 1: Modified this function to correctly load existing data
+def update_json_file(filename, data_dict):
     '''
     daily update json file using data_dict
     '''
-    with open(filename,"r") as f:
-        content = f.read()
-        if not content:
-            m = {}
-        else:
-            m = {} #json.loads(content) #No need for old papers
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            content = f.read()
+            if not content:
+                m = {}
+            else:
+                # Load existing content from the JSON file
+                m = json.loads(content)
+    except FileNotFoundError:
+        # If the file doesn't exist, start with an empty dictionary
+        m = {}
+    
     json_data = m.copy()
 
     for data in data_dict:
-        for keyword in data.keys():
-            papers = data[keyword]
-            if keyword in json_data.keys():
+        for keyword, papers in data.items():
+            if keyword in json_data:
                 json_data[keyword].update(papers)
             else:
                 json_data[keyword] = papers
 
-    with open(filename,"w") as f:
-        json.dump(json_data,f)
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(json_data, f, indent=4, ensure_ascii=False)
 
 def json_to_md(filename,md_filename,
                task = '',
@@ -265,17 +269,18 @@ def json_to_md(filename,md_filename,
     DateNow = str(DateNow)
     DateNow = DateNow.replace('-','.')
 
-    with open(filename,"r") as f:
+    with open(filename,"r", encoding="utf-8") as f:
         content = f.read()
         if not content:
             data = {}
         else:
             data = json.loads(content)
 
-    with open(md_filename,"w+") as f:
+    # Overwrite the file to start fresh
+    with open(md_filename,"w", encoding="utf-8") as f:
         pass
 
-    with open(md_filename,"a+") as f:
+    with open(md_filename,"a+", encoding="utf-8") as f:
         if (use_title == True) and (to_web == True):
             f.write("---\n" + "layout: default\n" + "---\n\n")
 
@@ -316,7 +321,7 @@ def json_to_md(filename,md_filename,
                     f.write("|Publish Date|Title|Abstract|PDF|Code|\n" + "|---|---|---|---|---|\n")
                 else:
                     f.write("| Publish Date | Title | Abstract | PDF | Code |\n")
-                    f.write("|:---------|:-----------------------|:---------|:------|:------|\n")
+                    f.write("|:---|:---|:---|:---|:---|\n")
 
             day_content = sort_papers(day_content)
 
@@ -367,7 +372,7 @@ def demo(**config):
     if config['update_paper_links'] == False:
         logging.info(f"GET daily papers begin")
         for topic, keyword in keywords.items():
-            logging.info(f"Keyword: {topic}")
+            logging.info(f"Keyword: {topic}, Query: {keyword}")
             data, data_web = get_daily_papers(topic, query = keyword,
                                               max_results = max_results)
             data_collector.append(data)
