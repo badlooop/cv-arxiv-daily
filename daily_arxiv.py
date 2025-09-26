@@ -194,22 +194,32 @@ def update_paper_links(filename):
             update_time, paper_title, paper_abstract_translated, _, code_url = parse_arxiv_string(contents)
 
             valid_link = False if '|null|' in contents else True
+            
+            # 如果已经有了链接，就继续。
             if valid_link:
                 continue
             
+            repo_url = None
             try:
                 repo_url = get_code_link(paper_title)
-                if repo_url is not None:
-                    paper_url_md = f"[{paper_id}]({arxiv_url}abs/{paper_id})"
-                    new_cont = "|{}|{}|{}|{}|**[link]({})**|\n".format(update_time, paper_title, paper_abstract_translated, paper_url_md, repo_url)
-                    logging.info(f'ID = {paper_id}, contents = {new_cont}')
-                    json_data[keywords][paper_id] = str(new_cont)
             except Exception as e:
                 logging.error(f"exception during link update: {e} with id: {paper_id}")
-                
+            
+            # 无论是否获取到 repo_url，都更新 JSON
+            paper_url_md = f"[{paper_id}]({arxiv_url}abs/{paper_id})"
+            if repo_url is not None:
+                new_cont = "|{}|**{}**|{}|{}|**[link]({})**|\n".format(
+                    update_time, paper_title, paper_abstract_translated, paper_url_md, repo_url)
+            else:
+                new_cont = "|{}|**{}**|{}|{}|null|\n".format(
+                    update_time, paper_title, paper_abstract_translated, paper_url_md)
+
+            logging.info(f'ID = {paper_id}, contents = {new_cont}')
+            json_data[keywords][paper_id] = str(new_cont)
+
     with open(filename,"w") as f:
         json.dump(json_data,f)
-
+      
 # FIX 1: Modified this function to correctly load existing data
 def update_json_file(filename, data_dict):
     '''
