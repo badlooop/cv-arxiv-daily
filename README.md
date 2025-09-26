@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.09.25
+## Updated on 2025.09.26
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -30,7 +30,7 @@
 |**2025-09-22**|**I2VWM: Robust Watermarking for Image to Video Generation**|图像引导的视频生成（I2V）的快速进步引起了人们对其在错误信息和欺诈方面的潜在滥用的担忧，强调了迫切需要有效的数字水印。尽管现有的水印方法证明了单个模态内的鲁棒性，但它们无法在I2V设置中追踪源图像。为了解决这一差距，我们介绍了稳健的扩散距离的概念，该距离衡量了生成的视频中水印信号的时间持久性。在此基础上，我们提出了I2VWM，这是一种跨模式水印框架，旨在增强随时间的水印稳健性。 I2VWM在训练过程中利用视频模拟噪声层，并在推理过程中采用基于光学的对准模块。开源和商业I2V模型的实验表明，I2VWM在保持不可识别的同时显着提高了鲁棒性，在生成视频时代建立了新的跨模式水印范式。 \ href {https://github.com/mrcrims/i2vwm-robust-watermarking-for-image-to-video-generation} {代码发布。}|[2509.17773](http://arxiv.org/abs/2509.17773)|null|
 |**2025-09-21**|**Echo-Path: Pathology-Conditioned Echo Video Generation**|心血管疾病（CVD）仍然是全球死亡率的主要原因，超声心动图对于诊断常见和先天性心脏状况至关重要。但是，某些病理的超声心动图数据稀缺，阻碍了强大的自动诊断模型的发展。在这项工作中，我们提出了Echo-Path，这是一种新型的生成框架，以生成以特定心脏病理为条件的超声心动图视频。 Echo-Path可以合成具有靶向异常的现实超声视频序列，重点是心房间隔缺陷（ASD）和肺动脉高压（PAH）。我们的方法将病理条件的机制引入了最新的回声视频发生器，从而使模型可以在心脏中学习和控制特定于疾病的结构和运动模式。定量评估表明，合成视频达到了低分布距离，表明视觉效果很高。在临床上，产生的回声表现出合理的病理标记。此外，经过培训的合成数据的分类器可以很好地推广到真实数据，并且在用于增强实际训练集的情况下，它将ASD和PAH的下游诊断分别提高了7 \％和8 \％。代码，权重和数据集可在此处提供https://github.com/marshall-mk/echopathv1|[2509.17190](http://arxiv.org/abs/2509.17190)|null|
 
-<p align=right>(<a href=#updated-on-20250925>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250926>back to top</a>)</p>
 
 ## Diffusion
 
@@ -47,7 +47,7 @@
 |**2025-09-24**|**KSDiff: Keyframe-Augmented Speech-Aware Dual-Path Diffusion for Facial Animation**|音频驱动的面部动画在多媒体应用中取得了重大进展，扩散模型显示出强大的说话面综合潜力。但是，大多数现有作品将语音特征视为一种整体的表示，并且无法在驱动不同的面部运动中捕捉其精细的角色，同时也忽略了用激烈的动态进行建模密钥帧的重要性。为了解决这些局限性，我们建议KSDIFF，这是一个由密钥框架演讲感知的双路径扩散框架。具体而言，原始音频和成绩单由双路径语音编码器（DPSE）处理，以解开与表达相关的和与头置相关的特征，而自动回归的KeyFrame构建学习（KEL）模块可以预测最显着的运动框架。这些组件被整合到双路径运动发生器中，以合成相干和现实的面部运动。关于HDTF和Voxceleb的广泛实验表明，KSDIFF实现了最先进的性能，并提高了唇部同步准确性和头部自然性。我们的结果突出了将语音分解与关键框架传播相结合的有效性。|[2509.20128](http://arxiv.org/abs/2509.20128)|null|
 |**2025-09-24**|**Experiments on geostrophic convection: the role of the Prandtl number**|行星尺度上的流量通常由浮力驱动，并受旋转影响。旋转雷利-b \'Enard对流（RRBC）是一个可用于描述这些系统的实用且简单的模型。在RRBC中，发生热诱导的对流，这受到其经历恒定旋转的影响。我们研究地球状态的圆柱体中的RRBC，其中主要的力平衡是科里奥利和压力梯度力之间的。进行实验以评估Nusselt数字 $NU $（对流传热效率）对Prandtl数字$ PR $（运动粘度比热扩散性的比率）的依赖性，这一关系对于地球际对流而言并不多。通过在不同平均温度下使用水，我们可以达到$ 2.8 \ le Pr \ le 6 $。我们研究了两个不同直径与高度的长宽比（$ \ gamma = 1/5 $ \ gamma = 1/5 $和$ 1/2 $），我们研究了Constant Ekman Number $ ek $ ek = 3 \ times10^{ -  7} $的$ pr $和$ nu $之间的关系。相应的常数瑞利数字（热强度的强度）为$ ra = 1.1 \ times 10^{12} $和$ 1 \ times 10^{11} $。此外，我们衡量$ 4 \ times10^{10} \ le ra \ le ra \ le 7 \ times10^{11} $，$ ek = 3 \ times10^{ -  7} $和$ pr = 3.7 $之间的瑞利号$ ra $和$ nu $之间的关系。发现$ nu $即使在有限的范围内也表现出对$ pr $的重大依赖。因子2增加$ pr $，导致$ nu $的减少约为$ 25 \％$。我们假设$ NU $的减少是由于$ pr$ 增加的热和动力学边界层厚度的变化而引起的。我们还考虑使用侧壁温度测量值对壁模式对传热的预期贡献。|[2509.20126](http://arxiv.org/abs/2509.20126)|null|
 
-<p align=right>(<a href=#updated-on-20250925>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250926>back to top</a>)</p>
 
 ## NeRF
 
@@ -64,7 +64,7 @@
 |**2025-09-19**|**RGB-Only Supervised Camera Parameter Optimization in Dynamic Scenes**|尽管Colmap长期以来一直是静态场景中相机参数优化的主要方法，但它受到其冗长的运行时和对地面真实（GT）运动掩码的依赖，以应用于动态场景。许多努力试图通过将更多的先验纳入GT焦距，运动口罩，3D点云，相机姿势和度量深度等监督来改善它，但是在随意捕获的RGB视频中通常无法获得。在本文中，我们提出了一种新颖的方法，以在仅由单个RGB视频（称为ROS-CAM）监督的动态场景中进行更准确，有效的相机参数优化。我们的方法由三个关键组成部分组成：（1）通过贴片跟踪过滤器，以在RGB视频中建立稳健而最大的稀疏铰链状关系。 （2）异常值关节优化，以通过自适应的移动离群值对摄像机参数进行有效优化，而无需依赖运动先验。 （3）两阶段优化策略，以通过在损失中的软体限制和凸极小范围之间的权衡来提高稳定性和优化速度。我们在视觉和数值上评估相机估计值。为了进一步验证准确性，我们将相机估计值馈送到4D重建方法中，并评估所得的3D场景，并渲染2D RGB和深度图。我们在4个现实世界数据集（NERF-DS，Davis，iPhone和Tum-Dynamics）和1个合成数据集（MPI-SINTEL）上执行实验，这表明我们的方法可以通过单个RGB视频更有效，准确地估算摄像机参数。|[2509.15123](http://arxiv.org/abs/2509.15123)|null|
 |**2025-09-18**|**NeRF-based Visualization of 3D Cues Supporting Data-Driven Spacecraft Pose Estimation**|轨道操作需要估计Chaser航天器及其目标之间的相对6D姿势，即位置和方向。尽管已经开发了数据驱动的航天器构成估计方法，但缺乏对他们的决策过程的理解，它们在实际任务中的采用受到了阻碍。本文提出了一种可视化给定姿势估计器所依赖的3D视觉提示的方法。为此，我们使用通过姿势估计网络向后传播的梯度训练基于NERF的图像生成器。这将强制发电机渲染航天器姿势估计网络利用的主要3D特征。实验表明我们的方法恢复了相关的3D提示。此外，他们还提供了有关姿势估计网络监督与目标航天器的隐式表示之间关系的更多见解。|[2509.14890](http://arxiv.org/abs/2509.14890)|null|
 
-<p align=right>(<a href=#updated-on-20250925>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250926>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
