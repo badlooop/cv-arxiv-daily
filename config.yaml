@@ -28,7 +28,3 @@ keywords:
         filters: ["3D", "Mesh", "Rendering", "SDF", "NVS", "View Synthesis", "voxel", "triplane"]
     "3D Reconstruction": 
         filters: ["3D Reconstruction", "MVS", "Multi-view", "MultiView", "Multiple Views", "MVS"]
-    "Diffusion": 
-        filters: ["Diffusion"]
-    "NeRF":
-        filters: ["NeRF", "Neural Fields", ]
