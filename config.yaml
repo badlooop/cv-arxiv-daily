@@ -25,6 +25,6 @@ keywords:
     "Video Diffusion": 
         filters: ["Video Diffusion", "Video Generation"]
     "3D": 
-        filters: ["3D", "Mesh", "Rendering", "SDF", "NVS", "View Synthesis", "voxel", "triplane"]
+        filters: ["Texture generation", "Mesh", "Rendering", "SDF", "NVS", "View Synthesis", "voxel", "triplane", "hunyuan 3d"]
     "3D Reconstruction": 
         filters: ["3D Reconstruction", "MVS", "Multi-view", "MultiView", "Multiple Views", "MVS"]
