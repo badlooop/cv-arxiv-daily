@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.11.12
+## Updated on 2025.11.13
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -196,7 +196,7 @@
 |**2024-05-07**|**LLM-grounded Video Diffusion Models**|文本条件扩散模型已成为神经视频生成的有前途的工具。然而，当前的模型仍然难以应对复杂的时空提示，并且经常产生受限或不正确的运动。为了解决这些限制，我们引入了基于法学硕士的视频扩散（LVD）。 LVD 不是直接从文本输入生成视频，而是首先利用大型语言模型 (LLM) 基于文本输入生成动态场景布局，然后使用生成的布局来指导视频生成的扩散模型。我们表明，法学硕士能够仅从文本中理解复杂的时空动态，并生成与现实世界中通常观察到的提示和对象运动模式紧密结合的布局。然后，我们建议通过调整注意力图来指导使用这些布局的视频扩散模型。我们的方法无需训练，可以集成到任何允许分类器指导的视频扩散模型中。我们的结果表明，LVD 在忠实生成具有所需属性和运动模式的视频方面显着优于其基本视频扩散模型和几种强大的基线方法。|[2309.17444](http://arxiv.org/abs/2309.17444)|null|
 |**2022-10-06**|**Imagen Video: High Definition Video Generation with Diffusion Models**|我们提出了 Imagen Video，这是一种基于级联视频扩散模型的文本条件视频生成系统。给定文本提示，Imagen Video 使用基本视频生成模型和一系列交错的空间和时间视频超分辨率模型生成高清视频。我们描述了如何将系统扩展为高清文本到视频模型，包括设计决策，例如在某些分辨率下选择全卷积时间和空间超分辨率模型，以及选择扩散模型的 v 参数化。此外，我们确认并将之前基于扩散的图像生成工作的发现转移到视频生成设置中。最后，我们将渐进式蒸馏应用于我们的视频模型，并使用无分类器的指导来实现快速、高质量的采样。我们发现Imagen Video不仅能够生成高保真视频，而且还具有高度的可控性和世界知识，包括能够生成各种艺术风格和3D对象理解的多样化视频和文本动画。有关示例，请参阅 https://imagen.research.google/video/。|[2210.02303](http://arxiv.org/abs/2210.02303)|null|
 
-<p align=right>(<a href=#updated-on-20251112>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20251113>back to top</a>)</p>
 
 ## 3D
 
@@ -347,7 +347,7 @@
 |**2024-02-21**|**Pseudo-Generalized Dynamic View Synthesis from a Video**|从新的视角渲染单眼视频中观察到的场景是一个具有挑战性的问题。对于静态场景，社区研究了特定于场景的优化技术（对每个测试场景进行优化）和通用技术（仅在测试场景上运行深度网络前向传递）。相反，对于动态场景，存在特定于场景的优化技术，但是，据我们所知，目前还没有从给定的单目视频合成动态新颖视图的通用方法。为了回答今天单目视频的广义动态新颖视图合成是否可能，我们基于现有技术建立了一个分析框架，并致力于广义方法。我们发现无需特定于场景的外观优化的伪广义过程是可能的，但需要几何和时间一致的深度估计。尽管没有特定于场景的外观优化，但伪广义方法改进了一些特定于场景的方法。|[2310.08587](http://arxiv.org/abs/2310.08587)|null|
 |**2023-03-29**|**3DGen: Triplane Latent Diffusion for Textured Mesh Generation**|用于图像生成的潜在扩散模型已经跨越了质量阈值，这使得它们能够实现大规模采用。最近，一系列工作在 3D 领域复制这一成功方面取得了进展，引入了点云 VAE、三平面表示、神经隐式曲面和基于可微渲染的训练等技术。我们沿着这个方向又迈出了一步，将这些进展结合到一个两步管道中，该管道由 1) 可以学习纹理网格的潜在表示的三平面 VAE 和 2) 生成三平面特征的条件扩​​散模型组成。该架构首次允许在单个 GPU 上在几秒钟内有条件和无条件地跨多个不同类别生成高质量纹理或无纹理 3D 网格。它在网格质量以及纹理生成的图像条件和无条件生成方面大大优于以前的工作。此外，我们还展示了我们的模型对大型数据集的可扩展性，以提高质量和多样性。我们将发布我们的代码和经过训练的模型。|[2303.05371](http://arxiv.org/abs/2303.05371)|null|
 
-<p align=right>(<a href=#updated-on-20251112>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20251113>back to top</a>)</p>
 
 ## 3D Reconstruction
 
@@ -467,7 +467,7 @@
 |**2020-08-14**|**DeepC-MVS: Deep Confidence Prediction for Multi-View Stereo Reconstruction**|深度神经网络 (DNN) 具有提高基于图像的 3D 重建质量的潜力。然而，由于内存和计算的限制，在大型高分辨率图像数据集的 3D 重建中使用 DNN 仍然是一个开放的挑战。我们提出了一种利用 DNN 来提高 3D 重建质量的管道，同时能够处理大型高分辨率数据集。特别是，我们提出了一个专门为多视图立体 (MVS) 定制的置信度预测网络，并将其用于管道中的深度图离群值过滤和深度图细化，以提高最终 3D 重建的质量。我们在来自公开的真实世界 MVS 数据集的（半）密集地面真实深度图上训练我们的置信度预测网络。通过对流行基准进行大量实验，我们证明我们的整体流程可以在定性和定量上产生最先进的 3D 重建。|[1912.00439](http://arxiv.org/abs/1912.00439)|null|
 |**2019-09-02**|**MVS^2: Deep Unsupervised Multi-view Stereo with Multi-View Symmetry**|现有基于深度学习的多视图立体（MVS）方法的成功很大程度上取决于密集深度图形式的大规模监督的可用性。这种监督虽然并不总是可行，但往往会阻碍学习模型在从未见过的场景中的泛化能力。在本文中，我们提出了第一个基于无监督学习的 MVS 网络，它从输入的多视图图像中学习多视图深度图，并且不需要真实的 3D 训练数据。我们的网络在同时预测所有视图的深度图方面是对称的，我们在训练和测试阶段强制执行多视图深度图的跨视图一致性。因此，学习到的多视图深度图自然符合底层 3D 场景几何形状。此外，我们的网络还学习多视图遮挡图，这进一步提高了我们的网络在处理现实世界遮挡方面的鲁棒性。多个基准数据集的实验结果证明了我们网络的有效性和出色的泛化能力。|[1908.11526](http://arxiv.org/abs/1908.11526)|null|
 
-<p align=right>(<a href=#updated-on-20251112>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20251113>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
