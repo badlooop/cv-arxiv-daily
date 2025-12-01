@@ -13,12 +13,8 @@ logging.basicConfig(format='[%(asctime)s %(levelname)s] %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
                     level=logging.INFO)
 
-# REMOVED: The defunct base_url
 github_url = "https://api.github.com/search/repositories"
 arxiv_url = "http://arxiv.org/"
-
-# MODIFIED: Create the translator object once and reuse it for efficiency
-TRANSLATOR = Translator()
 
 def load_config(config_file:str) -> dict:
     '''
@@ -40,7 +36,6 @@ def load_config(config_file:str) -> dict:
                 else:
                     ret += (QUOTA + filter + QUOTA)
                 if idx != len(filters) - 1:
-                    # FIX 2: Add spaces around the OR operator for a valid query
                     ret += f' {OR} '
             return ret
         for k,v in config['keywords'].items():
@@ -69,14 +64,13 @@ def sort_papers(papers):
         output[key] = papers[key]
     return output
 
-# MODIFIED: Use the global TRANSLATOR object
 def translate_text(text, dest='zh-CN'):
     try:
-        translation = TRANSLATOR.translate(text, dest=dest)
+        translator = Translator()
+        translation = translator.translate(text, dest=dest)
         return translation.text
-    except Exception as e:
-        logging.error(f"Translation failed: {e}")
-        return text # Return original text if translation fails
+    except:
+        return text
 
 def get_code_link(qword:str) -> str:
     """
@@ -95,8 +89,7 @@ def get_code_link(qword:str) -> str:
     results = r.json()
     code_link = None
     if results["total_count"] > 0:
-        # Check if the top result has a good score
-        if results['items'][0]['score'] > 1.0: # Heuristic to filter irrelevant results
+        if results['items'][0]['score'] > 1.0: 
              code_link = results["items"][0]["html_url"]
     return code_link
 
@@ -171,7 +164,7 @@ def update_paper_links(filename):
         parts = s.split("|")
         date = parts[1].strip()
         title = parts[2].strip()
-        authors = parts[3].strip() # This is actually the translated abstract
+        authors = parts[3].strip() 
         arxiv_id_part = parts[4].strip()
         match = re.search(r'\[(.*?)]', arxiv_id_part)
         arxiv_id = match.group(1) if match else arxiv_id_part
@@ -195,7 +188,6 @@ def update_paper_links(filename):
 
             valid_link = False if '|null|' in contents else True
             
-            # 如果已经有了链接，就继续。
             if valid_link:
                 continue
             
@@ -205,7 +197,6 @@ def update_paper_links(filename):
             except Exception as e:
                 logging.error(f"exception during link update: {e} with id: {paper_id}")
             
-            # 无论是否获取到 repo_url，都更新 JSON
             paper_url_md = f"[{paper_id}]({arxiv_url}abs/{paper_id})"
             if repo_url is not None:
                 new_cont = "|{}|**{}**|{}|{}|**[link]({})**|\n".format(
@@ -219,11 +210,10 @@ def update_paper_links(filename):
 
     with open(filename,"w") as f:
         json.dump(json_data,f)
-      
-# FIX 1: Modified this function to correctly load existing data
+
 def update_json_file(filename, data_dict):
     '''
-    daily update json file using data_dict
+    daily update json file using data_dict, and remove data older than 7 days
     '''
     try:
         with open(filename, "r", encoding="utf-8") as f:
@@ -231,14 +221,13 @@ def update_json_file(filename, data_dict):
             if not content:
                 m = {}
             else:
-                # Load existing content from the JSON file
                 m = json.loads(content)
     except FileNotFoundError:
-        # If the file doesn't exist, start with an empty dictionary
         m = {}
     
     json_data = m.copy()
 
+    # 1. Merge new data
     for data in data_dict:
         for keyword, papers in data.items():
             if keyword in json_data:
@@ -246,8 +235,42 @@ def update_json_file(filename, data_dict):
             else:
                 json_data[keyword] = papers
 
+    # 2. Filter out papers older than 7 days
+    DateNow = datetime.date.today()
+    days_to_keep = 7
+    
+    filtered_json_data = {}
+    
+    for keyword, papers in json_data.items():
+        filtered_papers = {}
+        for paper_key, paper_content in papers.items():
+            try:
+                # Extract date from the markdown string
+                # Format: |**YYYY-MM-DD**|...
+                match = re.search(r'\|\*\*(\d{4}-\d{2}-\d{2})\*\*\|', paper_content)
+                if match:
+                    date_str = match.group(1)
+                    paper_date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+                    
+                    # Keep if within last 7 days
+                    if (DateNow - paper_date).days < days_to_keep:
+                        filtered_papers[paper_key] = paper_content
+                else:
+                    # If date parsing fails, you might want to keep it or log it.
+                    # Here we assume correct format and might discard if unmatched, 
+                    # but to be safe let's keep recent ones only if strictly matching.
+                    # Or pass to ignore.
+                    pass
+            except Exception as e:
+                logging.error(f"Error parsing date for {paper_key}: {e}")
+        
+        # Only add keyword if there are valid papers
+        if filtered_papers:
+            filtered_json_data[keyword] = filtered_papers
+
+    # 3. Write back to file
     with open(filename, "w", encoding="utf-8") as f:
-        json.dump(json_data, f, indent=4, ensure_ascii=False)
+        json.dump(filtered_json_data, f, indent=4, ensure_ascii=False)
 
 def json_to_md(filename,md_filename,
                task = '',
@@ -286,7 +309,6 @@ def json_to_md(filename,md_filename,
         else:
             data = json.loads(content)
 
-    # Overwrite the file to start fresh
     with open(md_filename,"w", encoding="utf-8") as f:
         pass
 
