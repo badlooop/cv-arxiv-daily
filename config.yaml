@@ -26,5 +26,5 @@ keywords:
         filters: ["Video Diffusion", "Video Generation"]
     "3D": 
         filters: ["Texture generation", "Mesh", "Rendering", "SDF", "NVS", "View Synthesis", "voxel", "triplane", "hunyuan 3d"]
-    "3D Reconstruction": 
-        filters: ["3D Reconstruction", "MVS", "Multi-view", "MultiView", "Multiple Views", "MVS"]
+    "具生智能&自动驾驶": 
+        filters: ["VLA", "", "world model", "vision-language-action", "autonomous driving", "self-driving"]
