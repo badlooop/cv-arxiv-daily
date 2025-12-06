@@ -7,7 +7,7 @@ layout: default
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.12.05
+## Updated on 2025.12.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Video Diffusion
@@ -158,9 +158,6 @@ layout: default
 
 - **2025-11-30** **Dynamic-eDiTor: Training-Free Text-Driven 4D Scene Editing with Multimodal Diffusion Transformer** [2512.00677](http://arxiv.org/abs/2512.00677)
   > 4D 表示方面的最新进展，例如 Dynamic NeRF 和 4D Gaussian Splatting (4DGS)，已经实现了动态 4D 场景重建。然而，由于在编辑过程中确保跨空间和时间的多视图和时间一致性的挑战，文本驱动的 4D 场景编辑仍未得到充分探索。现有的研究依赖于独立编辑帧的 2D 扩散模型，通常会导致运动失真、几何漂移和不完整的编辑。我们推出 Dynamic-eDiTor，这是一种利用多模态扩散变压器 (MM-DiT) 和 4DGS 的免训练文本驱动 4D 编辑框架。该机制由用于局部一致的跨视图和时间融合的时空子网格注意（STGA）和用于通过令牌继承和光流引导令牌替换进行全局传播的上下文令牌传播（CTP）组成。这些组件共同使 Dynamic-eDiTor 能够执行无缝、全局一致的多视图视频，无需额外训练，并直接优化预训练的源 4DGS。对多视图视频数据集 DyNeRF 的大量实验表明，我们的方法实现了卓越的编辑保真度以及多视图和时间一致性的先验方法。结果和代码的项目页面：https://di-lee.github.io/dynamic-eDiTor/
-
-- **2025-11-29** **Image Generation as a Visual Planner for Robotic Manipulation** [2512.00532](http://arxiv.org/abs/2512.00532)
-  > 生成逼真的机器人操作视频是统一具体代理的感知、规划和行动的重要一步。虽然现有的视频扩散模型需要大量特定领域的数据集并且难以泛化，但最近在语言图像语料库上训练的图像生成模型表现出很强的组合性，包括合成时间相干网格图像的能力。这表明即使没有明确的时间建模，也具有类似视频生成的潜在能力。   我们探索这些模型在使用 LoRA 微调进行轻微调整后是否可以充当机器人的视觉规划器。我们提出了一个由两部分组成的框架，其中包括：(1) 文本条件生成，它使用语言指令和第一帧；(2) 轨迹条件生成，它使用 2D 轨迹叠加和相同的初始帧。 Jaco Play 数据集、Bridge V2 和 RT1 数据集上的实验表明，两种模式都能生成与其各自条件相符的平滑、连贯的机器人视频。   我们的研究结果表明，预训练的图像生成器对可转移的时间先验进行编码，并且可以在最少的监督下充当类似视频的机器人规划器。代码发布于\href{https://github.com/pangye202264690373/Image-Generation-as-a-Visual-Planner-for-Robotic-Manipulation}{https://github.com/pangye202264690373/Image-Generation-as-a-Visual-Planner-for-Robotic-Manipulation}。
 
 
 ## 3D

@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2025.12.05
+## Updated on 2025.12.06
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -164,11 +164,8 @@
 - **2025-11-30** **Dynamic-eDiTor: Training-Free Text-Driven 4D Scene Editing with Multimodal Diffusion Transformer** [2512.00677](http://arxiv.org/abs/2512.00677)
   > 4D 表示方面的最新进展，例如 Dynamic NeRF 和 4D Gaussian Splatting (4DGS)，已经实现了动态 4D 场景重建。然而，由于在编辑过程中确保跨空间和时间的多视图和时间一致性的挑战，文本驱动的 4D 场景编辑仍未得到充分探索。现有的研究依赖于独立编辑帧的 2D 扩散模型，通常会导致运动失真、几何漂移和不完整的编辑。我们推出 Dynamic-eDiTor，这是一种利用多模态扩散变压器 (MM-DiT) 和 4DGS 的免训练文本驱动 4D 编辑框架。该机制由用于局部一致的跨视图和时间融合的时空子网格注意（STGA）和用于通过令牌继承和光流引导令牌替换进行全局传播的上下文令牌传播（CTP）组成。这些组件共同使 Dynamic-eDiTor 能够执行无缝、全局一致的多视图视频，无需额外训练，并直接优化预训练的源 4DGS。对多视图视频数据集 DyNeRF 的大量实验表明，我们的方法实现了卓越的编辑保真度以及多视图和时间一致性的先验方法。结果和代码的项目页面：https://di-lee.github.io/dynamic-eDiTor/
 
-- **2025-11-29** **Image Generation as a Visual Planner for Robotic Manipulation** [2512.00532](http://arxiv.org/abs/2512.00532)
-  > 生成逼真的机器人操作视频是统一具体代理的感知、规划和行动的重要一步。虽然现有的视频扩散模型需要大量特定领域的数据集并且难以泛化，但最近在语言图像语料库上训练的图像生成模型表现出很强的组合性，包括合成时间相干网格图像的能力。这表明即使没有明确的时间建模，也具有类似视频生成的潜在能力。   我们探索这些模型在使用 LoRA 微调进行轻微调整后是否可以充当机器人的视觉规划器。我们提出了一个由两部分组成的框架，其中包括：(1) 文本条件生成，它使用语言指令和第一帧；(2) 轨迹条件生成，它使用 2D 轨迹叠加和相同的初始帧。 Jaco Play 数据集、Bridge V2 和 RT1 数据集上的实验表明，两种模式都能生成与其各自条件相符的平滑、连贯的机器人视频。   我们的研究结果表明，预训练的图像生成器对可转移的时间先验进行编码，并且可以在最少的监督下充当类似视频的机器人规划器。代码发布于\href{https://github.com/pangye202264690373/Image-Generation-as-a-Visual-Planner-for-Robotic-Manipulation}{https://github.com/pangye202264690373/Image-Generation-as-a-Visual-Planner-for-Robotic-Manipulation}。
 
-
-<p align=right>(<a href=#updated-on-20251205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20251206>back to top</a>)</p>
 
 ## 3D
 
@@ -326,7 +323,7 @@
   > 高斯玻色子采样（GBS）提供了展示量子计算优势的途径。然而，光损耗减少了系统中的纠缠，可以使 GBS 结果经典地可模拟。我们提出了一种基于干涉仪网络中排列的光学参量放大器（OPA）的非线性光子架构。这种主动配置放大了电路内的量子相关性，同时保留了输出概率的#P-hard哈夫尼结构。使用对数负性，我们在数值上表明，在无损极限下，纠缠与 OPA 增益和网络深度呈线性比例关系，并且在实际损失率下与模式数量保持线性比例关系。这些缩放行为表明有损场景中的经典模拟在计算上仍然难以处理。我们的结果表明，OPA 增强的 GBS 在噪声环境中保持了计算硬度，为近期光子量子计算机提供了更有效的实现。
 
 
-<p align=right>(<a href=#updated-on-20251205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20251206>back to top</a>)</p>
 
 ## 具生智能&自动驾驶
 
@@ -484,7 +481,7 @@
   > 粒子滤波算法已经为自主机器人（自动驾驶汽车、无人机、仓库机器人）、目标跟踪和计量经济学中的问题提供了实用的解决方案，并在语音处理和医学（患者监护）中得到了进一步的应用。然而，对于高频和资源受限的系统来说，它们在表示观测可能性方面的固有弱点（这通常会导致粒子简并）仍然没有得到解决。最佳建议和辅助粒子过滤器等改进在特定情况下缓解了这个问题，并增加了计算成本。这项工作提出了一种新的粒子滤波方法及其实现，它使得任意似然密度的可调近似表示成为参数分布的程序变换。我们的方法利用最新的计算平台，可以在不依赖随机方法的情况下对概率分布表示（UxHw）执行确定性计算。对于非高斯非线性系统和具有最佳辅助粒子滤波器的情况，我们对总共 294840 个评估点的似然评估误差和速度进行了基准测试。对于此类模型，结果表明，与蒙特卡洛替代方案相比，UxHw 方法的加速速度高达 37.7 倍。对于窄均匀观测噪声，粒子滤波器错误地分配零似然率高达 81.89%，而 UxHw 实现了 1.52% 的错误零率。与蒙特卡罗替代方案相比，UxHw 方法的滤波器 RMSE 提高了 18.9%（平均 3.3%）。
 
 
-<p align=right>(<a href=#updated-on-20251205>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20251206>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
