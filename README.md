@@ -327,7 +327,7 @@
 - **2025-12-11** **Track and Caption Any Motion: Query-Free Motion Discovery and Description in Videos** [2512.10607](http://arxiv.org/abs/2512.10607)
   > 我们提出了跟踪和字幕任何运动（TCAM），这是一种以运动为中心的自动视频理解框架，无需用户查询即可发现和描述运动模式。在遮挡、伪装或快速运动等具有挑战性的条件下理解视频通常更多地依赖于运动动态而不是静态外观。 TCAM 自主观察视频，识别多个运动活动，并通过运动场注意机制将每个自然语言描述在空间上定位到其相应的轨迹。我们的主要见解是，当运动模式与对比视觉语言表示相结合时，可以为识别和描述动作提供强大的语义信号。通过将全局视频文本对齐与细粒度空间对应相结合的统一训练，TCAM 能够通过多头交叉注意力无查询地发现多个运动表达。在 MeViS 基准上，TCAM 实现了 58.4% 的视频到文本检索，64.9 JF 的空间基础，并以 84.7% 的精度发现每个视频 4.8 个相关表达，展示了强大的跨任务泛化能力。
 
-- **2025-12-11** **Why a chloroplast needs its own genome tethered to the thylakoid membrane - Co-location for Redox Regulation** [2512.10588](http://arxiv.org/abs/2512.10588)
+- **2025-12-11** **Why a chloroplast needs its own genome tethered to the thylakoid membrane -- Co-location for Redox Regulation** [2512.10588](http://arxiv.org/abs/2512.10588)
   > 叶绿体是植物和藻类细胞中进行光合作用的亚细胞细胞器。叶绿体基因组编码光合电子传递链的蛋白质和表达它们所需的核糖体蛋白质。叶绿体编码的光合蛋白主要是叶绿体类囊体膜固有的，它们驱动矢量电子和质子传输。在那里，它们与蛋白质密切接触，这些蛋白质的前体在细胞核中编码，用于胞质合成、后续加工，并输入叶绿体。因此，光合电子传递的蛋白质复合物含有具有两个完全不同的合成位点之一的亚基。如果大多数叶绿体蛋白都是由核基因表达产生的，那么为什么不是全部呢？什么选择压力导致叶绿体基因组的持久存在？一种建议是，光合电子传递本身控制着其自身成分的基因表达：叶绿体基因与其基因产物的共置允许基因表达的氧化还原调节，从而导致蛋白质化学计量的自我调整以响应环境变化。该假说认为氧化还原调节的共定位（称为 CoRR）是光合叶绿体和呼吸线粒体中基因组保留的主要原因。我认为氧化还原调节影响叶绿体基因表达的所有阶段，并且这种综合控制是由叶绿体介体或类核（一种将叶绿体 DNA 与类囊体连接的结构）介导的。
 
 - **2025-12-11** **UACER: An Uncertainty-Aware Critic Ensemble Framework for Robust Adversarial Reinforcement Learning** [2512.10492](http://arxiv.org/abs/2512.10492)
