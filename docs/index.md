@@ -7,7 +7,7 @@ layout: default
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2026.02.06
+## Updated on 2026.02.07
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Video Diffusion
@@ -104,9 +104,6 @@ layout: default
 
 - **2026-02-01** **FlowCast: Trajectory Forecasting for Scalable Zero-Cost Speculative Flow Matching** [2602.01329](http://arxiv.org/abs/2602.01329)
   > 流匹配 (FM) 最近已成为高质量视觉生成的强大方法。然而，由于大量的去噪步骤，它们的推理速度极其缓慢，限制了它们在实时或交互式应用程序中的潜在使用。现有的加速方法，如蒸馏、截断或一致性训练，要么会降低质量，要么需要昂贵的再训练成本，要么缺乏泛化性。我们提出了 FlowCast，这是一种无需训练的推测生成框架，它利用 FM 模型经过训练以保持恒定速度这一事实来加速推理。 FlowCast 通过推断当前速度来推测未来速度，而不会产生额外的时间成本，如果它在均方误差阈值内，则接受它。这种恒速预测允许积极跳过稳定区域中的冗余步骤，同时保持复杂区域中的精度。 FlowCast 是一个即插即用框架，可与任何 FM 模型无缝集成，无需辅助网络。我们还提出了理论分析，并限制了推测轨迹和完整 FM 轨迹之间的最坏情况偏差。实证评估表明，FlowCast 在图像生成、视频生成和编辑任务方面实现了 $>2.5\times$ 加速，优于现有基线，与标准完整生成相比，没有质量损失。
-
-- **2026-01-31** **MTAVG-Bench: A Comprehensive Benchmark for Evaluating Multi-Talker Dialogue-Centric Audio-Video Generation** [2602.00607](http://arxiv.org/abs/2602.00607)
-  > 文本转音频视频 (T2AV) 生成技术的最新进展使模型能够通过多方对话合成视听视频。然而，现有的评估基准仍然主要是针对人类录制的视频或单扬声器设置而设计的。因此，无法有效捕获和分析生成的多人对话视频中出现的潜在错误，例如身份漂移、不自然的转弯转换和视听错位。为了解决这个问题，我们引入了 MTAVG-Bench，这是一个评估视听多说话人对话生成的基准。 MTAVG-Bench 通过半自动管道构建，其中使用多个流行模型和精心设计的提示生成 1.8k 个视频，产生 2.4k 个手动注释的 QA 对。该基准测试从四个层面评估多说话人对话的生成：视听信号保真度、时间属性一致性、社交互动和电影表达。我们在 MTAVG-Bench 上对 12 个专有和开源全向型号进行了基准测试，其中 Gemini 3 Pro 实现了最强的整体性能，而领先的开源型号在信号保真度和一致性方面仍然具有竞争力。总体而言，MTAVG-Bench 能够进行细粒度的故障分析，以进行严格的模型比较和有针对性的视频生成细化。
 
 
 ## 3D
