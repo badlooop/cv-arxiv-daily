@@ -7,7 +7,7 @@ layout: default
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2026.02.07
+## Updated on 2026.02.08
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Video Diffusion
@@ -98,12 +98,6 @@ layout: default
 
 - **2026-02-02** **Making Avatars Interact: Towards Text-Driven Human-Object Interaction for Controllable Talking Avatars** [2602.01538](http://arxiv.org/abs/2602.01538)
   > 生成会说话的头像是视频生成中的一项基本任务。尽管现有方法可以通过简单的人体动作生成全身说话的化身，但将此任务扩展到接地人与物体交互（GHOI）仍然是一个开放的挑战，要求化身与周围的物体执行文本对齐的交互。这一挑战源于对环境感知的需求和 GHOI 一代的控制质量困境。为了解决这个问题，我们提出了一种新颖的双流框架 InteractAvatar，它将感知和规划与视频合成解耦，以实现基础的人机交互。利用检测来增强环境感知，我们引入了感知和交互模块（PIM）来生成文本对齐的交互动作。此外，还提出了音频交互感知生成模块（AIM）来合成执行对象交互的生动的说话化身。借助专门设计的运动到视频对齐器，PIM 和 AIM 共享相似的网络结构，并能够并行共同生成运动和合理的视频，有效缓解控制质量困境。最后，我们建立了一个基准 GroundedInter，用于评估 GHOI 视频生成。大量的实验和比较证明了我们的方法在为说话的化身生成接地的人机交互方面的有效性。项目页面：https://interactavatar.github.io
-
-- **2026-02-01** **MTC-VAE: Multi-Level Temporal Compression with Content Awareness** [2602.01340](http://arxiv.org/abs/2602.01340)
-  > 潜在视频扩散模型 (LVDM) 依靠变分自动编码器 (VAE) 将视频压缩为紧凑的潜在表示。对于连续变分自动编码器（VAE），需要实现更高的压缩率；然而，当添加额外的采样层而不扩展隐藏通道的维度时，效率显着下降。在本文中，我们提出了一种将固定压缩率 VAE 转换为支持多级时间压缩的模型的技术，提供了一种简单且最小的微调方法来抵消压缩率提高时的性能下降。此外，我们研究了不同的压缩级别如何影响具有不同特征的视频片段的模型性能，为我们提出的方法的有效性提供了经验证据。我们还研究了多级时间压缩 VAE 与基于扩散的生成模型 DiT 的集成，强调了这些框架内成功的并发训练和兼容性。这项研究说明了多级时间压缩的潜在用途。
-
-- **2026-02-01** **FlowCast: Trajectory Forecasting for Scalable Zero-Cost Speculative Flow Matching** [2602.01329](http://arxiv.org/abs/2602.01329)
-  > 流匹配 (FM) 最近已成为高质量视觉生成的强大方法。然而，由于大量的去噪步骤，它们的推理速度极其缓慢，限制了它们在实时或交互式应用程序中的潜在使用。现有的加速方法，如蒸馏、截断或一致性训练，要么会降低质量，要么需要昂贵的再训练成本，要么缺乏泛化性。我们提出了 FlowCast，这是一种无需训练的推测生成框架，它利用 FM 模型经过训练以保持恒定速度这一事实来加速推理。 FlowCast 通过推断当前速度来推测未来速度，而不会产生额外的时间成本，如果它在均方误差阈值内，则接受它。这种恒速预测允许积极跳过稳定区域中的冗余步骤，同时保持复杂区域中的精度。 FlowCast 是一个即插即用框架，可与任何 FM 模型无缝集成，无需辅助网络。我们还提出了理论分析，并限制了推测轨迹和完整 FM 轨迹之间的最坏情况偏差。实证评估表明，FlowCast 在图像生成、视频生成和编辑任务方面实现了 $>2.5\times$ 加速，优于现有基线，与标准完整生成相比，没有质量损失。
 
 
 ## 3D
