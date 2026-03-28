@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2026.03.27
+## Updated on 2026.03.28
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -120,7 +120,7 @@
   > 单视图参考视频方法通常难以在较大的面部角度变化下保持身份一致性。这种限制自然会促使多视图面部参考的结合。然而，简单地引入额外的参考图像会加剧 \textit{copy-paste} 问题，特别是 \textbf{\textit{view-dependent copy-paste}} 伪像，这会降低面部运动的自然度。尽管交叉配对数据可以缓解这个问题，但收集此类数据的成本很高。为了平衡一致性和自然性，我们提出了 $\mathrm{Mv}^2\mathrm{ID}$ ，一个成对监督下的多视图条件框架。我们引入了区域屏蔽训练策略，以防止捷径学习，并通过鼓励模型聚合跨视图的互补身份线索来提取基本的身份特征。此外，我们设计了一种参考解耦 RoPE 机制，该机制为视频和调节令牌分配不同的位置编码，以便更好地对其异构属性进行建模。此外，我们构建了一个具有不同面部角度变化的大规模数据集，并提出了用于身份一致性和运动自然度的专用评估指标。大量的实验表明，我们的方法在保持运动自然性的同时显着提高了身份一致性，优于使用交叉配对数据训练的现有方法。
 
 
-<p align=right>(<a href=#updated-on-20260327>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260328>back to top</a>)</p>
 
 ## 3D
 
@@ -245,7 +245,7 @@
   > 在这项工作中，我们通过实现专为高效图形处理单元（GPU）执行而设计的标准 $k$-$ω$ 模型，开发了一种基于有限体积法（FVM）的神经物理求解器，即 NeuralFVM，用于湍流。使用基于卷积的模板算子将流体流动和传热的控制方程重新表述为局部张量运算，这使得与深度学习库兼容，同时保留 FVM 的保守属性。在这样的框架内实现湍流模型的一个关键挑战是处理 $k$ 和 $ω$ 输运方程中的刚性破坏项。为了解决这个问题，引入了算子分裂策略，其中半隐式处理刚性破坏项，而显式地推进其余项。该公式避免了全局矩阵组装，并允许使用局部张量运算来实现整个求解器。此外，使用嵌入神经网络架构中的基于卷积的几何多重网格算法来解决压力-速度耦合。通过与使用商业 CFD 软件 ANSYS Fluent 对多种通道流配置和室内气流场景进行的模拟进行比较，对生成的 NeuralFVM 求解器进行了验证。结果表明速度、温度和湍流量非常一致，证实了所提出方法的准确性。与不同网格下的中央处理单元 (CPU) 对应物相比，开发的 GPU 框架实现了约 19-46 倍的加速。此外，所提出的求解器自然地与机器学习工作流程集成，为未来数据驱动的湍流建模和优化提供了有前景的基础。
 
 
-<p align=right>(<a href=#updated-on-20260327>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260328>back to top</a>)</p>
 
 ## 具生智能&自动驾驶
 
@@ -370,7 +370,7 @@
   > 视觉-语言-动作 (VLA) 模型通常将视觉观察和语言指令直接映射到机器人控制信号。这种“黑盒”映射迫使单个前向传递同时处理指令解释、空间接地和低级控制，通常会导致空间精度差和分布外场景中的鲁棒性有限。为了解决这些限制，我们提出了 VP-VLA，这是一种双系统框架，通过结构化的视觉提示界面将高级推理和低级执行解耦。具体来说，“System 2 Planner”将复杂的指令分解为子任务，并识别相关的目标对象和目标位置。然后，这些空间锚点直接叠加到视觉观察上，作为结构化视觉提示，例如十字准线和边界框。在这些提示的引导下，并在训练期间通过新颖的辅助视觉基础目标进行增强，“系统 1 控制器”可靠地生成精确的低级执行动作。 Robocasa-GR1-Tabletop 基准测试和 SimplerEnv 模拟的实验表明，VP-VLA 将成功率提高了 5% 和 8.3%，超过了包括 QwenOFT 和 GR00T-N1.6 在内的竞争基准。
 
 
-<p align=right>(<a href=#updated-on-20260327>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260328>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
