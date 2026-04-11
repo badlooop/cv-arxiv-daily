@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2026.04.10
+## Updated on 2026.04.11
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -101,14 +101,8 @@
 - **2026-04-05** **ATSS: Detecting AI-Generated Videos via Anomalous Temporal Self-Similarity** [2604.04029](http://arxiv.org/abs/2604.04029)
   > 人工智能生成的视频（AIGV）实现了前所未有的真实感，对数字取证构成了严重威胁。现有的 AIGV 检测器主要关注局部伪影或短期时间不一致，因此常常无法捕获控制全局时间演化的底层生成逻辑，从而限制了 AIGV 检测性能。在本文中，我们确定了 AIGV 中的独特指纹，称为异常时间自相似性（ATSS）。与表现出随机自然动态的真实视频不同，AIGV 遵循确定性锚点驱动的轨迹（例如文本或图像提示），从而在视觉和语义领域中引入不自然的重复相关性。为了利用这一点，我们提出了 ATSS 方法，这是一种多模态检测框架，通过三重相似性表示和交叉注意融合机制来利用这种洞察力。具体来说，ATSS 通过利用逐帧描述来构建视觉、文本和跨模式相似性矩阵来重建语义轨迹，从而共同量化固有的时间异常。这些矩阵由专用 Transformer 编码器进行编码，并通过双向交叉注意力融合模块进行集成，以有效地模拟模内和模间动态。对四个大型基准（包括 GenVideo、EvalCrafter、VideoPhy 和 VidProM）的广泛实验表明，ATSS 在 AP、AUC 和 ACC 指标方面显着优于最先进的方法，在不同的视频生成模型中表现出卓越的泛化能力。 ATSS的代码和模型将在https://github.com/hwang-cs-ime/ATSS发布。
 
-- **2026-04-04** **ActivityForensics: A Comprehensive Benchmark for Localizing Manipulated Activity in Videos** [2604.03819](http://arxiv.org/abs/2604.03819)
-  > 时间伪造定位旨在暂时识别视频中被操纵的片段。大多数现有基准测试都侧重于外观级别的伪造，例如面部交换和对象移除。然而，视频生成的最新进展推动了活动级伪造的出现，这些伪造会修改人类行为以扭曲事件语义，从而导致高度欺骗性的伪造，严重损害媒体的真实性和公众信任。为了解决这个问题，我们引入了 ActivityForensics，这是第一个用于本地化视频中被操纵活动的大规模基准。它包含超过 6K 的伪造视频片段，这些片段无缝地融入视频上下文中，呈现出高度的视觉一致性，使人眼几乎无法将其与真实内容区分开。我们进一步提出了时间伪影扩散器（TADiff），这是一个简单而有效的基线，通过基于扩散的特征正则化器暴露伪影线索。基于 ActivityForensics，我们引入了涵盖域内、跨域和开放世界设置的综合评估协议，并对各种最先进的伪造定位器进行基准测试，以促进未来的研究。数据集和代码可在 https://activityforensics.github.io 获取。
 
-- **2026-04-04** **Rethinking Position Embedding as a Context Controller for Multi-Reference and Multi-Shot Video Generation** [2604.03738](http://arxiv.org/abs/2604.03738)
-  > 最近的专有模型（例如 Sora2）在生成基于多个参考角色的多镜头视频方面取得了可喜的进展。然而，学术界对此问题的研究仍然有限。我们研究这个任务并确定一个核心挑战：当参考图像表现出高度相似的外观时，模型经常会遇到参考混淆，其中语义相似的标记会降低模型检索正确上下文的能力。为了解决这个问题，我们引入了 PoCo（位置嵌入作为上下文控制器），它将位置编码作为语义检索之外的附加上下文控制。通过利用令牌的辅助信息，PoCo 可以实现精确的令牌级别匹配，同时保留隐式语义一致性模型。在 PoCo 的基础上，我们开发了一种多参考和多镜头视频生成模型，能够可靠地控制具有极其相似视觉特征的角色。大量实验表明，与各种基线相比，PoCo 提高了交叉镜头一致性和参考保真度。
-
-
-<p align=right>(<a href=#updated-on-20260410>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260411>back to top</a>)</p>
 
 ## 3D
 
@@ -233,7 +227,7 @@
   > 当前的文档解析方法主要在模型架构创新上竞争，而训练数据的系统工程仍未得到充分探索。然而，不同架构和参数规模的 SOTA 模型在同一组硬样本上表现出高度一致的故障模式，这表明性能瓶颈源于训练数据的共同缺陷，而不是架构本身。基于这一发现，我们提出了 \minerupro，它仅通过数据工程和训练策略优化来推进最先进的技术，同时保持 \mineru 的 1.2B 参数架构完全固定。其核心是围绕覆盖率、信息量和注释准确性共同设计的数据引擎：多样性和难度感知采样将训练数据从 1000 万个样本扩展到 6550 万个样本，同时纠正分布偏移；跨模型一致性验证利用异构模型之间的输出一致性来评估样本难度并生成可靠的注释； Judge-and-Refine 管道通过渲染然后验证迭代校正来提高硬样本的注释质量。三阶段渐进训练策略——大规模预训练、硬样本微调和 GRPO 对齐——按顺序利用不同质量级别的这些数据。在评估方面，我们修复了 OmniDocBench~v1.5 中的元素匹配偏差，并引入了 Hard 子集，建立了更具辨别力的 OmniDocBench~v1.6 协议。在没有任何架构修改的情况下，\minerupro 在 OmniDocBench~v1.6 上获得了 95.69 分，比相同架构的基线提高了 2.71 点，并超越了所有现有方法，包括参数多了 200 $\times$ 的模型。
 
 
-<p align=right>(<a href=#updated-on-20260410>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260411>back to top</a>)</p>
 
 ## 具生智能&自动驾驶
 
@@ -358,7 +352,7 @@
   > 世界模型作为人工智能领域一个有前景的研究方向受到了广泛关注，但仍然缺乏明确统一的定义。在本文中，我们介绍了 OpenWorldLib，一个用于高级世界模型的全面且标准化的推理框架。借鉴世界模型的演变，我们提出了一个明确的定义：世界模型是以感知为中心，具备交互和长期记忆能力，用于理解和预测复杂世界的模型或框架。我们进一步系统地对世界模型的基本能力进行分类。基于这个定义，OpenWorldLib将不同任务的模型集成在一个统一的框架内，从而实现高效的重用和协作推理。最后，我们对世界模型研究的潜在未来方向进行了额外的思考和分析。代码链接：https://github.com/OpenDCAI/OpenWorldLib
 
 
-<p align=right>(<a href=#updated-on-20260410>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260411>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
