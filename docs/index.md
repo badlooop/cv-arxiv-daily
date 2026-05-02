@@ -7,7 +7,7 @@ layout: default
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2026.05.01
+## Updated on 2026.05.02
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Video Diffusion
@@ -71,9 +71,6 @@ layout: default
 
 - **2026-04-26** **PhysLayer: Language-Guided Layered Animation with Depth-Aware Physics** [2604.23574](http://arxiv.org/abs/2604.23574)
   > 现有的图像到视频生成方法通常会产生物理上难以置信的运动，并且缺乏对对象动态的精确控制。虽然之前的方法已经结合了物理模拟器，但它们仍然局限于 2D 平面运动，并且无法捕获深度感知的空间交互。我们介绍 PhysLayer，这是一种新颖的框架，支持语言引导、深度感知的静态图像分层动画。 PhysLayer 由三个关键组件组成：首先，语言引导的场景理解模块，利用视觉基础模型通过分析对象组成、材料属性和物理参数将场景分解为基于深度的层。其次，深度感知的分层物理模拟通过深度运动和透视一致的缩放扩展 2D 刚体动力学，从而无需完整的 3D 重建即可实现更真实的对象交互。第三，物理引导的视频合成模块，将模拟轨迹与场景感知重新照明相结合，以获得时间相干的结果。实验结果表明，CLIP-相似性 (+2.2\%)、FID 分数 (+9.3\%) 和 Motion-FID (+3\%) 均得到改进，人类评估显示物理合理性 (+24\%) 和文本视频对齐 (+35\%) 得到增强。我们的方法为可控图像动画提供了物理真实性和计算效率之间的实际平衡。
-
-- **2026-04-25** **EAD-Net: Emotion-Aware Talking Head Generation with Spatial Refinement and Temporal Coherence** [2604.23325](http://arxiv.org/abs/2604.23325)
-  > 情感头部视频生成旨在生成具有准确唇形同步和情感面部表情的富有表现力的肖像视频。目前的方法依赖于简单的情感标签，导致语义信息不足。引入高级语义虽然增强了表现力，但很容易导致口型同步退化。此外，主流生成方法难以平衡长视频中的计算效率和全局运动意识，并且时间相干性较差。因此，我们提出了一种基于 \textbf{E}motion-\textbf{A}ware \textbf{D}iffusion 模型的 \textbf{Net} 工作，称为 \textbf{EAD-Net}。我们引入了 SyncNet 监督和时间表示对齐（TREPA）来减轻多模态融合引起的唇形同步退化。为了对长视频序列中复杂的时空依赖性进行建模，我们提出了一种时空方向注意力（STDA）机制，该机制通过条带注意力捕获全局运动模式。此外，我们设计了一个时间帧图推理模块（TFRM），通过图结构学习显式地模拟视频帧之间的时间一致性。为了增强情感语义控制，采用大型语言模型从真实视频中提取文本描述，作为高级语义指导。 HDTF 和 MEAD 数据集上的实验表明，我们的方法在口型同步准确性、时间一致性和情感准确性方面优于现有方法。
 
 
 ## 3D
