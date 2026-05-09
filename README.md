@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2026.05.08
+## Updated on 2026.05.09
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -80,11 +80,8 @@
 - **2026-05-03** **Video Active Perception: Effective Inference-Time Long-Form Video Understanding with Vision-Language Models** [2605.01662](http://arxiv.org/abs/2605.01662)
   > 大型视觉语言模型 (VLM) 具有高级多模态任务，例如视频问答 (QA)。然而，VLM 面临着有效且高效地选择帧的挑战，因为标准均匀采样成本昂贵且性能可能趋于稳定。受主动感知理论的启发，该理论认为模型通过获取与预期不同的数据来获取信息，我们引入了视频主动感知（VAP），这是一种使用 VLM 增强长格式视频 QA 的免训练方法。我们的方法将关键帧选择视为主动感知中的数据采集，并利用轻量级文本条件视频生成模型来表示先验世界知识。根据经验，VAP 在长格式或推理视频 QA 数据集（例如 EgoSchema、NExT-QA、ActivityNet-QA、IntentQA 和 CLEVRER）上实现了最先进的零样本结果，与标准 GPT-4o、Gemini 1.5 Pro 和 LLaVA-OV 相比，每个问题的帧效率提高了 5.6 倍。此外，VAP 表现出比以前的方法更强的推理能力，并有效地选择与问题相关的关键帧。这些发现凸显了利用主动感知来提高长视频 QA 的帧有效性和效率的潜力。
 
-- **2026-05-02** **Action Agent: Agentic Video Generation Meets Flow-Constrained Diffusion** [2605.01477](http://arxiv.org/abs/2605.01477)
-  > 我们提出了 Action Agent，这是一个两阶段框架，它将代理导航视频生成与流约束扩散控制相结合，用于多实施例机器人导航。在第一阶段，大型语言模型（LLM）充当编排模块，选择视频扩散模型，通过迭代验证细化提示，并积累跨任务内存以从语言和图像输入合成物理上合理的第一人称导航视频。这将 50 个导航任务中的视频生成成功率从 35%（单次）提高到 86%。在第二阶段，我们引入了 FlowDiT，一种流约束扩散变压器，它使用动作空间去噪扩散将优化的目标视频和语言指令转换为连续速度命令。 FlowDiT 集成了 DINOv2 视觉特征、用于自我运动表示的学习光流以及用于语义停止的 CLIP 语言嵌入。我们对 RECON 户外导航数据集进行预训练，并对 Isaac Sim 中收集的 203 个 Unitree G1 人形数据集进行微调，以校准速度动力学。单个 43M 参数检查点在开环执行下，在不可见的室内环境中，在模拟中实现了 73.2% 的导航成功率，在真实的 Unitree G1 上实现了 64.7% 的任务完成率，同时运行频率为 40--47 Hz。我们通过三个实施例评估 Action Agent：Unitree G1 人形机器人（真实硬件）、无人机和轮式移动机器人 (Isaac Sim)，证明将轨迹想象与执行分离可以产生可扩展且可感知实施例的语言引导导航范例。
 
-
-<p align=right>(<a href=#updated-on-20260508>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260509>back to top</a>)</p>
 
 ## 3D
 
@@ -209,7 +206,7 @@
   > 人类通过在交互过程中将初始视觉估计与触觉和本体感觉反馈相结合来抓住不熟悉的物体。我们推出了 ShapeGrasp，这是这种方法的机器人实现。所提出的方法是一种迭代的抓取和完成管道，它将隐式表面视觉触觉形状完成（从部分信息创建完整的 3D 形状）与基于物理的抓取规划结合起来。 ShapeGrasp 从单个 RGB-D 视图推断出完整的形状（点云或三角网格），通过刚体模拟生成候选抓取，并执行最佳可行抓取。每次抓取尝试都会产生额外的几何约束（触觉表面接触和抓手主体占据的空间），这些约束被融合以更新物体形状。失败会触发使用精炼形状重新估计姿势并重新抓取。我们使用两种不同的机器人和夹具在现实世界中评估 ShapeGrasp。据我们所知，这是第一种根据现实世界的掌握来更新形状表示的方法。我们的两个夹具都取得了优于基线的结果（三指夹具的抓取成功率为 84%，两指夹具的抓取成功率为 91%），同时在所有使用的评估指标中提高了 3D 形状重建质量。
 
 
-<p align=right>(<a href=#updated-on-20260508>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260509>back to top</a>)</p>
 
 ## 具生智能&自动驾驶
 
@@ -334,7 +331,7 @@
   > 虽然大型语言模型（LLM）和视觉语言模型（VLM）在高级推理和语义理解方面表现出卓越的能力，但由于缺乏明确的物理基础并且无法执行自适应控制，将它们直接应用于接触丰富的操作仍然是一个挑战。为了弥补这一差距，我们提出了 CoRAL（基于接触丰富的自适应 LLM 控制），这是一种模块化框架，通过将高级推理与低级控制解耦来实现零样本规划。与黑盒策略不同，CoRAL 不使用 LLM 作为直接控制器，而是作为成本设计器，为基于采样的运动规划器 (MPPI) 综合上下文感知目标函数。为了解决视觉数据中物理参数的模糊性，我们引入了神经符号适应循环：VLM 为环境动力学提供语义先验，例如质量和摩擦估计，然后通过在线系统识别实时明确地细化，而 LLM 迭代地调节成本函数结构，以根据交互反馈纠正策略错误。此外，基于检索的内存单元允许系统在重复任务中重用成功的策略。这种分层架构通过将高级语义推理与反应式执行解耦来确保实时控制稳定性，有效弥合缓慢的 LLM 推理与动态联系需求之间的差距。我们在模拟和现实世界的硬件上验证 CoRAL 的挑战性和新颖性任务，例如利用外部接触将物体翻转到墙上。实验表明，CoRAL 的性能优于最先进的 VLA 和基于基础模型的规划器基线，在未见过的接触丰富的场景中将成功率平均提高了 50% 以上，并通过其自适应物理理解有效地处理了模拟与真实的差距。
 
 
-<p align=right>(<a href=#updated-on-20260508>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20260509>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors

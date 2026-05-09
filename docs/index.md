@@ -7,7 +7,7 @@ layout: default
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2026.05.08
+## Updated on 2026.05.09
 > Usage instructions: [here](./docs/README.md#usage)
 
 ## Video Diffusion
@@ -74,9 +74,6 @@ layout: default
 
 - **2026-05-03** **Video Active Perception: Effective Inference-Time Long-Form Video Understanding with Vision-Language Models** [2605.01662](http://arxiv.org/abs/2605.01662)
   > 大型视觉语言模型 (VLM) 具有高级多模态任务，例如视频问答 (QA)。然而，VLM 面临着有效且高效地选择帧的挑战，因为标准均匀采样成本昂贵且性能可能趋于稳定。受主动感知理论的启发，该理论认为模型通过获取与预期不同的数据来获取信息，我们引入了视频主动感知（VAP），这是一种使用 VLM 增强长格式视频 QA 的免训练方法。我们的方法将关键帧选择视为主动感知中的数据采集，并利用轻量级文本条件视频生成模型来表示先验世界知识。根据经验，VAP 在长格式或推理视频 QA 数据集（例如 EgoSchema、NExT-QA、ActivityNet-QA、IntentQA 和 CLEVRER）上实现了最先进的零样本结果，与标准 GPT-4o、Gemini 1.5 Pro 和 LLaVA-OV 相比，每个问题的帧效率提高了 5.6 倍。此外，VAP 表现出比以前的方法更强的推理能力，并有效地选择与问题相关的关键帧。这些发现凸显了利用主动感知来提高长视频 QA 的帧有效性和效率的潜力。
-
-- **2026-05-02** **Action Agent: Agentic Video Generation Meets Flow-Constrained Diffusion** [2605.01477](http://arxiv.org/abs/2605.01477)
-  > 我们提出了 Action Agent，这是一个两阶段框架，它将代理导航视频生成与流约束扩散控制相结合，用于多实施例机器人导航。在第一阶段，大型语言模型（LLM）充当编排模块，选择视频扩散模型，通过迭代验证细化提示，并积累跨任务内存以从语言和图像输入合成物理上合理的第一人称导航视频。这将 50 个导航任务中的视频生成成功率从 35%（单次）提高到 86%。在第二阶段，我们引入了 FlowDiT，一种流约束扩散变压器，它使用动作空间去噪扩散将优化的目标视频和语言指令转换为连续速度命令。 FlowDiT 集成了 DINOv2 视觉特征、用于自我运动表示的学习光流以及用于语义停止的 CLIP 语言嵌入。我们对 RECON 户外导航数据集进行预训练，并对 Isaac Sim 中收集的 203 个 Unitree G1 人形数据集进行微调，以校准速度动力学。单个 43M 参数检查点在开环执行下，在不可见的室内环境中，在模拟中实现了 73.2% 的导航成功率，在真实的 Unitree G1 上实现了 64.7% 的任务完成率，同时运行频率为 40--47 Hz。我们通过三个实施例评估 Action Agent：Unitree G1 人形机器人（真实硬件）、无人机和轮式移动机器人 (Isaac Sim)，证明将轨迹想象与执行分离可以产生可扩展且可感知实施例的语言引导导航范例。
 
 
 ## 3D
